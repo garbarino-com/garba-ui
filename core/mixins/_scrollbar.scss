@@ -1,0 +1,20 @@
+//mixin para generar scrollbars
+@mixin vertical-scrollbar {
+
+	&::-webkit-scrollbar-track	{
+		background-color: $gray-9;
+		border-radius: 2px;
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		background-color: transparent;
+		border-radius: 2px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $gray-5;
+		border-radius: 2px;
+	}
+
+}

@@ -1,0 +1,111 @@
+// Nuevas grillas Small
+@mixin col-small{
+	@media (min-width: 1px) and (max-width: 599px){
+		@content;
+	}
+}
+
+// Nuevas grillas Medium
+@mixin col-medium{
+	@media (min-width: 600px) and (max-width: 800px){
+		@content;
+	}
+}
+// Nuevas grillas Large
+@mixin col-large{
+	@media (min-width: 801px) and (max-width: 1024px){
+		@content;
+	}
+}
+
+// Nuevas grillas normal
+@mixin col-normal{
+	@media (min-width: 1025px) and (max-width: 1280px){
+		@content;
+	}
+}
+
+// Nuevas grillas extra Large
+@mixin col-extra-large{
+	@media (min-width: 1501px){
+		@content;
+	}
+}
+// Nuevas grillas Large y small
+@mixin col-large-small{
+	@media (max-width: 1024px){
+		@content;
+	}
+}
+// Nuevas grillas Medium y small
+@mixin col-medium-small{
+	@media (max-width: 800px){
+		@content;
+	}
+}
+
+//
+@mixin retina {
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	    only screen and (-o-min-device-pixel-ratio: 3/2),
+	    only screen and (min--moz-device-pixel-ratio: 1.5),
+	    only screen and (min-device-pixel-ratio: 1.5) {
+			@content;
+	}
+}
+
+
+/////////////////////////////////////////////////////////////////////
+//////////////////// Breakpoints ////////////////////////////////////
+@mixin breakpoint($size, $exact: "exact"){
+	@if $size == "small"{
+		@if $exact == "exact"{
+			@media(min-width: 1px) and (max-width: 768px){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: 1px){
+				@content;
+			}
+		}
+	}
+
+	@else if $size == "medium"{
+		@if $exact == "exact"{
+			@media(min-width: 769px) and (max-width: 1024px){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: 769px){
+				@content;
+			}
+		}@if $exact == "down"{
+			@media(max-width: 1024px){
+				@content;
+			}
+		}
+	}	
+
+	@else if $size == "large"{
+		@if $exact {
+			@media(min-width: 1025px) and (max-width: 1280px){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: 1025px){
+				@content;
+			}
+		}@if $exact == "down"{
+			@media(max-width: 1280px){
+				@content;
+			}
+		}
+	}
+
+	@else if $size == "huge"{
+		@media(min-width: 1280px){
+			@content;
+		}
+	}
+}

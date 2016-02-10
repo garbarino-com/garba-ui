@@ -1,0 +1,150 @@
+/*
+*
+* BASE - START
+*
+*/
+
+// Tamano base
+html{
+	font-size: 14px;
+}
+
+body{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-moz-font-feature-settings: "liga", "kern";
+	min-width: 320px;
+	cursor: default;
+
+	* {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-o-box-sizing: border-box;
+	}
+}
+
+
+// Container
+.gb-wrapper {
+	width: auto;
+	max-width: 1366px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+
+
+// Links
+a {
+	color: $blue-dark;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover, &:active, &.active {
+  		color: $blue-dark;
+  		text-decoration: underline;
+	}
+
+	&:visited {
+		color: $blue-dark;
+	}
+
+}
+
+
+
+// Elementos
+p {
+	line-height: 1.3;
+}
+strong{
+	font-weight: bold;
+}
+
+li{
+	line-height: 100%;
+}
+
+
+
+// Fix viewport no responsive IE8
+.ie8 body {
+	min-width: 990px;
+}
+
+
+
+// Comportamientos Left - Righ
+.gb-pull-left {
+	float: left !important;
+}
+
+.gb-pull-right {
+	float: right !important;
+}
+
+
+
+// Utilidades Responsive
+
+@include col-small{
+	// Oculta solo en mobile
+	.gb-hide-small {
+		display: none !important;
+	}
+
+	// Oculta solo en mobile
+	.gb-show-small {
+		display: block !important;
+	}
+}
+
+
+@include col-medium{
+	// Oculta solo en tablet
+	.gb-hide-medium {
+		display: none !important;
+	}
+	
+	// Oculta solo en tablet
+	.gb-show-medium {
+		display: block !important;
+	}
+}
+
+	
+@include col-large{
+	// Oculta solo en desktop
+	.gb-hide-large {
+		display: none !important;
+	}
+	
+	// Oculta solo en desktop
+	.gb-show-large {
+		display: block !important;		
+	}
+}
+
+
+@include col-extra-large{
+	// Oculta solo en large
+	.gb-hide-extra-large {
+		display: none !important;
+	}
+	
+	// Oculta solo en large
+	.gb-show-extra-large {
+		display: block !important;
+	}
+}
+
+
+/*
+*
+* BASE - END
+*
+*/
