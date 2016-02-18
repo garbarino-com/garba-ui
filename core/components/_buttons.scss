@@ -1,3 +1,6 @@
+//@import "../base/_typo";
+
+
 //Buttons
 
 // MIXINS -----------------------------------------------
@@ -8,206 +11,32 @@
 	@include border-radius(3px);
 	@include box-sizing(border-box);
 	display: inline-block;
-	padding: 6px 12px;
+	padding: 0 25px;
 	border: 1px solid transparent;
 	cursor: pointer;
 	text-align: center;
 	outline: none;
 	position: relative;
 	text-transform: uppercase;
-	vertical-align: middle;
-	cursor: pointer;
-	
-    
-    
-
-	
-	-ms-touch-action: manipulation;
-    touch-action: manipulation;
-    
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
 }
 
-
-@mixin gb-button-skin( $color: $gray-darkest, $background-color: $gray-light, $active: $green, $background-hover: $silver ) {
-	@include transition(background-color 0.3s ease-out);
+@mixin gb-button-skin( $color: $gray-darkest, $background-color: $gray-light, $active: $gray-light, $background-hover: $silver-chalice, $border: $silver-chalice ) {
+	@include transition(background-color 0.2s ease-out, border-color 0.2s ease-out);
 	font-size: 14px;
-	font-weight: 400;
-	outline: none;
 	white-space: nowrap;
 	color: $color;
 	background-color: $background-color;
-	//height: 35px;
-	line-height: 1.5;
-
-	border-color: transparent transparent $silver-chalice;
-	border-style: solid;
-	border-width: 1px 1px 2px;
-
-	&:hover, &:focus{
-		border-color: transparent transparent $background-hover;
-		background-color: $background-hover;
-		text-decoration: none;
-    }
-
-    &:active {
-		@include box-shadow(none);
-		background-color: $active;
-		position: relative;
-		top: 1px;
-    }
-
-    &:visited {
-    	color: $color; // overrides link hover
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.btn-lg, .btn-group-lg > .btn {
-  padding:10px 25px;
-  font-size: 18px;
-  line-height: 1.33333;
-}
-
-.btn-md, .btn-group-md > .btn {
-  padding:10px 20px;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.btn-sm, .btn-group-sm > .btn {
-  padding: 5px 15px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.btn-xs, .btn-group-xs > .btn {
-  padding: 1px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.btn-block {
-  display: block;
-  width: 100%; }
-
-.btn-block + .btn-block {
-  margin-top: 5px; }
-
-.btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover,
-.btn-secondary.disabled, .btn-secondary.disabled.active, .btn-secondary.disabled.focus, .btn-secondary.disabled:active, .btn-secondary.disabled:focus, .btn-secondary.disabled:hover, .btn-secondary[disabled], .btn-secondary[disabled].active, .btn-secondary[disabled].focus, .btn-secondary[disabled]:active, .btn-secondary[disabled]:focus, .btn-secondary[disabled]:hover, fieldset[disabled] .btn-secondary, fieldset[disabled] .btn-secondary.active, fieldset[disabled] .btn-secondary.focus, fieldset[disabled] .btn-secondary:active, fieldset[disabled] .btn-secondary:focus, fieldset[disabled] .btn-secondary:hover
-
-{
-    background-color: #F6F6F6;
-    border-color: #E2E2E2;
-    color:  #E2E2E2;
-}
-.btn-buy{
-    background-color: #16A400;
-    border-color: transparent transparent #117C00;
+	height: 40px;
+	line-height: 40px;
+	border-color: transparent transparent $border;
     border-style: solid;
     border-width: 1px 1px 2px;
-    color: #fff;
-}
-.btn.btn-buy:focus{
-   color:#fff;
-}
-
-.btn.active, .btn:active {
-   background-color: #49C237;
-   color: #fff;
-   border-color: transparent transparent #49C237;
-}
-.btn-buy:hover{
-    background-color: #49C237;
-    color: #fff;
-    border-color: transparent transparent #49C237;
-    border-style: solid;
-    border-width: 1px 1px 2px;
-}
-#load.disabled
-{
-    background-color: transparent;
-    border: none;
-    color:  #000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@mixin ux-common-button-skin( $color: $gray-3, $background-color: $gray-8, $active: $gray-7, $background-hover: $gray-6 ) {
-	@include fontStyle ($font-size-13);
-	//@include text-shadow(0 1px 0 rgba($white,0.15));
-	@include box-shadow(inset 0 -4px 0 rgba(0,0,0,0.2));
-	@include transition(background-color 0.2s ease-out);
-	outline:none;
-	white-space: nowrap;
-	color: $color;
-	background-color: $background-color;
-	height: 35px;
-	line-height: 35px;
 
     &:hover{
-		@include transition(background-color 0.2s ease-out);
+		@include transition(background-color 0.2s ease-out, border-color 0.2s ease-out);
 		color: $color; // overrides link hover
 		background-color: $background-hover;
+		border-color: transparent transparent $background-hover;
 		text-decoration: none;
     }
 
@@ -223,37 +52,60 @@
     }
 
     // Sizes
-	&.ux-common-button-small, &.small{ // ToDo: Eliminar retrocompatibilidad
-		@include fontStyle ($font-size-11);
-		height: 25px;
+	&.xsmall{
+		font-size: 11px;
+		height: 20px;
 		padding: 0 10px;
-		line-height: 24px;
+		line-height: 19px;
 	}
 
-	&.ux-common-button-large, &.large{ // ToDo: Eliminar retrocompatibilidad
-		@include fontStyle ($font-size-16);
+	&.small{
+		font-size: 12px;
+		height: 30px;
+		padding: 0 10px;
+		line-height: 29px;
+	}
+
+	&.large{
+		font-size: 18px;
 		height: 45px;
 		line-height: 45px;
 	}
 
 	//Disabled
-	&.ux-common-button-disabled, &.disabled { // ToDo: Eliminar retrocompatibilidad
-		@include opacity(0.6);
+	&.disabled {
+		@include opacity(0.65);
+		background-color: $gray-lightest;
+		color: $gray-light;
+		border-color: $gray-light;
 		cursor: not-allowed;
 		background-image: none;
 
 	    &:active {
-	        @include box-shadow(none);
 	    	top: 0;
+	    }
+
+	    &:hover {
+	    	background-color: $gray-lightest;
+			color: $gray-light;
+			border-color: $gray-light;
+	    }
+
+	    // Ghost disabled
+	    &.ghost {
+	    	border: 2px solid $gray-light;
+	    	color: $gray-light;
+	    	background-color: transparent;
+
+	    	&:hover {
+	    		color: $gray-light;
+	    		background-color: transparent;
+	    	}
 	    }
 	}
 
-    &.ux-common-button-disabled:hover, &.disabled:hover { // ToDo: Eliminar retrocompatibilidad
-    	background-color: $background-color;
-    }
-
     // Icono  en boton
-	&.ux-common-button-icon, &.icon { // ToDo: Eliminar retrocompatibilidad
+	&.icon {
 		margin-right: 0.2em;
 
 		canvas {
@@ -263,7 +115,7 @@
 		}
 	}
 	
-	&.ux-common-button-block, &.block{ // ToDo: Eliminar retrocompatibilidad
+	&.block{
 		display: block;
 		width: 100%; // declared to force inline-block elements to behave correctly. ej: <button>
 		padding-right: 0;
@@ -274,37 +126,66 @@
 
 // CSS OUTPUT -----------------------------------------------
 
-.ux-common-button, .ux-button {
-	@include ux-common-button-base();
-	@include ux-common-button-skin();
+.gb-button {
+	@include gb-button-base();
+	@include gb-button-skin();
 
-	&.ux-common-button-primary, &.primary {
-		@include ux-common-button-skin($white, $red-3, $red-4, $red-2);		
-	}
-	
-	&.ux-common-button-secondary, &.secondary {
-		@include ux-common-button-skin($white, $blue-3, $blue-4, $blue-2);
-	}
-	
-	&.ux-common-button-third, &.third {
-		@include ux-common-button-skin($white, $green-3, $green-4, $green-2);
-	}
+	// Verde
+	&.revenue {
+		@include gb-button-skin($white, $green-dark, $green-dark, $green, $green-darkest);
 
-	// Ghost
-	&.ux-common-button-ghost, &.ghost {
-		@include ux-common-button-skin($white, transparent, $white, $white);
-		@include box-shadow(none);
-		border: solid 1px $white;
+		// Ghost
+		&.ghost {
+			color: $green-dark;
+			background-color: transparent;
+			border: 2px solid $green-dark;
 
-		&:hover {
-			background-color: $white;
-			color: $blue-3;
+			&:hover {
+				background-color: $green-dark;
+				color: $white;
+			}
 		}
 	}
 	
+	// Azul
+	&.primary {
+		@include gb-button-skin($white, $blue, $blue, $blue-darkest, $blue-darkest);
+		
+		// Ghost
+		&.ghost {
+			color: $blue;
+			background-color: transparent;
+			border: 2px solid $blue;
+
+			&:hover {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+	}
+	
+	// Gris - default
+	&.secondary {
+		@include gb-button-skin($gray-darkest, $gray-light, $gray-light, $silver-chalice, $silver-chalice);
+
+		// Ghost
+		&.ghost {
+			color: $gray-darkest;
+			background-color: transparent;
+			border: 2px solid $gray-light;
+
+			&:hover {
+				background-color: $gray-light;
+				color: $gray-darkest;
+			}
+		}
+	}
+	
+
+	/*
 	// Agotado
 	&.soldout {
-		@include ux-common-button-skin($gray-5, $gray-3);
+		@include gb-button-skin($gray-5, $gray-3);
 		@include box-shadow(none);
 		cursor: not-allowed;
 
@@ -317,11 +198,14 @@
 			background-color: $gray-3;
 		}
 	}
+	
+	*/
 }
 
+/*
 // boton inactivo
-.ux-button.ux-button-inactive {
-	@include ux-common-button-skin($gray-3, $gray-8);
+.gb-button.gb-button-inactive {
+	@include gb-button-skin($gray-3, $gray-8);
 	@include box-shadow(none);
 	cursor: default;
     &:active {
@@ -332,4 +216,4 @@
 		background-color: $gray-8;
 	}
 }
-
+*/

@@ -1,0 +1,25 @@
+// Pisa los estilos de los popups de bootstrap
+.gb-popup {
+	&.modal {
+		text-align: left;
+		color: $gray-darkest;
+
+		//Header
+		.modal-header {
+			border-bottom: 0;
+		}
+
+		// Titulo
+		.modal-title {
+			font-size: 20px;
+		}
+
+		// Titulo secundario
+		.modal-title-secondary {
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+	}
+}
