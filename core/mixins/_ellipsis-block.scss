@@ -1,0 +1,12 @@
+// ## Ellipsis inline para mostrar los "..." al final del texto, o sea truncarlo
+@mixin ellipsis-block($line-height:20px, $line-clamp: 2){
+	line-height: $line-height;
+	display: block; /* Fallback for non-webkit */
+	display: -webkit-box;
+	max-width: 100%;
+	max-height: $line-height * $line-clamp; /* Fallback for non-webkit */
+	-webkit-line-clamp: $line-clamp;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
