@@ -1,0 +1,232 @@
+//Forms
+
+// MIXINS -----------------------------------------------
+
+
+//Form field
+@mixin gb-form-field-base{
+	margin-bottom: 15px;
+}
+
+// Estilos comunes entre elementos
+@mixin gb-form-element-base {
+	@include border-radius(2px);
+	@include box-sizing(border-box);
+	display: block;
+	width: 100%;
+	height: 35px;
+	padding: 7px 10px;
+	//margin-bottom: 15px;
+	font-size: 14;
+	border: 1px solid $silver;
+	color: $gray-dark;
+	background-color: $white;
+}
+
+//Inputs
+@mixin gb-input-base{
+	@include gb-form-element-base;
+
+	&:focus{
+		@include transition(all 0.3s ease-out);
+		@include box-shadow(none);
+		border: 1px solid $blue;
+		outline: none;
+	}
+
+	&::-webkit-input-placeholder{
+		color:$silver;
+	}
+
+	&::-moz-placeholder{
+		color:$silver;
+	}
+
+	&:-ms-input-placeholder{
+		color:$silver;
+	}
+
+}
+
+//Selects
+@mixin gb-select-base{
+	cursor: pointer;
+	position: relative;
+
+	@include gb-form-element-base;
+
+	&:focus{
+		@include transition(all 0.3s ease-out);
+		@include box-shadow(none);
+		border: 1px solid $blue;
+		outline: none;
+	}
+
+}
+
+//Labels
+@mixin gb-label-base{
+	font-size: 14px;
+	color: $gray-darkest;
+	cursor: pointer;
+	display: block;
+}
+
+
+
+// CSS OUTPUT -----------------------------------------------
+
+label{
+	cursor:pointer;
+}
+
+.gb-form-field{
+	@include gb-form-field-base;
+}
+
+// inputs
+.gb-input, input[type="text"].gb-input {
+	@include gb-input-base;
+
+	&.large{
+		font-size: 16px;
+		height: 45px;
+	}
+
+	&.small{
+		font-size: 11px;
+		height: 25px;
+		padding: 0 5px;
+	}
+
+	// Error
+	&.error-box {
+		border: 1px solid $red-dark !important;
+	}
+
+	// Deshabilitado
+	&.disabled {
+		border-color: $silver;
+		background-color: $gray-light;
+		cursor: not-allowed;
+		color: $gray-dark;
+	}
+
+}
+
+// Select
+.gb-select{
+	@include gb-select-base();
+
+	select {
+		@include box-shadow(0 0 0 transparent);
+		font-size: 13px;
+		color: $gray-darkest;
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		width: 100%;
+
+		/*&::-ms-expand {
+			display: none;
+		}*/
+	}
+
+	/*[class^="ie"] & {
+		&:after, &:before {
+			display: none !important;
+		}
+		select {
+			padding-right: 0 !important;
+		}
+	}*/
+
+	&.large{
+		font-size: 16px;
+		height: 45px;
+		padding: 10px 5px;
+	}
+
+	&.small{
+		font-size: 11px;
+		height: 25px;
+		padding: 3px;
+
+		select {
+			font-size: 11px;
+			color: $gray-darkest;
+		}
+	}
+
+	/*
+	// Error
+	&.error-box {
+		border: 1px solid $red-3 !important;
+		background-color: $red-1;
+	}
+	*/
+
+	// Deshabilitado
+	&.disabled {
+		border-color: $silver;
+		background-color: $gray-light;
+		cursor: not-allowed;
+		color: $gray-dark;
+	}
+}
+
+// Label
+.gb-label {
+	@include gb-label-base;
+
+	&.hidden{
+		visibility: hidden;
+		margin-top: 25px;
+		display: block;
+	}
+
+	/*
+	// Error
+	&.error-box {
+		border: 1px solid $red-3 !important;
+		background-color: $red-1;
+	}
+	*/
+}
+
+
+// Submit
+.gb-submit{
+	padding-top:15px;
+}
+
+
+/*
+// Mensaje de error
+.gb-error-msg{
+	font-size: (13, $red-3);
+	display: none;
+	padding: 5px;
+	line-height: 10px;
+	margin: 0;
+
+	&:before{
+		font-size: (11);
+		content:"\2716";
+		margin-right: 5px;
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	ul{
+		list-style-type:disc;
+		margin: 0 0 5px 20px;
+
+		li{
+			margin-bottom: 5px;
+		}
+
+	}
+}
+
+*/
