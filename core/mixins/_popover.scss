@@ -1,0 +1,240 @@
+@mixin popover($arrow: top-center, $width: 200px, $animation: fromTop, $top: auto, $right: auto, $bottom: auto, $left: auto, $arrow: top-left){
+    @include box-shadow(0 0 7px rgba(0, 0, 0, 0.2));
+    @include border-radius(3px);
+    @include opacity(0);
+    background-color: $white;
+    border: 1px solid $silver;
+    position: absolute;
+    width: $width;
+    z-index: 1;
+    padding: 15px;
+    cursor: default;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    visibility: hidden;
+
+    @if $animation == fromTop {
+        @include transition(top 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.1s);
+    } @else if $animation == fromBottom {
+        @include transition(bottom 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.1s);
+    } @else if $animation == fromRight {
+        @include transition(right 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.1s);
+    } @else if $animation == fromLeft {
+        @include transition(left 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.1s);
+    }
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;       
+    }
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        
+    }
+    
+    @if $arrow == top-left {
+        &:before {
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent $silver transparent;
+            top: -10px;
+            left: 10px;
+        }
+        &:after {
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent $white transparent;
+            top: -9px;
+            left: 10px;
+        }
+    } @else if $arrow == top-right {
+        &:before {
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent $silver transparent;
+            top: -10px;
+            right: 10px;
+        }
+        &:after {
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent $white transparent;
+            top: -9px;
+            right: 10px;
+        }
+    } @else if $arrow == top-center {
+        &:before {
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent $silver transparent;
+            top: -10px;
+            left: 50%;
+            margin-left: -10px;
+        }
+        &:after {
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent $white transparent;
+            top: -9px;
+            left: 50%;
+            margin-left: -10px;
+        }
+    } @else if $arrow == bottom-left {
+        &:before {
+            border-width: 10px 10px 0 10px;
+            border-color: $silver transparent transparent transparent;
+            left: 10px;
+            bottom: -10px;
+        }
+        &:after {
+            border-width: 10px 10px 0 10px;
+            border-color: $white transparent transparent transparent;
+            left: 10px;
+            bottom: -9px;
+        }
+    } @else if $arrow == bottom-right {
+        &:before {
+            border-width: 10px 10px 0 10px;
+            border-color: $silver transparent transparent transparent;
+            right: 10px;
+            bottom: -10px;
+        }
+        &:after {
+            border-width: 10px 10px 0 10px;
+            border-color: $white transparent transparent transparent;
+            right: 10px;
+            bottom: -9px;
+        }
+    } @else if $arrow == bottom-center {
+        &:before {
+            border-width: 10px 10px 0 10px;
+            border-color: $silver transparent transparent transparent;
+            bottom: -10px;
+            left: 50%;
+            margin-left: -10px;
+        }
+        &:after {
+            border-width: 10px 10px 0 10px;
+            border-color: $white transparent transparent transparent;
+            bottom: -9px;
+            left: 50%;
+            margin-left: -10px;
+        }
+    } @else if $arrow == right-top {
+        &:before {
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $silver;
+            right: -10px;
+            top: 10px;
+        }
+        &:after {
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $white;
+            right: -9px;
+            top: 10px;
+        }
+    } @else if $arrow == right-bottom {
+        &:before {
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $silver;
+            right: -10px;
+            bottom: 10px;
+        }
+        &:after {
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $white;
+            right: -9px;
+            bottom: 10px;
+        }
+    } @else if $arrow == right-center {
+        &:before {
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $silver;
+            right: -10px;
+            top: 50%;
+            margin-top: -5px;
+        }
+        &:after {
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent $white;
+            right: -9px;
+            top: 50%;
+            margin-top: -5px;
+        }
+    } @else if $arrow == left-top {
+        &:before {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $silver transparent transparent;
+            left: -10px;
+            top: 10px;
+        }
+        &:after {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $white transparent transparent;
+            left: -9px;
+            top: 10px;
+        }
+    } @else if $arrow == left-bottom {
+        &:before {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $silver transparent transparent;
+            left: -10px;
+            bottom: 10px;
+        }
+        &:after {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $white transparent transparent;
+            left: -9px;
+            bottom: 10px;
+        }
+    } @else if $arrow == left-center {
+        &:before {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $silver transparent transparent;
+            left: -10px;
+            top: 50%;
+            margin-top: -5px;
+        }
+        &:after {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $white transparent transparent;
+            left: -9px;
+            top: 50%;
+            margin-top: -5px;
+        }
+    }
+
+
+    // Cerrar
+    .gb-popover-close {
+        font-size: 16px;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    // Titulo
+    .gb-popover-title {
+        @include clearfix;
+        margin-bottom: 15px;
+        position: relative;
+        display: block;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    // Body
+    .gb-popover-body {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+}
