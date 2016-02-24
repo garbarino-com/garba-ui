@@ -91,7 +91,7 @@ li{
 
 // Utilidades Responsive
 
-@include col-small{
+@include breakpoint("small") {
 	// Oculta solo en mobile
 	.gb-hide-small {
 		display: none !important;
@@ -104,38 +104,38 @@ li{
 }
 
 
-@include col-medium{
+@include breakpoint("medium") {
 	// Oculta solo en tablet
 	.gb-hide-medium {
 		display: none !important;
 	}
-	
+
 	// Oculta solo en tablet
 	.gb-show-medium {
 		display: block !important;
 	}
 }
 
-	
-@include col-large{
+
+@include breakpoint("large") {
 	// Oculta solo en desktop
 	.gb-hide-large {
 		display: none !important;
 	}
-	
+
 	// Oculta solo en desktop
 	.gb-show-large {
-		display: block !important;		
+		display: block !important;
 	}
 }
 
 
-@include col-extra-large{
+@include breakpoint("huge") {
 	// Oculta solo en large
 	.gb-hide-extra-large {
 		display: none !important;
 	}
-	
+
 	// Oculta solo en large
 	.gb-show-extra-large {
 		display: block !important;
