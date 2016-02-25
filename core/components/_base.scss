@@ -92,6 +92,11 @@ li{
 // Utilidades Responsive
 
 @include breakpoint("small") {
+	// Container
+	.gb-wrapper {
+		padding: 10px;
+	}
+
 	// Oculta solo en mobile
 	.gb-hide-small {
 		display: none !important;
@@ -105,6 +110,11 @@ li{
 
 
 @include breakpoint("medium") {
+	// Container
+	.gb-wrapper {
+		padding: 20px;
+	}
+
 	// Oculta solo en tablet
 	.gb-hide-medium {
 		display: none !important;
