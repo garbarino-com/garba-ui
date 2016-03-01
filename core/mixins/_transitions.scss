@@ -33,8 +33,8 @@
 	visibility: visible;
 }
 
-// Hide eva
-@mixin eva-hide-module{
+// Hide gb
+@mixin gb-hide-module{
 	@include transition(transform .15s ease-out, max-height 0s .15s, visibility .15s, opacity .15s ease-out);
 	@include box-sizing;
 	@include transform(translateY(15px));
@@ -44,9 +44,9 @@
 	max-height: 0;
 }
 
-// Show eva
-@mixin eva-show-module{
-	@include transition-delay(.15s);
+// Show gb
+@mixin gb-show-module{
+	//@include transition-delay(.15s);
 	@include transform(translateY(0px));
 	@include opacity(1);
 	overflow: visible;
