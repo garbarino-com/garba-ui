@@ -8,11 +8,9 @@
 }
 .close:hover,
 .close:focus {
-	color: #000;
+	color: #333;
 	text-decoration: none;
 	cursor: pointer;
-	filter: alpha(opacity=50);
-	opacity: .5;
 }
 button.close {
 	-webkit-appearance: none;
