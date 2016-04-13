@@ -75,8 +75,8 @@
 	//Disabled
 	&.disabled {
 		@include opacity(0.65);
-		background-color: $gray-lightest;
-		color: $gray-light;
+		background-color: $silver-lightest;
+		color: $silver-chalice;
 		border-color: $gray-light;
 		cursor: not-allowed;
 		background-image: none;
@@ -86,19 +86,19 @@
 	    }
 
 	    &:hover {
-	    	background-color: $gray-lightest;
-			color: $gray-light;
+	    	background-color: $silver-lightest;
+			color: $silver-chalice;
 			border-color: $gray-light;
 	    }
 
 	    // Ghost disabled
 	    &.ghost {
 	    	border: 2px solid $gray-light;
-	    	color: $gray-light;
+	    	color: $silver-chalice;
 	    	background-color: transparent;
 
 	    	&:hover {
-	    		color: $gray-light;
+	    		color: $silver-chalice;
 	    		background-color: transparent;
 	    	}
 	    }
