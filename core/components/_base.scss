@@ -106,6 +106,12 @@ li{
 	.gb-show-small {
 		display: block !important;
 	}
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 
@@ -123,6 +129,12 @@ li{
 	// Oculta solo en tablet
 	.gb-show-medium {
 		display: block !important;
+	}
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
