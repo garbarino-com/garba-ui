@@ -1,0 +1,25 @@
+{
+  "name": "garba-ui",
+  "version": "1.0.0",
+  "description": "Garbarino UI Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garbarino-com/garba-ui.git#npm-release"
+  },
+  "author": "Silvio Vitullo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garbarino-com/garba-ui/issues"
+  },
+  "homepage": "https://github.com/garbarino-com/garba-ui#readme",
+  "files": [
+    "core",
+    "icomoon",
+    "garbaui.css",
+    "garbaui.scss"
+  ]
+}

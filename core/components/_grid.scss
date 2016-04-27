@@ -4,7 +4,7 @@
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .container {
     width: 750px;
   }
@@ -30,6 +30,11 @@
   margin-right: -15px;
   margin-left: -15px;
 
+  @include breakpoint("medium") {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
   @include breakpoint("small") {
     margin-right: -10px;
     margin-left: -10px;
@@ -40,6 +45,16 @@
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+
+  @include breakpoint("medium") {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @include breakpoint("small") {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -197,7 +212,7 @@
 .col-xs-offset-0 {
   margin-left: 0;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }

@@ -1,0 +1,18 @@
+// ## fontStyle
+// Mixin para generar estilos de fuente
+@mixin fontStyle($font-size: 16px, $color: false) {
+
+    @include rem('font-size', $font-size);
+
+    @if $color != false {
+        color: $color;
+    }
+   
+
+    @if $font-size >= 20 {
+        letter-spacing: -1px;
+    } @else {
+         letter-spacing : 0;
+    }
+
+}
