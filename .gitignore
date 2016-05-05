@@ -1,5 +1,6 @@
 config.rb
 .DS_Store
 npm-debug.log
+node_modules/
 .sass-cache/
-.node_modules/
+.idea/
