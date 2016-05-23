@@ -20,7 +20,7 @@
     "core",
     "dist"
   ],
-  "devDependencies": {
+  "dependencies": {
     "del": "^2.2.0",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
