@@ -5,6 +5,8 @@ Install:
 
 ## ChangeLog
 
+v1.1.4: New icons added to the font. Removed duplicated clearfix component.
+
 v1.1.3: Removed font mixin to deliver font face. Still there, but now with the proper url.
 
 v1.1.2: Included font mixin to deliver font face.
