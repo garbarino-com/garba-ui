@@ -18,15 +18,20 @@ gulp.task('sass', function () {
     return gulp.src('core/garbaui.scss')
         .pipe(sass())
         .pipe(rename('garbaui.css'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/stylesheets'))
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed', errLogToConsole: true}))
         .pipe(sourcemaps.write())
         .pipe(rename('garbaui.min.css'))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/stylesheets'));
     });
 });
 
+gulp.task('copyFontsIcon', ['delete'], function() {
+    return gulp.src('./core/fonts/*')
+      .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('default', function() {
-    runSequence('delete','sass')
+    runSequence('delete','sass', 'copyFontsIcon')
 });
