@@ -5,6 +5,8 @@ Install:
 
 ## ChangeLog
 
+v1.1.6: New tasks for icon fonts.
+
 v1.1.5: Icons font files included in the project.
 
 v1.1.4: New icons added to the font. Removed duplicated clearfix component.
