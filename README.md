@@ -11,6 +11,8 @@ Garba UI contains all common components and mixins needed for the site.
 
 ## ChangeLog
 
+v1.1.7: Added red action button. Removed soldout and inactive (previously commented out).
+
 v1.1.6: New tasks for icon fonts.
 
 v1.1.5: Icons font files included in the project.
