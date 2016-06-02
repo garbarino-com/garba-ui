@@ -1,7 +1,13 @@
 # Garba UI. The Garbarino UI Library
+Garba UI contains all common components and mixins needed for the site.
 
-Install:
+## Install
+
 `npm install git+https://github.com/garbarino-com/garba-ui.git --save`
+
+## Update
+
+`npm update garba-ui --save`
 
 ## ChangeLog
 
