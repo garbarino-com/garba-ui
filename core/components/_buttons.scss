@@ -180,40 +180,23 @@
 			}
 		}
 	}
-	
 
-	/*
-	// Agotado
-	&.soldout {
-		@include gb-button-skin($gray-5, $gray-3);
-		@include box-shadow(none);
-		cursor: not-allowed;
 
-	    &:active {
-	        @include box-shadow(none);
-	    	top: 0;
-	    } 
+	// Rojo
+	&.removal {
+		@include gb-button-skin($white, #e3564c, $red-light, $red, $red-lighter);
 
-		&:hover {
-			background-color: $gray-3;
+		// Ghost
+		&.ghost {
+			color: $white;
+			background-color: transparent;
+			border: 2px solid $red-light;
+
+			&:hover {
+				background-color: $red-light;
+				color: $red-darkest;
+			}
 		}
 	}
-	
-	*/
-}
 
-/*
-// boton inactivo
-.gb-button.gb-button-inactive {
-	@include gb-button-skin($gray-3, $gray-8);
-	@include box-shadow(none);
-	cursor: default;
-    &:active {
-        @include box-shadow(none);
-    	top: 0;
-    } 
-	&:hover {
-		background-color: $gray-8;
-	}
 }
-*/

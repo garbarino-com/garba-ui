@@ -1060,25 +1060,7 @@ li {
   line-height: 40px;
   border-color: transparent transparent #9E9E9E;
   border-style: solid;
-  border-width: 1px 1px 2px;
-  /*
-	// Agotado
-	&.soldout {
-		@include gb-button-skin($gray-5, $gray-3);
-		@include box-shadow(none);
-		cursor: not-allowed;
-
-	    &:active {
-	        @include box-shadow(none);
-	    	top: 0;
-	    } 
-
-		&:hover {
-			background-color: $gray-3;
-		}
-	}
-	
-	*/ }
+  border-width: 1px 1px 2px; }
   .gb-button:hover {
     -webkit-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     -khtml-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
@@ -1448,22 +1430,105 @@ li {
       .gb-button.secondary.ghost:hover {
         background-color: #E2E2E2;
         color: #333333; }
+  .gb-button.removal {
+    -webkit-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+    -khtml-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+    font-size: 14px;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background-color: #e3564c;
+    height: 40px;
+    line-height: 40px;
+    border-color: transparent transparent #FFA9A8;
+    border-style: solid;
+    border-width: 1px 1px 2px; }
+    .gb-button.removal:hover {
+      -webkit-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+      -khtml-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+      -moz-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+      -ms-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+      color: #FFFFFF;
+      background-color: #D1030F;
+      border-color: transparent transparent #D1030F;
+      text-decoration: none; }
+    .gb-button.removal:active {
+      -webkit-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
+      -khtml-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
+      -ms-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
+      -o-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
+      box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
+      background-color: #E3564C;
+      position: relative;
+      top: 1px; }
+    .gb-button.removal:visited {
+      color: #FFFFFF; }
+    .gb-button.removal.xsmall {
+      font-size: 11px;
+      height: 20px;
+      padding: 0 10px;
+      line-height: 19px; }
+    .gb-button.removal.small {
+      font-size: 12px;
+      height: 30px;
+      padding: 0 10px;
+      line-height: 29px; }
+    .gb-button.removal.large {
+      font-size: 18px;
+      height: 45px;
+      line-height: 45px; }
+    .gb-button.removal.disabled {
+      filter: alpha(opacity=65);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+      -webkit-opacity: 0.65;
+      -khtml-opacity: 0.65;
+      -moz-opacity: 0.65;
+      -ms-opacity: 0.65;
+      -o-opacity: 0.65;
+      opacity: 0.65;
+      background-color: #DFDFDF;
+      color: #9E9E9E;
+      border-color: #E2E2E2;
+      cursor: not-allowed;
+      background-image: none; }
+      .gb-button.removal.disabled:active {
+        top: 0; }
+      .gb-button.removal.disabled:hover {
+        background-color: #DFDFDF;
+        color: #9E9E9E;
+        border-color: #E2E2E2; }
+      .gb-button.removal.disabled.ghost {
+        border: 2px solid #E2E2E2;
+        color: #9E9E9E;
+        background-color: transparent; }
+        .gb-button.removal.disabled.ghost:hover {
+          color: #9E9E9E;
+          background-color: transparent; }
+    .gb-button.removal.icon {
+      margin-right: 0.2em; }
+      .gb-button.removal.icon canvas {
+        position: relative;
+        top: -3px;
+        vertical-align: middle; }
+    .gb-button.removal.block {
+      display: block;
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0; }
+    .gb-button.removal.ghost {
+      color: #FFFFFF;
+      background-color: transparent;
+      border: 2px solid #E3564C; }
+      .gb-button.removal.ghost:hover {
+        background-color: #E3564C;
+        color: #900000; }
 
-/*
-// boton inactivo
-.gb-button.gb-button-inactive {
-	@include gb-button-skin($gray-3, $gray-8);
-	@include box-shadow(none);
-	cursor: default;
-    &:active {
-        @include box-shadow(none);
-    	top: 0;
-    } 
-	&:hover {
-		background-color: $gray-8;
-	}
-}
-*/
 label {
   cursor: pointer; }
 
