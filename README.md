@@ -11,6 +11,8 @@ Garba UI contains all common components and mixins needed for the site.
 
 ## ChangeLog
 
+v1.1.8: Modification in :visited link color.
+
 v1.1.7: Added red action button. Removed soldout and inactive (previously commented out).
 
 v1.1.6: New tasks for icon fonts.

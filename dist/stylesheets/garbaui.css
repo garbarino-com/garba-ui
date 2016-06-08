@@ -439,7 +439,7 @@ a {
     color: #016AB3;
     text-decoration: underline; }
   a:visited {
-    color: #016AB3; }
+    color: inherit; }
 
 p {
   line-height: 1.3; }
