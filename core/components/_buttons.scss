@@ -184,17 +184,17 @@
 
 	// Rojo
 	&.removal {
-		@include gb-button-skin($white, #e3564c, $red-light, $red, $red-lighter);
+		@include gb-button-skin($white, $red, $red, $red-dark, $red-dark);
 
 		// Ghost
 		&.ghost {
-			color: $white;
+			color: $red;
 			background-color: transparent;
-			border: 2px solid $red-light;
+			border: 2px solid $red;
 
 			&:hover {
-				background-color: $red-light;
-				color: $red-darkest;
+				background-color: $red;
+				color: $white;
 			}
 		}
 	}
