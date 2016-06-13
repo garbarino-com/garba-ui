@@ -1440,10 +1440,10 @@ li {
     font-size: 14px;
     white-space: nowrap;
     color: #FFFFFF;
-    background-color: #e3564c;
+    background-color: #D1030F;
     height: 40px;
     line-height: 40px;
-    border-color: transparent transparent #FFA9A8;
+    border-color: transparent transparent #B1010B;
     border-style: solid;
     border-width: 1px 1px 2px; }
     .gb-button.removal:hover {
@@ -1454,8 +1454,8 @@ li {
       -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
       transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
       color: #FFFFFF;
-      background-color: #D1030F;
-      border-color: transparent transparent #D1030F;
+      background-color: #B1010B;
+      border-color: transparent transparent #B1010B;
       text-decoration: none; }
     .gb-button.removal:active {
       -webkit-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
@@ -1464,7 +1464,7 @@ li {
       -ms-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
       -o-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
       box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
-      background-color: #E3564C;
+      background-color: #D1030F;
       position: relative;
       top: 1px; }
     .gb-button.removal:visited {
@@ -1522,12 +1522,12 @@ li {
       padding-right: 0;
       padding-left: 0; }
     .gb-button.removal.ghost {
-      color: #FFFFFF;
+      color: #D1030F;
       background-color: transparent;
-      border: 2px solid #E3564C; }
+      border: 2px solid #D1030F; }
       .gb-button.removal.ghost:hover {
-        background-color: #E3564C;
-        color: #900000; }
+        background-color: #D1030F;
+        color: #FFFFFF; }
 
 label {
   cursor: pointer; }
@@ -2232,7 +2232,8 @@ button.close {
       position: relative;
       left: auto;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      margin-top: 12px; }
     .gb-tabs .gb-tabs-nav > li .gb-tabs-nav-text {
       display: none; }
   .gb-tabs .gb-tabs-nav.gb--tabs-4 > li, .gb-tabs .gb-tabs-nav.gb--tabs-5 > li {
