@@ -127,19 +127,10 @@ label{
 		padding: 0;
 		width: 100%;
 
-		/*&::-ms-expand {
+		&::-ms-expand {
 			display: none;
-		}*/
+		}
 	}
-
-	/*[class^="ie"] & {
-		&:after, &:before {
-			display: none !important;
-		}
-		select {
-			padding-right: 0 !important;
-		}
-	}*/
 
 	&.large{
 		font-size: 16px;
@@ -158,13 +149,10 @@ label{
 		}
 	}
 
-	/*
 	// Error
 	&.error-box {
-		border: 1px solid $red-3 !important;
-		background-color: $red-1;
+		border: 1px solid $red-dark !important;
 	}
-	*/
 
 	// Deshabilitado
 	&.disabled {
@@ -184,14 +172,6 @@ label{
 		margin-top: 25px;
 		display: block;
 	}
-
-	/*
-	// Error
-	&.error-box {
-		border: 1px solid $red-3 !important;
-		background-color: $red-1;
-	}
-	*/
 }
 
 
@@ -201,22 +181,14 @@ label{
 }
 
 
-/*
 // Mensaje de error
 .gb-error-msg{
-	font-size: (13, $red-3);
+	font-size: 13px;
+	color: $red-dark;
 	display: none;
 	padding: 5px;
 	line-height: 10px;
 	margin: 0;
-
-	&:before{
-		font-size: (11);
-		content:"\2716";
-		margin-right: 5px;
-		display: inline-block;
-		font-weight: bold;
-	}
 
 	ul{
 		list-style-type:disc;
@@ -228,5 +200,3 @@ label{
 
 	}
 }
-
-*/
