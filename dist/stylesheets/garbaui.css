@@ -1692,8 +1692,8 @@ label {
 
 @font-face {
   font-family: 'gb-font';
-  src: url("https://s3.amazonaws.com/garbarino-fe/normandia/fonts/icons/v003/gb-font.eot");
-  src: url("https://s3.amazonaws.com/garbarino-fe/normandia/fonts/icons/v003/gb-font.eot#iefix") format("embedded-opentype"), url("https://s3.amazonaws.com/garbarino-fe/normandia/fonts/icons/v003/gb-font.ttf") format("truetype"), url("https://s3.amazonaws.com/garbarino-fe/normandia/fonts/icons/v003/gb-font.woff") format("woff"), url("https://s3.amazonaws.com/garbarino-fe/normandia/fonts/icons/v003/gb-font.svg#gb-font") format("svg");
+  src: url("../fonts/gb-font.eot");
+  src: url("../fonts/gb-font.eot#iefix") format("embedded-opentype"), url("../fonts/gb-font.ttf") format("truetype"), url("../fonts/gb-font.woff") format("woff"), url("../fonts/gb-font.svg#gb-font") format("svg");
   font-weight: normal;
   font-style: normal; }
 
