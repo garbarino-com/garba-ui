@@ -1,4 +1,4 @@
-@mixin popover($arrow: top-center, $width: 200px, $animation: fromTop, $top: auto, $right: auto, $bottom: auto, $left: auto, $arrow: top-left){
+@mixin popover($width: 200px, $animation: fromTop, $top: auto, $right: auto, $bottom: auto, $left: auto, $arrow: top-left){
     @include box-shadow(0 0 7px rgba(0, 0, 0, 0.2));
     @include border-radius(3px);
     @include opacity(0);

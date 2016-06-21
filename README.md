@@ -11,6 +11,8 @@ Garba UI contains all common components and mixins needed for the site.
 
 ## ChangeLog
 
+v1.1.13: Fix in mixin popover and revert change of :visited link color.
+
 v1.1.12: Icons font files included in the project again.
 
 v1.1.11: Hotfix: Icon font files source modified. Using font source from s3.
