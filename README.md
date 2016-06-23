@@ -9,7 +9,18 @@ Garba UI contains all common components and mixins needed for the site.
 
 `npm update garba-ui --save`
 
+## How to use
+
+
+### JS
+
+Add to your JS bundle gulp task following path:
+
+`node_modules/garba-ui/js/swiper.min.js`.
+
 ## ChangeLog
+
+v1.1.14: Added JS libraries.
 
 v1.1.13: Fix in mixin popover and revert change of :visited link color.
 
