@@ -28,7 +28,10 @@ Check more about this amazing library:
 * [Swiper Demos](http://idangero.us/swiper/demos/#.V2wvr5PhAp8)
 
 #####
+
 ## ChangeLog
+
+v1.1.15: Modified mixin scroll.
 
 v1.1.14: Added JS libraries.
 
