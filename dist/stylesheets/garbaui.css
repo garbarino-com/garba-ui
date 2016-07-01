@@ -2112,7 +2112,8 @@ button.close {
         background-color: #0073C3; }
     .gb-tabs .gb-tabs-nav > li > a {
       display: table;
-      height: 90px; }
+      height: 90px;
+      text-decoration: none; }
     .gb-tabs .gb-tabs-nav > li .gb-tabs-nav-img {
       position: absolute;
       left: 15px;
