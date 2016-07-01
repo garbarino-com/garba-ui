@@ -82,6 +82,10 @@
 					//@include transform(translateY(0px));
 				}
 			}
+			> a {
+				display: table;
+				height: 90px;
+			}
 			.gb-tabs-nav-img {
 				position: absolute;
 				left: 15px;
@@ -97,7 +101,7 @@
 				}
 			}
 			.gb-tabs-nav-text {
-				display: inline-block;
+				display: table-cell;
 				line-height: 1.3;
 				vertical-align: middle;
 			}
