@@ -31,6 +31,8 @@ Check more about this amazing library:
 
 ## ChangeLog
 
+v1.1.17: New icons added.
+
 v1.1.16: New icon added, new variable color for compumundo.
 
 v1.1.15: Modified mixin scroll.
