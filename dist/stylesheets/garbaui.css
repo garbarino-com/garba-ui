@@ -2221,7 +2221,8 @@ button.close {
       left: auto;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 12px; }
+      margin-top: 12px;
+      top: 0; }
     .gb-tabs .gb-tabs-nav > li .gb-tabs-nav-text {
       display: none; }
   .gb-tabs .gb-tabs-nav.gb--tabs-4 > li, .gb-tabs .gb-tabs-nav.gb--tabs-5 > li {
