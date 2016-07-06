@@ -2225,6 +2225,8 @@ button.close {
       top: 0; }
     .gb-tabs .gb-tabs-nav > li .gb-tabs-nav-text {
       display: none; }
+    .gb-tabs .gb-tabs-nav > li > a {
+      display: block; }
   .gb-tabs .gb-tabs-nav.gb--tabs-4 > li, .gb-tabs .gb-tabs-nav.gb--tabs-5 > li {
     padding: 0 5px; }
     .gb-tabs .gb-tabs-nav.gb--tabs-4 > li .gb-tabs-nav-img, .gb-tabs .gb-tabs-nav.gb--tabs-5 > li .gb-tabs-nav-img {

@@ -170,6 +170,9 @@
 				.gb-tabs-nav-text {
 					display: none;
 				}
+				> a {
+					display: block;
+				}
 			}
 			&.gb--tabs-4, &.gb--tabs-5 {
 				> li{
