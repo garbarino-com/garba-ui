@@ -2,7 +2,8 @@
     "selection": [
         {
             "order": 71,
-            "name": "bag"
+            "name": "bag",
+            "prevSize": 32
         },
         {
             "order": 6,
@@ -11,7 +12,8 @@
         },
         {
             "order": 70,
-            "name": "calendar"
+            "name": "calendar",
+            "prevSize": 32
         },
         {
             "order": 7,
@@ -35,7 +37,8 @@
         },
         {
             "order": 72,
-            "name": "clock"
+            "name": "clock",
+            "prevSize": 32
         },
         {
             "order": 12,
@@ -49,7 +52,8 @@
         },
         {
             "order": 73,
-            "name": "dashboard"
+            "name": "dashboard",
+            "prevSize": 32
         },
         {
             "order": 9,
@@ -133,7 +137,8 @@
         },
         {
             "order": 69,
-            "name": "gift"
+            "name": "gift",
+            "prevSize": 32
         },
         {
             "order": 26,
@@ -177,7 +182,8 @@
         },
         {
             "order": 74,
-            "name": "notifications"
+            "name": "notifications",
+            "prevSize": 32
         },
         {
             "order": 33,
@@ -206,7 +212,8 @@
         },
         {
             "order": 75,
-            "name": "preferences"
+            "name": "preferences",
+            "prevSize": 32
         },
         {
             "order": 36,
@@ -219,12 +226,13 @@
             "name": "search"
         },
         {
-            "order": 76,
+            "order": 77,
             "name": "shipping"
         },
         {
             "order": 68,
-            "name": "shop"
+            "name": "shop",
+            "prevSize": 32
         },
         {
             "order": 40,
@@ -268,15 +276,18 @@
         },
         {
             "order": 65,
-            "name": "star"
+            "name": "star",
+            "prevSize": 32
         },
         {
             "order": 67,
-            "name": "star-half-left"
+            "name": "star-half-left",
+            "prevSize": 32
         },
         {
             "order": 66,
-            "name": "star-half-right"
+            "name": "star-half-right",
+            "prevSize": 32
         },
         {
             "order": 48,
@@ -312,10 +323,10 @@
     "metadata": {
         "name": "gb-font",
         "importSize": {
-            "width": 612,
+            "width": 1053,
             "height": 792
         },
-        "iconsHash": 682273792
+        "iconsHash": 1433835519
     },
     "height": 1024,
     "prevSize": 32,
@@ -329,7 +340,8 @@
             "grid": 0,
             "tags": [
                 "bag"
-            ]
+            ],
+            "defaultCode": 59648
         },
         {
             "paths": [
@@ -351,7 +363,8 @@
             "grid": 0,
             "tags": [
                 "calendar"
-            ]
+            ],
+            "defaultCode": 59650
         },
         {
             "paths": [
@@ -407,7 +420,8 @@
             "grid": 0,
             "tags": [
                 "clock"
-            ]
+            ],
+            "defaultCode": 59655
         },
         {
             "paths": [
@@ -440,7 +454,8 @@
             "grid": 0,
             "tags": [
                 "dashboard"
-            ]
+            ],
+            "defaultCode": 59658
         },
         {
             "paths": [
@@ -637,7 +652,8 @@
             "grid": 0,
             "tags": [
                 "gift"
-            ]
+            ],
+            "defaultCode": 59675
         },
         {
             "paths": [
@@ -647,7 +663,7 @@
             "tags": [
                 "gplus"
             ],
-            "defaultCode": 59675,
+            "defaultCode": 59676,
             "grid": 0
         },
         {
@@ -658,7 +674,7 @@
             "tags": [
                 "heart"
             ],
-            "defaultCode": 59676,
+            "defaultCode": 59677,
             "grid": 0
         },
         {
@@ -669,7 +685,7 @@
             "tags": [
                 "info"
             ],
-            "defaultCode": 59677,
+            "defaultCode": 59678,
             "grid": 0
         },
         {
@@ -680,7 +696,7 @@
             "tags": [
                 "instagram"
             ],
-            "defaultCode": 59678,
+            "defaultCode": 59679,
             "grid": 0
         },
         {
@@ -691,7 +707,7 @@
             "tags": [
                 "list-view"
             ],
-            "defaultCode": 59679,
+            "defaultCode": 59680,
             "grid": 0
         },
         {
@@ -702,7 +718,7 @@
             "tags": [
                 "marker"
             ],
-            "defaultCode": 59680,
+            "defaultCode": 59681,
             "grid": 0
         },
         {
@@ -713,7 +729,7 @@
             "tags": [
                 "menu-hamburguer"
             ],
-            "defaultCode": 59681,
+            "defaultCode": 59682,
             "grid": 0
         },
         {
@@ -724,7 +740,7 @@
             "tags": [
                 "music"
             ],
-            "defaultCode": 59682,
+            "defaultCode": 59683,
             "grid": 0
         },
         {
@@ -736,7 +752,8 @@
             "grid": 0,
             "tags": [
                 "notifications"
-            ]
+            ],
+            "defaultCode": 59684
         },
         {
             "paths": [
@@ -746,7 +763,7 @@
             "tags": [
                 "percent-star"
             ],
-            "defaultCode": 59684,
+            "defaultCode": 59685,
             "grid": 0
         },
         {
@@ -757,7 +774,7 @@
             "tags": [
                 "phone"
             ],
-            "defaultCode": 59685,
+            "defaultCode": 59686,
             "grid": 0
         },
         {
@@ -768,7 +785,7 @@
             "tags": [
                 "photos"
             ],
-            "defaultCode": 59686,
+            "defaultCode": 59687,
             "grid": 0
         },
         {
@@ -780,7 +797,7 @@
             "tags": [
                 "plane"
             ],
-            "defaultCode": 59687
+            "defaultCode": 59688
         },
         {
             "paths": [
@@ -790,7 +807,7 @@
             "tags": [
                 "play"
             ],
-            "defaultCode": 59688,
+            "defaultCode": 59689,
             "grid": 0
         },
         {
@@ -802,7 +819,8 @@
             "grid": 0,
             "tags": [
                 "preferences"
-            ]
+            ],
+            "defaultCode": 59690
         },
         {
             "paths": [
@@ -812,7 +830,7 @@
             "tags": [
                 "question-mark-circle"
             ],
-            "defaultCode": 59690,
+            "defaultCode": 59691,
             "grid": 0
         },
         {
@@ -823,15 +841,17 @@
             "tags": [
                 "search"
             ],
-            "defaultCode": 59691,
+            "defaultCode": 59692,
             "grid": 0
         },
         {
             "paths": [
-                "M0 339.503h263.758v30.596h-263.758v-30.596zM60.664 400.167h203.093v30.596h-203.093v-30.596zM121.856 461.359h141.902v30.596h-141.902v-30.596z",
-                "M635.656 421.795l-84.93-163.53h-550.726v40.619h527.515l79.127 154.562 144.012 61.719v149.287h-23.211c-8.784-43.701-51.331-72.007-95.032-63.223-31.889 6.409-56.814 31.334-63.223 63.223h-308.069c-8.784-43.701-51.331-72.007-95.032-63.223-31.889 6.409-56.814 31.334-63.223 63.223h-20.573v-168.805h-40.619v211.006h63.829c8.784 43.701 51.331 72.007 95.032 63.223 31.889-6.409 56.814-31.334 63.223-63.223h310.179c8.784 43.701 51.331 72.007 95.032 63.223 31.889-6.409 56.814-31.334 63.223-63.223h59.082v-218.391l-155.617-66.467zM182.52 725.116c-22.434 0-40.619-18.185-40.619-40.619s18.185-40.619 40.619-40.619 40.619 18.185 40.619 40.619c0 22.434-18.185 40.619-40.619 40.619 0 0 0 0 0 0zM649.371 725.116c-22.434 0-40.619-18.185-40.619-40.619s18.185-40.619 40.619-40.619c22.434 0 40.619 18.185 40.619 40.619v0c0 22.434-18.185 40.619-40.619 40.619v0 0z"
+                "M321.306 441.75h186.289v40.166h-186.289v-40.166z",
+                "M161.333 281.777h346.263v40.166h-346.263v-40.166z",
+                "M240.974 361.418h266.623v40.166h-266.623v-40.166z",
+                "M1093.702 351.856l-146.129-281.367h-947.572v69.888h907.636l136.145 265.937 247.785 106.193v256.861h-39.936c-15.113-75.192-88.319-123.894-163.51-108.781-54.867 11.029-97.752 53.914-108.781 108.781h-530.060c-15.113-75.192-88.319-123.894-163.51-108.781-54.867 11.029-97.752 53.914-108.781 108.781h-35.398v-290.444h-69.888v363.055h109.824c15.113 75.192 88.319 123.894 163.51 108.781 54.867-11.029 97.752-53.914 108.781-108.781h533.69c15.113 75.192 88.319 123.894 163.51 108.781 54.867-11.029 97.752-53.914 108.781-108.781h101.655v-375.761l-267.753-114.362zM314.042 873.747c0 0 0 0 0 0-38.598 0-69.888-31.29-69.888-69.888s31.29-69.888 69.888-69.888c38.598 0 69.888 31.29 69.888 69.888s-31.29 69.888-69.888 69.888zM1117.3 873.747c-38.598 0-69.888-31.29-69.888-69.888s31.29-69.888 69.888-69.888 69.888 31.29 69.888 69.888c0 38.598-31.29 69.888-69.888 69.888z"
             ],
-            "width": 791,
+            "width": 1361,
             "isMulticolor2": false,
             "grid": 0,
             "tags": [
@@ -847,7 +867,8 @@
             "grid": 0,
             "tags": [
                 "shop"
-            ]
+            ],
+            "defaultCode": 59694
         },
         {
             "paths": [
@@ -857,7 +878,7 @@
             "tags": [
                 "simple-bold-arrow-bottom"
             ],
-            "defaultCode": 59694,
+            "defaultCode": 59695,
             "grid": 0
         },
         {
@@ -868,7 +889,7 @@
             "tags": [
                 "simple-bold-arrow-left"
             ],
-            "defaultCode": 59695,
+            "defaultCode": 59696,
             "grid": 0
         },
         {
@@ -879,7 +900,7 @@
             "tags": [
                 "simple-bold-arrow-right"
             ],
-            "defaultCode": 59696,
+            "defaultCode": 59697,
             "grid": 0
         },
         {
@@ -890,7 +911,7 @@
             "tags": [
                 "simple-bold-arrow-top"
             ],
-            "defaultCode": 59697,
+            "defaultCode": 59698,
             "grid": 0
         },
         {
@@ -901,7 +922,7 @@
             "tags": [
                 "simple-thin-arrow-bottom"
             ],
-            "defaultCode": 59698,
+            "defaultCode": 59699,
             "grid": 0
         },
         {
@@ -912,7 +933,7 @@
             "tags": [
                 "simple-thin-arrow-left"
             ],
-            "defaultCode": 59699,
+            "defaultCode": 59700,
             "grid": 0
         },
         {
@@ -923,7 +944,7 @@
             "tags": [
                 "simple-thin-arrow-right"
             ],
-            "defaultCode": 59700,
+            "defaultCode": 59701,
             "grid": 0
         },
         {
@@ -934,7 +955,7 @@
             "tags": [
                 "simple-thin-arrow-top"
             ],
-            "defaultCode": 59701,
+            "defaultCode": 59702,
             "grid": 0
         },
         {
@@ -946,7 +967,8 @@
             "grid": 0,
             "tags": [
                 "star"
-            ]
+            ],
+            "defaultCode": 59703
         },
         {
             "paths": [
@@ -957,7 +979,8 @@
             "grid": 0,
             "tags": [
                 "star-half-left"
-            ]
+            ],
+            "defaultCode": 59704
         },
         {
             "paths": [
@@ -968,7 +991,8 @@
             "grid": 0,
             "tags": [
                 "star-half-right"
-            ]
+            ],
+            "defaultCode": 59705
         },
         {
             "paths": [
@@ -978,7 +1002,7 @@
             "tags": [
                 "trash"
             ],
-            "defaultCode": 59702,
+            "defaultCode": 59706,
             "grid": 0
         },
         {
@@ -989,7 +1013,7 @@
             "tags": [
                 "twitter"
             ],
-            "defaultCode": 59703,
+            "defaultCode": 59707,
             "grid": 0
         },
         {
@@ -1000,7 +1024,7 @@
             "tags": [
                 "user"
             ],
-            "defaultCode": 59704,
+            "defaultCode": 59708,
             "grid": 0
         },
         {
@@ -1011,7 +1035,7 @@
             "tags": [
                 "users"
             ],
-            "defaultCode": 59705,
+            "defaultCode": 59709,
             "grid": 0
         },
         {
@@ -1022,7 +1046,7 @@
             "tags": [
                 "video"
             ],
-            "defaultCode": 59706,
+            "defaultCode": 59710,
             "grid": 0
         },
         {
@@ -1033,7 +1057,7 @@
             "tags": [
                 "youtube"
             ],
-            "defaultCode": 59707,
+            "defaultCode": 59711,
             "grid": 0
         }
     ],
