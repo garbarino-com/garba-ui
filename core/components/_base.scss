@@ -25,6 +25,10 @@ body{
 		-webkit-box-sizing: border-box;
 		-o-box-sizing: border-box;
 	}
+
+	&.gb--gray {
+		background-color: $gray-lightest;
+	}
 }
 
 
@@ -34,6 +38,19 @@ body{
 	max-width: 1366px;
 	padding: 30px 30px;
 	width: auto;
+
+	// Min width 768 para generar scroll horizontal en menos de 768
+	&.gb--fixed-width {
+		min-width: 768px;
+
+		// Wrapper sin scroll para dispositivos
+		@media only screen 
+		and (min-device-width: 0) 
+		and (max-device-width: 767px){
+			min-width: 0px;
+			padding: 0;
+		}
+	}
 }
 
 

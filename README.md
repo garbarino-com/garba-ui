@@ -31,6 +31,8 @@ Check more about this amazing library:
 
 ## ChangeLog
 
+v1.1.18: New icons added, and updated some old ones. Modified responsive breakpoint "huge" from 1280px min-width, to 1366px. Optional class for body gray background color. Optional class for .gb-wrapper to set the min-width  in 768.
+
 v1.1.17: New icons added.
 
 v1.1.16: New icon added, new variable color for compumundo.
