@@ -1,0 +1,54 @@
+// Spinner animation
+@-webkit-keyframes spinner-rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes spinner-rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spinner-rotation {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@keyframes spinner-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.gb-spinner {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  -webkit-animation: spinner-rotation .6s infinite linear;
+  -moz-animation: spinner-rotation .6s infinite linear;
+  -o-animation: spinner-rotation .6s infinite linear;
+  animation: spinner-rotation .6s infinite linear;
+  border-left: 3px solid rgba($silver-chalice, .15);
+  border-right: 3px solid rgba($silver-chalice, .15);
+  border-bottom: 3px solid rgba($silver-chalice, .15);
+  border-top: 3px solid rgba($silver-chalice, .8);
+  border-radius: 100%;
+  display: none;
+  vertical-align: sub;
+  margin-right: 5px;
+}

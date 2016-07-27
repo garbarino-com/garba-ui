@@ -2,36 +2,35 @@
 //////// GARBARINO ////////
 ///////////////////////////
 
-// Primary brand color
-$alizarin-crimson: #E42729;
-
-// Primary colors
-$red: #D1030F;
-$blue: #0073C3;
-$green-dark: #16A400;
-$yellow-dark: #FAAA00;
-$gray-darkest: #333333;
-
 // Secondary colors
 $blue-darkest: #005998;
 $blue-dark: #016AB3;
+$blue: #0084E0; // PRIMARY
+$blue-2: #3A9BDF;
 $blue-light: #60B5F1;
 $blue-lighter: #9ECFF1;
 $blue-lightest: #C3E7FF;
 
 $red-darkest: #900000;
 $red-dark: #B1010B;
+$red: #D1030F; // PRIMARY
+$red-2: #E42729;
 $red-light: #E3564C;
 $red-lighter: #FFA9A8;
 $red-lightest: #FDD7D5;
 
+// Primary brand color
+$alizarin-crimson: $red-2;
+
 $yellow-darkest: #D79200;
+$yellow-dark: #FAAA00; // PRIMARY
 $yellow: #FEBA2B;
 $yellow-light: #FFC751;
 $yellow-lighter: #FCCF71;
 $yellow-lightest: #FCE4B2;
 
 $green-darkest: #117C00;
+$green-dark: #16A400; // PRIMARY
 $green: #49C237;
 $green-light: #93DC87;
 $green-lighter: #BAE9B2;
@@ -39,6 +38,7 @@ $green-lightest: #D2F6CC;
 
 // Black and gray
 $black: #000000;
+$gray-darkest: #333333; // PRIMARY
 $gray-dark: #666666;
 $silver-chalice: #9E9E9E;
 $silver: #C4C4C4;

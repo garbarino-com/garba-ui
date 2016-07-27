@@ -23,6 +23,7 @@
 @mixin gb-button-skin( $color: $gray-darkest, $background-color: $gray-light, $active: $gray-light, $background-hover: $silver-chalice, $border: $silver-chalice ) {
 	@include transition(background-color 0.2s ease-out, border-color 0.2s ease-out);
 	font-size: 14px;
+	font-weight: 600;
 	white-space: nowrap;
 	color: $color;
 	background-color: $background-color;
@@ -77,7 +78,7 @@
 		@include opacity(0.65);
 		background-color: $silver-lightest;
 		color: $silver-chalice;
-		border-color: $gray-light;
+		border-color: $silver-lightest;
 		cursor: not-allowed;
 		background-image: none;
 
@@ -122,6 +123,18 @@
 		padding-left: 0;
 	}
 
+	&.loading {
+		&:hover {
+			background-color: $gray-light;
+			color: $gray-darkest;
+			cursor: default;
+		}
+
+		.gb-spinner {
+			display: inline-block;
+		}
+	}
+
 }
 
 // CSS OUTPUT -----------------------------------------------
@@ -138,7 +151,7 @@
 		&.ghost {
 			color: $green-dark;
 			background-color: transparent;
-			border: 2px solid $green-dark;
+			border: 2px solid $green-darkest;
 
 			&:hover {
 				background-color: $green-dark;
@@ -149,7 +162,7 @@
 	
 	// Azul
 	&.primary {
-		@include gb-button-skin($white, $blue, $blue, $blue-darkest, $blue-darkest);
+		@include gb-button-skin($white, $blue, $blue, $blue-2, $blue-dark);
 		
 		// Ghost
 		&.ghost {

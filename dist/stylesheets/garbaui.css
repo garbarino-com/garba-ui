@@ -1061,6 +1061,7 @@ li {
   -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
   transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
   font-size: 14px;
+  font-weight: 600;
   white-space: nowrap;
   color: #333333;
   background-color: #E2E2E2;
@@ -1117,7 +1118,7 @@ li {
     opacity: 0.65;
     background-color: #DFDFDF;
     color: #9E9E9E;
-    border-color: #E2E2E2;
+    border-color: #DFDFDF;
     cursor: not-allowed;
     background-image: none; }
     .gb-button.disabled:active {
@@ -1144,6 +1145,12 @@ li {
     width: 100%;
     padding-right: 0;
     padding-left: 0; }
+  .gb-button.loading:hover {
+    background-color: #E2E2E2;
+    color: #333333;
+    cursor: default; }
+  .gb-button.loading .gb-spinner {
+    display: inline-block; }
   .gb-button.revenue {
     -webkit-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     -khtml-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
@@ -1152,6 +1159,7 @@ li {
     -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     font-size: 14px;
+    font-weight: 600;
     white-space: nowrap;
     color: #FFFFFF;
     background-color: #16A400;
@@ -1208,7 +1216,7 @@ li {
       opacity: 0.65;
       background-color: #DFDFDF;
       color: #9E9E9E;
-      border-color: #E2E2E2;
+      border-color: #DFDFDF;
       cursor: not-allowed;
       background-image: none; }
       .gb-button.revenue.disabled:active {
@@ -1235,10 +1243,16 @@ li {
       width: 100%;
       padding-right: 0;
       padding-left: 0; }
+    .gb-button.revenue.loading:hover {
+      background-color: #E2E2E2;
+      color: #333333;
+      cursor: default; }
+    .gb-button.revenue.loading .gb-spinner {
+      display: inline-block; }
     .gb-button.revenue.ghost {
       color: #16A400;
       background-color: transparent;
-      border: 2px solid #16A400; }
+      border: 2px solid #117C00; }
       .gb-button.revenue.ghost:hover {
         background-color: #16A400;
         color: #FFFFFF; }
@@ -1250,12 +1264,13 @@ li {
     -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     font-size: 14px;
+    font-weight: 600;
     white-space: nowrap;
     color: #FFFFFF;
-    background-color: #0073C3;
+    background-color: #0084E0;
     height: 40px;
     line-height: 40px;
-    border-color: transparent transparent #005998;
+    border-color: transparent transparent #016AB3;
     border-style: solid;
     border-width: 1px 1px 2px; }
     .gb-button.primary:hover {
@@ -1266,8 +1281,8 @@ li {
       -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
       transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
       color: #FFFFFF;
-      background-color: #005998;
-      border-color: transparent transparent #005998;
+      background-color: #3A9BDF;
+      border-color: transparent transparent #3A9BDF;
       text-decoration: none; }
     .gb-button.primary:active {
       -webkit-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
@@ -1276,7 +1291,7 @@ li {
       -ms-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
       -o-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
       box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
-      background-color: #0073C3;
+      background-color: #0084E0;
       position: relative;
       top: 1px; }
     .gb-button.primary:visited {
@@ -1306,7 +1321,7 @@ li {
       opacity: 0.65;
       background-color: #DFDFDF;
       color: #9E9E9E;
-      border-color: #E2E2E2;
+      border-color: #DFDFDF;
       cursor: not-allowed;
       background-image: none; }
       .gb-button.primary.disabled:active {
@@ -1333,12 +1348,18 @@ li {
       width: 100%;
       padding-right: 0;
       padding-left: 0; }
+    .gb-button.primary.loading:hover {
+      background-color: #E2E2E2;
+      color: #333333;
+      cursor: default; }
+    .gb-button.primary.loading .gb-spinner {
+      display: inline-block; }
     .gb-button.primary.ghost {
-      color: #0073C3;
+      color: #0084E0;
       background-color: transparent;
-      border: 2px solid #0073C3; }
+      border: 2px solid #0084E0; }
       .gb-button.primary.ghost:hover {
-        background-color: #0073C3;
+        background-color: #0084E0;
         color: #FFFFFF; }
   .gb-button.secondary {
     -webkit-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
@@ -1348,6 +1369,7 @@ li {
     -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     font-size: 14px;
+    font-weight: 600;
     white-space: nowrap;
     color: #333333;
     background-color: #E2E2E2;
@@ -1404,7 +1426,7 @@ li {
       opacity: 0.65;
       background-color: #DFDFDF;
       color: #9E9E9E;
-      border-color: #E2E2E2;
+      border-color: #DFDFDF;
       cursor: not-allowed;
       background-image: none; }
       .gb-button.secondary.disabled:active {
@@ -1431,6 +1453,12 @@ li {
       width: 100%;
       padding-right: 0;
       padding-left: 0; }
+    .gb-button.secondary.loading:hover {
+      background-color: #E2E2E2;
+      color: #333333;
+      cursor: default; }
+    .gb-button.secondary.loading .gb-spinner {
+      display: inline-block; }
     .gb-button.secondary.ghost {
       color: #333333;
       background-color: transparent;
@@ -1446,6 +1474,7 @@ li {
     -o-transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
     font-size: 14px;
+    font-weight: 600;
     white-space: nowrap;
     color: #FFFFFF;
     background-color: #D1030F;
@@ -1502,7 +1531,7 @@ li {
       opacity: 0.65;
       background-color: #DFDFDF;
       color: #9E9E9E;
-      border-color: #E2E2E2;
+      border-color: #DFDFDF;
       cursor: not-allowed;
       background-image: none; }
       .gb-button.removal.disabled:active {
@@ -1529,6 +1558,12 @@ li {
       width: 100%;
       padding-right: 0;
       padding-left: 0; }
+    .gb-button.removal.loading:hover {
+      background-color: #E2E2E2;
+      color: #333333;
+      cursor: default; }
+    .gb-button.removal.loading .gb-spinner {
+      display: inline-block; }
     .gb-button.removal.ghost {
       color: #D1030F;
       background-color: transparent;
@@ -1577,7 +1612,7 @@ label {
     -ms-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
     -o-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
     box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
-    border: 1px solid #0073C3;
+    border: 1px solid #0084E0;
     outline: none; }
   .gb-input::-webkit-input-placeholder, input[type="text"].gb-input::-webkit-input-placeholder {
     color: #C4C4C4; }
@@ -1636,7 +1671,7 @@ label {
     -ms-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
     -o-box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
     box-shadow: none 2px 5px rgba(0, 0, 0, 0.4);
-    border: 1px solid #0073C3;
+    border: 1px solid #0084E0;
     outline: none; }
   .gb-select select {
     -webkit-box-shadow: 0 0 0 transparent 2px 5px rgba(0, 0, 0, 0.4);
@@ -1883,32 +1918,35 @@ label {
 .gb-icon-simple-thin-arrow-top:before {
   content: "\e936"; }
 
-.gb-icon-star:before {
+.gb-icon-sort:before {
   content: "\e937"; }
 
-.gb-icon-star-half-left:before {
+.gb-icon-star:before {
   content: "\e938"; }
 
-.gb-icon-star-half-right:before {
+.gb-icon-star-half-left:before {
   content: "\e939"; }
 
-.gb-icon-trash:before {
+.gb-icon-star-half-right:before {
   content: "\e93a"; }
 
-.gb-icon-twitter:before {
+.gb-icon-trash:before {
   content: "\e93b"; }
 
-.gb-icon-user:before {
+.gb-icon-twitter:before {
   content: "\e93c"; }
 
-.gb-icon-users:before {
+.gb-icon-user:before {
   content: "\e93d"; }
 
-.gb-icon-video:before {
+.gb-icon-users:before {
   content: "\e93e"; }
 
-.gb-icon-youtube:before {
+.gb-icon-video:before {
   content: "\e93f"; }
+
+.gb-icon-youtube:before {
+  content: "\e940"; }
 
 .close {
   float: right;
@@ -2071,6 +2109,47 @@ button.close {
     font-weight: 700;
     margin-bottom: 10px; }
 
+@-webkit-keyframes spinner-rotation {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(359deg); } }
+
+@-moz-keyframes spinner-rotation {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(359deg); } }
+
+@-o-keyframes spinner-rotation {
+  from {
+    -o-transform: rotate(0deg); }
+  to {
+    -o-transform: rotate(359deg); } }
+
+@keyframes spinner-rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+
+.gb-spinner {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  -webkit-animation: spinner-rotation .6s infinite linear;
+  -moz-animation: spinner-rotation .6s infinite linear;
+  -o-animation: spinner-rotation .6s infinite linear;
+  animation: spinner-rotation .6s infinite linear;
+  border-left: 3px solid rgba(158, 158, 158, 0.15);
+  border-right: 3px solid rgba(158, 158, 158, 0.15);
+  border-bottom: 3px solid rgba(158, 158, 158, 0.15);
+  border-top: 3px solid rgba(158, 158, 158, 0.8);
+  border-radius: 100%;
+  display: none;
+  vertical-align: sub;
+  margin-right: 5px; }
+
 .gb-tabs {
   overflow: hidden; }
   .gb-tabs .gb-tabs-nav:before, .gb-tabs .gb-tabs-nav:after {
@@ -2130,9 +2209,9 @@ button.close {
         border-left: solid 1px #D6D6D6; }
     .gb-tabs .gb-tabs-nav > li:hover {
       background-color: #FFFFFF;
-      color: #0073C3; }
+      color: #0084E0; }
       .gb-tabs .gb-tabs-nav > li:hover:after {
-        background-color: #0073C3; }
+        background-color: #0084E0; }
     .gb-tabs .gb-tabs-nav > li:active {
       -webkit-transition: none;
       -khtml-transition: none;
@@ -2147,7 +2226,7 @@ button.close {
       z-index: 1;
       font-weight: bold; }
       .gb-tabs .gb-tabs-nav > li.gb--active:after {
-        background-color: #0073C3; }
+        background-color: #0084E0; }
     .gb-tabs .gb-tabs-nav > li > a {
       display: table;
       height: 90px;
