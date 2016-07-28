@@ -31,6 +31,8 @@ Check more about this amazing library:
 
 ## ChangeLog
 
+v1.1.21: New icon added.
+
 v1.1.20: New icon added.
 
 v1.1.19: New icon added. New blue color variable, and old one modified. Spinner component created. Buttons component updated.

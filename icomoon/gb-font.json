@@ -82,7 +82,8 @@
     },
     {
       "order": 79,
-      "name": "download"
+      "name": "download",
+      "prevSize": 32
     },
     {
       "order": 58,
@@ -123,6 +124,10 @@
       "order": 23,
       "prevSize": 32,
       "name": "filled-arrow-top"
+    },
+    {
+      "order": 80,
+      "name": "filter"
     },
     {
       "order": 24,
@@ -333,10 +338,10 @@
   "metadata": {
     "name": "gb-font",
     "importSize": {
-      "width": 15,
+      "width": 14,
       "height": 14
     },
-    "iconsHash": 1298198840
+    "iconsHash": 1237242460
   },
   "height": 1024,
   "prevSize": 32,
@@ -531,7 +536,8 @@
       "grid": 0,
       "tags": [
         "download"
-      ]
+      ],
+      "defaultCode": 59664
     },
     {
       "paths": [
@@ -552,7 +558,7 @@
           {}
         ]
       },
-      "defaultCode": 59664
+      "defaultCode": 59665
     },
     {
       "paths": [
@@ -562,7 +568,7 @@
       "tags": [
         "exclamation-mark-circle"
       ],
-      "defaultCode": 59665,
+      "defaultCode": 59666,
       "grid": 0
     },
     {
@@ -573,7 +579,7 @@
       "tags": [
         "exclamation-mark-triangle"
       ],
-      "defaultCode": 59666,
+      "defaultCode": 59667,
       "grid": 0
     },
     {
@@ -584,7 +590,7 @@
       "tags": [
         "facebook"
       ],
-      "defaultCode": 59667,
+      "defaultCode": 59668,
       "grid": 0
     },
     {
@@ -595,7 +601,7 @@
       "tags": [
         "filled-arrow-bottom"
       ],
-      "defaultCode": 59668,
+      "defaultCode": 59669,
       "grid": 0
     },
     {
@@ -606,7 +612,7 @@
       "tags": [
         "filled-arrow-left"
       ],
-      "defaultCode": 59669,
+      "defaultCode": 59670,
       "grid": 0
     },
     {
@@ -617,7 +623,7 @@
       "tags": [
         "filled-arrow-right"
       ],
-      "defaultCode": 59670,
+      "defaultCode": 59671,
       "grid": 0
     },
     {
@@ -628,8 +634,19 @@
       "tags": [
         "filled-arrow-top"
       ],
-      "defaultCode": 59671,
+      "defaultCode": 59672,
       "grid": 0
+    },
+    {
+      "paths": [
+        "M1021.070 28.567c2.801 5.458 4.442 11.908 4.442 18.741 0 12.71-5.68 24.094-14.64 31.752l-358.238 360.426v539.834c0.047 0.757 0.074 1.641 0.074 2.532 0 18.64-11.802 34.524-28.341 40.588-3.053 0.62-6.219 0.92-9.456 0.92s-6.403-0.3-9.473-0.873c-0.034 0.059-0.447 0.065-0.861 0.065-12.555 0-23.86-5.354-31.756-13.904l-186.075-184.613c-8.582-8.158-13.92-19.659-13.92-32.406 0-0.195 0.001-0.39 0.004-0.584l-0-351.558-358.18-360.378c-9.017-7.706-14.697-19.089-14.697-31.8 0-6.833 1.642-13.283 4.552-18.977 6.050-16.603 21.934-28.405 40.574-28.405 0.891 0 1.775 0.027 2.653 0.080l930.123-0.006c0.757-0.047 1.641-0.074 2.532-0.074 18.64 0 34.524 11.802 40.588 28.341z"
+      ],
+      "width": 1025,
+      "isMulticolor2": false,
+      "grid": 0,
+      "tags": [
+        "filter"
+      ]
     },
     {
       "paths": [
@@ -639,7 +656,7 @@
       "tags": [
         "fire"
       ],
-      "defaultCode": 59672,
+      "defaultCode": 59673,
       "grid": 0
     },
     {
@@ -650,7 +667,7 @@
       "tags": [
         "gallery-view"
       ],
-      "defaultCode": 59673,
+      "defaultCode": 59674,
       "grid": 0
     },
     {
@@ -661,7 +678,7 @@
       "tags": [
         "games"
       ],
-      "defaultCode": 59674,
+      "defaultCode": 59675,
       "grid": 0
     },
     {
@@ -674,7 +691,7 @@
       "tags": [
         "gift"
       ],
-      "defaultCode": 59675
+      "defaultCode": 59676
     },
     {
       "paths": [
@@ -684,7 +701,7 @@
       "tags": [
         "gplus"
       ],
-      "defaultCode": 59676,
+      "defaultCode": 59677,
       "grid": 0
     },
     {
@@ -695,7 +712,7 @@
       "tags": [
         "heart"
       ],
-      "defaultCode": 59677,
+      "defaultCode": 59678,
       "grid": 0
     },
     {
@@ -706,7 +723,7 @@
       "tags": [
         "info"
       ],
-      "defaultCode": 59678,
+      "defaultCode": 59679,
       "grid": 0
     },
     {
@@ -717,7 +734,7 @@
       "tags": [
         "instagram"
       ],
-      "defaultCode": 59679,
+      "defaultCode": 59680,
       "grid": 0
     },
     {
@@ -728,7 +745,7 @@
       "tags": [
         "list-view"
       ],
-      "defaultCode": 59680,
+      "defaultCode": 59681,
       "grid": 0
     },
     {
@@ -739,7 +756,7 @@
       "tags": [
         "marker"
       ],
-      "defaultCode": 59681,
+      "defaultCode": 59682,
       "grid": 0
     },
     {
@@ -750,7 +767,7 @@
       "tags": [
         "menu-hamburguer"
       ],
-      "defaultCode": 59682,
+      "defaultCode": 59683,
       "grid": 0
     },
     {
@@ -761,7 +778,7 @@
       "tags": [
         "music"
       ],
-      "defaultCode": 59683,
+      "defaultCode": 59684,
       "grid": 0
     },
     {
@@ -774,7 +791,7 @@
       "tags": [
         "notifications"
       ],
-      "defaultCode": 59684
+      "defaultCode": 59685
     },
     {
       "paths": [
@@ -784,7 +801,7 @@
       "tags": [
         "percent-star"
       ],
-      "defaultCode": 59685,
+      "defaultCode": 59686,
       "grid": 0
     },
     {
@@ -795,7 +812,7 @@
       "tags": [
         "phone"
       ],
-      "defaultCode": 59686,
+      "defaultCode": 59687,
       "grid": 0
     },
     {
@@ -806,7 +823,7 @@
       "tags": [
         "photos"
       ],
-      "defaultCode": 59687,
+      "defaultCode": 59688,
       "grid": 0
     },
     {
@@ -818,7 +835,7 @@
       "tags": [
         "plane"
       ],
-      "defaultCode": 59688
+      "defaultCode": 59689
     },
     {
       "paths": [
@@ -828,7 +845,7 @@
       "tags": [
         "play"
       ],
-      "defaultCode": 59689,
+      "defaultCode": 59690,
       "grid": 0
     },
     {
@@ -841,7 +858,7 @@
       "tags": [
         "preferences"
       ],
-      "defaultCode": 59690
+      "defaultCode": 59691
     },
     {
       "paths": [
@@ -851,7 +868,7 @@
       "tags": [
         "question-mark-circle"
       ],
-      "defaultCode": 59691,
+      "defaultCode": 59692,
       "grid": 0
     },
     {
@@ -862,7 +879,7 @@
       "tags": [
         "search"
       ],
-      "defaultCode": 59692,
+      "defaultCode": 59693,
       "grid": 0
     },
     {
@@ -878,7 +895,7 @@
       "tags": [
         "shipping"
       ],
-      "defaultCode": 59693
+      "defaultCode": 59694
     },
     {
       "paths": [
@@ -890,7 +907,7 @@
       "tags": [
         "shop"
       ],
-      "defaultCode": 59694
+      "defaultCode": 59695
     },
     {
       "paths": [
@@ -900,7 +917,7 @@
       "tags": [
         "simple-bold-arrow-bottom"
       ],
-      "defaultCode": 59695,
+      "defaultCode": 59696,
       "grid": 0
     },
     {
@@ -911,7 +928,7 @@
       "tags": [
         "simple-bold-arrow-left"
       ],
-      "defaultCode": 59696,
+      "defaultCode": 59697,
       "grid": 0
     },
     {
@@ -922,7 +939,7 @@
       "tags": [
         "simple-bold-arrow-right"
       ],
-      "defaultCode": 59697,
+      "defaultCode": 59698,
       "grid": 0
     },
     {
@@ -933,7 +950,7 @@
       "tags": [
         "simple-bold-arrow-top"
       ],
-      "defaultCode": 59698,
+      "defaultCode": 59699,
       "grid": 0
     },
     {
@@ -944,7 +961,7 @@
       "tags": [
         "simple-thin-arrow-bottom"
       ],
-      "defaultCode": 59699,
+      "defaultCode": 59700,
       "grid": 0
     },
     {
@@ -955,7 +972,7 @@
       "tags": [
         "simple-thin-arrow-left"
       ],
-      "defaultCode": 59700,
+      "defaultCode": 59701,
       "grid": 0
     },
     {
@@ -966,7 +983,7 @@
       "tags": [
         "simple-thin-arrow-right"
       ],
-      "defaultCode": 59701,
+      "defaultCode": 59702,
       "grid": 0
     },
     {
@@ -977,7 +994,7 @@
       "tags": [
         "simple-thin-arrow-top"
       ],
-      "defaultCode": 59702,
+      "defaultCode": 59703,
       "grid": 0
     },
     {
@@ -994,7 +1011,7 @@
       "tags": [
         "sort"
       ],
-      "defaultCode": 59703
+      "defaultCode": 59704
     },
     {
       "paths": [
@@ -1006,7 +1023,7 @@
       "tags": [
         "star"
       ],
-      "defaultCode": 59704
+      "defaultCode": 59705
     },
     {
       "paths": [
@@ -1018,7 +1035,7 @@
       "tags": [
         "star-half-left"
       ],
-      "defaultCode": 59705
+      "defaultCode": 59706
     },
     {
       "paths": [
@@ -1030,7 +1047,7 @@
       "tags": [
         "star-half-right"
       ],
-      "defaultCode": 59706
+      "defaultCode": 59707
     },
     {
       "paths": [
@@ -1040,7 +1057,7 @@
       "tags": [
         "trash"
       ],
-      "defaultCode": 59707,
+      "defaultCode": 59708,
       "grid": 0
     },
     {
@@ -1051,7 +1068,7 @@
       "tags": [
         "twitter"
       ],
-      "defaultCode": 59708,
+      "defaultCode": 59709,
       "grid": 0
     },
     {
@@ -1062,7 +1079,7 @@
       "tags": [
         "user"
       ],
-      "defaultCode": 59709,
+      "defaultCode": 59710,
       "grid": 0
     },
     {
@@ -1073,7 +1090,7 @@
       "tags": [
         "users"
       ],
-      "defaultCode": 59710,
+      "defaultCode": 59711,
       "grid": 0
     },
     {
@@ -1084,7 +1101,7 @@
       "tags": [
         "video"
       ],
-      "defaultCode": 59711,
+      "defaultCode": 59712,
       "grid": 0
     },
     {
@@ -1095,7 +1112,7 @@
       "tags": [
         "youtube"
       ],
-      "defaultCode": 59712,
+      "defaultCode": 59713,
       "grid": 0
     }
   ],
