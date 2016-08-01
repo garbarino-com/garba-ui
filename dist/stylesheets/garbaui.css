@@ -436,8 +436,7 @@ body {
     min-width: 768px; }
     @media only screen and (min-device-width: 0) and (max-device-width: 767px) {
       .gb-wrapper.gb--fixed-width {
-        min-width: 0px;
-        padding: 0; } }
+        min-width: 0px; } }
 
 a {
   color: #016AB3;
