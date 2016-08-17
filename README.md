@@ -31,6 +31,8 @@ Check more about this amazing library:
 
 ## ChangeLog
 
+v1.1.22: New icon added. Bugfixing in form component.
+
 v1.1.21: New icon added.
 
 v1.1.20: New icon added.
