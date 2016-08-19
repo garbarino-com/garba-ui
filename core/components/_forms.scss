@@ -200,3 +200,111 @@ label{
 
 	}
 }
+
+// Checkbox
+.gb-check {
+	@include transition(all 0.2s ease-out);
+	@include fontStyle(16px, $gray-dark);
+	@include border-radius(3px);
+	border: 2px solid $silver-chalice;
+	position: relative;
+	padding: 10px 20px;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	font-weight: 600;
+
+	&:hover {
+		border-color: $blue;
+	}
+
+	&:active {
+		border-color: $blue-light;
+
+		// Check
+		.gb-check-icon {
+			background-color: $blue-light;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	// Check
+	.gb-check-icon {
+		@include transition(all 0.2s ease-out);
+		@include transform(scale(0.9));
+		@include border-radius(3px);
+		@include fontStyle(14px, $white);
+		display: block;
+		position: absolute;
+		right: -2px;
+		top: -2px;
+		width: 20px;
+		height: 20px;
+		background-color: $blue;
+		text-align: center;
+		padding-top: 3px;
+		visibility: hidden;
+	}
+
+	// Item cuadrado
+	&.gb--square {
+		width: 90px;
+		height: 90px;
+		padding: 3px;
+
+		img {
+			display: block;
+			width: 80px;
+			height: auto;
+			max-height: 80px;
+		}
+	}
+
+	// Item checked
+	&.gb--checked {
+		border-color: $blue;
+
+		a {
+			color: $black;
+		}
+
+		// Check
+		.gb-check-icon {
+			@include transform(scale(1));
+			visibility: visible;
+		}
+
+		&:active {
+			border-color: $blue-light;
+		}
+	}
+
+	// Item deshabilitado
+	&.gb--disabled {
+		cursor: not-allowed;
+		overflow: hidden;
+
+		a {
+			color: $silver-chalice;
+		}
+
+		&:hover {
+			border-color: $silver-chalice;
+		}
+
+		&:before {
+			@include transform(skewY(-23deg));
+			content: '';
+			height: 2px;
+			background-color: $silver-chalice;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50%;
+			margin-top: -1px;
+		}
+	}
+}
