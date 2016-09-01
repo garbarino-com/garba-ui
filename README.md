@@ -31,6 +31,8 @@ Check more about this amazing library:
 
 ## ChangeLog
 
+v1.1.24: New icons added. _rem.scss mixin fixed.
+
 v1.1.23: Checkbox elements created in form component.
 
 v1.1.22: New icon added. Bugfixing in form component.
@@ -41,7 +43,7 @@ v1.1.20: New icon added.
 
 v1.1.19: New icon added. New blue color variable, and old one modified. Spinner component created. Buttons component updated.
 
-v1.1.18: New icons added, and updated some old ones. Modified responsive breakpoint "huge" from 1280px min-width, to 1366px. Optional class for body gray background color. Optional class for .gb-wrapper to set the min-width  in 768.
+v1.1.18: New icons added, and updated some old ones. Modified responsive breakpoint "huge" from 1280px min-width, to 1366px. Optional class for body gray background color. Optional class for .gb-wrapper to set the min-width in 768.
 
 v1.1.17: New icons added.
 
