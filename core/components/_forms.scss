@@ -204,7 +204,7 @@ label{
 // Checkbox
 .gb-check {
 	@include transition(all 0.2s ease-out);
-	@include fontStyle(16px, $gray-dark);
+	@include fontStyle(14px, $gray-dark);
 	@include border-radius(3px);
 	border: 2px solid $silver-chalice;
 	position: relative;
@@ -213,6 +213,7 @@ label{
 	text-align: center;
 	cursor: pointer;
 	font-weight: 600;
+	background-color: $white;
 
 	&:hover {
 		border-color: $blue;

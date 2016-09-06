@@ -31,6 +31,8 @@ Check more about this amazing library:
 
 ## ChangeLog
 
+v1.1.25: Bugfixing in checkbox item (form component).
+
 v1.1.24: New icons added. _rem.scss mixin fixed.
 
 v1.1.23: Checkbox elements created in form component.

@@ -1731,8 +1731,8 @@ label {
   -ms-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  font-size: 16px;
-  font-size: 1.14286rem;
+  font-size: 14px;
+  font-size: 1rem;
   color: #666666;
   letter-spacing: 0;
   -webkit-border-radius: 3px;
@@ -1747,7 +1747,8 @@ label {
   display: block;
   text-align: center;
   cursor: pointer;
-  font-weight: 600; }
+  font-weight: 600;
+  background-color: #FFFFFF; }
   .gb-check:hover {
     border-color: #0084E0; }
   .gb-check:active {
