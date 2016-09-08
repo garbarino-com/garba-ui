@@ -31,7 +31,7 @@
 
 	@else if $size == "large"{
 		@if $exact {
-			@media(min-width: 1025px) and (max-width: 1280px){
+			@media(min-width: 1025px) and (max-width: 1365px){
 				@content;
 			}
 		}@if $exact == "up"{
