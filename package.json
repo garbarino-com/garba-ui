@@ -1,6 +1,6 @@
 {
   "name": "garba-ui",
-  "version": "1.1.25",
+  "version": "1.2.0",
   "description": "Garbarino UI Framework",
   "main": "gulpfile.js",
   "devDependencies": {
