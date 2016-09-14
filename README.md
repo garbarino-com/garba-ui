@@ -31,6 +31,9 @@ Check more about this amazing library:
 
 ## ChangeLog
 
+v1.2.2: Releases tags in repo.
+Next version does not ensure backwards compatibility so please add the version in your package.json `"garba-ui": "git+https://github.com/garbarino-com/garba-ui.git#v1.2.2"`
+
 v1.1.25: Bugfixing in checkbox item (form component).
 
 v1.1.24: New icons added. _rem.scss mixin fixed.
