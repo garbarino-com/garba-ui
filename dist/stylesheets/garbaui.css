@@ -1859,6 +1859,9 @@ label {
 .gb-icon-bag:before {
   content: "\e900"; }
 
+.gb-icon-bag2:before {
+  content: "\e94c"; }
+
 .gb-icon-bank:before {
   content: "\e901"; }
 
@@ -1870,6 +1873,9 @@ label {
 
 .gb-icon-cart:before {
   content: "\e904"; }
+
+.gb-icon-cash:before {
+  content: "\e94b"; }
 
 .gb-icon-checkmark:before {
   content: "\e905"; }
@@ -2012,6 +2018,9 @@ label {
 .gb-icon-shipping:before {
   content: "\e933"; }
 
+.gb-icon-shipping-2:before {
+  content: "\e94a"; }
+
 .gb-icon-shop:before {
   content: "\e934"; }
 
@@ -2059,6 +2068,9 @@ label {
 
 .gb-icon-twitter:before {
   content: "\e943"; }
+
+.gb-icon-two-card:before {
+  content: "\e949"; }
 
 .gb-icon-user:before {
   content: "\e944"; }
