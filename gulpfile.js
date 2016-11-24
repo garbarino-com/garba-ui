@@ -19,9 +19,7 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(rename('garbaui.css'))
         .pipe(gulp.dest('dist/stylesheets'))
-        .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed', errLogToConsole: true}))
-        .pipe(sourcemaps.write())
         .pipe(rename('garbaui.min.css'))
         .pipe(gulp.dest('dist/stylesheets'));
     });
