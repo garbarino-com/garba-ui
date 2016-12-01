@@ -23,8 +23,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.gb-icon-close:before {
-  content: "\e5cd";
+.gb-icon-arrow-left:before {
+  content: "\ea40";
 }
 .gb-icon-bag:before {
   content: "\e900";
@@ -55,6 +55,9 @@
 }
 .gb-icon-clock:before {
   content: "\e907";
+}
+.gb-icon-close:before {
+  content: "\e5cd";
 }
 .gb-icon-cross:before {
   content: "\e908";
@@ -256,7 +259,4 @@
 }
 .gb-icon-youtube:before {
   content: "\e948";
-}
-.gb-icon-arrow-left:before {
-  content: "\ea40";
 }
