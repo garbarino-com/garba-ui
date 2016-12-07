@@ -33,6 +33,8 @@ Check more about this amazing library:
 
 ## ChangeLog
 
+v1.3.2: New icon trash added.
+
 v1.3.1: New icons added.
 
 v1.3: Open Sans Typography is now part of GarbaUi. If you're still including it in a separate request, time to remove it.
