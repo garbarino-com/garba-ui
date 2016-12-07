@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'gb-font';
-  src:  url('fonts/gb-font.eot?h0hz2b');
-  src:  url('fonts/gb-font.eot?h0hz2b#iefix') format('embedded-opentype'),
-    url('fonts/gb-font.ttf?h0hz2b') format('truetype'),
-    url('fonts/gb-font.woff?h0hz2b') format('woff'),
-    url('fonts/gb-font.svg?h0hz2b#gb-font') format('svg');
+  src:  url('fonts/gb-font.eot?d183ef');
+  src:  url('fonts/gb-font.eot?d183ef#iefix') format('embedded-opentype'),
+    url('fonts/gb-font.ttf?d183ef') format('truetype'),
+    url('fonts/gb-font.woff?d183ef') format('woff'),
+    url('fonts/gb-font.svg?d183ef#gb-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gb-icon-arrow-left:before {
+  content: "\ea40";
+}
 .gb-icon-bag:before {
   content: "\e900";
 }
@@ -53,6 +56,9 @@
 }
 .gb-icon-clock:before {
   content: "\e907";
+}
+.gb-icon-close:before {
+  content: "\e5cd";
 }
 .gb-icon-cross:before {
   content: "\e908";
@@ -255,3 +261,4 @@
 .gb-icon-youtube:before {
   content: "\e948";
 }
+
