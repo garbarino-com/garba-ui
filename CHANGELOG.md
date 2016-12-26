@@ -1,4 +1,4 @@
-## 1.*.*
+## All changes for v1
 
 ### Core
 * v1.3.2: New icon trash added.
