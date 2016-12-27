@@ -1,11 +1,18 @@
 #Contribuyendo con Garba-UI
 
+- [Guía de Estilos](#guia-de-estilos)
 - [Branches](#branches)
 - [Formato de commits](#formato-de-commits)
 - [Tipos](#tipos)
 - [Ambito](#ambito)
 - [Mensaje](#mensaje)
 
+
+##Guia de Estilos
+Para asegurar la consistencia en el código fuente, hemos decidido seguir las sugerencias de algunas de las guías de estilos más completas del rubro. Por favor manten siempre en mente estas recomendaciones al momento comenzar a contribuir.
+
+ - [Sass | Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css#sass)
+ 
 ##Branches
 
 Para el nombre de las “ramas” o “branches” de trabajo, en donde se plantean posibles escenarios:
