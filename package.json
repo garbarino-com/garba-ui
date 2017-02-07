@@ -19,10 +19,20 @@
     "type": "git",
     "url": "git+https://github.com/garbarino-com/garba-ui.git"
   },
-  "author": "Silvio Vitullo",
+  "author": [
+    "Silvio Vitullo",
+    "Nicolas Brizuela",
+    "Esteban Calvi"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/garbarino-com/garba-ui/issues"
   },
-  "homepage": "https://github.com/garbarino-com/garba-ui#readme"
+  "homepage": "https://github.com/garbarino-com/garba-ui#readme",
+  "dependencies": {
+    "gulp-stylelint": "^3.7.0",
+    "postcss-reporter": "^3.0.0",
+    "postcss-scss": "^0.4.0",
+    "stylelint": "^7.8.0"
+  }
 }
