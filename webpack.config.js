@@ -1,4 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// Stylelint
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
@@ -34,6 +37,7 @@ module.exports = {
   	new ExtractTextPlugin('./css/garbaui.css', {
 	      allChunks: true
 	  }),
+    new StyleLintPlugin(configFile),
   ],
   watch: true
 };
