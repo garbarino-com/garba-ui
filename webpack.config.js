@@ -26,6 +26,9 @@ module.exports = {
     path: __dirname + '/dist',
     filename: "./js/script.js"
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   plugins: [
   	HTMLWebpackPluginConfig,
   	new ExtractTextPlugin('./css/garbaui.css', {
