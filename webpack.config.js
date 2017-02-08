@@ -37,7 +37,7 @@ module.exports = {
   	new ExtractTextPlugin('./css/garbaui.css', {
 	      allChunks: true
 	  }),
-    new StyleLintPlugin(configFile),
+    new StyleLintPlugin,
   ],
   watch: true
 };
