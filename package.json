@@ -14,7 +14,6 @@
   "keywords": [
     "react",
     "sass",
-    "post-css",
     "UI framework"
   ],
   "author": [
@@ -28,6 +27,7 @@
   },
   "homepage": "https://github.com/garbarino-com/garba-ui#readme",
   "dependencies": {
+    "node-sass": "^4.5.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   },
@@ -35,7 +35,6 @@
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-react": "^6.16.0",
-    "bourbon-neat": "^1.8.0",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",

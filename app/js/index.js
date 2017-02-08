@@ -4,12 +4,15 @@ var ReactDOM = require('react-dom');
 // Component styles
 require('../scss/garbaui.scss');
 
-var Hello = React.createClass({
-  render: function () {
+var SayHello = React.createClass({
+  render: function() {
     return (
-      '<div>Hello ReactJS Program</div>'
+      <h3>Hello, {this.props.username} </h3>
     )
   }
 });
 
-ReactDOM.render('<Hello />', document.getElementById('app'));
+ReactDOM.render(
+  <SayHello username="Esteban"/>,
+  document.getElementById('app')
+);

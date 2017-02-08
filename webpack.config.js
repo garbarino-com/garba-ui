@@ -12,9 +12,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
+      	test: /\.js$/,
+      	exclude: /node_modules/,
+      	loader: "babel-loader"
       },
       {
         test: /\.scss$/,
@@ -27,10 +27,10 @@ module.exports = {
     filename: "./js/script.js"
   },
   plugins: [
-    HTMLWebpackPluginConfig,
-    new ExtractTextPlugin('./css/garbaui.css', {
-        allChunks: true
-    }),
+  	HTMLWebpackPluginConfig,
+  	new ExtractTextPlugin('./css/garbaui.css', {
+	      allChunks: true
+	  }),
   ],
   watch: true
 };

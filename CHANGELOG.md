@@ -1,5 +1,14 @@
-## All changes for v1
+# Change Log
+All notable changes to this project will be documented in this file.
 
+The format is based on [Keep a Changelog](http://keepachangelog.com/) 
+and this project adheres to [Semantic Versioning](http://semver.org/).
+
+## [Unreleased] - 2017-06-08
+### Changed
+- Migrated project to webpack and reacts.js
+
+## All changes for v1
 ### Core
 * v1.3.2: New icon trash added.
 * v1.3.1: New icons added.
