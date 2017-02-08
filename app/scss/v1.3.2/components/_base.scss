@@ -1,0 +1,178 @@
+/*!
+ * Garba UI v2 (https://github.com/garbarino-com/garba-ui/)
+ * Copyright 2017 Garbarino.com
+ * Licensed under ISC (https://github.com/garbarino-com/garba-ui/blob/LICENSE.md)
+ */
+
+// Font size Base
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-feature-settings: "liga", "kern";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  min-width: 320px;
+  text-rendering: optimizeLegibility;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &.gb--gray {
+    background-color: $gray-lightest;
+  }
+}
+
+
+// Container
+.gb-wrapper {
+  margin: 0 auto;
+  max-width: 1366px;
+  padding: 30px 30px;
+  width: auto;
+
+  // Min width 768 para generar scroll horizontal en menos de 768
+  &.gb--fixed-width {
+    min-width: 768px;
+
+    // Wrapper sin scroll para dispositivos
+    @media only screen
+    and (min-device-width: 0)
+    and (max-device-width: 767px){
+      min-width: 0px;
+      //padding: 0;
+    }
+  }
+}
+
+
+
+// Links
+a {
+  color: $blue-dark;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover, &:active, &.active {
+      color: $blue-dark;
+      text-decoration: underline;
+  }
+
+  &:visited {
+    color: $blue-dark;
+  }
+
+}
+
+
+
+// Elementos
+p {
+  line-height: 1.3;
+}
+strong{
+  font-weight: bold;
+}
+
+li{
+  line-height: 100%;
+}
+
+
+
+// Fix viewport no responsive IE8
+.ie8 body {
+  min-width: 990px;
+}
+
+
+
+// Comportamientos Left - Righ
+.gb-pull-left {
+  float: left !important;
+}
+
+.gb-pull-right {
+  float: right !important;
+}
+
+
+
+// Utilidades Responsive
+
+@include breakpoint("small") {
+  // Container
+  .gb-wrapper {
+    padding: 10px;
+  }
+
+  // Oculta solo en mobile
+  .gb-hide-small {
+    display: none !important;
+  }
+
+  // Oculta solo en mobile
+  .gb-show-small {
+    display: block !important;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
+@include breakpoint("medium") {
+  // Container
+  .gb-wrapper {
+    padding: 20px;
+  }
+
+  // Oculta solo en tablet
+  .gb-hide-medium {
+    display: none !important;
+  }
+
+  // Oculta solo en tablet
+  .gb-show-medium {
+    display: block !important;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
+@include breakpoint("large") {
+  // Oculta solo en desktop
+  .gb-hide-large {
+    display: none !important;
+  }
+
+  // Oculta solo en desktop
+  .gb-show-large {
+    display: block !important;
+  }
+}
+
+
+@include breakpoint("huge") {
+  // Oculta solo en large
+  .gb-hide-extra-large {
+    display: none !important;
+  }
+
+  // Oculta solo en large
+  .gb-show-extra-large {
+    display: block !important;
+  }
+}

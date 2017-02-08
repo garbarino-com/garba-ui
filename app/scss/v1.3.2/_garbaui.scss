@@ -1,0 +1,37 @@
+// No expone codigo, solo define variables y mixins
+@import "garbaui-core";
+
+// Componentes
+
+// Reset
+@import "components/reset";
+
+// Normalize
+@import "components/normalize";
+
+// Base
+@import "components/base";
+
+// Fonts - Open Sans.
+@import "components/fonts";
+
+// Grids
+@import "components/grid";
+
+// Buttons
+@import "components/buttons";
+
+// Forms
+@import "components/forms";
+
+// Icons
+@import "components/icons";
+
+// Popup pisa estilos para bootstrap
+@import "components/popup-bootstrap";
+
+// Spinner
+@import "components/spinner";
+
+// Tabs
+@import "components/tabs";

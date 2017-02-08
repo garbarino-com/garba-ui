@@ -1,8 +1,11 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// Stylelint
+// Stylelint plugin
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+
+// Styles compiler plugin
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
   filename: 'index.html',
@@ -15,13 +18,17 @@ module.exports = {
   module: {
     loaders: [
       {
-      	test: /\.js$/,
-      	exclude: /node_modules/,
-      	loader: "babel-loader"
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
       },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css!sass')
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
@@ -33,11 +40,10 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   plugins: [
-  	HTMLWebpackPluginConfig,
-  	new ExtractTextPlugin('./css/garbaui.css', {
-	      allChunks: true
-	  }),
-    new StyleLintPlugin,
+    HTMLWebpackPluginConfig,
+    new ExtractTextPlugin('./css/garbaui.css', {
+      allChunks: true
+    }),
   ],
   watch: true
 };

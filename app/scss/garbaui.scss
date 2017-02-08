@@ -1,37 +1,13 @@
-// No expone codigo, solo define variables y mixins
-@import "garbaui-core";
+//
+// Garba UI v1.4 (https://github.com/garbarino-com/garba-ui/)
+// Copyright 2017 Garbarino.com
+// Licensed under ISC (https://github.com/garbarino-com/garba-ui/blob/LICENSE.md)
+//
 
-// Componentes
+// Import version 1.3.2
+// This version will be deprecated in the future and is maintained for backwards
+// compatibility purposes. Don't become too attached to it.
+@import "./v1.3.2/garbaui";
 
-// Reset
-@import "components/reset";
 
-// Normalize
-@import "components/normalize";
-
-// Base
-@import "components/base";
-
-// Fonts - Open Sans.
-@import "components/fonts";
-
-// Grids
-@import "components/grid";
-
-// Buttons
-@import "components/buttons";
-
-// Forms
-@import "components/forms";
-
-// Icons
-// @import "components/icons";
-
-// Popup pisa estilos para bootstrap
-@import "components/popup-bootstrap";
-
-// Spinner
-@import "components/spinner";
-
-// Tabs
-@import "components/tabs";
+// Core variables and mixins
