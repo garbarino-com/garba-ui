@@ -1,8 +1,8 @@
 {
   "name": "garba-ui",
   "version": "1.4.0",
-  "description": "One UI framework to rule them all.",
-  "main": "./node_modules/react-styleguidist/scripts/index.js",
+  "description": "One UI framework to rule them all. Base on the React UI Style Guide by Aki Karkkainen (url: https://github.com/akikoo/react-ui-style-guide/)",
+  "main": "webpack.config.js",
   "author": [
     "Silvio Vitullo",
     "Nicolas Brizuela",
@@ -12,15 +12,21 @@
     "production": "webpack -p",
     "sass": "",
     "stylelint": "stylelint '**/*.scss'; exit 0",
-    "start": "webpack-dev-server",
-    "start:lint": "webpack-dev-server && stylelint"
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --hot --inline",
+    "start:lint": "stylelint && start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/garbarino-com/garba-ui.git"
   },
   "keywords": [
+    "babel",
+    "styleguide",
+    "es6",
+    "sass",
     "react",
+    "workflow",
+    "webpack",
     "sass",
     "UI framework"
   ],
@@ -30,18 +36,26 @@
   },
   "homepage": "https://github.com/garbarino-com/garba-ui#readme",
   "dependencies": {
+    "classnames": "^2.2.5",
+    "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^4.5.0",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "autoprefixer": "^6.7.2",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.25.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "es6-promise": "^4.0.5",
+    "highlight.js": "^9.9.0",
+    "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.22.0",
+    "markdown-loader": "^2.0.0",
+    "postcss-loader": "^1.2.2",
+    "react-element-to-jsx-string": "^6.0.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "stylelint-config-sass-guidelines": "^2.0.0",
