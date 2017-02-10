@@ -10,10 +10,10 @@
   ],
   "scripts": {
     "production": "webpack -p",
-    "start": "webpack-dev-server",
     "sass": "",
     "stylelint": "stylelint '**/*.scss'; exit 0",
-    "styleguide-server": "./node_modules/react-styleguidist/bin/styleguidist.js server --config styleguide.config.js"
+    "start": "webpack-dev-server",
+    "start:lint": "webpack-dev-server && stylelint"
   },
   "repository": {
     "type": "git",
