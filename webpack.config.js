@@ -1,7 +1,8 @@
 'use strict';
 
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 
 // Stylelint plugin
 var StyleLintPlugin = require('stylelint-webpack-plugin');
@@ -9,20 +10,21 @@ var StyleLintPlugin = require('stylelint-webpack-plugin');
 // Styles compiler plugin
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-// Post CSS
-var autoprefixer = require('autoprefixer');
-
 require('es6-promise').polyfill();
 
-var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + '/app/index.html',
-  filename: 'index.html',
-  inject: 'body'
-});
 module.exports = {
-  entry: [
-    './app/index.js'
+  entry: './app/index.js',
+
+  output: {
+    path: __dirname,
+    filename: 'app/app.js'
+  },
+
+  plugins: [
+    // Specify the resulting CSS filename
+    new ExtractTextPlugin('css/garbaui.css')
   ],
+
   module: {
     loaders: [
       {
@@ -54,25 +56,13 @@ module.exports = {
       }
     ]
   },
-  output: {
-    path: __dirname + '/dist',
-    filename: "./js/script.js"
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
-  plugins: [
-    HTMLWebpackPluginConfig,
-    // Specify the resulting CSS filename
-    new ExtractTextPlugin('./css/garbaui.css', {
-      allChunks: true
-    }),
-  ],
+
   postcss: [
     autoprefixer({
       browsers: ['last 2 versions']
     })
   ],
+
   stats: {
     // Colored output
     colors: true
