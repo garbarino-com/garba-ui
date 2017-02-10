@@ -5,13 +5,21 @@ Garba UI will contain all common UI components to be shared among all company pr
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites ###
-Clone the project first (ask for permissions if needed):
+Clone the project,
 ```
 git clone https://github.com/garbarino-com/garba-ui.git
 ```
+install it:
+```
+npm install git+https://github.com/garbarino-com/garba-ui.git --save
+```
+or (if using an older release) update it:
+```
+npm update garba-ui --save
+```
 
 ### How do I get set up? ###
-Kimota! is built on webpack and npm so you need to have those installed first. Once you do, you just type on the directory:
+*Garba UI* is built on webpack and npm so you need to have those installed first. Once you do, you just type on the directory:
 
 ```
 $ npm install
@@ -22,9 +30,11 @@ This will install all the dependencies needed.
 
 To compile you need to run:
 ```
-$ npm run start ## will get the server running and will create a folder called 'dist' where it will place all the compiled files. (You can see it in http://localhost:8080/)
+$ npm run start ## will get the server running and will create a folder called 'dist' where it will place all the compiled files. (on http://localhost:8080/)
 
 $ npm run production ## will compile the minified version that is needed for deployments.
+
+$ npm run styleguide-server ## will compile the stylieguide and get the server running. (on http://localhost:8080/)
 ```
 
 ### Contribution guidelines ###
@@ -42,4 +52,4 @@ $ npm run production ## will compile the minified version that is needed for dep
 
 ## License ##
 
-This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details.

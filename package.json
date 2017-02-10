@@ -2,11 +2,18 @@
   "name": "garba-ui",
   "version": "1.4.0",
   "description": "One UI framework to rule them all.",
-  "main": "index.js",
+  "main": "./node_modules/react-styleguidist/scripts/index.js",
+  "author": [
+    "Silvio Vitullo",
+    "Nicolas Brizuela",
+    "Esteban Calvi"
+  ],
   "scripts": {
     "production": "webpack -p",
     "start": "webpack-dev-server",
-    "stylelint": "stylelint '**/*.scss'; exit 0"
+    "sass": "",
+    "stylelint": "stylelint '**/*.scss'; exit 0",
+    "styleguide-server": "./node_modules/react-styleguidist/bin/styleguidist.js server --config styleguide.config.js"
   },
   "repository": {
     "type": "git",
@@ -16,11 +23,6 @@
     "react",
     "sass",
     "UI framework"
-  ],
-  "author": [
-    "Silvio Vitullo",
-    "Nicolas Brizuela",
-    "Esteban Calvi"
   ],
   "license": "ISC",
   "bugs": {
