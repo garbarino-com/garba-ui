@@ -1,0 +1,102 @@
+// ** Variables
+// --------------------------------------------------
+
+// Mixins used to display logs warning
+@mixin assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in
+        ascending order, but key '#{$key}' has value #{$num} whose unit makes it
+        incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}'
+      !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending
+        order, but key '#{$key}' has value #{$num} which isn't greater than
+        #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+@mixin assert-starts-at-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 0 {
+    @warn "First breakpoint in `$grid-breakpoints` must start at 0,
+      but starts at #{$first-value}.";
+  }
+}
+
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+/* Rule is disabled here for better legibility */
+
+// ** The Baseline grid is the basic building block of the vertical rhythm.
+$baseline-grid:         14px;
+
+
+// ** Color Palette
+// --------------------------------------------------
+//
+// Brand Colors
+$brand-corporate:        #D1030F !default;
+$brand-primary:          #0084E0 !default;
+$brand-secondary:        #6B6B6B !default;
+$brand-revenue:          #49C237 !default;
+
+//## Gray and brand colors for use across Framework.
+$gray-base:              #000 !default;
+
+// State Colors
+$brand-success:          #00874D !default;
+$brand-info:             #0B61A4 !default;
+$brand-warning:          #FFFF39 !default;
+$brand-danger:           #FF0 !default;
+
+
+//** Background color for `<body>`.
+$body-bg:               #FFF !default;
+
+//** Global text color on `<body>`.
+$text-color:            $gray-dark !default;
+//** Global text color on `<body>`.
+$text-inverse:          #FFF !default;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  sm: 0,
+  md: 768px,
+  lg: 1024px,
+  xl: 1366px
+) !default;
+@include assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include assert-starts-at-zero($grid-breakpoints);
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-base: "Open Sans", -apple-system, sans-serif !default;
+
+$font-size-base: 1rem !default;    // 14px
+$font-size-lg:   1.25rem !default; // 18px
+$font-size-sm:   .875rem !default; // 12px
+
+/* stylelint-enable scss/dollar-variable-colon-space-after */

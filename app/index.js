@@ -1,34 +1,39 @@
 'use strict';
 
-require('./garbaui.scss');
+require('./garba-styleguide.scss');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import StyleGuideBlock from './components/StyleGuideBlock/StyleGuideBlock';
+import StyleGuideBlock from './styleguide/styleguide__block/styleguide__block';
 
 // Define your components in this array
 // `modifiers` is a list of BEM classes that modify the base component
 const components = [
+  /*{
+    component: require('./docs/'),
+    name: 'Documentation',
+    description: require('./docs/introduction.md'),
+  },*/
   {
-    component: require('./components/Button/Button'),
-    name: 'Button',
-    description: require('./components/Button/README.md'),
+    component: require('./components/buttons/buttons'),
+    name: 'Buttons',
+    description: require('./components/buttons/README.md'),
     props: {
       text: "Button"
     },
-    modifiers: ['button--secondary button--medium']
-  },
+    modifiers: ['']
+  }/*,
   {
-    component: require('./components/Card/Card'),
+    component: require('./components/cards/cards'),
     name: 'Card',
-    description: require('./components/Card/README.md'),
+    description: require('./components/cards/README.md'),
     props: {
       title: "Card title",
       text: "I am a very simple card."
     },
     modifiers: []
-  }
+  }*/
 ];
 
 class MainComponent extends React.Component {
@@ -60,9 +65,9 @@ class MainComponent extends React.Component {
 
   render() {
     return (
-      <div className="style-guide">
-        <div className="style-guide__nav">
-          <h2>Components</h2>
+      <div className="styleguide">
+        <div className="styleguide-nav">
+          <h2 className="styleguide-heading">Garbarino</h2>
 
           <ul className="style-guide__list">
             {components.map((component, i) => {
@@ -80,9 +85,9 @@ class MainComponent extends React.Component {
             })}
           </ul>
         </div>
-        <div className="style-guide__components">
-          <h1>Style Guide with React</h1>
-          <p>Use the menu to see each component.</p>
+        <div className="styleguide-components">
+          <h1>Garba UI!</h1>
+          <p>One UI framework to rule them all. Based on the <a href="https://github.com/akikoo/react-ui-style-guide/">React UI Style Guide</a> by Aki Karkkainen.</p>
 
           {components.map((Component, i) => {
             if (!this.state[Component.name]) {

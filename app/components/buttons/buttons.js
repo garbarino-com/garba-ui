@@ -1,4 +1,4 @@
-require('./Button.scss');
+require('./_buttons.scss');
 
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -1,0 +1,64 @@
+// Test
+html,
+body {
+  @media only screen and (min-width: 48em) {
+    height: 100%;
+  }
+}
+
+body {
+  font-family: $font-family-base;
+}
+
+.styleguide-components {
+  padding: 0 10px;
+
+  @media only screen and (min-width: 48em) {
+    margin: 40px 0 20px 25%;
+    overflow-x: hidden;
+  }
+}
+
+.styleguide {
+  h1 {
+    margin: 0 0 $baseline-grid * 2;
+  }
+
+  .styleguide-heading {
+    background-color: $brand-corporate;
+    background-image: url("https://dj4i04i24axgu.cloudfront.net/normandia/statics/logos/logo-garbarino-blanco.svg");
+    color: $text-inverse;
+    margin: 0;
+    padding: $baseline-grid;
+    text-align: center;
+  }
+
+  .styleguide-nav {
+    background: #FFF;
+    margin: 0;
+    padding: 20px 10px 0;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: $baseline-grid 0 $baseline-grid * 2;
+  }
+
+  &__nav-link {
+    color: #9B9B9B;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  &__nav-item.is-selected > &__nav-link {
+    background: #F2F2F2;
+    color: #333;
+    font-weight: bold;
+  }
+
+  &__nav-link:hover {
+    background: #F2F2F2;
+  }
+}

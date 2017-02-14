@@ -13,5 +13,6 @@
 // Base variables
 @import "./variables/variables";
 
-// Import all files in the components folder
-@import "./components/*"
+// Style guide
+@import "./styleguide/styleguide";
+@import "./styleguide/styleguide__block/styleguide__block";
