@@ -12,6 +12,18 @@
 
 // Base variables
 @import "./variables/variables";
+@import "./variables/styleguide-variables";
+
+// Mixins and functions
+@import "./helpers/px-to-rem";
+
+// Normalize
+@import "../node_modules/normalize-scss/sass/normalize";
+
+// TODO(ecalvi): Bootstrap 3 grid is imported here for prototyping purposes.
+// In the future we should review this and choose a grid to use within the
+// frame that doesn't necessarilly need to be this one.
+@import "../node_modules/bootstrap-sass-grid/sass/bootstrap-sass-grid";
 
 // Style guide
 @import "./styleguide/styleguide";

@@ -22,7 +22,7 @@ class StyleGuideBlock extends React.Component {
       return;
     }
     return (
-      <div className="style-guide__description" dangerouslySetInnerHTML={{
+      <div className="styleguide__description" dangerouslySetInnerHTML={{
         __html: this.props.description
       }} />
     );
@@ -30,7 +30,7 @@ class StyleGuideBlock extends React.Component {
 
   renderComponent() {
     const baseComponent = (
-      <div className="style-guide__display">
+      <div className="styleguide__display">
         <h3>Base example</h3>
         {this.props.children}
       </div>
@@ -41,8 +41,8 @@ class StyleGuideBlock extends React.Component {
     if (this.props.modifiers) {
       this.props.modifiers.map((modifier, i) => {
         return componentVariations.push(
-          <div className="style-guide__display" key={`component-${i}`}>
-            <h3>Modifiers: <span className="style-guide__modifiers">{modifier}</span></h3>
+          <div className="styleguide__display" key={`component-${i}`}>
+            <h3>Modifiers: <span className="styleguide__modifiers">{modifier}</span></h3>
             {React.Children.map(this.props.children, (child) => {
               return React.cloneElement(child, {...this.props, modifier});
             })}
@@ -68,7 +68,7 @@ class StyleGuideBlock extends React.Component {
     });
 
     return (
-      <div className="style-guide__source">
+      <div className="styleguide__source">
         <h3>Source (React JSX)</h3>
         <pre>
           <code className="hljs">
@@ -91,7 +91,7 @@ class StyleGuideBlock extends React.Component {
 
   render() {
     return (
-      <div className="style-guide__block">
+      <div className="styleguide__block">
         {this.renderComponentDescription()}
         {this.renderComponent()}
       </div>

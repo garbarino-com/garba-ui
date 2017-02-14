@@ -1,0 +1,15 @@
+// ** Variables that are defined to be used only within the styleguide
+// -------------------------------------------------------------------------
+// These rules are to be used only within classes, don't use them to define
+// global styles throughout the app.
+
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+/* Rule is disabled here for better legibility */
+
+$header-height:         $baseline-grid * 3 !default;
+
+//* Line height values
+$line-height-base:      1.5 !default; // 21px
+$line-height-sm:        1 !default; // 12px
+
+/* stylelint-enable scss/dollar-variable-colon-space-after */

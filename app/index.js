@@ -66,15 +66,14 @@ class MainComponent extends React.Component {
   render() {
     return (
       <div className="styleguide">
-        <div className="styleguide-nav">
-          <h2 className="styleguide-heading">Garbarino</h2>
-
-          <ul className="style-guide__list">
+        <h2 className="styleguide__heading">Garba UI V2.0</h2>
+        <div className="styleguide__nav col-sm-3">
+          <ul className="styleguide__list">
             {components.map((component, i) => {
               return (
-                <li className={`style-guide__nav-item${this.state[component.name] ? ' is-selected': ''}`} key={`nav-item-${i}`}>
+                <li className={`styleguide__nav-item${this.state[component.name] ? ' is-selected': ''}`} key={`nav-item-${i}`}>
                   <a
-                    className="style-guide__nav-link"
+                    className="styleguide__nav-link"
                     href={`#${component.name.toLowerCase()}`}
                     onClick={this.handleClick.bind(this, component.name)}
                   >
@@ -85,7 +84,7 @@ class MainComponent extends React.Component {
             })}
           </ul>
         </div>
-        <div className="styleguide-components">
+        <div className="styleguide-components col-sm-offset-3 col-sm-9">
           <h1>Garba UI!</h1>
           <p>One UI framework to rule them all. Based on the <a href="https://github.com/akikoo/react-ui-style-guide/">React UI Style Guide</a> by Aki Karkkainen.</p>
 

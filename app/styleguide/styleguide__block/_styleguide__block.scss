@@ -1,36 +1,48 @@
-.style-guide__block {
-  margin: 40px 0 0;
-  padding: 10px 20px;
+// Base variables
+@import "../../variables/variables";
+@import "../../variables/styleguide-variables";
+
+.styleguide__block {
+  margin-bottom: $baseline-grid * 4;
+  margin-top: $baseline-grid * 2;
   position: relative;
 
   pre {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
-.style-guide__modifiers {
-  color: grey;
+.styleguide__modifiers {
+  color: $gray-light;
 }
 
-.style-guide__display {
+.styleguide__display {
   > h3 {
     margin: 30px 0;
   }
 }
 
-.style-guide__source {
+.styleguide__source,
+.styleguide__description {
   > h3 {
-    margin: 30px 0;
-  }
-
-  pre {
-    border-radius: 5px;
-    font-size: 1em;
+    color: $gray-dark;
+    font-weight: 700;
+    margin: $baseline-grid * 3 0 $baseline-grid;
   }
 }
 
-.style-guide-block__description {
+.styleguide__description {
   > h2 {
-    color: red;
+    color: $gray-dark;
+    font-size: $font-size-lg;
+    font-weight: 700;
+    margin-bottom: $baseline-grid;
   }
+}
+
+pre > code {
+  background-color: $nav-bg;
+  border-radius: $border-radius-base;
+  display: block;
+  padding: $baseline-grid / 2;
 }

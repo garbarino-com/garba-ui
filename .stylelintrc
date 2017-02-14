@@ -3,12 +3,14 @@
     "stylelint-config-sass-guidelines"
   ],
   "rules": {
-    "string-quotes": double,
     "color-hex-case": upper,
-    "max-line-length": 80,
+    "font-weight-notation": numeric,
     "length-zero-no-unit": true,
-    "stylelint-disable-reason": always-after,
+    "max-line-length": 80,
+    "max-nesting-depth": 2,
     "number-leading-zero": never,
+    "string-quotes": double,
+    "stylelint-disable-reason": always-after,
     "selector-class-pattern": [
       "^[a-z0-9\\-\\_]+$",
       "resolveNestedSelectors": true,
@@ -16,5 +18,9 @@
         "message": "Selector should be written in lowercase with hyphens or underscores. (selector-class-pattern)"
       }
     ],
+    "unit-blacklist": {
+      "px": [ "line-height" ],
+      "vmin": [ "width" ]
+    }
   }
 }

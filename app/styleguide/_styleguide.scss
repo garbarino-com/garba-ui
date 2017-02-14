@@ -1,64 +1,91 @@
 // Test
 html,
 body {
-  @media only screen and (min-width: 48em) {
-    height: 100%;
-  }
+  font-size: 14px; // Define font-size in pixels once to set initial value.
 }
 
 body {
+  background-color: $body-bg;
   font-family: $font-family-base;
-}
-
-.styleguide-components {
-  padding: 0 10px;
-
-  @media only screen and (min-width: 48em) {
-    margin: 40px 0 20px 25%;
-    overflow-x: hidden;
-  }
+  height: 100%;
 }
 
 .styleguide {
   h1 {
+    color: $gray-dark;
+    font-weight: 700;
     margin: 0 0 $baseline-grid * 2;
   }
 
-  .styleguide-heading {
-    background-color: $brand-corporate;
-    background-image: url("https://dj4i04i24axgu.cloudfront.net/normandia/statics/logos/logo-garbarino-blanco.svg");
+  .styleguide__heading {
+    background: $brand-corporate url("https://dj4i04i24axgu.cloudfront.net/normandia/statics/logos/logo-garbarino-blanco.svg") $baseline-grid 50% no-repeat;
     color: $text-inverse;
+    font-weight: 700;
+    height: $header-height;
+    line-height: $line-height-sm;
     margin: 0;
     padding: $baseline-grid;
-    text-align: center;
+    position: relative;
+    text-align: right;
+    text-transform: uppercase;
+
+    // Media query for phones
+    @media only screen and (min-width: $screen-sm-min) {
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: $zindex-navbar;
+    }
   }
 
-  .styleguide-nav {
-    background: #FFF;
-    margin: 0;
-    padding: 20px 10px 0;
+}
+
+.styleguide__nav {
+  background: $nav-bg;
+  padding-top: $baseline-grid * 2;
+
+  // Media query for phones
+  @media only screen and (min-width: $screen-sm-min) {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    padding-top: $header-height;
+    position: fixed;
+    top: 0;
+  }
+}
+
+.styleguide-components {
+  // Media query for phones
+  @media only screen and (min-width: $screen-sm-min) {
+    padding-left: $baseline-grid * 2;
+    padding-top: $baseline-grid * 2 + $header-height;
+  }
+}
+
+.styleguide__list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.styleguide__nav-link {
+  border-left: 4px solid transparent;
+  color: $gray-base;
+  display: block;
+  font-weight: 700;
+  margin-left: $baseline-grid * -1;
+  margin-right: $baseline-grid * -1;
+  outline: 0;
+  padding: $baseline-grid;
+  text-decoration: none;
+
+  &:hover {
+    background: $gray-light;
   }
 
-  &__list {
-    list-style-type: none;
-    margin: 0;
-    padding: $baseline-grid 0 $baseline-grid * 2;
-  }
-
-  &__nav-link {
-    color: #9B9B9B;
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-  }
-
-  &__nav-item.is-selected > &__nav-link {
-    background: #F2F2F2;
-    color: #333;
-    font-weight: bold;
-  }
-
-  &__nav-link:hover {
-    background: #F2F2F2;
+  .styleguide__nav-item.is-selected > & {
+    background: $gray-light;
+    border-color: $brand-corporate;
   }
 }
