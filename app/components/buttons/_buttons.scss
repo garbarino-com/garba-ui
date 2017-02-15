@@ -1,17 +1,104 @@
+// Component mixins and functions
+@import "../../variables/variables";
+@import "../../helpers/helpers";
+
+
+//
+// Base styles
+//
+
 .button {
-  border: 0;
-  border-radius: 3px;
+  @include button-size($btn-base-padding-y, $btn-base-padding-x, $font-size-base);
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: $border-radius-base;
+  cursor: pointer;
   display: inline-block;
-  font-weight: 700;
-  outline: none; // Make sure to add focus styles below
-  transition-duration: .3s;
-  transition-property: background;
-  transition-timing-function: cubic-bezier(.175, .885, .32, .275);
+  font-weight: $btn-font-weight;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: $btn-text-transform;
+  touch-action: manipulation;
+  user-select: none;
   vertical-align: middle;
+  white-space: nowrap;
 
-  // Size modifiers
+  // Hover and focus styles
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+  }
+}
+
+// Color modifiers
+.button--main {
+  @include button-variant($btn-main-color, $btn-main-bg);
+}
+
+.button--primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg);
+}
+
+.button--secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg);
+}
+
+.button--link {
+  @include button-variant($btn-link-color, $btn-link-bg);
+
+  // Define hover behavior
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button--facebook {
+  @include button-variant($btn-facebook-color, $btn-facebook-bg);
+}
+
+// Button containing icons
+.button--has-icon {
+}
+
+// Size modifiers
+.button--sm {
+  @include button-size($btn-small-padding-y, $btn-small-padding-x, $font-size-sm);
+}
+
+.button--lg {
+  @include button-size($btn-large-padding-y, $btn-large-padding-x, $font-size-lg);
+}
+
+// Convert to block
+.button--block {
+  display: block;
+  width: 100%;
+}
+
+// Add class to fix button to bottom
+.button--is-fixed-to-bottom {
+  border-radius: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: $zindex-fixed-button;
+}
 
 
-  // Primary button
+// State modifiers
+// Loading state
+.button__is-loading {
 
 }
+
+// Disabled state
+/* &:disabled,
+.button__is-disabled {
+
+}*/

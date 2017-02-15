@@ -18,7 +18,7 @@
     $pxval: strip-units($pxval);
   }
 
-  $base: $font-size-base;
+  $base: $baseline-grid;
   @if not unitless($base) {
     $base: strip-units($base);
   }

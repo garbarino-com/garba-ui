@@ -22,7 +22,13 @@ const components = [
     props: {
       text: "Button"
     },
-    modifiers: ['']
+    modifiers: [
+      'button--main',
+      'button--primary',
+      'button--secondary',
+      'button--link',
+      'button--facebook'
+    ]
   }/*,
   {
     component: require('./components/cards/cards'),
