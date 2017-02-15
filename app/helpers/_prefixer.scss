@@ -51,11 +51,14 @@
       @if $prefix-for-spec {
         #{$property}: $value;
       }
-    } @else  {
+    } @else {
       @warn "Unrecognized prefix: #{$prefix}";
     }
   }
 }
+
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+/* Rule is disabled here for better legibility */
 
 @mixin disable-prefix-for-all() {
   $prefix-for-webkit:    false !global;
@@ -64,3 +67,5 @@
   $prefix-for-opera:     false !global;
   $prefix-for-spec:      false !global;
 }
+
+/* stylelint-enable scss/dollar-variable-colon-space-after */

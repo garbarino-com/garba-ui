@@ -12,44 +12,13 @@ class Button extends React.Component {
   render() {
     let classes = classNames(
       'button',
-      this.props.modifiers
+      this.props.modifiers[this.props.idx]
     );
 
     return (
-      <div>
-        <button className={classes} type={this.props.type}>
-          {this.props.text}
-        </button>
-
-        // TODO (ecalvi): Modifiers should be mapped within the former render.
-        <button className="button button--main" type={this.props.type}>
-          {this.props.text}
-        </button>
-
-        <button className="button button--primary" type={this.props.type}>
-          {this.props.text}
-        </button>
-
-        <button className="button button--secondary" type={this.props.type}>
-          {this.props.text}
-        </button>
-
-        <button className="button button--link" type={this.props.type}>
-          {this.props.text}
-        </button>
-
-        <button className="button button--facebook" type={this.props.type}>
-          {this.props.text}
-        </button>
-
-        <button className="button button--sm" type={this.props.type}>
-          {this.props.text}
-        </button>
-
-        <button className="button button--lg" type={this.props.type}>
-          {this.props.text}
-        </button>
-      </div>
+      <button className={classes} type={this.props.type}>
+        {this.props.text}
+      </button>
     );
   }
 }
@@ -68,7 +37,11 @@ Button.defaultProps = {
     'button--primary',
     'button--secondary',
     'button--link',
-    'button--facebook'
+    'button--facebook',
+    'button--is-fixed-to-bottom',
+    'button--lg',
+    'button--sm',
+    'button__is-disabled'
   ]
 };
 

@@ -39,17 +39,20 @@ class StyleGuideBlock extends React.Component {
     let componentVariations = [];
 
     if (this.props.modifiers) {
-      this.props.modifiers.map((modifier, i) => {
-        return componentVariations.push(
+      this.props.modifiers.forEach((modifier, i) => {
+        componentVariations.push(
           <div className="styleguide__display" key={`component-${i}`}>
-            <h3>Modifiers: <span className="styleguide__modifiers">{modifier}</span></h3>
+<h3>Modifiers: <span className="styleguide__modifiers">{modifier}</span></h3>
+
             {React.Children.map(this.props.children, (child) => {
-              return React.cloneElement(child, {...this.props, modifier});
+              return React.cloneElement(child, {...this.props, modifier, idx: i});
             })}
           </div>
         );
       })
     }
+
+    console.log({componentVariations});
 
     return (
       <div>

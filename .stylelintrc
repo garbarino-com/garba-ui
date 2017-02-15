@@ -6,7 +6,7 @@
     "color-hex-case": upper,
     "font-weight-notation": numeric,
     "length-zero-no-unit": true,
-    "max-line-length": 80,
+    "max-line-length": 86,
     "max-nesting-depth": 2,
     "number-leading-zero": never,
     "string-quotes": double,

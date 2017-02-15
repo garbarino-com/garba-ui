@@ -36,16 +36,18 @@
 }
 
 // Color modifiers
+// Make this default
+.button,
+.button--secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg);
+}
+
 .button--main {
   @include button-variant($btn-main-color, $btn-main-bg);
 }
 
 .button--primary {
   @include button-variant($btn-primary-color, $btn-primary-bg);
-}
-
-.button--secondary {
-  @include button-variant($btn-secondary-color, $btn-secondary-bg);
 }
 
 .button--link {
@@ -80,13 +82,16 @@
   width: 100%;
 }
 
-// Add class to fix button to bottom
+
+// Add this class to fix button to bottom of the page
 .button--is-fixed-to-bottom {
   border-radius: 0;
   bottom: 0;
+  display: block;
   left: 0;
   position: fixed;
   right: 0;
+  width: 100%;
   z-index: $zindex-fixed-button;
 }
 
@@ -94,11 +99,31 @@
 // State modifiers
 // Loading state
 .button__is-loading {
+  .button--lg {
+  }
 
+  .button--sm {
+  }
 }
 
 // Disabled state
-/* &:disabled,
 .button__is-disabled {
-
-}*/
+  &.button,
+  &.button:disabled,
+  &.button--main,
+  &.button--primary,
+  &.button--secondary,
+  &.button--link,
+  &.button--facebook {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $btn-disabled-bg;
+      box-shadow: $btn-box-shadow-value darken($btn-disabled-bg, 15%);
+      color: $btn-disabled-color;
+      cursor: not-allowed;
+      outline: 0;
+      transform: translateY(0);
+    }
+  }
+}

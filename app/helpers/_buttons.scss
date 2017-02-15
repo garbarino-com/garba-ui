@@ -3,6 +3,7 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
+// Color modifier
 @mixin button-variant($color, $background) {
   $hover-background: state-hover-modifier($background);
   $focus-background: state-focus-modifier($background);
@@ -17,7 +18,7 @@
   // Hover and focus styles are shared
   &:hover {
     background-color: $hover-background;
-    box-shadow: 0 0 0 0 darken($background, 15%);
+    box-shadow: 0 0 0 0 $background;
     transform: translateY($btn-shadow-width);
   }
 
@@ -29,7 +30,13 @@
   }
 }
 
-// Button sizes
+// Size modifier
+@mixin button-size($padding-y, $padding-x, $font-size) {
+  font-size: $font-size;
+  padding: $padding-y $padding-x;
+}
+
+// Size modifier
 @mixin button-size($padding-y, $padding-x, $font-size) {
   font-size: $font-size;
   padding: $padding-y $padding-x;

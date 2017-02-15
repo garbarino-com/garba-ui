@@ -27,7 +27,11 @@ const components = [
       'button--primary',
       'button--secondary',
       'button--link',
-      'button--facebook'
+      'button--facebook',
+      'button--is-fixed-to-bottom',
+      'button--lg',
+      'button--sm',
+      'button__is-disabled'
     ]
   }/*,
   {

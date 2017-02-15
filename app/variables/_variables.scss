@@ -36,7 +36,9 @@ $brand-revenue:          #49C237 !default;
 //## Gray and brand colors for use across Framework.
 $gray-base:              #000 !default;
 $gray-dark:              $brand-secondary !default;
-$gray-light:             #F6F6F6 !default;
+$gray-medium:            #C4C4C4 !default;
+$gray-light:             #E2E2E2 !default;
+$gray-lighter:           #F6F6F6 !default;
 
 //## Social brand icons
 $brand-facebook:         #4957B3 !default;
@@ -48,7 +50,7 @@ $modifier-focus-value:          10% !default;
 
 
 //** Background color for `<body>`.
-$body-bg:               $gray-light !default;
+$body-bg:               $gray-lighter !default;
 
 //** Background color for nav.
 $nav-bg:                #FFF !default;
@@ -142,7 +144,7 @@ $btn-small-padding-y:            .5rem !default;
 $btn-small-padding-x:            1.25rem !default;
 $btn-transition-timing:          .04s !default;
 $btn-shadow-width:               px-to-rem(2px) !default;
-$btn-box-shadow-value:           0px $btn-shadow-width 0px 0px !default;
+$btn-box-shadow-value:           0 $btn-shadow-width 0 0 !default;
 
 $btn-main-color:                 $btn-base-color !default;
 $btn-main-bg:                    $brand-revenue !default;
@@ -158,5 +160,9 @@ $btn-link-bg:                    transparent !default;
 
 $btn-facebook-color:             $btn-base-color !default;
 $btn-facebook-bg:                $brand-facebook !default;
+
+$btn-disabled-color:             #9E9E9E !default;
+$btn-disabled-bg:                $gray-light !default;
+
 
 /* stylelint-enable scss/dollar-variable-colon-space-after */
