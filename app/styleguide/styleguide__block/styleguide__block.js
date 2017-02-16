@@ -1,4 +1,3 @@
-require('./_styleguide__block.scss');
 require('highlight.js/styles/github.css');
 var hljs = require('highlight.js/lib/highlight.js');
 hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));

@@ -14,9 +14,6 @@
 @import "./variables/variables";
 @import "./variables/styleguide-variables";
 
-// Mixins and functions
-@import "./helpers/px-to-rem";
-
 // Normalize
 @import "../node_modules/normalize-scss/sass/normalize";
 
@@ -28,3 +25,18 @@
 // Style guide
 @import "./styleguide/styleguide";
 @import "./styleguide/styleguide__block/styleguide__block";
+
+// Import all mixins and function helpers in the folder so they are available
+// for use in components.
+
+@import "./helpers/prefixer";
+@import "./helpers/animations";
+@import "./helpers/buttons";
+@import "./helpers/px-to-rem";
+@import "./helpers/spinners";
+@import "./helpers/state-modifiers";
+@import "./helpers/utilities";
+
+
+// Components
+@import "./components/buttons/buttons"

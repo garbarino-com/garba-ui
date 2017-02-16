@@ -1,5 +1,3 @@
-require('./_buttons.scss');
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
@@ -46,7 +44,9 @@ Button.defaultProps = {
     'button__is-loading',
     'button--lg button__is-loading',
     'button--sm button__is-loading',
-    'button--block button__is-loading'
+    'button--block button__is-loading',
+    'button__has-icon',
+    'button__has-icon button--block button--facebook'
   ]
 };
 

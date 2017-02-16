@@ -1,11 +1,5 @@
-// Component mixins and functions
-@import "../../variables/variables";
-@import "../../helpers/helpers";
-
-
 //
 // Base styles
-//
 
 .button {
   @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
@@ -62,10 +56,6 @@
 
 .button--facebook {
   @include button-variant($btn-facebook-color, $btn-facebook-bg);
-}
-
-// Button containing icons
-.button--has-icon {
 }
 
 // Size modifiers
@@ -163,5 +153,36 @@
   &.button--sm::before {
     @include add-spinner-variant-to-button($btn-spinner-sm-size,
       $btn-spinner-sm-border-width);
+  }
+}
+
+
+// Has icon button modifier
+.button__has-icon {
+  padding-left: $btn-icon-padding-x;
+  padding-right: $btn-icon-padding-x;
+  text-transform: none;
+}
+
+// Provisionally provide a style fallback to old icon fonts until they are
+// deprecated in upcoming releases.
+.button__has-icon,
+.button__has-icon > [class^="gb-icon-"] {
+  &::before {
+    display: block;
+    font-family: "gb-font" !important;
+    font-size: $btn-icon-size;
+    font-style: normal;
+    font-weight: 400;
+    left: 1rem;
+    line-height: 1;
+    margin-top: ($btn-icon-size / 2) * -1;
+    position: absolute;
+    speak: none;
+    top: 50%;
+  }
+
+  &.button--facebook::before {
+    content: "\e914";
   }
 }
