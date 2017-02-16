@@ -41,7 +41,10 @@ Button.defaultProps = {
     'button--is-fixed-to-bottom',
     'button--lg',
     'button--sm',
-    'button__is-disabled'
+    'button__is-disabled',
+    'button__is-loading',
+    'button--lg button__is-loading',
+    'button--sm button__is-loading'
   ]
 };
 

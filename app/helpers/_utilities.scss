@@ -1,0 +1,18 @@
+// A group of reusable mixins
+
+//** Display and hide element using this mixins
+@mixin hide-element {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@mixin hide-element-simple {
+  display: none !important;
+}
+
+
+//** Make pseudo element mixin
+@mixin make-pseudo-element($display: block) {
+  content: "";
+  display: $display;
+}

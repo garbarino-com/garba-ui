@@ -8,25 +8,25 @@
   $hover-background: state-hover-modifier($background);
   $focus-background: state-focus-modifier($background);
 
+  @include prefixer(
+    transition, (
+      background-color $btn-transition-timing ease-in
+    ), webkit ms moz spec);
   background-color: $background;
   box-shadow: $btn-box-shadow-value darken($background, 15%);
   color: $color;
-  transition:
-    background-color $btn-transition-timing ease-in,
-    transform $btn-transition-timing ease-in;
 
   // Hover and focus styles are shared
   &:hover {
     background-color: $hover-background;
     box-shadow: 0 0 0 0 $background;
-    transform: translateY($btn-shadow-width);
   }
 
   &:focus,
   &.focus {
     background-color: $focus-background;
     box-shadow: 0 0 0 0 darken($background, 15%);
-    transform: translateY($btn-shadow-width + px-to-rem(1px));
+    transform: translateY($btn-shadow-width);
   }
 }
 

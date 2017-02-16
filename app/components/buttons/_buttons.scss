@@ -16,6 +16,7 @@
   display: inline-block;
   font-weight: $btn-font-weight;
   margin-bottom: 0;
+  position: relative;
   text-align: center;
   text-transform: $btn-text-transform;
   touch-action: manipulation;
@@ -99,10 +100,33 @@
 // State modifiers
 // Loading state
 .button__is-loading {
-  .button--lg {
+  padding-left: $btn-spinner-base-spacing;
+
+  // Spinner pseudo-element
+  &::before {
+    @include make-pseudo-element(inline-block);
+    @include add-spinner($btn-spinner-base-size, $btn-spinner-border-width,
+      $btn-spinner-color-inactive, $btn-spinner-color-active);
+    left: $btn-base-padding-x;
+    margin-top: $btn-spinner-base-size * -.5;
+    position: absolute;
+    top: 50%;
   }
 
-  .button--sm {
+  &.button--lg {
+    padding-left: $btn-spinner-lg-spacing;
+
+    &::before {
+      @include add-spinner-variant-to-button($btn-spinner-lg-size);
+    }
+  }
+
+  &.button--sm {
+    padding-left: $btn-spinner-sm-spacing;
+
+    &::before {
+      @include add-spinner-variant-to-button($btn-spinner-sm-size);
+    }
   }
 }
 

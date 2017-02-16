@@ -6,7 +6,7 @@
     "color-hex-case": upper,
     "font-weight-notation": numeric,
     "length-zero-no-unit": true,
-    "max-line-length": 86,
+    "max-line-length": 96,
     "max-nesting-depth": 2,
     "number-leading-zero": never,
     "string-quotes": double,
@@ -22,6 +22,7 @@
       "px": [ "line-height", "font", "font-size"],
       "rem": [ "font" ],
       "vmin": [ "width" ]
-    }
+    },
+    "at-rule-no-vendor-prefix": false
   }
 }
