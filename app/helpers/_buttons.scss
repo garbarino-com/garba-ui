@@ -25,19 +25,15 @@
   &:focus,
   &.focus {
     background-color: $focus-background;
-    box-shadow: 0 0 0 0 darken($background, 15%);
+    box-shadow: 0 0 0 0 transparent;
     transform: translateY($btn-shadow-width);
   }
 }
 
 // Size modifier
-@mixin button-size($padding-y, $padding-x, $font-size) {
+@mixin button-size($padding-x, $height, $font-size) {
   font-size: $font-size;
-  padding: $padding-y $padding-x;
-}
-
-// Size modifier
-@mixin button-size($padding-y, $padding-x, $font-size) {
-  font-size: $font-size;
-  padding: $padding-y $padding-x;
+  height: $height;
+  line-height: $height;
+  padding: 0 $padding-x;
 }

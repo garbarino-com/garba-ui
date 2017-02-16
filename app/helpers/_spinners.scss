@@ -28,8 +28,8 @@
 }
 
 // Add spinner to button variant
-@mixin add-spinner-variant-to-button($size) {
+@mixin add-spinner-variant-to-button($size,
+    $border-width: $btn-spinner-border-width) {
   height: $size;
-  margin-top: $size * -.5;
   width: $size;
 }

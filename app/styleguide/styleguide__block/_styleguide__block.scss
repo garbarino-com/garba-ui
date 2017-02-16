@@ -3,8 +3,8 @@
 @import "../../variables/styleguide-variables";
 
 .styleguide__block {
-  margin-bottom: $baseline-grid * 4;
-  margin-top: $baseline-grid * 2;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
   position: relative;
 
   pre {
@@ -29,7 +29,7 @@
   > h3 {
     color: $gray-dark;
     font-weight: 400;
-    margin: $baseline-grid * 3 0 $baseline-grid;
+    margin: 2rem 0 1rem;
   }
 }
 
@@ -38,13 +38,14 @@
     color: $gray-dark;
     font-size: $font-size-lg;
     font-weight: 700;
-    margin-bottom: $baseline-grid;
+    margin-bottom: 1rem;
   }
 }
 
-pre > code {
+pre > code,
+pre > .hljs {
   background-color: $nav-bg;
   border-radius: $border-radius-base;
   display: block;
-  padding: $baseline-grid / 2;
+  padding: .5rem;
 }

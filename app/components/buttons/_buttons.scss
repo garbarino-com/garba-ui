@@ -8,7 +8,7 @@
 //
 
 .button {
-  @include button-size($btn-base-padding-y, $btn-base-padding-x, $font-size-base);
+  @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
   background-image: none;
   border: 1px solid transparent;
   border-radius: $border-radius-base;
@@ -69,18 +69,22 @@
 }
 
 // Size modifiers
-.button--sm {
-  @include button-size($btn-small-padding-y, $btn-small-padding-x, $font-size-sm);
+.button--lg {
+  @include button-size($btn-large-padding-x, $btn-height-lg-size, $font-size-lg);
 }
 
-.button--lg {
-  @include button-size($btn-large-padding-y, $btn-large-padding-x, $font-size-lg);
+.button--sm {
+  @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
 }
 
 // Convert to block
 .button--block {
   display: block;
   width: 100%;
+
+  & + & {
+    margin-top: .5rem;
+  }
 }
 
 
@@ -98,40 +102,10 @@
 
 
 // State modifiers
-// Loading state
+
+// Disabled and Loading states
+.button__is-disabled,
 .button__is-loading {
-  padding-left: $btn-spinner-base-spacing;
-
-  // Spinner pseudo-element
-  &::before {
-    @include make-pseudo-element(inline-block);
-    @include add-spinner($btn-spinner-base-size, $btn-spinner-border-width,
-      $btn-spinner-color-inactive, $btn-spinner-color-active);
-    left: $btn-base-padding-x;
-    margin-top: $btn-spinner-base-size * -.5;
-    position: absolute;
-    top: 50%;
-  }
-
-  &.button--lg {
-    padding-left: $btn-spinner-lg-spacing;
-
-    &::before {
-      @include add-spinner-variant-to-button($btn-spinner-lg-size);
-    }
-  }
-
-  &.button--sm {
-    padding-left: $btn-spinner-sm-spacing;
-
-    &::before {
-      @include add-spinner-variant-to-button($btn-spinner-sm-size);
-    }
-  }
-}
-
-// Disabled state
-.button__is-disabled {
   &.button,
   &.button:disabled,
   &.button--main,
@@ -143,11 +117,51 @@
     &:hover,
     &:focus {
       background-color: $btn-disabled-bg;
-      box-shadow: $btn-box-shadow-value darken($btn-disabled-bg, 15%);
       color: $btn-disabled-color;
-      cursor: not-allowed;
       outline: 0;
       transform: translateY(0);
     }
+  }
+}
+
+// Define shadow and cursor only for disabled state
+.button__is-disabled {
+  &.button,
+  &.button:disabled,
+  &.button--main,
+  &.button--primary,
+  &.button--secondary,
+  &.button--link,
+  &.button--facebook {
+    &,
+    &:hover,
+    &:focus {
+      box-shadow: $btn-box-shadow-value darken($btn-disabled-bg, 15%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Loading state spinner definitions
+.button__is-loading {
+  box-shadow: 0 0 0 0 transparent;
+  cursor: default;
+
+  // Spinner pseudo-element
+  &::before {
+    @include make-pseudo-element(inline-block);
+    @include add-spinner($btn-spinner-base-size, $btn-spinner-border-width,
+      $btn-spinner-color-inactive, $btn-spinner-color-active);
+    margin-right: $btn-spinner-spacing;
+    margin-top: px-to-rem(-2px);
+  }
+
+  &.button--lg::before {
+    @include add-spinner-variant-to-button($btn-spinner-lg-size);
+  }
+
+  &.button--sm::before {
+    @include add-spinner-variant-to-button($btn-spinner-sm-size,
+      $btn-spinner-sm-border-width);
   }
 }

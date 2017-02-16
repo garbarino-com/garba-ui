@@ -1,7 +1,7 @@
 // Test
 html,
 body {
-  font-size: 14px; // Define font-size in pixels once to set initial value.
+  font-size: $baseline-grid; // Define font-size in pixels once to set initial value.
 }
 
 body {
@@ -59,8 +59,8 @@ body {
 .styleguide-components {
   // Media query for phones
   @media only screen and (min-width: $screen-sm-min) {
-    padding-left: $baseline-grid * 2;
-    padding-top: $baseline-grid * 2 + $header-height;
+    padding-left: 2rem;
+    padding-top: 2rem + $header-height;
   }
 }
 
@@ -70,12 +70,12 @@ body {
 }
 
 .styleguide__nav-link {
-  border-left: 4px solid transparent;
+  border-left: px-to-rem(4px) solid transparent;
   color: $gray-base;
   display: block;
   font-weight: 700;
-  margin-left: $baseline-grid * -1;
-  margin-right: $baseline-grid * -1;
+  margin-left: -1rem;
+  margin-right: -1rem;
   outline: 0;
   padding: 1rem;
   text-decoration: none;
