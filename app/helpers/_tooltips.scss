@@ -19,8 +19,8 @@
     display: block;
     font-size: $font-size-sm;
     font-weight: 400;
-    left: 50%;
     height: $tooltip-height;
+    left: 50%;
     line-height: $base-line-height;
     margin-left: ($width / 2) * -1;
     max-width: initial;
@@ -28,7 +28,7 @@
     position: absolute;
     text-transform: none;
     top: ($arrowSize + $tooltip-height) * -1;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
     width: $width;
   }
 

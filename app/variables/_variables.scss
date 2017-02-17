@@ -37,13 +37,16 @@ $brand-revenue:          #49C237 !default;
 
 //## Gray and brand colors for use across Framework.
 $gray-base:              #000 !default;
-$gray-dark:              $brand-secondary !default;
+$gray-darker:            $brand-secondary !default;
+$gray-dark:              #9E9E9E !default;
 $gray-medium:            #C4C4C4 !default;
 $gray-light:             #E2E2E2 !default;
 $gray-lighter:           #F6F6F6 !default;
 
-//## Social brand icons
+//## Social brands and site actions
+$brand-fav:              $brand-corporate !default;
 $brand-facebook:         #4957B3 !default;
+$brand-twitter:          #60B5F1 !default;
 
 //## State modifiers
 $modifier-operation:            lighten !default;
@@ -58,7 +61,7 @@ $body-bg:               $gray-lighter !default;
 $nav-bg:                #FFF !default;
 
 //** Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+$text-color:            $gray-darker !default;
 //** Global text color on `<body>`.
 $text-inverse:          #FFF !default;
 
@@ -163,7 +166,7 @@ $btn-link-bg:                        transparent !default;
 $btn-facebook-color:                 $btn-base-color !default;
 $btn-facebook-bg:                    $brand-facebook !default;
 
-$btn-disabled-color:                 #9E9E9E !default;
+$btn-disabled-color:                 $gray-dark !default;
 $btn-disabled-bg:                    $gray-light !default;
 
 // Button spinner definitions
@@ -180,6 +183,15 @@ $btn-spinner-spacing:                .5rem !default;
 $btn-icon-size:                      1.5rem !default;
 $btn-icon-padding-x:                 5rem !default;
 
+// Button action definitions
+$btn-action-bg:                      transparent !default;
+$btn-action-color:                   $gray-dark !default;
+$btn-action-hover-bg:                $gray-light !default;
+
+$btn-action-primary:                 $gray-base !default;
+$btn-action-padding-x:               1rem !default;
+$btn-action-font-size:               1.5rem !default;
+$btn-action-size:                    3rem !default;
 
 // Tooltip definitions
 $tooltip-width:                      15rem !default;

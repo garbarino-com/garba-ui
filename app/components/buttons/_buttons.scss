@@ -22,6 +22,7 @@
   &:focus,
   &.focus {
     outline: 0;
+    transform: translateY($btn-shadow-width);
   }
 
   &:active,
@@ -157,7 +158,7 @@
 }
 
 
-// Has icon button modifier
+// Has icon modifier
 .button__has-icon {
   padding-left: $btn-icon-padding-x;
   padding-right: $btn-icon-padding-x;
@@ -186,3 +187,40 @@
     content: "\e914";
   }
 }
+
+// Action modifiers
+.button--action {
+  @include button-size($btn-action-padding-x, $btn-action-size, $btn-action-font-size);
+  background-color: $btn-action-bg;
+  box-shadow: 0 0 0 0 transparent;
+  color: $btn-action-color;
+
+  &:hover {
+    background-color: $btn-action-hover-bg;
+  }
+
+  // Hover and focus styles
+  &:focus,
+  &.focus {
+    background-color: $btn-action-bg;
+  }
+}
+
+.button--action__primary {
+  color: $btn-action-primary;
+
+  @include button-action-variant($btn-action-primary);
+}
+
+.button--action__fav {
+  @include button-action-variant($brand-fav);
+}
+
+.button--action__facebook {
+  @include button-action-variant($brand-facebook);
+}
+
+.button--action__twitter {
+  @include button-action-variant($brand-twitter);
+}
+

@@ -16,7 +16,6 @@
   box-shadow: $btn-box-shadow-value darken($background, 15%);
   color: $color;
 
-  // Hover and focus styles are shared
   &:hover {
     background-color: $hover-background;
     box-shadow: 0 0 0 0 $background;
@@ -26,7 +25,6 @@
   &.focus {
     background-color: $focus-background;
     box-shadow: 0 0 0 0 transparent;
-    transform: translateY($btn-shadow-width);
   }
 }
 
@@ -36,4 +34,19 @@
   height: $height;
   line-height: $height;
   padding: 0 $padding-x;
+}
+
+// Action modifier
+@mixin button-action-variant($color) {
+  @include prefixer(
+    transition, (
+      background-color $btn-transition-timing ease-in
+    ), webkit ms moz spec);
+
+  // Hover and focus styles are shared
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $color;
+  }
 }

@@ -7,34 +7,34 @@
   width: 0;
 
   @if $arrowdirection == "top" {
-    border-width: 0 ($width/2) $height;
     border-bottom-color: $color;
+    border-width: 0 ($width/2) $height;
     left: 50%;
     margin-left: -($width/2);
     top: -$height;
   }
 
   @if $arrowdirection == "right" {
-    border-width: ($width/2) $height;
     border-left-color: $color;
+    border-width: ($width/2) $height;
     margin-top: -$height;
     right: -$width;
     top: 50%;
   }
 
   @if $arrowdirection == "bottom" {
-    border-width: $height ($width/2) 0;
     border-top-color: $color;
+    border-width: $height ($width/2) 0;
+    bottom: -$height;
     left: 50%;
     margin-left: -($width/2);
-    bottom: -$height;
   }
 
   @if $arrowdirection == "left" {
-    border-width: ($width/2) $height;
     border-right-color: $color;
-    margin-top: -$height;
+    border-width: ($width/2) $height;
     left: -$width;
+    margin-top: -$height;
     top: 50%;
   }
 }

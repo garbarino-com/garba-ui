@@ -39,7 +39,11 @@ const components = [
       'button--block button__is-loading',
       'button__has-icon',
       'button__has-icon button--block button--facebook',
-      'button has__tooltip-on-top'
+      'button button--action has__tooltip-on-top',
+      'button button--action has__tooltip-on-top button--action__primary',
+      'button button--action has__tooltip-on-top button--action__fav',
+      'button button--action has__tooltip-on-top button--action__facebook',
+      'button button--action has__tooltip-on-top button--action__twitter'
     ]
   }/*,
   {
