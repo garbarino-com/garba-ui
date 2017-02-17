@@ -14,7 +14,8 @@ class Button extends React.Component {
     );
 
     return (
-      <button className={classes} type={this.props.type}>
+      <button className={classes} type={this.props.type}
+          aria-label="Sample text to display in tooltip.">
         {this.props.text}
       </button>
     );
@@ -46,7 +47,8 @@ Button.defaultProps = {
     'button--sm button__is-loading',
     'button--block button__is-loading',
     'button__has-icon',
-    'button__has-icon button--block button--facebook'
+    'button__has-icon button--block button--facebook',
+    'button has__tooltip-on-top'
   ]
 };
 

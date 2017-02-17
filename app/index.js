@@ -36,8 +36,10 @@ const components = [
       'button__is-loading',
       'button--lg button__is-loading',
       'button--sm button__is-loading',
+      'button--block button__is-loading',
       'button__has-icon',
-      'button__has-icon button--block button--facebook'
+      'button__has-icon button--block button--facebook',
+      'button has__tooltip-on-top'
     ]
   }/*,
   {

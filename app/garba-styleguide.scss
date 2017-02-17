@@ -10,6 +10,9 @@
 // for backwards compatibility purposes. Don't become too attached to it.
 @import "./_v1.3.2/garbaui";
 
+// Import this function here so it can be used within variables sheet
+@import "./helpers/px-to-rem";
+
 // Base variables
 @import "./variables/variables";
 @import "./variables/styleguide-variables";
@@ -29,14 +32,22 @@
 // Import all mixins and function helpers in the folder so they are available
 // for use in components.
 
-@import "./helpers/prefixer";
+// Some bourbon functionalities
+@import "../node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
+@import "../node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
+
+// General usage
 @import "./helpers/animations";
-@import "./helpers/buttons";
-@import "./helpers/px-to-rem";
-@import "./helpers/spinners";
-@import "./helpers/state-modifiers";
 @import "./helpers/utilities";
+@import "./helpers/make-css-arrow";
+@import "./helpers/state-modifiers";
+
+// Component related
+@import "./helpers/buttons";
+@import "./helpers/spinners";
+@import "./helpers/tooltips";
 
 
-// Components
-@import "./components/buttons/buttons"
+// UI Components
+@import "./components/buttons/buttons";
+@import "./components/tooltips/tooltips"
