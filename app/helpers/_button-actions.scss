@@ -10,7 +10,7 @@
   // Hover and focus styles are shared
   &:hover,
   &:focus,
-  &.active {
+  &.button__is-active {
     color: $color;
   }
 

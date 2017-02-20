@@ -44,7 +44,7 @@ const components = [
   {
     component: require('./components/button-actions/button-actions'),
     name: 'Button Actions',
-    description: require('./components/buttons/README.md'),
+    description: require('./components/button-actions/README.md'),
     props: {
       text: "Action",
       class: "icon-action"
@@ -117,8 +117,14 @@ class MainComponent extends React.Component {
           </ul>
         </div>
         <div className="styleguide-components col-sm-offset-3 col-sm-9">
-          <h1>Garba UI!</h1>
-          <p>One UI framework to rule them all. Based on the <a href="https://github.com/akikoo/react-ui-style-guide/">React UI Style Guide</a> by Aki Karkkainen.</p>
+          <header className="styleguide-header">
+            <h1>Garba UI!</h1>
+            <p>Un catálogo de componentes visuales y guía de estilos pensados (y listos)
+              para ser usados en los proyectos de la compañía.</p>
+
+            <p><small>Basado en <a href="https://github.com/akikoo/react-ui-style-guide/">React UI Style Guide</a>
+            de Aki Karkkainen.</small></p>
+          </header>
 
           {components.map((Component, i) => {
             if (!this.state[Component.name]) {

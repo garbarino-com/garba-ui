@@ -65,7 +65,12 @@
 }
 
 .button--sm {
-  @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
+  @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
+
+  // Media query for phones
+  @media only screen and (min-width: $screen-lg-min) {
+    @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
+  }
 }
 
 // Convert to block
