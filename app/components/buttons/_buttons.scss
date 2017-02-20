@@ -170,57 +170,15 @@
 .button__has-icon,
 .button__has-icon > [class^="gb-icon-"] {
   &::before {
-    display: block;
-    font-family: "gb-font" !important;
+    @include icon-element($btn-icon-size);
     font-size: $btn-icon-size;
-    font-style: normal;
-    font-weight: 400;
     left: 1rem;
-    line-height: 1;
     margin-top: ($btn-icon-size / 2) * -1;
     position: absolute;
-    speak: none;
     top: 50%;
   }
 
   &.button--facebook::before {
-    content: "\e914";
+    content: $icon-facebook;
   }
 }
-
-// Action modifiers
-.button--action {
-  @include button-size($btn-action-padding-x, $btn-action-size, $btn-action-font-size);
-  background-color: $btn-action-bg;
-  box-shadow: 0 0 0 0 transparent;
-  color: $btn-action-color;
-
-  &:hover {
-    background-color: $btn-action-hover-bg;
-  }
-
-  // Hover and focus styles
-  &:focus,
-  &.focus {
-    background-color: $btn-action-bg;
-  }
-}
-
-.button--action__primary {
-  color: $btn-action-primary;
-
-  @include button-action-variant($btn-action-primary);
-}
-
-.button--action__fav {
-  @include button-action-variant($brand-fav);
-}
-
-.button--action__facebook {
-  @include button-action-variant($brand-facebook);
-}
-
-.button--action__twitter {
-  @include button-action-variant($brand-twitter);
-}
-

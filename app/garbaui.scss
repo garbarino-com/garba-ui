@@ -12,21 +12,25 @@
 
 // Base variables
 @import "./variables/variables";
-@import "./variables/styleguide-variables";
 
 // Normalize
 @import "../node_modules/normalize-scss/sass/normalize";
 
-// Import all mixins and function helpers in the folder so they are available
-// for use in components.
-@import "./helpers/prefixer";
+// General usage
 @import "./helpers/animations";
-@import "./helpers/buttons";
-@import "./helpers/px-to-rem";
-@import "./helpers/spinners";
-@import "./helpers/state-modifiers";
 @import "./helpers/utilities";
+@import "./helpers/icon-element";
+@import "./helpers/make-css-arrow";
+@import "./helpers/state-modifiers";
+
+// Component related
+@import "./helpers/buttons";
+@import "./helpers/button-actions";
+@import "./helpers/spinners";
+@import "./helpers/tooltips";
 
 
-// Components
-@import "./components/buttons/buttons"
+// UI Components
+@import "./components/buttons/buttons";
+@import "./components/button-actions/button-actions";
+@import "./components/tooltips/tooltips"

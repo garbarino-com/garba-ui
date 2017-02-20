@@ -17,6 +17,7 @@
     color: $color;
     content: attr(aria-label); // Extracts text from aria-label of the element
     display: block;
+    font-family: $font-family-base;
     font-size: $font-size-sm;
     font-weight: 400;
     height: $tooltip-height;

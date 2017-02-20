@@ -39,15 +39,18 @@
 // General usage
 @import "./helpers/animations";
 @import "./helpers/utilities";
+@import "./helpers/icon-element";
 @import "./helpers/make-css-arrow";
 @import "./helpers/state-modifiers";
 
 // Component related
 @import "./helpers/buttons";
+@import "./helpers/button-actions";
 @import "./helpers/spinners";
 @import "./helpers/tooltips";
 
 
 // UI Components
 @import "./components/buttons/buttons";
+@import "./components/button-actions/button-actions";
 @import "./components/tooltips/tooltips"

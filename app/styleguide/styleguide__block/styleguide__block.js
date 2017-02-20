@@ -51,8 +51,6 @@ class StyleGuideBlock extends React.Component {
       })
     }
 
-    console.log({componentVariations});
-
     return (
       <div>
         {baseComponent}

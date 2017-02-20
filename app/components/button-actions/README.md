@@ -1,4 +1,4 @@
-## Button
+## Action buttons
 
 Use ´modifiers´ prop to modify the block. 
 Button size is defined with `.button--small` or `.button--medium` modifier. 
@@ -18,5 +18,5 @@ You can also pass in an array of CSS classes.
 ### Usage
 
 ```javascript
-import Button from '../buttons/buttons';
+import Button from '../button-actions/button-actions';
 ```
