@@ -9,7 +9,7 @@ class Button extends React.Component {
 
   render() {
     let classes = classNames(
-      'button--action button--action__primary',
+      'button--action',
       this.props.modifiers[this.props.idx]
     );
 

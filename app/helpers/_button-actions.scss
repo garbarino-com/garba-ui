@@ -1,4 +1,5 @@
 // Action button modifier
+// You should use the .active class if you want to mark the action as done.
 
 @mixin button-action-variant($color, $icon) {
   @include prefixer(
@@ -9,7 +10,7 @@
   // Hover and focus styles are shared
   &:hover,
   &:focus,
-  &.focus {
+  &.active {
     color: $color;
   }
 

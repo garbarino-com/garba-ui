@@ -40,9 +40,35 @@
   }
 }
 
+// Action animation
+
+// TODO(ecalvi): The next mixin is not working for some reason. Calling
+// animation without prefixes but we should check this out later.
+//
+// @include keyframes(action-active) {
+//   from {
+//     background-position: left;
+//   }
+//
+//   to {
+//     background-position: right;
+//   }
+// }
+
+// Animation without prefixes:
+@keyframes action-active {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: right;
+  }
+}
+
 
 // Primary action
-// TODO(ecalvi): We should extend this so it can be also used for other actions.
+// TODO(ecalvi): We should extend this class so it can be also used for other actions.
 
 .button--action__primary {
   color: $btn-action-primary;
@@ -53,6 +79,24 @@
 // Fav item action
 .button--action__fav {
   @include button-action-variant($brand-fav, $icon-fav);
+
+  // trigger animation on focus
+  &:focus > i {
+    @include prefixer(
+      animation, action-active .8s steps(28) 1, webkit ms moz spec);
+    background-image: url(#{$images-url}animation--fav.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    display: block;
+    height: $btn-action-font-size * 2.5;
+    margin: $btn-action-font-size * -1.25  ($btn-action-font-size / 2) * -1.5;
+    width: $btn-action-font-size * 2.5;
+
+    &::before {
+      content: initial;
+    }
+  }
 }
 
 // Share on facebook action
