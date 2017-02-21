@@ -10,11 +10,11 @@ import StyleGuideBlock from './styleguide/styleguide__block/styleguide__block';
 // Define your components in this array
 // `modifiers` is a list of BEM classes that modify the base component
 const components = [
-  /*{
-    component: require('./docs/'),
-    name: 'Documentation',
+  {
+    component: require('./docs/docs'),
+    name: 'Introducción',
     description: require('./docs/introduction.md'),
-  },*/
+  },
   {
     component: require('./components/buttons/buttons'),
     name: 'Buttons',
@@ -47,7 +47,7 @@ const components = [
     description: require('./components/button-actions/README.md'),
     props: {
       text: "Action",
-      class: "icon-action"
+      className: "icon-action"
     },
     modifiers: [
       'button--action has__tooltip-on-top button--action__primary',
@@ -55,6 +55,16 @@ const components = [
       'button--action has__tooltip-on-top button--action__facebook',
       'button--action has__tooltip-on-top button--action__twitter'
     ]
+  },
+  {
+    component: require('./components/tooltips/tooltips'),
+    name: 'Tooltips',
+    description: require('./components/tooltips/README.md'),
+    props: {
+      text: "Elemento con tooltip",
+      content: "Esto es un tooltip de muestra."
+    },
+    modifiers: []
   }/*,
   {
     component: require('./components/cards/cards'),
@@ -119,11 +129,6 @@ class MainComponent extends React.Component {
         <div className="styleguide-components col-sm-offset-3 col-sm-9">
           <header className="styleguide-header">
             <h1>Garba UI!</h1>
-            <p>Un catálogo de componentes visuales y guía de estilos pensados (y listos)
-              para ser usados en los proyectos de la compañía.</p>
-
-            <p><small>Basado en <a href="https://github.com/akikoo/react-ui-style-guide/">React UI Style Guide</a>
-            de Aki Karkkainen.</small></p>
           </header>
 
           {components.map((Component, i) => {

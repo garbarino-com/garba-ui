@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
-class Card extends React.Component {
+class Docs extends React.Component {
   render() {
     let classes = classNames(
       'card',
@@ -22,12 +22,12 @@ class Card extends React.Component {
   }
 }
 
-Card.propTypes = {
+Docs.propTypes = {
   modifiers: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.array]),
   title: React.PropTypes.string,
   text: React.PropTypes.string
 };
 
-Card.defaultProps = {};
+Docs.defaultProps = {};
 
-export default Card;
+export default Docs;

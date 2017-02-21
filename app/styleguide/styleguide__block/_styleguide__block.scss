@@ -13,8 +13,15 @@
 }
 
 .styleguide__modifiers {
+  background: $nav-bg;
   color: $brand-primary;
-  font-weight: 700;
+  display: inline-block;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  font-weight: 400;
+  margin-left: .25rem;
+  margin-right: .25rem;
+  padding: 0 .25rem;
 }
 
 .styleguide__display {
@@ -88,8 +95,8 @@ pre > .hljs {
   }
 
   blockquote {
-    border-left: 3px solid $gray-medium;
     background-color: $nav-bg;
+    border-left: 3px solid $gray-medium;
     margin-bottom: 2rem;
     padding: 1rem 1.5rem .5rem;
 

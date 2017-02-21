@@ -10,8 +10,8 @@ En caso que el elemento `<a>` esté usándose para actuar como botón (porque no
 > ### Rendering cross-browser ###
 Como buena práctica, recomendamos usar el tag `button` siempre que sea posible para asegurar una visualización equivalente en todos los browsers.
 
-> ### La clase `.button--main` ###
-Esta clase está reservada para ser usada sólo en la acción principal del sitio. En nuestro caso (tratándose de un sitio e-commerce), se destina a la acción de *agregar al carrito*.
+> ### Las clases `button--main` y `button--primary` ###
+La clase `button--main` debe usarse sólo para una acción principal dentro del sitio. En nuestro caso (un sitio e-commerce) está reservada para la acción **agregar al carrito**. La clase `button--primary` en cambio debe usarse en un conjunto de acciones sólo una vez para la acción primaria del conjunto. Ejemplo: Estando el usuario en un paso intermedio en una secuencia de completar comularios, posiblemente se le presenten finalizada la carga de datos tres opciones: **Retroceder**, **Cancelar** y **Enviar**. En este caso, la acción primaria debe usarse sólo una vez, para la acción principal (**Enviar**) y las otras dos acciones llevarán la clase `button--secondary` (default).
 
 ### Props
 
