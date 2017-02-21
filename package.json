@@ -11,7 +11,7 @@
   "scripts": {
     "sass-p": "node-sass app/garbaui.scss garbaui.min.css --o dist/ --output-style compressed",
     "stylelint": "stylelint '**/*.scss'; exit 0",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --hot --inline",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --hot --inline"
   },
   "repository": {
     "type": "git",
