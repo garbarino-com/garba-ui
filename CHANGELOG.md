@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2017-06-08
 ### Changed
-* v1.4.1: Minor fix in project info.
+* v1.4.2: Minor fix in project info.
 
 ## All changes for v1
 ### Core
