@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2017-06-08
 ### Changed
-- Migrated project to webpack and reacts.js
+* v1.4: Migrated project to webpack and reacts.js. Adds styles and documentation for new button component.
 
 ## All changes for v1
 ### Core

@@ -68,7 +68,7 @@ body {
   }
 
   h1 {
-    margin-bottom: 1rem;
+    margin: 0;
     text-transform: uppercase;
   }
 
@@ -102,11 +102,15 @@ body {
   text-decoration: none;
 
   &:hover {
-    background: $gray-light;
+    background: $gray-lighter;
+  }
+
+  &:focus {
+    outline: 0;
   }
 
   .styleguide__nav-item.is-selected > & {
-    background: $gray-light;
+    background: $gray-lighter;
     border-color: $brand-corporate;
   }
 }

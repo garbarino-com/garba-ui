@@ -1,5 +1,5 @@
-# Garba UI. The Garbarino UI Library
-Un catálogo de componentes visuales y guía de estilos pensados (y listos) para ser usados en los proyectos de la compañía.
+# Garba UI. Una librería UI de Garbarino
+Un catálogo de componentes visuales y guía de estilos pensados (y listos) para ser usados en proyectos de la compañía.
 
 Basado en [React UI Style Guide](https://github.com/akikoo/react-ui-style-guide/) de Aki Karkkainen.
 
@@ -39,5 +39,5 @@ $ npm run start
 * **Nicolas Brizuela** - [flycode](https://github.com/flycode)
 * **Esteban Calvi** - [estebancalvi](https://bitbucket.org/rigilk/)
 
-## Licensia ##
+## Licencia ##
 Este proyecto está bajo la ISC License - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
