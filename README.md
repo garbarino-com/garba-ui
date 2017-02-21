@@ -5,36 +5,19 @@ Garba UI will contain all common UI components to be shared among all company pr
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites ###
-Clone the project,
-```
-git clone https://github.com/garbarino-com/garba-ui.git
-```
-install it:
-```
-npm install git+https://github.com/garbarino-com/garba-ui.git --save
-```
-or (if using an older release) update it:
-```
-npm update garba-ui --save
-```
+Clone the project `git clone https://github.com/garbarino-com/garba-ui.git`,
+install it: `npm install git+https://github.com/garbarino-com/garba-ui.git --save` (or (if using an older release) update it: `npm update garba-ui --save`.
 
 ### How do I get set up? ###
-*Garba UI* is built on webpack and npm so you need to have those installed first. Once you do, you just type on the directory:
-
-```
-$ npm install
-```
-This will install all the dependencies needed.
+*Garba UI* is built on webpack and npm so you need to have those installed first. Once you do, you just type `$ npm install` on the directory. This will install all the dependencies needed.
 
 *Note:* Notice that when you first clone the project you will have none of the compiled files since these are all listed in the `.gitignore` file.
 
-To use the project you need to enter:
+To use the project you need to run:
 ```
-$ npm run start ## Gets the style guide server running on http://localhost:8080/
-
-$ npm run stylelint ## Runs stylelint.
-
-$ npm run sass:p ## Will run stylelint and compile the stylesheet intended for releases.
+$ npm run start ## Will get the project running on http://localhost:8080/
+$ npm run sass-p ## Compile the minified version of the stylesheet for releases.
+$ npm run stylelint ## Will run the linter on the styles folder.
 ```
 
 ### Contribution guidelines ###

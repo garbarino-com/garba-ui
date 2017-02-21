@@ -1,7 +1,7 @@
 {
   "name": "garba-ui",
   "version": "1.4.0",
-  "description": "One UI framework to rule them all. Based on the React UI Style Guide by Aki Karkkainen (url: https://github.com/akikoo/react-ui-style-guide/)",
+  "description": "Garba UI will contain all common UI components to be shared among all company projects.",
   "main": "webpack.config.js",
   "author": [
     "Silvio Vitullo <svitullo@garbarino.com.ar>",
@@ -9,11 +9,9 @@
     "Esteban Calvi <ecalvi@garbarino.com.ar>"
   ],
   "scripts": {
-    "production": "webpack -p",
     "sass-p": "node-sass app/garbaui.scss garbaui.min.css --o dist/ --output-style compressed",
     "stylelint": "stylelint '**/*.scss'; exit 0",
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --hot --inline",
-    "start:lint": "stylelint && start"
   },
   "repository": {
     "type": "git",
