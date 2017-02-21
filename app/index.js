@@ -28,10 +28,10 @@ const components = [
       'button--secondary',
       'button--link',
       'button--facebook',
-      'button--is-fixed-to-bottom',
       'button--lg',
       'button--sm',
       'button--block',
+      'button__is-fixed-to-bottom',
       'button__is-disabled',
       'button__is-loading',
       'button--lg button__is-loading',
@@ -46,7 +46,7 @@ const components = [
     name: 'Button Actions',
     description: require('./components/button-actions/README.md'),
     props: {
-      text: "Action",
+      text: "Placeholder text",
       className: "icon-action"
     },
     modifiers: [

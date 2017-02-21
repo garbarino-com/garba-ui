@@ -10,8 +10,15 @@
 // for backwards compatibility purposes. Don't become too attached to it.
 @import "./_v1.3.2/garbaui";
 
+// Import this function here so it can be used within variables sheet
+@import "./helpers/px-to-rem";
+
 // Base variables
 @import "./variables/variables";
+
+// Some bourbon functionalities
+@import "../node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
+@import "../node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
 
 // General usage
 @import "./helpers/animations";

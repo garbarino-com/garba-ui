@@ -16,15 +16,19 @@
   box-shadow: $btn-box-shadow-value darken($background, 15%);
   color: $color;
 
+  &:focus,
+  &.focus {
+    background-color: $focus-background;
+    box-shadow: 0 0 0 0 transparent;
+  }
+
   &:hover {
     background-color: $hover-background;
     box-shadow: 0 0 0 0 $background;
   }
 
-  &:focus,
-  &.focus {
-    background-color: $focus-background;
-    box-shadow: 0 0 0 0 transparent;
+  &:visited {
+    color: $color;
   }
 }
 

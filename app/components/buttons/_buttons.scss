@@ -19,6 +19,10 @@
   white-space: nowrap;
 
   // Hover and focus styles
+  &:hover {
+    text-decoration: none;
+  }
+
   &:focus,
   &.focus {
     outline: 0;
@@ -85,7 +89,7 @@
 
 
 // Add this class to fix button to bottom of the page
-.button--is-fixed-to-bottom {
+.button__is-fixed-to-bottom {
   border-radius: 0;
   bottom: 0;
   display: block;
