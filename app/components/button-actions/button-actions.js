@@ -33,10 +33,10 @@ Button.defaultProps = {
   type: 'button',
   text: '',
   modifiers: [
-    'button--action has__tooltip-on-top button--action__primary',
-    'button--action has__tooltip-on-top button--action__fav',
-    'button--action has__tooltip-on-top button--action__facebook',
-    'button--action has__tooltip-on-top button--action__twitter'
+    'button--action has-tooltip__on-top button--action__primary',
+    'button--action has-tooltip__on-top button--action__fav',
+    'button--action has-tooltip__on-top button--action__facebook',
+    'button--action has-tooltip__on-top button--action__twitter'
   ]
 };
 

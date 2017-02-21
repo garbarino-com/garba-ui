@@ -61,7 +61,7 @@ const components = [
     name: 'Tooltips',
     description: require('./components/tooltips/README.md'),
     props: {
-      text: "Elemento con tooltip",
+      text: "Este es un elemento con tooltip.",
       content: "Esto es un tooltip de muestra."
     },
     modifiers: []

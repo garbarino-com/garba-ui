@@ -7,7 +7,7 @@ import classNames from 'classnames';
 class Tooltip extends React.Component {
   render() {
     let classes = classNames(
-      'has__tooltip-on-top',
+      'has-tooltip__on-top',
       this.props.modifiers
     );
 
