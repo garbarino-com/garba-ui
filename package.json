@@ -1,6 +1,6 @@
 {
   "name": "garba-ui",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Garba UI will contain all common UI components to be shared among all company projects.",
   "main": "webpack.config.js",
   "author": [

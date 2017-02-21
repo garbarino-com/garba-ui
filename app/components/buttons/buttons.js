@@ -30,24 +30,7 @@ Button.propTypes = {
 Button.defaultProps = {
   type: 'button',
   text: '',
-  modifiers: [
-    'button--main',
-    'button--primary',
-    'button--secondary',
-    'button--link',
-    'button--facebook',
-    'button--lg',
-    'button--sm',
-    'button--block',
-    'button__is-fixed-to-bottom',
-    'button__is-disabled',
-    'button__is-loading',
-    'button--lg button__is-loading',
-    'button--sm button__is-loading',
-    'button--block button__is-loading',
-    'button__has-icon',
-    'button__has-icon button--block button--facebook',
-  ]
+  modifiers: 'button--main button--primary button--secondary button--link button--facebook button--lg button--sm button--block button__is-fixed-to-bottom button__is-disabled button__is-loading button__has-icon'
 };
 
 export default Button;
