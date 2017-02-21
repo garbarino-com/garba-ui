@@ -6,10 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2017-06-08
 ### Changed
-* v1.4: Migrated project to webpack and reacts.js. Adds styles and documentation for new button component.
+* v1.4.1: Minor fix in project info.
 
 ## All changes for v1
 ### Core
+* v1.4: Migrated project to webpack and reacts.js. Adds styles and documentation for new button component.
 * v1.3.2: New icon trash added.
 * v1.3.1: New icons added.
 * v1.3: Open Sans Typography is now part of GarbaUi. If you're still including it in a separate request, time to remove it.
