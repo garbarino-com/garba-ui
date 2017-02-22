@@ -27,7 +27,6 @@ const components = [
       'button--primary',
       'button--secondary',
       'button--link',
-      'button--facebook',
       'button--lg',
       'button--sm',
       'button--block',
@@ -60,6 +59,16 @@ const components = [
     component: require('./components/tooltips/tooltips'),
     name: 'Tooltips',
     description: require('./components/tooltips/README.md'),
+    props: {
+      text: "Este es un elemento con tooltip.",
+      content: "Esto es un tooltip de muestra."
+    },
+    modifiers: []
+  },
+  {
+    component: require('./components/value/value'),
+    name: 'Precio',
+    description: require('./components/value/README.md'),
     props: {
       text: "Este es un elemento con tooltip.",
       content: "Esto es un tooltip de muestra."
