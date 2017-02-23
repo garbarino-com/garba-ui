@@ -4,6 +4,25 @@ Las classes de botones se pueden usar en los elementos `<a>`, `<button>`, o `<in
 
 Posee modificadores agrupados por función/color (ej. `.button--primary`), por tamaño (ej. `button--lg`) y estado (ej. `.button__is-loading`) que se pueden agrupar para darle al elemento la visualización que se desea.
 
+Tenemos cinco tipo de botones:
+* **Primario** (`.button--primary`)
+* **Secundario** (`button--secondary`)
+* **Revenue** (`button--main`)
+* **Link** (`button--link`)
+* **Social** (`button__has-icon`)
+
+Cada botón tiene a su vez cinco estados:
+* **Default**
+* **Hover**
+* **Active** (`:focus`)
+* **Loading** (`.button__is-loading`)
+* **Disabled** (`button__is-disabled`)
+
+Y por último, los botones tienen 3 variaciones de tamaño que son:
+* **Default** (si no hay ninguna especificación de tamaño)
+* **Large** (`button--lg`)
+* **Small** (`button--sm`)
+
 > ### Links que funcionan como botones ###
 En caso que el elemento `<a>` esté usándose para actuar como botón (porque no sirve para navegar hacia otro documento o sección, sino que dispara una funcionalidad dentro de la página actual), también deberían recibir `role="button"`.
 
