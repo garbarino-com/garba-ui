@@ -27,7 +27,7 @@ $ npm run stylelint ## Will run the linter on the styles folder.
 ### Legacy notes
 In case you want to install the older version of the project, you should run:
 ```
-npm install express@1.3.2
+npm install garba-ui@1.3.2
 ```
 This will install the previous version built on gulp not webpack.
 
