@@ -6,10 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 2017-06-08
 ### Changed
-* v1.4.3: Documentation improvements.
+* v2.0.1: Adds price component.
 
 ## All changes for v1
 ### Core
+* v1.4.3: Documentation improvements.
 * v1.4.2: Minor fix in project info.
 * v1.4: Migrated project to webpack and reacts.js. Adds styles and documentation for new button component.
 * v1.3.2: New icon trash added.

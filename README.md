@@ -16,13 +16,20 @@ install it: `npm install git+https://github.com/garbarino-com/garba-ui.git --sav
 To use the project you need to run:
 ```
 $ npm run start ## Will get the project running on http://localhost:8080/
-$ npm run sass-p ## Compile the minified version of the stylesheet for releases.
+$ npm run sass ## Compile the minified version of the stylesheet for releases on the dist/ folder.
 $ npm run stylelint ## Will run the linter on the styles folder.
 ```
 
 ### Contribution guidelines ###
 * No tests have been written yet.
 * No code reviews are being made at the moment.
+
+### Legacy notes
+In case you want to install the older version of the project, you should run:
+```
+npm install express@1.3.2
+```
+This will install the previous version built on gulp not webpack.
 
 ## Built With
 * [React.js](https://facebook.github.io/react/) - A javascript library for building user interfaces.
