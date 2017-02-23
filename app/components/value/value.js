@@ -4,32 +4,60 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
-class Tooltip extends React.Component {
+class ValueContainer extends React.Component {
   render() {
     let classes = classNames(
-      'has-tooltip__on-top',
-      this.props.modifiers
+      'value-container',
+      this.props.modifiers[this.props.idx]
     );
 
     return (
-      <p>
-        <span className={classes} aria-label={this.props.content}>
-          {this.props.text}
+      <div is class={classes} itemprop={this.props.itempropContainer} itemscope
+          itemtype={this.props.itemtype}>
+        <span className="value-note">
+          {this.props.note}
         </span>
-      </p>
+
+        <meta is itemprop="priceCurrency" content={this.props.currency} />
+        <span className="value-item">
+          $<span is itemprop={this.props.itempropItem}>
+            {this.props.price}
+          </span>
+        </span>
+
+        <link href={this.props.availability}
+          is itemprop={this.props.availability} />
+      </div>
     );
   }
 }
 
-Tooltip.propTypes = {
-  modifiers: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.array]),
-  title: React.PropTypes.string,
-  text: React.PropTypes.string
+ValueContainer.propTypes = {
+  itemtype: React.PropTypes.string.isRequired,
+  currency: React.PropTypes.string.isRequired,
+  itempropContainer: React.PropTypes.string.isRequired,
+  itempropItem: React.PropTypes.string.isRequired,
+  itempropAvailability: React.PropTypes.string.isRequired,
+  note: React.PropTypes.string,
+  price: React.PropTypes.string.isRequired,
+  availability: React.PropTypes.string,
+  modifiers: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.array])
 };
 
-Tooltip.defaultProps = {
-  modifiers: []
+ValueContainer.defaultProps = {
+  itemtype: 'http://schema.org/Offer',
+  currency: 'ARS',
+  itempropContainer: 'offers',
+  itempropItem: 'price',
+  itempropAvailability: 'availability',
+  note: '',
+  price: '',
+  availability: '',
+  modifiers: [
+    'value-container--lg',
+    'value-container--sm'
+  ]
 };
 
 
-export default Tooltip;
+export default ValueContainer;

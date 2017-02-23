@@ -19,6 +19,7 @@ Los botones de acción no tienen otro modificador más que el definido por la ac
 {
   type: 'submit',
   text: 'string',
+  className: 'string',
   modifiers: ['string']
 }
 ```
@@ -26,5 +27,5 @@ Los botones de acción no tienen otro modificador más que el definido por la ac
 ### Usage
 
 ```javascript
-import Button from '../button-actions/button-actions';
+import ButtonAction from '../button-actions/button-actions';
 ```

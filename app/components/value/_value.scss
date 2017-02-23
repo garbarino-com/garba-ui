@@ -1,2 +1,42 @@
-// Value base class
-//
+// Base value container
+
+.value-container {
+  @include clearfix;
+  @include value-variant($value-note-font-size-base, $value-font-size-base);
+
+  > .value-note,
+  > .value-item {
+    display: block;
+  }
+}
+
+// Large value container
+.value-container--lg {
+  @include value-variant($value-note-font-size-lg, $value-font-size-lg,
+    $value-line-height-lg);
+  text-align: $value-text-align-lg;
+
+  .value-item {
+    line-height: 1;
+  }
+}
+
+// Small value container
+.value-container--sm {
+  @include value-variant($value-note-font-size-sm, $value-font-size-sm);
+}
+
+// Notice in value component
+.value-note {
+  color: $value-note-color;
+  font-size: $value-font-size-base;
+  font-weight: $value-note-font-weight;
+
+}
+
+// Value proper container
+.value-item {
+  color: $brand-corporate;
+  font-size: $value-font-size-base;
+  font-weight: $value-font-weight;
+}

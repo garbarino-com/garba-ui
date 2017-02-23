@@ -60,6 +60,7 @@ $nav-bg:                #FFF !default;
 $text-color:            $gray-darker !default;
 //** Global text color on `<body>`.
 $text-inverse:          #FFF !default;
+$text-muted:            #666 !default;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -67,6 +68,7 @@ $link-color:            $brand-primary !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
+
 
 
 // ** Images
@@ -109,7 +111,7 @@ $screen-lg-max:              ($screen-xl-min - 1) !default;
 // Override default Bootstrap Grid variables
 
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         $baseline-grid * 2;
+$grid-gutter-width:          $baseline-grid * 2 !default;
 
 // Fonts
 //
@@ -222,6 +224,21 @@ $tooltip-height:                     2rem !default;
 $tooltip-opacity:                    .8 !default;
 $tooltip-padding:                    .5rem !default;
 $tooltip-arrow-size:                 1rem !default;
+
+
+// Value component
+$value-note-color:                   $text-muted !default;
+$value-font-size-base:               1.75rem !default; // 21px
+$value-font-size-lg:                 2.5rem !default; // 28px
+$value-font-size-sm:                 $font-size-base !default; // 14px
+$value-note-font-size-base:          $font-size-base !default; // 14px
+$value-note-font-size-lg:            $font-size-base !default; // 14px
+$value-note-font-size-sm:            $font-size-sm !default; // 12px
+$value-line-height-base:             1.25 !default;
+$value-line-height-lg:               1.5 !default;
+$value-note-font-weight:             400 !default;
+$value-font-weight:                  700 !default;
+$value-text-align-lg:                center !default;
 
 
 /* stylelint-enable max-line-length */

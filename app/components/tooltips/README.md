@@ -10,9 +10,9 @@ El componente tooltip es un work in progress por el momento y tiene algunas limi
 
 ```javascript
 {
-  text: 'string',
+  modifiers: ['string'],
   content: 'string',
-  modifiers: ['string']
+  text: 'string',
 }
 ```
 

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
-class Button extends React.Component {
+class ButtonAction extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -15,24 +15,26 @@ class Button extends React.Component {
 
     return (
       <button className={classes} type={this.props.type}
-          aria-label="Sample text to display in tooltip.">
-        <i className={this.props.class}></i>
+          aria-label={this.props.content}>
+        <i className={this.props.className}></i>
         {this.props.text}
       </button>
     );
   }
 }
 
-Button.propTypes = {
+ButtonAction.propTypes = {
   type: React.PropTypes.string,
   text: React.PropTypes.string.isRequired,
+  className: React.PropTypes.string,
   modifiers: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.array])
 };
 
-Button.defaultProps = {
+ButtonAction.defaultProps = {
   type: 'button',
   text: '',
+  className: '',
   modifiers: 'button--action button--action__primary button--action__fav button--action__facebook button--action__twitter'
 };
 
-export default Button;
+export default ButtonAction;

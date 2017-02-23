@@ -23,8 +23,8 @@ class Tooltip extends React.Component {
 
 Tooltip.propTypes = {
   modifiers: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.array]),
-  title: React.PropTypes.string,
-  text: React.PropTypes.string
+  content: React.PropTypes.string.isRequired,
+  text: React.PropTypes.string.isRequired
 };
 
 Tooltip.defaultProps = {

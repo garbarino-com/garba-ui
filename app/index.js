@@ -20,7 +20,7 @@ const components = [
     name: 'Buttons',
     description: require('./components/buttons/README.md'),
     props: {
-      text: "Button"
+      text: 'Button'
     },
     modifiers: [
       'button--main',
@@ -45,14 +45,14 @@ const components = [
     name: 'Button Actions',
     description: require('./components/button-actions/README.md'),
     props: {
-      text: "Placeholder text",
-      className: "icon-action"
+      text: 'Placeholder text',
+      className: 'icon-action'
     },
     modifiers: [
-      'button--action has-tooltip__on-top button--action__primary',
-      'button--action has-tooltip__on-top button--action__fav',
-      'button--action has-tooltip__on-top button--action__facebook',
-      'button--action has-tooltip__on-top button--action__twitter'
+      'button--action__primary has-tooltip__on-top',
+      'button--action__fav has-tooltip__on-top',
+      'button--action__facebook has-tooltip__on-top',
+      'button--action__twitter has-tooltip__on-top'
     ]
   },
   {
@@ -60,8 +60,8 @@ const components = [
     name: 'Tooltips',
     description: require('./components/tooltips/README.md'),
     props: {
-      text: "Este es un elemento con tooltip.",
-      content: "Esto es un tooltip de muestra."
+      text: 'Este es un elemento con tooltip.',
+      content: 'Esto es un tooltip de muestra.'
     },
     modifiers: []
   },
@@ -70,21 +70,19 @@ const components = [
     name: 'Precio',
     description: require('./components/value/README.md'),
     props: {
-      text: "Este es un elemento con tooltip.",
-      content: "Esto es un tooltip de muestra."
+      note: 'Precio en 1 pago.',
+      price: '119.99',
+      availability: [
+        'http://schema.org/InStock',
+        'http://schema.org/OutOfStock',
+        'http://schema.org/PreOrder',
+      ]
     },
-    modifiers: []
-  }/*,
-  {
-    component: require('./components/cards/cards'),
-    name: 'Card',
-    description: require('./components/cards/README.md'),
-    props: {
-      title: "Card title",
-      text: "I am a very simple card."
-    },
-    modifiers: []
-  }*/
+    modifiers: [
+      'value-container--lg',
+      'value-container--sm'
+    ]
+  }
 ];
 
 class MainComponent extends React.Component {

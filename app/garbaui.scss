@@ -17,6 +17,7 @@
 @import "./variables/variables";
 
 // Some bourbon functionalities
+@import "../node_modules/bourbon/app/assets/stylesheets/addons/clearfix";
 @import "../node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
 @import "../node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
 
@@ -32,6 +33,7 @@
 @import "./helpers/button-actions";
 @import "./helpers/spinners";
 @import "./helpers/tooltips";
+@import "./helpers/value";
 
 
 // UI Components
