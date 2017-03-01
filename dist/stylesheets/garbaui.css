@@ -3579,6 +3579,10 @@ button.close {
   background-image: none;
 }
 
+.button + .button {
+  margin-left: .5rem;
+}
+
 .button,
 .button--secondary {
   -webkit-transition: background-color 0.12s ease-in;
@@ -3955,6 +3959,21 @@ button.close {
   content: initial;
 }
 
+.button--action__default {
+  -webkit-transition: background-color 0.12s ease-in;
+  -ms-transition: background-color 0.12s ease-in;
+  -moz-transition: background-color 0.12s ease-in;
+  transition: background-color 0.12s ease-in;
+}
+
+.button--action__default:hover, .button--action__default:focus, .button--action__default.button__is-active {
+  color: #F8AA29;
+}
+
+.button--action__default > i::before {
+  content: "";
+}
+
 .button--action__facebook {
   -webkit-transition: background-color 0.12s ease-in;
   -ms-transition: background-color 0.12s ease-in;
@@ -3983,6 +4002,68 @@ button.close {
 
 .button--action__twitter > i::before {
   content: "";
+}
+
+.img-container {
+  position: relative;
+  background: transparent;
+  display: block;
+  text-align: center;
+}
+
+.img-container::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.img-container > img,
+.img-container a > img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag {
+  display: inline-block;
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 1px solid #666;
+  font-size: 0.85714rem;
+  font-weight: 700;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.tag, .tag:hover {
+  color: #666;
+}
+
+.tag:empty {
+  display: none;
+}
+
+.tag + .tag {
+  margin-left: .5rem;
+}
+
+.tag > img {
+  display: inline-block;
+  max-height: 1.5rem;
+  vertical-align: middle;
 }
 
 .has-tooltip__on-top {

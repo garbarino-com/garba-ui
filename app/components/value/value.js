@@ -33,11 +33,11 @@ class ValueContainer extends React.Component {
 }
 
 ValueContainer.propTypes = {
-  itemtype: React.PropTypes.string.isRequired,
-  currency: React.PropTypes.string.isRequired,
-  itempropContainer: React.PropTypes.string.isRequired,
-  itempropItem: React.PropTypes.string.isRequired,
-  itempropAvailability: React.PropTypes.string.isRequired,
+  itemtype: React.PropTypes.string,
+  currency: React.PropTypes.string,
+  itempropContainer: React.PropTypes.string,
+  itempropItem: React.PropTypes.string,
+  itempropAvailability: React.PropTypes.string,
   note: React.PropTypes.string,
   price: React.PropTypes.string.isRequired,
   availability: React.PropTypes.string,

@@ -33,6 +33,9 @@
 // for use in components.
 
 // Some bourbon functionalities
+@import "../node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
+@import "../node_modules/bourbon/app/assets/stylesheets/bourbon-deprecate";
+@import "../node_modules/bourbon/app/assets/stylesheets/css3/flex-box";
 @import "../node_modules/bourbon/app/assets/stylesheets/addons/clearfix";
 @import "../node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
 @import "../node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
@@ -55,5 +58,7 @@
 // UI Components
 @import "./components/buttons/buttons";
 @import "./components/button-actions/button-actions";
+@import "./components/image-container/image-container";
+@import "./components/tags/tags";
 @import "./components/tooltips/tooltips";
 @import "./components/value/value";

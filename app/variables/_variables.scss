@@ -18,6 +18,9 @@ $prefix-for-microsoft:       true !default;
 $prefix-for-opera:           true !default;
 $prefix-for-spec:            true !default;
 
+// Define use of flexbox (boolean)
+$flexbox-is-enabled:         true !default;
+
 // ** The Baseline grid is the basic building block of the vertical rhythm.
 $baseline-grid:         14px;
 
@@ -35,6 +38,11 @@ $brand-primary:          #0084E0 !default;
 $brand-secondary:        #6B6B6B !default;
 $brand-revenue:          #49C237 !default;
 
+// Alt Fav
+// TODO(ecalvi): This is an inconsistency. We are defining this variable so this
+// color is used only once.
+$brand-altfav:           #F8AA29 !default;
+
 //## Gray and brand colors for use across Framework.
 $gray-base:              #000 !default;
 $gray-darker:            $brand-secondary !default;
@@ -48,6 +56,10 @@ $gray-lighter:           #F6F6F6 !default;
 $modifier-operation:            lighten !default;
 $modifier-hover-value:          10% !default;
 $modifier-focus-value:          10% !default;
+
+
+// Generic spacers for elements
+$spacer-sm:             .5rem !default;
 
 
 //** Background color for `<body>`.
@@ -73,7 +85,6 @@ $link-hover-decoration: underline !default;
 
 // ** Images
 // --------------------------------------------------
-//
 
 $images-url:             "./images/" !default;
 
@@ -139,6 +150,12 @@ $icon-facebook:          "\e914" !default;
 $brand-fav:              $brand-corporate !default;
 $icon-fav:               "\e920" !default;
 
+// Alt Fav
+// TODO(ecalvi): This is an inconsistency. We are defining this variable so this
+// color is used only once.
+$brand-default:          $brand-altfav !default;
+$icon-default:           "\e93e" !default;
+
 // Twitter
 $brand-twitter:          #60B5F1 !default;
 $icon-twitter:           "\e943" !default;
@@ -200,7 +217,7 @@ $btn-spinner-sm-border-width:        px-to-rem(2px) !default;
 $btn-spinner-base-size:              1.75rem !default;
 $btn-spinner-lg-size:                2rem !default;
 $btn-spinner-sm-size:                1rem !default;
-$btn-spinner-spacing:                .5rem !default;
+$btn-spinner-spacing:                $spacer-sm !default;
 
 // Button icon definitions
 $btn-icon-size:                      1.5rem !default;
@@ -239,6 +256,20 @@ $value-line-height-lg:               1.5 !default;
 $value-note-font-weight:             400 !default;
 $value-font-weight:                  700 !default;
 $value-text-align-lg:                center !default;
+
+// Image container
+$imgcontainer-bg:           transparent !default;
+
+// Tag component
+$tag-bg:                    transparent !default;
+$tag-border:                $gray-dark !default;
+$tag-color:                 $tag-border !default;
+$tag-font-size:             $font-size-sm !default;
+$tag-font-weight:           700 !default;
+$tag-line-height:           2rem !default;
+$tag-width:                 8rem !default;
+$tag-padding:               0 $spacer-sm !default;
+$tag-img-height:            1.5rem !default;
 
 
 /* stylelint-enable max-line-length */

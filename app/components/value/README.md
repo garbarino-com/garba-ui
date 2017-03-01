@@ -17,7 +17,7 @@ La idea es empezar a unificar la comunicación de los distintos tipo de informac
   itempropItem: 'string',
   itempropAvailability: 'string',
   note: 'string',
-  price: 'string',
+  price: 'string.isRequired',
   availability:  ['string'],
   modifiers:  ['string']
 }

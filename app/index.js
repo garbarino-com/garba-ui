@@ -46,14 +46,25 @@ const components = [
     description: require('./components/button-actions/README.md'),
     props: {
       text: 'Placeholder text',
-      className: 'icon-action'
+      className: 'icon-action',
+      content: 'Texto que describe la acción que realiza el botón',
     },
     modifiers: [
       'button--action__primary has-tooltip__on-top',
       'button--action__fav has-tooltip__on-top',
+      'button--action__default has-tooltip__on-top',
       'button--action__facebook has-tooltip__on-top',
       'button--action__twitter has-tooltip__on-top'
     ]
+  },
+  {
+    component: require('./components/tags/tags'),
+    name: 'Tags',
+    description: require('./components/tags/README.md'),
+    props: {
+      text: 'Tag de muestra',
+      link: '/url-de-categoria-optional/'
+    }
   },
   {
     component: require('./components/tooltips/tooltips'),
@@ -62,8 +73,16 @@ const components = [
     props: {
       text: 'Este es un elemento con tooltip.',
       content: 'Esto es un tooltip de muestra.'
-    },
-    modifiers: []
+    }
+  },
+  {
+    component: require('./components/image-container/image-container'),
+    name: 'Imagen de producto',
+    description: require('./components/image-container/README.md'),
+    props: {
+      imageUrl: 'http://lorempixel.com/1200/400/sports/',
+      altText: 'Ejemplo de texto alternativo para imagen.'
+    }
   },
   {
     component: require('./components/value/value'),

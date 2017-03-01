@@ -33,8 +33,9 @@ ButtonAction.propTypes = {
 ButtonAction.defaultProps = {
   type: 'button',
   text: '',
+  content: '',
   className: '',
-  modifiers: 'button--action button--action__primary button--action__fav button--action__facebook button--action__twitter'
+  modifiers: 'button--action button--action__primary button--action__fav button--action__default button--action__facebook button--action__twitter'
 };
 
 export default ButtonAction;

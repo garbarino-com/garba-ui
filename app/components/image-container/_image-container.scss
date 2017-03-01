@@ -1,0 +1,22 @@
+//
+// Image Container
+// --------------------------------------------------
+
+.img-container {
+  @include av-aspect-ratio;
+  background: $imgcontainer-bg;
+  display: block;
+  text-align: center;
+
+  > img,
+  a > img {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

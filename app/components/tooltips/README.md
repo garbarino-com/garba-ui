@@ -6,14 +6,14 @@ El componente tooltip es un work in progress por el momento y tiene algunas limi
 * Actualmente sólo puede usarse en elementos con display *inline* e *inline-block*.
 * El tooltip además hace uso de los pseudo elementos de css `::before ` y `::after`. Esto podría generar conflictos con otras clases que hacen uso de estos elementos (como por ejemplo el modificador de estado `button__is-loading`). Una posible solución podría ser migrar el componente hacia javascript en el futuro.
 
-Los tooltips se utilizan para dar soporte de comunicación a un elemento, idealmente sólo una indicación respecto al elemento que lo dispara. De ser necesaria una descripción más extensa o que incluya una acción, recurrir al componente **Popover** (TO DO).
+Los tooltips se utilizan para dar soporte de comunicación a un elemento, idealmente sólo una indicación respecto al elemento que lo dispara. De ser necesaria una descripción más extensa o que incluya una acción, recurrir al componente **Popover** (TODO).
 
 ### Props
 
 ```javascript
 {
   modifiers: ['string'],
-  content: 'string',
+  content: 'string.isRequired',
   text: 'string',
 }
 ```

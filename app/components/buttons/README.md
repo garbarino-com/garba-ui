@@ -37,7 +37,7 @@ La clase `button--main` debe usarse sólo para una acción principal dentro del 
 ```javascript
 {
   type: 'submit',
-  text: 'string',
+  text: 'string.isRequired',
   modifiers: ['string']
 }
 ```

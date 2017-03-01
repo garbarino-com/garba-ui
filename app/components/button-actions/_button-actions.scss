@@ -1,7 +1,7 @@
 //
-// Base styles
+// Action buttons
+// --------------------------------------------------
 
-// Action modifiers
 .button--action {
   @include button-size($btn-action-padding-x, $btn-action-size, $btn-action-font-size);
   @include text-hide;
@@ -37,6 +37,11 @@
   > i::before {
     @include icon-element($btn-action-font-size);
     width: $btn-action-font-size;
+  }
+
+  // Add horizontal spacing for adjacent elements
+  + #{&} {
+    margin-left: .5rem;
   }
 }
 
@@ -97,6 +102,11 @@
       content: initial;
     }
   }
+}
+
+// Fav item action
+.button--action__default {
+  @include button-action-variant($brand-default, $icon-default);
 }
 
 // Share on facebook action

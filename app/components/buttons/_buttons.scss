@@ -1,6 +1,6 @@
 //
-// Base styles
-
+// Buttons
+// --------------------------------------------------
 .button {
   @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
   background-image: none;
@@ -32,6 +32,11 @@
   &:active,
   &.active {
     background-image: none;
+  }
+
+  // Add horizontal spacing for adjacent elements
+  + #{&} {
+    margin-left: .5rem;
   }
 }
 

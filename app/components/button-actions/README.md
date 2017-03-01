@@ -20,7 +20,7 @@ Este tipo de botones tienen además en el estado `:hover` muestran un tooltip de
 ```javascript
 {
   type: 'submit',
-  text: 'string',
+  text: 'string.isRequired',
   className: 'string',
   modifiers: ['string']
 }
