@@ -58,12 +58,25 @@ const components = [
     ]
   },
   {
+    component: require('./components/labels/labels'),
+    name: 'Labels',
+    description: require('./components/labels/README.md'),
+    props: {
+      text: 'Texto del label',
+      link: '/url-de-categoria-opcional/'
+    },
+    modifiers: [
+      'label--primary',
+      'label--main'
+    ]
+  },
+  {
     component: require('./components/tags/tags'),
     name: 'Tags',
     description: require('./components/tags/README.md'),
     props: {
       text: 'Tag de muestra',
-      link: '/url-de-categoria-optional/'
+      link: '/url-de-categoria-opcional/'
     }
   },
   {

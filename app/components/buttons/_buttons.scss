@@ -36,23 +36,24 @@
 
   // Add horizontal spacing for adjacent elements
   + #{&} {
-    margin-left: .5rem;
+    margin-left: $spacer-sm;
   }
 }
 
 // Color modifiers
 // Make this default
 .button,
+.button--default,
 .button--secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg);
 }
 
-.button--main {
-  @include button-variant($btn-main-color, $btn-main-bg);
-}
-
 .button--primary {
   @include button-variant($btn-primary-color, $btn-primary-bg);
+}
+
+.button--main {
+  @include button-variant($btn-main-color, $btn-main-bg);
 }
 
 .button--link {

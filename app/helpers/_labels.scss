@@ -1,0 +1,21 @@
+// Labels
+
+@mixin label-variant($background, $color) {
+  $hover-background: state-hover-modifier($background);
+  $focus-background: state-focus-modifier($background);
+
+  background-color: $background;
+  color: $color;
+
+  &[href] {
+    &:focus,
+    &.focus {
+      background-color: $focus-background;
+    }
+
+    &:hover {
+      background-color: $hover-background;
+      color: $color;
+    }
+  }
+}

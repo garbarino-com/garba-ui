@@ -28,7 +28,7 @@
 
   // Add horizontal spacing for adjacent elements
   + #{&} {
-    margin-left: .5rem;
+    margin-left: $spacer-sm;
   }
 
   // Define styles for images contained within tag

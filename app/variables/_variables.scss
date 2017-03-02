@@ -190,7 +190,7 @@ $btn-transition-timing:              .12s !default;
 $btn-shadow-width:                   px-to-rem(2px) !default;
 $btn-box-shadow-value:               0 $btn-shadow-width 0 0 !default;
 
-// Color definitions
+// Button color definitions
 $btn-main-color:                     $btn-base-color !default;
 $btn-main-bg:                        $brand-revenue !default;
 
@@ -257,8 +257,10 @@ $value-note-font-weight:             400 !default;
 $value-font-weight:                  700 !default;
 $value-text-align-lg:                center !default;
 
+
 // Image container
 $imgcontainer-bg:           transparent !default;
+
 
 // Tag component
 $tag-bg:                    transparent !default;
@@ -270,6 +272,27 @@ $tag-line-height:           2rem !default;
 $tag-width:                 8rem !default;
 $tag-padding:               0 $spacer-sm !default;
 $tag-img-height:            1.5rem !default;
+
+
+// label component
+$label-border:                transparent !default;
+$label-base-color:            $text-inverse !default;
+$label-font-size:             $font-size-sm !default;
+$label-font-weight:           700 !default;
+$label-line-height:           1rem !default;
+$label-width:                 8rem !default;
+$label-padding:               $spacer-sm !default;
+$label-img-height:            1.5rem !default;
+
+// Label color definitions
+$label-main-color:            $label-base-color !default;
+$label-main-bg:               $brand-revenue !default;
+
+$label-primary-color:         $label-base-color !default;
+$label-primary-bg:            $brand-primary !default;
+
+$label-secondary-color:       $label-base-color !default;
+$label-secondary-bg:          $brand-secondary !default;
 
 
 /* stylelint-enable max-line-length */
