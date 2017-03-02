@@ -3580,10 +3580,11 @@ button.close {
 }
 
 .button + .button {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .button,
+.button--default,
 .button--secondary {
   -webkit-transition: background-color 0.12s ease-in;
   -ms-transition: background-color 0.12s ease-in;
@@ -3595,6 +3596,8 @@ button.close {
 }
 
 .button:focus, .button.focus,
+.button--default:focus,
+.button--default.focus,
 .button--secondary:focus,
 .button--secondary.focus {
   background-color: #858585;
@@ -3602,37 +3605,15 @@ button.close {
 }
 
 .button:hover,
+.button--default:hover,
 .button--secondary:hover {
   background-color: #858585;
   box-shadow: 0 0.14286rem 0 0 #858585;
 }
 
 .button:visited,
+.button--default:visited,
 .button--secondary:visited {
-  color: #FFF;
-}
-
-.button--main {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
-  background-color: #49C237;
-  box-shadow: 0 0.14286rem 0 0 #338626;
-  color: #FFF;
-}
-
-.button--main:focus, .button--main.focus {
-  background-color: #6bd15b;
-  box-shadow: 0 0 0 0 transparent;
-}
-
-.button--main:hover {
-  background-color: #6bd15b;
-  box-shadow: 0 0.14286rem 0 0 #6bd15b;
-}
-
-.button--main:visited {
   color: #FFF;
 }
 
@@ -3657,6 +3638,30 @@ button.close {
 }
 
 .button--primary:visited {
+  color: #FFF;
+}
+
+.button--main {
+  -webkit-transition: background-color 0.12s ease-in;
+  -ms-transition: background-color 0.12s ease-in;
+  -moz-transition: background-color 0.12s ease-in;
+  transition: background-color 0.12s ease-in;
+  background-color: #49C237;
+  box-shadow: 0 0.14286rem 0 0 #338626;
+  color: #FFF;
+}
+
+.button--main:focus, .button--main.focus {
+  background-color: #6bd15b;
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.button--main:hover {
+  background-color: #6bd15b;
+  box-shadow: 0 0.14286rem 0 0 #6bd15b;
+}
+
+.button--main:visited {
   color: #FFF;
 }
 
@@ -3900,6 +3905,10 @@ button.close {
   width: 1.5rem;
 }
 
+.button--action + .button--action {
+  margin-left: 0.5rem;
+}
+
 @keyframes action-active {
   from {
     background-position: left;
@@ -4029,6 +4038,69 @@ button.close {
   top: 0;
 }
 
+.label {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 0.85714rem;
+  font-weight: 700;
+  height: 2rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.label:empty {
+  display: none;
+}
+
+.label + .label {
+  margin-left: 0.5rem;
+}
+
+.label,
+.label--default,
+.label--primary {
+  background-color: #0084E0;
+  color: #FFF;
+}
+
+.label[href]:focus, .label[href].focus,
+.label--default[href]:focus,
+.label--default[href].focus,
+.label--primary[href]:focus,
+.label--primary[href].focus {
+  background-color: #149eff;
+}
+
+.label[href]:hover,
+.label--default[href]:hover,
+.label--primary[href]:hover {
+  background-color: #149eff;
+  color: #FFF;
+}
+
+.label--main {
+  background-color: #49C237;
+  color: #FFF;
+}
+
+.label--main[href]:focus, .label--main[href].focus {
+  background-color: #6bd15b;
+}
+
+.label--main[href]:hover {
+  background-color: #6bd15b;
+  color: #FFF;
+}
+
 .tag {
   display: inline-block;
   max-width: 8rem;
@@ -4057,7 +4129,7 @@ button.close {
 }
 
 .tag + .tag {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .tag > img {
