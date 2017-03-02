@@ -13,16 +13,23 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 require('es6-promise').polyfill();
 
 module.exports = {
-  entry: './app/index.js',
+  entry: {
+    dev:  './app/app.js',
+    prod: './app/prod.js'
+  },
 
   output: {
-    path: __dirname,
-    filename: 'app/app.js'
+    path: './dist/',
+    filename: 'js/[name]-bundle.js'
   },
 
   plugins: [
     // Specify the resulting CSS filename
-    new ExtractTextPlugin('css/garbaui.css')
+    new ExtractTextPlugin('stylesheets/[name].css'),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      lintDirtyModulesOnly: 'true'
+    })
   ],
 
   module: {
@@ -67,7 +74,8 @@ module.exports = {
       'Chrome >= 40',
       'Firefox >= 38',
       'Safari >= 6',
-      'Edge >= 12'
+      'Edge >= 12',
+      '> 5%'
       ]
     })
   ],

@@ -18,11 +18,10 @@
         "message": "Selector should be written in lowercase with hyphens or underscores. (selector-class-pattern)"
       }
     ],
-    "unit-blacklist": {
+    "unit-blacklist": [true, {
       "px": [ "line-height", "font", "font-size"],
       "rem": [ "font" ],
       "vmin": [ "width" ]
-    },
-    "at-rule-no-vendor-prefix": false
+    }]
   }
 }

@@ -9,10 +9,11 @@
     "Esteban Calvi <ecalvi@garbarino.com.ar>"
   ],
   "scripts": {
-    "sass-p": "node-sass app/garbaui.scss dist/stylesheets/garbaui.min.css --o dist/ --output-style compressed",
     "sass": "node-sass app/garbaui.scss dist/stylesheets/garbaui.css --o dist/ --output-style expanded && node-sass app/garbaui.scss dist/stylesheets/garbaui.min.css --o dist/ --output-style compressed",
     "stylelint": "stylelint '**/*.scss'; exit 0",
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --hot --inline"
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --hot --inline",
+    "build-js": "webpack -p",
+    "build": "npm run sass && npm run build-js"
   },
   "repository": {
     "type": "git",
@@ -60,6 +61,10 @@
     "bourbon": "^4.3.2",
     "classnames": "^2.2.5",
     "extract-text-webpack-plugin": "^1.0.1",
+    "handlebars": "^4.0.6",
+    "jquery": "^1.12.3",
+    "jquery-touchswipe": "^1.6.15",
+    "js-cookie": "^2.1.3",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "url-loader": "^0.5.7"
