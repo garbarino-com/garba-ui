@@ -4,6 +4,8 @@ var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 
+var webpack = require("webpack");
+
 // Stylelint plugin
 var StyleLintPlugin = require('stylelint-webpack-plugin');
 
@@ -13,6 +15,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 require('es6-promise').polyfill();
 
 module.exports = {
+
   entry: {
     dev:  './app/app.js',
     prod: './app/prod.js'
@@ -20,7 +23,7 @@ module.exports = {
 
   output: {
     path: './dist/',
-    filename: 'js/[name]-bundle.js'
+    filename: './js/[name]-bundle.js'
   },
 
   plugins: [
@@ -29,6 +32,10 @@ module.exports = {
     new StyleLintPlugin({
       configFile: '.stylelintrc',
       lintDirtyModulesOnly: 'true'
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
     })
   ],
 
@@ -54,12 +61,16 @@ module.exports = {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
         loader: 'url-loader?limit=100000'
       },
-      ,{
+      {
         test: /\.md$/,
         loaders: [
           'html',
           'markdown'
         ]
+      },
+      {
+        test: /[\/\\]app[\/\\]js[\/\\]bootstrap-carousel\.js$/,
+        loader: "imports-loader?this=>window"
       }
     ]
   },
@@ -80,8 +91,8 @@ module.exports = {
     })
   ],
 
+  // Colored output
   stats: {
-    // Colored output
     colors: true
   },
 

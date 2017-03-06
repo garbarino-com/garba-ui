@@ -13,7 +13,7 @@ class ImgContainer extends React.Component {
 
     return (
       <a href={this.props.link} className={classes}>
-        <img itemprop="image" src={this.props.imageUrl}
+        <img itemProp="image" src={this.props.imageUrl}
           alt={this.props.altText} />
       </a>
     );
