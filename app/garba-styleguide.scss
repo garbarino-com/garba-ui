@@ -1,24 +1,14 @@
 //
-// Garba UI v1.4 (https://github.com/garbarino-com/garba-ui/)
+// Garba UI v2.0.0-Alpha.2 (https://github.com/garbarino-com/garba-ui/)
 // Copyright 2017 Garbarino.com
 // Licensed under ISC.
 // URL: (https://github.com/garbarino-com/garba-ui/blob/LICENSE.md)
 //
 
-// Import version 1.3.2
-// This version will be deprecated in the future and is maintained
-// for backwards compatibility purposes. Don't become too attached to it.
-@import "./_v1.3.2/garbaui";
+// Import styles-library into styleguide project
+@import "./garbaui";
 
-// Import this function here so it can be used within variables sheet
-@import "./helpers/px-to-rem";
-
-// Base variables
-@import "./variables/variables";
 @import "./variables/styleguide-variables";
-
-// Normalize
-@import "../node_modules/normalize-scss/sass/normalize";
 
 // TODO(ecalvi): Bootstrap 3 grid is imported here for prototyping purposes.
 // In the future we should review this and choose a grid to use within the
@@ -28,39 +18,3 @@
 // Style guide
 @import "./styleguide/styleguide";
 @import "./styleguide/styleguide__block/styleguide__block";
-
-// Import all mixins and function helpers in the folder so they are available
-// for use in components.
-
-// Some bourbon functionalities
-@import "../node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
-@import "../node_modules/bourbon/app/assets/stylesheets/bourbon-deprecate";
-@import "../node_modules/bourbon/app/assets/stylesheets/css3/flex-box";
-@import "../node_modules/bourbon/app/assets/stylesheets/addons/clearfix";
-@import "../node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
-@import "../node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
-
-// General usage
-@import "./helpers/animations";
-@import "./helpers/utilities";
-@import "./helpers/icon-element";
-@import "./helpers/make-css-arrow";
-@import "./helpers/state-modifiers";
-
-// Component related
-@import "./helpers/buttons";
-@import "./helpers/button-actions";
-@import "./helpers/labels";
-@import "./helpers/spinners";
-@import "./helpers/tooltips";
-@import "./helpers/value";
-
-
-// UI Components
-@import "./components/buttons/buttons";
-@import "./components/button-actions/button-actions";
-@import "./components/image-container/image-container";
-@import "./components/labels/labels";
-@import "./components/tags/tags";
-@import "./components/tooltips/tooltips";
-@import "./components/value/value";

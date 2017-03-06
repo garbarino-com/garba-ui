@@ -3602,6 +3602,7 @@ button.close {
 .button--secondary.focus {
   background-color: #858585;
   box-shadow: 0 0 0 0 transparent;
+  color: #FFF;
 }
 
 .button:hover,
@@ -3609,6 +3610,7 @@ button.close {
 .button--secondary:hover {
   background-color: #858585;
   box-shadow: 0 0.14286rem 0 0 #858585;
+  color: #FFF;
 }
 
 .button:visited,
@@ -3630,11 +3632,13 @@ button.close {
 .button--primary:focus, .button--primary.focus {
   background-color: #149eff;
   box-shadow: 0 0 0 0 transparent;
+  color: #FFF;
 }
 
 .button--primary:hover {
   background-color: #149eff;
   box-shadow: 0 0.14286rem 0 0 #149eff;
+  color: #FFF;
 }
 
 .button--primary:visited {
@@ -3654,11 +3658,13 @@ button.close {
 .button--main:focus, .button--main.focus {
   background-color: #6bd15b;
   box-shadow: 0 0 0 0 transparent;
+  color: #FFF;
 }
 
 .button--main:hover {
   background-color: #6bd15b;
   box-shadow: 0 0.14286rem 0 0 #6bd15b;
+  color: #FFF;
 }
 
 .button--main:visited {
@@ -3678,11 +3684,13 @@ button.close {
 .button--link:focus, .button--link.focus {
   background-color: rgba(26, 26, 26, 0);
   box-shadow: 0 0 0 0 transparent;
+  color: #0084E0;
 }
 
 .button--link:hover {
   background-color: rgba(26, 26, 26, 0);
   box-shadow: 0 0.14286rem 0 0 rgba(26, 26, 26, 0);
+  color: #0084E0;
 }
 
 .button--link:visited {
@@ -3706,11 +3714,13 @@ button.close {
 .button--facebook:focus, .button--facebook.focus {
   background-color: #6c77c3;
   box-shadow: 0 0 0 0 transparent;
+  color: #FFF;
 }
 
 .button--facebook:hover {
   background-color: #6c77c3;
   box-shadow: 0 0.14286rem 0 0 #6c77c3;
+  color: #FFF;
 }
 
 .button--facebook:visited {
@@ -3725,19 +3735,10 @@ button.close {
 }
 
 .button--sm {
-  font-size: 1rem;
-  height: 3rem;
-  line-height: 3rem;
-  padding: 0 1.5rem;
-}
-
-@media only screen and (min-width: 73.14286rem) {
-  .button--sm {
-    font-size: 0.85714rem;
-    height: 2rem;
-    line-height: 2rem;
-    padding: 0 1.25rem;
-  }
+  font-size: 0.85714rem;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 1.25rem;
 }
 
 .button--block {
@@ -3745,8 +3746,24 @@ button.close {
   width: 100%;
 }
 
+.button--block.button--sm {
+  font-size: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 73.14286rem) {
+  .button--block.button--sm {
+    font-size: 0.85714rem;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 1.25rem;
+  }
+}
+
 .button--block + .button--block {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .button__is-fixed-to-bottom {
@@ -4036,6 +4053,11 @@ button.close {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.img-container:focus,
+.img-container a:focus {
+  outline: 0;
 }
 
 .label {

@@ -1,5 +1,5 @@
 //
-// Garba UI v1.4 (https://github.com/garbarino-com/garba-ui/)
+// Garba UI v2.0.0-Alpha.2 (https://github.com/garbarino-com/garba-ui/)
 // Copyright 2017 Garbarino.com
 // Licensed under ISC.
 // URL: (https://github.com/garbarino-com/garba-ui/blob/LICENSE.md)
@@ -17,12 +17,12 @@
 @import "./variables/variables";
 
 // Some bourbon functionalities
-@import "../node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
-@import "../node_modules/bourbon/app/assets/stylesheets/bourbon-deprecate";
-@import "../node_modules/bourbon/app/assets/stylesheets/css3/flex-box";
-@import "../node_modules/bourbon/app/assets/stylesheets/addons/clearfix";
-@import "../node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
-@import "../node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
+@import "./node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
+@import "./node_modules/bourbon/app/assets/stylesheets/bourbon-deprecate";
+@import "./node_modules/bourbon/app/assets/stylesheets/css3/flex-box";
+@import "./node_modules/bourbon/app/assets/stylesheets/addons/clearfix";
+@import "./node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
+@import "./node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
 
 // General usage
 @import "./helpers/animations";

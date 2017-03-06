@@ -20,11 +20,13 @@
   &.focus {
     background-color: $focus-background;
     box-shadow: 0 0 0 0 transparent;
+    color: $color;
   }
 
   &:hover {
     background-color: $hover-background;
     box-shadow: $btn-box-shadow-value $hover-background;
+    color: $color;
   }
 
   &:visited {

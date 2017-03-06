@@ -75,12 +75,8 @@
 }
 
 .button--sm {
-  @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
+  @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
 
-  // Media query for phones
-  @media only screen and (min-width: $screen-lg-min) {
-    @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
-  }
 }
 
 // Convert to block
@@ -88,8 +84,18 @@
   display: block;
   width: 100%;
 
+  // Use case for small button in smaller viewports
+  &.button--sm {
+    @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
+
+    @media only screen and (min-width: $screen-lg-min) {
+      @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
+    }
+  }
+
+  // Generate space for adjacent elements
   & + & {
-    margin-top: .5rem;
+    margin-top: $spacer-sm;
   }
 }
 

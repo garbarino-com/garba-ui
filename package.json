@@ -1,6 +1,6 @@
 {
   "name": "garba-ui",
-  "version": "2.0.2-Alpha.1",
+  "version": "2.0.2-Alpha.2",
   "description": "Garba UI will contain all common UI components to be shared among all company projects.",
   "main": "webpack.config.js",
   "author": [
@@ -9,8 +9,7 @@
     "Esteban Calvi <ecalvi@garbarino.com.ar>"
   ],
   "scripts": {
-    "sass-p": "node-sass app/garbaui.scss dist/stylesheets/garbaui.min.css --o dist/ --output-style compressed",
-    "sass": "node-sass app/garbaui.scss dist/stylesheets/garbaui.css --o dist/ --output-style expanded && node-sass app/garbaui.scss dist/stylesheets/garbaui.min.css --o dist/ --output-style compressed",
+    "sass": "node-sass app/_garbaui.scss dist/stylesheets/garbaui.css --o dist/ --output-style expanded && node-sass app/_garbaui.scss dist/stylesheets/garbaui.min.css --o dist/ --output-style compressed",
     "stylelint": "stylelint '**/*.scss'; exit 0",
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --hot --inline"
   },
