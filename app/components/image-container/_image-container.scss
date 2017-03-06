@@ -19,4 +19,9 @@
     right: 0;
     top: 0;
   }
+
+  &:focus,
+  a:focus {
+    outline: 0;
+  }
 }
