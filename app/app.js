@@ -93,6 +93,7 @@ const components = [
     name: 'Imagen de producto',
     description: require('./components/image-container/README.md'),
     props: {
+      link: '#0',
       imageUrl: 'http://lorempixel.com/1200/400/sports/',
       altText: 'Ejemplo de texto alternativo para imagen.'
     }

@@ -12,15 +12,16 @@ class ImgContainer extends React.Component {
     );
 
     return (
-      <div className={classes}>
+      <a href={this.props.link} className={classes}>
         <img itemprop="image" src={this.props.imageUrl}
           alt={this.props.altText} />
-      </div>
+      </a>
     );
   }
 }
 
 ImgContainer.propTypes = {
+  link: React.PropTypes.string,
   imageUrl: React.PropTypes.string.isRequired,
   altText: React.PropTypes.string,
   itemprop: React.PropTypes.string
