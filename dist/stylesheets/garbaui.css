@@ -3800,18 +3800,17 @@ button.close {
 .button__is-loading.button--facebook:hover,
 .button__is-loading.button--facebook:focus {
   background-color: #E2E2E2;
+  box-shadow: 0 0.14286rem 0 0 #bcbcbc;
   color: #666;
   outline: 0;
   transform: translateY(0);
 }
 
-.button__is-disabled.button, .button__is-disabled.button:hover, .button__is-disabled.button:focus, .button__is-disabled.button:disabled, .button__is-disabled.button:disabled:hover, .button__is-disabled.button:disabled:focus, .button__is-disabled.button--main, .button__is-disabled.button--main:hover, .button__is-disabled.button--main:focus, .button__is-disabled.button--primary, .button__is-disabled.button--primary:hover, .button__is-disabled.button--primary:focus, .button__is-disabled.button--secondary, .button__is-disabled.button--secondary:hover, .button__is-disabled.button--secondary:focus, .button__is-disabled.button--link, .button__is-disabled.button--link:hover, .button__is-disabled.button--link:focus, .button__is-disabled.button--facebook, .button__is-disabled.button--facebook:hover, .button__is-disabled.button--facebook:focus {
-  box-shadow: 0 0.14286rem 0 0 #bcbcbc;
+.button__is-disabled {
   cursor: not-allowed;
 }
 
 .button__is-loading {
-  box-shadow: 0 0 0 0 transparent;
   cursor: default;
 }
 
@@ -4032,7 +4031,7 @@ button.close {
 
 .img-container {
   position: relative;
-  background: transparent;
+  background-color: transparent;
   display: block;
   text-align: center;
 }
@@ -4058,6 +4057,35 @@ button.close {
 .img-container:focus,
 .img-container a:focus {
   outline: 0;
+}
+
+.img-container__is-loading::before {
+  background-color: #FFF;
+  position: relative;
+  z-index: 20;
+}
+
+.img-container__is-loading::after {
+  content: "";
+  display: inline-block;
+  -webkit-animation: spinner-rotation 0.8s infinite linear;
+  -ms-animation: spinner-rotation 0.8s infinite linear;
+  -moz-animation: spinner-rotation 0.8s infinite linear;
+  animation: spinner-rotation 0.8s infinite linear;
+  border-bottom: 0.21429rem solid #666;
+  border-left: 0.21429rem solid #D8D8D8;
+  border-right: 0.21429rem solid #666;
+  border-top: 0.21429rem solid #666;
+  border-radius: 50%;
+  height: 1.75rem;
+  vertical-align: middle;
+  width: 1.75rem;
+  left: 50%;
+  margin-left: -0.875rem;
+  margin-top: -0.875rem;
+  position: absolute;
+  top: 50%;
+  z-index: 50;
 }
 
 .label {
@@ -4224,6 +4252,7 @@ button.close {
 
 .value-container {
   line-height: 1.25;
+  text-align: left;
 }
 
 .value-container::after {
@@ -4264,6 +4293,7 @@ button.close {
 
 .value-container--sm {
   line-height: 1.25;
+  text-align: left;
 }
 
 .value-container--sm > .value-note {

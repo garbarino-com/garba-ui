@@ -129,6 +129,7 @@
     &:hover,
     &:focus {
       background-color: $btn-disabled-bg;
+      box-shadow: $btn-box-shadow-value darken($btn-disabled-bg, 15%);
       color: $btn-disabled-color;
       outline: 0;
       transform: translateY(0);
@@ -138,25 +139,11 @@
 
 // Define shadow and cursor only for disabled state
 .button__is-disabled {
-  &.button,
-  &.button:disabled,
-  &.button--main,
-  &.button--primary,
-  &.button--secondary,
-  &.button--link,
-  &.button--facebook {
-    &,
-    &:hover,
-    &:focus {
-      box-shadow: $btn-box-shadow-value darken($btn-disabled-bg, 15%);
-      cursor: not-allowed;
-    }
-  }
+  cursor: not-allowed;
 }
 
 // Loading state spinner definitions
 .button__is-loading {
-  box-shadow: 0 0 0 0 transparent;
   cursor: default;
 
   // Spinner pseudo-element
