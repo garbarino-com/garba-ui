@@ -25,8 +25,8 @@ class ValueContainer extends React.Component {
           </span>
         </span>
 
-        <link href={this.props.availability}
-          is itemprop={this.props.availability} />
+        <link is href={this.props.availability}
+          itemprop={this.props.availability} />
       </div>
     );
   }

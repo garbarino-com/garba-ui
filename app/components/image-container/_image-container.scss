@@ -3,8 +3,8 @@
 // --------------------------------------------------
 
 .img-container {
-  @include av-aspect-ratio;
-  background: $imgcontainer-bg;
+  @include element-aspect-ratio;
+  background-color: $imgcontainer-bg;
   display: block;
   text-align: center;
 
@@ -23,5 +23,33 @@
   &:focus,
   a:focus {
     outline: 0;
+  }
+}
+
+// State modifiers
+
+.img-container__is-loading {
+  // Add background color and z-index to overlay so it will cover the image
+  // until state class is removed.
+  &::before {
+    background-color: $imgcontainer-loading-bg;
+    position: relative;
+    z-index: $zindex-element;
+  }
+
+  // Spinner pseudo-element
+  // Hooked on ::after to avoid conflicts: ::before is being used for
+  // aspect-ratio in parent class.
+  &::after {
+    @include make-pseudo-element(inline-block);
+    @include add-spinner($imgcontainer-spinner-base-size,
+      $imgcontainer-spinner-border-width, $imgcontainer-spinner-color-inactive,
+      $imgcontainer-spinner-color-active);
+    left: 50%;
+    margin-left: ($imgcontainer-spinner-base-size / 2) * -1;
+    margin-top: ($imgcontainer-spinner-base-size / 2) * -1;
+    position: absolute;
+    top: 50%;
+    z-index: $zindex-hover-element;
   }
 }

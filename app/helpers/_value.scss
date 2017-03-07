@@ -1,11 +1,9 @@
-/// Remove the unit of a length
-/// @param {Number} $number - Number to remove unit from
-/// @return {Number} - Unitless number
 // Color modifier
 @mixin value-variant($noteFontSize, $itemFontSize,
-    $valueLineHeight: $value-line-height-base) {
+    $valueLineHeight: $value-line-height-base, $valueTextAlign: $value-text-align) {
 
   line-height: $valueLineHeight;
+  text-align: $valueTextAlign;
 
   > .value-note {
     font-size: $noteFontSize;

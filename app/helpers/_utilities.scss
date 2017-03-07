@@ -27,7 +27,7 @@
 }
 
 //** Make height with aspect ratio mixin
-@mixin av-aspect-ratio($width: 1, $height: 1) {
+@mixin element-aspect-ratio($width: 1, $height: 1) {
   position: relative;
 
   &::before {

@@ -93,10 +93,13 @@ const components = [
     name: 'Imagen de producto',
     description: require('./components/image-container/README.md'),
     props: {
-      link: '#0',
+      link: 'link-opcional',
       imageUrl: 'http://lorempixel.com/1200/400/sports/',
       altText: 'Ejemplo de texto alternativo para imagen.'
-    }
+    },
+    modifiers: [
+      'img-container__is-loading'
+    ]
   },
   {
     component: require('./components/value/value'),
@@ -105,11 +108,7 @@ const components = [
     props: {
       note: 'Precio en 1 pago.',
       price: '119.99',
-      availability: [
-        'http://schema.org/InStock',
-        'http://schema.org/OutOfStock',
-        'http://schema.org/PreOrder',
-      ]
+      availability: 'http://schema.org/InStock http://schema.org/OutOfStock http://schema.org/PreOrder',
     },
     modifiers: [
       'value-container--lg',

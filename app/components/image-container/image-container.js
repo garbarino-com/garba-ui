@@ -8,12 +8,12 @@ class ImgContainer extends React.Component {
   render() {
     let classes = classNames(
       'img-container',
-      this.props.modifiers
+      this.props.modifiers[this.props.idx]
     );
 
     return (
       <a href={this.props.link} className={classes}>
-        <img itemprop="image" src={this.props.imageUrl}
+        <img itemProp={this.props.itemprop} src={this.props.imageUrl}
           alt={this.props.altText} />
       </a>
     );
@@ -28,7 +28,8 @@ ImgContainer.propTypes = {
 };
 
 ImgContainer.defaultProps = {
-  itemprop: 'image'
+  itemprop: 'image',
+  modifiers: 'img-container__is-loading'
 };
 
 

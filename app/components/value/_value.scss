@@ -15,8 +15,7 @@
 // Large value container
 .value-container--lg {
   @include value-variant($value-note-font-size-lg, $value-font-size-lg,
-    $value-line-height-lg);
-  text-align: $value-text-align-lg;
+    $value-line-height-lg, $value-text-align-lg);
 
   .value-item {
     line-height: 1;
