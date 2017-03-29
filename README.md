@@ -21,7 +21,8 @@ $ npm run stylelint ## Will run the linter on the styles folder.
 ```
 
 ### Contribution guidelines ###
-* No tests have been written yet.
+* Stylelint linter is being used for styles.
+* No linter is being used for jsx files.
 * No code reviews are being made at the moment.
 
 ### Legacy notes
@@ -35,11 +36,11 @@ This will install the previous version built on gulp not webpack.
 * [React.js](https://facebook.github.io/react/) - A javascript library for building user interfaces.
 * [Webpack](https://webpack.github.io/) - Webpack module bundler is used to handle all dependencies and compile code.
 * [Sass](http://sass-lang.com/) - Sass is used to handle the styles component library.
+* [React UI Style Guide](https://github.com/akikoo/react-ui-style-guide/) - Living Style Guide with React, webpack, ES6 and Sass.
 
 ### Who do I talk to? ###
 * **Nicolas Brizuela** - [flycode](https://github.com/flycode)
 * **Esteban Calvi** - [estebancalvi](https://bitbucket.org/rigilk/)
 
 ## License ##
-
 This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details.
