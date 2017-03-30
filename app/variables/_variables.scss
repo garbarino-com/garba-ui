@@ -1,14 +1,9 @@
 @charset "UTF-8";
 
-/* stylelint-disable scss/dollar-variable-colon-space-after */
-/* Rule is disabled here for better legibility */
-
-/* stylelint-disable max-line-length */
-/* Rule is disabled here for better legibility */
+// stylelint-disable max-line-length, scss/dollar-variable-colon-space-after
 
 // ** Variables
 // --------------------------------------------------
-
 
 
 /// Global variables to enable or disable vendor prefixes
@@ -36,7 +31,7 @@ $base-line-height:      14px;
 $brand-corporate:        #D1030F !default;
 $brand-primary:          #0084E0 !default;
 $brand-secondary:        #6B6B6B !default;
-$brand-revenue:          #49C237 !default;
+$brand-revenue:          #16A401 !default;
 
 // Alt Fav
 // TODO(ecalvi): This is an inconsistency. We are defining this variable so this
@@ -59,7 +54,9 @@ $modifier-focus-value:          10% !default;
 
 
 // Generic spacers for elements
+$spacer-base:           1rem !default;
 $spacer-sm:             .5rem !default;
+$spacer-xs:             .25rem !default; // Mostly reserved for inline spaces.
 
 
 //** Background color for `<body>`.
@@ -78,6 +75,8 @@ $text-muted:            #666 !default;
 $link-color:            $brand-primary !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
+//** Link decoration.
+$link-decoration:       none !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 
@@ -130,9 +129,16 @@ $grid-gutter-width:          $baseline-grid * 2 !default;
 
 $font-family-base: "Open Sans", -apple-system, sans-serif !default;
 
-$font-size-base: 1rem !default;    // 14px
-$font-size-lg:   px-to-rem(18px) !default; // 18px
-$font-size-sm:   px-to-rem(12px) !default; // 12px
+$font-size-base:      1rem !default;    // 14px
+$font-size-lg:        px-to-rem(18px) !default; // 18px
+$font-size-sm:        px-to-rem(12px) !default; // 12px
+
+// Small text
+$small-font-size:     75% !default;
+$small-color:         $text-muted !default;
+
+
+$font-weight-base: 400;
 
 
 //## Social brands and site actions
@@ -252,19 +258,29 @@ $tooltip-arrow-size:                 1rem !default;
 
 
 // Value component
-$value-note-color:                   $text-muted !default;
-$value-font-size-base:               1.75rem !default; // 21px
-$value-font-size-lg:                 2.5rem !default; // 28px
+$value-font-size-base:               1.75rem !default; // 24.5px
+$value-font-size-base-mobile:        $font-size-lg !default; // 18px
+
+$value-font-size-lg:                 2.5rem !default; // 35px
+$value-font-size-lg-mobile:          2rem !default; // 28px
+
 $value-font-size-sm:                 $font-size-base !default; // 14px
+
 $value-note-font-size-base:          $font-size-base !default; // 14px
-$value-note-font-size-lg:            $font-size-base !default; // 14px
+$value-note-font-size-base-mobile:   $value-note-font-size-base !default; // 14px
+
+$value-note-font-size-lg:            $font-size-lg !default; // 18px
+
 $value-note-font-size-sm:            $font-size-sm !default; // 12px
+
 $value-line-height-base:             1.25 !default;
 $value-line-height-lg:               1.5 !default;
+
+$value-note-color:                   $text-muted !default;
 $value-note-font-weight:             400 !default;
 $value-font-weight:                  700 !default;
-$value-text-align:                   left !default;
-$value-text-align-lg:                center !default;
+
+$value-spacer-sm:                    $spacer-xs !default;
 
 
 // Image container
@@ -291,12 +307,13 @@ $tag-img-height:            1.5rem !default;
 // label component
 $label-border:                transparent !default;
 $label-base-color:            $text-inverse !default;
-$label-font-size:             $font-size-sm !default;
+$label-font-size:             .8em !default;
 $label-font-weight:           700 !default;
-$label-line-height:           1rem !default;
-$label-width:                 8rem !default;
-$label-padding:               $spacer-sm !default;
-$label-img-height:            1.5rem !default;
+$label-line-height:           1 !default;
+$label-width:                 8em !default;
+$label-padding-x:             .5em !default;
+$label-padding-y:             .25em !default;
+$label-img-height:            1.5em !default;
 
 // Label color definitions
 $label-main-color:            $label-base-color !default;
@@ -309,5 +326,4 @@ $label-secondary-color:       $label-base-color !default;
 $label-secondary-bg:          $brand-secondary !default;
 
 
-/* stylelint-enable max-line-length */
-/* stylelint-enable scss/dollar-variable-colon-space-after */
+// stylelint-enable max-line-length, scss/dollar-variable-colon-space-after

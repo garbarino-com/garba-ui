@@ -1,6 +1,16 @@
 //
 // Buttons
 // --------------------------------------------------
+
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+// Credit: https://github.com/suitcss/base/
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .button {
   @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
   background-image: none;

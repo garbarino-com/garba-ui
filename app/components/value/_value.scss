@@ -4,27 +4,55 @@
 
 .value-container {
   @include clearfix;
-  @include value-variant($value-note-font-size-base, $value-font-size-base);
+  @include value-variant(
+    $value-note-font-size-base,
+    $value-note-font-size-base-mobile,
+    $value-font-size-base,
+    $value-font-size-base-mobile
+  );
+
+  line-height: $value-line-height-base;
 
   > .value-note,
   > .value-item {
     display: block;
+    vertical-align: middle;
   }
 }
 
 // Large value container
 .value-container--lg {
-  @include value-variant($value-note-font-size-lg, $value-font-size-lg,
-    $value-line-height-lg, $value-text-align-lg);
+  @include value-variant(
+    $value-note-font-size-lg,
+    $value-note-font-size-lg,
+    $value-font-size-lg,
+    $value-font-size-lg-mobile
+  );
 
-  .value-item {
-    line-height: 1;
-  }
+  // Add vertical inner space to block (only in this variant).
+  padding-bottom: $spacer-base;
+  padding-top: $spacer-base;
 }
 
 // Small value container
 .value-container--sm {
-  @include value-variant($value-note-font-size-sm, $value-font-size-sm);
+  margin-left: ($value-spacer-sm / 2) * -1;
+  margin-right: ($value-spacer-sm / 2) * -1;
+
+  @include value-variant(
+    $value-note-font-size-sm,
+    $value-note-font-size-sm,
+    $value-font-size-sm,
+    $value-font-size-sm
+  );
+
+  // Use both elements in the same line for this variant and add a margin-left.
+  > .value-note,
+  > .value-item {
+    display: inline-block;
+    padding-left: $value-spacer-sm / 2;
+    padding-right: $value-spacer-sm / 2;
+  }
 }
 
 // Notice in value component
@@ -32,7 +60,6 @@
   color: $value-note-color;
   font-size: $value-font-size-base;
   font-weight: $value-note-font-weight;
-
 }
 
 // Value proper container

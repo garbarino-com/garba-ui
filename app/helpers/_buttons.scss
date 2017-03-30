@@ -13,14 +13,17 @@
       background-color $btn-transition-timing ease-in
     ), webkit ms moz spec);
   background-color: $background;
-  box-shadow: $btn-box-shadow-value darken($background, 15%);
+  box-shadow: $btn-box-shadow-value darken($background, 17.5%);
   color: $color;
 
   &:focus,
   &.focus {
-    background-color: $focus-background;
-    box-shadow: 0 0 0 0 transparent;
-    color: $color;
+    &,
+    &:hover {
+      background-color: $focus-background;
+      box-shadow: 0 0 0 0 transparent;
+      color: $color;
+    }
   }
 
   &:hover {

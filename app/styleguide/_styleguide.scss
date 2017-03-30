@@ -4,12 +4,6 @@ body {
   font-size: $baseline-grid; // Define font-size in pixels once to set initial value.
 }
 
-body {
-  background-color: $body-bg;
-  font-family: $font-family-base;
-  height: 100%;
-}
-
 .styleguide {
   h1 {
     color: $gray-dark;
@@ -29,7 +23,7 @@ body {
     text-align: right;
     text-transform: uppercase;
 
-    // Media query for phones
+    // Media query for tablet/desktop
     @media only screen and (min-width: $screen-sm-min) {
       left: 0;
       position: fixed;
@@ -45,7 +39,7 @@ body {
   background: $nav-bg;
   padding-top: $baseline-grid * 2;
 
-  // Media query for phones
+  // Media query for tablet/desktop
   @media only screen and (min-width: $screen-sm-min) {
     bottom: 0;
     height: 100%;
@@ -78,7 +72,7 @@ body {
 }
 
 .styleguide-components {
-  // Media query for phones
+  // Media query for tablet/desktop
   @media only screen and (min-width: $screen-sm-min) {
     padding-left: 2rem;
     padding-top: 2rem + $header-height;

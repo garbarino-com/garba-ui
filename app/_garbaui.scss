@@ -35,10 +35,14 @@
 @import "./helpers/buttons";
 @import "./helpers/button-actions";
 @import "./helpers/labels";
+@import "./helpers/lists";
 @import "./helpers/spinners";
 @import "./helpers/tooltips";
 @import "./helpers/value";
 
+// General elements
+@import "./elements/page-elements";
+@import "./elements/type";
 
 // UI Components
 @import "./components/buttons/buttons";

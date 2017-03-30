@@ -4,7 +4,7 @@
   $hover-background: state-hover-modifier($background);
   $focus-background: state-focus-modifier($background);
 
-  background-color: $background;
+  background-color: darken($background, 7.5%);
   color: $color;
 
   &[href] {

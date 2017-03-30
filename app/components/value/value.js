@@ -12,21 +12,20 @@ class ValueContainer extends React.Component {
     );
 
     return (
-      <div is class={classes} itemprop={this.props.itempropContainer} itemscope
-          itemtype={this.props.itemtype}>
+      <div className={classes} itemProp={this.props.itempropContainer}
+          itemScope itemType={this.props.itemtype}>
         <span className="value-note">
           {this.props.note}
         </span>
 
-        <meta is itemprop="priceCurrency" content={this.props.currency} />
+        <meta itemProp="priceCurrency" content={this.props.currency} />
         <span className="value-item">
-          $<span is itemprop={this.props.itempropItem}>
+          $<span itemProp={this.props.itempropItem}>
             {this.props.price}
           </span>
         </span>
 
-        <link is href={this.props.availability}
-          itemprop={this.props.availability} />
+        <link href={this.props.availability} itemProp={this.props.availability} />
       </div>
     );
   }
