@@ -10,7 +10,7 @@ Puede contener texto o imagen con sus salvedades:
 
 ```javascript
 {
-  text: : 'string.isRequired',
+  text: : 'string.isRequired'
 }
 ```
 
