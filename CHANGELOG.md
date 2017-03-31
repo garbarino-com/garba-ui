@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 * Add background color.
 
 ### Buttons
-* Box shadow in `::focus` state.
+* Box shadow in `:focus` state.
 * Green contrast for main color.
 
 ### Value
