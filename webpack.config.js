@@ -44,10 +44,10 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader?limit=100000'
+        test: /\.(png|woff|woff2|ttf|eot|svg)(\?[a-z0-9]+)?$/,
+        loader: "file-loader"
       },
-      ,{
+      {
         test: /\.md$/,
         loaders: [
           'html',

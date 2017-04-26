@@ -1,18 +1,18 @@
 // Import mixins from version 1.3.2
-@import "./_v1.3.2/garbaui-core";
+@import "./app/_v1.3.2/garbaui-core";
 
 // General usage
-@import "./helpers/animations";
-@import "./helpers/utilities";
-@import "./helpers/icon-element";
-@import "./helpers/make-css-arrow";
-@import "./helpers/state-modifiers";
+@import "./app/helpers/animations";
+@import "./app/helpers/utilities";
+@import "./app/helpers/icon-element";
+@import "./app/helpers/make-css-arrow";
+@import "./app/helpers/state-modifiers";
 
 // Component related
-@import "./helpers/buttons";
-@import "./helpers/button-actions";
-@import "./helpers/labels";
-@import "./helpers/lists";
-@import "./helpers/spinners";
-@import "./helpers/tooltips";
-@import "./helpers/value";
+@import "./app/helpers/buttons";
+@import "./app/helpers/button-actions";
+@import "./app/helpers/labels";
+@import "./app/helpers/lists";
+@import "./app/helpers/spinners";
+@import "./app/helpers/tooltips";
+@import "./app/helpers/value";

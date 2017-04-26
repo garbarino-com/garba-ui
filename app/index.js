@@ -47,9 +47,8 @@ class MainComponent extends React.Component {
                   <a
                     className="styleguide__nav-link"
                     href={`#${component.name.toLowerCase()}`}
-                    onClick={this.handleClick.bind(this, component.name)}
-                  >
-                    {component.name}
+                    onClick={this.handleClick.bind(this, component.name)}>
+                      {component.name}
                   </a>
                 </li>
               );
@@ -70,9 +69,8 @@ class MainComponent extends React.Component {
               <StyleGuideBlock
                 key={i}
                 description={Component.description}
-                modifiers={Component.modifiers}
-              >
-                <Component.component {...Component.props} />
+                modifiers={Component.modifiers}>
+                  <Component.component {...Component.props} />
               </StyleGuideBlock>
             );
           })}
@@ -82,4 +80,7 @@ class MainComponent extends React.Component {
   }
 }
 
-ReactDOM.render(<MainComponent />, document.getElementById('app'));
+ReactDOM.render(
+  <MainComponent />,
+  document.getElementById('app')
+);

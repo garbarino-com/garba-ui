@@ -19,7 +19,7 @@
       }
     ],
     "unit-blacklist": {
-      "px": [ "line-height", "font", "font-size"],
+      "px": [ "line-height", "font", "font-size" ],
       "rem": [ "font" ],
       "vmin": [ "width" ]
     },

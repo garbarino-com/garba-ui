@@ -8,13 +8,14 @@
 // Import version 1.3.2
 // This version will be deprecated in the future and is maintained
 // for backwards compatibility purposes. Don't become too attached to it.
-@import "./_v1.3.2/garbaui";
+@import "./app/_v1.3.2/garbaui";
 
 // Import this function here so it can be used within variables sheet
-@import "./helpers/px-to-rem";
+@import "./app/helpers/px-to-rem";
 
 // Base variables
-@import "./variables/variables";
+@import "./app/variables/variables";
+@import "./app/variables/icon-variables";
 
 // Some bourbon functionalities
 @import "./node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
@@ -25,18 +26,19 @@
 @import "./node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
 
 // Component helpers
-@import "./helpers/helpers";
+@import "./app/helpers/helpers";
 
 // General elements
-@import "./elements/page-elements";
-@import "./elements/type";
+@import "./app/elements/page-elements";
+@import "./app/elements/type";
 
 // UI Components
-@import "./components/buttons/buttons";
-@import "./components/button-actions/button-actions";
-@import "./components/collapse/collapse";
-@import "./components/image-container/image-container";
-@import "./components/labels/labels";
-@import "./components/tags/tags";
-@import "./components/tooltips/tooltips";
-@import "./components/value/value";
+@import "./app/components/buttons/buttons";
+@import "./app/components/button-actions/button-actions";
+@import "./app/components/collapse/collapse";
+@import "./app/components/icons/icons";
+@import "./app/components/image-container/image-container";
+@import "./app/components/labels/labels";
+@import "./app/components/tags/tags";
+@import "./app/components/tooltips/tooltips";
+@import "./app/components/value/value";

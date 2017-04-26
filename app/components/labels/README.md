@@ -23,5 +23,5 @@ Todos los labels usan el modificador `label--primary`. Si ningún modificador se
 ### Usage
 
 ```javascript
-import Tag from '../tags/tags';
+import Label from '../labels/labels';
 ```

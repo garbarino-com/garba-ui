@@ -10,7 +10,7 @@ This will install all the dependencies needed.
 
 To compile you need to run:
 ```
-$ npm run start ## will get the server running and will create a folder called 'dist' where it will place all the compiled files. (on http://localhost:8080/)
+$ npm run start ## will get the server running and will create a folder called 'dist' where it will place all the compiled files. (on http://localhost:3000/)
 
 $ npm run production ## will compile the minified version that is needed for deployments.
 
