@@ -3,10 +3,12 @@ var gulp = require('gulp');
 var debug = require('gulp-debug');
 var install = require('gulp-install');
 var sass = require('gulp-sass');
+var styleLint = require('gulp-stylelint');
 var util = require('gulp-util');
 var runSequence = require('run-sequence');
 var sourcemaps = require('gulp-sourcemaps');
 
+// Base paths (root)
 var config = {
   basePaths: {
     src: './app/',
@@ -14,12 +16,14 @@ var config = {
   }
 };
 
+// Input paths
 var input = {
-  styles: config.basePaths.src + 'scss/*.scss',
+  styles: config.basePaths.src + 'lib/*.scss',
   images: config.basePaths.src + 'images/',
   fonts: config.basePaths.src + 'fonts/*'
 };
 
+// Output paths
 var output = {
   styles: config.basePaths.dist + 'css/',
   images: config.basePaths.dist + 'images/',
@@ -55,9 +59,22 @@ gulp.task('copy-fonts', function () {
     .pipe(debug({title: 'copy-to:'}));
 });
 
+// StyleLint
+gulp.task('lint-css', function lintCssTask() {
+  return gulp
+    .src(config.basePaths.src + '**/*.scss')
+    .pipe(styleLint({
+      failAfterError: false,
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+});
+
 // Download dependencies and run sass
 gulp.task('build', function (callback) {
-  runSequence('install-dependencies', 'clean:sass', 'clean:fonts', 'sass', 'copy-fonts', callback);
+  runSequence('install-dependencies', 'clean:sass', 'clean:fonts', 'sass',
+    'copy-fonts', 'lint-css', callback);
 });
 
 //Watch task

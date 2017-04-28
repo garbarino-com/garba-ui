@@ -33,7 +33,9 @@
     "autoprefixer": "^6.0.3",
     "gulp-debug": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
+    "gulp-stylelint": "^3.9.0",
     "gulp-util": "^3.0.8",
+    "postcss-scss": "^0.4.1",
     "stylelint-config-sass-guidelines": "^2.0.0"
   },
   "dependencies": {
