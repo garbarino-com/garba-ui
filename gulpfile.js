@@ -1,4 +1,6 @@
-var del = require('del'),
+var autoprefixer = require('gulp-autoprefixer'),
+    browserList = require('browserslist');
+    del = require('del'),
     gulp = require('gulp'),
     debug = require('gulp-debug'),
     install = require('gulp-install'),
@@ -50,10 +52,15 @@ gulp.task('clean:fonts', function () {
 // Sass task
 gulp.task('sass', function() {
   gulp.src(input.styles)
+    .pipe(sourcemaps.write('./'))
+
+    // Output unminified version
     .pipe(sass({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(gulp.dest(output.styles))
+
+    // Output minified version
     .pipe(sass(({
       outputStyle: 'compressed'
     })).on('error', sass.logError))
@@ -81,7 +88,7 @@ gulp.task('lint-css', function lintCssTask() {
     }));
 });
 
-// Ryn this task on dev
+// Run this task on dev
 gulp.task('build:dev', function (callback) {
   runSequence('install-dependencies', 'clean:sass', 'clean:fonts', 'sass',
     'copy-fonts', 'lint-css', callback);
@@ -92,13 +99,12 @@ gulp.task('build:release', function (callback) {
   runSequence('clean:sass', 'clean:fonts', 'sass', 'copy-fonts', callback);
 });
 
-// Pre commit task
+// Hook for tasks to be executed on commit
 gulp.task('pre-commit', [
   'sass'
 ]);
 
-
-//Watch task
-gulp.task('watch',function() {
-  gulp.watch(input.styles, ['build']);
+// Remove css folder and run sass compiler on file change.
+gulp.task('watch', ['clean:sass', 'sass'], function() {
+  gulp.watch(input.styles, ['sass']);
 });
