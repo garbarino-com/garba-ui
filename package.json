@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "sass": "gulp sass",
-    "stylelint": "stylelint '**/*.scss'; exit 0",
+    "lint-css": "gulp lint-css",
     "build": "gulp build"
   },
   "repository": {
@@ -43,6 +43,7 @@
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-install": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",

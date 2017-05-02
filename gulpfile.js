@@ -1,12 +1,14 @@
-var del = require('del');
-var gulp = require('gulp');
-var debug = require('gulp-debug');
-var install = require('gulp-install');
-var sass = require('gulp-sass');
-var styleLint = require('gulp-stylelint');
-var util = require('gulp-util');
-var runSequence = require('run-sequence');
-var sourcemaps = require('gulp-sourcemaps');
+var del = require('del'),
+    gulp = require('gulp'),
+    debug = require('gulp-debug'),
+    install = require('gulp-install'),
+    sass = require('gulp-sass'),
+    styleLint = require('gulp-stylelint'),
+    util = require('gulp-util'),
+    rename = require('gulp-rename'),
+    runSequence = require('run-sequence'),
+    sourcemaps = require('gulp-sourcemaps');
+
 
 // Base paths (root)
 var config = {
@@ -47,7 +49,14 @@ gulp.task('clean:fonts', function () {
 // Sass task
 gulp.task('sass', function() {
   gulp.src(input.styles)
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
+    .pipe(gulp.dest(output.styles))
+    .pipe(sass(({
+      outputStyle: 'compressed'
+    })).on('error', sass.logError))
+    .pipe(rename({extname: '.min.css'}))
     .pipe(gulp.dest(output.styles))
 });
 

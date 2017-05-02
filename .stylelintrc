@@ -10,7 +10,6 @@
     "max-nesting-depth": 2,
     "number-leading-zero": never,
     "string-quotes": double,
-    "stylelint-disable-reason": always-after,
     "selector-class-pattern": [
       "^[a-z0-9\\-\\_]+$",
       "resolveNestedSelectors": true,
