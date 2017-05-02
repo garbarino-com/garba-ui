@@ -2,12 +2,13 @@ var del = require('del'),
     gulp = require('gulp'),
     debug = require('gulp-debug'),
     install = require('gulp-install'),
-    sass = require('gulp-sass'),
-    styleLint = require('gulp-stylelint'),
-    util = require('gulp-util'),
+    preCommit = require('git-guppy')(gulp),
     rename = require('gulp-rename'),
     runSequence = require('run-sequence'),
-    sourcemaps = require('gulp-sourcemaps');
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    styleLint = require('gulp-stylelint'),
+    util = require('gulp-util');
 
 
 // Base paths (root)
@@ -80,11 +81,22 @@ gulp.task('lint-css', function lintCssTask() {
     }));
 });
 
-// Download dependencies and run sass
-gulp.task('build', function (callback) {
+// Ryn this task on dev
+gulp.task('build:dev', function (callback) {
   runSequence('install-dependencies', 'clean:sass', 'clean:fonts', 'sass',
     'copy-fonts', 'lint-css', callback);
 });
+
+// Run this task for releases
+gulp.task('build:release', function (callback) {
+  runSequence('clean:sass', 'clean:fonts', 'sass', 'copy-fonts', callback);
+});
+
+// Pre commit task
+gulp.task('pre-commit', [
+  'sass'
+]);
+
 
 //Watch task
 gulp.task('watch',function() {
