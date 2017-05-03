@@ -18,7 +18,7 @@
 @import "variables/icon-variables";
 
 // Some bourbon functionalities
-@import "node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
+@import "./node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
 @import "./node_modules/bourbon/app/assets/stylesheets/bourbon-deprecate";
 @import "./node_modules/bourbon/app/assets/stylesheets/css3/flex-box";
 @import "./node_modules/bourbon/app/assets/stylesheets/addons/clearfix";

@@ -1,5 +1,5 @@
 var autoprefixer = require('gulp-autoprefixer'),
-    browserList = require('browserslist');
+    toolSettings = require('frontend-settings'),
     del = require('del'),
     gulp = require('gulp'),
     debug = require('gulp-debug'),
@@ -11,7 +11,6 @@ var autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     styleLint = require('gulp-stylelint'),
     util = require('gulp-util');
-
 
 // Base paths (root)
 var config = {
@@ -52,8 +51,6 @@ gulp.task('clean:fonts', function () {
 // Sass task
 gulp.task('sass', function() {
   gulp.src(input.styles)
-    .pipe(sourcemaps.write('./'))
-
     // Output unminified version
     .pipe(sass({
       outputStyle: 'expanded'
@@ -66,6 +63,12 @@ gulp.task('sass', function() {
     })).on('error', sass.logError))
     .pipe(rename({extname: '.min.css'}))
     .pipe(gulp.dest(output.styles))
+
+    // TODO: Test sourcemaps
+    .pipe(sourcemaps.write('./'))
+
+    // TODO: Test autoprefixer
+    .pipe(autoprefixer(toolSettings.autoprefixer))
 });
 
 // Copy fonts task
@@ -77,10 +80,11 @@ gulp.task('copy-fonts', function () {
 });
 
 // StyleLint
-gulp.task('lint-css', function lintCssTask() {
+gulp.task('lint-styles', function lintCssTask() {
   return gulp
     .src(config.basePaths.src + '**/*.scss')
     .pipe(styleLint({
+      config: toolSettings.stylelint,
       failAfterError: false,
       reporters: [
         {formatter: 'string', console: true}
@@ -91,7 +95,7 @@ gulp.task('lint-css', function lintCssTask() {
 // Run this task on dev
 gulp.task('build:dev', function (callback) {
   runSequence('install-dependencies', 'clean:sass', 'clean:fonts', 'sass',
-    'copy-fonts', 'lint-css', callback);
+    'copy-fonts', 'lint-styles', callback);
 });
 
 // Run this task for releases
