@@ -40,13 +40,19 @@
     "stylelint-config-sass-guidelines": "^2.0.0"
   },
   "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "bourbon": "^4.3.2",
+    "classnames": "^2.2.5",
     "del": "^2.2.2",
     "frontend-settings": "https://github.com/garbarino-com/frontend-settings.git",
     "gulp": "^3.9.1",
     "gulp-install": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "html-loader": "^0.4.5",
+    "markdown-loader": "^2.0.0",
+    "prop-types": "^15.5.8",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "run-sequence": "^1.2.2"
