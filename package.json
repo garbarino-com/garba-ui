@@ -2,7 +2,7 @@
   "name": "garba-ui",
   "version": "3.0.0-Development",
   "description": "Garba UI will contain all common UI components to be shared among all company projects.",
-  "main": "index.js",
+  "main": "dist/components/garbaui.js",
   "author": [
     "Silvio Vitullo <svitullo@garbarino.com.ar>",
     "Nicolas Brizuela <nbrizuela@garbarino.com.ar>",
@@ -11,8 +11,8 @@
   "scripts": {
     "sass": "gulp sass",
     "lint-css": "gulp lint-css",
-    "build": "gulp build",
-    "build-components": "webpack --config=webpack.config.js"
+    "build-components": "webpack --config=webpack.config.js",
+    "build": "gulp build && webpack --config=webpack.config.js"
   },
   "repository": {
     "type": "git",

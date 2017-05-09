@@ -1,27 +1,24 @@
 module.exports = {
-
-    context: __dirname + "/app",
-    entry: "./lib/components/index.js",
-    output: {
-    path: __dirname + "/dist/components",
-        filename: "bundle.js"
-    },
-
-    module: {
-        rules: [
+  context: __dirname + "/app",
+  entry: "./lib/garbaui.js",
+  output: {
+  path: __dirname + "/dist/components",
+      filename: "garbaui.js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|scss)$/,
+        use: [
             {
-                test: /\.(js|scss)$/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            cacheDirectory: true
-                        }
-                    }
-                ],
-                exclude: /node_modules/,
-            },
-        ]
-    }
-
+                loader: 'babel-loader',
+                options: {
+                    cacheDirectory: true
+                }
+            }
+        ],
+        exclude: /node_modules/,
+      },
+    ]
+  }
 };

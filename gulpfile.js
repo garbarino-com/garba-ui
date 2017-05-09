@@ -93,7 +93,7 @@ gulp.task('lint-styles', function lintCssTask() {
 });
 
 // Run this task on dev
-gulp.task('build:dev', function (callback) {
+gulp.task('build', function (callback) {
   runSequence('install-dependencies', 'clean:sass', 'clean:fonts', 'sass',
     'copy-fonts', 'lint-styles', callback);
 });
