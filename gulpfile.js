@@ -24,7 +24,7 @@ var config = {
 // Input paths
 var input = function () {
   var styles =  config.basePaths.src + 'lib/*.scss';
-  var images= config.basePaths.src + 'images/';
+  var images= config.basePaths.src + 'images/*';
   var fonts = config.basePaths.src + 'fonts/*';
   var assets_old = config.basePaths.src + 'lib/_v1.3.2/';
   var fonts_old = assets_old + 'fonts/*';
@@ -59,6 +59,10 @@ gulp.task('clean:fonts', function () {
   return del(output.fonts + '*.*');
 });
 
+gulp.task('clean:images', function () {
+  return del(output.images + '*.*');
+});
+
 // Sass task
 gulp.task('sass', function() {
   gulp.src(input().styles)
@@ -91,6 +95,15 @@ gulp.task('copy-fonts', function () {
     .pipe(debug({title: 'copy-to:'}));
 });
 
+// Copy fonts task
+gulp.task('copy-images', function () {
+  return gulp.src((input().images))
+    .pipe(debug(input().images))
+    .pipe(debug({title: 'copy-from:'}))
+    .pipe(gulp.dest(output.images))
+    .pipe(debug({title: 'copy-to:'}));
+});
+
 // StyleLint
 gulp.task('lint-styles', function lintCssTask() {
   return gulp
@@ -107,12 +120,13 @@ gulp.task('lint-styles', function lintCssTask() {
 // Run this task on dev
 gulp.task('build', function (callback) {
   runSequence('install-dependencies', 'clean:sass', 'clean:fonts', 'sass',
-    'copy-fonts', 'lint-styles', callback);
+    'copy-fonts', 'copy-images', 'lint-styles', callback);
 });
 
 // Run this task for releases
 gulp.task('build:release', function (callback) {
-  runSequence('clean:sass', 'clean:fonts', 'sass', 'copy-fonts', callback);
+  runSequence('clean:sass', 'clean:fonts', 'clean:images', 'sass', 'copy-fonts',
+    'copy-images', callback);
 });
 
 // Hook for tasks to be executed on commit
