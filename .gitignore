@@ -5,4 +5,4 @@ icomoon
 npm-debug.log
 node_modules/
 .sass-cache/
-dist/
+dist/components/

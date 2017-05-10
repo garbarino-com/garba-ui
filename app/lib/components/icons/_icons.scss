@@ -1,19 +1,19 @@
 @import "../../variables/variables";
 
 @font-face {
-  font-family: "garba-icon-font";
+  font-family: #{$icon-font-name};
   font-style: normal;
   font-weight: 400;
-  src: url("#{$icon-font-url}garba-icon-font.eot?gz21za");
-  src: url("#{$icon-font-url}garba-icon-font.eot?gz21za#iefix") format("embedded-opentype"),
-       url("#{$icon-font-url}garba-icon-font.ttf?gz21za") format("truetype"),
-       url("#{$icon-font-url}garba-icon-font.woff?gz21za") format("woff"),
-       url("#{$icon-font-url}garba-icon-font.svg?gz21za#garba-icon-font") format("svg");
+  src: url("#{$icon-font-url}#{$icon-font-name}.eot?gz21za");
+  src: url("#{$icon-font-url}#{$icon-font-name}.eot?gz21za#iefix") format("embedded-opentype"),
+       url("#{$icon-font-url}#{$icon-font-name}.ttf?gz21za") format("truetype"),
+       url("#{$icon-font-url}#{$icon-font-name}.woff?gz21za") format("woff"),
+       url("#{$icon-font-url}#{$icon-font-name}.svg?gz21za#garba-icon-font") format("svg");
 }
 
 [class^="icon-"] {
   // Use !important to prevent issues with browser extensions that change fonts.
-  font-family: "garba-icon-font" !important;
+  font-family: #{$icon-font-name} !important;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;

@@ -85,8 +85,13 @@ $link-hover-decoration: underline !default;
 // ** Images
 // --------------------------------------------------
 
-$images-url:             "./images/" !default;
-$icon-font-url:          "./fonts/" !default;
+$assets-url:             "" !default
+$images-url:             $assets-url + "images/" !default;
+$icon-font-url:          $assets-url + "fonts/" !default;
+
+// ** Old icon font
+// These icons are to be deprecated in the future.
+$icon-font-url_old:      $icon-font-url !default;
 
 // Grid breakpoints
 //

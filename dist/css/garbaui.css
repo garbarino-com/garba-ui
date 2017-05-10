@@ -2663,8 +2663,8 @@ label {
 
 @font-face {
   font-family: 'gb-font';
-  src: url("./_v1.3.2/fonts/gb-font.eot");
-  src: url("./_v1.3.2/fonts/gb-font.eot#iefix") format("embedded-opentype"), url("./_v1.3.2/fonts/gb-font.ttf") format("truetype"), url("./_v1.3.2/fonts/gb-font.woff") format("woff"), url("./_v1.3.2/fonts/gb-font.svg#gb-font") format("svg");
+  src: url("fonts/gb-font.eot");
+  src: url("fonts/gb-font.eot#iefix") format("embedded-opentype"), url("fonts/gb-font.ttf") format("truetype"), url("fonts/gb-font.woff") format("woff"), url("fonts/gb-font.svg#gb-font") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -3974,7 +3974,7 @@ button:focus {
 .button__is-loading.button--facebook:focus {
   background-color: #E2E2E2;
   box-shadow: 0 0.14286rem 0 0 #bcbcbc;
-  color: #666;
+  color: #9E9E9E;
   outline: 0;
   transform: translateY(0);
 }
@@ -3994,10 +3994,10 @@ button:focus {
   -ms-animation: spinner-rotation 0.8s infinite linear;
   -moz-animation: spinner-rotation 0.8s infinite linear;
   animation: spinner-rotation 0.8s infinite linear;
-  border-bottom: 0.21429rem solid #666;
+  border-bottom: 0.21429rem solid #9E9E9E;
   border-left: 0.21429rem solid #D8D8D8;
-  border-right: 0.21429rem solid #666;
-  border-top: 0.21429rem solid #666;
+  border-right: 0.21429rem solid #9E9E9E;
+  border-top: 0.21429rem solid #9E9E9E;
   border-radius: 50%;
   height: 1.75rem;
   vertical-align: middle;
@@ -4060,7 +4060,7 @@ button:focus {
   border: 1px solid transparent;
   border-radius: 3px;
   box-shadow: 0 0 0 0 transparent;
-  color: #666;
+  color: #9E9E9E;
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
@@ -4143,7 +4143,7 @@ button:focus {
   -ms-animation: action-active 0.8s steps(28) 1;
   -moz-animation: action-active 0.8s steps(28) 1;
   animation: action-active 0.8s steps(28) 1;
-  background-image: url(./images/animation--fav.png);
+  background-image: url(images/animation--fav.png);
   background-position: left;
   background-repeat: no-repeat;
   background-size: 2900%;
@@ -4233,15 +4233,15 @@ button:focus {
 }
 
 @font-face {
-  font-family: "garba-icon-font";
+  font-family: garba-icon-font;
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/garba-icon-font.eot?gz21za");
-  src: url("./fonts/garba-icon-font.eot?gz21za#iefix") format("embedded-opentype"), url("./fonts/garba-icon-font.ttf?gz21za") format("truetype"), url("./fonts/garba-icon-font.woff?gz21za") format("woff"), url("./fonts/garba-icon-font.svg?gz21za#garba-icon-font") format("svg");
+  src: url("fonts/garba-icon-font.eot?gz21za");
+  src: url("fonts/garba-icon-font.eot?gz21za#iefix") format("embedded-opentype"), url("fonts/garba-icon-font.ttf?gz21za") format("truetype"), url("fonts/garba-icon-font.woff?gz21za") format("woff"), url("fonts/garba-icon-font.svg?gz21za#garba-icon-font") format("svg");
 }
 
 [class^="icon-"] {
-  font-family: "garba-icon-font" !important;
+  font-family: garba-icon-font !important;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
@@ -4617,10 +4617,10 @@ button:focus {
   -ms-animation: spinner-rotation 0.8s infinite linear;
   -moz-animation: spinner-rotation 0.8s infinite linear;
   animation: spinner-rotation 0.8s infinite linear;
-  border-bottom: 0.21429rem solid #666;
+  border-bottom: 0.21429rem solid #9E9E9E;
   border-left: 0.21429rem solid #D8D8D8;
-  border-right: 0.21429rem solid #666;
-  border-top: 0.21429rem solid #666;
+  border-right: 0.21429rem solid #9E9E9E;
+  border-top: 0.21429rem solid #9E9E9E;
   border-radius: 50%;
   height: 1.75rem;
   vertical-align: middle;
@@ -4703,7 +4703,7 @@ button:focus {
   white-space: nowrap;
   word-wrap: normal;
   background-color: transparent;
-  border: 1px solid #666;
+  border: 1px solid #9E9E9E;
   font-size: 0.85714rem;
   font-weight: 700;
   height: 2rem;
@@ -4715,7 +4715,7 @@ button:focus {
 }
 
 .tag, .tag:hover {
-  color: #666;
+  color: #9E9E9E;
 }
 
 .tag:empty {

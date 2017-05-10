@@ -15,16 +15,27 @@ var autoprefixer = require('gulp-autoprefixer'),
 // Base paths (root)
 var config = {
   basePaths: {
-    src: './app/',
-    dist: './dist/'
+    src: 'app/',
+    dist: 'dist/'
   }
 };
 
+
 // Input paths
-var input = {
-  styles: config.basePaths.src + 'lib/*.scss',
-  images: config.basePaths.src + 'images/',
-  fonts: config.basePaths.src + 'fonts/*'
+var input = function () {
+  var styles =  config.basePaths.src + 'lib/*.scss';
+  var images= config.basePaths.src + 'images/';
+  var fonts = config.basePaths.src + 'fonts/*';
+  var assets_old = config.basePaths.src + 'lib/_v1.3.2/';
+  var fonts_old = assets_old + 'fonts/*';
+
+  return {
+    styles: styles,
+    images: images,
+    fonts: fonts,
+    assets_old: assets_old,
+    fonts_old: fonts_old
+  }
 };
 
 // Output paths
@@ -50,7 +61,7 @@ gulp.task('clean:fonts', function () {
 
 // Sass task
 gulp.task('sass', function() {
-  gulp.src(input.styles)
+  gulp.src(input().styles)
     // Output unminified version
     .pipe(sass({
       outputStyle: 'expanded'
@@ -73,7 +84,8 @@ gulp.task('sass', function() {
 
 // Copy fonts task
 gulp.task('copy-fonts', function () {
-  return gulp.src(input.fonts)
+  return gulp.src([input().fonts, input().fonts_old])
+    .pipe(debug([input().fonts, input().fonts_old]))
     .pipe(debug({title: 'copy-from:'}))
     .pipe(gulp.dest(output.fonts))
     .pipe(debug({title: 'copy-to:'}));
@@ -110,5 +122,5 @@ gulp.task('pre-commit', [
 
 // Remove css folder and run sass compiler on file change.
 gulp.task('watch', ['clean:sass', 'sass'], function() {
-  gulp.watch(input.styles, ['sass']);
+  gulp.watch(input().styles, ['sass']);
 });
