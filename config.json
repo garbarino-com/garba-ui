@@ -1,4 +1,4 @@
 {
-  "cloudfront-url": "",
-  "appv": ""
+  "cloudfront-url": "'../../'",
+  "appv": "'../../'"
 }

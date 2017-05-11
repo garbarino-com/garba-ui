@@ -1,15 +1,16 @@
 var autoprefixer = require('gulp-autoprefixer'),
-    toolSettings = require('frontend-settings'),
     del = require('del'),
     gulp = require('gulp'),
     debug = require('gulp-debug'),
     install = require('gulp-install'),
+    jsonImporter = require('node-sass-json-importer'),
     preCommit = require('git-guppy')(gulp),
     rename = require('gulp-rename'),
     runSequence = require('run-sequence'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     styleLint = require('gulp-stylelint'),
+    toolSettings = require('frontend-settings'),
     util = require('gulp-util');
 
 // Base paths (root)
@@ -19,7 +20,6 @@ var config = {
     dist: 'dist/'
   }
 };
-
 
 // Input paths
 var input = function () {
@@ -63,17 +63,19 @@ gulp.task('clean:images', function () {
   return del(output.images + '*.*');
 });
 
-// Sass task
+// Styles compilation
 gulp.task('sass', function() {
   gulp.src(input().styles)
     // Output unminified version
     .pipe(sass({
+      importer: jsonImporter,
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(gulp.dest(output.styles))
 
     // Output minified version
     .pipe(sass(({
+      importer: jsonImporter,
       outputStyle: 'compressed'
     })).on('error', sass.logError))
     .pipe(rename({extname: '.min.css'}))
@@ -83,7 +85,7 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write('./'))
 
     // TODO: Test autoprefixer
-    .pipe(autoprefixer(toolSettings.autoprefixer))
+    .pipe(autoprefixer(toolSettings.autoprefixer));
 });
 
 // Copy fonts task

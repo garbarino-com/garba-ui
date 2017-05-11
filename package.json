@@ -42,7 +42,8 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylelint": "^3.9.0",
     "gulp-util": "^3.0.8",
-    "node-sass-json-importer": "git+https://github.com/Updater/node-sass-json-importer.git",
+    "node-sass-importer": "^1.0.0",
+    "node-sass-json-importer": "^3.0.2",
     "postcss-scss": "^0.4.1",
     "stylelint-config-sass-guidelines": "^2.0.0",
     "webpack": "^2.5.1"

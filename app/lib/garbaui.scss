@@ -8,7 +8,12 @@
 // Import this function here so it can be used within variables sheet
 @import "helpers/px-to-rem";
 
-// Base variables
+// Environment related variables
+// Values that are subjected to changes are to be placed here so they can be
+// more easily overridden.
+@import "../../config.json" !default;
+
+// Base framework variables
 @import "variables/variables";
 @import "variables/icon-variables";
 
