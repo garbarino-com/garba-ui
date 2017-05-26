@@ -48,25 +48,20 @@ button:focus {
   &.active {
     background-image: none;
   }
-
-  // Add horizontal spacing for adjacent elements
-  + #{&} {
-    margin-left: $spacer-sm;
-  }
 }
 
 // Button Variants
 //
 // Markup: button.hbs
 //
-// .button--default, .button--secondary   - kjhk jhkjh´
-// .button--primary                       - kuybkuykjbh
-// .button--main                          - linuilnuu
-// .button--link                          - jbhkjhkjh
+// .button--default, .button--secondary - dgfdfdf
+// .button--primary - dfdfddf
+// .button--main - dfdfdfdf
+// .button--link - dfdfdfdf
+// .button--facebook - dfdfdfdfdfdf
 //
-// Styleguide Components.Buttons.Variants
+// Styleguide Components.Buttons.1Variants
 
-// Color modifiers
 // Make this default
 .button,
 .button--default,
@@ -96,6 +91,16 @@ button:focus {
 }
 
 // Size modifiers
+//
+// Markup: button.hbs
+//
+// .button--lg - jkhgjhgjhg
+// .button--sm - oihlhkjlhklhjk
+// .button--block - ouhkjhkjhkjhkj
+//
+//
+// Styleguide Components.Buttons.2SizeModifiers
+
 .button--lg {
   @include button-size($btn-large-padding-x, $btn-height-lg-size, $font-size-lg);
 }
@@ -140,6 +145,14 @@ button:focus {
 
 
 // State modifiers
+//
+// Markup: button.hbs
+//
+// .button__is-disabled - lhjkjhkjhj
+// .button__is-loading - lkjlkjlkj
+// .button__has-icon - kjhkjhkjh
+//
+// Styleguide Components.Buttons.3StateModifiers
 
 // Disabled and Loading states
 .button__is-disabled,

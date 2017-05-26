@@ -3743,10 +3743,6 @@ button:focus {
   background-image: none;
 }
 
-.button + .button {
-  margin-left: 0.5rem;
-}
-
 .button,
 .button--default,
 .button--secondary {
