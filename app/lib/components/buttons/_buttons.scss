@@ -1,6 +1,11 @@
-//
 // Buttons
-// --------------------------------------------------
+//
+// Documentation: buttons.md
+//
+// Markup: button.hbs
+//
+// Styleguide Components.Buttons
+
 
 // Work around a Firefox/IE bug where the transparent `button` background
 // results in a loss of the default `button` focus styles.
@@ -49,6 +54,17 @@ button:focus {
     margin-left: $spacer-sm;
   }
 }
+
+// Button Variants
+//
+// Markup: button.hbs
+//
+// .button--default, .button--secondary   - kjhk jhkjh´
+// .button--primary                       - kuybkuykjbh
+// .button--main                          - linuilnuu
+// .button--link                          - jbhkjhkjh
+//
+// Styleguide Components.Buttons.Variants
 
 // Color modifiers
 // Make this default
