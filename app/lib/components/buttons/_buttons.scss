@@ -1,10 +1,43 @@
 // Buttons
 //
-// Documentation: buttons.md
+// Documentation: README.md
 //
 // Markup: buttons.hbs
 //
 // Styleguide Components.Buttons
+
+// Button Variants
+//
+// Markup: button.hbs
+//
+// .button--default, .button--secondary - Es como se ve el botón si no recibe ninguna variante.
+// .button--primary - Se usa dentro de un conjunto de acciones una vez para la acción primaria.
+// .button--main - Está reservada sólo para la acción **agregar al carrito**. *No debe usarse para ninguna otra acción*
+// .button--link - Conserva el layout del botón pero le da el loook & fell de un link comín.
+// .button--facebook - Está reservado a usos relacionados con la red social *facebook*.
+//
+// Styleguide Components.Buttons.1-Variants
+
+// Size modifiers
+//
+// Markup: button.hbs
+//
+// .button--lg - Variable de tamaño *más grande*.
+// .button--sm - Variable de tamaño *más chica*.
+// .button--block - Cambia el valor de display del botón de `block'.
+//
+//
+// Styleguide Components.Buttons.2-SizeModifiers
+
+// State modifiers
+//
+// Markup: button.hbs
+//
+// .button__is-disabled - El botón está *deshabilitado*.
+// .button__is-loading - El botón está procesando una acción.
+// .button__has-icon - El botón tiene un ícono.
+//
+// Styleguide Components.Buttons.3-StateModifiers
 
 
 // Work around a Firefox/IE bug where the transparent `button` background
@@ -16,6 +49,8 @@ button:focus {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+
+// Base class
 .button {
   @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
   background-image: none;
@@ -50,18 +85,6 @@ button:focus {
   }
 }
 
-// Button Variants
-//
-// Markup: button.hbs
-//
-// .button--default, .button--secondary - Es como se ve el botón si no recibe ninguna variante.
-// .button--primary - Se usa dentro de un conjunto de acciones una vez para la acción primaria.
-// .button--main - Está reservada sólo para la acción **agregar al carrito**. *No debe usarse para ninguna otra acción*
-// .button--link - Conserva el layout del botón pero le da el loook & fell de un link comín.
-// .button--facebook - Está reservado a usos relacionados con la red social *facebook*.
-//
-// Styleguide Components.Buttons.1Variants
-
 // Make this default
 .button,
 .button--default,
@@ -91,16 +114,6 @@ button:focus {
 }
 
 // Size modifiers
-//
-// Markup: button.hbs
-//
-// .button--lg - Variable de tamaño *más grande*.
-// .button--sm - Variable de tamaño *más chica*.
-// .button--block - Cambia el valor de display del botón de `block'.
-//
-//
-// Styleguide Components.Buttons.2SizeModifiers
-
 .button--lg {
   @include button-size($btn-large-padding-x, $btn-height-lg-size, $font-size-lg);
 }
@@ -145,14 +158,6 @@ button:focus {
 
 
 // State modifiers
-//
-// Markup: button.hbs
-//
-// .button__is-disabled - El botón está *deshabilitado*.
-// .button__is-loading - El botón está procesando una acción.
-// .button__has-icon - El botón tiene un ícono.
-//
-// Styleguide Components.Buttons.3StateModifiers
 
 // Disabled and Loading states
 .button__is-disabled,

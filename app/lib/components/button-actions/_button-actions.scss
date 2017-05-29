@@ -1,6 +1,8 @@
 //
 // Action buttons
 //
+// Documentation: README.md
+//
 // Markup: button-actions.hbs
 //
 // .button--action__primary - Ejecuta la acción primaria en un grupo de acciones (por el momento, está reservado a la acción de "Quitar del carrito").
@@ -8,7 +10,7 @@
 // .button--action__facebook - Compartir item en Facebook.
 // .button--action__twitter - Compartir item en Twitter.
 //
-// Styleguide Components.Buttons.4Action
+// Styleguide Components.Buttons.4-Action
 
 .button--action {
   @include button-action-size($btn-action-padding, $btn-action-size, $btn-action-font-size);
