@@ -4036,8 +4036,8 @@ button:focus {
 .button--action {
   font-size: 1.5rem;
   height: 3rem;
-  line-height: 3rem;
-  padding: 0 0.75rem;
+  line-height: 1.5rem;
+  padding: 0.75rem;
   background-color: transparent;
   border: 0;
   color: transparent;

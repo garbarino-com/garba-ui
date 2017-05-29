@@ -11,7 +11,7 @@
 // Styleguide Components.Buttons.4Action
 
 .button--action {
-  @include button-size($btn-action-padding-x, $btn-action-size, $btn-action-font-size);
+  @include button-action-size($btn-action-padding, $btn-action-size, $btn-action-font-size);
   @include text-hide;
   background-color: $btn-action-bg;
   background-image: none;

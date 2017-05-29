@@ -1,6 +1,7 @@
 // Action button modifier
 // You should use the .active class if you want to mark the action as done.
 
+// Color modifier
 @mixin button-action-variant($color, $icon) {
   @include prefixer(
     transition, (
@@ -23,4 +24,12 @@
   > i::before {
     content: $icon;
   }
+}
+
+// Size modifier
+@mixin button-action-size($padding-x, $height, $font-size) {
+  font-size: $font-size;
+  height: $height;
+  line-height: $font-size;
+  padding: $padding-x;
 }

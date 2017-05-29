@@ -249,9 +249,9 @@ $btn-action-color:                   $gray-dark !default;
 $btn-action-hover-bg:                $gray-light !default;
 
 $btn-action-primary:                 $gray-base !default;
-$btn-action-padding-x:               .75rem !default;
+$btn-action-padding:                 .75rem !default;
 $btn-action-font-size:               1.5rem !default;
-$btn-action-size:                    3rem !default;
+$btn-action-size:                    $btn-action-font-size + ($btn-action-padding * 2) !default;
 
 // Tooltip definitions
 $tooltip-width:                      15rem !default;
