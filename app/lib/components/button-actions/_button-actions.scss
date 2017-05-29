@@ -1,6 +1,14 @@
 //
 // Action buttons
-// --------------------------------------------------
+//
+// Markup: button-actions.hbs
+//
+// .button--action__primary - Ejecuta la acción primaria en un grupo de acciones (por el momento, está reservado a la acción de "Quitar del carrito").
+// .button--action__fav - Marcar item como favorito.
+// .button--action__facebook - Compartir item en Facebook.
+// .button--action__twitter - Compartir item en Twitter.
+//
+// Styleguide Components.Buttons.4Action
 
 .button--action {
   @include button-size($btn-action-padding-x, $btn-action-size, $btn-action-font-size);
@@ -25,6 +33,7 @@
 
   &:hover {
     background-color: $btn-action-hover-bg;
+    text-decoration: none;
   }
 
   // Hover and focus styles
