@@ -3752,6 +3752,13 @@ button:focus {
   transition: background-color 0.12s ease-in;
   background-color: #6B6B6B;
   box-shadow: 0 0.14286rem 0 0 #3e3e3e;
+}
+
+.button, .button:visited,
+.button--default,
+.button--default:visited,
+.button--secondary,
+.button--secondary:visited {
   color: #FFF;
 }
 
@@ -3777,12 +3784,6 @@ button:focus {
   color: #FFF;
 }
 
-.button:visited,
-.button--default:visited,
-.button--secondary:visited {
-  color: #FFF;
-}
-
 .button--primary {
   -webkit-transition: background-color 0.12s ease-in;
   -ms-transition: background-color 0.12s ease-in;
@@ -3790,6 +3791,9 @@ button:focus {
   transition: background-color 0.12s ease-in;
   background-color: #0084E0;
   box-shadow: 0 0.14286rem 0 0 #004f87;
+}
+
+.button--primary, .button--primary:visited {
   color: #FFF;
 }
 
@@ -3805,10 +3809,6 @@ button:focus {
   color: #FFF;
 }
 
-.button--primary:visited {
-  color: #FFF;
-}
-
 .button--main {
   -webkit-transition: background-color 0.12s ease-in;
   -ms-transition: background-color 0.12s ease-in;
@@ -3816,6 +3816,9 @@ button:focus {
   transition: background-color 0.12s ease-in;
   background-color: #16A401;
   box-shadow: 0 0.14286rem 0 0 #0a4b00;
+}
+
+.button--main, .button--main:visited {
   color: #FFF;
 }
 
@@ -3831,10 +3834,6 @@ button:focus {
   color: #FFF;
 }
 
-.button--main:visited {
-  color: #FFF;
-}
-
 .button--link {
   -webkit-transition: background-color 0.12s ease-in;
   -ms-transition: background-color 0.12s ease-in;
@@ -3842,6 +3841,9 @@ button:focus {
   transition: background-color 0.12s ease-in;
   background-color: transparent;
   box-shadow: 0 0.14286rem 0 0 transparent;
+}
+
+.button--link, .button--link:visited {
   color: #0084E0;
 }
 
@@ -3857,10 +3859,6 @@ button:focus {
   color: #0084E0;
 }
 
-.button--link:visited {
-  color: #0084E0;
-}
-
 .button--link:hover {
   text-decoration: underline;
 }
@@ -3872,6 +3870,9 @@ button:focus {
   transition: background-color 0.12s ease-in;
   background-color: #4957B3;
   box-shadow: 0 0.14286rem 0 0 #2f3874;
+}
+
+.button--facebook, .button--facebook:visited {
   color: #FFF;
 }
 
@@ -3884,10 +3885,6 @@ button:focus {
 .button--facebook:hover {
   background-color: #6c77c3;
   box-shadow: 0 0.14286rem 0 0 #6c77c3;
-  color: #FFF;
-}
-
-.button--facebook:visited {
   color: #FFF;
 }
 
@@ -4067,6 +4064,7 @@ button:focus {
 
 .button--action:hover {
   background-color: #E2E2E2;
+  text-decoration: none;
 }
 
 .button--action:focus, .button--action.focus {
@@ -4083,10 +4081,6 @@ button:focus {
   line-height: 1;
   speak: none;
   width: 1.5rem;
-}
-
-.button--action + .button--action {
-  margin-left: 0.5rem;
 }
 
 @keyframes action-active {
@@ -4106,6 +4100,10 @@ button:focus {
   transition: background-color 0.12s ease-in;
 }
 
+.button--action__primary, .button--action__primary:visited {
+  color: #000;
+}
+
 .button--action__primary:hover, .button--action__primary:focus, .button--action__primary.button__is-active {
   color: #000;
 }
@@ -4119,6 +4117,10 @@ button:focus {
   -ms-transition: background-color 0.12s ease-in;
   -moz-transition: background-color 0.12s ease-in;
   transition: background-color 0.12s ease-in;
+}
+
+.button--action__fav, .button--action__fav:visited {
+  color: #D1030F;
 }
 
 .button--action__fav:hover, .button--action__fav:focus, .button--action__fav.button__is-active {
@@ -4155,6 +4157,10 @@ button:focus {
   transition: background-color 0.12s ease-in;
 }
 
+.button--action__default, .button--action__default:visited {
+  color: #F8AA29;
+}
+
 .button--action__default:hover, .button--action__default:focus, .button--action__default.button__is-active {
   color: #F8AA29;
 }
@@ -4170,6 +4176,10 @@ button:focus {
   transition: background-color 0.12s ease-in;
 }
 
+.button--action__facebook, .button--action__facebook:visited {
+  color: #4957B3;
+}
+
 .button--action__facebook:hover, .button--action__facebook:focus, .button--action__facebook.button__is-active {
   color: #4957B3;
 }
@@ -4183,6 +4193,10 @@ button:focus {
   -ms-transition: background-color 0.12s ease-in;
   -moz-transition: background-color 0.12s ease-in;
   transition: background-color 0.12s ease-in;
+}
+
+.button--action__twitter, .button--action__twitter:visited {
+  color: #60B5F1;
 }
 
 .button--action__twitter:hover, .button--action__twitter:focus, .button--action__twitter.button__is-active {

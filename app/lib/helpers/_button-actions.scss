@@ -7,6 +7,11 @@
       background-color $btn-transition-timing ease-in
     ), webkit ms moz spec);
 
+  &,
+  &:visited {
+    color: $color;
+  }
+
   // Hover and focus styles are shared
   &:hover,
   &:focus,
