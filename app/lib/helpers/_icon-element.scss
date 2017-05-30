@@ -2,7 +2,7 @@
 
 @mixin icon-element($size, $display: block) {
   display: $display;
-  font-family: $font-family-icon !important;
+  font-family: $icon-font-name !important;
   font-size: $size;
   font-style: normal;
   font-weight: 400;

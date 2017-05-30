@@ -85,7 +85,6 @@ $link-hover-decoration: underline !default;
 // ** Images
 // --------------------------------------------------
 
-$assets-url:             "../" !default
 $images-url:             $assets-url + "images/" !default;
 $icon-font-url:          $assets-url + "fonts/" !default;
 
@@ -146,9 +145,6 @@ $small-color:         $text-muted !default;
 
 $font-weight-base: 400;
 
-
-//## Social brands and site actions
-$font-family-icon:       "gb-font" !default;
 
 // Primary action
 $brand-primary-action:   $brand-secondary !default;

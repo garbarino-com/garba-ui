@@ -4015,7 +4015,7 @@ button:focus {
 .button__has-icon::before,
 .button__has-icon > [class^="gb-icon-"]::before {
   display: block;
-  font-family: "gb-font" !important;
+  font-family: "garba-icon-font" !important;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -4074,7 +4074,7 @@ button:focus {
 
 .button--action > i::before {
   display: block;
-  font-family: "gb-font" !important;
+  font-family: "garba-icon-font" !important;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;

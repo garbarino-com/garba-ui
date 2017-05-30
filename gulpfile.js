@@ -90,8 +90,14 @@ gulp.task('sass', function() {
 
 // Copy fonts task
 gulp.task('copy-fonts', function () {
-  return gulp.src([input().fonts, input().fonts_old])
-    .pipe(debug([input().fonts, input().fonts_old]))
+  return gulp.src([
+      input().fonts,
+      input().fonts_old
+    ])
+    .pipe(debug([
+      input().fonts,
+      input().fonts_old
+    ]))
     .pipe(debug({title: 'copy-from:'}))
     .pipe(gulp.dest(output.fonts))
     .pipe(debug({title: 'copy-to:'}));
