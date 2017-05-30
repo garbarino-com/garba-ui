@@ -27,9 +27,10 @@
 }
 
 // Size modifier
-@mixin button-action-size($padding-x, $height, $font-size) {
+@mixin button-action-size($padding, $size, $font-size) {
   font-size: $font-size;
-  height: $height;
+  height: $size;
   line-height: $font-size;
-  padding: $padding-x;
+  padding: $padding;
+  width: $size;
 }

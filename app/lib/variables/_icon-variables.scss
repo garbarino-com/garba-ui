@@ -2,10 +2,18 @@
 // Icon font name
 // --------------------------------------------------
 $icon-font-name: "garba-icon-font" !default;
+$icon-preffix: "$icon-" !default;
 
 //
 // List of available icons
 // --------------------------------------------------
+
+// TODO(ecalvi): All icon names should be using the preffix variable $icon-preffix
+// but I couldn't make it work like this:
+//
+// #{$icon-preffix}close: "\e5cd";
+//
+// But this outputs error for some reason I couldn't figure out.
 
 $icon-close: "\e5cd";
 $icon-bag: "\e900";

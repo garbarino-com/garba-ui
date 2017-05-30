@@ -4038,6 +4038,7 @@ button:focus {
   height: 3rem;
   line-height: 1.5rem;
   padding: 0.75rem;
+  width: 3rem;
   background-color: transparent;
   border: 0;
   color: transparent;
@@ -4070,6 +4071,14 @@ button:focus {
 .button--action:focus, .button--action.focus {
   background-color: transparent;
   outline: 0;
+}
+
+.button--action > i {
+  left: 50%;
+  margin-left: -0.75rem;
+  margin-top: -0.75rem;
+  top: 50%;
+  position: absolute;
 }
 
 .button--action > i::before {
@@ -4142,7 +4151,8 @@ button:focus {
   background-size: 2900%;
   display: block;
   height: 3.75rem;
-  margin: -1.875rem -1.125rem;
+  margin-left: -1.875rem;
+  margin-top: -1.875rem;
   width: 3.75rem;
 }
 
