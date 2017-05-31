@@ -1,9 +1,37 @@
 // Lists
+//
+// Una lista de helpers disponibles para ser usados en elementos `ul` y `ol.
+//
+// Styleguide Helpers.List
+
+// @list-unstyled($no-params)
+//
+// Conserva el estado block pero remueve estilos default del browser como padding y list-style.
+//
+// Styleguide Helpers.List.ListUnstyled
+
+// @list-unstyled($spaceBetweenItems)
+//
+// Hace que los ítems que componen la lista se muestren en la misma línea.
+//
+// $spaceBetweenItems - Indica la separación deseada entre los ítems de la lista.
+//
+// Styleguide Helpers.List.ListUnstyled
 
 // Unstyled keeps list items block level, just removes default browser padding
 // and list-style.
-
 @mixin list-unstyled {
   list-style: none;
   padding-left: 0;
+}
+
+@mixin list-inline($spaceBetweenItems) {
+  @include list-unstyled;
+  margin-left: ($spaceBetweenItems / 2) * -1;
+
+  > li {
+    display: inline-block;
+    padding-left: $spaceBetweenItems / 2;
+    padding-right: $spaceBetweenItems / 2;
+  }
 }

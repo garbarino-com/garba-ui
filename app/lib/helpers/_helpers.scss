@@ -1,3 +1,16 @@
+// Helpers
+//
+// Un **helper** es un conjunto de declaraciones de CSS que se pueden reutilizar.
+// También se puede usar con parámetros de modo de hacerlo aún más flexible.
+// Usage:
+// ```javascript
+// .classname {
+//   @include mixin-name($params);
+// }
+// ```
+//
+// Styleguide Helpers
+
 // Import mixins from version 1.3.2
 @import "../_v1.3.2/garbaui-core";
 
