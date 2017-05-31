@@ -1,6 +1,12 @@
-//
 // Image Container
-// --------------------------------------------------
+//
+// Documentation: README.md
+//
+// Markup: image-container.hbs
+//
+// .img-container__is-loading - Añadir esta clase a la clase padre para mostrar el estado `cargando`.
+//
+// Styleguide Components.ImageContainer
 
 .img-container {
   @include element-aspect-ratio;
