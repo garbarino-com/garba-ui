@@ -1,43 +1,49 @@
 # Garba UI. Una librería UI de Garbarino
-Un catálogo de componentes visuales y guía de estilos pensados (y listos) para ser usados en proyectos de la compañía.
+Un catálogo de componentes visuales y mixins para ser usados en proyectos de la compañía.
 
-Basado en [React UI Style Guide](https://github.com/akikoo/react-ui-style-guide/) de Aki Karkkainen.
-
-----
-
-## Prerequisitos ##
-* Clonar el proyecto: `git clone https://github.com/garbarino-com/garba-ui.git`
-* Instalarlo: `npm install git+https://github.com/garbarino-com/garba-ui.git --save`
-* O (en el caso de estar usando una versión más vieja), actualizarlo: `npm update garba-ui --save`
+Basado en [KSS](https://github.com/kss-node/kss-node).
 
 ----
+## ¿Cómo se usa? ##
+*Garba UI* está construído usando npm así que es necesario que tengas esa herramienta instalada primero.
 
-## How do I get set up? ##
-*Garba UI* está construído sobre webpack y npm así que es necesario que los tengas instalados primeros. Una vez que esten, ir al directorio y tipear:
+Ir al directorio donde lo quieras usar y tipear en la consola:
 ```
-$ npm install
+$ npm install garba-ui --save-dev
 ```
-Eso solo debería instalar todas las dependencias necesarias.
+Eso debería instalar todas las dependencias necesarias.
 
-Para levantar el ambiente, ingresar:
-```
-$ npm run start
-```
+Una vez instalada la dependencia, *Garba UI* contiene toda la librería de estilos:
+* *dist:* Dentro de esta carpeta se encuentra la versión pre-compilada de la librería:
+  * *css:* Contiene versiones en `css` minificadas y sin minificar de la librería.
+  * *fonts:* Contiene las icon fonts.
+  * *images:* Contiene imágenes necesarias para el sitio.
+* *app:* Contiene los archivos fuente sin compilar que componen la librería:
+  * *lib:* Contiene los archivos fuente en `sass`e incluye también la primera versión de la librería (1.3.2) que se irá deprecando de a poco a medida que se migre hacia la nueva versión.
+  * *fonts:* Contiene las icon fonts. (Existe la posibilidad de que estas se migren en el futuro a archivos `svg`.)
+  * *images:* Contiene imágenes necesarias para el sitio.
+  * *docs:* Contiene este archivo explicativo.
+
+> *Opcional:* De ser más cómodo, se ofrece la alternativa, en el caso de ser necesario sobreescribir variables para un proyecto particular, de importarlas desde un archivo .json
 
 ----
 ## Contribution guidelines ##
 * No hay test escritos todavía.
 * Por el momento no se están haciendo code-reviews.
 
+----
 ### Construído usando:
-* [React.js](https://facebook.github.io/react/) - A javascript library for building user interfaces.
-* [Webpack](https://webpack.github.io/) - Webpack module bundler is used to handle all dependencies and compile code.
-* [Sass](http://sass-lang.com/) - Sass is used to handle the styles component library.
-* [React UI Style Guide](https://github.com/akikoo/react-ui-style-guide/) - React style guide generator.
+* [Gulp](http://gulpjs.com/) - A toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.
+* [Stylelint](https://stylelint.io/) - A CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.
+* [Autoprefixer](https://github.com/postcss/autoprefixer) - Parse CSS and add vendor prefixes to rules by [Can I Use](http://caniuse.com/).
+* [Sass](http://sass-lang.com/) - Sass is an extension of CSS, adding nested rules, variables, mixins, selector inheritance, and more. It's translated to well-formatted, standard CSS using the command line tool or a web-framework plugin.
+* [KSS](http://warpspire.com/kss/) - A methodology for documenting CSS and generating styleguides.
+* [Frontend Settings](https://github.com/garbarino-com/frontend-settings) - A repository of settings for shared tools such as linters, processors and prefixers used in site projects.
 
-### ¿A quién consultar en el caso de tener algún problema? ###
+### ¿A quién consultar? ###
 * **Nicolas Brizuela** - [flycode](https://github.com/flycode)
-* **Esteban Calvi** - [estebancalvi](https://bitbucket.org/rigilk/)
+* **Esteban Calvi** - [leopittelli](https://github.com/estebancalvi)
+* **Leonardo Pittelli** - [estebancalvi](https://github.com/leopittelli)
 
 ## Licencia ##
 Este proyecto está bajo la ISC License - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
