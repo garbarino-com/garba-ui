@@ -1,6 +1,17 @@
+// Precio
 //
-// Value Container
-// --------------------------------------------------
+// La idea es empezar a unificar la comunicación de los distintos tipo de
+// información que se utilizan en el sitio. El objetivo del componente
+// *Precio* normalizar la manera en que se comunican precios en el sitio.
+// Este bloque se debe utilizar sólo con el objetivo de comunicar precios
+// o importes totales (no necesariamente aplica a los precios por unidad).
+//
+// Markup: value.hbs
+//
+// .value-container--lg - Reservado para *Ficha de producto* y el bloque *Súper Oferta*.
+// .value-container--sm - Se utiliza para comunicar importes totales (p.ej: en el checkout).
+//
+// Styleguide Components.Value
 
 .value-container {
   @include clearfix;

@@ -8,6 +8,11 @@
   color: $color;
 
   &[href] {
+    &,
+    &:hover {
+      color: $color;
+    }
+
     &:focus,
     &.focus {
       background-color: $focus-background;
@@ -15,7 +20,7 @@
 
     &:hover {
       background-color: $hover-background;
-      color: $color;
+      text-decoration: none;
     }
   }
 }

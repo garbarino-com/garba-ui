@@ -1,16 +1,20 @@
-//
 // Action buttons
 //
-// Documentation: README.md
+// Las classes de botones de acción se pueden usar en los elementos `<a>` o `<button>`.
+// Los botones de acción son botones que ejecutan acciones que sean propias del
+// contexto en el que se encuentra el usuario y en ciertos casos para disparar
+// funcionalidades dentro de la página. No se deben usar para navegar entre
+// documentos o secciones, para eso son los links o botones.
 //
 // Markup: button-actions.hbs
 //
-// .button--action__primary - Ejecuta la acción primaria en un grupo de acciones (por el momento, está reservado a la acción de "Quitar del carrito").
+// .button--action__primary - Ejecuta la acción primaria en un grupo de acciones (por el momento, está reservado a la acción de *Quitar del carrito*).
 // .button--action__fav - Marcar item como favorito.
 // .button--action__facebook - Compartir item en Facebook.
 // .button--action__twitter - Compartir item en Twitter.
+// .button__is-active - Todos los modificadores tienen disponible su propia variable de la clase `button__is-active` para cuando sea necesario marcar que una acción ya se ha ejecutado (ej. /"El producto se ha marcado como favorito"/).
 //
-// Styleguide Components.Buttons.4-Action
+// Styleguide Components.Buttons.6-Action
 
 .button--action {
   @include button-action-size($btn-action-padding, $btn-action-size, $btn-action-font-size);

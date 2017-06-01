@@ -1,8 +1,21 @@
+// Labels
 //
-// Tags
-// --------------------------------------------------
+// Los labels se usan en las cajas de producto y en la ficha como manera de listar
+// sus características, categorías y están pensador para ser usados en los elementos
+// `<span>` o `<a>` (en caso de ser necesario agregar un link a un listado de
+// producto que posean el dicha característica).
+// > A diferencia del componente `tag`, el `label` solo puede contener texto.
+//
+// Markup: labels.hbs
+//
+// .label--main - Está reservador (siguiendo la misma lógica que el modificador
+// de botón `.button--main`) a características que impliquen un beneficio de importe
+// para el usuario.
+//
+// Styleguide Components.Labels
 
-.label {
+.label,
+a.label {
   @include ellipsis;
   border: 1px solid $label-border;
   border-radius: $border-radius-base;

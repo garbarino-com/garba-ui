@@ -4648,7 +4648,8 @@ button:focus {
   z-index: 50;
 }
 
-.label {
+.label,
+a.label {
   display: inline-block;
   max-width: 100%;
   overflow: hidden;
@@ -4666,11 +4667,14 @@ button:focus {
   vertical-align: middle;
 }
 
-.label:empty {
+.label:empty,
+a.label:empty {
   display: none;
 }
 
-.label + .label {
+.label + .label, .label a.label,
+a.label + .label,
+a.label a.label {
   margin-left: 0.5rem;
 }
 
@@ -4678,6 +4682,14 @@ button:focus {
 .label--default,
 .label--primary {
   background-color: #006dba;
+  color: #FFF;
+}
+
+.label[href], .label[href]:hover,
+.label--default[href],
+.label--default[href]:hover,
+.label--primary[href],
+.label--primary[href]:hover {
   color: #FFF;
 }
 
@@ -4693,11 +4705,15 @@ button:focus {
 .label--default[href]:hover,
 .label--primary[href]:hover {
   background-color: #149eff;
-  color: #FFF;
+  text-decoration: none;
 }
 
 .label--main {
   background-color: #117e01;
+  color: #FFF;
+}
+
+.label--main[href], .label--main[href]:hover {
   color: #FFF;
 }
 
@@ -4707,7 +4723,7 @@ button:focus {
 
 .label--main[href]:hover {
   background-color: #1dd701;
-  color: #FFF;
+  text-decoration: none;
 }
 
 .tag {
@@ -4729,7 +4745,7 @@ button:focus {
   vertical-align: middle;
 }
 
-.tag, .tag:hover {
+.tag, .tag[href], .tag:hover {
   color: #9E9E9E;
 }
 
