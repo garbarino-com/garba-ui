@@ -1,4 +1,17 @@
-// Animation mixins
+// Animación
+//
+// Helpers para generar animaciones.
+//
+// Styleguide Helpers.Animation
+
+
+// @keyframes($animationName)
+//
+// Generador de animación incluye diferentes vendor prefixes en el output.
+//
+// $animationName - Nombre de la animación.
+//
+// Styleguide Helpers.Animation.Keyframes
 
 // Keyframe generator
 @mixin keyframes($animationName) {

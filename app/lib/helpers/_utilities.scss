@@ -1,23 +1,49 @@
-// A group of reusable mixins
+// Utilities
+//
+// Styleguide Helpers.Utilities
 
-//** Display and hide element using this mixins
+// @hide-element
+//
+// Cambia el valor de display` y `visibility` y esconde un elemento.
+//
+// Styleguide Helpers.Utilities.HideElement
+
 @mixin hide-element {
   display: none !important;
   visibility: hidden !important;
 }
 
+// @hide-element-simple
+//
+// Cambia el valor de display` y `visibility` y esconde un elemento.
+//
+// Styleguide Helpers.Utilities.HideElementSimple
+
 @mixin hide-element-simple {
   display: none !important;
 }
 
+// @make-pseudo-element($display)
+//
+// Le agrega una serie de atributos a un pseudo-elemento que permiten utilizarlo
+// luego como un elemento de DOM.
+//
+// $display - Valor de `display` seteado en `block` por default.
+//
+// Styleguide Helpers.Utilities.MakePseudoElement
 
-//** Make pseudo element mixin
 @mixin make-pseudo-element($display: block) {
   content: "";
   display: $display;
 }
 
-//** CSS image replacement
+
+// @text-hide
+//
+// Esconder el texto dentro de un elemento.
+//
+// Styleguide Helpers.Utilities.TextHide
+
 @mixin text-hide() {
   background-color: transparent;
   border: 0;
@@ -26,7 +52,17 @@
   text-shadow: none;
 }
 
-//** Make height with aspect ratio mixin
+// @element-aspect-ratio
+//
+// Ata el alto de un elemento a su ancho mediante su relación de proporción. Está
+// seteado por default en 1:1, dándole al elemento forma cuadrada (Ver `.img-container`
+// para referencia de uso). No usa unidades de medida, sólo relaciones ancho/alto.
+//
+// $width - Número para indicar la proporción de ancho.
+// $height - Número para indicar la proporción de alto.
+//
+// Styleguide Helpers.Utilities.ElementAspectRatio
+
 @mixin element-aspect-ratio($width: 1, $height: 1) {
   position: relative;
 

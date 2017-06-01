@@ -11,6 +11,20 @@
   }
 }
 
+// @add-spinner($params)
+//
+// Genera un spinner animado y lo hace girar. Se usa para indicar el estado `loading`
+// al usuario.
+// > Este helper no genera el elemento (se debe usar adentro de uno) ni le fija posición.
+//
+// $size - Tamaño del spinner.
+// $spinner-width - Ancho del spinner.
+// $spinner-color-inactive - Color de los tres cuartos de círculo que son del
+// color inactivo.
+// $spinner-color-active - Color del cuarto de círculo que es del color activo.
+//
+// Styleguide Helpers.States.AddSpinner
+
 // Spinner generator mixin
 @mixin add-spinner($size, $spinner-width, $spinner-color-inactive,
     $spinner-color-active) {

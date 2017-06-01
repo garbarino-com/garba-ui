@@ -1,4 +1,20 @@
-// Icon common definitions
+// Íconos
+//
+// Una lista de helpers disponibles para ser usados en elementos y pseudo-elementos.
+//
+// Styleguide Helpers.Icons
+
+
+// @icon-elemen($size, $display)
+//
+// Otorga todos los atributos de un ícono a un elemento o pseudo-elemento salvo
+// el ícono en sí que debe especificarse aparte (Ver `.button__has-icon` para
+// referencia de uso).
+//
+// $size - Especifica el tamaño del ícono.
+// $display - Si no se especica, el valor default es `block`.
+//
+// Styleguide Helpers.Icons.IconElement
 
 @mixin icon-element($size, $display: block) {
   display: $display;

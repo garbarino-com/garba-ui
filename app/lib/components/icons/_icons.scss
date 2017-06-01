@@ -3,6 +3,10 @@
 // Librería de 80 íconos construída usando [Icomoon App](https://icomoon.io/).
 // Reemplaza a los íconos viejos y la idea es migrar a íconos en svg en algún
 // momento del futuro.
+// > ### ¿`Span` o `i` para íconos? ###
+// Usar `i` para íconos no es una buena práctica. El tag `i`
+// [tiene otros usos](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i).
+// Es preferible usar `span`.
 //
 // Markup: icons.hbs
 //

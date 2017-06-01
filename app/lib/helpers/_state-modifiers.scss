@@ -1,0 +1,34 @@
+// Modificadores de Estado
+//
+// Helpers que sirven o ayudan a cambiar el estado de un componente.
+//
+// Styleguide Helpers.States
+
+// @state-hover-modifier($color)
+//
+// Esta función sirve para normalizar en valores de variable los cambios visuales
+// que sufre un componente cuando cambia al estado `:hover`.
+//
+// $color - El color sobre el cual se ejecuta la operación.
+//
+// Styleguide Helpers.States.HoverState
+
+// Hover state function
+@function state-hover-modifier($color) {
+  @return call($modifier-operation, $color, $modifier-hover-value);
+}
+
+
+// @state-focus-modifier($color)
+//
+// Esta función sirve para normalizar en valores de variable los cambios visuales
+// que sufre un componente cuando cambia al estado `:focus`.
+//
+// $color - El color sobre el cual se ejecuta la operación.
+//
+// Styleguide Helpers.States.FocusState
+
+// Focus state function
+@function state-focus-modifier($color) {
+  @return call($modifier-operation, $color, $modifier-focus-value);
+}
