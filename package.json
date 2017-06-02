@@ -57,6 +57,7 @@
     "html-loader": "^0.4.5",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "requirejs": "^2.3.3",
     "run-sequence": "^1.2.2"
   }
 }
