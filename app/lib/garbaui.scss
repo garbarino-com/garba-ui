@@ -18,13 +18,8 @@
 @import "_v1.3.2/garbaui";
 
 
-// Some bourbon functionalities
-@import "./node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
-@import "./node_modules/bourbon/app/assets/stylesheets/bourbon-deprecate";
-@import "./node_modules/bourbon/app/assets/stylesheets/css3/flex-box";
-@import "./node_modules/bourbon/app/assets/stylesheets/addons/clearfix";
-@import "./node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
-@import "./node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
+// We import some bourbon functionalities to be used in the app
+@import "helpers/bourbon";
 
 // Component helpers
 @import "helpers/helpers";

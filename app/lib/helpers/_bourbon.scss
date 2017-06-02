@@ -1,0 +1,49 @@
+// Bourbon Mixins
+//
+// Importamos algunos mixins de la librería [Bourbon](http://bourbon.io/)
+//
+// Styleguide Helpers.Bourbon
+
+
+@import "./node_modules/bourbon/app/assets/stylesheets/settings/deprecation-warnings";
+@import "./node_modules/bourbon/app/assets/stylesheets/bourbon-deprecate";
+
+// Flexbox mixins
+@import "./node_modules/bourbon/app/assets/stylesheets/css3/flex-box";
+
+
+// @flexbox mixins
+//
+// Una serie de mixins para propiedades relacionadas con flexbox.
+// [Ver documentación](https://github.com/thoughtbot/bourbon/blob/v4-stable/app/assets/stylesheets/css3/_flex-box.scss).
+//
+// Styleguide Helpers.Bourbon.Flexbox
+
+@import "./node_modules/bourbon/app/assets/stylesheets/addons/clearfix";
+
+
+// @prefixer($property, $value, $prefixes)
+//
+// Un mixin para generar vendor prefixes en propiedades no estandarizadas. **Ejemplo:**
+// ```
+// @include prefixer(border-radius, 10px, webkit ms spec);
+// ```
+//
+// $property - La propiedad de css a la que se desea prefixear.
+// $value - El valor de la propiedad.
+// $prefixes - Los vendor prefixes a ser incluídos.
+//
+// Styleguide Helpers.Bourbon.Prefixer
+
+@import "./node_modules/bourbon/app/assets/stylesheets/addons/prefixer";
+
+
+// @ellipsis($width)
+//
+// Recorta el texto y añade una elipsis para representar el desborde.
+//
+// $width - Setea el ancho del elemento con elipsis. Valor default: 100%.
+//
+// Styleguide Helpers.Bourbon.Ellipsis
+
+@import "./node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
