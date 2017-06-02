@@ -1,4 +1,7 @@
 # Garba UI. Una librería UI de Garbarino
+
+![alt Main Project Image](./kss-assets/images/garba-ui-main.png)
+
 Un catálogo de componentes visuales y mixins para ser usados en proyectos de la compañía.
 
 Basado en [KSS](https://github.com/kss-node/kss-node).
