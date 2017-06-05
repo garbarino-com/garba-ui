@@ -8,10 +8,10 @@ var autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     runSequence = require('run-sequence'),
     sass = require('gulp-sass'),
+    shell = require('gulp-shell'),
     sourcemaps = require('gulp-sourcemaps'),
     styleLint = require('gulp-stylelint'),
-    toolSettings = require('frontend-settings'),
-    util = require('gulp-util');
+    toolSettings = require('frontend-settings');
 
 // Base paths (root)
 var config = {
@@ -63,6 +63,7 @@ gulp.task('clean:images', function () {
   return del(output.images + '*.*');
 });
 
+
 // Styles compilation
 gulp.task('sass', function() {
   gulp.src(input().styles)
@@ -87,6 +88,12 @@ gulp.task('sass', function() {
     // TODO: Test autoprefixer
     .pipe(autoprefixer(toolSettings.autoprefixer));
 });
+
+// Javascript build
+gulp.task('js', shell.task([
+  './node_modules/requirejs/bin/r.js -o ./app/javascript/build-settings.json'
+]));
+
 
 // Copy fonts task
 gulp.task('copy-fonts', function () {
