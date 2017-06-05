@@ -9,6 +9,7 @@
     "Esteban Calvi <ecalvi@garbarino.com.ar>"
   ],
   "scripts": {
+    "build": "gulp build",
     "sass": "gulp sass",
     "lint-css": "gulp lint-css"
   },
