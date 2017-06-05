@@ -1,0 +1,12 @@
+{
+  "name" : "garbaui.main",
+  "baseUrl": "./",
+  "paths": {
+    "jquery": "http://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min"
+  },
+
+  "generateSourceMaps": false,
+  "keepBuildDir": false,
+  "optimize": "uglify",
+  "out": "../../dist/javascript/garbaui.js",
+}

@@ -1,4 +1,5 @@
-define(['jquery', 'mylib'], function($, mylib) {
+define(['jquery', 'scripts/mylib'],
+function($, mylib) {
   return {
     version: '0.0.1, jQuery version: ' + $.fn.jquery,
     mylibString: mylib

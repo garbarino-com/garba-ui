@@ -1,0 +1,1 @@
+define("scripts/mylib",["jquery"],function(i){return"mylib"}),define("garbaui.main",["jquery","scripts/mylib"],function(i,r){return{version:"0.0.1, jQuery version: "+i.fn.jquery,mylibString:r}});

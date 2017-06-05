@@ -1,9 +1,0 @@
-{
-  "baseUrl": "./assets/",
-  "paths": {
-    "mylib": "../main"
-  },
-  "include": ["./assets/", "main"],
-  "exclude": ["jquery"],
-  "out": "../dist/javascript/garbaui.js"
-}

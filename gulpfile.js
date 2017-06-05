@@ -91,7 +91,7 @@ gulp.task('sass', function() {
 
 // Javascript build
 gulp.task('js', shell.task([
-  './node_modules/requirejs/bin/r.js -o ./app/javascript/build-settings.json'
+  './node_modules/requirejs/bin/r.js -o ./app/javascript/garbaui.build.json'
 ]));
 
 
