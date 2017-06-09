@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/garbarino-com/garba-ui#readme",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
     "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
     "git-guppy": "^2.1.0",
     "gulp-autoprefixer": "^3.1.1",

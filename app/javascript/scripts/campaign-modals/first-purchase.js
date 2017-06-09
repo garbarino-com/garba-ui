@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
     var url = window.location.href;
     firstPurchase = url.search("subscripcion=primera-compra");
     if(firstPurchase>0){
@@ -9,9 +9,9 @@ $( document ).ready(function() {
 $("#Enviar").click(function () {
 
     if($("#email").val()!="" && $("#idValue").val()!="" && $("#gender").val()!=""){
-    	
+
         $("#Enviar").html("<i class='icon-circle-notch animate-spin'></i> CARGANDO...");
-        
+
         var url = "/services/addons/campaigns/first-purchases?source=POPUP";
 
         data = {

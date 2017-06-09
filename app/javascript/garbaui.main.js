@@ -1,7 +1,24 @@
-define(['jquery', 'scripts/mylib'],
-function($, mylib) {
-  return {
-    version: '0.0.1, jQuery version: ' + $.fn.jquery,
-    mylibString: mylib
+define(
+  [
+    'jquery',
+    'cookie',
+    'transitions',
+    'carousel',
+    'modal',
+    'offersHunter',
+    'firstPurchase'
+  ],
+  function(
+    jquery,
+    cookie,
+    transitions,
+    carousel,
+    modal,
+    offersHunter,
+    firstPurchase
+  ) {
+    return {
+      //$(body).css("background-color", "yellow");
+    }
   }
-});
+);
