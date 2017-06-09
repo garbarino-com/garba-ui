@@ -1,22 +1,24 @@
 define(
   [
     'jquery',
+    'carousel',
     'cookie',
-    'transition',
+    'firstPurchase',
     'modal',
     'offersHunter',
-    'firstPurchase'
+    'transition'
   ],
   function(
     jquery,
+    carousel,
     cookie,
-    transition,
+    firstPurchase,
     modal,
     offersHunter,
-    firstPurchase
+    transition
   ) {
     return {
-      //$(body).css("background-color", "yellow");
+
     }
   }
 );

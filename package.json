@@ -42,11 +42,11 @@
     "node-sass-importer": "^1.0.0",
     "node-sass-json-importer": "^3.0.2",
     "postcss-scss": "^0.4.1",
+    "slick-carousel": "^1.6.0",
     "stylelint-config-sass-guidelines": "^2.0.0"
   },
   "dependencies": {
     "bourbon": "^4.3.2",
-    "classnames": "^2.2.5",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-install": "^1.1.0",

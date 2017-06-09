@@ -17,8 +17,14 @@
 //
 // Styleguide Helpers.Misc
 
+// GarbaUI Core importado (v1.3.2)
+//
+// La librería importa los mixins de garba-ui viejos para que estén disponibles
+// para el uso. Documentación para dichos mixins se puede encontrar en
+// [este link](http://ui-doc.garba.ninja/#box-general-mixins).
+//
+// Styleguide Helpers.OldMixins
 
-// Import mixins from version 1.3.2
 @import "../_v1.3.2/garbaui-core";
 
 // General usage
@@ -36,3 +42,6 @@
 @import "spinners";
 @import "tooltips";
 @import "value";
+
+// Functional related
+@import "carousel";
