@@ -42,12 +42,9 @@
     "node-sass-importer": "^1.0.0",
     "node-sass-json-importer": "^3.0.2",
     "postcss-scss": "^0.4.1",
-    "stylelint-config-sass-guidelines": "^2.0.0",
-    "webpack": "^2.5.1"
+    "stylelint-config-sass-guidelines": "^2.0.0"
   },
   "dependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
     "bourbon": "^4.3.2",
     "classnames": "^2.2.5",
     "del": "^2.2.2",
@@ -55,9 +52,6 @@
     "gulp-install": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "html-loader": "^0.4.5",
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1",
     "requirejs": "^2.3.3",
     "run-sequence": "^1.2.2"
   }

@@ -4,14 +4,14 @@
   "paths": {
     "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min",
     "cookie": "scripts/cookie",
-    "transitions": "scripts/bootstrap-transitions",
-    "carousel": "scripts/bootstrap-carousel",
-    "modal": "scripts/bootstrap-modal",
+    "transition": "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition",
+    "modal": "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal",
     "offersHunter": "scripts/offers-hunter",
     "firstPurchase": "scripts/campaign-modals/first-purchase"
   },
 
   "generateSourceMaps": false,
+  "preserveLicenseComments": false,
   "keepBuildDir": false,
   "optimize": "uglify",
   "out": "../../dist/javascript/garbaui.js",

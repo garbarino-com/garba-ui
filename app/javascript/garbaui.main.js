@@ -2,8 +2,7 @@ define(
   [
     'jquery',
     'cookie',
-    'transitions',
-    'carousel',
+    'transition',
     'modal',
     'offersHunter',
     'firstPurchase'
@@ -11,8 +10,7 @@ define(
   function(
     jquery,
     cookie,
-    transitions,
-    carousel,
+    transition,
     modal,
     offersHunter,
     firstPurchase
