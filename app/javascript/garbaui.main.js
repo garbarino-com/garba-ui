@@ -18,7 +18,6 @@ define(
     transition
   ) {
     return {
-
     }
   }
 );

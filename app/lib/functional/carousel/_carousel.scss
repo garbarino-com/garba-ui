@@ -1,0 +1,238 @@
+// Carousel
+//
+// Usamos [slick carousel](http://kenwheeler.github.io/slick/) para nuestros carouseles
+// y dejamos preparadas dos implementaciones out of the box:
+// * **Single-item Carousel:** Se usa para implementaciones en las que hay sólo
+// un ítem visible (por ej. el carousel principal de la *Home*).
+// * **Multi-item carousel:** Para implementaciones en las que se muestran
+// múltiples ítems (por ej. Góndolas de productos y categorías de la *Home*).
+//
+// Styleguide Functional.Carousel
+
+.slick-slider {
+  @include prefixer(touch-action, pan-y, webkit ms spec);
+  @include prefixer(user-select, none, webkit ms spec);
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+
+.slick-slider {
+  .slick-track,
+  .slick-list {
+    @include prefixer(transform, translate3d(0, 0, 0), webkit ms spec);
+  }
+}
+
+.slick-track {
+  display: block;
+  left: 0;
+  top: 0;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+
+  img {
+    display: block;
+  }
+
+  &.slick-loading img {
+    display: none;
+  }
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    border: 1px solid transparent;
+    display: block;
+    height: auto;
+  }
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+// Carousel Arrows
+.slick-prev,
+.slick-next {
+  @include prefixer(transform, translate(0, -50%), webkit ms spec);
+  background: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  font-size: 0px;
+  line-height: 0px;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 50%;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background: transparent;
+    color: transparent;
+
+    &:before {
+      opacity: $slick-opacity-on-hover;
+    }
+  }
+
+  &.slick-disabled:before {
+    opacity: $slick-opacity-not-active;
+  }
+
+  &:before {
+    color: $slick-arrow-color;
+    font-family: $slick-font-family;
+    font-size: 20px;
+    line-height: 1;
+    opacity: $slick-opacity-default;
+
+    // Font smoothing
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.slick-prev {
+  left: -25px;
+
+  &:before {
+    content: $slick-prev-character;
+  }
+}
+
+.slick-next {
+  right: -25px;
+
+  &:before {
+    content: $slick-next-character;
+    [dir="rtl"] & {
+      content: $slick-prev-character;
+    }
+  }
+}
+
+// Bullets
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+
+    button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        outline: none;
+
+        &:before {
+          opacity: $slick-opacity-on-hover;
+        }
+      }
+
+      &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: $slick-dot-character;
+          width: 20px;
+          height: 20px;
+          font-family: $slick-font-family;
+          font-size: $slick-dot-size;
+          line-height: 20px;
+          text-align: center;
+          color: $slick-dot-color;
+          opacity: $slick-opacity-not-active;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+      }
+    }
+
+    &.slick-active button:before {
+      color: $slick-dot-color-active;
+      opacity: $slick-opacity-default;
+    }
+  }
+}

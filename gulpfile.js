@@ -140,8 +140,8 @@ gulp.task('build', function (callback) {
 
 // Run this task for releases
 gulp.task('build:release', function (callback) {
-  runSequence('clean:sass', 'clean:fonts', 'clean:images', 'sass', 'copy-fonts',
-    'copy-images', callback);
+  runSequence('clean:sass', 'clean:fonts', 'clean:images', 'sass', 'js',
+    'copy-fonts', 'copy-images', callback);
 });
 
 // Hook for tasks to be executed on commit
