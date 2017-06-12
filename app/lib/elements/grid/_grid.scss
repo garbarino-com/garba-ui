@@ -1,0 +1,22 @@
+// Sistema de Grilla
+//
+// Importamos la [grilla de bootstrap](http://getbootstrap.com/css/#grid).
+//
+// Styleguide Elements.Grid
+
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+
+// Grid Narrow
+//
+// Le hacemos a la [grilla de bootstrap](http://getbootstrap.com/css/#grid) una
+// extensión que tiene un espacio entre columnas más reducido. **Esta extensión sólo
+// se debe usar nesteada adentro de la grilla principal**. Se invoca reemplazando
+// las clases `.row-narrow` y `.form-group-narrow` (cuando el uso dentro de un *Form*.)
+//
+// Styleguide Elements.Grid.GridNarrow
+
+// Generate narrow Grid
+.form-horizontal .form-group-narrow,
+.row-narrow {
+  @include make-narrow-grid;
+}
