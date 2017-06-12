@@ -2,7 +2,7 @@
   "name" : "garbaui.main",
   "baseUrl": "./",
   "paths": {
-    "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min",
+    "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min",
     "cookie": "scripts/cookie",
     "firstPurchase": "scripts/campaign-modals/first-purchase",
     "carousel": "../../node_modules/slick-carousel/slick/slick",

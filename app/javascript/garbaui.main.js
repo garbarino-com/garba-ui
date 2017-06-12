@@ -9,7 +9,7 @@ define(
     'transition'
   ],
   function(
-    jquery,
+    $,
     carousel,
     cookie,
     firstPurchase,
@@ -17,7 +17,7 @@ define(
     offersHunter,
     transition
   ) {
-    return {
-    }
+    $('.kss-header').css('background', 'red');
+    $('.carousel').slick();
   }
 );
