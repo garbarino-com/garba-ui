@@ -27,7 +27,8 @@ $flexbox-is-enabled:         true !default;
 //
 // Styleguide Elements.BaselineGrid
 
-$baseline-grid:         14px;
+$baseline-grid:                  14px;
+$baseline-grid-computed:         px-to-rem($baseline-grid);
 
 // A second definition of this value overrides normalize definition
 // (factory default is 24px)
@@ -112,11 +113,11 @@ $icon-font-url_old:      $icon-font-url !default;
 $grid-columns:                12 !default;
 
 // Espacio entre columnas (en la grilla se divide en dos para izquierda y derecha).
-$grid-gutter-width:           $baseline-grid * 2 !default; // 28px
+$grid-gutter-width:           $baseline-grid-computed * 2 !default; // 28px
 
 // Espacio entre columnas para la extensión de grilla (en la grilla se divide en
 // dos para izquierda y derecha).
-$grid-narrow-gutter-width:    $grid-gutter-width / 2 !default;  // 14px
+$grid-narrow-gutter-width:    $baseline-grid-computed / 2 !default;  // 14px
 
 
 
