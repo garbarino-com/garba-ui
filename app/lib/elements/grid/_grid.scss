@@ -1,6 +1,11 @@
 // Sistema de Grilla
 //
-// Importamos la [grilla de bootstrap](http://getbootstrap.com/css/#grid).
+// Importamos la grilla de *Bootstrap*. Un sistema de grillas responsive, mobile-first
+// y fluído que automaticamente escala hasta 12 columnas a medida que el tamaño de
+// viewport del dispositivo aumenta. Incluye clases predefinidas para fácil prototipado
+// así como mixins para generar layouts más semánticos.
+//
+// [Ver documentación en el sitio de Bootstrap](http://getbootstrap.com/css/#grid)
 //
 // Markup: grid.hbs
 //
@@ -8,19 +13,20 @@
 
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
-// Grid Narrow
+// Variante de grilla Narrow
 //
-// Le hacemos a la [grilla de bootstrap](http://getbootstrap.com/css/#grid) una
-// extensión que tiene un espacio entre columnas más reducido. **Esta extensión sólo
-// se debe usar nesteada adentro de la grilla principal**. Se invoca reemplazando
-// las clases `.row-narrow` y `.form-group-narrow` (cuando el uso dentro de un *Form*.)
+// Incluímos tambien una extensión de la [grilla de bootstrap](http://getbootstrap.com/css/#grid)
+// que tiene un espacio entre columnas más reducido (de 1/4 de la grilla tradicional.
+// **Esta extensión sólo se debe usar nesteada adentro de la grilla principal**.
+// Se invoca reemplazando las clases `.row-narrow` (o `.form-block-narrow` si
+// se usa adentro de un *Form*.)
 //
 // Markup: grid-narrow.hbs
 //
 // Styleguide Elements.Grid.GridNarrow
 
 // Generate narrow Grid
-.form-horizontal .form-group-narrow,
+.form-horizontal .form-block-narrow,
 .row-narrow {
   @include make-narrow-grid;
 }

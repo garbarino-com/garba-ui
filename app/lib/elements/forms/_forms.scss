@@ -1,0 +1,168 @@
+// Forms
+//
+// Styleguide Elements.Forms
+
+
+
+// Normalización de elementos
+
+fieldset {
+  border: 0;
+  margin: 0;
+
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+
+  padding: 0;
+}
+
+legend {
+  border: 0;
+  color: $gray-dark;
+  display: block;
+  line-height: inherit;
+  margin-bottom: $spacer-base;
+  padding: 0;
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: $spacer-sm;
+
+  // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  max-width: 100%;
+
+  // Indica que el campo de input es requerido.
+  .block__is-required & {
+    &::after {
+      color: $label-is-required;
+      content: "*";
+      display: inline-block;
+      margin-left: $spacer-xs;
+    }
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+
+// Form básico
+//
+// Los controles de form automaticamente reciben algunos estilos globales. Todos
+// los elementos `<input>`, `<textarea>`, and `<select>` con `.form-control` setean
+// el ancho a 100% por default. Envuelva los labels y los controles en un elemento
+// con la clase `.form-block` para que el espaciado sea el óptimo.
+//
+// .block__is-disabled - El bloque está deshabilitado **(es necesario agregar el
+// atributo `disabled` al input)**.
+// .block__is-required - El bloque es obligatorio.
+//
+// Markup: basic-form.hbs
+//
+// Styleguide Elements.Forms.2-BasicForm
+
+// Bloque contenedor de los forms
+.form-block {
+  @include form-block($form-block-spacing);
+}
+
+
+
+// Form Control
+//
+// Usamos la clase `.form-control` para darle estilos a los elementos de input
+// textuales de los *forms*.
+//
+// **Esta clase puede usar en los siguientes elementos de form:**
+// * `select`
+// * `textarea`
+// * `input[type="text"]`
+// * `input[type="password"]`
+// * `input[type="datetime"]`
+// * `input[type="datetime-local]`
+// * `input[type="date"]`
+// * `input[type="month"]`
+// * `input[type="time"]`
+// * `input[type="week"]`
+// * `input[type="number"]`
+// * `input[type="email"]`
+// * `input[type="url"]`
+// * `input[type="search"]`
+// * `input[type="tel"]`
+// * `input[type="color"]`
+//
+// :focus - El campo está seleccionado.
+// .control__is-disabled - El campo está deshabilitado **(es necesario agregar el atributo
+// `disabled` al input)**.
+//
+// Markup: form-controls.hbs
+//
+// Styleguide Elements.Forms.1-FormControl
+
+.form-control {
+  background-color: $input-bg;
+
+  // Reset unusual Firefox-on-Android default style;
+  //see https://github.com/necolas/normalize.css/issues/214
+  background-image: none;
+
+  border: 1px solid $input-border-color;
+
+  // Note: This has no effect on <select>s in some browsers,
+  // due to the limited stylability of <select>s in CSS.
+  border-radius: $border-radius-base;
+
+  color: $input-color;
+  display: block;
+  font-size: $font-size-base;
+
+  // Make inputs at least the height of their button counterpart
+  // (base line-height + padding + border)
+  height: $input-height;
+
+  line-height: 1;
+  padding: $spacer-base;
+  transition: border-color ease-in-out $transition-timing-base,
+    box-shadow ease-in-out $transition-timing-base;
+  width: 100%;
+
+  select#{&} {
+    line-height: 1;
+  }
+
+  // Placeholder
+  @include placeholder;
+
+  // Focus state
+  @include form-control-focus;
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] &,
+  &.control__is-disabled,
+  .block__is-disabled & {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $input-bg-disabled;
+      border-color: $input-border-color;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Libera la altura para los `<textarea>`s
+textarea,
+select[multiple] {
+  &.form-control {
+    height: auto;
+  }
+}

@@ -19,7 +19,7 @@
 
 // Core Legacy (v1.3.2)
 //
-// La librería importa los mixins de **Garba-UI V1** que están disponibles
+// La librería importa los mixins de **Garba-UI (v1.3.2)** que están disponibles
 // para el uso. Documentación para dichos mixins se puede encontrar en
 // [este link](http://ui-doc.garba.ninja/#box-general-mixins).
 //
@@ -33,9 +33,12 @@
 @import "make-css-arrow";
 @import "state-modifiers";
 
-// Component related
+// Element related
+@import "forms";
 @import "buttons";
 @import "button-actions";
+
+// Component related
 @import "labels";
 @import "lists";
 @import "spinners";

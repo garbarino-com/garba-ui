@@ -58,11 +58,16 @@ $gray-light:             #E2E2E2 !default;
 $gray-lighter:           #F6F6F6 !default;
 
 
-//## State modifiers
+// State modifiers
 $modifier-operation:            lighten !default;
 $modifier-hover-value:          10% !default;
 $modifier-focus-value:          10% !default;
 
+// Block element height (ties the value height of buttons and inputs)
+$block-height-base:             3rem !default;
+
+// Default transition animation
+$transition-timing-base:       .12s !default;
 
 // Generic spacers for elements
 $spacer-base:           1rem !default;
@@ -70,25 +75,26 @@ $spacer-sm:             .5rem !default;
 $spacer-xs:             .25rem !default; // Mostly reserved for inline spaces.
 
 
-//** Background color for `<body>`.
+// Background color for `<body>`.
 $body-bg:               $gray-lighter !default;
+$widget-bg:             #FFF !default;
 
-//** Background color for nav.
-$nav-bg:                #FFF !default;
+// Background color for nav.
+$nav-bg:                $widget-bg !default;
 
-//** Global text color on `<body>`.
+// Global text color on `<body>`.
 $text-color:            $gray-darker !default;
-//** Global text color on `<body>`.
+// Global text color on `<body>`.
 $text-inverse:          #FFF !default;
 $text-muted:            #666 !default;
 
-//** Global textual link color.
+// Global textual link color.
 $link-color:            $brand-primary !default;
-//** Link hover color set via `darken()` function.
+// Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
-//** Link decoration.
+// Link decoration.
 $link-decoration:       none !default;
-//** Link hover decoration.
+// Link hover decoration.
 $link-hover-decoration: underline !default;
 
 
@@ -229,7 +235,7 @@ $zindex-navbar:             1030 !default;
 //
 // For each button, define text color and background and border color.
 
-$btn-height-base:                    3rem !default;
+$btn-height-base:                    $block-height-base !default;
 $btn-height-lg-size:                 3.25rem !default;
 $btn-height-sm-size:                 2rem !default;
 $btn-font-weight:                    700 !default;
@@ -238,7 +244,7 @@ $btn-base-color:                     $text-inverse !default;
 $btn-base-padding-x:                 1.5rem !default;
 $btn-large-padding-x:                1.75rem !default;
 $btn-small-padding-x:                1.25rem !default;
-$btn-transition-timing:              .12s !default;
+$btn-transition-timing:              $transition-timing-base !default;
 $btn-shadow-width:                   px-to-rem(2px) !default;
 $btn-box-shadow-value:               0 $btn-shadow-width 0 0 !default;
 
@@ -285,6 +291,23 @@ $btn-action-padding:                 .75rem !default;
 $btn-action-font-size:               1.5rem !default;
 $btn-action-size:                    $btn-action-font-size + ($btn-action-padding * 2) !default;
 
+
+// Form definitions
+$form-block-spacing:                 $spacer-base !default;
+
+$label-is-required:                  $brand-corporate !default;
+
+$input-bg:                           $widget-bg !default;
+$input-bg-disabled:                  $gray-lighter !default;
+$input-color:                        $text-color !default;
+$input-height:                       $block-height-base !default;
+$input-border-color:                 $gray-medium !default;
+$input-border-focus:                 $brand-primary !default;
+$input-border-focus-opacity:         .6 !default;
+$input-border-focus-shadow-lenght:   4px !default;
+$input-color-placeholder:            state-hover-modifier($input-color);
+
+
 // Tooltip definitions
 $tooltip-width:                      15rem !default;
 $tooltip-bg:                         $gray-base !default;
@@ -323,7 +346,7 @@ $value-spacer-sm:                    $spacer-xs !default;
 
 // Image container
 $imgcontainer-bg:                        transparent !default;
-$imgcontainer-loading-bg:                #FFF !default;
+$imgcontainer-loading-bg:                $widget-bg !default;
 $imgcontainer-spinner-base-size:         $spinner-base-size !default;
 $imgcontainer-spinner-border-width:      $spinner-border-width !default;
 $imgcontainer-spinner-color-inactive:    $spinner-color-inactive !default;

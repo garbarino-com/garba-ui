@@ -8,12 +8,9 @@
   $hover-background: state-hover-modifier($background);
   $focus-background: state-focus-modifier($background);
 
-  @include prefixer(
-    transition, (
-      background-color $btn-transition-timing ease-in
-    ), webkit ms moz spec);
   background-color: $background;
   box-shadow: $btn-box-shadow-value darken($background, 17.5%);
+  transition: background-color ease-in $btn-transition-timing;
 
   &,
   &:visited {

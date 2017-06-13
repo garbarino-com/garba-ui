@@ -3560,6 +3560,115 @@ button.close {
   font-style: normal;
 }
 
+fieldset {
+  border: 0;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+legend {
+  border: 0;
+  color: #666;
+  display: block;
+  line-height: inherit;
+  margin-bottom: 1rem;
+  padding: 0;
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+}
+
+.block__is-required label::after {
+  color: #D1030F;
+  content: "*";
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-block {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-block:before, .form-block:after {
+  content: "";
+  display: table;
+}
+
+.form-block:after {
+  clear: both;
+}
+
+.form-control {
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
+  color: #6B6B6B;
+  display: block;
+  font-size: 1rem;
+  height: 3rem;
+  line-height: 1;
+  padding: 1rem;
+  transition: border-color ease-in-out 0.12s, box-shadow ease-in-out 0.12s;
+  width: 100%;
+}
+
+.form-control select.form-control {
+  line-height: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: state-hover-modifier(#6B6B6B);
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: state-hover-modifier(#6B6B6B);
+}
+
+.form-control::-webkit-input-placeholder {
+  color: state-hover-modifier(#6B6B6B);
+}
+
+.form-control::placeholder {
+  color: state-hover-modifier(#6B6B6B);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 4px 0 rgba(0, 132, 224, 0.6);
+  border-color: #0084E0;
+  outline: 0;
+}
+
+.form-control[disabled], .form-control[disabled]:hover, .form-control[disabled]:focus, .form-control[readonly], .form-control[readonly]:hover, .form-control[readonly]:focus,
+fieldset[disabled] .form-control,
+fieldset[disabled] .form-control:hover,
+fieldset[disabled] .form-control:focus, .form-control.control__is-disabled, .form-control.control__is-disabled:hover, .form-control.control__is-disabled:focus,
+.block__is-disabled .form-control,
+.block__is-disabled .form-control:hover,
+.block__is-disabled .form-control:focus {
+  background-color: #F6F6F6;
+  border-color: #C4C4C4;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+textarea.form-control,
+select[multiple].form-control {
+  height: auto;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -4316,28 +4425,28 @@ button.close {
   }
 }
 
-.form-horizontal .form-group-narrow,
+.form-horizontal .form-block-narrow,
 .row-narrow {
   margin-left: -0.25rem;
   margin-right: -0.25rem;
 }
 
-.form-horizontal .form-group-narrow:before, .form-horizontal .form-group-narrow:after,
+.form-horizontal .form-block-narrow:before, .form-horizontal .form-block-narrow:after,
 .row-narrow:before,
 .row-narrow:after {
   content: "";
   display: table;
 }
 
-.form-horizontal .form-group-narrow:after,
+.form-horizontal .form-block-narrow:after,
 .row-narrow:after {
   clear: both;
 }
 
-.form-horizontal .form-group-narrow .col-xs-1,
-.form-horizontal .form-group-narrow .col-sm-1,
-.form-horizontal .form-group-narrow .col-md-1,
-.form-horizontal .form-group-narrow .col-lg-1,
+.form-horizontal .form-block-narrow .col-xs-1,
+.form-horizontal .form-block-narrow .col-sm-1,
+.form-horizontal .form-block-narrow .col-md-1,
+.form-horizontal .form-block-narrow .col-lg-1,
 .row-narrow .col-xs-1,
 .row-narrow .col-sm-1,
 .row-narrow .col-md-1,
@@ -4346,10 +4455,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-2,
-.form-horizontal .form-group-narrow .col-sm-2,
-.form-horizontal .form-group-narrow .col-md-2,
-.form-horizontal .form-group-narrow .col-lg-2,
+.form-horizontal .form-block-narrow .col-xs-2,
+.form-horizontal .form-block-narrow .col-sm-2,
+.form-horizontal .form-block-narrow .col-md-2,
+.form-horizontal .form-block-narrow .col-lg-2,
 .row-narrow .col-xs-2,
 .row-narrow .col-sm-2,
 .row-narrow .col-md-2,
@@ -4358,10 +4467,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-3,
-.form-horizontal .form-group-narrow .col-sm-3,
-.form-horizontal .form-group-narrow .col-md-3,
-.form-horizontal .form-group-narrow .col-lg-3,
+.form-horizontal .form-block-narrow .col-xs-3,
+.form-horizontal .form-block-narrow .col-sm-3,
+.form-horizontal .form-block-narrow .col-md-3,
+.form-horizontal .form-block-narrow .col-lg-3,
 .row-narrow .col-xs-3,
 .row-narrow .col-sm-3,
 .row-narrow .col-md-3,
@@ -4370,10 +4479,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-4,
-.form-horizontal .form-group-narrow .col-sm-4,
-.form-horizontal .form-group-narrow .col-md-4,
-.form-horizontal .form-group-narrow .col-lg-4,
+.form-horizontal .form-block-narrow .col-xs-4,
+.form-horizontal .form-block-narrow .col-sm-4,
+.form-horizontal .form-block-narrow .col-md-4,
+.form-horizontal .form-block-narrow .col-lg-4,
 .row-narrow .col-xs-4,
 .row-narrow .col-sm-4,
 .row-narrow .col-md-4,
@@ -4382,10 +4491,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-5,
-.form-horizontal .form-group-narrow .col-sm-5,
-.form-horizontal .form-group-narrow .col-md-5,
-.form-horizontal .form-group-narrow .col-lg-5,
+.form-horizontal .form-block-narrow .col-xs-5,
+.form-horizontal .form-block-narrow .col-sm-5,
+.form-horizontal .form-block-narrow .col-md-5,
+.form-horizontal .form-block-narrow .col-lg-5,
 .row-narrow .col-xs-5,
 .row-narrow .col-sm-5,
 .row-narrow .col-md-5,
@@ -4394,10 +4503,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-6,
-.form-horizontal .form-group-narrow .col-sm-6,
-.form-horizontal .form-group-narrow .col-md-6,
-.form-horizontal .form-group-narrow .col-lg-6,
+.form-horizontal .form-block-narrow .col-xs-6,
+.form-horizontal .form-block-narrow .col-sm-6,
+.form-horizontal .form-block-narrow .col-md-6,
+.form-horizontal .form-block-narrow .col-lg-6,
 .row-narrow .col-xs-6,
 .row-narrow .col-sm-6,
 .row-narrow .col-md-6,
@@ -4406,10 +4515,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-7,
-.form-horizontal .form-group-narrow .col-sm-7,
-.form-horizontal .form-group-narrow .col-md-7,
-.form-horizontal .form-group-narrow .col-lg-7,
+.form-horizontal .form-block-narrow .col-xs-7,
+.form-horizontal .form-block-narrow .col-sm-7,
+.form-horizontal .form-block-narrow .col-md-7,
+.form-horizontal .form-block-narrow .col-lg-7,
 .row-narrow .col-xs-7,
 .row-narrow .col-sm-7,
 .row-narrow .col-md-7,
@@ -4418,10 +4527,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-8,
-.form-horizontal .form-group-narrow .col-sm-8,
-.form-horizontal .form-group-narrow .col-md-8,
-.form-horizontal .form-group-narrow .col-lg-8,
+.form-horizontal .form-block-narrow .col-xs-8,
+.form-horizontal .form-block-narrow .col-sm-8,
+.form-horizontal .form-block-narrow .col-md-8,
+.form-horizontal .form-block-narrow .col-lg-8,
 .row-narrow .col-xs-8,
 .row-narrow .col-sm-8,
 .row-narrow .col-md-8,
@@ -4430,10 +4539,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-9,
-.form-horizontal .form-group-narrow .col-sm-9,
-.form-horizontal .form-group-narrow .col-md-9,
-.form-horizontal .form-group-narrow .col-lg-9,
+.form-horizontal .form-block-narrow .col-xs-9,
+.form-horizontal .form-block-narrow .col-sm-9,
+.form-horizontal .form-block-narrow .col-md-9,
+.form-horizontal .form-block-narrow .col-lg-9,
 .row-narrow .col-xs-9,
 .row-narrow .col-sm-9,
 .row-narrow .col-md-9,
@@ -4442,10 +4551,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-10,
-.form-horizontal .form-group-narrow .col-sm-10,
-.form-horizontal .form-group-narrow .col-md-10,
-.form-horizontal .form-group-narrow .col-lg-10,
+.form-horizontal .form-block-narrow .col-xs-10,
+.form-horizontal .form-block-narrow .col-sm-10,
+.form-horizontal .form-block-narrow .col-md-10,
+.form-horizontal .form-block-narrow .col-lg-10,
 .row-narrow .col-xs-10,
 .row-narrow .col-sm-10,
 .row-narrow .col-md-10,
@@ -4454,10 +4563,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-11,
-.form-horizontal .form-group-narrow .col-sm-11,
-.form-horizontal .form-group-narrow .col-md-11,
-.form-horizontal .form-group-narrow .col-lg-11,
+.form-horizontal .form-block-narrow .col-xs-11,
+.form-horizontal .form-block-narrow .col-sm-11,
+.form-horizontal .form-block-narrow .col-md-11,
+.form-horizontal .form-block-narrow .col-lg-11,
 .row-narrow .col-xs-11,
 .row-narrow .col-sm-11,
 .row-narrow .col-md-11,
@@ -4466,10 +4575,10 @@ button.close {
   padding-right: 0.25rem;
 }
 
-.form-horizontal .form-group-narrow .col-xs-12,
-.form-horizontal .form-group-narrow .col-sm-12,
-.form-horizontal .form-group-narrow .col-md-12,
-.form-horizontal .form-group-narrow .col-lg-12,
+.form-horizontal .form-block-narrow .col-xs-12,
+.form-horizontal .form-block-narrow .col-sm-12,
+.form-horizontal .form-block-narrow .col-md-12,
+.form-horizontal .form-block-narrow .col-lg-12,
 .row-narrow .col-xs-12,
 .row-narrow .col-sm-12,
 .row-narrow .col-md-12,
@@ -4677,12 +4786,9 @@ button:focus {
 .button,
 .button--default,
 .button--secondary {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
   background-color: #6B6B6B;
   box-shadow: 0 0.14286rem 0 0 #3e3e3e;
+  transition: background-color ease-in 0.12s;
 }
 
 .button, .button:visited,
@@ -4716,12 +4822,9 @@ button:focus {
 }
 
 .button--primary {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
   background-color: #0084E0;
   box-shadow: 0 0.14286rem 0 0 #004f87;
+  transition: background-color ease-in 0.12s;
 }
 
 .button--primary, .button--primary:visited {
@@ -4741,12 +4844,9 @@ button:focus {
 }
 
 .button--main {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
   background-color: #16A401;
   box-shadow: 0 0.14286rem 0 0 #0a4b00;
+  transition: background-color ease-in 0.12s;
 }
 
 .button--main, .button--main:visited {
@@ -4766,12 +4866,9 @@ button:focus {
 }
 
 .button--link {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
   background-color: transparent;
   box-shadow: 0 0.14286rem 0 0 transparent;
+  transition: background-color ease-in 0.12s;
 }
 
 .button--link, .button--link:visited {
@@ -4795,12 +4892,9 @@ button:focus {
 }
 
 .button--facebook {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
   background-color: #4957B3;
   box-shadow: 0 0.14286rem 0 0 #2f3874;
+  transition: background-color ease-in 0.12s;
 }
 
 .button--facebook, .button--facebook:visited {
