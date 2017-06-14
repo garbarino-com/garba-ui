@@ -249,6 +249,6 @@ select[multiple] {
   input[type="checkbox"] {
     position: absolute;
     margin-left: $controller-spacer * -1;
-    margin-top: $spacer-sm;
+    margin-top: px-to-rem(5px);
   }
 }

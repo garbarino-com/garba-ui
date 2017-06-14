@@ -4350,7 +4350,7 @@ fieldset[disabled]
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-left: -1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0.35714rem;
 }
 
 .container {
