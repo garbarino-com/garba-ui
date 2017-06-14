@@ -3560,6 +3560,608 @@ button.close {
   font-style: normal;
 }
 
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.button {
+  font-size: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.5rem;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button:focus, .button.focus {
+  outline: 0;
+  transform: translateY(0.14286rem);
+}
+
+.button:active, .button.active {
+  background-image: none;
+}
+
+.button,
+.button--default,
+.button--secondary {
+  background-color: #6B6B6B;
+  box-shadow: 0 0.14286rem 0 0 #3e3e3e;
+  transition: background-color ease-in 0.12s;
+}
+
+.button, .button:visited,
+.button--default,
+.button--default:visited,
+.button--secondary,
+.button--secondary:visited {
+  color: #FFF;
+}
+
+.button:focus, .button:focus:hover, .button.focus, .button.focus:hover,
+.button--default:focus,
+.button--default:focus:hover,
+.button--default.focus,
+.button--default.focus:hover,
+.button--secondary:focus,
+.button--secondary:focus:hover,
+.button--secondary.focus,
+.button--secondary.focus:hover {
+  background-color: #858585;
+  box-shadow: 0 0 0 0 transparent;
+  color: #FFF;
+}
+
+.button:hover,
+.button--default:hover,
+.button--secondary:hover {
+  background-color: #858585;
+  box-shadow: 0 0.14286rem 0 0 #858585;
+  color: #FFF;
+}
+
+.button--primary {
+  background-color: #0084E0;
+  box-shadow: 0 0.14286rem 0 0 #004f87;
+  transition: background-color ease-in 0.12s;
+}
+
+.button--primary, .button--primary:visited {
+  color: #FFF;
+}
+
+.button--primary:focus, .button--primary:focus:hover, .button--primary.focus, .button--primary.focus:hover {
+  background-color: #149eff;
+  box-shadow: 0 0 0 0 transparent;
+  color: #FFF;
+}
+
+.button--primary:hover {
+  background-color: #149eff;
+  box-shadow: 0 0.14286rem 0 0 #149eff;
+  color: #FFF;
+}
+
+.button--main {
+  background-color: #16A401;
+  box-shadow: 0 0.14286rem 0 0 #0a4b00;
+  transition: background-color ease-in 0.12s;
+}
+
+.button--main, .button--main:visited {
+  color: #FFF;
+}
+
+.button--main:focus, .button--main:focus:hover, .button--main.focus, .button--main.focus:hover {
+  background-color: #1dd701;
+  box-shadow: 0 0 0 0 transparent;
+  color: #FFF;
+}
+
+.button--main:hover {
+  background-color: #1dd701;
+  box-shadow: 0 0.14286rem 0 0 #1dd701;
+  color: #FFF;
+}
+
+.button--link {
+  background-color: transparent;
+  box-shadow: 0 0.14286rem 0 0 transparent;
+  transition: background-color ease-in 0.12s;
+}
+
+.button--link, .button--link:visited {
+  color: #0084E0;
+}
+
+.button--link:focus, .button--link:focus:hover, .button--link.focus, .button--link.focus:hover {
+  background-color: rgba(26, 26, 26, 0);
+  box-shadow: 0 0 0 0 transparent;
+  color: #0084E0;
+}
+
+.button--link:hover {
+  background-color: rgba(26, 26, 26, 0);
+  box-shadow: 0 0.14286rem 0 0 rgba(26, 26, 26, 0);
+  color: #0084E0;
+}
+
+.button--link:hover {
+  text-decoration: underline;
+}
+
+.button--facebook {
+  background-color: #4957B3;
+  box-shadow: 0 0.14286rem 0 0 #2f3874;
+  transition: background-color ease-in 0.12s;
+}
+
+.button--facebook, .button--facebook:visited {
+  color: #FFF;
+}
+
+.button--facebook:focus, .button--facebook:focus:hover, .button--facebook.focus, .button--facebook.focus:hover {
+  background-color: #6c77c3;
+  box-shadow: 0 0 0 0 transparent;
+  color: #FFF;
+}
+
+.button--facebook:hover {
+  background-color: #6c77c3;
+  box-shadow: 0 0.14286rem 0 0 #6c77c3;
+  color: #FFF;
+}
+
+.button--lg {
+  font-size: 1.28571rem;
+  height: 3.25rem;
+  line-height: 3.25rem;
+  padding: 0 1.75rem;
+}
+
+.button--sm {
+  font-size: 0.85714rem;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 1.25rem;
+}
+
+.button--block {
+  display: block;
+  width: 100%;
+}
+
+.button--block.button--sm {
+  font-size: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 73.14286rem) {
+  .button--block.button--sm {
+    font-size: 0.85714rem;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0 1.25rem;
+  }
+}
+
+.button--block + .button--block {
+  margin-top: 0.5rem;
+}
+
+.button__is-fixed-to-bottom {
+  border-radius: 0;
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+[disabled].button, [disabled].button:hover, [disabled].button:focus, [disabled].button:disabled, [disabled].button:disabled:hover, [disabled].button:disabled:focus, [disabled].button--main, [disabled].button--main:hover, [disabled].button--main:focus, [disabled].button--primary, [disabled].button--primary:hover, [disabled].button--primary:focus, [disabled].button--secondary, [disabled].button--secondary:hover, [disabled].button--secondary:focus, [disabled].button--link, [disabled].button--link:hover, [disabled].button--link:focus, [disabled].button--facebook, [disabled].button--facebook:hover, [disabled].button--facebook:focus,
+[readonly].button,
+[readonly].button:hover,
+[readonly].button:focus,
+[readonly].button:disabled,
+[readonly].button:disabled:hover,
+[readonly].button:disabled:focus,
+[readonly].button--main,
+[readonly].button--main:hover,
+[readonly].button--main:focus,
+[readonly].button--primary,
+[readonly].button--primary:hover,
+[readonly].button--primary:focus,
+[readonly].button--secondary,
+[readonly].button--secondary:hover,
+[readonly].button--secondary:focus,
+[readonly].button--link,
+[readonly].button--link:hover,
+[readonly].button--link:focus,
+[readonly].button--facebook,
+[readonly].button--facebook:hover,
+[readonly].button--facebook:focus,
+fieldset[disabled].button,
+fieldset[disabled].button:hover,
+fieldset[disabled].button:focus,
+fieldset[disabled].button:disabled,
+fieldset[disabled].button:disabled:hover,
+fieldset[disabled].button:disabled:focus,
+fieldset[disabled].button--main,
+fieldset[disabled].button--main:hover,
+fieldset[disabled].button--main:focus,
+fieldset[disabled].button--primary,
+fieldset[disabled].button--primary:hover,
+fieldset[disabled].button--primary:focus,
+fieldset[disabled].button--secondary,
+fieldset[disabled].button--secondary:hover,
+fieldset[disabled].button--secondary:focus,
+fieldset[disabled].button--link,
+fieldset[disabled].button--link:hover,
+fieldset[disabled].button--link:focus,
+fieldset[disabled].button--facebook,
+fieldset[disabled].button--facebook:hover,
+fieldset[disabled].button--facebook:focus,
+.control__is-disabled .button.button,
+.control__is-disabled .button.button:hover,
+.control__is-disabled .button.button:focus,
+.control__is-disabled .button.button:disabled,
+.control__is-disabled .button.button:disabled:hover,
+.control__is-disabled .button.button:disabled:focus,
+.control__is-disabled .button.button--main,
+.control__is-disabled .button.button--main:hover,
+.control__is-disabled .button.button--main:focus,
+.control__is-disabled .button.button--primary,
+.control__is-disabled .button.button--primary:hover,
+.control__is-disabled .button.button--primary:focus,
+.control__is-disabled .button.button--secondary,
+.control__is-disabled .button.button--secondary:hover,
+.control__is-disabled .button.button--secondary:focus,
+.control__is-disabled .button.button--link,
+.control__is-disabled .button.button--link:hover,
+.control__is-disabled .button.button--link:focus,
+.control__is-disabled .button.button--facebook,
+.control__is-disabled .button.button--facebook:hover,
+.control__is-disabled .button.button--facebook:focus,
+.block__is-disabled .button.button,
+.block__is-disabled .button.button:hover,
+.block__is-disabled .button.button:focus,
+.block__is-disabled .button.button:disabled,
+.block__is-disabled .button.button:disabled:hover,
+.block__is-disabled .button.button:disabled:focus,
+.block__is-disabled .button.button--main,
+.block__is-disabled .button.button--main:hover,
+.block__is-disabled .button.button--main:focus,
+.block__is-disabled .button.button--primary,
+.block__is-disabled .button.button--primary:hover,
+.block__is-disabled .button.button--primary:focus,
+.block__is-disabled .button.button--secondary,
+.block__is-disabled .button.button--secondary:hover,
+.block__is-disabled .button.button--secondary:focus,
+.block__is-disabled .button.button--link,
+.block__is-disabled .button.button--link:hover,
+.block__is-disabled .button.button--link:focus,
+.block__is-disabled .button.button--facebook,
+.block__is-disabled .button.button--facebook:hover,
+.block__is-disabled .button.button--facebook:focus,
+.button__is-disabled.button,
+.button__is-disabled.button:hover,
+.button__is-disabled.button:focus,
+.button__is-disabled.button:disabled,
+.button__is-disabled.button:disabled:hover,
+.button__is-disabled.button:disabled:focus,
+.button__is-disabled.button--main,
+.button__is-disabled.button--main:hover,
+.button__is-disabled.button--main:focus,
+.button__is-disabled.button--primary,
+.button__is-disabled.button--primary:hover,
+.button__is-disabled.button--primary:focus,
+.button__is-disabled.button--secondary,
+.button__is-disabled.button--secondary:hover,
+.button__is-disabled.button--secondary:focus,
+.button__is-disabled.button--link,
+.button__is-disabled.button--link:hover,
+.button__is-disabled.button--link:focus,
+.button__is-disabled.button--facebook,
+.button__is-disabled.button--facebook:hover,
+.button__is-disabled.button--facebook:focus,
+.button__is-loading.button,
+.button__is-loading.button:hover,
+.button__is-loading.button:focus,
+.button__is-loading.button:disabled,
+.button__is-loading.button:disabled:hover,
+.button__is-loading.button:disabled:focus,
+.button__is-loading.button--main,
+.button__is-loading.button--main:hover,
+.button__is-loading.button--main:focus,
+.button__is-loading.button--primary,
+.button__is-loading.button--primary:hover,
+.button__is-loading.button--primary:focus,
+.button__is-loading.button--secondary,
+.button__is-loading.button--secondary:hover,
+.button__is-loading.button--secondary:focus,
+.button__is-loading.button--link,
+.button__is-loading.button--link:hover,
+.button__is-loading.button--link:focus,
+.button__is-loading.button--facebook,
+.button__is-loading.button--facebook:hover,
+.button__is-loading.button--facebook:focus {
+  background-color: #E2E2E2;
+  box-shadow: 0 0.14286rem 0 0 #bcbcbc;
+  color: #9E9E9E;
+  outline: 0;
+  transform: translateY(0);
+}
+
+.button__is-disabled {
+  cursor: not-allowed;
+}
+
+.button__is-loading {
+  cursor: default;
+}
+
+.button__is-loading::before {
+  content: "";
+  display: inline-block;
+  -webkit-animation: spinner-rotation 0.8s infinite linear;
+  -ms-animation: spinner-rotation 0.8s infinite linear;
+  -moz-animation: spinner-rotation 0.8s infinite linear;
+  animation: spinner-rotation 0.8s infinite linear;
+  border-bottom: 0.21429rem solid #9E9E9E;
+  border-left: 0.21429rem solid #D8D8D8;
+  border-right: 0.21429rem solid #9E9E9E;
+  border-top: 0.21429rem solid #9E9E9E;
+  border-radius: 50%;
+  height: 1.75rem;
+  vertical-align: middle;
+  width: 1.75rem;
+  margin-right: 0.5rem;
+  margin-top: -0.21429rem;
+}
+
+.button__is-loading.button--lg::before {
+  border-width: 0.21429rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.button__is-loading.button--sm::before {
+  border-width: 0.14286rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.button__has-icon {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  text-transform: none;
+}
+
+.button__has-icon::before,
+.button__has-icon > [class^="gb-icon-"]::before {
+  display: block;
+  font-family: "garba-icon-font" !important;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  speak: none;
+  left: 1rem;
+  margin-top: -0.75rem;
+  position: absolute;
+  top: 50%;
+}
+
+.button__has-icon.button--facebook::before,
+.button__has-icon > [class^="gb-icon-"].button--facebook::before {
+  content: "";
+}
+
+.button--action {
+  font-size: 1.5rem;
+  height: 3rem;
+  line-height: 1.5rem;
+  padding: 0.75rem;
+  width: 3rem;
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: 0 0 0 0 transparent;
+  color: #9E9E9E;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button--action:hover {
+  background-color: #E2E2E2;
+  text-decoration: none;
+}
+
+.button--action:focus, .button--action.focus {
+  background-color: transparent;
+  outline: 0;
+}
+
+.button--action > i {
+  left: 50%;
+  margin-left: -0.75rem;
+  margin-top: -0.75rem;
+  top: 50%;
+  position: absolute;
+}
+
+.button--action > i::before {
+  display: block;
+  font-family: "garba-icon-font" !important;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  speak: none;
+  width: 1.5rem;
+}
+
+@keyframes action-active {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.button--action__primary {
+  color: #000;
+  -webkit-transition: background-color 0.12s ease-in;
+  -ms-transition: background-color 0.12s ease-in;
+  -moz-transition: background-color 0.12s ease-in;
+  transition: background-color 0.12s ease-in;
+}
+
+.button--action__primary, .button--action__primary:visited {
+  color: #000;
+}
+
+.button--action__primary:hover, .button--action__primary:focus, .button--action__primary.button__is-active {
+  color: #000;
+}
+
+.button--action__primary > i::before {
+  content: "";
+}
+
+.button--action__fav {
+  -webkit-transition: background-color 0.12s ease-in;
+  -ms-transition: background-color 0.12s ease-in;
+  -moz-transition: background-color 0.12s ease-in;
+  transition: background-color 0.12s ease-in;
+}
+
+.button--action__fav, .button--action__fav:visited {
+  color: #D1030F;
+}
+
+.button--action__fav:hover, .button--action__fav:focus, .button--action__fav.button__is-active {
+  color: #D1030F;
+}
+
+.button--action__fav > i::before {
+  content: "";
+}
+
+.button--action__fav:focus > i {
+  -webkit-animation: action-active 0.8s steps(28) 1;
+  -ms-animation: action-active 0.8s steps(28) 1;
+  -moz-animation: action-active 0.8s steps(28) 1;
+  animation: action-active 0.8s steps(28) 1;
+  background-image: url(../images/animation--fav.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+  display: block;
+  height: 3.75rem;
+  margin-left: -1.875rem;
+  margin-top: -1.875rem;
+  width: 3.75rem;
+}
+
+.button--action__fav:focus > i::before {
+  content: initial;
+}
+
+.button--action__default {
+  -webkit-transition: background-color 0.12s ease-in;
+  -ms-transition: background-color 0.12s ease-in;
+  -moz-transition: background-color 0.12s ease-in;
+  transition: background-color 0.12s ease-in;
+}
+
+.button--action__default, .button--action__default:visited {
+  color: #F8AA29;
+}
+
+.button--action__default:hover, .button--action__default:focus, .button--action__default.button__is-active {
+  color: #F8AA29;
+}
+
+.button--action__default > i::before {
+  content: "";
+}
+
+.button--action__facebook {
+  -webkit-transition: background-color 0.12s ease-in;
+  -ms-transition: background-color 0.12s ease-in;
+  -moz-transition: background-color 0.12s ease-in;
+  transition: background-color 0.12s ease-in;
+}
+
+.button--action__facebook, .button--action__facebook:visited {
+  color: #4957B3;
+}
+
+.button--action__facebook:hover, .button--action__facebook:focus, .button--action__facebook.button__is-active {
+  color: #4957B3;
+}
+
+.button--action__facebook > i::before {
+  content: "";
+}
+
+.button--action__twitter {
+  -webkit-transition: background-color 0.12s ease-in;
+  -ms-transition: background-color 0.12s ease-in;
+  -moz-transition: background-color 0.12s ease-in;
+  transition: background-color 0.12s ease-in;
+}
+
+.button--action__twitter, .button--action__twitter:visited {
+  color: #60B5F1;
+}
+
+.button--action__twitter:hover, .button--action__twitter:focus, .button--action__twitter.button__is-active {
+  color: #60B5F1;
+}
+
+.button--action__twitter > i::before {
+  content: "";
+}
+
 fieldset {
   border: 0;
   margin: 0;
@@ -3589,6 +4191,16 @@ label {
   content: "*";
   display: inline-block;
   margin-left: 0.25rem;
+}
+
+[disabled] label,
+[readonly] label,
+fieldset[disabled] label,
+.control__is-disabled ~ label,
+.block__is-disabled label {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 textarea {
@@ -3662,6 +4274,7 @@ fieldset[disabled] .form-control:focus, .form-control.control__is-disabled, .for
   border-color: #C4C4C4;
   box-shadow: none;
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 textarea.form-control,
@@ -3683,6 +4296,61 @@ select.form-control--sm {
 textarea.form-control--sm,
 select[multiple].form-control--sm {
   height: auto;
+}
+
+.radio,
+.checkbox {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.radio label,
+.checkbox label {
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+  min-height: 1.5rem;
+}
+
+[disabled] .radio input[type="radio"],
+[disabled] .radio input[type="checkbox"],
+[readonly] .radio input[type="radio"],
+[readonly] .radio input[type="checkbox"],
+fieldset[disabled] .radio input[type="radio"],
+fieldset[disabled] .radio input[type="checkbox"], .radio.block__is-disabled input[type="radio"],
+.radio.block__is-disabled input[type="checkbox"], [disabled]
+.checkbox input[type="radio"],
+[disabled]
+.checkbox input[type="checkbox"],
+[readonly]
+.checkbox input[type="radio"],
+[readonly]
+.checkbox input[type="checkbox"],
+fieldset[disabled]
+.checkbox input[type="radio"],
+fieldset[disabled]
+.checkbox input[type="checkbox"],
+.checkbox.block__is-disabled input[type="radio"],
+.checkbox.block__is-disabled input[type="checkbox"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.radio input[type="radio"],
+.radio input[type="checkbox"],
+.radio-inline input[type="radio"],
+.radio-inline input[type="checkbox"],
+.checkbox input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="radio"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -1.5rem;
+  margin-top: 0.5rem;
 }
 
 .container {
@@ -4758,608 +5426,6 @@ pre {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-}
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
-.button {
-  font-size: 1rem;
-  height: 3rem;
-  line-height: 3rem;
-  padding: 0 1.5rem;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 700;
-  margin-bottom: 0;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.button:hover {
-  text-decoration: none;
-}
-
-.button:focus, .button.focus {
-  outline: 0;
-  transform: translateY(0.14286rem);
-}
-
-.button:active, .button.active {
-  background-image: none;
-}
-
-.button,
-.button--default,
-.button--secondary {
-  background-color: #6B6B6B;
-  box-shadow: 0 0.14286rem 0 0 #3e3e3e;
-  transition: background-color ease-in 0.12s;
-}
-
-.button, .button:visited,
-.button--default,
-.button--default:visited,
-.button--secondary,
-.button--secondary:visited {
-  color: #FFF;
-}
-
-.button:focus, .button:focus:hover, .button.focus, .button.focus:hover,
-.button--default:focus,
-.button--default:focus:hover,
-.button--default.focus,
-.button--default.focus:hover,
-.button--secondary:focus,
-.button--secondary:focus:hover,
-.button--secondary.focus,
-.button--secondary.focus:hover {
-  background-color: #858585;
-  box-shadow: 0 0 0 0 transparent;
-  color: #FFF;
-}
-
-.button:hover,
-.button--default:hover,
-.button--secondary:hover {
-  background-color: #858585;
-  box-shadow: 0 0.14286rem 0 0 #858585;
-  color: #FFF;
-}
-
-.button--primary {
-  background-color: #0084E0;
-  box-shadow: 0 0.14286rem 0 0 #004f87;
-  transition: background-color ease-in 0.12s;
-}
-
-.button--primary, .button--primary:visited {
-  color: #FFF;
-}
-
-.button--primary:focus, .button--primary:focus:hover, .button--primary.focus, .button--primary.focus:hover {
-  background-color: #149eff;
-  box-shadow: 0 0 0 0 transparent;
-  color: #FFF;
-}
-
-.button--primary:hover {
-  background-color: #149eff;
-  box-shadow: 0 0.14286rem 0 0 #149eff;
-  color: #FFF;
-}
-
-.button--main {
-  background-color: #16A401;
-  box-shadow: 0 0.14286rem 0 0 #0a4b00;
-  transition: background-color ease-in 0.12s;
-}
-
-.button--main, .button--main:visited {
-  color: #FFF;
-}
-
-.button--main:focus, .button--main:focus:hover, .button--main.focus, .button--main.focus:hover {
-  background-color: #1dd701;
-  box-shadow: 0 0 0 0 transparent;
-  color: #FFF;
-}
-
-.button--main:hover {
-  background-color: #1dd701;
-  box-shadow: 0 0.14286rem 0 0 #1dd701;
-  color: #FFF;
-}
-
-.button--link {
-  background-color: transparent;
-  box-shadow: 0 0.14286rem 0 0 transparent;
-  transition: background-color ease-in 0.12s;
-}
-
-.button--link, .button--link:visited {
-  color: #0084E0;
-}
-
-.button--link:focus, .button--link:focus:hover, .button--link.focus, .button--link.focus:hover {
-  background-color: rgba(26, 26, 26, 0);
-  box-shadow: 0 0 0 0 transparent;
-  color: #0084E0;
-}
-
-.button--link:hover {
-  background-color: rgba(26, 26, 26, 0);
-  box-shadow: 0 0.14286rem 0 0 rgba(26, 26, 26, 0);
-  color: #0084E0;
-}
-
-.button--link:hover {
-  text-decoration: underline;
-}
-
-.button--facebook {
-  background-color: #4957B3;
-  box-shadow: 0 0.14286rem 0 0 #2f3874;
-  transition: background-color ease-in 0.12s;
-}
-
-.button--facebook, .button--facebook:visited {
-  color: #FFF;
-}
-
-.button--facebook:focus, .button--facebook:focus:hover, .button--facebook.focus, .button--facebook.focus:hover {
-  background-color: #6c77c3;
-  box-shadow: 0 0 0 0 transparent;
-  color: #FFF;
-}
-
-.button--facebook:hover {
-  background-color: #6c77c3;
-  box-shadow: 0 0.14286rem 0 0 #6c77c3;
-  color: #FFF;
-}
-
-.button--lg {
-  font-size: 1.28571rem;
-  height: 3.25rem;
-  line-height: 3.25rem;
-  padding: 0 1.75rem;
-}
-
-.button--sm {
-  font-size: 0.85714rem;
-  height: 2rem;
-  line-height: 2rem;
-  padding: 0 1.25rem;
-}
-
-.button--block {
-  display: block;
-  width: 100%;
-}
-
-.button--block.button--sm {
-  font-size: 1rem;
-  height: 3rem;
-  line-height: 3rem;
-  padding: 0 1.5rem;
-}
-
-@media only screen and (min-width: 73.14286rem) {
-  .button--block.button--sm {
-    font-size: 0.85714rem;
-    height: 2rem;
-    line-height: 2rem;
-    padding: 0 1.25rem;
-  }
-}
-
-.button--block + .button--block {
-  margin-top: 0.5rem;
-}
-
-.button__is-fixed-to-bottom {
-  border-radius: 0;
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-[disabled].button, [disabled].button:hover, [disabled].button:focus, [disabled].button:disabled, [disabled].button:disabled:hover, [disabled].button:disabled:focus, [disabled].button--main, [disabled].button--main:hover, [disabled].button--main:focus, [disabled].button--primary, [disabled].button--primary:hover, [disabled].button--primary:focus, [disabled].button--secondary, [disabled].button--secondary:hover, [disabled].button--secondary:focus, [disabled].button--link, [disabled].button--link:hover, [disabled].button--link:focus, [disabled].button--facebook, [disabled].button--facebook:hover, [disabled].button--facebook:focus,
-[readonly].button,
-[readonly].button:hover,
-[readonly].button:focus,
-[readonly].button:disabled,
-[readonly].button:disabled:hover,
-[readonly].button:disabled:focus,
-[readonly].button--main,
-[readonly].button--main:hover,
-[readonly].button--main:focus,
-[readonly].button--primary,
-[readonly].button--primary:hover,
-[readonly].button--primary:focus,
-[readonly].button--secondary,
-[readonly].button--secondary:hover,
-[readonly].button--secondary:focus,
-[readonly].button--link,
-[readonly].button--link:hover,
-[readonly].button--link:focus,
-[readonly].button--facebook,
-[readonly].button--facebook:hover,
-[readonly].button--facebook:focus,
-fieldset[disabled].button,
-fieldset[disabled].button:hover,
-fieldset[disabled].button:focus,
-fieldset[disabled].button:disabled,
-fieldset[disabled].button:disabled:hover,
-fieldset[disabled].button:disabled:focus,
-fieldset[disabled].button--main,
-fieldset[disabled].button--main:hover,
-fieldset[disabled].button--main:focus,
-fieldset[disabled].button--primary,
-fieldset[disabled].button--primary:hover,
-fieldset[disabled].button--primary:focus,
-fieldset[disabled].button--secondary,
-fieldset[disabled].button--secondary:hover,
-fieldset[disabled].button--secondary:focus,
-fieldset[disabled].button--link,
-fieldset[disabled].button--link:hover,
-fieldset[disabled].button--link:focus,
-fieldset[disabled].button--facebook,
-fieldset[disabled].button--facebook:hover,
-fieldset[disabled].button--facebook:focus,
-.control__is-disabled .button.button,
-.control__is-disabled .button.button:hover,
-.control__is-disabled .button.button:focus,
-.control__is-disabled .button.button:disabled,
-.control__is-disabled .button.button:disabled:hover,
-.control__is-disabled .button.button:disabled:focus,
-.control__is-disabled .button.button--main,
-.control__is-disabled .button.button--main:hover,
-.control__is-disabled .button.button--main:focus,
-.control__is-disabled .button.button--primary,
-.control__is-disabled .button.button--primary:hover,
-.control__is-disabled .button.button--primary:focus,
-.control__is-disabled .button.button--secondary,
-.control__is-disabled .button.button--secondary:hover,
-.control__is-disabled .button.button--secondary:focus,
-.control__is-disabled .button.button--link,
-.control__is-disabled .button.button--link:hover,
-.control__is-disabled .button.button--link:focus,
-.control__is-disabled .button.button--facebook,
-.control__is-disabled .button.button--facebook:hover,
-.control__is-disabled .button.button--facebook:focus,
-.block__is-disabled .button.button,
-.block__is-disabled .button.button:hover,
-.block__is-disabled .button.button:focus,
-.block__is-disabled .button.button:disabled,
-.block__is-disabled .button.button:disabled:hover,
-.block__is-disabled .button.button:disabled:focus,
-.block__is-disabled .button.button--main,
-.block__is-disabled .button.button--main:hover,
-.block__is-disabled .button.button--main:focus,
-.block__is-disabled .button.button--primary,
-.block__is-disabled .button.button--primary:hover,
-.block__is-disabled .button.button--primary:focus,
-.block__is-disabled .button.button--secondary,
-.block__is-disabled .button.button--secondary:hover,
-.block__is-disabled .button.button--secondary:focus,
-.block__is-disabled .button.button--link,
-.block__is-disabled .button.button--link:hover,
-.block__is-disabled .button.button--link:focus,
-.block__is-disabled .button.button--facebook,
-.block__is-disabled .button.button--facebook:hover,
-.block__is-disabled .button.button--facebook:focus,
-.button__is-disabled.button,
-.button__is-disabled.button:hover,
-.button__is-disabled.button:focus,
-.button__is-disabled.button:disabled,
-.button__is-disabled.button:disabled:hover,
-.button__is-disabled.button:disabled:focus,
-.button__is-disabled.button--main,
-.button__is-disabled.button--main:hover,
-.button__is-disabled.button--main:focus,
-.button__is-disabled.button--primary,
-.button__is-disabled.button--primary:hover,
-.button__is-disabled.button--primary:focus,
-.button__is-disabled.button--secondary,
-.button__is-disabled.button--secondary:hover,
-.button__is-disabled.button--secondary:focus,
-.button__is-disabled.button--link,
-.button__is-disabled.button--link:hover,
-.button__is-disabled.button--link:focus,
-.button__is-disabled.button--facebook,
-.button__is-disabled.button--facebook:hover,
-.button__is-disabled.button--facebook:focus,
-.button__is-loading.button,
-.button__is-loading.button:hover,
-.button__is-loading.button:focus,
-.button__is-loading.button:disabled,
-.button__is-loading.button:disabled:hover,
-.button__is-loading.button:disabled:focus,
-.button__is-loading.button--main,
-.button__is-loading.button--main:hover,
-.button__is-loading.button--main:focus,
-.button__is-loading.button--primary,
-.button__is-loading.button--primary:hover,
-.button__is-loading.button--primary:focus,
-.button__is-loading.button--secondary,
-.button__is-loading.button--secondary:hover,
-.button__is-loading.button--secondary:focus,
-.button__is-loading.button--link,
-.button__is-loading.button--link:hover,
-.button__is-loading.button--link:focus,
-.button__is-loading.button--facebook,
-.button__is-loading.button--facebook:hover,
-.button__is-loading.button--facebook:focus {
-  background-color: #E2E2E2;
-  box-shadow: 0 0.14286rem 0 0 #bcbcbc;
-  color: #9E9E9E;
-  outline: 0;
-  transform: translateY(0);
-}
-
-.button__is-disabled {
-  cursor: not-allowed;
-}
-
-.button__is-loading {
-  cursor: default;
-}
-
-.button__is-loading::before {
-  content: "";
-  display: inline-block;
-  -webkit-animation: spinner-rotation 0.8s infinite linear;
-  -ms-animation: spinner-rotation 0.8s infinite linear;
-  -moz-animation: spinner-rotation 0.8s infinite linear;
-  animation: spinner-rotation 0.8s infinite linear;
-  border-bottom: 0.21429rem solid #9E9E9E;
-  border-left: 0.21429rem solid #D8D8D8;
-  border-right: 0.21429rem solid #9E9E9E;
-  border-top: 0.21429rem solid #9E9E9E;
-  border-radius: 50%;
-  height: 1.75rem;
-  vertical-align: middle;
-  width: 1.75rem;
-  margin-right: 0.5rem;
-  margin-top: -0.21429rem;
-}
-
-.button__is-loading.button--lg::before {
-  border-width: 0.21429rem;
-  height: 2rem;
-  width: 2rem;
-}
-
-.button__is-loading.button--sm::before {
-  border-width: 0.14286rem;
-  height: 1rem;
-  width: 1rem;
-}
-
-.button__has-icon {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  text-transform: none;
-}
-
-.button__has-icon::before,
-.button__has-icon > [class^="gb-icon-"]::before {
-  display: block;
-  font-family: "garba-icon-font" !important;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  speak: none;
-  left: 1rem;
-  margin-top: -0.75rem;
-  position: absolute;
-  top: 50%;
-}
-
-.button__has-icon.button--facebook::before,
-.button__has-icon > [class^="gb-icon-"].button--facebook::before {
-  content: "";
-}
-
-.button--action {
-  font-size: 1.5rem;
-  height: 3rem;
-  line-height: 1.5rem;
-  padding: 0.75rem;
-  width: 3rem;
-  background-color: transparent;
-  border: 0;
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  box-shadow: 0 0 0 0 transparent;
-  color: #9E9E9E;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 700;
-  margin-bottom: 0;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.button--action:hover {
-  background-color: #E2E2E2;
-  text-decoration: none;
-}
-
-.button--action:focus, .button--action.focus {
-  background-color: transparent;
-  outline: 0;
-}
-
-.button--action > i {
-  left: 50%;
-  margin-left: -0.75rem;
-  margin-top: -0.75rem;
-  top: 50%;
-  position: absolute;
-}
-
-.button--action > i::before {
-  display: block;
-  font-family: "garba-icon-font" !important;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  speak: none;
-  width: 1.5rem;
-}
-
-@keyframes action-active {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
-}
-
-.button--action__primary {
-  color: #000;
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
-}
-
-.button--action__primary, .button--action__primary:visited {
-  color: #000;
-}
-
-.button--action__primary:hover, .button--action__primary:focus, .button--action__primary.button__is-active {
-  color: #000;
-}
-
-.button--action__primary > i::before {
-  content: "";
-}
-
-.button--action__fav {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
-}
-
-.button--action__fav, .button--action__fav:visited {
-  color: #D1030F;
-}
-
-.button--action__fav:hover, .button--action__fav:focus, .button--action__fav.button__is-active {
-  color: #D1030F;
-}
-
-.button--action__fav > i::before {
-  content: "";
-}
-
-.button--action__fav:focus > i {
-  -webkit-animation: action-active 0.8s steps(28) 1;
-  -ms-animation: action-active 0.8s steps(28) 1;
-  -moz-animation: action-active 0.8s steps(28) 1;
-  animation: action-active 0.8s steps(28) 1;
-  background-image: url(../images/animation--fav.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: 2900%;
-  display: block;
-  height: 3.75rem;
-  margin-left: -1.875rem;
-  margin-top: -1.875rem;
-  width: 3.75rem;
-}
-
-.button--action__fav:focus > i::before {
-  content: initial;
-}
-
-.button--action__default {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
-}
-
-.button--action__default, .button--action__default:visited {
-  color: #F8AA29;
-}
-
-.button--action__default:hover, .button--action__default:focus, .button--action__default.button__is-active {
-  color: #F8AA29;
-}
-
-.button--action__default > i::before {
-  content: "";
-}
-
-.button--action__facebook {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
-}
-
-.button--action__facebook, .button--action__facebook:visited {
-  color: #4957B3;
-}
-
-.button--action__facebook:hover, .button--action__facebook:focus, .button--action__facebook.button__is-active {
-  color: #4957B3;
-}
-
-.button--action__facebook > i::before {
-  content: "";
-}
-
-.button--action__twitter {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
-}
-
-.button--action__twitter, .button--action__twitter:visited {
-  color: #60B5F1;
-}
-
-.button--action__twitter:hover, .button--action__twitter:focus, .button--action__twitter.button__is-active {
-  color: #60B5F1;
-}
-
-.button--action__twitter > i::before {
-  content: "";
 }
 
 .collapse--block {

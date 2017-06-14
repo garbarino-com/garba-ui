@@ -14,7 +14,7 @@
 // .button--action__twitter - Compartir item en Twitter.
 // .button__is-active - Todos los modificadores tienen disponible su propia variable de la clase `button__is-active` para cuando sea necesario marcar que una acción ya se ha ejecutado (ej. /"El producto se ha marcado como favorito"/).
 //
-// Styleguide Components.Buttons.6-Action
+// Styleguide Elements.Buttons.6-Action
 
 .button--action {
   @include button-action-size($btn-action-padding, $btn-action-size, $btn-action-font-size);

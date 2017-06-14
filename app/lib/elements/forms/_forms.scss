@@ -30,7 +30,7 @@ legend {
 
 label {
   display: inline-block;
-  font-weight: 400;
+  font-weight: $font-weight-base;
   margin-bottom: $spacer-sm;
 
   // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
@@ -44,6 +44,16 @@ label {
       display: inline-block;
       margin-left: $spacer-xs;
     }
+  }
+
+  [disabled] &,
+  [readonly] &,
+  fieldset[disabled] &,
+  .control__is-disabled ~ &,
+  .block__is-disabled & {
+    cursor: not-allowed;
+    opacity: $modifier-opacity-value;
+    pointer-events: none;
   }
 }
 
@@ -72,9 +82,11 @@ textarea {
 // Browsers -IE11 no soportan del todo el uso del atributo `disabled` en `<fieldset>`s. Para mayor seguridad se recomienda
 // utilizar JavaScript para deshabilitar el `<fieldset>`.
 //
-// .block__is-disabled - El bloque está deshabilitado **(es necesario agregar el
-// atributo `disabled` al `<input>`o  al `<fieldset>`)**.
-// .block__is-required - El bloque es obligatorio.
+// .block__is-disabled - El bloque está deshabilitado *(es conveniente agregar el
+// atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad de css
+// `pointer-events:none` no está del todo soportada)*
+// .block__is-required - Agrega un asterico color rojo al `<label>`para señalar
+// que es un bloque obligatorio.
 //
 // Markup: basic-form.hbs
 //
@@ -171,6 +183,7 @@ textarea {
       border-color: $input-border-color;
       box-shadow: none;
       cursor: not-allowed;
+      pointer-events: none;
     }
   }
 }
@@ -183,5 +196,59 @@ select[multiple] {
   }
 }
 
-// Small input
-@include input-size('.form-control--sm', $font-size-sm, $block-height-sm, $spacer-sm);
+// Small input variant
+@include input-size('.form-control--sm', $font-size-sm, $block-size-sm, $spacer-sm);
+
+
+
+// Checkboxes y Radio buttons
+//
+// Indenta los labels para posicionar los radios/checkboxes como controles flotantes.
+//
+// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
+// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
+// de css `pointer-events:none` no está del todo soportada)*.
+//
+// Markup: checkbox-and-radio.hbs
+//
+// Styleguide Elements.Forms.3-Checkboxes&Radios
+
+.radio,
+.checkbox {
+  display: block;
+  margin-top: $spacer-sm;
+  margin-bottom: $spacer-sm;
+  position: relative;
+
+  label {
+    cursor: pointer;
+    font-weight: $font-weight-base;
+    margin-bottom: 0;
+    padding-left: $controller-spacer;
+    min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
+  }
+
+  [disabled] &,
+  [readonly] &,
+  fieldset[disabled] &,
+  &.block__is-disabled {
+    input[type="radio"],
+    input[type="checkbox"] {
+      cursor: not-allowed;
+      opacity: $modifier-opacity-value;
+      pointer-events: none;
+    }
+  }
+}
+
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline {
+  input[type="radio"],
+  input[type="checkbox"] {
+    position: absolute;
+    margin-left: $controller-spacer * -1;
+    margin-top: $spacer-sm;
+  }
+}

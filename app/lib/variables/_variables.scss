@@ -62,18 +62,20 @@ $gray-lighter:           #F6F6F6 !default;
 $modifier-operation:            lighten !default;
 $modifier-hover-value:          10% !default;
 $modifier-focus-value:          10% !default;
+$modifier-opacity-value:        .5 !default;
 
 // Default transition animation
 $transition-timing-base:       .12s !default;
 
 // Generic spacers for elements
 $spacer-base:           1rem !default;
+$spacer-lg:             1.5rem !default;
 $spacer-sm:             .5rem !default;
 $spacer-xs:             .25rem !default; // Mostly reserved for inline spaces.
 
 // Block element height (ties the value height of buttons and inputs)
-$block-height-base:     ($spacer-base * 2) + $baseline-grid-computed !default;
-$block-height-sm:       ($spacer-sm * 2) + $baseline-grid-computed !default;
+$block-size-base:      ($spacer-base * 2) + $baseline-grid-computed !default;
+$block-size-sm:        ($spacer-sm * 2) + $baseline-grid-computed !default;
 
 
 // Background color for `<body>`.
@@ -184,6 +186,10 @@ $font-size-sm:        px-to-rem(12px) !default; // 12px
 $small-font-size:     75% !default;
 $small-color:         $text-muted !default;
 
+// Line Height
+$line-height-base:        1.5 !default;
+$line-height-computed:    $line-height-base * $baseline-grid-computed !default;
+
 
 $font-weight-base: 400;
 
@@ -235,9 +241,9 @@ $zindex-navbar:             1030 !default;
 //
 // For each button, define text color and background and border color.
 
-$btn-height-base:                    $block-height-base !default;
+$btn-height-base:                    $block-size-base !default;
 $btn-height-lg-size:                 3.25rem !default;
-$btn-height-sm-size:                 $block-height-sm !default;
+$btn-height-sm-size:                 $block-size-sm !default;
 $btn-font-weight:                    700 !default;
 $btn-text-transform:                 uppercase !default;
 $btn-base-color:                     $text-inverse !default;
@@ -300,12 +306,15 @@ $label-is-required:                  $brand-corporate !default;
 $input-bg:                           $widget-bg !default;
 $input-bg-disabled:                  $gray-lighter !default;
 $input-color:                        $text-color !default;
-$input-height:                       $block-height-base !default;
+$input-height:                       $block-size-base !default;
 $input-border-color:                 $gray-medium !default;
 $input-border-focus:                 $brand-primary !default;
 $input-border-focus-opacity:         .6 !default;
 $input-border-focus-shadow-lenght:   4px !default;
-$input-color-placeholder:            state-hover-modifier($input-color);
+$input-color-placeholder:            state-hover-modifier($input-color) !default;
+
+// Spacer for radios/checkboxes
+$controller-spacer:                  $spacer-lg !default;
 
 
 // Tooltip definitions

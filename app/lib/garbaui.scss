@@ -30,14 +30,14 @@
 @import "helpers/helpers";
 
 // General elements
+@import "elements/buttons/buttons";
+@import "elements/button-actions/button-actions";
 @import "elements/forms/forms";
 @import "elements/grid/grid";
 @import "elements/page-elements/page-elements";
 @import "elements/type/type";
 
 // UI Components
-@import "components/buttons/buttons";
-@import "components/button-actions/button-actions";
 @import "components/collapse/collapse";
 @import "components/icons/icons";
 @import "components/image-container/image-container";
