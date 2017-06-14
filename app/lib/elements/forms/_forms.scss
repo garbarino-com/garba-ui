@@ -60,8 +60,20 @@ textarea {
 // el ancho a 100% por default. Envuelva los labels y los controles en un elemento
 // con la clase `.form-block` para que el espaciado sea el óptimo.
 //
+// **(Añadí `disabled` al `<fieldset>` para deshabilitar todos los controles de una sola vez.)**
+//
+// > ### Advertencia sobre la funcionalidad de los `<a>`
+// Por default, los browsers van a tratar los controles de form nativos (`<input>`, `<select>` y `<button>`) dentro de un
+// `<fieldset disabled>` como deshabilitados,   interacciones de mouse y de teclado con los mismos. Sin embargo, si tu `<form>`
+// incluye también algún `<a ... class="button button-*">`, estos sólo van a recibir la propiedad `pointer-events: none;`.
+// [Esta propiedad no está del todo estandarizada](http://caniuse.com/#feat=pointer) y no evita que el teclado haga
+// `:focus` o active esos links. Para mayor seguridad se recomienda utilizar JavaScript para deshabilitar esos links.
+// ### Compatibilidad cross-browser
+// Browsers -IE11 no soportan del todo el uso del atributo `disabled` en `<fieldset>`s. Para mayor seguridad se recomienda
+// utilizar JavaScript para deshabilitar el `<fieldset>`.
+//
 // .block__is-disabled - El bloque está deshabilitado **(es necesario agregar el
-// atributo `disabled` al input)**.
+// atributo `disabled` al `<input>`o  al `<fieldset>`)**.
 // .block__is-required - El bloque es obligatorio.
 //
 // Markup: basic-form.hbs
@@ -99,8 +111,8 @@ textarea {
 // * `input[type="color"]`
 //
 // :focus - El campo está seleccionado.
-// .control__is-disabled - El campo está deshabilitado **(es necesario agregar el atributo
-// `disabled` al input)**.
+// .control__is-disabled - El campo está deshabilitado *(es necesario agregar el atributo
+// `disabled` al `<input>` o al `<fieldset>` contenedor)*.
 //
 // Markup: form-controls.hbs
 //
