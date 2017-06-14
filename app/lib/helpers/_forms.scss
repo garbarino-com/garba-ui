@@ -12,19 +12,16 @@
 //
 // [converter] $parent hack
 
-@mixin input-size($parent, $height, $padding-vertical, $padding-horizontal,
-    $font-size, $line-height, $border-radius) {
+@mixin input-size($parent, $font-size, $height, $padding) {
   #{$parent} {
-    height: $input-height;
-    padding: $padding-vertical $padding-horizontal;
     font-size: $font-size;
-    line-height: $line-height;
-    border-radius: $border-radius;
+    height: $height;
+    padding: $padding;
   }
 
   select#{$parent} {
-    height: $input-height;
-    line-height: $input-height;
+    height: $height;
+    line-height: 1;
   }
 
   textarea#{$parent},

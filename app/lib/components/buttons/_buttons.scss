@@ -115,8 +115,8 @@ button:focus {
 //
 // Los botones tienen 3 variaciones de tamaño:
 // * **Default** (si no hay ninguna especificación de tamaño)
-// * **Large** (`button--lg`)
-// * **Small** (`button--sm`)
+// * **Large** (`.button--lg`)
+// * **Small** (`.button--sm`)
 //
 // Markup: button.hbs
 //
@@ -191,7 +191,15 @@ button:focus {
 //
 // Styleguide Components.Buttons.5-StateModifiers
 
-// Disabled and Loading states
+// Agregamos estos selectores a la definición para que el estado de deshabilitado
+// funcione bien en los forms.
+[disabled],
+[readonly],
+fieldset[disabled],
+.control__is-disabled .button,
+.block__is-disabled .button,
+
+// Estados Disabled y Loading
 .button__is-disabled,
 .button__is-loading {
   &.button,

@@ -2,7 +2,7 @@
 
 // stylelint-disable max-line-length, scss/dollar-variable-colon-space-after
 
-// ** Variables
+// Variables
 // --------------------------------------------------
 
 
@@ -35,7 +35,7 @@ $baseline-grid-computed:         px-to-rem($baseline-grid);
 $base-line-height:      14px;
 
 
-// ** Color Palette
+// Color Palette
 // --------------------------------------------------
 //
 // Brand color palette
@@ -63,9 +63,6 @@ $modifier-operation:            lighten !default;
 $modifier-hover-value:          10% !default;
 $modifier-focus-value:          10% !default;
 
-// Block element height (ties the value height of buttons and inputs)
-$block-height-base:             3rem !default;
-
 // Default transition animation
 $transition-timing-base:       .12s !default;
 
@@ -73,6 +70,10 @@ $transition-timing-base:       .12s !default;
 $spacer-base:           1rem !default;
 $spacer-sm:             .5rem !default;
 $spacer-xs:             .25rem !default; // Mostly reserved for inline spaces.
+
+// Block element height (ties the value height of buttons and inputs)
+$block-height-base:     ($spacer-base * 2) + $baseline-grid-computed !default;
+$block-height-sm:       ($spacer-sm * 2) + $baseline-grid-computed !default;
 
 
 // Background color for `<body>`.
@@ -99,14 +100,13 @@ $link-hover-decoration: underline !default;
 
 
 
-// ** Images
-// --------------------------------------------------
+// Images
 
 $assets-url:             "../" !default;
 $images-url:             $assets-url + "images/" !default;
 $icon-font-url:          $assets-url + "fonts/" !default;
 
-// ** Old icon font
+// Old icon font
 // These icons are to be deprecated in the future.
 $icon-font-url_old:      $icon-font-url !default;
 
@@ -237,7 +237,7 @@ $zindex-navbar:             1030 !default;
 
 $btn-height-base:                    $block-height-base !default;
 $btn-height-lg-size:                 3.25rem !default;
-$btn-height-sm-size:                 2rem !default;
+$btn-height-sm-size:                 $block-height-sm !default;
 $btn-font-weight:                    700 !default;
 $btn-text-transform:                 uppercase !default;
 $btn-base-color:                     $text-inverse !default;

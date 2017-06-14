@@ -92,7 +92,7 @@ textarea {
 // Usamos la clase `.form-control` para darle estilos a los elementos de input
 // textuales de los *forms*.
 //
-// **Esta clase puede usar en los siguientes elementos de form:**
+// *Esta clase puede usar en los siguientes elementos de form:*
 // * `select`
 // * `textarea`
 // * `input[type="text"]`
@@ -109,10 +109,14 @@ textarea {
 // * `input[type="search"]`
 // * `input[type="tel"]`
 // * `input[type="color"]`
+// > Noten que el `<select>` nativo de Safari y Chrome tiene unos bordes redondeados
+// que no se pueden modificar vía la propiedad `border-radius`.
 //
 // :focus - El campo está seleccionado.
 // .control__is-disabled - El campo está deshabilitado *(es necesario agregar el atributo
 // `disabled` al `<input>` o al `<fieldset>` contenedor)*.
+// .form-control--sm - Única variable de tamaño (por el momento). El alto de este
+// input está atado al alto de la variable de botón `.button--sm`.
 //
 // Markup: form-controls.hbs
 //
@@ -178,3 +182,6 @@ select[multiple] {
     height: auto;
   }
 }
+
+// Small input
+@include input-size('.form-control--sm', $font-size-sm, $block-height-sm, $spacer-sm);
