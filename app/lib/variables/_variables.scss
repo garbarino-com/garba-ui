@@ -301,7 +301,9 @@ $btn-action-size:                    $btn-action-font-size + ($btn-action-paddin
 // Form definitions
 $form-block-spacing:                 $spacer-base !default;
 
-$label-is-required:                  $brand-corporate !default;
+$block-is-required-symbol:           $brand-corporate !default;
+$block-label-font-weight:            $font-weight-base !default;
+$block-label-font-weight-selected:   700 !default;
 
 $input-bg:                           $widget-bg !default;
 $input-bg-disabled:                  $gray-lighter !default;
@@ -315,6 +317,10 @@ $input-color-placeholder:            state-hover-modifier($input-color) !default
 
 // Spacer for radios/checkboxes
 $controller-spacer:                  $spacer-lg !default;
+$controller-size:                    px-to-rem(10px) !default;
+$controler-active:                   $brand-primary;
+$controler-bg-inactive:              $widget-bg;
+$controler-border-inactive:          $gray-medium;
 
 
 // Tooltip definitions
@@ -362,7 +368,7 @@ $imgcontainer-spinner-color-inactive:    $spinner-color-inactive !default;
 $imgcontainer-spinner-color-active:      $spinner-color-active !default;
 
 
-// Tag component
+// Tags
 $tag-bg:                    transparent !default;
 $tag-border:                $gray-dark !default;
 $tag-color:                 $tag-border !default;
@@ -374,7 +380,7 @@ $tag-padding:               0 $spacer-sm !default;
 $tag-img-height:            1.5rem !default;
 
 
-// label component
+// Labels
 $label-border:                transparent !default;
 $label-base-color:            $text-inverse !default;
 $label-font-size:             .8em !default;
@@ -385,7 +391,7 @@ $label-padding-x:             .5em !default;
 $label-padding-y:             .25em !default;
 $label-img-height:            1.5em !default;
 
-// Label color definitions
+// Labels color definitions
 $label-main-color:            $label-base-color !default;
 $label-main-bg:               $brand-revenue !default;
 
@@ -397,6 +403,10 @@ $label-secondary-bg:          $brand-secondary !default;
 
 // Collapse
 $collapse-border:             $gray-medium !default;
+
+
+// Navbar
+$navbar-bg:                   $widget-bg !default;
 
 
 // Carousel default settings

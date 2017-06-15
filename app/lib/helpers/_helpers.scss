@@ -17,6 +17,14 @@
 //
 // Styleguide Helpers.Misc
 
+// Base framework variables
+//
+// Volvemos a importamr las variables para que esten disponibles si se llama
+// sólo helpers.
+
+@import "../variables/variables";
+@import "../variables/icon-variables";
+
 // Core Legacy (v1.3.2)
 //
 // La librería importa los mixins de **Garba-UI (v1.3.2)** que están disponibles

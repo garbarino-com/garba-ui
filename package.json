@@ -29,6 +29,9 @@
     "url": "https://github.com/garbarino-com/garba-ui/issues"
   },
   "homepage": "https://github.com/garbarino-com/garba-ui#readme",
+  "pre-commit": [
+    "git add dist/"
+  ],
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",

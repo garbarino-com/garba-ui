@@ -30,7 +30,7 @@ legend {
 
 label {
   display: inline-block;
-  font-weight: $font-weight-base;
+  font-weight: $block-label-font-weight;
   margin-bottom: $spacer-sm;
 
   // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
@@ -39,7 +39,7 @@ label {
   // Indica que el campo de input es requerido.
   .block__is-required & {
     &::after {
-      color: $label-is-required;
+      color: $block-is-required-symbol;
       content: "*";
       display: inline-block;
       margin-left: $spacer-xs;
@@ -76,7 +76,7 @@ textarea {
 // Por default, los browsers van a tratar los controles de form nativos (`<input>`, `<select>` y `<button>`) dentro de un
 // `<fieldset disabled>` como deshabilitados,   interacciones de mouse y de teclado con los mismos. Sin embargo, si tu `<form>`
 // incluye también algún `<a ... class="button button-*">`, estos sólo van a recibir la propiedad `pointer-events: none;`.
-// [Esta propiedad no está del todo estandarizada](http://caniuse.com/#feat=pointer) y no evita que el teclado haga
+// [Esta propiedad no está del todo estandarizada](http://caniuse.com/#feat=pointer-events) y no evita que el teclado haga
 // `:focus` o active esos links. Para mayor seguridad se recomienda utilizar JavaScript para deshabilitar esos links.
 // ### Compatibilidad cross-browser
 // Browsers -IE11 no soportan del todo el uso del atributo `disabled` en `<fieldset>`s. Para mayor seguridad se recomienda
@@ -84,7 +84,7 @@ textarea {
 //
 // .block__is-disabled - El bloque está deshabilitado *(es conveniente agregar el
 // atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad de css
-// `pointer-events:none` no está del todo soportada)*
+// `pointer-events:none`  [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
 // .block__is-required - Agrega un asterico color rojo al `<label>`para señalar
 // que es un bloque obligatorio.
 //
@@ -207,7 +207,7 @@ select[multiple] {
 //
 // .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
 // agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
-// de css `pointer-events:none` no está del todo soportada)*.
+// de css `pointer-events:none` [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
 //
 // Markup: checkbox-and-radio.hbs
 //
@@ -228,6 +228,7 @@ select[multiple] {
     min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
   }
 
+  // Define estilos para el bloque deshabilitado.
   [disabled] &,
   [readonly] &,
   fieldset[disabled] &,
@@ -239,8 +240,74 @@ select[multiple] {
       pointer-events: none;
     }
   }
+
+  // Selected state
+  input[type="radio"],
+  input[type="checkbox"] {
+    @include prefixer(appearance, none, webkit ms spec);
+    background-color: $controler-bg-inactive;
+    border: 1px solid $controler-border-inactive;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:checked {
+      border-color: $controler-active;
+    }
+
+    // Elemento que se dibuja cuando se está `:checked`
+    &::after {
+      font-family: $icon-font-name !important;
+      line-height: 1;
+      transition: background-color ease-in-out $transition-timing-base,
+      border-color ease-in-out $transition-timing-base,
+        color ease-in-out $transition-timing-base;
+    }
+  }
+
+  // Estilos específicos para radiobuttons
+  input[type="radio"] {
+    border-radius: 50%;
+
+    &::after {
+      @include make-pseudo-element;
+      background-color: transparent;
+      border-radius: 50%;
+      display: block;
+      height: $controller-size;
+      margin-left: ($controller-size / 2) * -1;
+      margin-top: ($controller-size / 2) * -1;
+      width: $controller-size;
+    }
+
+    &:checked::after {
+      background-color: $controler-active;
+    }
+  }
+
+  // Estilos específicos para checkbox
+  input[type="checkbox"] {
+    border-radius: $border-radius-base;
+
+    &::after {
+      font-size: $controller-size;
+      color: transparent;
+      content: $icon-checkmark;
+      margin-left: ($controller-size / 2) * -1;
+      margin-top: .25rem * -1;
+    }
+
+    &:checked::after {
+      color: $controler-active;
+    }
+  }
 }
 
+// Posiciona los controles
 .radio,
 .radio-inline,
 .checkbox,
@@ -249,6 +316,44 @@ select[multiple] {
   input[type="checkbox"] {
     position: absolute;
     margin-left: $controller-spacer * -1;
-    margin-top: px-to-rem(5px);
+    margin-top: $spacer-xs;
+
+    &::after {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+    }
   }
+}
+
+
+
+// Inline checkboxes y Radios
+//
+// Agrega la clase `.radio-inline` o `.checkbox-inline` para poner varios checkboxes
+// o radios en la misma línea.
+//
+// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
+// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
+// de css `pointer-events:none` [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+//
+// Markup: checkbox-and-radio--inline.hbs
+//
+// Styleguide Elements.Forms.4-InlineCheckboxes&Radios
+
+.radio-inline,
+.checkbox-inline {
+  cursor: pointer;
+  font-weight: $block-label-font-weight;
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: $controller-spacer;
+  position: relative;
+  vertical-align: middle;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: $spacer-lg; // space out consecutive inline controls
 }

@@ -34,17 +34,17 @@
 @import "elements/button-actions/button-actions";
 @import "elements/forms/forms";
 @import "elements/grid/grid";
+@import "elements/image-container/image-container";
 @import "elements/page-elements/page-elements";
 @import "elements/type/type";
+@import "elements/value/value";
 
 // UI Components
 @import "components/collapse/collapse";
 @import "components/icons/icons";
-@import "components/image-container/image-container";
 @import "components/labels/labels";
 @import "components/tags/tags";
-@import "components/tooltips/tooltips";
-@import "components/value/value";
 
 // Javascript Components
 @import "functional/carousel/carousel";
+@import "components/tooltips/tooltips";
