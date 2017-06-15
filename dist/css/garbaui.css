@@ -4277,6 +4277,10 @@ fieldset[disabled] .form-control:focus, .form-control.control__is-disabled, .for
   pointer-events: none;
 }
 
+.form-control:-webkit-autofill {
+  background-color: inherit !important;
+}
+
 textarea.form-control,
 select[multiple].form-control {
   height: auto;
@@ -4460,6 +4464,39 @@ fieldset[disabled]
 .checkbox-inline + .checkbox-inline {
   margin-top: 0;
   margin-left: 1.5rem;
+}
+
+.form-horizontal .form-block {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.form-horizontal .form-block:before, .form-horizontal .form-block:after {
+  content: "";
+  display: table;
+}
+
+.form-horizontal .form-block:after {
+  clear: both;
+}
+
+.form-horizontal .control-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 54.85714rem) {
+  .form-horizontal .control-label {
+    line-height: 1;
+    margin-bottom: 0;
+    padding-top: 1rem;
+  }
+}
+
+.form-horizontal .control-label--sm {
+  font-size: 0.85714rem;
+  margin-bottom: 0.25rem;
+  padding-top: 0.5rem;
 }
 
 .container {
