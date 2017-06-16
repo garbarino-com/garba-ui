@@ -6,6 +6,8 @@
 
 // Normalización de elementos
 
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+
 fieldset {
   border: 0;
   margin: 0;
@@ -70,21 +72,28 @@ textarea {
 // el ancho a 100% por default. Envuelva los labels y los controles en un elemento
 // con la clase `.form-block` para que el espaciado sea el óptimo.
 //
-// **(Añadí `disabled` al `<fieldset>` para deshabilitar todos los controles de una sola vez.)**
+// **(Añadí `disabled` al `<fieldset>` para deshabilitar todos los controles de
+// una sola vez.)**
 //
 // > ### Advertencia sobre la funcionalidad de los `<a>`
-// Por default, los browsers van a tratar los controles de form nativos (`<input>`, `<select>` y `<button>`) dentro de un
-// `<fieldset disabled>` como deshabilitados,   interacciones de mouse y de teclado con los mismos. Sin embargo, si tu `<form>`
-// incluye también algún `<a ... class="button button-*">`, estos sólo van a recibir la propiedad `pointer-events: none;`.
-// [Esta propiedad no está del todo estandarizada](http://caniuse.com/#feat=pointer-events) y no evita que el teclado haga
-// `:focus` o active esos links. Para mayor seguridad se recomienda utilizar JavaScript para deshabilitar esos links.
+// Por default, los browsers van a tratar los controles de form nativos (`<input>`,
+// `<select>` y `<button>`) dentro de un
+// `<fieldset disabled>` como deshabilitados,   interacciones de mouse y de teclado
+// con los mismos. Sin embargo, si tu `<form>` incluye también algún
+// `<a ... class="button button-*">`, estos sólo van a recibir la propiedad
+// `pointer-events: none;`.
+// [Esta propiedad no está del todo estandarizada](http://caniuse.com/#feat=pointer-events)
+// y no evita que el teclado haga `:focus` o active esos links. Para mayor seguridad
+// se recomienda utilizar JavaScript para deshabilitar esos links.
 // ### Compatibilidad cross-browser
-// Browsers -IE11 no soportan del todo el uso del atributo `disabled` en `<fieldset>`s. Para mayor seguridad se recomienda
-// utilizar JavaScript para deshabilitar el `<fieldset>`.
+// Browsers -IE11 no soportan del todo el uso del atributo `disabled` en
+// `<fieldset>`s. Para mayor seguridad se recomienda utilizar JavaScript para
+// deshabilitar el `<fieldset>`.
 //
 // .block__is-disabled - El bloque está deshabilitado *(es conveniente agregar el
 // atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad de css
-// `pointer-events:none`  [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
 // .block__is-required - Agrega un asterico color rojo al `<label>`para señalar
 // que es un bloque obligatorio.
 //
@@ -201,7 +210,7 @@ select[multiple] {
 }
 
 // Small input variant
-@include input-size('.form-control--sm', $font-size-sm, $block-size-sm, $spacer-sm);
+@include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);
 
 
 
@@ -211,7 +220,8 @@ select[multiple] {
 //
 // .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
 // agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
-// de css `pointer-events:none` [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// de css `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
 //
 // Markup: checkbox-and-radio.hbs
 //
@@ -220,16 +230,19 @@ select[multiple] {
 .radio,
 .checkbox {
   display: block;
-  margin-top: $spacer-sm;
   margin-bottom: $spacer-sm;
+  margin-top: $spacer-sm;
   position: relative;
 
   label {
     cursor: pointer;
     font-weight: $font-weight-base;
     margin-bottom: 0;
+
+    // Ensure the input doesn't jump when there is no text
+    min-height: $line-height-computed;
+
     padding-left: $controller-spacer;
-    min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
   }
 
   // Define estilos para el bloque deshabilitado.
@@ -298,9 +311,9 @@ select[multiple] {
     border-radius: $border-radius-base;
 
     &::after {
-      font-size: $controller-size;
       color: transparent;
       content: $icon-checkmark;
+      font-size: $controller-size;
       margin-left: ($controller-size / 2) * -1;
       margin-top: .25rem * -1;
     }
@@ -318,9 +331,9 @@ select[multiple] {
 .checkbox-inline {
   input[type="radio"],
   input[type="checkbox"] {
-    position: absolute;
     margin-left: $controller-spacer * -1;
     margin-top: $spacer-xs;
+    position: absolute;
 
     &::after {
       left: 50%;
@@ -339,7 +352,8 @@ select[multiple] {
 //
 // .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
 // agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
-// de css `pointer-events:none` [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// de css `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
 //
 // Markup: checkbox-and-radio--inline.hbs
 //
@@ -348,8 +362,8 @@ select[multiple] {
 .radio-inline,
 .checkbox-inline {
   cursor: pointer;
-  font-weight: $block-label-font-weight;
   display: inline-block;
+  font-weight: $block-label-font-weight;
   margin-bottom: 0;
   padding-left: $controller-spacer;
   position: relative;
@@ -358,8 +372,8 @@ select[multiple] {
 
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
-  margin-top: 0;
   margin-left: $spacer-lg; // space out consecutive inline controls
+  margin-top: 0;
 }
 
 
@@ -400,3 +414,5 @@ select[multiple] {
     padding-top: $spacer-sm;
   }
 }
+
+// stylelint-enable selector-no-qualifying-type, selector-no-type

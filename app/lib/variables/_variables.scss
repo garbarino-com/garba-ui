@@ -111,8 +111,10 @@ $icon-font-url:          $assets-url + "fonts/" !default;
 
 // Old icon font
 // These icons are to be deprecated in the future.
-$icon-font-url_old:      $icon-font-url !default;
 
+// stylelint-disable scss/dollar-variable-pattern
+$icon-font-url_old:      $icon-font-url !default;
+// stylelint-enable scss/dollar-variable-pattern
 
 // Sistema de Grilla
 //

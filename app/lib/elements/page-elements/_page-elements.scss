@@ -20,6 +20,7 @@
 // Credit:
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
+// stylelint-disable selector-no-qualifying-type, selector-no-type
 html {
   box-sizing: border-box;
 }
@@ -160,3 +161,5 @@ textarea {
 .hidden {
   @include hide-element;
 }
+
+// stylelint-enable selector-no-qualifying-type, selector-no-type

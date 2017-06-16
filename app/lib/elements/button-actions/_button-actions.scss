@@ -8,11 +8,14 @@
 //
 // Markup: button-actions.hbs
 //
-// .button--action__primary - Ejecuta la acción primaria en un grupo de acciones (por el momento, está reservado a la acción de *Quitar del carrito*).
+// .button--action__primary - Ejecuta la acción primaria en un grupo de acciones
+// (por el momento, está reservado a la acción de *Quitar del carrito*).
 // .button--action__fav - Marcar item como favorito.
 // .button--action__facebook - Compartir item en Facebook.
 // .button--action__twitter - Compartir item en Twitter.
-// .button__is-active - Todos los modificadores tienen disponible su propia variable de la clase `button__is-active` para cuando sea necesario marcar que una acción ya se ha ejecutado (ej. /"El producto se ha marcado como favorito"/).
+// .button__is-active - Todos los modificadores tienen disponible su propia variable
+// de la clase `button__is-active` para cuando sea necesario marcar que una acción
+// ya se ha ejecutado (ej. /"El producto se ha marcado como favorito"/).
 //
 // Styleguide Elements.Buttons.6-Action
 
@@ -53,8 +56,8 @@
     left: 50%;
     margin-left: ($btn-action-font-size * .5) * -1;
     margin-top: ($btn-action-font-size * .5) * -1;
-    top: 50%;
     position: absolute;
+    top: 50%;
 
     &::before {
       @include icon-element($btn-action-font-size);

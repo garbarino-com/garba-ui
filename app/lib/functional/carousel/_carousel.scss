@@ -16,9 +16,15 @@
   @include prefixer(user-select, none, webkit ms spec);
   box-sizing: border-box;
   display: block;
+  margin-bottom: $spacer-lg;
   position: relative;
 
   -webkit-tap-highlight-color: transparent;
+
+  &.slick-dotted {
+    overflow: hidden;
+    padding-bottom: $carousel-bottom-spacer;
+  }
 }
 
 .slick-list {
@@ -49,8 +55,8 @@
   @include clearfix;
   display: block;
   left: 0;
-  top: 0;
   position: relative;
+  top: 0;
 
   .slick-loading & {
     visibility: hidden;
@@ -99,18 +105,18 @@
 .slick-prev,
 .slick-next {
   background: transparent;
-  border: none;
+  border: 0;
   bottom: 0;
   color: transparent;
   cursor: pointer;
   display: block;
   font-size: 0;
-  line-height: 0;
-  outline: none;
-  position: absolute;
   height: $carousel-control-height;
+  line-height: 0;
   margin-top: (($carousel-control-height / 2) + ($carousel-bottom-spacer / 2)) * -1;
+  outline: none;
   padding: 0;
+  position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   width: $carousel-control-width;
@@ -124,6 +130,8 @@
   }
 
   &::before {
+    // stylelint-disable order/properties-alphabetical-order
+
     color: $carousel-arrow-color;
     font-family: $carousel-font-family;
     font-size: $carousel-arrow-size;
@@ -132,6 +140,8 @@
     // Font smoothing
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+    // stylelint-enable order/properties-alphabetical-order
   }
 
   &:hover::before {
@@ -172,12 +182,6 @@
 }
 
 // Bullets
-.slick-dotted.slick-slider {
-  padding-bottom: $carousel-bottom-spacer;
-  margin-bottom: $spacer-lg;
-  overflow: hidden;
-}
-
 .slick-dots {
   bottom: 0;
   display: block;
@@ -192,46 +196,48 @@
   width: 100%;
 
   li {
-    position: relative;
+    cursor: pointer;
     display: inline-block;
     padding: 0;
-    cursor: pointer;
+    position: relative;
 
-    button {
-      background-color: transparent;
-      border: 0;
-      color: transparent;
-      cursor: pointer;
-      display: block;
-      font-size: 0;
-      line-height: 1;
-      outline: none;
-      padding: $carousel-dot-size / 2;
-      position: relative;
-
-      &:hover,
-      &:focus {
-        outline: none;
-      }
-
-      &::before {
-        background-color: $carousel-dot-bg;
-        border: 1px solid $carousel-dot-color;
-        border-radius: 50%;
-        color: transparent;
-        display: block;
-        height: $carousel-dot-size;
-        content: $carousel-dot-character;
-        font-size: 0;
-        transition: background-color ease-in-out $transition-timing-base,
-          border-color ease-in-out $transition-timing-base;
-        width: $carousel-dot-size;
-      }
-    }
-
-    &.slick-active button:before {
+    // stylelint-disable selector-no-qualifying-type, selector-no-type
+    &.slick-active button::before {
       background-color: $carousel-dot-color-active;
       border-color: $carousel-dot-color-active;
+    }
+    // stylelint-enable selector-no-qualifying-type, selector-no-type
+  }
+
+  button {
+    background-color: transparent;
+    border: 0;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    line-height: 1;
+    outline: none;
+    padding: $carousel-dot-size / 2;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    &::before {
+      background-color: $carousel-dot-bg;
+      border: 1px solid $carousel-dot-color;
+      border-radius: 50%;
+      color: transparent;
+      content: $carousel-dot-character;
+      display: block;
+      font-size: 0;
+      height: $carousel-dot-size;
+      transition: background-color ease-in-out $transition-timing-base,
+        border-color ease-in-out $transition-timing-base;
+      width: $carousel-dot-size;
     }
   }
 }

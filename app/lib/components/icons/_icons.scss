@@ -114,11 +114,13 @@
   font-weight: 400;
   line-height: 1;
   speak: none;
+  // stylelint-disable order/properties-alphabetical-order
   text-transform: none;
 
   // Better Font Rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  // stylelint-enable order/properties-alphabetical-order
 }
 
 .icon-close::before {

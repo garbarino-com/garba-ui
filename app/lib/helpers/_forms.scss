@@ -47,6 +47,8 @@
 
 // Placeholder mixin
 @mixin placeholder($color: $input-color-placeholder) {
+  // stylelint-disable selector-no-vendor-prefix
+
   // Firefox
   &::-moz-placeholder {
     color: $color;
@@ -62,11 +64,13 @@
   }
 
   // Safari and Chrome
-  &::-webkit-input-placeholder  {
+  &::-webkit-input-placeholder {
     color: $color;
   }
 
   &::placeholder {
     color: $color;
   }
+
+  // stylelint-enable selector-no-vendor-prefix
 }

@@ -21,10 +21,13 @@
 // results in a loss of the default `button` focus styles.
 //
 // Credit: https://github.com/suitcss/base/
+
+// stylelint-disable selector-no-qualifying-type, selector-no-type
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+// stylelint-enable selector-no-qualifying-type, selector-no-type
 
 
 // Base class
@@ -66,10 +69,12 @@ button:focus {
 //
 // Markup: button.hbs
 //
-// .button--primary - Se usa dentro de un conjunto de acciones una vez para la acción primaria.
+// .button--primary - Se usa dentro de un conjunto de acciones una vez para la
+// acción primaria.
 // .button--main - Está reservada sólo para la acción **agregar al carrito**. *No
 // debe usarse para ninguna otra acción*
-// .button--link - Conserva el layout del botón pero le da el look & feel de un `a` común.
+// .button--link - Conserva el layout del botón pero le da el look & feel de un
+// `<a>` común.
 //
 // Styleguide Elements.Buttons.1-Variants
 
@@ -102,7 +107,8 @@ button:focus {
 //
 // Markup: button-has-icon.hbs
 //
-// .button--facebook - Está reservado a usos relacionados con la red social *facebook* (compartir, loguearse, etc.).
+// .button--facebook - Está reservado a usos relacionados con la red social
+// *facebook* (compartir, loguearse, etc.).
 //
 // Styleguide Elements.Buttons.2-IconButtons
 
@@ -193,9 +199,13 @@ button:focus {
 
 // Agregamos estos selectores a la definición para que el estado de deshabilitado
 // funcione bien en los forms.
+
+// stylelint-disable selector-no-qualifying-type, selector-no-type
 [disabled],
 [readonly],
 fieldset[disabled],
+// stylelint-enable selector-no-qualifying-type, selector-no-type
+
 .control__is-disabled .button,
 .block__is-disabled .button,
 

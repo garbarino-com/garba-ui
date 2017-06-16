@@ -2,6 +2,8 @@
 // Typography
 //
 
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+
 // Remove top margins from headings
 //
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
@@ -140,3 +142,4 @@ abbr[data-original-title] {
   cursor: help;
 }
 
+// stylelint-enable selector-no-qualifying-type, selector-no-type
