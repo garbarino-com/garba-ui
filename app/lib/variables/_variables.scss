@@ -66,6 +66,7 @@ $modifier-opacity-value:        .5 !default;
 
 // Default transition animation
 $transition-timing-base:       .12s !default;
+$transition-timing-slow:       .8s !default;
 
 // Generic spacers for elements
 $spacer-base:           1rem !default;
@@ -410,25 +411,24 @@ $navbar-bg:                   $widget-bg !default;
 
 
 // Carousel default settings
+//
+// ("\2022" outputs ascii character "•")
 
-// Slick icon entity codes outputs the following
-// "\2190" outputs ascii character "←"
-// "\2192" outputs ascii character "→"
-// "\2022" outputs ascii character "•"
-
-$slick-font-path: "./fonts/" !default;
-$slick-font-family: "slick" !default;
-$slick-loader-path: "./" !default;
-$slick-arrow-color: white !default;
-$slick-dot-color: black !default;
-$slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "\2190" !default;
-$slick-next-character: "\2192" !default;
-$slick-dot-character: "\2022" !default;
-$slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
-$slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
+$carousel-font-path: $icon-font-url !default;
+$carousel-font-family: $icon-font-name !default;
+$carousel-loader-path: "./" !default;
+$carousel-control-height: 6rem !default;
+$carousel-control-width: 4rem !default;
+$carousel-arrow-color: $brand-primary !default;
+$carousel-arrow-size: 2rem !default;
+$carousel-dot-character: "\2022" !default;
+$carousel-dot-bg: $widget-bg !default;
+$carousel-dot-color: $brand-secondary !default;
+$carousel-dot-size: .75rem !default;
+$carousel-dot-color-active: $carousel-arrow-color !default;
+$carousel-prev-character: $icon-simple-bold-arrow-left !default;
+$carousel-next-character: $icon-simple-bold-arrow-right !default;
+$carousel-bottom-spacer: 2rem !default;
 
 
 // stylelint-enable max-line-length, scss/dollar-variable-colon-space-after

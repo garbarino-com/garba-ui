@@ -1,7 +1,7 @@
 // Spinner variants
 
 // Define base animation for spinner
-@include keyframes(spinner-rotation) {
+@keyframes spinner-rotation {
   from {
     transform: rotate(0deg);
   }
@@ -28,8 +28,7 @@
 // Spinner generator mixin
 @mixin add-spinner($size, $spinner-width, $spinner-color-inactive,
     $spinner-color-active) {
-  @include prefixer(
-    animation, spinner-rotation .8s infinite linear, webkit ms moz spec);
+  animation: spinner-rotation $transition-timing-slow infinite linear;
   border-bottom: $spinner-width solid $spinner-color-active;
   border-left: $spinner-width solid $spinner-color-inactive;
   border-right: $spinner-width solid $spinner-color-active;

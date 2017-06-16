@@ -37,8 +37,9 @@
 
 @mixin form-control-focus($color: $input-border-focus) {
   &:focus {
-    box-shadow: 0 0 $input-border-focus-shadow-lenght 0 rgba($color, $input-border-focus-opacity);
     border-color: $color;
+    box-shadow: 0 0 $input-border-focus-shadow-lenght 0 rgba($color,
+      $input-border-focus-opacity);
     outline: 0;
   }
 }
