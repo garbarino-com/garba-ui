@@ -2,12 +2,15 @@
 //
 // Usamos [slick carousel](http://kenwheeler.github.io/slick/) para nuestros carouseles
 // y dejamos preparadas dos implementaciones out of the box:
-// * **Single-item Carousel:** Se usa para implementaciones en las que hay sólo
+// * **Billboard-item Carousel:** Se usa para implementaciones en las que hay sólo
 // un ítem visible (por ej. el carousel principal de la *Home*).
 // * **Multi-item carousel:** Para implementaciones en las que se muestran
 // múltiples ítems (por ej. Góndolas de productos y categorías de la *Home*).
-//
-// Markup: simple-carousel.hbs
+// Todos los carouseles tienen las siguientes características:
+// * **Ancho líquido:** Pueden usarse en contenedores de cualquier tamaño.
+// * **Altura variable:** El carousel y sus controles se adaptan a la altura de
+// los ítems que contiene.
+// * **Draggeables**: Se pueden draggear con el mouse.
 //
 // Styleguide Functional.Carousel
 
@@ -17,15 +20,30 @@
   box-sizing: border-box;
   display: block;
   margin-bottom: $spacer-lg;
+  overflow: hidden;
   position: relative;
 
   -webkit-tap-highlight-color: transparent;
 
   &.slick-dotted {
-    overflow: hidden;
     padding-bottom: $carousel-bottom-spacer;
   }
 }
+
+
+
+// Billboard Carousel
+//
+// Esta variación de carousel está pensada para ser usada como vidriera en sitios
+// o secciones internas del sitios.
+// * Sólo muestra 1 ítem por página.
+// * Dicho ítem toma todo el ancho del carousel.
+// * Tiene autoplay.
+// * No tiene lazy-loading habilitado.
+//
+// Markup: billboard-carousel.hbs
+//
+// Styleguide Functional.Carousel.1-SimpleCarousel
 
 .slick-list {
   display: block;
@@ -86,99 +104,14 @@
     display: block;
   }
 
+  // Loading state
   .slick-loading & {
     visibility: hidden;
-  }
-
-  .slick-vertical & {
-    border: 1px solid transparent;
-    display: block;
-    height: auto;
   }
 }
 
 .slick-arrow.slick-hidden {
   display: none;
-}
-
-// Carousel Arrows
-.slick-prev,
-.slick-next {
-  background: transparent;
-  border: 0;
-  bottom: 0;
-  color: transparent;
-  cursor: pointer;
-  display: block;
-  font-size: 0;
-  height: $carousel-control-height;
-  line-height: 0;
-  margin-top: (($carousel-control-height / 2) + ($carousel-bottom-spacer / 2)) * -1;
-  outline: none;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: $carousel-control-width;
-  z-index: $zindex-element;
-
-  &:hover,
-  &:focus {
-    background: transparent;
-    color: transparent;
-    outline: none;
-  }
-
-  &::before {
-    // stylelint-disable order/properties-alphabetical-order
-
-    color: $carousel-arrow-color;
-    font-family: $carousel-font-family;
-    font-size: $carousel-arrow-size;
-    line-height: 1;
-
-    // Font smoothing
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-
-    // stylelint-enable order/properties-alphabetical-order
-  }
-
-  &:hover::before {
-    color: state-hover-modifier($carousel-arrow-color);
-  }
-
-  .slick-slider:hover & {
-    transform: translate(0, 0);
-  }
-}
-
-.slick-prev {
-  animation: carousel-exit-left-arrow ($transition-timing-slow / 2) ease-in-out;
-  left: 0;
-  transform: translate(-100%, 0);
-
-  &::before {
-    content: $carousel-prev-character;
-  }
-
-  .slick-slider:hover & {
-    animation: carousel-enter-left-arrow ($transition-timing-slow / 2) ease-in-out;
-  }
-}
-
-.slick-next {
-  animation: carousel-exit-right-arrow ($transition-timing-slow / 2) ease-in-out;
-  right: 0;
-  transform: translate(100%, 0);
-
-  &::before {
-    content: $carousel-next-character;
-  }
-
-  .slick-slider:hover & {
-    animation: carousel-enter-right-arrow ($transition-timing-slow / 2) ease-in-out;
-  }
 }
 
 // Bullets
@@ -239,5 +172,111 @@
         border-color ease-in-out $transition-timing-base;
       width: $carousel-dot-size;
     }
+  }
+}
+
+
+
+// Shelf Carousel
+//
+// Esta variación de carousel está pensada para ser usada como vidriera en sitios
+// o secciones internas del sitios.
+// * Muestra varios ítems por página.
+// * El ancho de dicho ítem es variables y debe ser definido para cada caso de
+// uso. *(Posiblemente en el futuro podremos tipificar los casos de uso y asignarles
+// una medida a cada uno.)*
+// * No tiene autoplay.
+// * Tiene lazy-loading habilitado.
+//
+// Markup: shelf-carousel.hbs
+//
+// Styleguide Functional.Carousel.2-ShelfCarousel
+
+
+
+
+
+// Carousel controls
+.slick-prev,
+.slick-next {
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  height: $carousel-control-height;
+  line-height: 0;
+  margin-top: ($carousel-control-height / 2) * -1;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: $carousel-control-width;
+  z-index: $zindex-element;
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: transparent;
+    outline: none;
+  }
+
+  &::before {
+    // stylelint-disable order/properties-alphabetical-order
+
+    color: $carousel-arrow-color;
+    font-family: $carousel-font-family;
+    font-size: $carousel-arrow-size;
+    line-height: 1;
+
+    // Font smoothing
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    // stylelint-enable order/properties-alphabetical-order
+  }
+
+  &:hover::before {
+    color: state-hover-modifier($carousel-arrow-color);
+  }
+
+  .slick-slider:hover & {
+    transform: translate(0, 0);
+  }
+
+  // Reposition controls if pager is present.
+  .slick-dotted & {
+    margin-top: (($carousel-control-height / 2) + ($carousel-bottom-spacer / 2)) * -1;
+  }
+}
+
+.slick-prev {
+  animation: carousel-exit-left-arrow ($transition-timing-slow / 2) ease-in-out;
+  left: 0;
+  transform: translate(-100%, 0);
+
+  &::before {
+    content: $carousel-prev-character;
+  }
+
+  .slick-slider:hover & {
+    animation: carousel-enter-left-arrow ($transition-timing-slow / 2) ease-in-out;
+  }
+}
+
+.slick-next {
+  animation: carousel-exit-right-arrow ($transition-timing-slow / 2) ease-in-out;
+  right: 0;
+  transform: translate(100%, 0);
+
+  &::before {
+    content: $carousel-next-character;
+  }
+
+  .slick-slider:hover & {
+    animation: carousel-enter-right-arrow ($transition-timing-slow / 2) ease-in-out;
   }
 }
