@@ -1,23 +1,24 @@
 define(
   [
     'jquery',
-    'carousel',
+    'slick',
     'cookie',
     'firstPurchase',
     'modal',
     'offersHunter',
-    'transition'
+    'transition',
+    'carouselBillboard'
   ],
   function(
     $,
-    carousel,
+    slick,
     cookie,
     firstPurchase,
     modal,
     offersHunter,
-    transition
+    transition,
+    carouselBillboard
   ) {
-    $('.kss-header').css('background', 'red');
-    $('.carousel').slick();
+
   }
 );

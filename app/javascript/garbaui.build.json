@@ -2,13 +2,14 @@
   "name" : "garbaui.main",
   "baseUrl": "./",
   "paths": {
-    "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min",
-    "cookie": "scripts/cookie",
-    "firstPurchase": "scripts/campaign-modals/first-purchase",
-    "carousel": "../../node_modules/slick-carousel/slick/slick",
-    "modal": "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal",
-    "offersHunter": "scripts/offers-hunter",
-    "transition": "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition"
+    "jquery":            "//ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min",
+    "cookie":            "scripts/cookie",
+    "firstPurchase":     "scripts/campaign-modals/first-purchase",
+    "slick":             "../../node_modules/slick-carousel/slick/slick",
+    "modal":             "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal",
+    "offersHunter":      "scripts/offers-hunter",
+    "transition":        "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition",
+    "carouselBillboard": "scripts/carousel-billboard"
   },
 
   "generateSourceMaps": false,
