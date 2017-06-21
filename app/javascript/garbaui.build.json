@@ -9,7 +9,6 @@
     "modal":             "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal",
     "offersHunter":      "scripts/offers-hunter",
     "transition":        "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition",
-    "carouselBillboard": "scripts/carousel-billboard"
   },
 
   "generateSourceMaps": false,

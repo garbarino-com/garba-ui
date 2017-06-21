@@ -5600,7 +5600,7 @@ a {
 }
 
 a:hover {
-  color: #005794;
+  color: state-hover-modifier(#0084E0);
   text-decoration: underline;
 }
 
@@ -6336,6 +6336,7 @@ a.label a.label {
 .slick-dots li.slick-active button::before {
   background-color: #0084E0;
   border-color: #0084E0;
+  transform: scale(1);
 }
 
 .slick-dots button {
@@ -6347,7 +6348,7 @@ a.label a.label {
   font-size: 0;
   line-height: 1;
   outline: none;
-  padding: 0.375rem;
+  padding: 0.25rem;
   position: relative;
 }
 
@@ -6363,9 +6364,37 @@ a.label a.label {
   content: "•";
   display: block;
   font-size: 0;
-  height: 0.75rem;
-  transition: background-color ease-in-out 0.12s, border-color ease-in-out 0.12s;
-  width: 0.75rem;
+  height: 0.5rem;
+  transform: scale(0.8);
+  transition: background-color ease-in-out 0.12s, border-color ease-in-out 0.12s, transform ease-in-out 0.12s;
+  width: 0.5rem;
+}
+
+.carousel-shelf {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.carousel-shelf:before, .carousel-shelf:after {
+  content: "";
+  display: table;
+}
+
+.carousel-shelf:after {
+  clear: both;
+}
+
+.carousel-shelf > .carousel-item {
+  display: inline-block;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+
+@media only screen and (min-width: 73.14286rem) {
+  .carousel-shelf > .carousel-item {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 
 .slick-prev,

@@ -6,8 +6,8 @@ define(
     'firstPurchase',
     'modal',
     'offersHunter',
-    'transition',
-    'carouselBillboard'
+    'transition' /*,
+    'carouselBillboard' */
   ],
   function(
     $,
@@ -16,8 +16,8 @@ define(
     firstPurchase,
     modal,
     offersHunter,
-    transition,
-    carouselBillboard
+    transition /*,
+    carouselBillboard */
   ) {
 
   }

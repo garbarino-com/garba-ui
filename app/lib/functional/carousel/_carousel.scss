@@ -138,6 +138,7 @@
     &.slick-active button::before {
       background-color: $carousel-dot-color-active;
       border-color: $carousel-dot-color-active;
+      transform: scale(1);
     }
     // stylelint-enable selector-no-qualifying-type, selector-no-type
   }
@@ -168,8 +169,10 @@
       display: block;
       font-size: 0;
       height: $carousel-dot-size;
+      transform: scale($modifier-scale-value);
       transition: background-color ease-in-out $transition-timing-base,
-        border-color ease-in-out $transition-timing-base;
+        border-color ease-in-out $transition-timing-base,
+        transform ease-in-out $transition-timing-base;
       width: $carousel-dot-size;
     }
   }
@@ -187,14 +190,31 @@
 // una medida a cada uno.)*
 // * No tiene autoplay.
 // * Tiene lazy-loading habilitado.
+// * En viewports más chicos (≤1024px) se desactiva el carousel y se utiliza el
+// scrollbar nativo del browser.
 //
 // Markup: shelf-carousel.hbs
 //
 // Styleguide Functional.Carousel.2-ShelfCarousel
 
+.carousel-shelf {
+  @include clearfix;
+  overflow: auto;
+  white-space: nowrap;
 
+  > .carousel-item {
+    display: inline-block;
+    padding-bottom: $spacer-base;
+    padding-top: $spacer-sm;
+  }
 
-
+  @media only screen and (min-width: $screen-lg-min) {
+    > .carousel-item {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+}
 
 // Carousel controls
 .slick-prev,

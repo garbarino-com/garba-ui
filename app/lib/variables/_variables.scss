@@ -63,6 +63,7 @@ $modifier-operation:            lighten !default;
 $modifier-hover-value:          10% !default;
 $modifier-focus-value:          10% !default;
 $modifier-opacity-value:        .5 !default;
+$modifier-scale-value:          .8 !default;
 
 // Default transition animation
 $transition-timing-base:       .12s !default;
@@ -95,7 +96,7 @@ $text-muted:            #666 !default;
 // Global textual link color.
 $link-color:            $brand-primary !default;
 // Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      state-hover-modifier($link-color) !default;
 // Link decoration.
 $link-decoration:       none !default;
 // Link hover decoration.
@@ -426,7 +427,7 @@ $carousel-arrow-size: 2rem !default;
 $carousel-dot-character: "\2022" !default;
 $carousel-dot-bg: $widget-bg !default;
 $carousel-dot-color: $brand-secondary !default;
-$carousel-dot-size: .75rem !default;
+$carousel-dot-size: .5rem !default;
 $carousel-dot-color-active: $carousel-arrow-color !default;
 $carousel-prev-character: $icon-simple-bold-arrow-left !default;
 $carousel-next-character: $icon-simple-bold-arrow-right !default;
