@@ -110,6 +110,9 @@ $assets-url:             "../" !default;
 $images-url:             $assets-url + "images/" !default;
 $icon-font-url:          $assets-url + "fonts/" !default;
 
+$icon-size-lg:           1.5rem !default;
+$icon-size-xl:           2rem !default;
+
 // Old icon font
 // These icons are to be deprecated in the future.
 
@@ -290,7 +293,7 @@ $btn-spinner-sm-size:                1rem !default;
 $btn-spinner-spacing:                $spacer-sm !default;
 
 // Button icon definitions
-$btn-icon-size:                      1.5rem !default;
+$btn-icon-size:                      $icon-size-lg !default;
 $btn-icon-padding-x:                 5rem !default;
 
 // Button action definitions

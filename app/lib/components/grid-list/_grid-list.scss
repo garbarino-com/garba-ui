@@ -29,7 +29,8 @@
   }
 
   // Setea el margin-bottom para el último sibling
-  &:last-of-type {
+  &:last-of-type,
+  &:only-of-type {
     margin-bottom: $spacer-lg;
   }
 }
@@ -70,7 +71,7 @@
 //
 // Markup: grid-list-linked.hbs
 //
-// Styleguide Components.GridList.LinkedGridList
+// Styleguide Components.GridList.1-LinkedGridList
 
 // stylelint-disable selector-no-qualifying-type, selector-no-type
 a.list-grid-item,
@@ -116,7 +117,18 @@ button.list-grid-item {
 
 
 
-// Grid list image
+// Icon Grid List
+//
+// Las *Grid-list* vienen con unos estilos para ícono preseteados como se ve en
+// este ejemplo. También traen preseteados estilos para posicionar botones.
+// > **Advertencia**: *Grid-list* no son un *Cards* que serán definido en otro lado.
+// Si bien se incluyen estilos para texto, íconos y botones internos, la idea de
+// este componente es que no contenga demasiada información. En el caso de ser
+// necesario mostrar demasiada información se recomienda recurrir a las *Cards*.
+//
+// Markup: grid-list-with-icons.hbs
+//
+// Styleguide Components.GridList.2-IconGridList
 
 .list-grid-item__body {
   @include flex(1);

@@ -3599,6 +3599,14 @@ button:focus {
   background-image: none;
 }
 
+.list-grid-item .button {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+  z-index: 20;
+}
+
 .button,
 .button--default,
 .button--secondary {
@@ -5784,7 +5792,7 @@ abbr[data-original-title] {
   margin-top: 0.125rem;
 }
 
-.list-grid:last-of-type {
+.list-grid:last-of-type, .list-grid:only-of-type {
   margin-bottom: 1.5rem;
 }
 
@@ -5959,6 +5967,12 @@ button.list-grid-item:focus::after {
   text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.list-grid-item__body [class^="icon-"] {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .icon-close::before {

@@ -63,6 +63,15 @@ button:focus {
   &.active {
     background-image: none;
   }
+
+  // Posiciona el botón cuando se usa adentro de un `.grid-list`
+  .list-grid-item & {
+    bottom: $grid-cell-spacer * 2;
+    left: $grid-cell-spacer * 2;
+    position: absolute;
+    right: $grid-cell-spacer * 2;
+    z-index: $zindex-element;
+  }
 }
 
 // Button Variants

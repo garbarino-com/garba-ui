@@ -121,6 +121,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // stylelint-enable order/properties-alphabetical-order
+
+
+  // Estilos especiales para Grid list
+  .list-grid-item__body & {
+    display: block;
+    font-size: $icon-size-xl;
+    margin-bottom: $spacer-sm;
+  }
 }
 
 .icon-close::before {
