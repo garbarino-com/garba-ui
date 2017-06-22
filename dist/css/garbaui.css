@@ -3624,7 +3624,7 @@ button:focus {
 .button--secondary:focus:hover,
 .button--secondary.focus,
 .button--secondary.focus:hover {
-  background-color: #858585;
+  background-color: #919191;
   box-shadow: 0 0 0 0 transparent;
   color: #FFF;
 }
@@ -3632,8 +3632,8 @@ button:focus {
 .button:hover,
 .button--default:hover,
 .button--secondary:hover {
-  background-color: #858585;
-  box-shadow: 0 0.14286rem 0 0 #858585;
+  background-color: #919191;
+  box-shadow: 0 0.14286rem 0 0 #919191;
   color: #FFF;
 }
 
@@ -3648,14 +3648,14 @@ button:focus {
 }
 
 .button--primary:focus, .button--primary:focus:hover, .button--primary.focus, .button--primary.focus:hover {
-  background-color: #149eff;
+  background-color: #2ea9ff;
   box-shadow: 0 0 0 0 transparent;
   color: #FFF;
 }
 
 .button--primary:hover {
-  background-color: #149eff;
-  box-shadow: 0 0.14286rem 0 0 #149eff;
+  background-color: #2ea9ff;
+  box-shadow: 0 0.14286rem 0 0 #2ea9ff;
   color: #FFF;
 }
 
@@ -3670,14 +3670,14 @@ button:focus {
 }
 
 .button--main:focus, .button--main:focus:hover, .button--main.focus, .button--main.focus:hover {
-  background-color: #1dd701;
+  background-color: #20f001;
   box-shadow: 0 0 0 0 transparent;
   color: #FFF;
 }
 
 .button--main:hover {
-  background-color: #1dd701;
-  box-shadow: 0 0.14286rem 0 0 #1dd701;
+  background-color: #20f001;
+  box-shadow: 0 0.14286rem 0 0 #20f001;
   color: #FFF;
 }
 
@@ -3692,14 +3692,14 @@ button:focus {
 }
 
 .button--link:focus, .button--link:focus:hover, .button--link.focus, .button--link.focus:hover {
-  background-color: rgba(26, 26, 26, 0);
+  background-color: rgba(38, 38, 38, 0);
   box-shadow: 0 0 0 0 transparent;
   color: #0084E0;
 }
 
 .button--link:hover {
-  background-color: rgba(26, 26, 26, 0);
-  box-shadow: 0 0.14286rem 0 0 rgba(26, 26, 26, 0);
+  background-color: rgba(38, 38, 38, 0);
+  box-shadow: 0 0.14286rem 0 0 rgba(38, 38, 38, 0);
   color: #0084E0;
 }
 
@@ -3718,14 +3718,14 @@ button:focus {
 }
 
 .button--facebook:focus, .button--facebook:focus:hover, .button--facebook.focus, .button--facebook.focus:hover {
-  background-color: #6c77c3;
+  background-color: #7e88ca;
   box-shadow: 0 0 0 0 transparent;
   color: #FFF;
 }
 
 .button--facebook:hover {
-  background-color: #6c77c3;
-  box-shadow: 0 0.14286rem 0 0 #6c77c3;
+  background-color: #7e88ca;
+  box-shadow: 0 0.14286rem 0 0 #7e88ca;
   color: #FFF;
 }
 
@@ -5765,6 +5765,8 @@ abbr[data-original-title] {
 }
 
 .list-grid {
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   width: 100%;
 }
 
@@ -5814,27 +5816,9 @@ abbr[data-original-title] {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  background-color: #FFF;
-  border: 1px solid #C4C4C4;
-  border-radius: 3px;
   float: left;
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-  /*&[href] {
-    &:hover {
-      color: $color;
-    }
-
-    &:focus,
-    &.focus {
-      background-color: $focus-background;
-    }
-
-    &:hover {
-      background-color: $hover-background;
-      text-decoration: none;
-    }
-  }*/
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .list-grid-item::before {
@@ -5873,6 +5857,40 @@ abbr[data-original-title] {
   width: 16.66667%;
 }
 
+.list-grid-item::after {
+  content: "";
+  display: block;
+  background-color: #FFF;
+  border: 2px solid #C4C4C4;
+  border-radius: 3px;
+  bottom: 0.25rem;
+  left: 0.25rem;
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+  transition: border-color ease-in-out 0.12s;
+}
+
+.list-grid-item[href] {
+  cursor: pointer;
+}
+
+.list-grid-item[href]:hover {
+  text-decoration: none;
+}
+
+.list-grid-item[href]:hover::after {
+  border-color: #2ea9ff;
+}
+
+.list-grid-item[href]:focus {
+  outline: 0;
+}
+
+.list-grid-item[href]:focus::after {
+  border-color: #2ea9ff;
+}
+
 .list-grid-item__body {
   -webkit-box-flex: 1;
   -khtml-box-flex: 1;
@@ -5880,10 +5898,12 @@ abbr[data-original-title] {
   -ms-box-flex: 1;
   -o-box-flex: 1;
   box-flex: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
-  vertical-align: middle;
-  color: #6B6B6B;
   text-transform: uppercase;
+  vertical-align: middle;
+  z-index: 20;
 }
 
 @font-face {
@@ -6276,13 +6296,13 @@ a.label a.label {
 .label--default[href].focus,
 .label--primary[href]:focus,
 .label--primary[href].focus {
-  background-color: #149eff;
+  background-color: #2ea9ff;
 }
 
 .label[href]:hover,
 .label--default[href]:hover,
 .label--primary[href]:hover {
-  background-color: #149eff;
+  background-color: #2ea9ff;
   text-decoration: none;
 }
 
@@ -6296,11 +6316,11 @@ a.label a.label {
 }
 
 .label--main[href]:focus, .label--main[href].focus {
-  background-color: #1dd701;
+  background-color: #20f001;
 }
 
 .label--main[href]:hover {
-  background-color: #1dd701;
+  background-color: #20f001;
   text-decoration: none;
 }
 
@@ -6560,7 +6580,7 @@ a.label a.label {
 
 .slick-prev:hover::before,
 .slick-next:hover::before {
-  color: #149eff;
+  color: #2ea9ff;
 }
 
 .slick-slider:hover .slick-prev, .slick-slider:hover

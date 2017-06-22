@@ -60,8 +60,8 @@ $gray-lighter:           #F6F6F6 !default;
 
 // State modifiers
 $modifier-operation:            lighten !default;
-$modifier-hover-value:          10% !default;
-$modifier-focus-value:          10% !default;
+$modifier-hover-value:          15% !default;
+$modifier-focus-value:          15% !default;
 $modifier-opacity-value:        .5 !default;
 $modifier-scale-value:          .8 !default;
 
@@ -408,6 +408,15 @@ $label-secondary-bg:          $brand-secondary !default;
 // Collapse
 $collapse-border:             $gray-medium !default;
 
+
+// Grid List
+$grid-cell-bg:                     $widget-bg !default;
+$grid-cell-border-color:           $gray-medium !default;
+$grid-cell-border-size:            2px !default;
+$grid-cell-active:                 $brand-primary;
+$grid-cell-spacer:                 $grid-narrow-gutter-width !default;
+$grid-cell-size:                   12rem !default;
+$grid-cell-max-number:             6 !default;
 
 // Navbar
 $navbar-bg:                   $widget-bg !default;

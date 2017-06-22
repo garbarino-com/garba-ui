@@ -1,20 +1,25 @@
 // Grid List
 //
 // *Grid-list* es una adaptación del
-// [componente material](https://material.io/guidelines/components/grid-lists.html),
-// que funciona como una variable de grilla angosta por lo cual las celdas deben
-// estar acompañadas de la definición de tamaño de la celda.
+// [componente material](https://material.io/guidelines/components/grid-lists.html).
+// Es una alternativa a la lista común. Un grupo de celdas de forma cuadrada
+// organizadas en forma horizontal.
+//
+// Las *Grid-lists* sirven se usan para tipos de datos similares. Ayudan a mejorar
+// la comprensión visual de los datos que agrupan.
+//
+// > Los ítems que componen la *Grid-lists* tienen un ancho fijado que se asigna
+// automáticamente de acuerdo a la cantidad de siblings que haya en una misma fila
+// (máximo 6).
 //
 // Markup: grid-list.hbs
 //
 // Styleguide Components.GridList
 
-$cell-spacer: (.75rem / 2);
-$cell-size: 12rem;
-$cell-max-number: 6;
-
 .list-grid {
   @include clearfix;
+  margin-left: ($grid-cell-spacer / 2) * -1;
+  margin-right: ($grid-cell-spacer / 2) * -1;
   width: 100%;
 }
 
@@ -24,35 +29,61 @@ $cell-max-number: 6;
   @include element-aspect-ratio;
   @include flex-direction(row);
   @include justify-content(center);
-  @include set-width-based-on-siblings-count($cell-max-number);
-  background-color: $widget-bg;
-  border: 1px solid $gray-medium;
-  border-radius: $border-radius-base;
+  @include set-width-based-on-siblings-count($grid-cell-max-number);
   float: left;
-  padding-left: $cell-spacer;
-  padding-right: $cell-spacer;
+  padding-left: ($grid-cell-spacer / 2);
+  padding-right: ($grid-cell-spacer / 2);
 
-  /*&[href] {
+  &::after {
+    @include make-pseudo-element;
+    background-color: $grid-cell-bg;
+    border: $grid-cell-border-size solid $grid-cell-border-color;
+    border-radius: $border-radius-base;
+    bottom: ($grid-cell-spacer / 2);
+    left: ($grid-cell-spacer / 2);
+    position: absolute;
+    right: ($grid-cell-spacer / 2);
+    top: ($grid-cell-spacer / 2);
+    transition: border-color ease-in-out $transition-timing-base;
+  }
+
+  // Linked Grid List
+  //
+  // Agregale links a las *Grid-list* usando tags `<a>` en vez de `<li>` o `<div>`
+  // (eso también implica que el elemento padre debería ser un `<div>` en lugar de
+  // un `<ul>`.
+  //
+  // Markup: grid-list-anchors.hbs
+  //
+  // Styleguide Components.GridList.LinkedGridList
+
+  &[href] {
+    cursor: pointer;
+
     &:hover {
-      color: $color;
-    }
-
-    &:focus,
-    &.focus {
-      background-color: $focus-background;
-    }
-
-    &:hover {
-      background-color: $hover-background;
       text-decoration: none;
+
+      &::after {
+        border-color: state-hover-modifier($grid-cell-active);
+      }
     }
-  }*/
+
+    &:focus {
+      outline: 0;
+
+      &::after {
+        border-color: state-focus-modifier($grid-cell-active);
+      }
+    }
+  }
 }
 
 .list-grid-item__body {
   @include flex(1);
+  padding-left: $grid-cell-spacer * 2;
+  padding-right: $grid-cell-spacer * 2;
   text-align: center;
-  vertical-align: middle;
-  color: $text-color;
   text-transform: uppercase;
+  vertical-align: middle;
+  z-index: $zindex-element;
 }
