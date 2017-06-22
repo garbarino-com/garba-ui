@@ -5833,7 +5833,6 @@ abbr[data-original-title] {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  float: left;
   line-height: 1.25;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -5843,36 +5842,6 @@ abbr[data-original-title] {
   content: "";
   display: block;
   padding-top: 100%;
-}
-
-.list-grid-item:first-child:nth-last-child(1),
-.list-grid-item:first-child:nth-last-child(1) ~ .list-grid-item {
-  width: 100%;
-}
-
-.list-grid-item:first-child:nth-last-child(2),
-.list-grid-item:first-child:nth-last-child(2) ~ .list-grid-item {
-  width: 50%;
-}
-
-.list-grid-item:first-child:nth-last-child(3),
-.list-grid-item:first-child:nth-last-child(3) ~ .list-grid-item {
-  width: 33.33333%;
-}
-
-.list-grid-item:first-child:nth-last-child(4),
-.list-grid-item:first-child:nth-last-child(4) ~ .list-grid-item {
-  width: 25%;
-}
-
-.list-grid-item:first-child:nth-last-child(5),
-.list-grid-item:first-child:nth-last-child(5) ~ .list-grid-item {
-  width: 20%;
-}
-
-.list-grid-item:first-child:nth-last-child(6),
-.list-grid-item:first-child:nth-last-child(6) ~ .list-grid-item {
-  width: 16.66667%;
 }
 
 .list-grid-item::after {
@@ -5887,6 +5856,36 @@ abbr[data-original-title] {
   right: 0.25rem;
   top: 0.25rem;
   transition: border-color ease-in-out 0.12s;
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .list-grid-item {
+    float: left;
+  }
+  .list-grid-item:first-child:nth-last-child(1),
+  .list-grid-item:first-child:nth-last-child(1) ~ .list-grid-item {
+    width: 100%;
+  }
+  .list-grid-item:first-child:nth-last-child(2),
+  .list-grid-item:first-child:nth-last-child(2) ~ .list-grid-item {
+    width: 50%;
+  }
+  .list-grid-item:first-child:nth-last-child(3),
+  .list-grid-item:first-child:nth-last-child(3) ~ .list-grid-item {
+    width: 33.33333%;
+  }
+  .list-grid-item:first-child:nth-last-child(4),
+  .list-grid-item:first-child:nth-last-child(4) ~ .list-grid-item {
+    width: 25%;
+  }
+  .list-grid-item:first-child:nth-last-child(5),
+  .list-grid-item:first-child:nth-last-child(5) ~ .list-grid-item {
+    width: 20%;
+  }
+  .list-grid-item:first-child:nth-last-child(6),
+  .list-grid-item:first-child:nth-last-child(6) ~ .list-grid-item {
+    width: 16.66667%;
+  }
 }
 
 a.list-grid-item,

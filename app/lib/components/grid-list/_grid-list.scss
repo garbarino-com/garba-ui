@@ -41,8 +41,6 @@
   @include element-aspect-ratio;
   @include flex-direction(row);
   @include justify-content(center);
-  @include set-width-based-on-siblings-count($grid-cell-max-number);
-  float: left;
   line-height: $line-height-sm;
   padding-left: ($grid-cell-spacer / 2);
   padding-right: ($grid-cell-spacer / 2);
@@ -58,6 +56,12 @@
     right: ($grid-cell-spacer / 2);
     top: ($grid-cell-spacer / 2);
     transition: border-color ease-in-out $transition-timing-base;
+  }
+
+  // Setea el ancho a los elementos en viewports más grandes (<768px)
+  @media only screen and (min-width: $screen-md-min) {
+    @include set-width-based-on-siblings-count($grid-cell-max-number);
+    float: left;
   }
 }
 
