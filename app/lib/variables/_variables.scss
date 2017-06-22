@@ -192,6 +192,8 @@ $small-color:         $text-muted !default;
 
 // Line Height
 $line-height-base:        1.5 !default;
+$line-height-sm:          1.25 !default;
+
 $line-height-computed:    $line-height-base * $baseline-grid-computed !default;
 
 

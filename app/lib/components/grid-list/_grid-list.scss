@@ -31,6 +31,7 @@
   @include justify-content(center);
   @include set-width-based-on-siblings-count($grid-cell-max-number);
   float: left;
+  line-height: $line-height-sm;
   padding-left: ($grid-cell-spacer / 2);
   padding-right: ($grid-cell-spacer / 2);
 
@@ -46,37 +47,51 @@
     top: ($grid-cell-spacer / 2);
     transition: border-color ease-in-out $transition-timing-base;
   }
+}
 
-  // Linked Grid List
-  //
-  // Agregale links a las *Grid-list* usando tags `<a>` en vez de `<li>` o `<div>`
-  // (eso también implica que el elemento padre debería ser un `<div>` en lugar de
-  // un `<ul>`.
-  //
-  // Markup: grid-list-anchors.hbs
-  //
-  // Styleguide Components.GridList.LinkedGridList
 
-  &[href] {
-    cursor: pointer;
 
-    &:hover {
-      text-decoration: none;
+// Linked Grid List
+//
+// Agregale links a las *Grid-list* usando tags `<a>` o `<button>`en vez de
+// `<li>` o `<div>` (eso también implica que el elemento padre debería ser un
+// `<div>` en lugar de un `<ul>`.
+//
+// Markup: grid-list-linked.hbs
+//
+// Styleguide Components.GridList.LinkedGridList
 
-      &::after {
-        border-color: state-hover-modifier($grid-cell-active);
-      }
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+a.list-grid-item,
+button.list-grid-item {
+  background: transparent;
+  border: 0;
+  color: $grid-cell-active;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      border-color: state-hover-modifier($grid-cell-active);
+      color: state-hover-modifier($grid-cell-active);
     }
+  }
 
-    &:focus {
-      outline: 0;
+  &:focus {
+    outline: 0;
 
-      &::after {
-        border-color: state-focus-modifier($grid-cell-active);
-      }
+    &::after {
+      border-color: state-focus-modifier($grid-cell-active);
+      color: state-focus-modifier($grid-cell-active);
     }
   }
 }
+// stylelint-enable selector-no-qualifying-type, selector-no-type
+
+
+
+// Grid list item
 
 .list-grid-item__body {
   @include flex(1);
