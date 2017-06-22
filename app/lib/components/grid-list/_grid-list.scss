@@ -18,9 +18,20 @@
 
 .list-grid {
   @include clearfix;
+  margin-bottom: 0;
   margin-left: ($grid-cell-spacer / 2) * -1;
   margin-right: ($grid-cell-spacer / 2) * -1;
   width: 100%;
+
+  // Agrega espacio entre .list-grid adyacentes.
+  & + & {
+    margin-top: ($grid-cell-spacer / 4);
+  }
+
+  // Setea el margin-bottom para el último sibling
+  &:last-of-type {
+    margin-bottom: $spacer-lg;
+  }
 }
 
 .list-grid-item {
@@ -92,6 +103,20 @@ button.list-grid-item {
 
 
 // Grid list item
+
+.list-grid-item__body {
+  @include flex(1);
+  padding-left: $grid-cell-spacer * 2;
+  padding-right: $grid-cell-spacer * 2;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  z-index: $zindex-element;
+}
+
+
+
+// Grid list image
 
 .list-grid-item__body {
   @include flex(1);
