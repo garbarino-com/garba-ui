@@ -29,6 +29,10 @@
   }
 
   // Setea el margin-bottom para el último sibling
+
+  // TODO(ecalvi): Este espaciado no parece estar funcionando cuando el elemento
+  // es uno solo. Si funciona cuando hay varias list-grids juntas.
+
   &:last-of-type,
   &:only-of-type {
     margin-bottom: $spacer-lg;
@@ -58,7 +62,7 @@
     transition: border-color ease-in-out $transition-timing-base;
   }
 
-  // Setea el ancho a los elementos en viewports más grandes (<768px)
+  // Setea el ancho a los elementos en viewports >768px
   @media only screen and (min-width: $screen-md-min) {
     @include set-width-based-on-siblings-count($grid-cell-max-number);
     float: left;

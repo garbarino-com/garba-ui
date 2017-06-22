@@ -1,0 +1,21 @@
+// Nav OnMouseOver animation
+@keyframes mouse-hover-animation {
+  from {
+    transform: translateY((100% / 3));
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+// Nav OnMouseOot animation
+@keyframes mouse-out-animation {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY((100% / 3));
+  }
+}

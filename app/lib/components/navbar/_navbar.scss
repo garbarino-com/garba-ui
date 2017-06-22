@@ -1,9 +1,113 @@
-// Navigation bar
+// Barra de navigación
+//
+// Un `.navbar` es una sección de interfase gráfica que tiene como propósito ayudar
+// al usuario a acceder información.
+// > ### Para mejorar la accesibilidad de los `.navbar`s que se usan para navegación ###
+// Si estás usando `.navbar`s como barras de navegación del sitio, acordate de agregar
+// `role="navigation"`al contenedor padre más pertinente del `<ul>`, o envolvé toda
+// la navegación en un tag `<nav>`. No le pongas el `role` al `<ul>`, porque esto
+// evitaría que sea indexado como una lista por tecnologías de asistencia.
 //
 // Markup: navbar.hbs
 //
 // Styleguide Components.Navbar
 
+// stylelint-disable selector-no-qualifying-type, selector-no-type, max-nesting-depth
+
 .navbar {
-  background-color: $navbar-bg;
+  @include list-unstyled;
+  font-size: 0;
+  margin-bottom: $spacer-lg;
+
+  > li {
+    white-space: nowrap;
+  }
+
+  > a,
+  > button,
+  > li > a,
+  > li > button {
+    @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
+    background-color: $navbar-bg;
+    border: 0;
+    border-right: 1px solid transparent;
+    color: $navbar-color;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      @include make-pseudo-element;
+      animation: mouse-out-animation ($transition-timing-slow / 4) ease-in;
+      background-color: $navbar-pointer-color;
+      bottom: 0;
+      height: $navbar-pointer-height;
+      left: 0;
+      position: absolute;
+      right: 0;
+      transform: translateY((100% / 3));
+    }
+
+    &:hover,
+    &.active {
+      text-decoration: none;
+
+      &::before {
+        animation: mouse-hover-animation ($transition-timing-slow / 4) ease-in;
+        background-color: $navbar-pointer-active-color;
+        bottom: 0;
+        transform: translateY(0);
+      }
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &.active {
+      cursor: default;
+    }
+  }
+
+  // Setea inline los items en viewports >768px
+  @media only screen and (min-width: $screen-md-min) {
+    > li,
+    > a,
+    > button {
+      display: inline-block;
+    }
+
+    > li > a,
+    > li > button {
+      display: block;
+    }
+  }
+
+  // Disabled State
+  &[disabled] > a,
+  &[disabled] > button,
+  > a[disabled],
+  > button[disabled],
+  > li > a[disabled],
+  > li > button[disabled],
+  > a.button__is-disabled,
+  > button.button__is-disabled,
+  > li > a.button__is-disabled,
+  > li > button.button__is-disabled {
+    &,
+    &:hover {
+      background-color: $btn-disabled-bg;
+      color: $btn-disabled-color;
+      cursor: not-allowed;
+
+      &::before {
+        animation: none;
+        background-color: $navbar-pointer-color;
+        transform: translateY((100% / 3));
+      }
+    }
+  }
 }
+
+// stylelint-enable selector-no-qualifying-type, selector-no-type, max-nesting-depth

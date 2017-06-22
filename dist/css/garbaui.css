@@ -3511,6 +3511,24 @@ button.close {
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
+@keyframes mouse-hover-animation {
+  from {
+    transform: translateY(33.33333%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mouse-out-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(33.33333%);
+  }
+}
+
 @keyframes spinner-rotation {
   from {
     transform: rotate(0deg);
@@ -5848,7 +5866,7 @@ abbr[data-original-title] {
   content: "";
   display: block;
   background-color: #FFF;
-  border: 2px solid #C4C4C4;
+  border: 0.14286rem solid #C4C4C4;
   border-radius: 3px;
   bottom: 0.25rem;
   left: 0.25rem;
@@ -6370,6 +6388,148 @@ a.label a.label {
 .label--main[href]:hover {
   background-color: #20f001;
   text-decoration: none;
+}
+
+.navbar {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0;
+  margin-bottom: 1.5rem;
+}
+
+.navbar > li {
+  white-space: nowrap;
+}
+
+.navbar > a,
+.navbar > button,
+.navbar > li > a,
+.navbar > li > button {
+  font-size: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.5rem;
+  background-color: #FFF;
+  border: 0;
+  border-right: 1px solid transparent;
+  color: #6B6B6B;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.navbar > a::before,
+.navbar > button::before,
+.navbar > li > a::before,
+.navbar > li > button::before {
+  content: "";
+  display: block;
+  animation: mouse-out-animation 0.2s ease-in;
+  background-color: #C4C4C4;
+  bottom: 0;
+  height: 0.21429rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: translateY(33.33333%);
+}
+
+.navbar > a:hover, .navbar > a.active,
+.navbar > button:hover,
+.navbar > button.active,
+.navbar > li > a:hover,
+.navbar > li > a.active,
+.navbar > li > button:hover,
+.navbar > li > button.active {
+  text-decoration: none;
+}
+
+.navbar > a:hover::before, .navbar > a.active::before,
+.navbar > button:hover::before,
+.navbar > button.active::before,
+.navbar > li > a:hover::before,
+.navbar > li > a.active::before,
+.navbar > li > button:hover::before,
+.navbar > li > button.active::before {
+  animation: mouse-hover-animation 0.2s ease-in;
+  background-color: #0084E0;
+  bottom: 0;
+  transform: translateY(0);
+}
+
+.navbar > a:focus,
+.navbar > button:focus,
+.navbar > li > a:focus,
+.navbar > li > button:focus {
+  outline: 0;
+}
+
+.navbar > a.active,
+.navbar > button.active,
+.navbar > li > a.active,
+.navbar > li > button.active {
+  cursor: default;
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .navbar > li,
+  .navbar > a,
+  .navbar > button {
+    display: inline-block;
+  }
+  .navbar > li > a,
+  .navbar > li > button {
+    display: block;
+  }
+}
+
+.navbar[disabled] > a, .navbar[disabled] > a:hover,
+.navbar[disabled] > button,
+.navbar[disabled] > button:hover,
+.navbar > a[disabled],
+.navbar > a[disabled]:hover,
+.navbar > button[disabled],
+.navbar > button[disabled]:hover,
+.navbar > li > a[disabled],
+.navbar > li > a[disabled]:hover,
+.navbar > li > button[disabled],
+.navbar > li > button[disabled]:hover,
+.navbar > a.button__is-disabled,
+.navbar > a.button__is-disabled:hover,
+.navbar > button.button__is-disabled,
+.navbar > button.button__is-disabled:hover,
+.navbar > li > a.button__is-disabled,
+.navbar > li > a.button__is-disabled:hover,
+.navbar > li > button.button__is-disabled,
+.navbar > li > button.button__is-disabled:hover {
+  background-color: #E2E2E2;
+  color: #9E9E9E;
+  cursor: not-allowed;
+}
+
+.navbar[disabled] > a::before, .navbar[disabled] > a:hover::before,
+.navbar[disabled] > button::before,
+.navbar[disabled] > button:hover::before,
+.navbar > a[disabled]::before,
+.navbar > a[disabled]:hover::before,
+.navbar > button[disabled]::before,
+.navbar > button[disabled]:hover::before,
+.navbar > li > a[disabled]::before,
+.navbar > li > a[disabled]:hover::before,
+.navbar > li > button[disabled]::before,
+.navbar > li > button[disabled]:hover::before,
+.navbar > a.button__is-disabled::before,
+.navbar > a.button__is-disabled:hover::before,
+.navbar > button.button__is-disabled::before,
+.navbar > button.button__is-disabled:hover::before,
+.navbar > li > a.button__is-disabled::before,
+.navbar > li > a.button__is-disabled:hover::before,
+.navbar > li > button.button__is-disabled::before,
+.navbar > li > button.button__is-disabled:hover::before {
+  animation: none;
+  background-color: #C4C4C4;
+  transform: translateY(33.33333%);
 }
 
 .tag {
