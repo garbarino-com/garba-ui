@@ -3511,7 +3511,7 @@ button.close {
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
-@keyframes mouse-hover-animation {
+@keyframes navbar--mouseOver-animation {
   from {
     transform: translateY(33.33333%);
   }
@@ -3520,12 +3520,30 @@ button.close {
   }
 }
 
-@keyframes mouse-out-animation {
+@keyframes navbar--mouseOut-animation {
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(33.33333%);
+  }
+}
+
+@keyframes navbar-vertical--mouseOver-animation {
+  from {
+    transform: translateX(-33.33333%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navbar-vertical--mouseOut-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.33333%);
   }
 }
 
@@ -6395,6 +6413,7 @@ a.label a.label {
   padding-left: 0;
   font-size: 0;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .navbar > li {
@@ -6425,7 +6444,7 @@ a.label a.label {
 .navbar > li > button::before {
   content: "";
   display: block;
-  animation: mouse-out-animation 0.2s ease-in;
+  animation: navbar--mouseOut-animation 0.2s ease-in;
   background-color: #C4C4C4;
   bottom: 0;
   height: 0.21429rem;
@@ -6452,7 +6471,7 @@ a.label a.label {
 .navbar > li > a.active::before,
 .navbar > li > button:hover::before,
 .navbar > li > button.active::before {
-  animation: mouse-hover-animation 0.2s ease-in;
+  animation: navbar--mouseOver-animation 0.2s ease-in;
   background-color: #0084E0;
   bottom: 0;
   transform: translateY(0);
@@ -6530,6 +6549,82 @@ a.label a.label {
   animation: none;
   background-color: #C4C4C4;
   transform: translateY(33.33333%);
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .navbar__justified > li,
+  .navbar__justified > a,
+  .navbar__justified > button {
+    display: table-cell;
+    width: 1%;
+  }
+  .navbar__justified > li > a,
+  .navbar__justified > li > button {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.navbar__stacked > li,
+.navbar__stacked > a,
+.navbar__stacked > button,
+.navbar__stacked > li > a,
+.navbar__stacked > li > button {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.navbar__stacked > a,
+.navbar__stacked > button,
+.navbar__stacked > li > a,
+.navbar__stacked > li > button {
+  border-bottom: 1px solid transparent;
+}
+
+.navbar__stacked > a::before,
+.navbar__stacked > button::before,
+.navbar__stacked > li > a::before,
+.navbar__stacked > li > button::before {
+  animation: navbar-vertical--mouseOut-animation 0.2s ease-in;
+  height: 100%;
+  right: initial;
+  top: 0;
+  transform: translateX(-33.33333%);
+  width: 0.21429rem;
+}
+
+.navbar__stacked > a:hover::before, .navbar__stacked > a.active::before,
+.navbar__stacked > button:hover::before,
+.navbar__stacked > button.active::before,
+.navbar__stacked > li > a:hover::before,
+.navbar__stacked > li > a.active::before,
+.navbar__stacked > li > button:hover::before,
+.navbar__stacked > li > button.active::before {
+  animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
+  transform: translateX(0);
+}
+
+.navbar__stacked[disabled] > a::before, .navbar__stacked[disabled] > a:hover::before,
+.navbar__stacked[disabled] > button::before,
+.navbar__stacked[disabled] > button:hover::before,
+.navbar__stacked > a[disabled]::before,
+.navbar__stacked > a[disabled]:hover::before,
+.navbar__stacked > button[disabled]::before,
+.navbar__stacked > button[disabled]:hover::before,
+.navbar__stacked > li > a[disabled]::before,
+.navbar__stacked > li > a[disabled]:hover::before,
+.navbar__stacked > li > button[disabled]::before,
+.navbar__stacked > li > button[disabled]:hover::before,
+.navbar__stacked > a.button__is-disabled::before,
+.navbar__stacked > a.button__is-disabled:hover::before,
+.navbar__stacked > button.button__is-disabled::before,
+.navbar__stacked > button.button__is-disabled:hover::before,
+.navbar__stacked > li > a.button__is-disabled::before,
+.navbar__stacked > li > a.button__is-disabled:hover::before,
+.navbar__stacked > li > button.button__is-disabled::before,
+.navbar__stacked > li > button.button__is-disabled:hover::before {
+  transform: translateX(-33.33333%);
 }
 
 .tag {

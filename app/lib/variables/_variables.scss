@@ -429,11 +429,15 @@ $grid-cell-size:                   12rem !default;
 $grid-cell-max-number:             6 !default;
 
 // Navbar
-$navbar-bg:                        $widget-bg !default;
-$navbar-color:                     $text-color !default;
-$navbar-pointer-color:             $gray-medium !default;
-$navbar-pointer-active-color:      $brand-primary !default;
-$navbar-pointer-height:            px-to-rem(3px) !default;
+$navbar-bg:                             $widget-bg !default;
+$navbar-color:                          $text-color !default;
+$navbar-pointer-color:                  $gray-medium !default;
+$navbar-pointer-active-color:           $brand-primary !default;
+$navbar-pointer-height:                 px-to-rem(3px) !default;
+$navbar-mouseover-animation:            translateY(0) !default;
+$navbar-mouseout-animation:             translateY((100% / 3)) !default;
+$navbar-vertical-mouseover-animation:   translateX(0) !default;
+$navbar-vertical-mouseout-animation:    translateX((100% / 3) * -1) !default;
 
 
 // Carousel default settings

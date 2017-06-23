@@ -2,11 +2,27 @@
 //
 // Un `.navbar` es una sección de interfase gráfica que tiene como propósito ayudar
 // al usuario a acceder información.
+//
+// ### Los ítems de navegación tienen estado `disabled`###
+// Este estado se les puede dar:
+// * Usando la clase de estado de botón `.button__is-disabled`
+// * Poniéndole al ítem el atributo `disabled`.
+// * O bien (de ser necesario), poniéndole `disabled` al `.navbar` padre.
+//
+// ** Todas variables de navbar en viewports *<768px* se convierten en
+// `.navbar__stacked`.**
+//
 // > ### Para mejorar la accesibilidad de los `.navbar`s que se usan para navegación ###
 // Si estás usando `.navbar`s como barras de navegación del sitio, acordate de agregar
 // `role="navigation"`al contenedor padre más pertinente del `<ul>`, o envolvé toda
 // la navegación en un tag `<nav>`. No le pongas el `role` al `<ul>`, porque esto
 // evitaría que sea indexado como una lista por tecnologías de asistencia.
+//
+// .navbar__justified - Esta variable ocupa el ancho y distribute el ancho entre
+// los ítems de manera uniforme en anchos *>768px*. Esta variable sólo funciona
+// adentro de un `<ul>` porque necesita a los `<li>`'s que contengan los `<a>`'s
+// o `<button>`'s para mostrarse correctamente.
+// .navbar__stacked - En esta variable de .navbar, los ítems se apilan verticalmente.
 //
 // Markup: navbar.hbs
 //
@@ -18,6 +34,7 @@
   @include list-unstyled;
   font-size: 0;
   margin-bottom: $spacer-lg;
+  width: 100%;
 
   > li {
     white-space: nowrap;
@@ -39,14 +56,14 @@
 
     &::before {
       @include make-pseudo-element;
-      animation: mouse-out-animation ($transition-timing-slow / 4) ease-in;
+      animation: navbar--mouseOut-animation ($transition-timing-slow / 4) ease-in;
       background-color: $navbar-pointer-color;
       bottom: 0;
       height: $navbar-pointer-height;
       left: 0;
       position: absolute;
       right: 0;
-      transform: translateY((100% / 3));
+      transform: $navbar-mouseout-animation;
     }
 
     &:hover,
@@ -54,10 +71,10 @@
       text-decoration: none;
 
       &::before {
-        animation: mouse-hover-animation ($transition-timing-slow / 4) ease-in;
+        animation: navbar--mouseOver-animation ($transition-timing-slow / 4) ease-in;
         background-color: $navbar-pointer-active-color;
         bottom: 0;
-        transform: translateY(0);
+        transform: $navbar-mouseover-animation;
       }
     }
 
@@ -104,7 +121,80 @@
       &::before {
         animation: none;
         background-color: $navbar-pointer-color;
-        transform: translateY((100% / 3));
+        transform: $navbar-mouseout-animation;
+      }
+    }
+  }
+}
+
+.navbar__justified {
+  // Activa esta clase en viewports >768px
+  @media only screen and (min-width: $screen-md-min) {
+    > li,
+    > a,
+    > button {
+      display: table-cell;
+      width: 1%;
+    }
+
+    > li > a,
+    > li > button {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.navbar__stacked {
+  > li,
+  > a,
+  > button,
+  > li > a,
+  > li > button {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  > a,
+  > button,
+  > li > a,
+  > li > button {
+    border-bottom: 1px solid transparent;
+
+    &::before {
+      animation: navbar-vertical--mouseOut-animation ($transition-timing-slow / 4) ease-in;
+      height: 100%;
+      right: initial;
+      top: 0;
+      transform: $navbar-vertical-mouseout-animation;
+      width: $navbar-pointer-height;
+    }
+
+    &:hover,
+    &.active {
+      &::before {
+        animation: navbar-vertical--mouseOver-animation ($transition-timing-slow / 4) ease-in;
+        transform: $navbar-vertical-mouseover-animation;
+      }
+    }
+  }
+
+  // Disabled State
+  &[disabled] > a,
+  &[disabled] > button,
+  > a[disabled],
+  > button[disabled],
+  > li > a[disabled],
+  > li > button[disabled],
+  > a.button__is-disabled,
+  > button.button__is-disabled,
+  > li > a.button__is-disabled,
+  > li > button.button__is-disabled {
+    &,
+    &:hover {
+      &::before {
+        transform: $navbar-vertical-mouseout-animation;
       }
     }
   }
