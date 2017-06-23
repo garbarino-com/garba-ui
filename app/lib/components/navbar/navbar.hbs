@@ -1,4 +1,8 @@
-{{!-- Ejemplo de navbar usado en un <ul> --}}
+{{!-- Ejemplo de navbar usado en un <ul>, también se puede usar presciendiendo
+      del <ul> contenedor, usando sólo <a>'s o <button>'s sueltos en todas las
+      variantes, salvo .navbar__justified que necesita un <ul> contenedor para
+      funcionar sí o sí.  --}}
+
 <ul class="navbar {{modifier_class}}">
   <li role="presentation">
     <a href="#0" role="button" class="active">Home</a>
@@ -13,11 +17,3 @@
     <a href="#0" role="button" class="button__is-disabled">Messages</a>
   </li>
 </ul>
-
-{{!-- Ejemplo de navbar en un <nav> sin <ul> --}}
-<nav class="navbar {{modifier_class}}">
-  <button role="button" class="active">Home</button>
-  <button role="button">Profile</button>
-  <button role="button">Settings</button>
-  <button role="button" class="button__is-disabled">Messages</button>
-</nav>

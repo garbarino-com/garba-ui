@@ -6430,7 +6430,7 @@ a.label a.label {
   padding: 0 1.5rem;
   background-color: #FFF;
   border: 0;
-  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
   color: #6B6B6B;
   cursor: pointer;
   display: block;
@@ -6444,14 +6444,14 @@ a.label a.label {
 .navbar > li > button::before {
   content: "";
   display: block;
-  animation: navbar--mouseOut-animation 0.2s ease-in;
+  animation: navbar-vertical--mouseOut-animation 0.2s ease-in;
   background-color: #C4C4C4;
-  bottom: 0;
-  height: 0.21429rem;
+  height: 100%;
   left: 0;
   position: absolute;
-  right: 0;
-  transform: translateY(33.33333%);
+  top: 0;
+  transform: translateX(-33.33333%);
+  width: 0.21429rem;
 }
 
 .navbar > a:hover, .navbar > a.active,
@@ -6471,10 +6471,18 @@ a.label a.label {
 .navbar > li > a.active::before,
 .navbar > li > button:hover::before,
 .navbar > li > button.active::before {
-  animation: navbar--mouseOver-animation 0.2s ease-in;
-  background-color: #0084E0;
-  bottom: 0;
-  transform: translateY(0);
+  animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
+  transform: translateX(0);
+}
+
+.navbar > a:hover::before, .navbar > a:focus::before,
+.navbar > button:hover::before,
+.navbar > button:focus::before,
+.navbar > li > a:hover::before,
+.navbar > li > a:focus::before,
+.navbar > li > button:hover::before,
+.navbar > li > button:focus::before {
+  background-color: #6B6B6B;
 }
 
 .navbar > a:focus,
@@ -6491,10 +6499,65 @@ a.label a.label {
   cursor: default;
 }
 
+.navbar > a.active::before,
+.navbar > button.active::before,
+.navbar > li > a.active::before,
+.navbar > li > button.active::before {
+  background-color: #0084E0;
+}
+
 @media only screen and (min-width: 54.85714rem) {
-  .navbar > li,
+  .navbar > a,
+  .navbar > button,
+  .navbar > li > a,
+  .navbar > li > button {
+    border-bottom: 0;
+    border-right: 1px solid transparent;
+  }
+  .navbar > a::before,
+  .navbar > button::before,
+  .navbar > li > a::before,
+  .navbar > li > button::before {
+    content: "";
+    display: block;
+    animation: navbar--mouseOut-animation 0.2s ease-in;
+    bottom: 0;
+    height: 0.21429rem;
+    right: 0;
+    top: initial;
+    transform: translateY(33.33333%);
+    width: 100%;
+  }
+  .navbar > a:hover::before, .navbar > a.active::before,
+  .navbar > button:hover::before,
+  .navbar > button.active::before,
+  .navbar > li > a:hover::before,
+  .navbar > li > a.active::before,
+  .navbar > li > button:hover::before,
+  .navbar > li > button.active::before {
+    animation: navbar--mouseOver-animation 0.2s ease-in;
+    bottom: 0;
+    transform: translateY(0);
+  }
+}
+
+.navbar > a,
+.navbar > button {
+  text-align: left;
+  width: 100%;
+}
+
+@media only screen and (min-width: 54.85714rem) {
   .navbar > a,
   .navbar > button {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .navbar > li {
     display: inline-block;
   }
   .navbar > li > a,
@@ -6503,7 +6566,15 @@ a.label a.label {
   }
 }
 
-.navbar[disabled] > a, .navbar[disabled] > a:hover,
+.navbar:disabled > a, .navbar:disabled > a:hover,
+.navbar:disabled > button,
+.navbar:disabled > button:hover,
+.navbar:disabled > li > a,
+.navbar:disabled > li > a:hover,
+.navbar:disabled > li > button,
+.navbar:disabled > li > button:hover,
+.navbar[disabled] > a,
+.navbar[disabled] > a:hover,
 .navbar[disabled] > button,
 .navbar[disabled] > button:hover,
 .navbar > a[disabled],
@@ -6527,7 +6598,15 @@ a.label a.label {
   cursor: not-allowed;
 }
 
-.navbar[disabled] > a::before, .navbar[disabled] > a:hover::before,
+.navbar:disabled > a::before, .navbar:disabled > a:hover::before,
+.navbar:disabled > button::before,
+.navbar:disabled > button:hover::before,
+.navbar:disabled > li > a::before,
+.navbar:disabled > li > a:hover::before,
+.navbar:disabled > li > button::before,
+.navbar:disabled > li > button:hover::before,
+.navbar[disabled] > a::before,
+.navbar[disabled] > a:hover::before,
 .navbar[disabled] > button::before,
 .navbar[disabled] > button:hover::before,
 .navbar > a[disabled]::before,
@@ -6548,7 +6627,39 @@ a.label a.label {
 .navbar > li > button.button__is-disabled:hover::before {
   animation: none;
   background-color: #C4C4C4;
-  transform: translateY(33.33333%);
+  transform: translateX(-33.33333%);
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .navbar:disabled > a::before, .navbar:disabled > a:hover::before,
+  .navbar:disabled > button::before,
+  .navbar:disabled > button:hover::before,
+  .navbar:disabled > li > a::before,
+  .navbar:disabled > li > a:hover::before,
+  .navbar:disabled > li > button::before,
+  .navbar:disabled > li > button:hover::before,
+  .navbar[disabled] > a::before,
+  .navbar[disabled] > a:hover::before,
+  .navbar[disabled] > button::before,
+  .navbar[disabled] > button:hover::before,
+  .navbar > a[disabled]::before,
+  .navbar > a[disabled]:hover::before,
+  .navbar > button[disabled]::before,
+  .navbar > button[disabled]:hover::before,
+  .navbar > li > a[disabled]::before,
+  .navbar > li > a[disabled]:hover::before,
+  .navbar > li > button[disabled]::before,
+  .navbar > li > button[disabled]:hover::before,
+  .navbar > a.button__is-disabled::before,
+  .navbar > a.button__is-disabled:hover::before,
+  .navbar > button.button__is-disabled::before,
+  .navbar > button.button__is-disabled:hover::before,
+  .navbar > li > a.button__is-disabled::before,
+  .navbar > li > a.button__is-disabled:hover::before,
+  .navbar > li > button.button__is-disabled::before,
+  .navbar > li > button.button__is-disabled:hover::before {
+    transform: translateY(33.33333%);
+  }
 }
 
 @media only screen and (min-width: 54.85714rem) {
@@ -6563,68 +6674,71 @@ a.label a.label {
     text-align: center;
     width: 100%;
   }
-}
-
-.navbar__stacked > li,
-.navbar__stacked > a,
-.navbar__stacked > button,
-.navbar__stacked > li > a,
-.navbar__stacked > li > button {
-  display: block;
-  text-align: left;
-  width: 100%;
-}
-
-.navbar__stacked > a,
-.navbar__stacked > button,
-.navbar__stacked > li > a,
-.navbar__stacked > li > button {
-  border-bottom: 1px solid transparent;
-}
-
-.navbar__stacked > a::before,
-.navbar__stacked > button::before,
-.navbar__stacked > li > a::before,
-.navbar__stacked > li > button::before {
-  animation: navbar-vertical--mouseOut-animation 0.2s ease-in;
-  height: 100%;
-  right: initial;
-  top: 0;
-  transform: translateX(-33.33333%);
-  width: 0.21429rem;
-}
-
-.navbar__stacked > a:hover::before, .navbar__stacked > a.active::before,
-.navbar__stacked > button:hover::before,
-.navbar__stacked > button.active::before,
-.navbar__stacked > li > a:hover::before,
-.navbar__stacked > li > a.active::before,
-.navbar__stacked > li > button:hover::before,
-.navbar__stacked > li > button.active::before {
-  animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
-  transform: translateX(0);
-}
-
-.navbar__stacked[disabled] > a::before, .navbar__stacked[disabled] > a:hover::before,
-.navbar__stacked[disabled] > button::before,
-.navbar__stacked[disabled] > button:hover::before,
-.navbar__stacked > a[disabled]::before,
-.navbar__stacked > a[disabled]:hover::before,
-.navbar__stacked > button[disabled]::before,
-.navbar__stacked > button[disabled]:hover::before,
-.navbar__stacked > li > a[disabled]::before,
-.navbar__stacked > li > a[disabled]:hover::before,
-.navbar__stacked > li > button[disabled]::before,
-.navbar__stacked > li > button[disabled]:hover::before,
-.navbar__stacked > a.button__is-disabled::before,
-.navbar__stacked > a.button__is-disabled:hover::before,
-.navbar__stacked > button.button__is-disabled::before,
-.navbar__stacked > button.button__is-disabled:hover::before,
-.navbar__stacked > li > a.button__is-disabled::before,
-.navbar__stacked > li > a.button__is-disabled:hover::before,
-.navbar__stacked > li > button.button__is-disabled::before,
-.navbar__stacked > li > button.button__is-disabled:hover::before {
-  transform: translateX(-33.33333%);
+  .navbar__stacked > li,
+  .navbar__stacked > a,
+  .navbar__stacked > button,
+  .navbar__stacked > li > a,
+  .navbar__stacked > li > button {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  .navbar__stacked > a,
+  .navbar__stacked > button,
+  .navbar__stacked > li > a,
+  .navbar__stacked > li > button {
+    border-bottom: 1px solid transparent;
+  }
+  .navbar__stacked > a::before,
+  .navbar__stacked > button::before,
+  .navbar__stacked > li > a::before,
+  .navbar__stacked > li > button::before {
+    animation: navbar-vertical--mouseOut-animation 0.2s ease-in;
+    height: 100%;
+    right: initial;
+    top: 0;
+    transform: translateX(-33.33333%);
+    width: 0.21429rem;
+  }
+  .navbar__stacked > a:hover::before, .navbar__stacked > a.active::before,
+  .navbar__stacked > button:hover::before,
+  .navbar__stacked > button.active::before,
+  .navbar__stacked > li > a:hover::before,
+  .navbar__stacked > li > a.active::before,
+  .navbar__stacked > li > button:hover::before,
+  .navbar__stacked > li > button.active::before {
+    animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
+    transform: translateX(0);
+  }
+  .navbar__stacked:disabled > a::before, .navbar__stacked:disabled > a:hover::before,
+  .navbar__stacked:disabled > button::before,
+  .navbar__stacked:disabled > button:hover::before,
+  .navbar__stacked:disabled > li > a::before,
+  .navbar__stacked:disabled > li > a:hover::before,
+  .navbar__stacked:disabled > li > button::before,
+  .navbar__stacked:disabled > li > button:hover::before,
+  .navbar__stacked[disabled] > a::before,
+  .navbar__stacked[disabled] > a:hover::before,
+  .navbar__stacked[disabled] > button::before,
+  .navbar__stacked[disabled] > button:hover::before,
+  .navbar__stacked > a[disabled]::before,
+  .navbar__stacked > a[disabled]:hover::before,
+  .navbar__stacked > button[disabled]::before,
+  .navbar__stacked > button[disabled]:hover::before,
+  .navbar__stacked > li > a[disabled]::before,
+  .navbar__stacked > li > a[disabled]:hover::before,
+  .navbar__stacked > li > button[disabled]::before,
+  .navbar__stacked > li > button[disabled]:hover::before,
+  .navbar__stacked > a.button__is-disabled::before,
+  .navbar__stacked > a.button__is-disabled:hover::before,
+  .navbar__stacked > button.button__is-disabled::before,
+  .navbar__stacked > button.button__is-disabled:hover::before,
+  .navbar__stacked > li > a.button__is-disabled::before,
+  .navbar__stacked > li > a.button__is-disabled:hover::before,
+  .navbar__stacked > li > button.button__is-disabled::before,
+  .navbar__stacked > li > button.button__is-disabled:hover::before {
+    transform: translateX(-33.33333%);
+  }
 }
 
 .tag {

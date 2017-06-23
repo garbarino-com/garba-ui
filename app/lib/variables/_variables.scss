@@ -432,6 +432,7 @@ $grid-cell-max-number:             6 !default;
 $navbar-bg:                             $widget-bg !default;
 $navbar-color:                          $text-color !default;
 $navbar-pointer-color:                  $gray-medium !default;
+$navbar-pointer-hover-color:            $brand-secondary !default;
 $navbar-pointer-active-color:           $brand-primary !default;
 $navbar-pointer-height:                 px-to-rem(3px) !default;
 $navbar-mouseover-animation:            translateY(0) !default;
