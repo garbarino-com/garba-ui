@@ -1,0 +1,294 @@
+// Buttons
+//
+// Las classes de botones se pueden usar en elementos `<a>`, `<button>`, o `<input>`.
+// Posee modificadores agrupados por función/color (ej. `.button--primary`), por
+// tamaño (ej. `button--lg`) y estado (ej. `.button__is-loading`) que se pueden
+// agrupar para darle al elemento la visualización que se desea.
+// > ### Links que funcionan como botones ###
+// En caso que el elemento `<a>` esté usándose para actuar como botón (porque no
+// sirve para navegar hacia otro documento o sección, sino que dispara una funcionalida
+// dentro de la página actual), también deberían recibir `role="button"`.
+// > ### Rendering cross-browser ###
+// Como buena práctica, recomendamos usar el tag `button` siempre que sea posible
+// para asegurar una visualización equivalente en todos los browsers.
+//
+// Markup: buttons.hbs
+//
+// Styleguide Elements.Buttons
+
+
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+// Credit: https://github.com/suitcss/base/
+
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+// stylelint-enable selector-no-qualifying-type, selector-no-type
+
+
+// Base class
+.button {
+  @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  margin-bottom: 0;
+  position: relative;
+  text-align: center;
+  text-transform: $btn-text-transform;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  // Hover and focus styles
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    transform: translateY($btn-shadow-width);
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+  }
+
+  // Posiciona el botón cuando se usa adentro de un `.grid-list`
+  .list-grid-item & {
+    bottom: $grid-cell-spacer * 2;
+    left: $grid-cell-spacer * 2;
+    position: absolute;
+    right: $grid-cell-spacer * 2;
+    z-index: $zindex-element;
+  }
+}
+
+// Button Variants
+//
+// Markup: button.hbs
+//
+// .button--primary - Se usa dentro de un conjunto de acciones una vez para la
+// acción primaria.
+// .button--main - Está reservada sólo para la acción **agregar al carrito**. *No
+// debe usarse para ninguna otra acción*
+// .button--link - Conserva el layout del botón pero le da el look & feel de un
+// `<a>` común.
+//
+// Styleguide Elements.Buttons.1-Variants
+
+// Make this default
+.button,
+.button--default,
+.button--secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg);
+}
+
+.button--primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg);
+}
+
+.button--main {
+  @include button-variant($btn-main-color, $btn-main-bg);
+}
+
+.button--link {
+  @include button-variant($btn-link-color, $btn-link-bg);
+
+  // Define hover behavior
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+// Button With Icon
+//
+// Markup: button-has-icon.hbs
+//
+// .button--facebook - Está reservado a usos relacionados con la red social
+// *facebook* (compartir, loguearse, etc.).
+//
+// Styleguide Elements.Buttons.2-IconButtons
+
+.button--facebook {
+  @include button-variant($btn-facebook-color, $btn-facebook-bg);
+}
+
+
+// Size modifiers
+//
+// Los botones tienen 3 variaciones de tamaño:
+// * **Default** (si no hay ninguna especificación de tamaño)
+// * **Large** (`.button--lg`)
+// * **Small** (`.button--sm`)
+//
+// Markup: button.hbs
+//
+// .button--lg - Variable de tamaño *más grande*.
+// .button--sm - Variable de tamaño *más chica*.
+// .button--block - Cambia el valor de display del botón de `block.
+//
+// Styleguide Elements.Buttons.3-SizeModifiers
+
+.button--lg {
+  @include button-size($btn-large-padding-x, $btn-height-lg-size, $font-size-lg);
+}
+
+.button--sm {
+  @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
+
+}
+
+// Convert to block
+.button--block {
+  display: block;
+  width: 100%;
+
+  // Use case for small button in smaller viewports
+  &.button--sm {
+    @include button-size($btn-base-padding-x, $btn-height-base, $font-size-base);
+
+    @media only screen and (min-width: $screen-lg-min) {
+      @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
+    }
+  }
+
+  // Generate space for adjacent elements
+  & + & {
+    margin-top: $spacer-sm;
+  }
+}
+
+// Fixed Buttons
+//
+// Agregar estas clases para fijar el botón a los bordes de la pantalla (actualmente
+// sólo disponible fijar abajo).
+//
+// Markup: button.hbs
+//
+// .button__is-fixed-to-bottom - Cambia el valor de display del botón de `block`.
+// (Se puede ver abajo pegado contra el borde de la pantalla.)
+//
+// Styleguide Elements.Buttons.4-FixedButtons
+
+.button__is-fixed-to-bottom {
+  border-radius: 0;
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: $zindex-fixed-button;
+}
+
+
+// State modifiers
+//
+// Markup: button.hbs
+//
+// :hover - Cuando el mouse se desliza sobre el botón.
+// :focus - Cuando es presionado
+// .button__is-disabled - El botón está *deshabilitado*.
+// .button__is-loading - El botón está procesando una acción.
+// .button__has-icon - El botón tiene un ícono.
+//
+// Styleguide Elements.Buttons.5-StateModifiers
+
+// Agregamos estos selectores a la definición para que el estado de deshabilitado
+// funcione bien en los forms.
+
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+[disabled],
+[readonly],
+fieldset[disabled],
+// stylelint-enable selector-no-qualifying-type, selector-no-type
+
+.control__is-disabled .button,
+.block__is-disabled .button,
+
+// Estados Disabled y Loading
+.button__is-disabled,
+.button__is-loading {
+  &.button,
+  &.button:disabled,
+  &.button--main,
+  &.button--primary,
+  &.button--secondary,
+  &.button--link,
+  &.button--facebook {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $btn-disabled-bg;
+      box-shadow: $btn-box-shadow-value darken($btn-disabled-bg, 15%);
+      color: $btn-disabled-color;
+      outline: 0;
+      transform: translateY(0);
+    }
+  }
+}
+
+// Define shadow and cursor only for disabled state
+.button__is-disabled {
+  cursor: not-allowed;
+}
+
+// Loading state spinner definitions
+.button__is-loading {
+  cursor: default;
+
+  // Spinner pseudo-element
+  &::before {
+    @include make-pseudo-element(inline-block);
+    @include add-spinner($btn-spinner-base-size, $btn-spinner-border-width,
+      $btn-spinner-color-inactive, $btn-spinner-color-active);
+    margin-right: $btn-spinner-spacing;
+    margin-top: px-to-rem(-3px);
+  }
+
+  &.button--lg::before {
+    @include add-spinner-variant-to-button($btn-spinner-lg-size);
+  }
+
+  &.button--sm::before {
+    @include add-spinner-variant-to-button($btn-spinner-sm-size,
+      $btn-spinner-sm-border-width);
+  }
+}
+
+
+// Has icon modifier
+.button__has-icon {
+  padding-left: $btn-icon-padding-x;
+  padding-right: $btn-icon-padding-x;
+  text-transform: none;
+}
+
+// Provisionally provide a style fallback to old icon fonts until they are
+// deprecated in upcoming releases.
+.button__has-icon,
+.button__has-icon > [class^="gb-icon-"] {
+  &::before {
+    @include icon-element($btn-icon-size);
+    left: 1rem;
+    margin-top: ($btn-icon-size / 2) * -1;
+    position: absolute;
+    top: 50%;
+  }
+
+  &.button--facebook::before {
+    content: $icon-facebook;
+  }
+}

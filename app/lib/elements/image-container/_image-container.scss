@@ -1,0 +1,77 @@
+// Image Container
+//
+// Es un contenedor unificado para mostrar imagenes de producto a través del sitio.
+// El componente de imagen de producto se pueden usar en los elementos `<a>`,
+// en elementos block (como por ejemplo: `<div>`).
+// > ### Características del componente **Imagen de producto**
+// * **Líquido:** El componente es líquido; esto quiere decir que no tiene ancho
+// fijo y va a tomar el de su contenedor. Esto está hecho así a propósito de manera
+// que se pueda usar este componente tanto para **galerías**, como para **thumbnails**,
+// como para **cajas de producto**.
+// * **Best-fit automático:** El componente adaptará por si sólo el tamaño de la
+// imagen contenida al mejor posible manteniendo relación de ancho/alto (sin alterar
+// las proporciones de la misma). El componente sin embargo no forzará a la imágen
+// más allá de sus dimensiones máximas. Con lo cual cada uso debe llamar una imagen
+// con dimensiones adecuadas.
+//
+// Markup: image-container.hbs
+//
+// .img-container__is-loading - Añadir/quitar esta clase a la clase padre para
+// mostrar/ocultar el estado `loading`.
+//
+// Styleguide Elements.ImageContainer
+
+.img-container {
+  @include element-aspect-ratio;
+  background-color: $imgcontainer-bg;
+  display: block;
+  text-align: center;
+
+  > img,
+  a > img {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:focus,
+  a:focus {
+    &,
+    > img {
+      outline: 0;
+    }
+  }
+}
+
+// State modifiers
+
+.img-container__is-loading {
+  // Add background color and z-index to overlay so it will cover the image
+  // until state class is removed.
+  &::before {
+    background-color: $imgcontainer-loading-bg;
+    position: relative;
+    z-index: $zindex-element;
+  }
+
+  // Spinner pseudo-element
+  // Hooked on ::after to avoid conflicts: ::before is being used for
+  // aspect-ratio in parent class.
+  &::after {
+    @include make-pseudo-element(inline-block);
+    @include add-spinner($imgcontainer-spinner-base-size,
+      $imgcontainer-spinner-border-width, $imgcontainer-spinner-color-inactive,
+      $imgcontainer-spinner-color-active);
+    left: 50%;
+    margin-left: ($imgcontainer-spinner-base-size / 2) * -1;
+    margin-top: ($imgcontainer-spinner-base-size / 2) * -1;
+    position: absolute;
+    top: 50%;
+    z-index: $zindex-hover-element;
+  }
+}

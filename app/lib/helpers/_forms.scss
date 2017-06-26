@@ -1,0 +1,76 @@
+// Form Block
+
+@mixin form-block($padding) {
+  @include clearfix;
+  display: block;
+  margin-bottom: $padding;
+}
+
+
+
+// Form control sizing
+//
+// [converter] $parent hack
+
+@mixin input-size($parent, $font-size, $height, $padding) {
+  #{$parent} {
+    font-size: $font-size;
+    height: $height;
+    padding: $padding;
+  }
+
+  select#{$parent} {
+    height: $height;
+    line-height: 1;
+  }
+
+  textarea#{$parent},
+  select[multiple]#{$parent} {
+    height: auto;
+  }
+}
+
+
+
+// Form control focus state
+//
+
+@mixin form-control-focus($color: $input-border-focus) {
+  &:focus {
+    border-color: $color;
+    box-shadow: 0 0 $input-border-focus-shadow-lenght 0 rgba($color,
+      $input-border-focus-opacity);
+    outline: 0;
+  }
+}
+
+
+// Placeholder mixin
+@mixin placeholder($color: $input-color-placeholder) {
+  // stylelint-disable selector-no-vendor-prefix
+
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+
+    // Override Firefox's unusual default opacity;
+    // see https://github.com/twbs/bootstrap/pull/11526
+    opacity: 1;
+  }
+
+  // Internet Explorer 10+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  // Safari and Chrome
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::placeholder {
+    color: $color;
+  }
+
+  // stylelint-enable selector-no-vendor-prefix
+}

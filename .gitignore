@@ -1,6 +1,8 @@
-config.rb
 .DS_Store
+config.rb
+icomoon
+.idea/
 npm-debug.log
 node_modules/
 .sass-cache/
-.idea/
+dist/components/

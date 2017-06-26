@@ -1,9 +1,0 @@
-// Hover state function
-@function state-hover-modifier($color) {
-  @return call($modifier-operation, $color, $modifier-hover-value);
-}
-
-// Focus state function
-@function state-focus-modifier($color) {
-  @return call($modifier-operation, $color, $modifier-focus-value);
-}

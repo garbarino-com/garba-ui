@@ -1,0 +1,37 @@
+// @strip-units($number)
+//
+// Devuelve el número de una variable quitándole la unidad de medida.
+//
+// Styleguide Helpers.Misc.RemoveUnit
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-units($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// @px-to-rem($pxval)
+//
+// Convierte un valor en pixels a su equivalente en rems. Asume que $font-size-base
+// es el valor de font-size de <html>. Ejemplo: en el caso de querer convertir 12px
+// a rem, escribir `px-to-rem(12)` o `px-to-rem(12px)`.
+//
+// Styleguide Helpers.Misc.RemoveUnit
+
+@function px-to-rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $baseline-grid;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+
+  @return ($pxval / $base) * 1rem;
+}

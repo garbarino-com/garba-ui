@@ -1,0 +1,81 @@
+// Precio
+//
+// La idea es empezar a unificar la comunicación de los distintos tipo de
+// información que se utilizan en el sitio. El objetivo del componente
+// *Precio* normalizar la manera en que se comunican precios en el sitio.
+// Este bloque se debe utilizar sólo con el objetivo de comunicar precios
+// o importes totales (no necesariamente aplica a los precios por unidad).
+//
+// Markup: value.hbs
+//
+// .value-container--lg - Reservado para *Ficha de producto* y el bloque *Súper Oferta*.
+// .value-container--sm - Se utiliza para comunicar importes totales (p.ej: en el checkout).
+//
+// Styleguide Elements.Value
+
+.value-container {
+  @include clearfix;
+  @include value-variant(
+    $value-note-font-size-base,
+    $value-note-font-size-base-mobile,
+    $value-font-size-base,
+    $value-font-size-base-mobile
+  );
+
+  line-height: $value-line-height-base;
+
+  > .value-note,
+  > .value-item {
+    display: block;
+    vertical-align: middle;
+  }
+}
+
+// Large value container
+.value-container--lg {
+  @include value-variant(
+    $value-note-font-size-lg,
+    $value-note-font-size-lg,
+    $value-font-size-lg,
+    $value-font-size-lg-mobile
+  );
+
+  // Add vertical inner space to block (only in this variant).
+  padding-bottom: $spacer-base;
+  padding-top: $spacer-base;
+}
+
+// Small value container
+.value-container--sm {
+  margin-left: ($value-spacer-sm / 2) * -1;
+  margin-right: ($value-spacer-sm / 2) * -1;
+
+  @include value-variant(
+    $value-note-font-size-sm,
+    $value-note-font-size-sm,
+    $value-font-size-sm,
+    $value-font-size-sm
+  );
+
+  // Use both elements in the same line for this variant and add a margin-left.
+  > .value-note,
+  > .value-item {
+    display: inline-block;
+    padding-left: $value-spacer-sm / 2;
+    padding-right: $value-spacer-sm / 2;
+  }
+}
+
+// Notice in value component
+.value-note {
+  color: $value-note-color;
+  font-size: $value-font-size-base;
+  font-weight: $value-note-font-weight;
+}
+
+// Value proper container
+.value-item {
+  color: $brand-corporate;
+  font-size: $value-font-size-base;
+  font-weight: $value-font-weight;
+}

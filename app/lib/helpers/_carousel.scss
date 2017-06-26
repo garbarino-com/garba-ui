@@ -1,0 +1,68 @@
+// Left arrow animation
+@keyframes carousel-enter-left-arrow {
+  from {
+    transform: translate(-100%, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes carousel-exit-left-arrow {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-100%, 0);
+  }
+}
+
+// Right arrow animation
+@keyframes carousel-enter-right-arrow {
+  from {
+    transform: translate(100%, 0);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes carousel-exit-right-arrow {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(100%, 0);
+  }
+}
+
+
+
+@function slick-image-url($url) {
+  @if function-exists(image-url) {
+    @return image-url($url);
+  }
+  @else {
+    @return url($carousel-loader-path + $url);
+  }
+}
+
+@function slick-font-url($url) {
+  @if function-exists(font-url) {
+    @return font-url($url);
+  }
+  @else {
+    @return url($carousel-loader-path + $url);
+  }
+}
+
+// Slider
+.slick-list {
+  .slick-loading & {
+    background: #FFF slick-image-url("ajax-loader.gif") center center no-repeat;
+  }
+}

@@ -1,0 +1,59 @@
+// Helpers
+//
+// Un **helper** es un conjunto de declaraciones de CSS que se pueden reutilizar.
+// También se puede usar con parámetros de modo de hacerlo aún más flexible.
+// Usage:
+// ```javascript
+// .classname {
+//   @include mixin-name($params);
+// }
+// ```
+//
+// Styleguide Helpers
+
+// Misceláneos
+//
+// Helpers de uso general.
+//
+// Styleguide Helpers.Misc
+
+// Base framework variables
+//
+// Volvemos a importamr las variables para que esten disponibles si se llama
+// sólo helpers.
+
+@import "../variables/variables";
+@import "../variables/icon-variables";
+
+// Core Legacy (v1.3.2)
+//
+// La librería importa los mixins de **Garba-UI (v1.3.2)** que están disponibles
+// para el uso. Documentación para dichos mixins se puede encontrar en
+// [este link](http://ui-doc.garba.ninja/#box-general-mixins).
+//
+// Styleguide Helpers.OldMixins
+@import "../_v1.3.2/garbaui-core";
+
+// General usage
+@import "animations";
+@import "utilities";
+@import "icon-element";
+@import "set-width-based-on-siblings-count";
+@import "make-css-arrow";
+@import "state-modifiers";
+
+// Element related
+@import "forms";
+@import "buttons";
+@import "button-actions";
+
+// Component related
+@import "labels";
+@import "lists";
+@import "navbar";
+@import "spinners";
+@import "tooltips";
+@import "value";
+
+// Functional related
+@import "carousel";

@@ -1,0 +1,18 @@
+// @width-based-on-siblings-count($numberOfSiblings)
+//
+// Asigna un ancho al elemento basado en la cantidad de siblings que tenga.
+// Basado en
+// [esta idea](http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/)
+//
+// $numberOfSiblings - El número máximo de elementos esperado en el array.
+//
+// Styleguide Helpers.Misc.SetWidthBasedOnSiblingCount
+
+@mixin set-width-based-on-siblings-count($numberOfSiblings) {
+  @for $i from 1 through $numberOfSiblings {
+    &:first-child:nth-last-child(#{$i}),
+    &:first-child:nth-last-child(#{$i}) ~ & {
+      width: (100% / #{$i});
+    }
+  }
+}

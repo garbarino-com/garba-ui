@@ -1,0 +1,22 @@
+// Bootstrap Narrow Grid Extension
+//
+// Este mixin sirve para generar la extensión de la grilla que tiene calle reducida.
+//
+
+@mixin make-narrow-grid {
+  @include clearfix;
+
+  margin-left: ($grid-narrow-gutter-width / 2) * -1;
+  margin-right: ($grid-narrow-gutter-width / 2) * -1;
+
+  // Grid padding rewrite
+  @for $i from 1 through $grid-columns {
+    .col-xs-#{$i},
+    .col-sm-#{$i},
+    .col-md-#{$i},
+    .col-lg-#{$i} {
+      padding-left: ($grid-narrow-gutter-width / 2);
+      padding-right: ($grid-narrow-gutter-width / 2);
+    }
+  }
+}

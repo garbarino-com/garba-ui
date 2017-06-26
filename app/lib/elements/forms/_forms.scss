@@ -1,0 +1,418 @@
+// Forms
+//
+// Styleguide Elements.Forms
+
+
+
+// Normalización de elementos
+
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+
+fieldset {
+  border: 0;
+  margin: 0;
+
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+
+  padding: 0;
+}
+
+legend {
+  border: 0;
+  color: $gray-dark;
+  display: block;
+  line-height: inherit;
+  margin-bottom: $spacer-base;
+  padding: 0;
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+  font-weight: $block-label-font-weight;
+  margin-bottom: $spacer-sm;
+
+  // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  max-width: 100%;
+
+  // Indica que el campo de input es requerido.
+  .block__is-required & {
+    &::after {
+      color: $block-is-required-symbol;
+      content: "*";
+      display: inline-block;
+      margin-left: $spacer-xs;
+    }
+  }
+
+  [disabled] &,
+  [readonly] &,
+  fieldset[disabled] &,
+  .control__is-disabled ~ &,
+  .block__is-disabled & {
+    cursor: not-allowed;
+    opacity: $modifier-opacity-value;
+    pointer-events: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+
+// Form básico
+//
+// Los controles de form automaticamente reciben algunos estilos globales. Todos
+// los elementos `<input>`, `<textarea>`, and `<select>` con `.form-control` setean
+// el ancho a 100% por default. Envuelva los labels y los controles en un elemento
+// con la clase `.form-block` para que el espaciado sea el óptimo.
+//
+// **(Añadí `disabled` al `<fieldset>` para deshabilitar todos los controles de
+// una sola vez.)**
+//
+// > ### Advertencia sobre la funcionalidad de los `<a>`
+// Por default, los browsers van a tratar los controles de form nativos (`<input>`,
+// `<select>` y `<button>`) dentro de un
+// `<fieldset disabled>` como deshabilitados,   interacciones de mouse y de teclado
+// con los mismos. Sin embargo, si tu `<form>` incluye también algún
+// `<a ... class="button button-*">`, estos sólo van a recibir la propiedad
+// `pointer-events: none;`.
+// [Esta propiedad no está del todo estandarizada](http://caniuse.com/#feat=pointer-events)
+// y no evita que el teclado haga `:focus` o active esos links. Para mayor seguridad
+// se recomienda utilizar JavaScript para deshabilitar esos links.
+// ### Compatibilidad cross-browser
+// Browsers -IE11 no soportan del todo el uso del atributo `disabled` en
+// `<fieldset>`s. Para mayor seguridad se recomienda utilizar JavaScript para
+// deshabilitar el `<fieldset>`.
+//
+// .block__is-disabled - El bloque está deshabilitado *(es conveniente agregar el
+// atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad de css
+// `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__is-required - Agrega un asterico color rojo al `<label>`para señalar
+// que es un bloque obligatorio.
+//
+// Markup: basic-form.hbs
+//
+// Styleguide Elements.Forms.2-BasicForm
+
+// Bloque contenedor de los forms
+.form-block {
+  @include form-block($form-block-spacing);
+}
+
+
+
+// Form Control
+//
+// Usamos la clase `.form-control` para darle estilos a los elementos de input
+// textuales de los *forms*.
+//
+// *Esta clase puede usar en los siguientes elementos de form:*
+// * `select`
+// * `textarea`
+// * `input[type="text"]`
+// * `input[type="password"]`
+// * `input[type="datetime"]`
+// * `input[type="datetime-local]`
+// * `input[type="date"]`
+// * `input[type="month"]`
+// * `input[type="time"]`
+// * `input[type="week"]`
+// * `input[type="number"]`
+// * `input[type="email"]`
+// * `input[type="url"]`
+// * `input[type="search"]`
+// * `input[type="tel"]`
+// * `input[type="color"]`
+// > Noten que el `<select>` nativo de Safari y Chrome tiene unos bordes redondeados
+// que no se pueden modificar vía la propiedad `border-radius`.
+//
+// :focus - El campo está seleccionado.
+// .control__is-disabled - El campo está deshabilitado *(es necesario agregar el atributo
+// `disabled` al `<input>` o al `<fieldset>` contenedor)*.
+// .form-control--sm - Única variable de tamaño (por el momento). El alto de este
+// input está atado al alto de la variable de botón `.button--sm`.
+//
+// Markup: form-controls.hbs
+//
+// Styleguide Elements.Forms.1-FormControl
+
+.form-control {
+  background-color: $input-bg;
+
+  // Reset unusual Firefox-on-Android default style;
+  //see https://github.com/necolas/normalize.css/issues/214
+  background-image: none;
+
+  border: 1px solid $input-border-color;
+
+  // Note: This has no effect on <select>s in some browsers,
+  // due to the limited stylability of <select>s in CSS.
+  border-radius: $border-radius-base;
+
+  color: $input-color;
+  display: block;
+  font-size: $font-size-base;
+
+  // Make inputs at least the height of their button counterpart
+  // (base line-height + padding + border)
+  height: $input-height;
+
+  line-height: 1;
+  padding: $spacer-base;
+  transition: border-color ease-in-out $transition-timing-base,
+    box-shadow ease-in-out $transition-timing-base;
+  width: 100%;
+
+  select#{&} {
+    line-height: 1;
+  }
+
+  // Placeholder
+  @include placeholder;
+
+  // Focus state
+  @include form-control-focus;
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] &,
+  &.control__is-disabled,
+  .block__is-disabled & {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $input-bg-disabled;
+      border-color: $input-border-color;
+      box-shadow: none;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+  &:-webkit-autofill {
+    background-color: inherit !important;
+  }
+}
+
+// Libera la altura para los `<textarea>`s
+textarea,
+select[multiple] {
+  &.form-control {
+    height: auto;
+  }
+}
+
+// Small input variant
+@include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);
+
+
+
+// Checkboxes y Radio buttons
+//
+// Indenta los labels para posicionar los radios/checkboxes como controles flotantes.
+//
+// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
+// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
+// de css `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+//
+// Markup: checkbox-and-radio.hbs
+//
+// Styleguide Elements.Forms.3-Checkboxes&Radios
+
+.radio,
+.checkbox {
+  display: block;
+  margin-bottom: $spacer-sm;
+  margin-top: $spacer-sm;
+  position: relative;
+
+  label {
+    cursor: pointer;
+    font-weight: $font-weight-base;
+    margin-bottom: 0;
+
+    // Ensure the input doesn't jump when there is no text
+    min-height: $line-height-computed;
+
+    padding-left: $controller-spacer;
+  }
+
+  // Define estilos para el bloque deshabilitado.
+  [disabled] &,
+  [readonly] &,
+  fieldset[disabled] &,
+  &.block__is-disabled {
+    input[type="radio"],
+    input[type="checkbox"] {
+      cursor: not-allowed;
+      opacity: $modifier-opacity-value;
+      pointer-events: none;
+    }
+  }
+
+  // Selected state
+  input[type="radio"],
+  input[type="checkbox"] {
+    @include prefixer(appearance, none, webkit ms spec);
+    background-color: $controler-bg-inactive;
+    border: 1px solid $controler-border-inactive;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:checked {
+      border-color: $controler-active;
+    }
+
+    // Elemento que se dibuja cuando se está `:checked`
+    &::after {
+      font-family: $icon-font-name !important;
+      line-height: 1;
+      transition: background-color ease-in-out $transition-timing-base,
+      border-color ease-in-out $transition-timing-base,
+        color ease-in-out $transition-timing-base;
+    }
+  }
+
+  // Estilos específicos para radiobuttons
+  input[type="radio"] {
+    border-radius: 50%;
+
+    &::after {
+      @include make-pseudo-element;
+      background-color: transparent;
+      border-radius: 50%;
+      display: block;
+      height: $controller-size;
+      margin-left: ($controller-size / 2) * -1;
+      margin-top: ($controller-size / 2) * -1;
+      width: $controller-size;
+    }
+
+    &:checked::after {
+      background-color: $controler-active;
+    }
+  }
+
+  // Estilos específicos para checkbox
+  input[type="checkbox"] {
+    border-radius: $border-radius-base;
+
+    &::after {
+      color: transparent;
+      content: $icon-checkmark;
+      font-size: $controller-size;
+      margin-left: ($controller-size / 2) * -1;
+      margin-top: .25rem * -1;
+    }
+
+    &:checked::after {
+      color: $controler-active;
+    }
+  }
+}
+
+// Posiciona los controles
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline {
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-left: $controller-spacer * -1;
+    margin-top: $spacer-xs;
+    position: absolute;
+
+    &::after {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+    }
+  }
+}
+
+
+
+// Inline checkboxes y Radios
+//
+// Agrega la clase `.radio-inline` o `.checkbox-inline` para poner varios checkboxes
+// o radios en la misma línea.
+//
+// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
+// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
+// de css `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+//
+// Markup: checkbox-and-radio--inline.hbs
+//
+// Styleguide Elements.Forms.4-InlineCheckboxes&Radios
+
+.radio-inline,
+.checkbox-inline {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $block-label-font-weight;
+  margin-bottom: 0;
+  padding-left: $controller-spacer;
+  position: relative;
+  vertical-align: middle;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-left: $spacer-lg; // space out consecutive inline controls
+  margin-top: 0;
+}
+
+
+
+// Form horizontal
+//
+// El form horizontal está construído sobre las clases de grilla y permite crear
+// forms con labels e input en la misma línea.
+// > En caso de querer usar la variante `.form-control--sm` se debe agregar la
+// clase `.control-label--sm` al `<label>` con clase `.control-label`.
+//
+// Markup: form-horizontal.hbs
+//
+// Styleguide Elements.Forms.5-FormHorizontal
+
+.form-horizontal {
+  // Make form groups behave like rows
+  .form-block {
+    @include make-row;
+  }
+
+  // Reset spacing and right align labels, but scope to media queries so that
+  // labels on narrow viewports stack the same as a default form example.
+  .control-label {
+    display: block;
+    margin-bottom: $spacer-sm;
+
+    @media (min-width: $screen-md-min) {
+      line-height: 1;
+      margin-bottom: 0;
+      padding-top: $spacer-base;
+    }
+  }
+
+  .control-label--sm {
+    font-size: $font-size-sm;
+    margin-bottom: $spacer-xs;
+    padding-top: $spacer-sm;
+  }
+}
+
+// stylelint-enable selector-no-qualifying-type, selector-no-type

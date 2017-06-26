@@ -1,0 +1,48 @@
+// Horizontal navbar animations
+
+// Nav OnMouseOver animation
+@keyframes navbar--mouseOver-animation {
+  from {
+    transform: $navbar-mouseout-animation;
+  }
+
+  to {
+    transform: $navbar-mouseover-animation;
+  }
+}
+
+// Nav OnMouseOot animation
+@keyframes navbar--mouseOut-animation {
+  from {
+    transform: $navbar-mouseover-animation;
+  }
+
+  to {
+    transform: $navbar-mouseout-animation;
+  }
+}
+
+
+// Vertical navbar animations
+
+// Vertical nav OnMouseOver animation
+@keyframes navbar-vertical--mouseOver-animation {
+  from {
+    transform: $navbar-vertical-mouseout-animation;
+  }
+
+  to {
+    transform: $navbar-vertical-mouseover-animation;
+  }
+}
+
+// Vertical nav OnMouseOot animation
+@keyframes navbar-vertical--mouseOut-animation {
+  from {
+    transform: $navbar-vertical-mouseover-animation;
+  }
+
+  to {
+    transform: $navbar-vertical-mouseout-animation;
+  }
+}

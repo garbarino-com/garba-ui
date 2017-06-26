@@ -1,0 +1,149 @@
+// Grid List
+//
+// *Grid-list* es una adaptación del
+// [componente material](https://material.io/guidelines/components/grid-lists.html).
+// Es una alternativa a la lista común. Un grupo de celdas de forma cuadrada
+// organizadas en forma horizontal.
+//
+// Las *Grid-lists* sirven se usan para tipos de datos similares. Ayudan a mejorar
+// la comprensión visual de los datos que agrupan.
+//
+// > Los ítems que componen la *Grid-lists* tienen un ancho fijado que se asigna
+// automáticamente de acuerdo a la cantidad de siblings que haya en una misma fila
+// (máximo 6).
+//
+// Markup: grid-list.hbs
+//
+// Styleguide Components.GridList
+
+.list-grid {
+  @include clearfix;
+  margin-bottom: 0;
+  margin-left: ($grid-cell-spacer / 2) * -1;
+  margin-right: ($grid-cell-spacer / 2) * -1;
+  width: 100%;
+
+  // Agrega espacio entre .list-grid adyacentes.
+  & + & {
+    margin-top: ($grid-cell-spacer / 4);
+  }
+
+  // Setea el margin-bottom para el último sibling
+
+  // TODO(ecalvi): Este espaciado no parece estar funcionando cuando el elemento
+  // es uno solo. Si funciona cuando hay varias list-grids juntas.
+
+  &:last-of-type,
+  &:only-of-type {
+    margin-bottom: $spacer-lg;
+  }
+}
+
+.list-grid-item {
+  @include align-items(center);
+  @include display(flex);
+  @include element-aspect-ratio;
+  @include flex-direction(row);
+  @include justify-content(center);
+  line-height: $line-height-sm;
+  padding-left: ($grid-cell-spacer / 2);
+  padding-right: ($grid-cell-spacer / 2);
+
+  &::after {
+    @include make-pseudo-element;
+    background-color: $grid-cell-bg;
+    border: $grid-cell-border-size solid $grid-cell-border-color;
+    border-radius: $border-radius-base;
+    bottom: ($grid-cell-spacer / 2);
+    left: ($grid-cell-spacer / 2);
+    position: absolute;
+    right: ($grid-cell-spacer / 2);
+    top: ($grid-cell-spacer / 2);
+    transition: border-color ease-in-out $transition-timing-base;
+  }
+
+  // Setea el ancho a los elementos en viewports >768px
+  @media only screen and (min-width: $screen-md-min) {
+    @include set-width-based-on-siblings-count($grid-cell-max-number);
+    float: left;
+  }
+}
+
+
+
+// Linked Grid List
+//
+// Agregale links a las *Grid-list* usando tags `<a>` o `<button>`en vez de
+// `<li>` o `<div>` (eso también implica que el elemento padre debería ser un
+// `<div>` en lugar de un `<ul>`.
+//
+// Markup: grid-list-linked.hbs
+//
+// Styleguide Components.GridList.1-LinkedGridList
+
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+a.list-grid-item,
+button.list-grid-item {
+  background: transparent;
+  border: 0;
+  color: $grid-cell-active;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      border-color: state-hover-modifier($grid-cell-active);
+      color: state-hover-modifier($grid-cell-active);
+    }
+  }
+
+  &:focus {
+    outline: 0;
+
+    &::after {
+      border-color: state-focus-modifier($grid-cell-active);
+      color: state-focus-modifier($grid-cell-active);
+    }
+  }
+}
+// stylelint-enable selector-no-qualifying-type, selector-no-type
+
+
+
+// Grid list item
+
+.list-grid-item__body {
+  @include flex(1);
+  padding-left: $grid-cell-spacer * 2;
+  padding-right: $grid-cell-spacer * 2;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  z-index: $zindex-element;
+}
+
+
+
+// Icon Grid List
+//
+// Las *Grid-list* vienen con unos estilos para ícono preseteados como se ve en
+// este ejemplo. También traen preseteados estilos para posicionar botones.
+// > **Advertencia**: *Grid-list* no son un *Cards* que serán definido en otro lado.
+// Si bien se incluyen estilos para texto, íconos y botones internos, la idea de
+// este componente es que no contenga demasiada información. En el caso de ser
+// necesario mostrar demasiada información se recomienda recurrir a las *Cards*.
+//
+// Markup: grid-list-with-icons.hbs
+//
+// Styleguide Components.GridList.2-IconGridList
+
+.list-grid-item__body {
+  @include flex(1);
+  padding-left: $grid-cell-spacer * 2;
+  padding-right: $grid-cell-spacer * 2;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  z-index: $zindex-element;
+}

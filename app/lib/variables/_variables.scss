@@ -1,0 +1,465 @@
+@charset "UTF-8";
+
+// stylelint-disable max-line-length, scss/dollar-variable-colon-space-after
+
+// Variables
+// --------------------------------------------------
+
+
+/// Global variables to enable or disable vendor prefixes
+$prefix-for-webkit:          true !default;
+$prefix-for-mozilla:         true !default;
+$prefix-for-microsoft:       true !default;
+$prefix-for-opera:           true !default;
+$prefix-for-spec:            true !default;
+
+// Define use of flexbox (boolean)
+$flexbox-is-enabled:         true !default;
+
+// BaselineGrid
+//
+// El *baseline-grid* es el bloque de construcción básico del
+// [vertical rythm](https://zellwk.com/blog/why-vertical-rhythms/). La idea es
+// dejar de trabajar pixel-perfect y migrar hacia una UI en la que todas las medidas
+// y relaciones entre elementos surjan de una operación sobre el número del *baseline-grid*.
+//
+// $baseline-grid - 14px
+//
+// Styleguide Elements.BaselineGrid
+
+$baseline-grid:                  14px;
+$baseline-grid-computed:         px-to-rem($baseline-grid);
+
+// A second definition of this value overrides normalize definition
+// (factory default is 24px)
+$base-line-height:      14px;
+
+
+// Color Palette
+// --------------------------------------------------
+//
+// Brand color palette
+$brand-corporate:        #D1030F !default;
+$brand-primary:          #0084E0 !default;
+$brand-secondary:        #6B6B6B !default;
+$brand-revenue:          #16A401 !default;
+
+// Alt Fav
+// TODO(ecalvi): This is an inconsistency. We are defining this variable so this
+// color is used only once.
+$brand-altfav:           #F8AA29 !default;
+
+//## Gray and brand colors for use across Framework.
+$gray-base:              #000 !default;
+$gray-darker:            $brand-secondary !default;
+$gray-dark:              #9E9E9E !default;
+$gray-medium:            #C4C4C4 !default;
+$gray-light:             #E2E2E2 !default;
+$gray-lighter:           #F6F6F6 !default;
+
+
+// State modifiers
+$modifier-operation:            lighten !default;
+$modifier-hover-value:          15% !default;
+$modifier-focus-value:          15% !default;
+$modifier-opacity-value:        .5 !default;
+$modifier-scale-value:          .8 !default;
+
+// Default transition animation
+$transition-timing-base:       .12s !default;
+$transition-timing-slow:       .8s !default;
+
+// Generic spacers for elements
+$spacer-base:           1rem !default;
+$spacer-lg:             1.5rem !default;
+$spacer-sm:             .5rem !default;
+$spacer-xs:             .25rem !default; // Mostly reserved for inline spaces.
+
+// Horizontal spacers
+$horspacer-base:        1.5rem !default;
+$horspacer-large:       1.75rem !default;
+$horspacer-small:       1.25rem !default;
+
+// Block element height (ties the value height of buttons and inputs)
+$block-size-base:      ($spacer-base * 2) + $baseline-grid-computed !default;
+$block-size-sm:        ($spacer-sm * 2) + $baseline-grid-computed !default;
+
+
+// Background color for `<body>`.
+$body-bg:               $gray-lighter !default;
+$widget-bg:             #FFF !default;
+
+// Background color for nav.
+$nav-bg:                $widget-bg !default;
+
+// Global text color on `<body>`.
+$text-color:            $gray-darker !default;
+// Global text color on `<body>`.
+$text-inverse:          #FFF !default;
+$text-muted:            #666 !default;
+
+// Global textual link color.
+$link-color:            $brand-primary !default;
+// Link hover color set via `darken()` function.
+$link-hover-color:      state-hover-modifier($link-color) !default;
+// Link decoration.
+$link-decoration:       none !default;
+// Link hover decoration.
+$link-hover-decoration: underline !default;
+
+
+
+// Images
+
+$assets-url:             "../" !default;
+$images-url:             $assets-url + "images/" !default;
+$icon-font-url:          $assets-url + "fonts/" !default;
+
+$icon-size-lg:           1.5rem !default;
+$icon-size-xl:           2rem !default;
+
+// Old icon font
+// These icons are to be deprecated in the future.
+
+// stylelint-disable scss/dollar-variable-pattern
+$icon-font-url_old:      $icon-font-url !default;
+// stylelint-enable scss/dollar-variable-pattern
+
+// Sistema de Grilla
+//
+// Define your custom responsive grid.
+
+// Número de columnas que tiene la grilla.
+$grid-columns:                12 !default;
+
+// Espacio entre columnas (en la grilla se divide en dos para izquierda y derecha).
+$grid-gutter-width:           $baseline-grid-computed * 2 !default; // 28px
+
+// Espacio entre columnas para la extensión de grilla (en la grilla se divide en
+// dos para izquierda y derecha).
+$grid-narrow-gutter-width:    $baseline-grid-computed / 2 !default;  // 14px
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// Extra small screen / phone
+$screen-sm:                  px-to-rem(0);
+$screen-sm-min:              $screen-sm !default;
+
+// Small screen / tablet
+$screen-md:                  px-to-rem(768px);
+$screen-md-min:              $screen-md !default;
+
+// Medium screen / desktop
+$screen-lg:                  px-to-rem(1024px);
+$screen-lg-min:              $screen-lg !default;
+
+// Large screen / wide desktop
+$screen-xl:                  px-to-rem(1366px);
+$screen-xl-min:              $screen-xl !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              ($screen-xl-min - 1) !default;
+
+
+
+// Container sizes
+//
+// Definen el ancho máximo del `container` para los distintos tamaños.
+
+// Small screen / tablet
+$container-sm:                 $screen-md !default;
+
+// Medium screen / desktop
+$container-md:                 $screen-lg !default;
+
+// Large screen / wide desktop
+$container-lg:                 $screen-xl !default;
+
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-base: "Open Sans", -apple-system, sans-serif !default;
+
+$font-size-base:      1rem !default;    // 14px
+$font-size-lg:        px-to-rem(18px) !default; // 18px
+$font-size-sm:        px-to-rem(12px) !default; // 12px
+
+// Small text
+$small-font-size:     75% !default;
+$small-color:         $text-muted !default;
+
+// Line Height
+$line-height-base:        1.5 !default;
+$line-height-sm:          1.25 !default;
+
+$line-height-computed:    $line-height-base * $baseline-grid-computed !default;
+
+
+$font-weight-base: 400;
+
+
+// Primary action
+$brand-primary-action:   $brand-secondary !default;
+$icon-trash:             "\e94d" !default;
+
+// Facebook
+$brand-facebook:         #4957B3 !default;
+$icon-facebook:          "\e914" !default;
+
+// Fav
+$brand-fav:              $brand-corporate !default;
+$icon-fav:               "\e920" !default;
+
+// Alt Fav
+// TODO(ecalvi): This is an inconsistency. We are defining this variable so this
+// color is used only once.
+$brand-default:          $brand-altfav !default;
+$icon-default:           "\e93e" !default;
+
+// Twitter
+$brand-twitter:          #60B5F1 !default;
+$icon-twitter:           "\e943" !default;
+
+// Define common padding and border radius sizes and more.
+$border-radius-base:          3px;
+
+// Spinner default values
+$spinner-base-size:           1.75rem !default;
+$spinner-border-width:        px-to-rem(3px) !default;
+$spinner-color-active:        $gray-dark !default;
+$spinner-color-inactive:      #D8D8D8 !default;
+
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye
+// view of components dependent on the z-axis and are designed to all
+// work together.
+
+$zindex-element:            20 !default;
+$zindex-hover-element:      50 !default;
+$zindex-fixed-button:       1000 !default;
+$zindex-navbar:             1030 !default;
+
+// Buttons
+//
+// For each button, define text color and background and border color.
+
+$btn-height-base:                    $block-size-base !default;
+$btn-height-lg-size:                 3.25rem !default;
+$btn-height-sm-size:                 $block-size-sm !default;
+$btn-font-weight:                    700 !default;
+$btn-text-transform:                 uppercase !default;
+$btn-base-color:                     $text-inverse !default;
+$btn-base-padding-x:                 $horspacer-base !default;
+$btn-large-padding-x:                $horspacer-large !default;
+$btn-small-padding-x:                $horspacer-small !default;
+$btn-transition-timing:              $transition-timing-base !default;
+$btn-shadow-width:                   px-to-rem(2px) !default;
+$btn-box-shadow-value:               0 $btn-shadow-width 0 0 !default;
+
+// Button color definitions
+$btn-main-color:                     $btn-base-color !default;
+$btn-main-bg:                        $brand-revenue !default;
+
+$btn-primary-color:                  $btn-base-color !default;
+$btn-primary-bg:                     $brand-primary !default;
+
+$btn-secondary-color:                $btn-base-color !default;
+$btn-secondary-bg:                   $brand-secondary !default;
+
+$btn-link-color:                     $brand-primary !default;
+$btn-link-bg:                        transparent !default;
+
+$btn-facebook-color:                 $btn-base-color !default;
+$btn-facebook-bg:                    $brand-facebook !default;
+
+$btn-disabled-color:                 $gray-dark !default;
+$btn-disabled-bg:                    $gray-light !default;
+
+// Button spinner definitions
+$btn-spinner-color-active:           $btn-disabled-color !default;
+$btn-spinner-color-inactive:         #D8D8D8 !default;
+$btn-spinner-border-width:           $spinner-border-width !default;
+$btn-spinner-sm-border-width:        px-to-rem(2px) !default;
+$btn-spinner-base-size:              $spinner-base-size !default;
+$btn-spinner-lg-size:                2rem !default;
+$btn-spinner-sm-size:                1rem !default;
+$btn-spinner-spacing:                $spacer-sm !default;
+
+// Button icon definitions
+$btn-icon-size:                      $icon-size-lg !default;
+$btn-icon-padding-x:                 5rem !default;
+
+// Button action definitions
+$btn-action-bg:                      transparent !default;
+$btn-action-color:                   $gray-dark !default;
+$btn-action-hover-bg:                $gray-light !default;
+
+$btn-action-primary:                 $gray-base !default;
+$btn-action-padding:                 .75rem !default;
+$btn-action-font-size:               1.5rem !default;
+$btn-action-size:                    $btn-action-font-size + ($btn-action-padding * 2) !default;
+
+
+// Form definitions
+$form-block-spacing:                 $spacer-base !default;
+
+$block-is-required-symbol:           $brand-corporate !default;
+$block-label-font-weight:            $font-weight-base !default;
+$block-label-font-weight-selected:   700 !default;
+
+$input-bg:                           $widget-bg !default;
+$input-bg-disabled:                  $gray-lighter !default;
+$input-color:                        $text-color !default;
+$input-height:                       $block-size-base !default;
+$input-border-color:                 $gray-medium !default;
+$input-border-focus:                 $brand-primary !default;
+$input-border-focus-opacity:         .6 !default;
+$input-border-focus-shadow-lenght:   4px !default;
+$input-color-placeholder:            state-hover-modifier($input-color) !default;
+
+// Spacer for radios/checkboxes
+$controller-spacer:                  $spacer-lg !default;
+$controller-size:                    px-to-rem(10px) !default;
+$controler-active:                   $brand-primary;
+$controler-bg-inactive:              $widget-bg;
+$controler-border-inactive:          $gray-medium;
+
+
+// Tooltip definitions
+$tooltip-width:                      15rem !default;
+$tooltip-bg:                         $gray-base !default;
+$tooltip-color:                      $text-inverse !default;
+$tooltip-height:                     2rem !default;
+$tooltip-opacity:                    .8 !default;
+$tooltip-padding:                    .5rem !default;
+$tooltip-arrow-size:                 1rem !default;
+
+
+// Value component
+$value-font-size-base:               1.75rem !default; // 24.5px
+$value-font-size-base-mobile:        $font-size-lg !default; // 18px
+
+$value-font-size-lg:                 2.5rem !default; // 35px
+$value-font-size-lg-mobile:          2rem !default; // 28px
+
+$value-font-size-sm:                 $font-size-base !default; // 14px
+
+$value-note-font-size-base:          $font-size-base !default; // 14px
+$value-note-font-size-base-mobile:   $value-note-font-size-base !default; // 14px
+
+$value-note-font-size-lg:            $font-size-lg !default; // 18px
+
+$value-note-font-size-sm:            $font-size-sm !default; // 12px
+
+$value-line-height-base:             1.25 !default;
+$value-line-height-lg:               1.5 !default;
+
+$value-note-color:                   $text-muted !default;
+$value-note-font-weight:             400 !default;
+$value-font-weight:                  700 !default;
+
+$value-spacer-sm:                    $spacer-xs !default;
+
+
+// Image container
+$imgcontainer-bg:                        transparent !default;
+$imgcontainer-loading-bg:                $widget-bg !default;
+$imgcontainer-spinner-base-size:         $spinner-base-size !default;
+$imgcontainer-spinner-border-width:      $spinner-border-width !default;
+$imgcontainer-spinner-color-inactive:    $spinner-color-inactive !default;
+$imgcontainer-spinner-color-active:      $spinner-color-active !default;
+
+
+// Tags
+$tag-bg:                    transparent !default;
+$tag-border:                $gray-dark !default;
+$tag-color:                 $tag-border !default;
+$tag-font-size:             $font-size-sm !default;
+$tag-font-weight:           700 !default;
+$tag-line-height:           2rem !default;
+$tag-width:                 8rem !default;
+$tag-padding:               0 $spacer-sm !default;
+$tag-img-height:            1.5rem !default;
+
+
+// Labels
+$label-border:                transparent !default;
+$label-base-color:            $text-inverse !default;
+$label-font-size:             .8em !default;
+$label-font-weight:           700 !default;
+$label-line-height:           1 !default;
+$label-width:                 8em !default;
+$label-padding-x:             .5em !default;
+$label-padding-y:             .25em !default;
+$label-img-height:            1.5em !default;
+
+// Labels color definitions
+$label-main-color:            $label-base-color !default;
+$label-main-bg:               $brand-revenue !default;
+
+$label-primary-color:         $label-base-color !default;
+$label-primary-bg:            $brand-primary !default;
+
+$label-secondary-color:       $label-base-color !default;
+$label-secondary-bg:          $brand-secondary !default;
+
+// Collapse
+$collapse-border:             $gray-medium !default;
+
+
+// Grid List
+$grid-cell-bg:                     $widget-bg !default;
+$grid-cell-border-color:           $gray-medium !default;
+$grid-cell-border-size:            px-to-rem(2px) !default;
+$grid-cell-active:                 $brand-primary;
+$grid-cell-spacer:                 $grid-narrow-gutter-width !default;
+$grid-cell-size:                   12rem !default;
+$grid-cell-max-number:             6 !default;
+
+// Navbar
+$navbar-bg:                             $widget-bg !default;
+$navbar-color:                          $text-color !default;
+$navbar-pointer-color:                  $gray-medium !default;
+$navbar-pointer-hover-color:            $brand-secondary !default;
+$navbar-pointer-active-color:           $brand-primary !default;
+$navbar-pointer-height:                 px-to-rem(3px) !default;
+$navbar-mouseover-animation:            translateY(0) !default;
+$navbar-mouseout-animation:             translateY((100% / 3)) !default;
+$navbar-vertical-mouseover-animation:   translateX(0) !default;
+$navbar-vertical-mouseout-animation:    translateX((100% / 3) * -1) !default;
+
+
+// Carousel default settings
+//
+// ("\2022" outputs ascii character "•")
+
+$carousel-font-path: $icon-font-url !default;
+$carousel-font-family: $icon-font-name !default;
+$carousel-loader-path: "./" !default;
+$carousel-control-height: 6rem !default;
+$carousel-control-width: 4rem !default;
+$carousel-arrow-color: $brand-primary !default;
+$carousel-arrow-size: 2rem !default;
+$carousel-dot-character: "\2022" !default;
+$carousel-dot-bg: $widget-bg !default;
+$carousel-dot-color: $brand-secondary !default;
+$carousel-dot-size: .5rem !default;
+$carousel-dot-color-active: $carousel-arrow-color !default;
+$carousel-prev-character: $icon-simple-bold-arrow-left !default;
+$carousel-next-character: $icon-simple-bold-arrow-right !default;
+$carousel-bottom-spacer: 2rem !default;
+
+
+// stylelint-enable max-line-length, scss/dollar-variable-colon-space-after

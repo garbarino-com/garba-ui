@@ -1,0 +1,27 @@
+// Color modifier
+@mixin value-variant(
+    $noteFontSize, $noteFontSizeMobile,
+    $itemFontSize, $itemFontSizeMobile) {
+
+  text-align: inherit;
+
+  > .value-note {
+    font-size: $noteFontSizeMobile;
+  }
+
+  > .value-item {
+    font-size: $itemFontSizeMobile;
+    line-height: 1;
+  }
+
+  // Media query for tablet/desktop
+  @media only screen and (min-width: $screen-md-min) {
+    > .value-note {
+      font-size: $noteFontSize;
+    }
+
+    > .value-item {
+      font-size: $itemFontSize;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// Spinner variants
+
+// Define base animation for spinner
+@keyframes spinner-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+// @add-spinner($params)
+//
+// Genera un spinner animado y lo hace girar. Se usa para indicar el estado `loading`
+// al usuario.
+// > Este helper no genera el elemento (se debe usar adentro de uno) ni le fija posición.
+//
+// $size - Tamaño del spinner.
+// $spinner-width - Ancho del spinner.
+// $spinner-color-inactive - Color de los tres cuartos de círculo que son del
+// color inactivo.
+// $spinner-color-active - Color del cuarto de círculo que es del color activo.
+//
+// Styleguide Helpers.States.AddSpinner
+
+// Spinner generator mixin
+@mixin add-spinner($size, $spinner-width, $spinner-color-inactive,
+    $spinner-color-active) {
+  animation: spinner-rotation $transition-timing-slow infinite linear;
+
+  // stylelint-disable order/properties-alphabetical-order
+  border-bottom: $spinner-width solid $spinner-color-active;
+  border-left: $spinner-width solid $spinner-color-inactive;
+  border-right: $spinner-width solid $spinner-color-active;
+  border-top: $spinner-width solid $spinner-color-active;
+
+  border-radius: 50%;
+  // stylelint-enable order/properties-alphabetical-order
+  height: $size;
+  vertical-align: middle;
+  width: $size;
+}
+
+// Add spinner to button variant
+@mixin add-spinner-variant-to-button($size,
+    $border-width: $btn-spinner-border-width) {
+  border-width: $border-width;
+  height: $size;
+  width: $size;
+}
