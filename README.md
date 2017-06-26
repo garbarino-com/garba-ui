@@ -1,46 +1,55 @@
-# Garba UI. The Garbarino UI Library
-Garba UI will contain all common UI components to be shared among all company projects.
+# Garba UI. Una librería UI de Garbarino
 
-## Getting Started ##
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Un catálogo de componentes visuales y mixins para ser usados en proyectos de la compañía.
+* [¿Cómo se usa?](#-c-mo-se-usa-)
+* [Contribution guidelines](#contribution-guidelines)
+* [Construído con](#constru-do-con-)
+* [A quién le puedo preguntar sobre esto](#-a-qui-n-le-puedo-preguntar-sobre-esto-)
+* [Licencia](#licencia)
 
-### Prerequisites ###
-Clone the project `git clone https://github.com/garbarino-com/garba-ui.git`,
-install it: `npm install git+https://github.com/garbarino-com/garba-ui.git --save` (or (if using an older release) update it: `npm update garba-ui --save`.
+Basado en [KSS](https://github.com/kss-node/kss-node).
 
-### How do I get set up? ###
-*Garba UI* is built on webpack and npm so you need to have those installed first. Once you do, you just type `$ npm install` on the directory. This will install all the dependencies needed.
+----
+# ¿Cómo se usa?
+*Garba UI* está construído usando npm así que es necesario que tengas esa herramienta instalada primero.
 
-*Note:* Notice that when you first clone the project you will have none of the compiled files since these are all listed in the `.gitignore` file.
-
-To use the project you need to run:
+Ir al directorio donde lo quieras usar y tipear en la consola:
 ```
-$ npm run start ## Will get the project running on http://localhost:8080/
-$ npm run sass ## Compile the minified version of the stylesheet for releases on the dist/ folder.
-$ npm run stylelint ## Will run the linter on the styles folder.
+$ npm install garba-ui --save-dev
 ```
+Eso debería instalar todas las dependencias necesarias.
 
-### Contribution guidelines ###
-* Stylelint linter is being used for styles.
-* No linter is being used for jsx files.
-* No code reviews are being made at the moment.
+Una vez instalada la dependencia, *Garba UI* contiene toda la librería de estilos:
+* *dist:* Dentro de esta carpeta se encuentra la versión pre-compilada de la librería:
+  * *css:* Contiene versiones en `css` minificadas y sin minificar de la librería.
+  * *fonts:* Contiene las icon fonts.
+  * *images:* Contiene imágenes necesarias para el sitio.
+* *app:* Contiene los archivos fuente sin compilar que componen la librería:
+  * *lib:* Contiene los archivos fuente en `sass`e incluye también la primera versión de la librería (1.3.2) que se irá deprecando de a poco a medida que se migre hacia la nueva versión.
+  * *fonts:* Contiene las icon fonts. (Existe la posibilidad de que estas se migren en el futuro a archivos `svg`.)
+  * *images:* Contiene imágenes necesarias para el sitio.
+  * *docs:* Contiene este archivo explicativo.
 
-### Legacy notes
-In case you want to install the older version of the project, you should run:
-```
-npm install garba-ui@1.3.2
-```
-This will install the previous version built on gulp not webpack.
+> *Opcional:* De ser más cómodo, se ofrece la alternativa, en el caso de ser necesario sobreescribir variables para un proyecto particular, de importarlas desde un archivo .json
 
-## Built With
-* [React.js](https://facebook.github.io/react/) - A javascript library for building user interfaces.
-* [Webpack](https://webpack.github.io/) - Webpack module bundler is used to handle all dependencies and compile code.
-* [Sass](http://sass-lang.com/) - Sass is used to handle the styles component library.
-* [React UI Style Guide](https://github.com/akikoo/react-ui-style-guide/) - Living Style Guide with React, webpack, ES6 and Sass.
+----
+# Contribution guidelines
+* No hay test escritos todavía.
+* Por el momento no se están haciendo code-reviews.
 
-### Who do I talk to? ###
+----
+# Construído con:
+* [Gulp](http://gulpjs.com/) - A toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.
+* [Stylelint](https://stylelint.io/) - A CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.
+* [Autoprefixer](https://github.com/postcss/autoprefixer) - Parse CSS and add vendor prefixes to rules by [Can I Use](http://caniuse.com/).
+* [Sass](http://sass-lang.com/) - Sass is an extension of CSS, adding nested rules, variables, mixins, selector inheritance, and more. It's translated to well-formatted, standard CSS using the command line tool or a web-framework plugin.
+* [KSS](http://warpspire.com/kss/) - A methodology for documenting CSS and generating styleguides.
+* [Frontend Settings](https://github.com/garbarino-com/frontend-settings) - A repository of settings for shared tools such as linters, processors and prefixers used in site projects.
+
+# ¿A quién le puedo preguntar sobre esto?
 * **Nicolas Brizuela** - [flycode](https://github.com/flycode)
-* **Esteban Calvi** - [estebancalvi](https://bitbucket.org/rigilk/)
+* **Esteban Calvi** - [leopittelli](https://github.com/estebancalvi)
+* **Leonardo Pittelli** - [estebancalvi](https://github.com/leopittelli)
 
-## License ##
-This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details.
+## Licencia ##
+Este proyecto está bajo la ISC License - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.

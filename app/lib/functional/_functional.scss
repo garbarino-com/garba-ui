@@ -4,4 +4,14 @@
 // por el hecho de que además de la definición visual de estilos incluyen
 // una funcionalidad limitada limitada (por el momento) a manipulación del DOM.
 //
+// ### Usage:
+// Utilizamos la herramienta [Browserify](http://browserify.org/) para armar los
+// bundles de javascript de la librería. En bundle incluye los settings para
+// todos los componentes con funcionalidad inclídos en la librería, pero no incluye
+// la librería [Jquery](https://jquery.com/), versión 1.12.3. Se recomienda llamarla
+// de uno de los varios CDN disponibles, por ejemplo:
+// ```
+// <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+// ```
+//
 // Styleguide Functional
