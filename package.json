@@ -11,7 +11,8 @@
   "scripts": {
     "build": "gulp build",
     "sass": "gulp sass",
-    "lint-css": "gulp lint-css"
+    "lint-css": "gulp lint-css",
+    "browserify": "browserify ./app/javascript/garbaui.main.js -o ./dist/javascript/garbaui.js && uglifyjs ./dist/javascript/garbaui.js -o ./dist/javascript/garbaui.min.js"
   },
   "repository": {
     "type": "git",
@@ -32,8 +33,18 @@
   "pre-commit": [
     "git add dist/"
   ],
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
+  },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
+    "browserify": "^14.4.0",
+    "browserify-shim": "^3.8.14",
     "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
     "git-guppy": "^2.1.0",
     "gulp-autoprefixer": "^3.1.1",
@@ -46,7 +57,8 @@
     "node-sass-json-importer": "^3.0.2",
     "postcss-scss": "^0.4.1",
     "slick-carousel": "^1.6.0",
-    "stylelint-config-sass-guidelines": "^2.0.0"
+    "stylelint-config-sass-guidelines": "^2.0.0",
+    "uglify-js": "^3.0.20"
   },
   "dependencies": {
     "bourbon": "^4.3.2",
@@ -55,7 +67,6 @@
     "gulp-install": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "requirejs": "^2.3.3",
     "run-sequence": "^1.2.2"
   }
 }
