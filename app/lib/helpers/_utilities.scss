@@ -4,13 +4,26 @@
 
 // @hide-element
 //
-// Cambia el valor de display` y `visibility` y esconde un elemento.
+// Cambia el valor de display` y `visibility` para esconder un elemento.
 //
 // Styleguide Helpers.Utilities.HideElement
 
 @mixin hide-element {
   display: none !important;
   visibility: hidden !important;
+}
+
+// @show-element
+//
+// Cambia el valor de display` y `visibility` para mostrar un elemento.
+//
+// $display - Valor de `display` seteado en `block` por default.
+//
+// Styleguide Helpers.Utilities.ShowElement
+
+@mixin show-element($display: block) {
+  display: block !important;
+  visibility: visible !important;
 }
 
 // @hide-element-simple

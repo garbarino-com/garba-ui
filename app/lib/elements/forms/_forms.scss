@@ -33,7 +33,7 @@ legend {
 label {
   display: inline-block;
   font-weight: $block-label-font-weight;
-  margin-bottom: $spacer-sm;
+  margin-bottom: $form-label-spacing;
 
   // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   max-width: 100%;
@@ -41,7 +41,7 @@ label {
   // Indica que el campo de input es requerido.
   .block__is-required & {
     &::after {
-      color: $block-is-required-symbol;
+      color: $block-is-required;
       content: "*";
       display: inline-block;
       margin-left: $spacer-xs;
@@ -96,6 +96,7 @@ textarea {
 // [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
 // .block__is-required - Agrega un asterico color rojo al `<label>`para señalar
 // que es un bloque obligatorio.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
 //
 // Markup: basic-form.hbs
 //
@@ -104,6 +105,28 @@ textarea {
 // Bloque contenedor de los forms
 .form-block {
   @include form-block($form-block-spacing);
+}
+
+
+// Elementos ocultos por default
+
+.block-validation--feedback,
+.block-validation--note {
+  @include hide-element;
+  animation: form-block--exit-animation ($transition-timing-slow / 4) ease-in;
+}
+
+// Form feedback elements
+.block-validation--feedback {
+  @include icon-element($block-has-feedback-size);
+  position: absolute;
+  right: $block-has-feedback-size;
+  top: $line-height-computed + $form-label-spacing + $input-padding;
+}
+
+.block-validation--note {
+  margin-top: $spacer-sm;
+  margin-bottom: 0;
 }
 
 
@@ -165,7 +188,7 @@ textarea {
   height: $input-height;
 
   line-height: 1;
-  padding: $spacer-base;
+  padding: $input-padding;
   transition: border-color ease-in-out $transition-timing-base,
     box-shadow ease-in-out $transition-timing-base;
   width: 100%;
@@ -179,6 +202,11 @@ textarea {
 
   // Focus state
   @include form-control-focus;
+
+  // Validation states
+  [class^="block__has-"] > & {
+    padding-right: ($input-padding * 2) + $block-has-feedback-size;
+  }
 
   &[disabled],
   &[readonly],
@@ -211,6 +239,13 @@ select[multiple] {
 
 // Small input variant
 @include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);
+
+
+
+// Validation states
+.block__has-error {
+  @include form-control-validations-state($brand-error, $icon-error);
+}
 
 
 

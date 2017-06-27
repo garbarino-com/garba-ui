@@ -4,6 +4,7 @@
   @include clearfix;
   display: block;
   margin-bottom: $padding;
+  position: relative;
 }
 
 
@@ -32,8 +33,7 @@
 
 
 
-// Form control focus state
-//
+// Form control states
 
 @mixin form-control-focus($color: $input-border-focus) {
   &:focus {
@@ -43,6 +43,42 @@
     outline: 0;
   }
 }
+
+
+
+// Estado de validación: se aplica sobre el bloque contenedor, no sobre bloques
+// individuales.
+
+@mixin form-control-validations-state($color, $icon) {
+  $hover-color: state-hover-modifier($color);
+  $focus-color: state-focus-modifier($color);
+
+  > .form-control {
+    border: 1px solid $color;
+
+    &:hover {
+      border-color: $hover-color;
+    }
+
+    &:focus {
+      border-color: $focus-color;
+      box-shadow: 0 0 $input-border-focus-shadow-lenght 0 rgba($color,
+        $input-border-focus-opacity);
+    }
+  }
+
+  > .block-validation--feedback,
+  > .block-validation--note {
+    @include show-element;
+    animation: form-block--enter-animation ($transition-timing-slow / 4) ease-in;
+    color: $color;
+  }
+
+  > .block-validation--feedback::before {
+    content: $icon;
+  }
+}
+
 
 
 // Placeholder mixin
@@ -73,4 +109,42 @@
   }
 
   // stylelint-enable selector-no-vendor-prefix
+}
+
+
+
+// Note animations
+
+@keyframes form-block--enter-animation {
+  0 {
+    @include hide-element;
+    opacity: 0;
+  }
+
+  1% {
+    @include show-element;
+    opacity: 0;
+  }
+
+  100% {
+    @include show-element;
+    opacity: 1;
+  }
+}
+
+@keyframes form-block--exit-animation {
+  0 {
+    @include show-element;
+    opacity: 1;
+  }
+
+  99% {
+    @include show-element;
+    opacity: 0;
+  }
+
+  100% {
+    @include hide-element;
+    opacity: 0;
+  }
 }

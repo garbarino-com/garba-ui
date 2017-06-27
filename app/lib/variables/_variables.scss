@@ -120,8 +120,15 @@ $assets-url:             "../" !default;
 $images-url:             $assets-url + "images/" !default;
 $icon-font-url:          $assets-url + "fonts/" !default;
 
+$icon-size-base:         1rem !default;
 $icon-size-lg:           1.5rem !default;
 $icon-size-xl:           2rem !default;
+
+// State symbols
+$icon-success:           $icon-checkmark !default;
+$icon-error:             $icon-close !default;
+$icon-warning:           $icon-exclamation-mark-triangle !default;
+$icon-info:              $icon-info-circle !default;
 
 // Old icon font
 // These icons are to be deprecated in the future.
@@ -320,11 +327,16 @@ $btn-action-size:                    $btn-action-font-size + ($btn-action-paddin
 // Form definitions
 $form-block-spacing:                 $spacer-base !default;
 
-$block-is-required-symbol:           $brand-corporate !default;
+// Espacio entre el label y el input
+$form-label-spacing:                 $spacer-sm !default;
+
+$block-is-required:                  $brand-corporate !default;
+$block-has-feedback-size:            $icon-size-base !default;
 $block-label-font-weight:            $font-weight-base !default;
 $block-label-font-weight-selected:   700 !default;
 
 $input-bg:                           $widget-bg !default;
+$input-padding:                      $spacer-base !default;
 $input-bg-disabled:                  $gray-lighter !default;
 $input-color:                        $text-color !default;
 $input-height:                       $block-size-base !default;

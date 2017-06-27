@@ -1,7 +1,18 @@
 <form>
   <div class="form-block {{modifier_class}}">
     <label for="exampleInputEmail1">Email address</label>
+
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+
+    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
+          de validación, de lo contrario permanece oculto. --}}
+
+    <span class="block-validation--feedback"></span>
+
+    <p class="block-validation--note">
+      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    </p>
+
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
