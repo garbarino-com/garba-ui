@@ -3,16 +3,16 @@
 ![alt Main Project Image](./kss-assets/images/garba-ui-main.png)
 
 Un catálogo de componentes visuales y mixins para ser usados en proyectos de la compañía.
-* [¿Cómo se usa?](#-c-mo-se-usa-)
+* [Modo de Uso](#modo-de-uso)
 * [Contribution guidelines](#contribution-guidelines)
-* [Construído con](#constru-do-con-)
-* [A quién le puedo preguntar sobre esto](#-a-qui-n-le-puedo-preguntar-sobre-esto-)
+* [Dependencias](#dependencias)
+* [Responsables](#responsables)
 * [Licencia](#licencia)
 
 Basado en [KSS](https://github.com/kss-node/kss-node).
 
 ----
-# ¿Cómo se usa?
+# Modo de Uso
 *Garba UI* está construído usando npm así que es necesario que tengas esa herramienta instalada primero.
 
 Ir al directorio donde lo quieras usar y tipear en la consola:
@@ -40,7 +40,7 @@ Una vez instalada la dependencia, *Garba UI* contiene toda la librería de estil
 * Por el momento no se están haciendo code-reviews.
 
 ----
-# Construído con:
+# Dependencias
 * [Gulp](http://gulpjs.com/) - A toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.
 * [Stylelint](https://stylelint.io/) - A CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.
 * [Autoprefixer](https://github.com/postcss/autoprefixer) - Parse CSS and add vendor prefixes to rules by [Can I Use](http://caniuse.com/).
@@ -48,7 +48,7 @@ Una vez instalada la dependencia, *Garba UI* contiene toda la librería de estil
 * [KSS](http://warpspire.com/kss/) - A methodology for documenting CSS and generating styleguides.
 * [Frontend Settings](https://github.com/garbarino-com/frontend-settings) - A repository of settings for shared tools such as linters, processors and prefixers used in site projects.
 
-# ¿A quién le puedo preguntar sobre esto?
+# Responsables
 * **Nicolas Brizuela** - [flycode](https://github.com/flycode)
 * **Esteban Calvi** - [leopittelli](https://github.com/estebancalvi)
 * **Leonardo Pittelli** - [estebancalvi](https://github.com/leopittelli)

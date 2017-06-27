@@ -36,13 +36,18 @@ $base-line-height:      14px;
 
 
 // Color Palette
-// --------------------------------------------------
 //
 // Brand color palette
 $brand-corporate:        #D1030F !default;
 $brand-primary:          #0084E0 !default;
 $brand-secondary:        #6B6B6B !default;
 $brand-revenue:          #16A401 !default;
+
+// States palette
+$brand-success:          #4DA02E !default;
+$brand-error:            #D35F53 !default;
+$brand-warning:          #CE9433 !default;
+$brand-info:             #3584D9 !default;
 
 // Alt Fav
 // TODO(ecalvi): This is an inconsistency. We are defining this variable so this
