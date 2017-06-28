@@ -1,9 +1,9 @@
 // Form Block
 
-@mixin form-block($padding) {
+@mixin form-block($spacing) {
   @include clearfix;
   display: block;
-  margin-bottom: $padding;
+  margin-bottom: $spacing;
   position: relative;
 }
 
@@ -18,6 +18,17 @@
     font-size: $font-size;
     height: $height;
     padding: $padding;
+
+    // Validation states
+    [class*="block__has-"] & {
+      padding-right: ($padding * 2) + $block-has-feedback-size;
+    }
+
+    // Feedback positioning
+    ~ .block-validation--feedback {
+      right: $padding;
+      top: $line-height-computed + $form-label-spacing + $padding;
+    }
   }
 
   select#{$parent} {
@@ -67,6 +78,28 @@
     }
   }
 
+  // Selected state
+  input[type="radio"],
+  input[type="checkbox"] {
+    border-color: $color;
+
+    &:checked {
+      border-color: $color;
+    }
+  }
+
+  // Estilos específicos para radiobuttons
+  input[type="radio"]:checked::after {
+    background-color: $color;
+  }
+
+  // Estilos específicos para checkbox
+  input[type="checkbox"]:checked::after {
+    color: $color;
+  }
+
+
+  // Feddback elements
   > .block-validation--feedback,
   > .block-validation--note {
     @include show-element;

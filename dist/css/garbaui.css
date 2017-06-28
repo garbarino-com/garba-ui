@@ -3511,6 +3511,42 @@ button.close {
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
+@keyframes form-block--enter-animation {
+  0 {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0;
+  }
+  1% {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0;
+  }
+  100% {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1;
+  }
+}
+
+@keyframes form-block--exit-animation {
+  0 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1;
+  }
+  99% {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0;
+  }
+  100% {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0;
+  }
+}
+
 @keyframes navbar--mouseOver-animation {
   from {
     transform: translateY(33.33333%);
@@ -4238,7 +4274,8 @@ label {
 [readonly] label,
 fieldset[disabled] label,
 .control__is-disabled ~ label,
-.block__is-disabled label {
+.block__is-disabled label,
+.block__is-disabled.block__has-error label {
   cursor: not-allowed;
   opacity: 0.5;
   pointer-events: none;
@@ -4248,18 +4285,50 @@ textarea {
   resize: vertical;
 }
 
-.form-block {
+.checkbox,
+.form-block,
+.radio {
   display: block;
   margin-bottom: 1rem;
+  position: relative;
 }
 
-.form-block:before, .form-block:after {
+.checkbox:before, .checkbox:after,
+.form-block:before,
+.form-block:after,
+.radio:before,
+.radio:after {
   content: "";
   display: table;
 }
 
-.form-block:after {
+.checkbox:after,
+.form-block:after,
+.radio:after {
   clear: both;
+}
+
+.block-validation--feedback,
+.block-validation--note {
+  display: none !important;
+  visibility: hidden !important;
+  animation: form-block--exit-animation 0.2s ease-in;
+}
+
+.block-validation--feedback {
+  display: block;
+  font-family: "garba-icon-font" !important;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  speak: none;
+  position: absolute;
+}
+
+.block-validation--note {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 .form-control {
@@ -4310,7 +4379,10 @@ fieldset[disabled] .form-control:hover,
 fieldset[disabled] .form-control:focus, .form-control.control__is-disabled, .form-control.control__is-disabled:hover, .form-control.control__is-disabled:focus,
 .block__is-disabled .form-control,
 .block__is-disabled .form-control:hover,
-.block__is-disabled .form-control:focus {
+.block__is-disabled .form-control:focus,
+.block__is-disabled.block__has-error .form-control,
+.block__is-disabled.block__has-error .form-control:hover,
+.block__is-disabled.block__has-error .form-control:focus {
   background-color: #F6F6F6;
   border-color: #C4C4C4;
   box-shadow: none;
@@ -4322,6 +4394,15 @@ fieldset[disabled] .form-control:focus, .form-control.control__is-disabled, .for
   background-color: inherit !important;
 }
 
+[class*="block__has-"] .form-control {
+  padding-right: 3rem;
+}
+
+.form-control ~ .block-validation--feedback {
+  right: 1rem;
+  top: 3rem;
+}
+
 textarea.form-control,
 select[multiple].form-control {
   height: auto;
@@ -4331,6 +4412,15 @@ select[multiple].form-control {
   font-size: 0.85714rem;
   height: 2rem;
   padding: 0.5rem;
+}
+
+[class*="block__has-"] .form-control--sm {
+  padding-right: 2rem;
+}
+
+.form-control--sm ~ .block-validation--feedback {
+  right: 0.5rem;
+  top: 2.5rem;
 }
 
 select.form-control--sm {
@@ -4346,8 +4436,7 @@ select[multiple].form-control--sm {
 .radio,
 .checkbox {
   display: block;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   position: relative;
 }
 
@@ -4366,7 +4455,8 @@ select[multiple].form-control--sm {
 [readonly] .radio input[type="checkbox"],
 fieldset[disabled] .radio input[type="radio"],
 fieldset[disabled] .radio input[type="checkbox"], .radio.block__is-disabled input[type="radio"],
-.radio.block__is-disabled input[type="checkbox"], [disabled]
+.radio.block__is-disabled input[type="checkbox"], .radio.block__is-disabled.block__has-error input[type="radio"],
+.radio.block__is-disabled.block__has-error input[type="checkbox"], [disabled]
 .checkbox input[type="radio"],
 [disabled]
 .checkbox input[type="checkbox"],
@@ -4379,7 +4469,9 @@ fieldset[disabled]
 fieldset[disabled]
 .checkbox input[type="checkbox"],
 .checkbox.block__is-disabled input[type="radio"],
-.checkbox.block__is-disabled input[type="checkbox"] {
+.checkbox.block__is-disabled input[type="checkbox"],
+.checkbox.block__is-disabled.block__has-error input[type="radio"],
+.checkbox.block__is-disabled.block__has-error input[type="checkbox"] {
   cursor: not-allowed;
   opacity: 0.5;
   pointer-events: none;
@@ -4538,6 +4630,49 @@ fieldset[disabled]
   font-size: 0.85714rem;
   margin-bottom: 0.25rem;
   padding-top: 0.5rem;
+}
+
+.block__has-error > .form-control {
+  border: 1px solid #D35F53;
+}
+
+.block__has-error > .form-control:hover {
+  border-color: #e39890;
+}
+
+.block__has-error > .form-control:focus {
+  border-color: #e39890;
+  box-shadow: 0 0 4px 0 rgba(211, 95, 83, 0.6);
+}
+
+.block__has-error input[type="radio"],
+.block__has-error input[type="checkbox"] {
+  border-color: #D35F53;
+}
+
+.block__has-error input[type="radio"]:checked,
+.block__has-error input[type="checkbox"]:checked {
+  border-color: #D35F53;
+}
+
+.block__has-error input[type="radio"]:checked::after {
+  background-color: #D35F53;
+}
+
+.block__has-error input[type="checkbox"]:checked::after {
+  color: #D35F53;
+}
+
+.block__has-error > .block-validation--feedback,
+.block__has-error > .block-validation--note {
+  display: block !important;
+  visibility: visible !important;
+  animation: form-block--enter-animation 0.2s ease-in;
+  color: #D35F53;
+}
+
+.block__has-error > .block-validation--feedback::before {
+  content: "";
 }
 
 .container {

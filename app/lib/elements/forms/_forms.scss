@@ -52,7 +52,8 @@ label {
   [readonly] &,
   fieldset[disabled] &,
   .control__is-disabled ~ &,
-  .block__is-disabled & {
+  .block__is-disabled &,
+  .block__is-disabled.block__has-error & {
     cursor: not-allowed;
     opacity: $modifier-opacity-value;
     pointer-events: none;
@@ -103,7 +104,9 @@ textarea {
 // Styleguide Elements.Forms.2-BasicForm
 
 // Bloque contenedor de los forms
-.form-block {
+.checkbox,
+.form-block,
+.radio {
   @include form-block($form-block-spacing);
 }
 
@@ -120,8 +123,6 @@ textarea {
 .block-validation--feedback {
   @include icon-element($block-has-feedback-size);
   position: absolute;
-  right: $block-has-feedback-size;
-  top: $line-height-computed + $form-label-spacing + $input-padding;
 }
 
 .block-validation--note {
@@ -203,16 +204,12 @@ textarea {
   // Focus state
   @include form-control-focus;
 
-  // Validation states
-  [class^="block__has-"] > & {
-    padding-right: ($input-padding * 2) + $block-has-feedback-size;
-  }
-
   &[disabled],
   &[readonly],
   fieldset[disabled] &,
   &.control__is-disabled,
-  .block__is-disabled & {
+  .block__is-disabled &,
+  .block__is-disabled.block__has-error & {
     &,
     &:hover,
     &:focus {
@@ -227,6 +224,19 @@ textarea {
   &:-webkit-autofill {
     background-color: inherit !important;
   }
+
+
+  // Validation states
+  [class*="block__has-"] & {
+    // Aumenta el padding-right para hacer lugar al ícono de feedback.
+    padding-right: ($input-padding * 2) + $block-has-feedback-size;
+  }
+
+  // Feedback positioning
+  ~ .block-validation--feedback {
+    right: $input-padding;
+    top: $line-height-computed + $form-label-spacing + $input-padding;
+  }
 }
 
 // Libera la altura para los `<textarea>`s
@@ -237,15 +247,10 @@ select[multiple] {
   }
 }
 
+
+
 // Small input variant
 @include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);
-
-
-
-// Validation states
-.block__has-error {
-  @include form-control-validations-state($brand-error, $icon-error);
-}
 
 
 
@@ -257,6 +262,7 @@ select[multiple] {
 // agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
 // de css `pointer-events:none`
 // [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
 //
 // Markup: checkbox-and-radio.hbs
 //
@@ -265,8 +271,7 @@ select[multiple] {
 .radio,
 .checkbox {
   display: block;
-  margin-bottom: $spacer-sm;
-  margin-top: $spacer-sm;
+  padding-top: $spacer-sm;
   position: relative;
 
   label {
@@ -284,7 +289,8 @@ select[multiple] {
   [disabled] &,
   [readonly] &,
   fieldset[disabled] &,
-  &.block__is-disabled {
+  &.block__is-disabled,
+  &.block__is-disabled.block__has-error {
     input[type="radio"],
     input[type="checkbox"] {
       cursor: not-allowed;
@@ -389,6 +395,7 @@ select[multiple] {
 // agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
 // de css `pointer-events:none`
 // [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
 //
 // Markup: checkbox-and-radio--inline.hbs
 //
@@ -448,6 +455,13 @@ select[multiple] {
     margin-bottom: $spacer-xs;
     padding-top: $spacer-sm;
   }
+}
+
+
+
+// Validation states
+.block__has-error {
+  @include form-control-validations-state($brand-error, $icon-error);
 }
 
 // stylelint-enable selector-no-qualifying-type, selector-no-type
