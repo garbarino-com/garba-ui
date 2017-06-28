@@ -126,8 +126,8 @@ textarea {
 }
 
 .block-validation--note {
-  margin-top: $spacer-sm;
   margin-bottom: 0;
+  margin-top: $spacer-sm;
 }
 
 
@@ -226,7 +226,7 @@ textarea {
   }
 
 
-  // Validation states
+  // Validation feedback
   [class*="block__has-"] & {
     // Aumenta el padding-right para hacer lugar al ícono de feedback.
     padding-right: ($input-padding * 2) + $block-has-feedback-size;
@@ -249,11 +249,6 @@ select[multiple] {
 
 
 
-// Small input variant
-@include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);
-
-
-
 // Checkboxes y Radio buttons
 //
 // Indenta los labels para posicionar los radios/checkboxes como controles flotantes.
@@ -268,14 +263,13 @@ select[multiple] {
 //
 // Styleguide Elements.Forms.3-Checkboxes&Radios
 
-.radio,
-.checkbox {
-  display: block;
+.checkbox,
+.radio {
   padding-top: $spacer-sm;
-  position: relative;
 
   label {
     cursor: pointer;
+    display: block;
     font-weight: $font-weight-base;
     margin-bottom: 0;
 
@@ -283,6 +277,10 @@ select[multiple] {
     min-height: $line-height-computed;
 
     padding-left: $controller-spacer;
+  }
+
+  label + label {
+    margin-top: $spacer-sm;
   }
 
   // Define estilos para el bloque deshabilitado.
@@ -363,6 +361,12 @@ select[multiple] {
       color: $controler-active;
     }
   }
+
+  // Modifica el valor de display para radios/checkboxes inline.
+  .radio-inline,
+  .checkbox-inline {
+    display: inline-block;
+  }
 }
 
 // Posiciona los controles
@@ -404,7 +408,6 @@ select[multiple] {
 .radio-inline,
 .checkbox-inline {
   cursor: pointer;
-  display: inline-block;
   font-weight: $block-label-font-weight;
   margin-bottom: 0;
   padding-left: $controller-spacer;
@@ -420,12 +423,25 @@ select[multiple] {
 
 
 
+// Validation states
+.block__has-error {
+  @include form-control-validations-state($brand-error, $icon-error);
+}
+
+
+
 // Form horizontal
 //
 // El form horizontal está construído sobre las clases de grilla y permite crear
 // forms con labels e input en la misma línea.
 // > En caso de querer usar la variante `.form-control--sm` se debe agregar la
 // clase `.control-label--sm` al `<label>` con clase `.control-label`.
+//
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+// **Advertencia:** Este es un caso de uso del estado `error` diferente de los
+// otros ya que tanto el `input` como los elementos de feedback: ícono
+// (`.block-validation--feedback`) y mensaje (`.block-validation--note`) están a
+// un nivel más de profundidad en el árbol del DOM.
 //
 // Markup: form-horizontal.hbs
 //
@@ -435,6 +451,16 @@ select[multiple] {
   // Make form groups behave like rows
   .form-block {
     @include make-row;
+
+    // stylelint-disable selector-max-compound-selectors
+
+    // Feedback positioning
+    > div .block-validation--feedback {
+      right: ($grid-gutter-width / 2) + $input-padding;
+      top: $input-padding;
+    }
+
+    // stylelint-enable selector-max-compound-selectors
   }
 
   // Reset spacing and right align labels, but scope to media queries so that
@@ -459,9 +485,7 @@ select[multiple] {
 
 
 
-// Validation states
-.block__has-error {
-  @include form-control-validations-state($brand-error, $icon-error);
-}
+// Small input variant
+@include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);
 
 // stylelint-enable selector-no-qualifying-type, selector-no-type

@@ -434,11 +434,6 @@ table {
   border-spacing: 0;
 }
 
-/*!
- * Garba UI v2 (https://github.com/garbarino-com/garba-ui/)
- * Copyright 2017 Garbarino.com
- * Licensed under ISC (https://github.com/garbarino-com/garba-ui/blob/LICENSE.md)
- */
 html {
   font-size: 14px;
 }
@@ -4327,8 +4322,8 @@ textarea {
 }
 
 .block-validation--note {
-  margin-top: 0.5rem;
   margin-bottom: 0;
+  margin-top: 0.5rem;
 }
 
 .form-control {
@@ -4352,19 +4347,23 @@ textarea {
 
 .form-control::-moz-placeholder {
   color: state-hover-modifier(#6B6B6B);
+  line-height: 1;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
   color: state-hover-modifier(#6B6B6B);
+  line-height: 1;
 }
 
 .form-control::-webkit-input-placeholder {
   color: state-hover-modifier(#6B6B6B);
+  line-height: 1;
 }
 
 .form-control::placeholder {
   color: state-hover-modifier(#6B6B6B);
+  line-height: 1;
 }
 
 .form-control:focus {
@@ -4408,79 +4407,58 @@ select[multiple].form-control {
   height: auto;
 }
 
-.form-control--sm {
-  font-size: 0.85714rem;
-  height: 2rem;
-  padding: 0.5rem;
-}
-
-[class*="block__has-"] .form-control--sm {
-  padding-right: 2rem;
-}
-
-.form-control--sm ~ .block-validation--feedback {
-  right: 0.5rem;
-  top: 2.5rem;
-}
-
-select.form-control--sm {
-  height: 2rem;
-  line-height: 1;
-}
-
-textarea.form-control--sm,
-select[multiple].form-control--sm {
-  height: auto;
-}
-
-.radio,
-.checkbox {
-  display: block;
+.checkbox,
+.radio {
   padding-top: 0.5rem;
-  position: relative;
 }
 
-.radio label,
-.checkbox label {
+.checkbox label,
+.radio label {
   cursor: pointer;
+  display: block;
   font-weight: 400;
   margin-bottom: 0;
   min-height: 1.5rem;
   padding-left: 1.5rem;
 }
 
-[disabled] .radio input[type="radio"],
-[disabled] .radio input[type="checkbox"],
-[readonly] .radio input[type="radio"],
-[readonly] .radio input[type="checkbox"],
-fieldset[disabled] .radio input[type="radio"],
-fieldset[disabled] .radio input[type="checkbox"], .radio.block__is-disabled input[type="radio"],
-.radio.block__is-disabled input[type="checkbox"], .radio.block__is-disabled.block__has-error input[type="radio"],
-.radio.block__is-disabled.block__has-error input[type="checkbox"], [disabled]
-.checkbox input[type="radio"],
+.checkbox label + label,
+.radio label + label {
+  margin-top: 0.5rem;
+}
+
+[disabled] .checkbox input[type="radio"],
+[disabled] .checkbox input[type="checkbox"],
+[readonly] .checkbox input[type="radio"],
+[readonly] .checkbox input[type="checkbox"],
+fieldset[disabled] .checkbox input[type="radio"],
+fieldset[disabled] .checkbox input[type="checkbox"], .checkbox.block__is-disabled input[type="radio"],
+.checkbox.block__is-disabled input[type="checkbox"], .checkbox.block__is-disabled.block__has-error input[type="radio"],
+.checkbox.block__is-disabled.block__has-error input[type="checkbox"], [disabled]
+.radio input[type="radio"],
 [disabled]
-.checkbox input[type="checkbox"],
+.radio input[type="checkbox"],
 [readonly]
-.checkbox input[type="radio"],
+.radio input[type="radio"],
 [readonly]
-.checkbox input[type="checkbox"],
+.radio input[type="checkbox"],
 fieldset[disabled]
-.checkbox input[type="radio"],
+.radio input[type="radio"],
 fieldset[disabled]
-.checkbox input[type="checkbox"],
-.checkbox.block__is-disabled input[type="radio"],
-.checkbox.block__is-disabled input[type="checkbox"],
-.checkbox.block__is-disabled.block__has-error input[type="radio"],
-.checkbox.block__is-disabled.block__has-error input[type="checkbox"] {
+.radio input[type="checkbox"],
+.radio.block__is-disabled input[type="radio"],
+.radio.block__is-disabled input[type="checkbox"],
+.radio.block__is-disabled.block__has-error input[type="radio"],
+.radio.block__is-disabled.block__has-error input[type="checkbox"] {
   cursor: not-allowed;
   opacity: 0.5;
   pointer-events: none;
 }
 
-.radio input[type="radio"],
-.radio input[type="checkbox"],
 .checkbox input[type="radio"],
-.checkbox input[type="checkbox"] {
+.checkbox input[type="checkbox"],
+.radio input[type="radio"],
+.radio input[type="checkbox"] {
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
@@ -4491,36 +4469,36 @@ fieldset[disabled]
   width: 1rem;
 }
 
-.radio input[type="radio"]:focus,
-.radio input[type="checkbox"]:focus,
 .checkbox input[type="radio"]:focus,
-.checkbox input[type="checkbox"]:focus {
+.checkbox input[type="checkbox"]:focus,
+.radio input[type="radio"]:focus,
+.radio input[type="checkbox"]:focus {
   outline: none;
 }
 
-.radio input[type="radio"]:checked,
-.radio input[type="checkbox"]:checked,
 .checkbox input[type="radio"]:checked,
-.checkbox input[type="checkbox"]:checked {
+.checkbox input[type="checkbox"]:checked,
+.radio input[type="radio"]:checked,
+.radio input[type="checkbox"]:checked {
   border-color: #0084E0;
 }
 
-.radio input[type="radio"]::after,
-.radio input[type="checkbox"]::after,
 .checkbox input[type="radio"]::after,
-.checkbox input[type="checkbox"]::after {
+.checkbox input[type="checkbox"]::after,
+.radio input[type="radio"]::after,
+.radio input[type="checkbox"]::after {
   font-family: "garba-icon-font" !important;
   line-height: 1;
   transition: background-color ease-in-out 0.12s, border-color ease-in-out 0.12s, color ease-in-out 0.12s;
 }
 
-.radio input[type="radio"],
-.checkbox input[type="radio"] {
+.checkbox input[type="radio"],
+.radio input[type="radio"] {
   border-radius: 50%;
 }
 
-.radio input[type="radio"]::after,
-.checkbox input[type="radio"]::after {
+.checkbox input[type="radio"]::after,
+.radio input[type="radio"]::after {
   content: "";
   display: block;
   background-color: transparent;
@@ -4532,18 +4510,18 @@ fieldset[disabled]
   width: 0.71429rem;
 }
 
-.radio input[type="radio"]:checked::after,
-.checkbox input[type="radio"]:checked::after {
+.checkbox input[type="radio"]:checked::after,
+.radio input[type="radio"]:checked::after {
   background-color: #0084E0;
 }
 
-.radio input[type="checkbox"],
-.checkbox input[type="checkbox"] {
+.checkbox input[type="checkbox"],
+.radio input[type="checkbox"] {
   border-radius: 3px;
 }
 
-.radio input[type="checkbox"]::after,
-.checkbox input[type="checkbox"]::after {
+.checkbox input[type="checkbox"]::after,
+.radio input[type="checkbox"]::after {
   color: transparent;
   content: "";
   font-size: 0.71429rem;
@@ -4551,9 +4529,16 @@ fieldset[disabled]
   margin-top: -0.25rem;
 }
 
-.radio input[type="checkbox"]:checked::after,
-.checkbox input[type="checkbox"]:checked::after {
+.checkbox input[type="checkbox"]:checked::after,
+.radio input[type="checkbox"]:checked::after {
   color: #0084E0;
+}
+
+.checkbox .radio-inline,
+.checkbox .checkbox-inline,
+.radio .radio-inline,
+.radio .checkbox-inline {
+  display: inline-block;
 }
 
 .radio input[type="radio"],
@@ -4585,7 +4570,6 @@ fieldset[disabled]
 .radio-inline,
 .checkbox-inline {
   cursor: pointer;
-  display: inline-block;
   font-weight: 400;
   margin-bottom: 0;
   padding-left: 1.5rem;
@@ -4597,39 +4581,6 @@ fieldset[disabled]
 .checkbox-inline + .checkbox-inline {
   margin-left: 1.5rem;
   margin-top: 0;
-}
-
-.form-horizontal .form-block {
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-
-.form-horizontal .form-block:before, .form-horizontal .form-block:after {
-  content: "";
-  display: table;
-}
-
-.form-horizontal .form-block:after {
-  clear: both;
-}
-
-.form-horizontal .control-label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-@media (min-width: 54.85714rem) {
-  .form-horizontal .control-label {
-    line-height: 1;
-    margin-bottom: 0;
-    padding-top: 1rem;
-  }
-}
-
-.form-horizontal .control-label--sm {
-  font-size: 0.85714rem;
-  margin-bottom: 0.25rem;
-  padding-top: 0.5rem;
 }
 
 .block__has-error > .form-control {
@@ -4664,15 +4615,80 @@ fieldset[disabled]
 }
 
 .block__has-error > .block-validation--feedback,
-.block__has-error > .block-validation--note {
+.block__has-error > .block-validation--note,
+.block__has-error > div > .block-validation--feedback,
+.block__has-error > div > .block-validation--note {
   display: block !important;
   visibility: visible !important;
   animation: form-block--enter-animation 0.2s ease-in;
   color: #D35F53;
 }
 
-.block__has-error > .block-validation--feedback::before {
+.block__has-error > .block-validation--feedback::before,
+.block__has-error > div > .block-validation--feedback::before {
   content: "";
+}
+
+.form-horizontal .form-block {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.form-horizontal .form-block:before, .form-horizontal .form-block:after {
+  content: "";
+  display: table;
+}
+
+.form-horizontal .form-block:after {
+  clear: both;
+}
+
+.form-horizontal .form-block > div .block-validation--feedback {
+  right: 2rem;
+  top: 1rem;
+}
+
+.form-horizontal .control-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 54.85714rem) {
+  .form-horizontal .control-label {
+    line-height: 1;
+    margin-bottom: 0;
+    padding-top: 1rem;
+  }
+}
+
+.form-horizontal .control-label--sm {
+  font-size: 0.85714rem;
+  margin-bottom: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+.form-control--sm {
+  font-size: 0.85714rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.form-control--sm ~ .block-validation--feedback {
+  top: 2.5rem;
+}
+
+select.form-control--sm {
+  height: 2rem;
+  line-height: 1;
+}
+
+textarea.form-control--sm,
+select[multiple].form-control--sm {
+  height: auto;
+}
+
+.form-horizontal [class*="block__has-"] .form-control--sm ~ .block-validation--feedback {
+  top: 0.5rem;
 }
 
 .container {

@@ -1,5 +1,7 @@
 // Form Block
 
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+
 @mixin form-block($spacing) {
   @include clearfix;
   display: block;
@@ -19,14 +21,8 @@
     height: $height;
     padding: $padding;
 
-    // Validation states
-    [class*="block__has-"] & {
-      padding-right: ($padding * 2) + $block-has-feedback-size;
-    }
-
     // Feedback positioning
     ~ .block-validation--feedback {
-      right: $padding;
       top: $line-height-computed + $form-label-spacing + $padding;
     }
   }
@@ -39,6 +35,11 @@
   textarea#{$parent},
   select[multiple]#{$parent} {
     height: auto;
+  }
+
+  // Validation feedback
+  .form-horizontal [class*="block__has-"] #{$parent} ~ .block-validation--feedback {
+    top: $padding;
   }
 }
 
@@ -53,6 +54,42 @@
       $input-border-focus-opacity);
     outline: 0;
   }
+}
+
+
+
+// Placeholder mixin
+@mixin placeholder($color: $input-color-placeholder) {
+  // stylelint-disable selector-no-vendor-prefix
+
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    line-height: 1;
+
+    // Override Firefox's unusual default opacity;
+    // see https://github.com/twbs/bootstrap/pull/11526
+    opacity: 1;
+  }
+
+  // Internet Explorer 10+
+  &:-ms-input-placeholder {
+    color: $color;
+    line-height: 1;
+  }
+
+  // Safari and Chrome
+  &::-webkit-input-placeholder {
+    color: $color;
+    line-height: 1;
+  }
+
+  &::placeholder {
+    color: $color;
+    line-height: 1;
+  }
+
+  // stylelint-enable selector-no-vendor-prefix
 }
 
 
@@ -101,47 +138,20 @@
 
   // Feddback elements
   > .block-validation--feedback,
-  > .block-validation--note {
+  > .block-validation--note,
+  > div > .block-validation--feedback,
+  > div > .block-validation--note {
     @include show-element;
     animation: form-block--enter-animation ($transition-timing-slow / 4) ease-in;
     color: $color;
   }
 
-  > .block-validation--feedback::before {
-    content: $icon;
+  > .block-validation--feedback,
+  > div > .block-validation--feedback, {
+    &::before {
+      content: $icon;
+    }
   }
-}
-
-
-
-// Placeholder mixin
-@mixin placeholder($color: $input-color-placeholder) {
-  // stylelint-disable selector-no-vendor-prefix
-
-  // Firefox
-  &::-moz-placeholder {
-    color: $color;
-
-    // Override Firefox's unusual default opacity;
-    // see https://github.com/twbs/bootstrap/pull/11526
-    opacity: 1;
-  }
-
-  // Internet Explorer 10+
-  &:-ms-input-placeholder {
-    color: $color;
-  }
-
-  // Safari and Chrome
-  &::-webkit-input-placeholder {
-    color: $color;
-  }
-
-  &::placeholder {
-    color: $color;
-  }
-
-  // stylelint-enable selector-no-vendor-prefix
 }
 
 
@@ -181,3 +191,5 @@
     opacity: 0;
   }
 }
+
+// stylelint-enable selector-no-qualifying-type, selector-no-type

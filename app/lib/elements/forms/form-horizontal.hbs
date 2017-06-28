@@ -1,14 +1,30 @@
 <form class="form-horizontal" autocomplete="off">
-  <div class="form-block">
+  <div class="form-block {{modifier_class}}">
     <label for="inputEmail3" class="col-md-2 control-label">Email</label>
     <div class="col-md-10">
       <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+
+      {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
+            de validación, de lo contrario permanece oculto. --}}
+      <span class="block-validation--feedback"></span>
+
+      <p class="block-validation--note">
+        Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      </p>
     </div>
   </div>
-  <div class="form-block">
+  <div class="form-block {{modifier_class}}">
     <label for="inputPassword3" class="col-md-2 control-label control-label--sm">Password</label>
     <div class="col-md-10">
       <input type="password" class="form-control form-control--sm" id="inputPassword3" placeholder="Password">
+
+      {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
+            de validación, de lo contrario permanece oculto. --}}
+      <span class="block-validation--feedback"></span>
+
+      <p class="block-validation--note">
+        Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      </p>
     </div>
   </div>
   <div class="form-block">
