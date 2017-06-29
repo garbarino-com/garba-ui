@@ -3,9 +3,22 @@
 // Import plugin shim
 var $ = require('jquery');
 
+
+
 // Bootstrap plugins (http://getbootstrap.com/javascript/)
 var modal = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
+var tooltip = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip');
 var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
+
+// Initialize bootstrap plugins
+// Styleguide section-functional.html#kssref-functional-tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip({
+    'container': 'body'
+  });
+})
+
+
 
 // Miscelaneous plugins
 var firstPurchase = require('./scripts/campaign-modals/first-purchase');
@@ -16,11 +29,12 @@ var offersHunter = require('./scripts/offers-hunter');
 var slick = require('../../node_modules/slick-carousel/slick/slick');
 
 
+
 // Carousel settings
 // TODO(ecalvi): Maybe we should consider in the future moving these settings
 // to their own module.
 
-// Billboard carousel plugins
+// Initialize billboard carousel plugins
 // Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
 $('.carousel').slick({
     arrows: false,

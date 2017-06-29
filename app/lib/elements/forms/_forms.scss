@@ -2,12 +2,13 @@
 //
 // Styleguide Elements.Forms
 
+// TODO(ecalvi): Esta parte quedó sumamente compleja. Estaría bueno en el futuro
+// estudiar la manera de subdividir los forms en partes más chicas (y manejables).
 
-
-// Normalización de elementos
 
 // stylelint-disable selector-no-qualifying-type, selector-no-type
 
+// Normalización de elementos
 fieldset {
   border: 0;
   margin: 0;

@@ -30,10 +30,6 @@ $flexbox-is-enabled:         true !default;
 $baseline-grid:                  14px;
 $baseline-grid-computed:         px-to-rem($baseline-grid);
 
-// A second definition of this value overrides normalize definition
-// (factory default is 24px)
-$base-line-height:      14px;
-
 
 // Color Palette
 //
@@ -261,6 +257,7 @@ $zindex-element:            20 !default;
 $zindex-hover-element:      50 !default;
 $zindex-fixed-button:       1000 !default;
 $zindex-navbar:             1030 !default;
+$zindex-tooltip:            1070 !default;
 
 // Buttons
 //
@@ -354,13 +351,13 @@ $controler-border-inactive:          $gray-medium;
 
 
 // Tooltip definitions
-$tooltip-width:                      15rem !default;
 $tooltip-bg:                         $gray-base !default;
 $tooltip-color:                      $text-inverse !default;
-$tooltip-height:                     2rem !default;
-$tooltip-opacity:                    .8 !default;
-$tooltip-padding:                    .5rem !default;
-$tooltip-arrow-size:                 1rem !default;
+$tooltip-line-height:                $baseline-grid-computed;
+$tooltip-padding:                    $spacer-base $horspacer-large !default;
+$tooltip-opacity:                    $modifier-scale-value !default;
+$tooltip-arrow-size:                 $spacer-sm !default;
+$tooltip-distance:                   $spacer-base !default;
 
 
 // Value component

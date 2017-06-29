@@ -1,0 +1,136 @@
+// Tooltips
+//
+// Los tooltips se utilizan para dar soporte de comunicación a un elemento,
+// idealmente sólo una indicación respecto al elemento que lo dispara. La
+// funcionalidad es la de los tooltips de Bootstrap (
+// [ver documentación](http://getbootstrap.com/javascript/#tooltips)).
+//
+// Los tooltips toman la información a mostrar del atributo `title` pero no se
+// muestran si el atributo está vacío.
+//
+// > De ser necesaria una descripción más extensa o que incluya una acción,
+// recurrir al componente **Popover**.
+//
+// Markup: tooltips.hbs
+//
+// Styleguide Functional.Tooltips
+
+// Base class
+.tooltip {
+  // El elemento padre puede ser arbitrario, porque los tooltips son insertados
+  // como hermanos de su elemento target. Así que le aplicamos un reset a los
+  // valores relacionados con el texto para evitar herencias indeseadas.
+  @include reset-text;
+
+  display: block;
+  opacity: 0;
+  position: absolute;
+  z-index: $zindex-tooltip;
+
+  // Clase active
+  &.in {
+    opacity: $tooltip-opacity;
+  }
+
+  &.left {
+    padding: 0 $tooltip-distance;
+
+    .tooltip-arrow {
+      border-left-color: $tooltip-bg;
+      border-width: $tooltip-arrow-size 0 $tooltip-arrow-size $tooltip-arrow-size;
+      margin-top: $tooltip-arrow-size * -1;
+      right: $tooltip-distance - $tooltip-arrow-size;
+      top: 50%;
+    }
+  }
+
+  &.top {
+    padding: $tooltip-distance 0;
+
+    .tooltip-arrow {
+      border-top-color: $tooltip-bg;
+      border-width: $tooltip-arrow-size $tooltip-arrow-size 0;
+      bottom: $tooltip-distance - $tooltip-arrow-size;
+      left: 50%;
+      margin-left: $tooltip-arrow-size * -1;
+    }
+  }
+
+  &.top-left .tooltip-arrow {
+    border-top-color: $tooltip-bg;
+    border-width: $tooltip-arrow-size $tooltip-arrow-size 0;
+    bottom: $tooltip-distance - $tooltip-arrow-size;
+    margin-bottom: $tooltip-arrow-size * -1;
+    right: $tooltip-arrow-size;
+  }
+
+  &.top-right .tooltip-arrow {
+    border-top-color: $tooltip-bg;
+    border-width: $tooltip-arrow-size $tooltip-arrow-size 0;
+    bottom: $tooltip-distance - $tooltip-arrow-size;
+    left: $tooltip-arrow-size;
+    margin-bottom: $tooltip-arrow-size * -1;
+  }
+
+  &.right {
+    padding: 0 $tooltip-distance;
+
+    .tooltip-arrow {
+      border-right-color: $tooltip-bg;
+      border-width: $tooltip-arrow-size $tooltip-arrow-size $tooltip-arrow-size 0;
+      left: $tooltip-distance - $tooltip-arrow-size;
+      margin-top: $tooltip-arrow-size * -1;
+      top: 50%;
+    }
+  }
+
+  &.bottom {
+    padding: $tooltip-distance 0;
+
+    .tooltip-arrow {
+      border-bottom-color: $tooltip-bg;
+      border-width: 0 $tooltip-arrow-size $tooltip-arrow-size;
+      left: 50%;
+      margin-left: $tooltip-arrow-size * -1;
+      top: $tooltip-distance - $tooltip-arrow-size;
+    }
+  }
+
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: $tooltip-bg;
+    border-width: 0 $tooltip-arrow-size $tooltip-arrow-size;
+    margin-top: $tooltip-arrow-size * -1;
+    right: $tooltip-arrow-size;
+    top: $tooltip-distance - $tooltip-arrow-size;
+  }
+
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: $tooltip-bg;
+    border-width: 0 $tooltip-arrow-size $tooltip-arrow-size;
+    left: $tooltip-arrow-size;
+    margin-top: $tooltip-arrow-size * -1;
+    top: $tooltip-distance - $tooltip-arrow-size;
+  }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  background-color: $tooltip-bg;
+  border-radius: $border-radius-base;
+  color: $tooltip-color;
+  display: block;
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  line-height: $tooltip-line-height;
+  padding: $tooltip-padding;
+  text-align: center;
+}
+
+// Arrows
+.tooltip-arrow {
+  border-color: transparent;
+  border-style: solid;
+  height: 0;
+  position: absolute;
+  width: 0;
+}

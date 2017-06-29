@@ -3,6 +3,11 @@
 // Importamos los mixins de grilla de [Bootstrap](http://getbootstrap.com/)
 // para usarlos en la generación de nuestra grilla.
 
-// Grid mixins
+
+// Reset text
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/reset-text";
+
+
+// Relacionados con la grilla
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
