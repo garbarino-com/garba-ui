@@ -6,6 +6,10 @@
 // funcionalidades dentro de la página. No se deben usar para navegar entre
 // documentos o secciones, para eso son los links o botones.
 //
+// > Los *Action buttons* carecen de un texto que describa la acción que ejecutan
+// por lo que se sugiere acompañar su utilización con un *tooltip* cumpla esa función
+// (Nota: deberíamos estudiar como asistir al usuario en dispositivos touch).
+//
 // Markup: button-actions.hbs
 //
 // .button--action__primary - Ejecuta la acción primaria en un grupo de acciones

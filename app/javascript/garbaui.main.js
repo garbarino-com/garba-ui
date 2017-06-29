@@ -14,7 +14,8 @@ var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/b
 // Styleguide section-functional.html#kssref-functional-tooltips
 $(function () {
   $('[data-toggle="tooltip"]').tooltip({
-    'container': 'body'
+    'container': 'body',
+    'trigger': 'hover'
   });
 })
 

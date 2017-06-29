@@ -8,6 +8,9 @@
 // Los tooltips toman la información a mostrar del atributo `title` pero no se
 // muestran si el atributo está vacío.
 //
+// Tener en cuenta a la hora de utilizar *tooltips* que estos no sirven para
+// dispositivos touch (tablets y teléfonos) con los settings actuales.
+//
 // > De ser necesaria una descripción más extensa o que incluya una acción,
 // recurrir al componente **Popover**.
 //
