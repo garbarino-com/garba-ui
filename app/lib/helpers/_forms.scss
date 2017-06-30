@@ -155,6 +155,44 @@
 }
 
 
+// @make-checked-element
+//
+// Posiciona un elemento visual estilo `checkbox` en la esquina superior izquierda
+// del elemento contenedor.
+//
+// $background - Color de fondo del elemento.
+// $color - Color del ícono.
+// $size, $distance - Posición del elemento respecto de la esquina superior izquierda
+// (default = 0).
+//
+// Styleguide Helpers.Forms.CheckedElement
+
+@mixin make-checked-element($background, $color, $size, $distance: 0) {
+  background-color: $background;
+  border-color: $background;
+  height: $size;
+  opacity: 0;
+  position: absolute;
+  right: $distance;
+  top: $distance;
+  width: $size;
+  z-index: $zindex-element + 1;
+
+  &:checked::after {
+    color: $color;
+    font-size: 100%;
+    margin-right: ($size / 3) * -1;
+    margin-top: ($size / 3) * -1;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+  }
+
+  &:checked{
+    opacity: 1;
+  }
+}
+
 
 // Note animations
 

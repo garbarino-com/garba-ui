@@ -71,7 +71,7 @@
 
 
 
-// Linked Grid List
+// Grid List con links
 //
 // Agregale links a las *Grid-list* usando tags `<a>` o `<button>`en vez de
 // `<li>` o `<div>` (eso también implica que el elemento padre debería ser un
@@ -83,7 +83,8 @@
 
 // stylelint-disable selector-no-qualifying-type, selector-no-type
 a.list-grid-item,
-button.list-grid-item {
+button.list-grid-item,
+label.list-grid-item {
   background: transparent;
   border: 0;
   color: $grid-cell-active;
@@ -106,26 +107,20 @@ button.list-grid-item {
       color: state-focus-modifier($grid-cell-active);
     }
   }
-}
-// stylelint-enable selector-no-qualifying-type, selector-no-type
 
-
-
-// Grid list item
-
-.list-grid-item__body {
-  @include flex(1);
-  padding-left: $grid-cell-spacer * 2;
-  padding-right: $grid-cell-spacer * 2;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-  z-index: $zindex-element;
+  input {
+    @include make-checked-element(
+      $grid-cell-active,
+      $text-inverse,
+      1.5rem,
+      ($grid-cell-spacer / 2)
+    );
+  }
 }
 
 
 
-// Icon Grid List
+// Grid List con íconos
 //
 // Las *Grid-list* vienen con unos estilos para ícono preseteados como se ve en
 // este ejemplo. También traen preseteados estilos para posicionar botones.
@@ -140,10 +135,28 @@ button.list-grid-item {
 
 .list-grid-item__body {
   @include flex(1);
-  padding-left: $grid-cell-spacer * 2;
-  padding-right: $grid-cell-spacer * 2;
+  padding: $grid-cell-spacer * 2;
   text-align: center;
-  text-transform: uppercase;
   vertical-align: middle;
   z-index: $zindex-element;
 }
+
+
+
+// Grid List con checkboxes
+//
+//
+// Markup: grid-list-with-checkboxes.hbs
+//
+// Styleguide Components.GridList.3-CheckboxGridLists
+.item__is-checked {
+  &::after {
+    border-color: state-hover-modifier($grid-cell-active);
+    color: state-hover-modifier($grid-cell-active);
+  }
+}
+
+
+
+
+// stylelint-enable selector-no-qualifying-type, selector-no-type

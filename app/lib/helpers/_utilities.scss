@@ -33,7 +33,7 @@
 // Styleguide Helpers.Utilities.HideElementSimple
 
 @mixin hide-element-simple {
-  display: none !important;
+  visibility: hidden !important;
 }
 
 // @make-pseudo-element($display)

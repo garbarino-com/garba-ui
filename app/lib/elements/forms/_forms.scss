@@ -65,6 +65,71 @@ textarea {
   resize: vertical;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  @include prefixer(appearance, none, webkit ms spec);
+  background-color: $controler-bg-inactive;
+  border: 1px solid $controler-border-inactive;
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:checked {
+    border-color: $controler-active;
+  }
+
+  // Elemento que se dibuja cuando se está `:checked`
+  &::after {
+    font-family: $icon-font-name !important;
+    line-height: 1;
+    transition: background-color ease-in-out $transition-timing-base,
+    border-color ease-in-out $transition-timing-base,
+      color ease-in-out $transition-timing-base;
+  }
+}
+
+// Estilos específicos para radiobuttons
+input[type="radio"] {
+  border-radius: 50%;
+
+  &::after {
+    @include make-pseudo-element;
+    background-color: transparent;
+    border-radius: 50%;
+    display: block;
+    height: $controller-size;
+    margin-left: ($controller-size / 2) * -1;
+    margin-top: ($controller-size / 2) * -1;
+    width: $controller-size;
+  }
+
+  &:checked::after {
+    background-color: $controler-active;
+  }
+}
+
+// Estilos específicos para checkbox
+input[type="checkbox"] {
+  border-radius: $border-radius-base;
+
+  &::after {
+    color: transparent;
+    content: $icon-checkmark;
+    font-size: $controller-size;
+    margin-left: ($controller-size / 2) * -1;
+    margin-top: .25rem * -1;
+  }
+
+  &:checked::after {
+    color: $controler-active;
+  }
+}
+
+
 
 
 // Form básico
@@ -295,71 +360,6 @@ select[multiple] {
       cursor: not-allowed;
       opacity: $modifier-opacity-value;
       pointer-events: none;
-    }
-  }
-
-  // Selected state
-  input[type="radio"],
-  input[type="checkbox"] {
-    @include prefixer(appearance, none, webkit ms spec);
-    background-color: $controler-bg-inactive;
-    border: 1px solid $controler-border-inactive;
-    display: inline-block;
-    height: 1rem;
-    width: 1rem;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:checked {
-      border-color: $controler-active;
-    }
-
-    // Elemento que se dibuja cuando se está `:checked`
-    &::after {
-      font-family: $icon-font-name !important;
-      line-height: 1;
-      transition: background-color ease-in-out $transition-timing-base,
-      border-color ease-in-out $transition-timing-base,
-        color ease-in-out $transition-timing-base;
-    }
-  }
-
-  // Estilos específicos para radiobuttons
-  input[type="radio"] {
-    border-radius: 50%;
-
-    &::after {
-      @include make-pseudo-element;
-      background-color: transparent;
-      border-radius: 50%;
-      display: block;
-      height: $controller-size;
-      margin-left: ($controller-size / 2) * -1;
-      margin-top: ($controller-size / 2) * -1;
-      width: $controller-size;
-    }
-
-    &:checked::after {
-      background-color: $controler-active;
-    }
-  }
-
-  // Estilos específicos para checkbox
-  input[type="checkbox"] {
-    border-radius: $border-radius-base;
-
-    &::after {
-      color: transparent;
-      content: $icon-checkmark;
-      font-size: $controller-size;
-      margin-left: ($controller-size / 2) * -1;
-      margin-top: .25rem * -1;
-    }
-
-    &:checked::after {
-      color: $controler-active;
     }
   }
 
