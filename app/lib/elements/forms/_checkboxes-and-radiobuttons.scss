@@ -1,0 +1,239 @@
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+
+input[type="radio"],
+input[type="checkbox"] {
+  @include prefixer(appearance, none, webkit ms spec);
+  background-color: $controler-bg-inactive;
+  border: 1px solid $controler-border-inactive;
+  display: inline-block;
+  height: $controller-size;
+  transition: border-color ease-in-out $transition-timing-base;
+  width: $controller-size;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:checked {
+    border-color: $controler-active;
+  }
+
+  // Elemento que se dibuja cuando se está `:checked`
+  &::after {
+    font-family: $icon-font-name !important;
+    line-height: 1;
+    transition: background-color ease-in-out $transition-timing-base,
+    border-color ease-in-out $transition-timing-base,
+      color ease-in-out $transition-timing-base;
+  }
+}
+
+
+
+// Estilos específicos para radiobuttons
+input[type="radio"] {
+  border-radius: 50%;
+
+  &::after {
+    @include make-pseudo-element;
+    background-color: transparent;
+    border-radius: 50%;
+    display: block;
+    height: $controller-symbol-size;
+    margin-left: ($controller-symbol-size / 2) * -1;
+    margin-top: ($controller-symbol-size / 2) * -1;
+    width: $controller-symbol-size;
+  }
+
+  &:checked::after {
+    background-color: $controler-active;
+  }
+}
+
+
+
+// Estilos específicos para checkbox
+input[type="checkbox"] {
+  border-radius: $border-radius-base;
+
+  &::after {
+    color: transparent;
+    content: $icon-checkmark;
+    font-size: $controller-symbol-size;
+    margin-left: ($controller-symbol-size / 2) * -1;
+    margin-top: (($controller-symbol-size / 2) + $spacer-xs) * -1;
+  }
+
+  &:checked::after {
+    color: $controler-active;
+  }
+}
+
+
+
+// Checkboxes y Radio buttons
+//
+// Indenta los labels para posicionar los radios/checkboxes como controles flotantes.
+//
+// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
+// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
+// de css `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+//
+// Markup: checkbox-and-radio.hbs
+//
+// Styleguide Elements.Forms.3-Checkboxes&Radios
+
+.checkbox,
+.radio {
+  padding-top: $spacer-sm;
+
+  label {
+    cursor: pointer;
+    display: block;
+    font-weight: $font-weight-base;
+    margin-bottom: 0;
+
+    // Ensure the input doesn't jump when there is no text
+    min-height: $line-height-computed;
+
+    padding-left: $controller-spacer;
+
+    // Cambia el border color en :hover sobre el label
+
+    // stylelint-disable max-nesting-depth
+    &:hover {
+      > input[type="radio"],
+      > input[type="checkbox"] {
+        border-color: $controler-active;
+      }
+    }
+    // stylelint-enable max-nesting-depth
+  }
+
+  label + label {
+    margin-top: $spacer-sm;
+  }
+
+  // Define estilos para el bloque deshabilitado.
+  [disabled] &,
+  [readonly] &,
+  fieldset[disabled] &,
+  &.block__is-disabled,
+  &.block__is-disabled.block__has-error {
+    input[type="radio"],
+    input[type="checkbox"] {
+      cursor: not-allowed;
+      opacity: $modifier-opacity-value;
+      pointer-events: none;
+    }
+  }
+
+  // Modifica el valor de display para radios/checkboxes inline y boxed.
+  .radio-inline,
+  .checkbox-inline,
+  .radio-box,
+  .checkbox-box {
+    display: inline-block;
+  }
+}
+
+// Posiciona los controles
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline,
+.radio-box,
+.checkbox-box {
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-left: $controller-spacer * -1;
+    margin-top: $spacer-xs;
+    position: absolute;
+
+    &::after {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+    }
+  }
+}
+
+
+
+// Inline checkboxes y Radios
+//
+// Agrega la clase `.radio-inline` o `.checkbox-inline` para poner varios checkboxes
+// o radios en la misma línea.
+//
+// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
+// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
+// de css `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+//
+// Markup: checkbox-and-radio--inline.hbs
+//
+// Styleguide Elements.Forms.4-InlineCheckboxes&Radios
+
+.radio-inline,
+.checkbox-inline {
+  cursor: pointer;
+  font-weight: $block-label-font-weight;
+  margin-bottom: 0;
+  padding-left: $controller-spacer;
+  position: relative;
+  vertical-align: middle;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-left: $spacer-lg; // space out consecutive inline controls
+  margin-top: 0;
+}
+
+
+
+// Boxed checkboxes y Radios
+//
+// Agrega la clase `.radio-inline` o `.checkbox-inline` para poner varios checkboxes
+// o radios en la misma línea.
+//
+// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
+// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
+// de css `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+//
+// Markup: box-checkbox-and-radio--inline.hbs
+//
+// Styleguide Elements.Forms.5-BoxCheckboxes&Radios
+
+.radio-box,
+.checkbox-box {
+  background-color: $grid-cell-bg;
+  border: $grid-cell-border-size solid $grid-cell-border-color;
+  border-radius: $border-radius-base;
+  line-height: $line-height-sm;
+  padding: .75rem;
+  padding-left: 2rem;
+
+  &:hover {
+    border-color: state-hover-modifier($grid-cell-active);
+  }
+
+  > input[type="radio"],
+  > input[type="checkbox"] {
+    left: 2rem;
+    margin-top: 0;
+  }
+}
+
+.radio-box + .radio-box,
+.checkbox-box + .checkbox-box {
+  margin-left: $spacer-xs; // space out consecutive boxed controls
+  margin-top: 0;
+}
+
+// stylelint-enable selector-no-qualifying-type, selector-no-type

@@ -39,6 +39,8 @@ label {
   // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   max-width: 100%;
 
+  position: relative;
+
   // Indica que el campo de input es requerido.
   .block__is-required & {
     &::after {
@@ -64,71 +66,6 @@ label {
 textarea {
   resize: vertical;
 }
-
-input[type="radio"],
-input[type="checkbox"] {
-  @include prefixer(appearance, none, webkit ms spec);
-  background-color: $controler-bg-inactive;
-  border: 1px solid $controler-border-inactive;
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-
-  &:focus {
-    outline: none;
-  }
-
-  &:checked {
-    border-color: $controler-active;
-  }
-
-  // Elemento que se dibuja cuando se está `:checked`
-  &::after {
-    font-family: $icon-font-name !important;
-    line-height: 1;
-    transition: background-color ease-in-out $transition-timing-base,
-    border-color ease-in-out $transition-timing-base,
-      color ease-in-out $transition-timing-base;
-  }
-}
-
-// Estilos específicos para radiobuttons
-input[type="radio"] {
-  border-radius: 50%;
-
-  &::after {
-    @include make-pseudo-element;
-    background-color: transparent;
-    border-radius: 50%;
-    display: block;
-    height: $controller-size;
-    margin-left: ($controller-size / 2) * -1;
-    margin-top: ($controller-size / 2) * -1;
-    width: $controller-size;
-  }
-
-  &:checked::after {
-    background-color: $controler-active;
-  }
-}
-
-// Estilos específicos para checkbox
-input[type="checkbox"] {
-  border-radius: $border-radius-base;
-
-  &::after {
-    color: transparent;
-    content: $icon-checkmark;
-    font-size: $controller-size;
-    margin-left: ($controller-size / 2) * -1;
-    margin-top: .25rem * -1;
-  }
-
-  &:checked::after {
-    color: $controler-active;
-  }
-}
-
 
 
 
@@ -315,115 +252,6 @@ select[multiple] {
 
 
 
-// Checkboxes y Radio buttons
-//
-// Indenta los labels para posicionar los radios/checkboxes como controles flotantes.
-//
-// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
-// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
-// de css `pointer-events:none`
-// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
-// .block__has-error - Se incluyen estilos de validación para estado de `error`.
-//
-// Markup: checkbox-and-radio.hbs
-//
-// Styleguide Elements.Forms.3-Checkboxes&Radios
-
-.checkbox,
-.radio {
-  padding-top: $spacer-sm;
-
-  label {
-    cursor: pointer;
-    display: block;
-    font-weight: $font-weight-base;
-    margin-bottom: 0;
-
-    // Ensure the input doesn't jump when there is no text
-    min-height: $line-height-computed;
-
-    padding-left: $controller-spacer;
-  }
-
-  label + label {
-    margin-top: $spacer-sm;
-  }
-
-  // Define estilos para el bloque deshabilitado.
-  [disabled] &,
-  [readonly] &,
-  fieldset[disabled] &,
-  &.block__is-disabled,
-  &.block__is-disabled.block__has-error {
-    input[type="radio"],
-    input[type="checkbox"] {
-      cursor: not-allowed;
-      opacity: $modifier-opacity-value;
-      pointer-events: none;
-    }
-  }
-
-  // Modifica el valor de display para radios/checkboxes inline.
-  .radio-inline,
-  .checkbox-inline {
-    display: inline-block;
-  }
-}
-
-// Posiciona los controles
-.radio,
-.radio-inline,
-.checkbox,
-.checkbox-inline {
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-left: $controller-spacer * -1;
-    margin-top: $spacer-xs;
-    position: absolute;
-
-    &::after {
-      left: 50%;
-      position: absolute;
-      top: 50%;
-    }
-  }
-}
-
-
-
-// Inline checkboxes y Radios
-//
-// Agrega la clase `.radio-inline` o `.checkbox-inline` para poner varios checkboxes
-// o radios en la misma línea.
-//
-// .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
-// agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
-// de css `pointer-events:none`
-// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
-// .block__has-error - Se incluyen estilos de validación para estado de `error`.
-//
-// Markup: checkbox-and-radio--inline.hbs
-//
-// Styleguide Elements.Forms.4-InlineCheckboxes&Radios
-
-.radio-inline,
-.checkbox-inline {
-  cursor: pointer;
-  font-weight: $block-label-font-weight;
-  margin-bottom: 0;
-  padding-left: $controller-spacer;
-  position: relative;
-  vertical-align: middle;
-}
-
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-left: $spacer-lg; // space out consecutive inline controls
-  margin-top: 0;
-}
-
-
-
 // Validation states
 .block__has-error {
   @include form-control-validations-state($brand-error, $icon-error);
@@ -446,7 +274,7 @@ select[multiple] {
 //
 // Markup: form-horizontal.hbs
 //
-// Styleguide Elements.Forms.5-FormHorizontal
+// Styleguide Elements.Forms.6-FormHorizontal
 
 .form-horizontal {
   // Make form groups behave like rows

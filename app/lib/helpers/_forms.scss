@@ -101,7 +101,8 @@
   $hover-color: state-hover-modifier($color);
   $focus-color: state-focus-modifier($color);
 
-  > .form-control {
+  > .form-control,
+  > div > .form-control {
     border: 1px solid $color;
 
     &:hover {
@@ -134,6 +135,13 @@
   input[type="checkbox"]:checked::after {
     color: $color;
   }
+
+  // Cambia el border color en :hover sobre el label
+  &.checkbox label:hover > input[type="checkbox"],
+  &.radio label:hover > input[type="radio"] {
+    border-color: $color !important;
+  }
+
 
 
   // Feddback elements

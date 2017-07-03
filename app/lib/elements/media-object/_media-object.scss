@@ -1,0 +1,48 @@
+// Media Object
+//
+// El *Media Object* es una abstracción de layout útil para varios tipos de
+// componentes (comentarios, notificaciones, cajas de producto horizontales, etc.)
+// que incluyan una imagen o ícono alineado a la izquierda o a la derecha, junto
+// con texto contextual.
+//
+// Markup: media-object.hbs
+//
+// Styleguide Elements.MediaObject
+
+.media-object {
+  margin-bottom: $spacer-base;
+}
+
+.media,
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.media-body {
+  width: 10000px;
+}
+
+.media-object {
+  display: block;
+
+  // Fix collapse in webkit from max-width: 100% and display: table-cell.
+  &.img-thumbnail {
+    max-width: none;
+  }
+}
+
+.media-right {
+  padding-left: $spacer-base;
+}
+
+.media-left {
+  padding-right: $spacer-base;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: middle;
+}
