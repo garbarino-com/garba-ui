@@ -3,12 +3,20 @@
 // Import plugin shim
 var $ = require('jquery');
 
-
-
 // Bootstrap plugins (http://getbootstrap.com/javascript/)
 var modal = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
 var tooltip = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip');
 var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
+
+// Miscelaneous plugins
+var firstPurchase = require('./scripts/campaign-modals/first-purchase');
+var cookie = require('./scripts/cookie');
+var offersHunter = require('./scripts/offers-hunter');
+
+// Carousel Plugin (http://kenwheeler.github.io/slick/)
+var slick = require('../../node_modules/slick-carousel/slick/slick');
+
+
 
 // Initialize bootstrap plugins
 // Styleguide section-functional.html#kssref-functional-tooltips
@@ -33,17 +41,7 @@ $(function () {
 
 
 
-// Miscelaneous plugins
-var firstPurchase = require('./scripts/campaign-modals/first-purchase');
-var cookie = require('./scripts/cookie');
-var offersHunter = require('./scripts/offers-hunter');
-
-
-
-// Carousel Plugin (http://kenwheeler.github.io/slick/)
-var slick = require('../../node_modules/slick-carousel/slick/slick');
-
-// Carousel settings
+// Initialize carousel
 $(function () {
   // TODO(ecalvi): Maybe we should consider in the future moving these settings
   // to their own module.

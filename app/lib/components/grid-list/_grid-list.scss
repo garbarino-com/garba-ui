@@ -8,9 +8,13 @@
 // Las *Grid-lists* sirven se usan para tipos de datos similares. Ayudan a mejorar
 // la comprensión visual de los datos que agrupan.
 //
-// > Los ítems que componen la *Grid-lists* tienen un ancho fijado que se asigna
-// automáticamente de acuerdo a la cantidad de siblings que haya en una misma fila
+// > Los ítems que componen las *Grid-lists* tienen un ancho fijado que se asigna
+// automáticamente de acuerdo a la cantidad de siblings que hayan en la misma fila
 // (máximo 6).
+//
+// Los ítems que componen la lista se usan con la clase `.list-grid-item` salvo
+// uando se utiliza con imagenes, en cuyo caso se debe utilizer el elemento
+// *Image Container*.
 //
 // Markup: grid-list.hbs
 //
@@ -77,6 +81,11 @@
 // `<li>` o `<div>` (eso también implica que el elemento padre debería ser un
 // `<div>` en lugar de un `<ul>`.
 //
+// :hover - Cuando el mouse se desliza sobre el botón.
+// :focus - Cuando es presionado.
+// .item__is-checked - Indica que el ítem fue seleccionado.
+// .item__is-disabled - Estado deshabilitado.
+//
 // Markup: grid-list-linked.hbs
 //
 // Styleguide Components.GridList.1-LinkedGridList
@@ -89,6 +98,7 @@ label.list-grid-item {
   border: 0;
   color: $grid-cell-active;
   cursor: pointer;
+  margin-bottom: 0;
 
   &:hover {
     text-decoration: none;
@@ -105,6 +115,28 @@ label.list-grid-item {
     &::after {
       border-color: state-focus-modifier($grid-cell-active);
       color: state-focus-modifier($grid-cell-active);
+    }
+  }
+
+  //
+  &:disabled,
+  [disabled],
+  [readonly],
+  [disabled] &,
+  [readonly] &,
+  &.item__is-disabled {
+    cursor: default;
+    opacity: $modifier-opacity-value;
+    pointer-events: none;
+
+    &::after {
+      background-color: $btn-disabled-bg;
+      border-color: $btn-disabled-color;
+      color: $btn-disabled-color;
+    }
+
+    > .list-grid-item__body {
+      color: $btn-disabled-color;
     }
   }
 
@@ -145,6 +177,8 @@ label.list-grid-item {
 
 // Grid List con checkboxes
 //
+// Las Grid-lists pueden usarse dentro para checkboxes dentro de un form para
+// seleccionar entre un set de ítems que puede contener textos o imagenes.
 //
 // Markup: grid-list-with-checkboxes.hbs
 //
@@ -155,7 +189,6 @@ label.list-grid-item {
     color: state-hover-modifier($grid-cell-active);
   }
 }
-
 
 
 

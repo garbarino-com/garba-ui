@@ -5627,6 +5627,12 @@ select[multiple].form-control--sm {
   outline: 0;
 }
 
+.list-grid-item > .img-container {
+  height: 86%;
+  width: 86%;
+  z-index: 20;
+}
+
 .img-container__is-loading::before {
   background-color: #FFF;
   position: relative;
@@ -6068,6 +6074,7 @@ label.list-grid-item {
   border: 0;
   color: #0084E0;
   cursor: pointer;
+  margin-bottom: 0;
 }
 
 a.list-grid-item:hover,
@@ -6094,6 +6101,82 @@ button.list-grid-item:focus::after,
 label.list-grid-item:focus::after {
   border-color: #2ea9ff;
   color: #2ea9ff;
+}
+
+a.list-grid-item:disabled,
+a.list-grid-item [disabled],
+a.list-grid-item [readonly],
+[disabled] a.list-grid-item,
+[readonly] a.list-grid-item, a.list-grid-item.item__is-disabled,
+button.list-grid-item:disabled,
+button.list-grid-item [disabled],
+button.list-grid-item [readonly],
+[disabled]
+button.list-grid-item,
+[readonly]
+button.list-grid-item,
+button.list-grid-item.item__is-disabled,
+label.list-grid-item:disabled,
+label.list-grid-item [disabled],
+label.list-grid-item [readonly],
+[disabled]
+label.list-grid-item,
+[readonly]
+label.list-grid-item,
+label.list-grid-item.item__is-disabled {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+a.list-grid-item:disabled::after,
+a.list-grid-item [disabled]::after,
+a.list-grid-item [readonly]::after,
+[disabled] a.list-grid-item::after,
+[readonly] a.list-grid-item::after, a.list-grid-item.item__is-disabled::after,
+button.list-grid-item:disabled::after,
+button.list-grid-item [disabled]::after,
+button.list-grid-item [readonly]::after,
+[disabled]
+button.list-grid-item::after,
+[readonly]
+button.list-grid-item::after,
+button.list-grid-item.item__is-disabled::after,
+label.list-grid-item:disabled::after,
+label.list-grid-item [disabled]::after,
+label.list-grid-item [readonly]::after,
+[disabled]
+label.list-grid-item::after,
+[readonly]
+label.list-grid-item::after,
+label.list-grid-item.item__is-disabled::after {
+  background-color: #E2E2E2;
+  border-color: #9E9E9E;
+  color: #9E9E9E;
+}
+
+a.list-grid-item:disabled > .list-grid-item__body,
+a.list-grid-item [disabled] > .list-grid-item__body,
+a.list-grid-item [readonly] > .list-grid-item__body,
+[disabled] a.list-grid-item > .list-grid-item__body,
+[readonly] a.list-grid-item > .list-grid-item__body, a.list-grid-item.item__is-disabled > .list-grid-item__body,
+button.list-grid-item:disabled > .list-grid-item__body,
+button.list-grid-item [disabled] > .list-grid-item__body,
+button.list-grid-item [readonly] > .list-grid-item__body,
+[disabled]
+button.list-grid-item > .list-grid-item__body,
+[readonly]
+button.list-grid-item > .list-grid-item__body,
+button.list-grid-item.item__is-disabled > .list-grid-item__body,
+label.list-grid-item:disabled > .list-grid-item__body,
+label.list-grid-item [disabled] > .list-grid-item__body,
+label.list-grid-item [readonly] > .list-grid-item__body,
+[disabled]
+label.list-grid-item > .list-grid-item__body,
+[readonly]
+label.list-grid-item > .list-grid-item__body,
+label.list-grid-item.item__is-disabled > .list-grid-item__body {
+  color: #9E9E9E;
 }
 
 a.list-grid-item input,

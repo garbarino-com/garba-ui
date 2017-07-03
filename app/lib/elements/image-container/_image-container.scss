@@ -46,6 +46,13 @@
       outline: 0;
     }
   }
+
+  // Estilos especiales para Grid list
+  .list-grid-item > & {
+    height: 86%;
+    width: 86%;
+    z-index: $zindex-element;
+  }
 }
 
 // State modifiers
