@@ -28,7 +28,7 @@ $(function () {
   $('.list-grid-item').on('click', function() {
     var $checkItem = $(this).find('input[type=checkbox]');
 
-    $(this).toggle('item__is-checked');
+    $(this).toggleClass('item__is-checked');
     $checkItem.prop("checked", !checkBoxes.prop("checked"));
   })
 });
@@ -59,6 +59,7 @@ $(function () {
       cssEase: 'linear',
       infinite: true,
       mobileFirst: true,
+      pauseOnHover: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       speed: 500,
@@ -67,7 +68,8 @@ $(function () {
         settings: {
           arrows: true,
           dots: true,
-          fade: true
+          fade: true,
+          pauseOnFocus: true
         }
       }]
   });
