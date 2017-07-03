@@ -345,9 +345,7 @@ $input-color-placeholder:            state-hover-modifier($input-color) !default
 // Spacer for radios/checkboxes
 $controller-spacer:                  $spacer-lg !default;
 $controller-size:                    $spacer-base !default;
-
-// Convierte el tamaño del símbolo a 3/4 del tamaño del contenedor
-$controller-symbol-size:             $controller-size * .75 !default;
+$controller-symbol-size:             px-to-rem(10px) !default;
 $controler-active:                   $brand-primary;
 $controler-bg-inactive:              $widget-bg;
 $controler-border-inactive:          $gray-medium;

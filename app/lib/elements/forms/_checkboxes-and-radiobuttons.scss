@@ -42,6 +42,7 @@ input[type="radio"] {
     height: $controller-symbol-size;
     margin-left: ($controller-symbol-size / 2) * -1;
     margin-top: ($controller-symbol-size / 2) * -1;
+
     width: $controller-symbol-size;
   }
 
@@ -61,7 +62,7 @@ input[type="checkbox"] {
     content: $icon-checkmark;
     font-size: $controller-symbol-size;
     margin-left: ($controller-symbol-size / 2) * -1;
-    margin-top: (($controller-symbol-size / 2) + $spacer-xs) * -1;
+    margin-top: ($controller-symbol-size / 2) * -1;
   }
 
   &:checked::after {
@@ -215,9 +216,10 @@ input[type="checkbox"] {
   background-color: $grid-cell-bg;
   border: $grid-cell-border-size solid $grid-cell-border-color;
   border-radius: $border-radius-base;
+  cursor: pointer;
   line-height: $line-height-sm;
-  padding: .75rem;
-  padding-left: 2rem;
+  padding: $spacer-sm;
+  padding-left: $controller-size + $spacer-sm + ($spacer-sm * 2);
 
   &:hover {
     border-color: state-hover-modifier($grid-cell-active);
@@ -225,7 +227,7 @@ input[type="checkbox"] {
 
   > input[type="radio"],
   > input[type="checkbox"] {
-    left: 2rem;
+    left: $controller-size + ($spacer-sm * 2);
     margin-top: 0;
   }
 }
