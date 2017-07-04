@@ -4659,6 +4659,12 @@ label.checkbox-box > input[type="checkbox"] {
   top: 50%;
 }
 
+label.radio-box > img,
+label.checkbox-box > img {
+  border: 1px solid #C4C4C4;
+  max-height: 2.5rem;
+}
+
 .radio-box + .radio-box,
 .checkbox-box + .checkbox-box {
   margin-left: 0.25rem;

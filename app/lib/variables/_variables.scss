@@ -347,6 +347,8 @@ $controller-size:                    $spacer-base !default;
 $controller-spacer:                  $controller-size + $spacer-sm !default;
 $controller-symbol-size:             px-to-rem(10px) !default;
 $controller-max-width:               14rem !default;
+$controller-image-max-height:        ($line-height-sm * $baseline-grid-computed) * 2 !default;
+$controller-image-border:            $gray-medium !default;
 $controler-active:                   $brand-primary;
 $controller-boxed-spacer:            $controller-spacer + ($spacer-sm * 2) !default;
 $controller-boxed-position:          ($controller-boxed-spacer - $controller-size) + $spacer-sm !default;

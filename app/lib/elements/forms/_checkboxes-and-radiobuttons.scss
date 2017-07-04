@@ -206,9 +206,9 @@ input[type="checkbox"] {
 // [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
 // .block__has-error - Se incluyen estilos de validación para estado de `error`.
 //
-// Markup: box-checkbox-and-radio--inline.hbs
+// Markup: checkbox-and-radio--boxed.hbs
 //
-// Styleguide Elements.Forms.5-BoxCheckboxes&Radios
+// Styleguide Elements.Forms.6-BoxCheckboxes&Radios
 
 label.radio-box,
 label.checkbox-box {
@@ -237,6 +237,25 @@ label.checkbox-box {
     margin-top: ($controller-size / 2) * -1;
     top: 50%;
   }
+
+
+
+  // Uso de Boxed checkboxes y Radios con imagenes
+  //
+  // Se pueden usar las clases de *Boxed checkboxes y Radios* con imagenes pero
+  // tener en cuenta que esto sólo sirve para imagenes pequeñas (por ej: para
+  // mostrar opciones de tarjetas de crédito.)
+  //> En caso de ser necesario mostrar imagenes de mayor tamaño es necesario
+  // recurrir a los *Grid-list*'s.
+  //
+  // Markup: checkbox-and-radio--boxed__has-images.hbs
+  //
+  // Styleguide Elements.Forms.7-BoxCheckboxes&RadiosWImages
+
+  > img {
+    border: 1px solid $controller-image-border;
+    max-height: $controller-image-max-height;
+  }
 }
 
 .radio-box + .radio-box,
@@ -244,5 +263,7 @@ label.checkbox-box {
   margin-left: $spacer-xs; // space out consecutive boxed controls
   margin-top: 0;
 }
+
+
 
 // stylelint-enable selector-no-qualifying-type, selector-no-type
