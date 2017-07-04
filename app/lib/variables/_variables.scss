@@ -343,10 +343,13 @@ $input-border-focus-shadow-lenght:   4px !default;
 $input-color-placeholder:            state-hover-modifier($input-color) !default;
 
 // Spacer for radios/checkboxes
-$controller-spacer:                  $spacer-lg !default;
 $controller-size:                    $spacer-base !default;
+$controller-spacer:                  $controller-size + $spacer-sm !default;
 $controller-symbol-size:             px-to-rem(10px) !default;
+$controller-max-width:               14rem !default;
 $controler-active:                   $brand-primary;
+$controller-boxed-spacer:            $controller-spacer + ($spacer-sm * 2) !default;
+$controller-boxed-position:          ($controller-boxed-spacer - $controller-size) + $spacer-sm !default;
 $controler-bg-inactive:              $widget-bg;
 $controler-border-inactive:          $gray-medium;
 

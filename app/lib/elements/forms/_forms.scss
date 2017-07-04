@@ -2,9 +2,6 @@
 //
 // Styleguide Elements.Forms
 
-// TODO(ecalvi): Esta parte quedó sumamente compleja. Estaría bueno en el futuro
-// estudiar la manera de subdividir los forms en partes más chicas (y manejables).
-
 
 // stylelint-disable selector-no-qualifying-type, selector-no-type
 
@@ -56,7 +53,7 @@ label {
   fieldset[disabled] &,
   .control__is-disabled ~ &,
   .block__is-disabled &,
-  .block__is-disabled.block__has-error & {
+  .block__is-disabled[class*="block__has-"] & {
     cursor: not-allowed;
     opacity: $modifier-opacity-value;
     pointer-events: none;
@@ -111,26 +108,6 @@ textarea {
 .form-block,
 .radio {
   @include form-block($form-block-spacing);
-}
-
-
-// Elementos ocultos por default
-
-.block-validation--feedback,
-.block-validation--note {
-  @include hide-element;
-  animation: form-block--exit-animation ($transition-timing-slow / 4) ease-in;
-}
-
-// Form feedback elements
-.block-validation--feedback {
-  @include icon-element($block-has-feedback-size);
-  position: absolute;
-}
-
-.block-validation--note {
-  margin-bottom: 0;
-  margin-top: $spacer-sm;
 }
 
 
@@ -212,7 +189,7 @@ textarea {
   fieldset[disabled] &,
   &.control__is-disabled,
   .block__is-disabled &,
-  .block__is-disabled.block__has-error & {
+  .block__is-disabled[class*="block__has-"] & {
     &,
     &:hover,
     &:focus {
@@ -227,19 +204,6 @@ textarea {
   &:-webkit-autofill {
     background-color: inherit !important;
   }
-
-
-  // Validation feedback
-  [class*="block__has-"] & {
-    // Aumenta el padding-right para hacer lugar al ícono de feedback.
-    padding-right: ($input-padding * 2) + $block-has-feedback-size;
-  }
-
-  // Feedback positioning
-  ~ .block-validation--feedback {
-    right: $input-padding;
-    top: $line-height-computed + $form-label-spacing + $input-padding;
-  }
 }
 
 // Libera la altura para los `<textarea>`s
@@ -249,14 +213,6 @@ select[multiple] {
     height: auto;
   }
 }
-
-
-
-// Validation states
-.block__has-error {
-  @include form-control-validations-state($brand-error, $icon-error);
-}
-
 
 
 // Form horizontal
@@ -280,16 +236,6 @@ select[multiple] {
   // Make form groups behave like rows
   .form-block {
     @include make-row;
-
-    // stylelint-disable selector-max-compound-selectors
-
-    // Feedback positioning
-    > div .block-validation--feedback {
-      right: ($grid-gutter-width / 2) + $input-padding;
-      top: $input-padding;
-    }
-
-    // stylelint-enable selector-max-compound-selectors
   }
 
   // Reset spacing and right align labels, but scope to media queries so that

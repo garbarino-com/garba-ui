@@ -133,9 +133,7 @@ input[type="checkbox"] {
 
   // Modifica el valor de display para radios/checkboxes inline y boxed.
   .radio-inline,
-  .checkbox-inline,
-  .radio-box,
-  .checkbox-box {
+  .checkbox-inline {
     display: inline-block;
   }
 }
@@ -199,7 +197,8 @@ input[type="checkbox"] {
 // Boxed checkboxes y Radios
 //
 // Agrega la clase `.radio-inline` o `.checkbox-inline` para poner varios checkboxes
-// o radios en la misma línea.
+// o radios en la misma línea. Esta variante se puede usar junto o como complemento
+// de las *Grid-list*'s.
 //
 // .block__is-disabled - Indica que el bloque está deshabilitado *(es conveniente
 // agregar el atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad
@@ -211,15 +210,22 @@ input[type="checkbox"] {
 //
 // Styleguide Elements.Forms.5-BoxCheckboxes&Radios
 
-.radio-box,
-.checkbox-box {
+label.radio-box,
+label.checkbox-box {
+  @include flex-direction(column);
+  @include justify-content(center);
   background-color: $grid-cell-bg;
   border: $grid-cell-border-size solid $grid-cell-border-color;
   border-radius: $border-radius-base;
   cursor: pointer;
+  display: inline-flex;
+  // La altura sale de sumar padding vertical + los dos line-height * $baseline-grid-computed
+  height: ($spacer-sm * 2) + (($line-height-sm * $baseline-grid-computed) * 2 );
   line-height: $line-height-sm;
+  max-width: $controller-max-width;
   padding: $spacer-sm;
-  padding-left: $controller-size + $spacer-sm + ($spacer-sm * 2);
+  padding-left: $controller-boxed-spacer;
+  vertical-align: middle;
 
   &:hover {
     border-color: state-hover-modifier($grid-cell-active);
@@ -227,8 +233,9 @@ input[type="checkbox"] {
 
   > input[type="radio"],
   > input[type="checkbox"] {
-    left: $controller-size + ($spacer-sm * 2);
-    margin-top: 0;
+    left: ($controller-boxed-spacer - $controller-size) + $spacer-sm;
+    margin-top: ($controller-size / 2) * -1;
+    top: 50%;
   }
 }
 

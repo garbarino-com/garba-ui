@@ -1,0 +1,60 @@
+.form-control {
+  // Validation feedback
+  [class*="block__has-"] & {
+    // Aumenta el padding-right para hacer lugar al ícono de feedback.
+    padding-right: ($input-padding * 2) + $block-has-feedback-size;
+  }
+
+  // Feedback positioning
+  ~ .block-validation--feedback {
+    right: $input-padding;
+    top: $line-height-computed + $form-label-spacing + $input-padding;
+  }
+}
+
+
+
+
+// Feedback positioning
+.block-validation--feedback {
+  .form-block > div & {
+    right: ($grid-gutter-width / 2) + $input-padding;
+    top: $input-padding;
+  }
+}
+
+
+
+// Los elementos de feedback están ocultos por default
+.block-validation--feedback,
+.block-validation--note {
+  @include hide-element;
+  animation: form-block--exit-animation ($transition-timing-slow / 4) ease-in;
+}
+
+
+
+// Form feedback elements
+.block-validation--feedback {
+  @include icon-element($block-has-feedback-size);
+  position: absolute;
+
+  // Feedback positioning
+  .form-block > div & {
+    right: ($grid-gutter-width / 2) + $input-padding;
+    top: $input-padding;
+  }
+}
+
+.block-validation--note {
+  @include clearfix;
+  margin-bottom: 0;
+  margin-top: $spacer-sm;
+}
+
+
+
+// Validation states
+.block__has-error {
+  @include form-control-validations-state($brand-error, $icon-error);
+}

@@ -139,12 +139,9 @@
   // Cambia el border color en :hover sobre el label
   &.checkbox label:hover > input[type="checkbox"],
   &.radio label:hover > input[type="radio"],
-  .radio-box,
-  .checkbox-box {
-    &,
-    &:hover {
-      border-color: $color;
-    }
+  .radio-box:hover,
+  .checkbox-box:hover {
+    border-color: $color;
   }
 
   // Feddback elements
