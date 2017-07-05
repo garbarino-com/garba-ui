@@ -4,7 +4,6 @@ var autoprefixer = require('gulp-autoprefixer'),
     debug = require('gulp-debug'),
     install = require('gulp-install'),
     jsonImporter = require('node-sass-json-importer'),
-    preCommit = require('git-guppy')(gulp),
     rename = require('gulp-rename'),
     runSequence = require('run-sequence'),
     sass = require('gulp-sass'),
@@ -143,11 +142,6 @@ gulp.task('build:release', function (callback) {
   runSequence('clean:sass', 'clean:fonts', 'clean:images', 'sass', 'js',
     'copy-fonts', 'copy-images', callback);
 });
-
-// Hook for tasks to be executed on commit
-gulp.task('pre-commit', [
-  'sass'
-]);
 
 // Remove css folder and run sass compiler on file change.
 gulp.task('watch', ['clean:sass', 'sass'], function() {
