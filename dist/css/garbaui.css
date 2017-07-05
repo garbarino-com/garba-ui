@@ -7396,6 +7396,16 @@ a.label a.label {
   animation: carousel-enter-right-arrow 0.4s ease-in-out;
 }
 
+.tab-content > .tab-pane {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.tab-content > .active {
+  display: block !important;
+  visibility: visible !important;
+}
+
 .tooltip {
   font-family: "Open Sans", -apple-system, sans-serif;
   font-style: normal;

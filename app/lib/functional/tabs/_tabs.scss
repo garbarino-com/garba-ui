@@ -1,0 +1,20 @@
+// Tabs
+//
+// Navegación dinámica con transición de contenidos locales.
+//
+// Markup: tabs.hbs
+//
+// Styleguide Functional.Tabs
+
+// Esconde los elementos con `.tab-pane` por default y los muestra cuando
+// reciben la clase `.active`
+
+.tab-content {
+  > .tab-pane {
+    @include hide-element;
+  }
+
+  > .active {
+    @include show-element;
+  }
+}

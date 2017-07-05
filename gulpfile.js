@@ -124,17 +124,25 @@ gulp.task('lint-styles', function lintCssTask() {
     .src(config.basePaths.src + '**/*.scss')
     .pipe(styleLint({
       config: toolSettings.stylelint,
-      failAfterError: false,
+      failAfterError: true,
       reporters: [
-        {formatter: 'string', console: true}
+        {
+          formatter: 'string',
+          console: true
+        }
       ]
     }));
 });
 
 // Run this task on dev
+gulp.task('build-styles', function (callback) {
+  runSequence('clean:sass', 'lint-styles', 'sass');
+});
+
+// Run this task on dev
 gulp.task('build', function (callback) {
-  runSequence('install-dependencies', 'clean:sass', 'clean:fonts', 'sass',
-    'copy-fonts', 'copy-images', 'lint-styles', callback);
+  runSequence('install-dependencies', 'clean:fonts', 'build-styles', 'copy-fonts',
+    'copy-images', callback);
 });
 
 // Run this task for releases
