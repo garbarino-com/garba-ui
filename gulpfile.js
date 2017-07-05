@@ -89,7 +89,7 @@ gulp.task('sass', function() {
 });
 
 // Javascript build
-gulp.task('js', shell.task([
+gulp.task('build-js', shell.task([
   'browserify ./app/javascript/garbaui.main.js -o ./dist/javascript/garbaui.js && uglifyjs ./dist/javascript/garbaui.js -o ./dist/javascript/garbaui.min.js'
 ]));
 
@@ -141,8 +141,8 @@ gulp.task('build-styles', function (callback) {
 
 // Run this task on dev
 gulp.task('build', function (callback) {
-  runSequence('install-dependencies', 'clean:fonts', 'build-styles', 'copy-fonts',
-    'copy-images', callback);
+  runSequence('install-dependencies', 'clean:fonts', 'copy-fonts', 'copy-images',
+  'build-js', 'build-styles', callback);
 });
 
 // Run this task for releases

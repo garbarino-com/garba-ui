@@ -8,8 +8,8 @@ var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefi
 // Bootstrap plugins (http://getbootstrap.com/javascript/)
 var modal = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
 var tooltip = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip');
-var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
 var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab');
+var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
 
 // Miscelaneous plugins
 var firstPurchase = require('./scripts/campaign-modals/first-purchase');
