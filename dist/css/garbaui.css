@@ -6812,27 +6812,6 @@ a.label a.label {
   width: 0.21429rem;
 }
 
-.navbar > a:hover, .navbar > a.active,
-.navbar > button:hover,
-.navbar > button.active,
-.navbar > li > a:hover,
-.navbar > li > a.active,
-.navbar > li > button:hover,
-.navbar > li > button.active {
-  text-decoration: none;
-}
-
-.navbar > a:hover::before, .navbar > a.active::before,
-.navbar > button:hover::before,
-.navbar > button.active::before,
-.navbar > li > a:hover::before,
-.navbar > li > a.active::before,
-.navbar > li > button:hover::before,
-.navbar > li > button.active::before {
-  animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
-  transform: translateX(0);
-}
-
 .navbar > a:hover::before, .navbar > a:focus::before,
 .navbar > button:hover::before,
 .navbar > button:focus::before,
@@ -6848,20 +6827,6 @@ a.label a.label {
 .navbar > li > a:focus,
 .navbar > li > button:focus {
   outline: 0;
-}
-
-.navbar > a.active,
-.navbar > button.active,
-.navbar > li > a.active,
-.navbar > li > button.active {
-  cursor: default;
-}
-
-.navbar > a.active::before,
-.navbar > button.active::before,
-.navbar > li > a.active::before,
-.navbar > li > button.active::before {
-  background-color: #0084E0;
 }
 
 @media only screen and (min-width: 54.85714rem) {
@@ -6886,17 +6851,68 @@ a.label a.label {
     transform: translateY(33.33333%);
     width: 100%;
   }
-  .navbar > a:hover::before, .navbar > a.active::before,
+}
+
+.navbar > a:hover,
+.navbar > button:hover,
+.navbar > li > a:hover,
+.navbar > li > button:hover,
+.navbar > a.active,
+.navbar > button.active,
+.navbar > li > a.active,
+.navbar > li > button.active,
+.navbar > li.active > a,
+.navbar > li.active > button {
+  text-decoration: none;
+}
+
+.navbar > a:hover::before,
+.navbar > button:hover::before,
+.navbar > li > a:hover::before,
+.navbar > li > button:hover::before,
+.navbar > a.active::before,
+.navbar > button.active::before,
+.navbar > li > a.active::before,
+.navbar > li > button.active::before,
+.navbar > li.active > a::before,
+.navbar > li.active > button::before {
+  animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
+  transform: translateX(0);
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .navbar > a:hover::before,
   .navbar > button:hover::before,
-  .navbar > button.active::before,
   .navbar > li > a:hover::before,
-  .navbar > li > a.active::before,
   .navbar > li > button:hover::before,
-  .navbar > li > button.active::before {
+  .navbar > a.active::before,
+  .navbar > button.active::before,
+  .navbar > li > a.active::before,
+  .navbar > li > button.active::before,
+  .navbar > li.active > a::before,
+  .navbar > li.active > button::before {
     animation: navbar--mouseOver-animation 0.2s ease-in;
     bottom: 0;
     transform: translateY(0);
   }
+}
+
+.navbar > a.active,
+.navbar > button.active,
+.navbar > li > a.active,
+.navbar > li > button.active,
+.navbar > li.active > a,
+.navbar > li.active > button {
+  cursor: default;
+}
+
+.navbar > a.active::before,
+.navbar > button.active::before,
+.navbar > li > a.active::before,
+.navbar > li > button.active::before,
+.navbar > li.active > a::before,
+.navbar > li.active > button::before {
+  background-color: #0084E0;
 }
 
 .navbar > a,

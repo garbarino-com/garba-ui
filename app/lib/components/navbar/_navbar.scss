@@ -69,16 +69,6 @@
       width: $navbar-pointer-height;
     }
 
-    &:hover,
-    &.active {
-      text-decoration: none;
-
-      &::before {
-        animation: navbar-vertical--mouseOver-animation ($transition-timing-slow / 4) ease-in;
-        transform: $navbar-vertical-mouseover-animation;
-      }
-    }
-
     // Hover & Focus state
     &:hover,
     &:focus {
@@ -89,15 +79,6 @@
 
     &:focus {
       outline: 0;
-    }
-
-    // Active state
-    &.active {
-      cursor: default;
-
-      &::before {
-        background-color: $navbar-pointer-active-color;
-      }
     }
 
     // Mueve la barra de la izquierda hacia abajo del botón en viewports ≥768px
@@ -115,15 +96,48 @@
         transform: $navbar-mouseout-animation;
         width: 100%;
       }
+    }
+  }
 
-      &:hover,
-      &.active {
-        &::before {
-          animation: navbar--mouseOver-animation ($transition-timing-slow / 4) ease-in;
-          bottom: 0;
-          transform: $navbar-mouseover-animation;
-        }
+  // Active state
+  > a:hover,
+  > button:hover,
+  > li > a:hover,
+  > li > button:hover,
+  > a.active,
+  > button.active,
+  > li > a.active,
+  > li > button.active,
+  > li.active > a,
+  > li.active > button {
+    text-decoration: none;
+
+    &::before {
+      animation: navbar-vertical--mouseOver-animation ($transition-timing-slow / 4) ease-in;
+      transform: $navbar-vertical-mouseover-animation;
+    }
+
+    // Estilos para `:hover` y `.active` en viewports ≥768px
+    @media only screen and (min-width: $screen-md-min) {
+      &::before {
+        animation: navbar--mouseOver-animation ($transition-timing-slow / 4) ease-in;
+        bottom: 0;
+        transform: $navbar-mouseover-animation;
       }
+    }
+  }
+
+  // Active state
+  > a.active,
+  > button.active,
+  > li > a.active,
+  > li > button.active,
+  > li.active > a,
+  > li.active > button {
+    cursor: default;
+
+    &::before {
+      background-color: $navbar-pointer-active-color;
     }
   }
 
