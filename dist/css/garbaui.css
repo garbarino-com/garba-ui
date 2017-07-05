@@ -4135,7 +4135,7 @@ fieldset[disabled].button--facebook:focus,
 }
 
 .button--action__primary > i::before {
-  content: "";
+  content: "";
 }
 
 .button--action__fav {
@@ -4231,7 +4231,7 @@ fieldset[disabled].button--facebook:focus,
 }
 
 .button--action__twitter > i::before {
-  content: "";
+  content: "";
 }
 
 fieldset {
@@ -4775,7 +4775,7 @@ label.checkbox-box > img {
 
 .block__has-error > .block-validation--feedback::before,
 .block__has-error > div > .block-validation--feedback::before {
-  content: "";
+  content: "";
 }
 
 .container {
@@ -6384,7 +6384,7 @@ label.list-grid-item input:checked {
   content: "";
 }
 
-.icon-checkmark-circle::before {
+.icon-checkmark-filled-circle::before {
   content: "";
 }
 
@@ -6496,8 +6496,12 @@ label.list-grid-item input:checked {
   content: "";
 }
 
-.icon-info-circle::before {
+.icon-info::before {
   content: "";
+}
+
+.icon-exclamation-mark-circle::before {
+  content: "";
 }
 
 .icon-instagram::before {
@@ -6513,143 +6517,143 @@ label.list-grid-item input:checked {
 }
 
 .icon-marker::before {
-  content: "";
-}
-
-.icon-menu-hamburguer::before {
   content: "";
 }
 
-.icon-music::before {
+.icon-menu-hamburguer::before {
   content: "";
 }
 
-.icon-notifications::before {
+.icon-music::before {
   content: "";
 }
 
-.icon-pencil::before {
+.icon-notifications::before {
   content: "";
 }
 
-.icon-percent-star::before {
+.icon-pencil::before {
   content: "";
 }
 
-.icon-phone::before {
+.icon-percent-star::before {
   content: "";
 }
 
-.icon-photos::before {
+.icon-phone::before {
   content: "";
 }
 
-.icon-plane::before {
+.icon-photos::before {
   content: "";
 }
 
-.icon-play::before {
+.icon-plane::before {
   content: "";
 }
 
-.icon-preferences::before {
+.icon-play::before {
   content: "";
 }
 
-.icon-question-mark-circle::before {
+.icon-preferences::before {
   content: "";
 }
 
-.icon-search::before {
+.icon-question-mark-circle::before {
   content: "";
 }
 
-.icon-shipping::before {
-  content: "";
-}
-
-.icon-shop::before {
+.icon-search::before {
   content: "";
 }
 
-.icon-simple-bold-arrow-bottom::before {
+.icon-shipping::before {
   content: "";
 }
 
-.icon-simple-bold-arrow-left::before {
+.icon-shop::before {
   content: "";
 }
 
-.icon-simple-bold-arrow-right::before {
+.icon-simple-bold-arrow-bottom::before {
   content: "";
 }
 
-.icon-simple-bold-arrow-top::before {
+.icon-simple-bold-arrow-left::before {
   content: "";
 }
 
-.icon-simple-thin-arrow-bottom::before {
+.icon-simple-bold-arrow-right::before {
   content: "";
 }
 
-.icon-simple-thin-arrow-left::before {
+.icon-simple-bold-arrow-top::before {
   content: "";
 }
 
-.icon-simple-thin-arrow-right::before {
+.icon-simple-thin-arrow-bottom::before {
   content: "";
 }
 
-.icon-simple-thin-arrow-top::before {
+.icon-simple-thin-arrow-left::before {
   content: "";
 }
 
-.icon-sort::before {
+.icon-simple-thin-arrow-right::before {
   content: "";
 }
 
-.icon-star::before {
+.icon-simple-thin-arrow-top::before {
   content: "";
 }
 
-.icon-star-half-left::before {
+.icon-sort::before {
   content: "";
 }
 
-.icon-star-half-right::before {
+.icon-star::before {
   content: "";
 }
 
-.icon-tag::before {
+.icon-star-half-left::before {
   content: "";
 }
 
-.icon-trash::before {
+.icon-star-half-right::before {
   content: "";
 }
 
-.icon-twitter::before {
+.icon-tag::before {
   content: "";
 }
 
-.icon-user::before {
+.icon-trash::before {
   content: "";
 }
 
-.icon-users::before {
+.icon-twitter::before {
   content: "";
 }
 
-.icon-video::before {
+.icon-user::before {
   content: "";
 }
 
-.icon-whatsapp::before {
+.icon-users::before {
   content: "";
 }
 
-.icon-youtube::before {
+.icon-video::before {
   content: "";
+}
+
+.icon-whatsapp::before {
+  content: "";
+}
+
+.icon-youtube::before {
+  content: "";
 }
 
 .icon-two-card::before {
@@ -6674,6 +6678,14 @@ label.list-grid-item input:checked {
 
 .icon-arrow-left::before {
   content: "";
+}
+
+.icon-refresh::before {
+  content: "";
+}
+
+.icon-location::before {
+  content: "";
 }
 
 .label,
@@ -7363,7 +7375,7 @@ a.label a.label {
 }
 
 .slick-prev::before {
-  content: "";
+  content: "";
 }
 
 .slick-slider:hover .slick-prev {
@@ -7377,7 +7389,7 @@ a.label a.label {
 }
 
 .slick-next::before {
-  content: "";
+  content: "";
 }
 
 .slick-slider:hover .slick-next {

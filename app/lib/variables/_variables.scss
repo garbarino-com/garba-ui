@@ -113,6 +113,10 @@ $link-hover-decoration: underline !default;
 // Images
 $assets-url:             "../" !default;
 $images-url:             $assets-url + "images/" !default;
+
+// NOTA: Esta variable está seteada con la url de la fuente para `/dist`.
+// La url para `/app` agrega un nivel más de profundidad (`/icons/fonts/`).
+
 $icon-font-url:          $assets-url + "fonts/" !default;
 
 $icon-size-base:         1rem !default;
@@ -121,7 +125,7 @@ $icon-size-xl:           3rem !default;
 
 // State symbols
 $icon-success:           $icon-checkmark !default;
-$icon-error:             $icon-close !default;
+$icon-error:             $icon-cross !default;
 $icon-warning:           $icon-exclamation-mark-triangle !default;
 $icon-info:              $icon-info-circle !default;
 

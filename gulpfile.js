@@ -24,7 +24,7 @@ var config = {
 var input = function () {
   var styles =  config.basePaths.src + 'lib/*.scss';
   var images= config.basePaths.src + 'images/*';
-  var fonts = config.basePaths.src + 'fonts/*';
+  var fonts = config.basePaths.src + 'icons/fonts/*';
   var assets_old = config.basePaths.src + 'lib/_v1.3.2/';
   var fonts_old = assets_old + 'fonts/*';
 
