@@ -1,6 +1,6 @@
 {
   "name": "garba-ui",
-  "version": "1.3.2",
+  "version": "1.3.4",
   "description": "Garbarino UI Framework",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -19,7 +19,11 @@
     "type": "git",
     "url": "git+https://github.com/garbarino-com/garba-ui.git"
   },
-  "author": "Silvio Vitullo",
+  "author": [
+    "Silvio Vitullo <svitullo@garbarino.com.ar>",
+    "Leonardo Pitelli <lpitelli@garbarino.com.ar>",
+    "Esteban Calvi <ecalvi@garbarino.com.ar>"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/garbarino-com/garba-ui/issues"
