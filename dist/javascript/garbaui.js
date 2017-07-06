@@ -38,13 +38,13 @@ $(function () {
     var $checkItem = $(this).find('input[type=checkbox]');
 
     $(this).toggleClass('item__is-checked');
-    $checkItem.prop("checked", !checkBoxes.prop("checked"));
+    $checkItem.prop("checked", !$checkItem.prop("checked"));
   })
 });
 
 
 
-// Initialize carousel
+// Inicializar Carouseles
 $(function () {
   // TODO(ecalvi): Maybe we should consider in the future moving these settings
   // to their own module.
@@ -72,7 +72,9 @@ $(function () {
         }
       }]
   });
+});
 
+$(function () {
   // Shelf carousel plugins
   // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
   $('.carousel-shelf').slick({
