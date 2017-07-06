@@ -3578,6 +3578,24 @@ button.close {
   }
 }
 
+@keyframes navbar-icon--mouseOver-animation {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.125) translateY(-0.25rem);
+  }
+}
+
+@keyframes navbar-icon--mouseOut-animation {
+  from {
+    transform: scale(1.125) translateY(-0.25rem);
+  }
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
+
 @keyframes spinner-rotation {
   from {
     transform: rotate(0deg);
@@ -6853,6 +6871,22 @@ a.label a.label {
   }
 }
 
+.navbar > a:hover::before,
+.navbar > button:hover::before,
+.navbar > li > a:hover::before,
+.navbar > li > button:hover::before {
+  animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .navbar > a:hover::before,
+  .navbar > button:hover::before,
+  .navbar > li > a:hover::before,
+  .navbar > li > button:hover::before {
+    animation: navbar--mouseOver-animation 0.2s ease-in;
+  }
+}
+
 .navbar > a:hover,
 .navbar > button:hover,
 .navbar > li > a:hover,
@@ -6876,7 +6910,6 @@ a.label a.label {
 .navbar > li > button.active::before,
 .navbar > li.active > a::before,
 .navbar > li.active > button::before {
-  animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
   transform: translateX(0);
 }
 
@@ -6891,7 +6924,6 @@ a.label a.label {
   .navbar > li > button.active::before,
   .navbar > li.active > a::before,
   .navbar > li.active > button::before {
-    animation: navbar--mouseOver-animation 0.2s ease-in;
     bottom: 0;
     transform: translateY(0);
   }
@@ -7129,12 +7161,15 @@ a.label a.label {
   .navbar__with-icons > button,
   .navbar__with-icons > li > a,
   .navbar__with-icons > li > button {
+    height: 8rem;
     text-align: center;
   }
 }
 
 .navbar__with-icons [class^="icon-"] {
+  animation: navbar-icon--mouseOut-animation 0.2s ease-in;
   margin-right: 0.5rem;
+  transform: scale(1) translateY(0);
 }
 
 @media only screen and (min-width: 54.85714rem) {
@@ -7147,6 +7182,12 @@ a.label a.label {
     margin-top: 1.5rem;
     text-align: center;
   }
+}
+
+.navbar__with-icons a:hover > [class^="icon-"],
+.navbar__with-icons button:hover > [class^="icon-"] {
+  animation: navbar-icon--mouseOver-animation 0.2s ease-in;
+  transform: scale(1.125) translateY(-0.25rem);
 }
 
 .tag {

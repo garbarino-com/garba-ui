@@ -102,6 +102,21 @@
     }
   }
 
+  // Hover state
+  > a:hover,
+  > button:hover,
+  > li > a:hover,
+  > li > button:hover {
+    &::before {
+      animation: navbar-vertical--mouseOver-animation ($transition-timing-slow / 4) ease-in;
+
+      // Estilos para `:hover` y `.active` en viewports ≥768px
+      @media only screen and (min-width: $screen-md-min) {
+        animation: navbar--mouseOver-animation ($transition-timing-slow / 4) ease-in;
+      }
+    }
+  }
+
   // Active state
   > a:hover,
   > button:hover,
@@ -116,14 +131,12 @@
     text-decoration: none;
 
     &::before {
-      animation: navbar-vertical--mouseOver-animation ($transition-timing-slow / 4) ease-in;
       transform: $navbar-vertical-mouseover-animation;
     }
 
     // Estilos para `:hover` y `.active` en viewports ≥768px
     @media only screen and (min-width: $screen-md-min) {
       &::before {
-        animation: navbar--mouseOver-animation ($transition-timing-slow / 4) ease-in;
         bottom: 0;
         transform: $navbar-mouseover-animation;
       }
@@ -303,12 +316,15 @@
 
     // Cambia como se muestran los íconos en viewports ≥768px
     @media only screen and (min-width: $screen-md-min) {
+      height: $btn-height-base + $spacer-sm + $icon-size-xl + $spacer-lg;
       text-align: center;
     }
   }
 
   [class^="icon-"] {
+    animation: navbar-icon--mouseOut-animation ($transition-timing-slow / 4) ease-in;
     margin-right: $spacer-sm;
+    transform: $navbar-icon-mouseout-animation;
 
     // Cambia como se muestran los íconos en viewports ≥768px
     @media only screen and (min-width: $screen-md-min) {
@@ -319,6 +335,16 @@
       margin-right: auto;
       margin-top: $spacer-lg;
       text-align: center;
+    }
+  }
+
+
+  // Hover State
+  a:hover,
+  button:hover {
+    > [class^="icon-"] {
+      animation: navbar-icon--mouseOver-animation ($transition-timing-slow / 4) ease-in;
+      transform: $navbar-icon-mouseover-animation;
     }
   }
 }

@@ -462,6 +462,8 @@ $navbar-mouseover-animation:            translateY(0) !default;
 $navbar-mouseout-animation:             translateY((100% / 3)) !default;
 $navbar-vertical-mouseover-animation:   translateX(0) !default;
 $navbar-vertical-mouseout-animation:    translateX((100% / 3) * -1) !default;
+$navbar-icon-mouseover-animation:       scale(1.125) translateY(($spacer-sm / 2) * -1) !default;
+$navbar-icon-mouseout-animation:        scale(1) translateY(0) !default;
 
 
 // Carousel default settings
