@@ -37,7 +37,7 @@ $(function () {
   $('.list-grid-item').on('click', function() {
     var $checkItem = $(this).find('input[type=checkbox]');
 
-    $(this).toggleClass('item__is-checked');
+    $checkItem.closest('.list-grid-item').toggleClass('item__is-checked');
     $checkItem.prop("checked", !$checkItem.prop("checked"));
   })
 });

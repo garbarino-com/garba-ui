@@ -35,6 +35,8 @@ $(function () {
   $('.list-grid-item').on('click', function() {
     var $checkItem = $(this).find('input[type=checkbox]');
 
+    // TODO(ecalvi): La clase `.item__is-checked` no se está aplicando como
+    // corresponde. Arreglar esto.
     $(this).toggleClass('item__is-checked');
     $checkItem.prop("checked", !$checkItem.prop("checked"));
   })
