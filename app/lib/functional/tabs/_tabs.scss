@@ -1,6 +1,13 @@
 // Tabs
 //
-// Navegación dinámica con transición de contenidos locales.
+// Navegación dinámica con transición de contenidos locales. Se puede utilizar en
+// conjunto con el componente *Navbar*. La funcionalidad de las tabs esta extraída
+// de las [tabs de Bootstrap](http://getbootstrap.com/javascript/#tabs) y tiene los
+// mismos métodos y eventos.
+//
+// En este ejemplo la vemos usada con un *Navbar* con las variables:
+// * **Navbar con íconos** (`.navbar__with-icons`).
+// * **Navbar justificada** (`.navbar__justified`)
 //
 // Markup: tabs.hbs
 //
@@ -18,3 +25,14 @@
     @include show-element;
   }
 }
+
+
+
+// Tabs apiladas
+//
+// A modo de ejemplo, las tabs no necesariamente tienen que estar junto con su
+// navegación, acá vemos un ejemplo de *Tabs* usadas dentro de *Grilla*.
+//
+// Markup: tabs-stacked.hbs
+//
+// Styleguide Functional.Tabs.StackedTabs

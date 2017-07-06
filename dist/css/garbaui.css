@@ -7001,7 +7001,6 @@ a.label a.label {
 .navbar > li > button.button__is-disabled:hover::before {
   animation: none;
   background-color: #C4C4C4;
-  transform: translateX(-33.33333%);
 }
 
 @media only screen and (min-width: 54.85714rem) {
@@ -7084,6 +7083,9 @@ a.label a.label {
     animation: navbar-vertical--mouseOver-animation 0.2s ease-in;
     transform: translateX(0);
   }
+  .navbar__stacked [class^="icon-"] {
+    margin-right: 0.5rem;
+  }
   .navbar__stacked:disabled > a::before, .navbar__stacked:disabled > a:hover::before,
   .navbar__stacked:disabled > button::before,
   .navbar__stacked:disabled > button:hover::before,
@@ -7112,6 +7114,38 @@ a.label a.label {
   .navbar__stacked > li > button.button__is-disabled::before,
   .navbar__stacked > li > button.button__is-disabled:hover::before {
     transform: translateX(-33.33333%);
+  }
+}
+
+.navbar__with-icons > a,
+.navbar__with-icons > button,
+.navbar__with-icons > li > a,
+.navbar__with-icons > li > button {
+  height: auto;
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .navbar__with-icons > a,
+  .navbar__with-icons > button,
+  .navbar__with-icons > li > a,
+  .navbar__with-icons > li > button {
+    text-align: center;
+  }
+}
+
+.navbar__with-icons [class^="icon-"] {
+  margin-right: 0.5rem;
+}
+
+@media only screen and (min-width: 54.85714rem) {
+  .navbar__with-icons [class^="icon-"] {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    text-align: center;
   }
 }
 

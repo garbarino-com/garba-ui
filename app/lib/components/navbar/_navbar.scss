@@ -1,4 +1,4 @@
-// Barra de navigación
+// Barra de navegación
 //
 // Un `.navbar` es una sección de interfase gráfica que tiene como propósito ayudar
 // al usuario a acceder información.
@@ -30,6 +30,9 @@
 // Markup: navbar.hbs
 //
 // Styleguide Components.Navbar
+
+
+
 
 // stylelint-disable selector-no-qualifying-type, selector-no-type, max-nesting-depth
 
@@ -190,14 +193,12 @@
       &::before {
         animation: none;
         background-color: $navbar-pointer-color;
-        transform: $navbar-vertical-mouseout-animation;
 
         // Cambia el transform en viewports ≥768px
         @media only screen and (min-width: $screen-md-min) {
           transform: $navbar-mouseout-animation;
         }
       }
-
     }
   }
 }
@@ -254,6 +255,10 @@
       }
     }
 
+    [class^="icon-"] {
+      margin-right: $spacer-sm;
+    }
+
     // Disabled State
     &:disabled > a,
     &:disabled > button,
@@ -275,6 +280,45 @@
           transform: $navbar-vertical-mouseout-animation;
         }
       }
+    }
+  }
+}
+
+
+// Barra de navegación con íconos
+//
+// Un `.navbar` es una sección de interfase gráfica que tiene como propósito ayudar
+// al usuario a acceder información.
+//
+// Markup: navbar-with-icons.hbs
+//
+// Styleguide Components.Navbar.NavbarWithIcons
+
+.navbar__with-icons {
+  > a,
+  > button,
+  > li > a,
+  > li > button {
+    height: auto;
+
+    // Cambia como se muestran los íconos en viewports ≥768px
+    @media only screen and (min-width: $screen-md-min) {
+      text-align: center;
+    }
+  }
+
+  [class^="icon-"] {
+    margin-right: $spacer-sm;
+
+    // Cambia como se muestran los íconos en viewports ≥768px
+    @media only screen and (min-width: $screen-md-min) {
+      display: block;
+      font-size: $icon-size-xl;
+      margin-bottom: $spacer-sm;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: $spacer-lg;
+      text-align: center;
     }
   }
 }
