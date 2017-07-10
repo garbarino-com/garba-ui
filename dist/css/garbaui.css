@@ -5733,6 +5733,364 @@ label.checkbox-box > img {
   padding-right: 0.25rem;
 }
 
+@font-face {
+  font-family: garba-icon-font;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/garba-icon-font.eot?gz21za");
+  src: url("../fonts/garba-icon-font.eot?gz21za#iefix") format("embedded-opentype"), url("../fonts/garba-icon-font.ttf?gz21za") format("truetype"), url("../fonts/garba-icon-font.woff?gz21za") format("woff"), url("../fonts/garba-icon-font.svg?gz21za#garba-icon-font") format("svg");
+}
+
+[class^="icon-"] {
+  font-family: garba-icon-font !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.list-grid-item__body [class^="icon-"] {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-close::before {
+  content: "";
+}
+
+.icon-bag::before {
+  content: "";
+}
+
+.icon-bank::before {
+  content: "";
+}
+
+.icon-calendar::before {
+  content: "";
+}
+
+.icon-card::before {
+  content: "";
+}
+
+.icon-cart::before {
+  content: "";
+}
+
+.icon-checkmark::before {
+  content: "";
+}
+
+.icon-checkmark-filled-circle::before {
+  content: "";
+}
+
+.icon-clock::before {
+  content: "";
+}
+
+.icon-cross::before {
+  content: "";
+}
+
+.icon-cross-circle::before {
+  content: "";
+}
+
+.icon-dashboard::before {
+  content: "";
+}
+
+.icon-dialog::before {
+  content: "";
+}
+
+.icon-double-thin-arrow-botom::before {
+  content: "";
+}
+
+.icon-double-thin-arrow-left::before {
+  content: "";
+}
+
+.icon-double-thin-arrow-right::before {
+  content: "";
+}
+
+.icon-double-thin-arrow-top::before {
+  content: "";
+}
+
+.icon-download::before {
+  content: "";
+}
+
+.icon-email::before {
+  content: "";
+}
+
+.icon-exclamation-mark-circle::before {
+  content: "";
+}
+
+.icon-exclamation-mark-triangle::before {
+  content: "";
+}
+
+.icon-facebook::before {
+  content: "";
+}
+
+.icon-filled-arrow-bottom::before {
+  content: "";
+}
+
+.icon-filled-arrow-left::before {
+  content: "";
+}
+
+.icon-filled-arrow-right::before {
+  content: "";
+}
+
+.icon-filled-arrow-top::before {
+  content: "";
+}
+
+.icon-filter::before {
+  content: "";
+}
+
+.icon-fire::before {
+  content: "";
+}
+
+.icon-gallery-view::before {
+  content: "";
+}
+
+.icon-games::before {
+  content: "";
+}
+
+.icon-garbarino-viajes::before {
+  content: "";
+}
+
+.icon-gift::before {
+  content: "";
+}
+
+.icon-gplus::before {
+  content: "";
+}
+
+.icon-heart::before {
+  content: "";
+}
+
+.icon-home::before {
+  content: "";
+}
+
+.icon-info::before {
+  content: "";
+}
+
+.icon-exclamation-mark-circle::before {
+  content: "";
+}
+
+.icon-instagram::before {
+  content: "";
+}
+
+.icon-key::before {
+  content: "";
+}
+
+.icon-list-view::before {
+  content: "";
+}
+
+.icon-marker::before {
+  content: "";
+}
+
+.icon-menu-hamburguer::before {
+  content: "";
+}
+
+.icon-music::before {
+  content: "";
+}
+
+.icon-notifications::before {
+  content: "";
+}
+
+.icon-pencil::before {
+  content: "";
+}
+
+.icon-percent-star::before {
+  content: "";
+}
+
+.icon-phone::before {
+  content: "";
+}
+
+.icon-photos::before {
+  content: "";
+}
+
+.icon-plane::before {
+  content: "";
+}
+
+.icon-play::before {
+  content: "";
+}
+
+.icon-preferences::before {
+  content: "";
+}
+
+.icon-question-mark-circle::before {
+  content: "";
+}
+
+.icon-search::before {
+  content: "";
+}
+
+.icon-shipping::before {
+  content: "";
+}
+
+.icon-shop::before {
+  content: "";
+}
+
+.icon-simple-bold-arrow-bottom::before {
+  content: "";
+}
+
+.icon-simple-bold-arrow-left::before {
+  content: "";
+}
+
+.icon-simple-bold-arrow-right::before {
+  content: "";
+}
+
+.icon-simple-bold-arrow-top::before {
+  content: "";
+}
+
+.icon-simple-thin-arrow-bottom::before {
+  content: "";
+}
+
+.icon-simple-thin-arrow-left::before {
+  content: "";
+}
+
+.icon-simple-thin-arrow-right::before {
+  content: "";
+}
+
+.icon-simple-thin-arrow-top::before {
+  content: "";
+}
+
+.icon-sort::before {
+  content: "";
+}
+
+.icon-star::before {
+  content: "";
+}
+
+.icon-star-half-left::before {
+  content: "";
+}
+
+.icon-star-half-right::before {
+  content: "";
+}
+
+.icon-tag::before {
+  content: "";
+}
+
+.icon-trash::before {
+  content: "";
+}
+
+.icon-twitter::before {
+  content: "";
+}
+
+.icon-user::before {
+  content: "";
+}
+
+.icon-users::before {
+  content: "";
+}
+
+.icon-video::before {
+  content: "";
+}
+
+.icon-whatsapp::before {
+  content: "";
+}
+
+.icon-youtube::before {
+  content: "";
+}
+
+.icon-two-card::before {
+  content: "";
+}
+
+.icon-shipping-2::before {
+  content: "";
+}
+
+.icon-cash::before {
+  content: "";
+}
+
+.icon-bag2::before {
+  content: "";
+}
+
+.icon-trash2::before {
+  content: "";
+}
+
+.icon-arrow-left::before {
+  content: "";
+}
+
+.icon-refresh::before {
+  content: "";
+}
+
+.icon-location::before {
+  content: "";
+}
+
 .img-container {
   position: relative;
   background-color: transparent;
@@ -5795,6 +6153,84 @@ label.checkbox-box > img {
   position: absolute;
   top: 50%;
   z-index: 50;
+}
+
+.label,
+a.label {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.label:empty,
+a.label:empty {
+  display: none;
+}
+
+.label + .label, .label a.label,
+a.label + .label,
+a.label a.label {
+  margin-left: 0.5rem;
+}
+
+.label,
+.label--default,
+.label--primary {
+  background-color: #006dba;
+  color: #FFF;
+}
+
+.label[href], .label[href]:hover,
+.label--default[href],
+.label--default[href]:hover,
+.label--primary[href],
+.label--primary[href]:hover {
+  color: #FFF;
+}
+
+.label[href]:focus, .label[href].focus,
+.label--default[href]:focus,
+.label--default[href].focus,
+.label--primary[href]:focus,
+.label--primary[href].focus {
+  background-color: #2ea9ff;
+}
+
+.label[href]:hover,
+.label--default[href]:hover,
+.label--primary[href]:hover {
+  background-color: #2ea9ff;
+  text-decoration: none;
+}
+
+.label--main {
+  background-color: #117e01;
+  color: #FFF;
+}
+
+.label--main[href], .label--main[href]:hover {
+  color: #FFF;
+}
+
+.label--main[href]:focus, .label--main[href].focus {
+  background-color: #20f001;
+}
+
+.label--main[href]:hover {
+  background-color: #20f001;
+  text-decoration: none;
 }
 
 .media-object {
@@ -5895,6 +6331,43 @@ textarea {
 .hidden {
   display: none !important;
   visibility: hidden !important;
+}
+
+.tag {
+  display: inline-block;
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 1px solid #9E9E9E;
+  font-size: 0.85714rem;
+  font-weight: 700;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.tag, .tag[href], .tag:hover {
+  color: #9E9E9E;
+}
+
+.tag:empty {
+  display: none;
+}
+
+.tag + .tag {
+  margin-left: 0.5rem;
+}
+
+.tag > img {
+  display: inline-block;
+  max-height: 1.5rem;
+  vertical-align: middle;
 }
 
 h1,
@@ -6404,364 +6877,6 @@ label.list-grid-item input:checked {
   color: #2ea9ff;
 }
 
-@font-face {
-  font-family: garba-icon-font;
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/garba-icon-font.eot?gz21za");
-  src: url("../fonts/garba-icon-font.eot?gz21za#iefix") format("embedded-opentype"), url("../fonts/garba-icon-font.ttf?gz21za") format("truetype"), url("../fonts/garba-icon-font.woff?gz21za") format("woff"), url("../fonts/garba-icon-font.svg?gz21za#garba-icon-font") format("svg");
-}
-
-[class^="icon-"] {
-  font-family: garba-icon-font !important;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 1;
-  speak: none;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.list-grid-item__body [class^="icon-"] {
-  display: block;
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.icon-close::before {
-  content: "";
-}
-
-.icon-bag::before {
-  content: "";
-}
-
-.icon-bank::before {
-  content: "";
-}
-
-.icon-calendar::before {
-  content: "";
-}
-
-.icon-card::before {
-  content: "";
-}
-
-.icon-cart::before {
-  content: "";
-}
-
-.icon-checkmark::before {
-  content: "";
-}
-
-.icon-checkmark-filled-circle::before {
-  content: "";
-}
-
-.icon-clock::before {
-  content: "";
-}
-
-.icon-cross::before {
-  content: "";
-}
-
-.icon-cross-circle::before {
-  content: "";
-}
-
-.icon-dashboard::before {
-  content: "";
-}
-
-.icon-dialog::before {
-  content: "";
-}
-
-.icon-double-thin-arrow-botom::before {
-  content: "";
-}
-
-.icon-double-thin-arrow-left::before {
-  content: "";
-}
-
-.icon-double-thin-arrow-right::before {
-  content: "";
-}
-
-.icon-double-thin-arrow-top::before {
-  content: "";
-}
-
-.icon-download::before {
-  content: "";
-}
-
-.icon-email::before {
-  content: "";
-}
-
-.icon-exclamation-mark-circle::before {
-  content: "";
-}
-
-.icon-exclamation-mark-triangle::before {
-  content: "";
-}
-
-.icon-facebook::before {
-  content: "";
-}
-
-.icon-filled-arrow-bottom::before {
-  content: "";
-}
-
-.icon-filled-arrow-left::before {
-  content: "";
-}
-
-.icon-filled-arrow-right::before {
-  content: "";
-}
-
-.icon-filled-arrow-top::before {
-  content: "";
-}
-
-.icon-filter::before {
-  content: "";
-}
-
-.icon-fire::before {
-  content: "";
-}
-
-.icon-gallery-view::before {
-  content: "";
-}
-
-.icon-games::before {
-  content: "";
-}
-
-.icon-garbarino-viajes::before {
-  content: "";
-}
-
-.icon-gift::before {
-  content: "";
-}
-
-.icon-gplus::before {
-  content: "";
-}
-
-.icon-heart::before {
-  content: "";
-}
-
-.icon-home::before {
-  content: "";
-}
-
-.icon-info::before {
-  content: "";
-}
-
-.icon-exclamation-mark-circle::before {
-  content: "";
-}
-
-.icon-instagram::before {
-  content: "";
-}
-
-.icon-key::before {
-  content: "";
-}
-
-.icon-list-view::before {
-  content: "";
-}
-
-.icon-marker::before {
-  content: "";
-}
-
-.icon-menu-hamburguer::before {
-  content: "";
-}
-
-.icon-music::before {
-  content: "";
-}
-
-.icon-notifications::before {
-  content: "";
-}
-
-.icon-pencil::before {
-  content: "";
-}
-
-.icon-percent-star::before {
-  content: "";
-}
-
-.icon-phone::before {
-  content: "";
-}
-
-.icon-photos::before {
-  content: "";
-}
-
-.icon-plane::before {
-  content: "";
-}
-
-.icon-play::before {
-  content: "";
-}
-
-.icon-preferences::before {
-  content: "";
-}
-
-.icon-question-mark-circle::before {
-  content: "";
-}
-
-.icon-search::before {
-  content: "";
-}
-
-.icon-shipping::before {
-  content: "";
-}
-
-.icon-shop::before {
-  content: "";
-}
-
-.icon-simple-bold-arrow-bottom::before {
-  content: "";
-}
-
-.icon-simple-bold-arrow-left::before {
-  content: "";
-}
-
-.icon-simple-bold-arrow-right::before {
-  content: "";
-}
-
-.icon-simple-bold-arrow-top::before {
-  content: "";
-}
-
-.icon-simple-thin-arrow-bottom::before {
-  content: "";
-}
-
-.icon-simple-thin-arrow-left::before {
-  content: "";
-}
-
-.icon-simple-thin-arrow-right::before {
-  content: "";
-}
-
-.icon-simple-thin-arrow-top::before {
-  content: "";
-}
-
-.icon-sort::before {
-  content: "";
-}
-
-.icon-star::before {
-  content: "";
-}
-
-.icon-star-half-left::before {
-  content: "";
-}
-
-.icon-star-half-right::before {
-  content: "";
-}
-
-.icon-tag::before {
-  content: "";
-}
-
-.icon-trash::before {
-  content: "";
-}
-
-.icon-twitter::before {
-  content: "";
-}
-
-.icon-user::before {
-  content: "";
-}
-
-.icon-users::before {
-  content: "";
-}
-
-.icon-video::before {
-  content: "";
-}
-
-.icon-whatsapp::before {
-  content: "";
-}
-
-.icon-youtube::before {
-  content: "";
-}
-
-.icon-two-card::before {
-  content: "";
-}
-
-.icon-shipping-2::before {
-  content: "";
-}
-
-.icon-cash::before {
-  content: "";
-}
-
-.icon-bag2::before {
-  content: "";
-}
-
-.icon-trash2::before {
-  content: "";
-}
-
-.icon-arrow-left::before {
-  content: "";
-}
-
-.icon-refresh::before {
-  content: "";
-}
-
-.icon-location::before {
-  content: "";
-}
-
 .item-box {
   animation-direction: reverse;
   border: 1px solid transparent;
@@ -6848,84 +6963,6 @@ label.list-grid-item input:checked {
   .item-box:hover .item-box__title {
     opacity: 1;
   }
-}
-
-.label,
-a.label {
-  display: inline-block;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  font-size: 0.8em;
-  font-weight: 700;
-  line-height: 1;
-  padding: 0.25em 0.5em;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.label:empty,
-a.label:empty {
-  display: none;
-}
-
-.label + .label, .label a.label,
-a.label + .label,
-a.label a.label {
-  margin-left: 0.5rem;
-}
-
-.label,
-.label--default,
-.label--primary {
-  background-color: #006dba;
-  color: #FFF;
-}
-
-.label[href], .label[href]:hover,
-.label--default[href],
-.label--default[href]:hover,
-.label--primary[href],
-.label--primary[href]:hover {
-  color: #FFF;
-}
-
-.label[href]:focus, .label[href].focus,
-.label--default[href]:focus,
-.label--default[href].focus,
-.label--primary[href]:focus,
-.label--primary[href].focus {
-  background-color: #2ea9ff;
-}
-
-.label[href]:hover,
-.label--default[href]:hover,
-.label--primary[href]:hover {
-  background-color: #2ea9ff;
-  text-decoration: none;
-}
-
-.label--main {
-  background-color: #117e01;
-  color: #FFF;
-}
-
-.label--main[href], .label--main[href]:hover {
-  color: #FFF;
-}
-
-.label--main[href]:focus, .label--main[href].focus {
-  background-color: #20f001;
-}
-
-.label--main[href]:hover {
-  background-color: #20f001;
-  text-decoration: none;
 }
 
 .navbar {
@@ -7332,43 +7369,6 @@ a.label a.label {
 .navbar__with-icons button:hover > [class^="icon-"] {
   animation: navbar-icon--mouseOver-animation 0.2s ease-in;
   transform: scale(1.125) translateY(-0.25rem);
-}
-
-.tag {
-  display: inline-block;
-  max-width: 8rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 1px solid #9E9E9E;
-  font-size: 0.85714rem;
-  font-weight: 700;
-  height: 2rem;
-  line-height: 2rem;
-  padding: 0 0.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.tag, .tag[href], .tag:hover {
-  color: #9E9E9E;
-}
-
-.tag:empty {
-  display: none;
-}
-
-.tag + .tag {
-  margin-left: 0.5rem;
-}
-
-.tag > img {
-  display: inline-block;
-  max-height: 1.5rem;
-  vertical-align: middle;
 }
 
 .slick-slider {
