@@ -25,21 +25,19 @@ var slick = require('../../node_modules/slick-carousel/slick/slick');
 // Styleguide section-functional.html#kssref-functional-tooltips
 $(function () {
   $('[data-toggle="tooltip"]').tooltip({
-    'container': 'body',
-    'trigger': 'hover'
+    container: 'body',
+    trigger: 'hover'
   });
 });
 
 
 
-// Pasar clase a un label cuando el usuario hace click en un ítem
+// Le pone la clase `.item__is-checked` al label padre cuando el usuario hace
+// click en un ítem
 $(function () {
-  $('.list-grid-item').on('click', function() {
-    var $checkItem = $(this).find('input[type=checkbox]');
-
-    $checkItem.closest('.list-grid-item').toggleClass('item__is-checked');
-    $checkItem.prop("checked", !$checkItem.prop("checked"));
-  })
+  $('.list-grid :checkbox').on('change', function() {
+    $(this).closest('label').toggleClass('item__is-checked', this.checked)
+  });
 });
 
 

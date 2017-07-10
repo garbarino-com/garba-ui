@@ -1,0 +1,97 @@
+// Ítem Box
+//
+//
+//
+// Markup: item-box.hbs
+//
+// Styleguide Components.Itembox
+
+.item-box {
+  // animation: item-box__element--mouseOver $transition-timing-slow ease-in;
+  animation-direction: reverse;
+  border: 1px solid transparent;
+  display: block;
+  padding: $spacer-base;
+  position: relative;
+
+  &::after {
+    @include make-pseudo-element;
+    // animation: item-box__element--mouseOver $transition-timing-slow ease-in;
+    animation-direction: reverse;
+    background-color: $widget-bg;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  a {
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // Posicionamiento
+  .value-container {
+    position: relative;
+    z-index: $zindex-hover-element;
+  }
+
+  //
+
+  // stylelint-disable max-nesting-depth
+  @media only screen and (min-width: $screen-lg-min) {
+    &:hover {
+      // animation: item-box--mouseOver $transition-timing-slow ease-in;
+      border-color: state-hover-modifier($grid-cell-active);
+      transform: scale(1.005);
+
+      &::after {
+        // animation: item-box__element--mouseOver $transition-timing-slow ease-in;
+        opacity: .8;
+      }
+
+      //
+      .img-container {
+        transform: scale($modifier-scale-value);
+      }
+    }
+  }
+  // stylelint-enable max-nesting-depth
+}
+
+// Cambia la visualización en viewports ≥1024px
+.item-box__title {
+  font-size: $font-size-lg;
+  padding-bottom: $spacer-base;
+  padding-top: $spacer-base;
+
+  @media only screen and (min-width: $screen-lg-min) {
+    @include multi-line-ellipsis(calc(50% + #{$line-height-sm * $font-size-lg}));
+    @include element-aspect-ratio(2, 1);
+    // animation: item-box__element--mouseOver $transition-timing-slow ease-in;
+    // animation-direction: reverse;
+    left: 0;
+    line-height: $line-height-sm;
+    margin-top: ($line-height-sm-computed + ($spacer-base / 2)) * -1;
+    opacity: 0;
+    overflow: hidden;
+    padding-left: $spacer-base;
+    padding-right: $spacer-base;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: $zindex-hover-element;
+
+    .item-box:hover & {
+      // animation: item-box__element--mouseOver $transition-timing-slow ease-in;
+      opacity: 1;
+    }
+  }
+}

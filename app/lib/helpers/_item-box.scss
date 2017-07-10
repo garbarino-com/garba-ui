@@ -1,0 +1,22 @@
+// Itembox OnMouseOver
+@keyframes item-box--mouseOver {
+  from {
+    border-color: transparent;
+  }
+
+  to {
+    border-color: state-hover-modifier($grid-cell-active);
+    transform: scale(1.005);
+  }
+}
+
+// Itembox OnMouseOver
+@keyframes item-box__element--mouseOver {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: .6;
+  }
+}

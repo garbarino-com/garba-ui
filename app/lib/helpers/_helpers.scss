@@ -40,12 +40,14 @@
 @import "icon-element";
 @import "set-width-based-on-siblings-count";
 @import "make-css-arrow";
+@import "multi-line-ellipsis";
 @import "state-modifiers";
 
 // Element related
-@import "forms";
 @import "buttons";
 @import "button-actions";
+@import "forms";
+@import "item-box";
 
 // Component related
 @import "labels";

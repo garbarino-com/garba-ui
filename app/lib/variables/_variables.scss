@@ -213,7 +213,8 @@ $small-color:         $text-muted !default;
 $line-height-base:        1.5 !default;
 $line-height-sm:          1.25 !default;
 
-$line-height-computed:    $line-height-base * $baseline-grid-computed !default;
+$line-height-computed:       $line-height-base * $baseline-grid-computed !default;
+$line-height-sm-computed:    $line-height-sm * $baseline-grid-computed !default;
 
 
 $font-weight-base: 400;

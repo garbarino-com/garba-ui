@@ -3542,6 +3542,25 @@ button.close {
   }
 }
 
+@keyframes item-box--mouseOver {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #2ea9ff;
+    transform: scale(1.005);
+  }
+}
+
+@keyframes item-box__element--mouseOver {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .6;
+  }
+}
+
 @keyframes navbar--mouseOver-animation {
   from {
     transform: translateY(33.33333%);
@@ -5778,6 +5797,43 @@ label.checkbox-box > img {
   z-index: 50;
 }
 
+.media-object {
+  margin-bottom: 1rem;
+}
+
+.media,
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.media-body {
+  width: 10000px;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-object.img-thumbnail {
+  max-width: none;
+}
+
+.media-right {
+  padding-left: 1rem;
+}
+
+.media-left {
+  padding-right: 1rem;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -6704,6 +6760,92 @@ label.list-grid-item input:checked {
 
 .icon-location::before {
   content: "";
+}
+
+.item-box {
+  animation-direction: reverse;
+  border: 1px solid transparent;
+  display: block;
+  padding: 1rem;
+  position: relative;
+}
+
+.item-box::after {
+  content: "";
+  display: block;
+  animation-direction: reverse;
+  background-color: #FFF;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.item-box a {
+  display: block;
+}
+
+.item-box a:hover {
+  text-decoration: none;
+}
+
+.item-box .value-container {
+  position: relative;
+  z-index: 50;
+}
+
+@media only screen and (min-width: 73.14286rem) {
+  .item-box:hover {
+    border-color: #2ea9ff;
+    transform: scale(1.005);
+  }
+  .item-box:hover::after {
+    opacity: .8;
+  }
+  .item-box:hover .img-container {
+    transform: scale(0.8);
+  }
+}
+
+.item-box__title {
+  font-size: 1.28571rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+@media only screen and (min-width: 73.14286rem) {
+  .item-box__title {
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: calc(50% + 1.60714rem);
+    text-overflow: -o-ellipsis-lastline;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    position: relative;
+    left: 0;
+    line-height: 1.25;
+    margin-top: -1.75rem;
+    opacity: 0;
+    overflow: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+  }
+  .item-box__title::before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
+  .item-box:hover .item-box__title {
+    opacity: 1;
+  }
 }
 
 .label,
