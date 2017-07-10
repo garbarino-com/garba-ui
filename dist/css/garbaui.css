@@ -6773,7 +6773,6 @@ label.list-grid-item input:checked {
 .item-box::after {
   content: "";
   display: block;
-  animation-direction: reverse;
   background-color: #FFF;
   bottom: 0;
   left: 0;
@@ -6791,6 +6790,10 @@ label.list-grid-item input:checked {
   text-decoration: none;
 }
 
+.item-box a:focus {
+  outline: 0;
+}
+
 .item-box .value-container {
   position: relative;
   z-index: 50;
@@ -6802,7 +6805,7 @@ label.list-grid-item input:checked {
     transform: scale(1.005);
   }
   .item-box:hover::after {
-    opacity: .8;
+    opacity: 0.8;
   }
   .item-box:hover .img-container {
     transform: scale(0.8);
@@ -6828,7 +6831,6 @@ label.list-grid-item input:checked {
     line-height: 1.25;
     margin-top: -1.75rem;
     opacity: 0;
-    overflow: hidden;
     padding-left: 1rem;
     padding-right: 1rem;
     position: absolute;

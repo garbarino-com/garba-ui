@@ -1,4 +1,8 @@
-// @multi-line-ellipsis($max-height, )
+// @multi-line-ellipsis($max-height, $numberOfLines)
+//
+// Trunca la ùltima línea de un bloque agregando una elipsis ('...').
+//
+// Compatible con Chrome 14+, Opera 2+, Safari 5+.
 //
 // $max-height - Altura máxima del bloque.
 // $numberOfLines - Número màximo de lìneas que de muestran (Default: 2)

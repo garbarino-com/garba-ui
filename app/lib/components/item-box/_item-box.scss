@@ -1,6 +1,12 @@
-// Ítem Box
+// Caja de ítem
 //
-//
+// Un componente sirve para mostrar listados de productos en *carouseles de
+// productos*, *resultados de búsqueda* y *listados de categoría*. Internamente
+// se compone de algunos otros elementos como
+// [contenedor de imagenes](/section-elements.html#kssref-elements-imagecontainer),
+// [precio](/section-elements.html#kssref-elements-value) y
+// [labels](/section-components.html#kssref-components-labels) que están definidos
+// y documentados en su respectiva sección.
 //
 // Markup: item-box.hbs
 //
@@ -9,16 +15,16 @@
 .item-box {
   // animation: item-box__element--mouseOver $transition-timing-slow ease-in;
   animation-direction: reverse;
-  border: 1px solid transparent;
+  border: 1px solid $box-item-bg;
   display: block;
-  padding: $spacer-base;
+  padding: $box-item-padding;
   position: relative;
 
   &::after {
     @include make-pseudo-element;
     // animation: item-box__element--mouseOver $transition-timing-slow ease-in;
-    animation-direction: reverse;
-    background-color: $widget-bg;
+    // animation-direction: reverse;
+    background-color: $box-item-overlay-bg;
     bottom: 0;
     left: 0;
     opacity: 0;
@@ -33,6 +39,10 @@
     &:hover {
       text-decoration: none;
     }
+
+    &:focus {
+      outline: 0;
+    }
   }
 
   // Posicionamiento
@@ -41,18 +51,16 @@
     z-index: $zindex-hover-element;
   }
 
-  //
-
   // stylelint-disable max-nesting-depth
   @media only screen and (min-width: $screen-lg-min) {
     &:hover {
       // animation: item-box--mouseOver $transition-timing-slow ease-in;
-      border-color: state-hover-modifier($grid-cell-active);
+      border-color: state-hover-modifier($box-item-active-border);
       transform: scale(1.005);
 
       &::after {
         // animation: item-box__element--mouseOver $transition-timing-slow ease-in;
-        opacity: .8;
+        opacity: $box-item-overlay-opacity;
       }
 
       //
@@ -67,8 +75,8 @@
 // Cambia la visualización en viewports ≥1024px
 .item-box__title {
   font-size: $font-size-lg;
-  padding-bottom: $spacer-base;
-  padding-top: $spacer-base;
+  padding-bottom: $box-item-padding;
+  padding-top: $box-item-padding;
 
   @media only screen and (min-width: $screen-lg-min) {
     @include multi-line-ellipsis(calc(50% + #{$line-height-sm * $font-size-lg}));
@@ -77,11 +85,10 @@
     // animation-direction: reverse;
     left: 0;
     line-height: $line-height-sm;
-    margin-top: ($line-height-sm-computed + ($spacer-base / 2)) * -1;
+    margin-top: ($line-height-sm-computed + ($box-item-padding / 2)) * -1;
     opacity: 0;
-    overflow: hidden;
-    padding-left: $spacer-base;
-    padding-right: $spacer-base;
+    padding-left: $box-item-padding;
+    padding-right: $box-item-padding;
     position: absolute;
     right: 0;
     text-align: center;
