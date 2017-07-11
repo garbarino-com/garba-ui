@@ -17,13 +17,17 @@
 //
 // Styleguide Helpers.Misc
 
+// Importamos antes esta función para que este disponible cuando se la llama
+// desde la hoja de variables.
+@import "px-to-rem";
+
 // Base framework variables
 //
-// Volvemos a importamr las variables para que esten disponibles si se llama
+// Volvemos a importar las variables para que esten disponibles si se llama
 // sólo helpers.
 
-@import "../variables/variables";
 @import "../variables/icon-variables";
+@import "../variables/variables";
 
 // Core Legacy (v1.3.2)
 //
