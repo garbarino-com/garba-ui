@@ -6959,6 +6959,12 @@ label.list-grid-item input:checked {
 }
 
 .item-box__title {
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: calc(50% + 1.60714rem);
+  text-overflow: -o-ellipsis-lastline;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   font-size: 1.28571rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
@@ -6966,13 +6972,13 @@ label.list-grid-item input:checked {
 
 @media only screen and (min-width: 73.14286rem) {
   .item-box__title {
+    position: relative;
     display: -webkit-box;
     overflow: hidden;
-    max-height: calc(50% + 1.60714rem);
+    max-height: calc(50% + $box-item-title-height);
     text-overflow: -o-ellipsis-lastline;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    position: relative;
     animation: item-box__title--mouseOver 0.2s reverse ease-in;
     left: 0;
     line-height: 1.25;

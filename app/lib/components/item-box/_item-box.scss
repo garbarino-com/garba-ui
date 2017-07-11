@@ -63,19 +63,20 @@
   // stylelint-enable max-nesting-depth
 }
 
-// Cambia la visualización en viewports ≥1024px
 .item-box__title {
+  @include multi-line-ellipsis($box-item-title-height);
   font-size: $font-size-lg;
   padding-bottom: $box-item-padding;
   padding-top: $box-item-padding;
 
+  // Cambia la visualización en viewports ≥1024px
   @media only screen and (min-width: $screen-lg-min) {
-    @include multi-line-ellipsis(calc(50% + #{$line-height-sm * $font-size-lg}));
+    @include element-aspect-ratio(2, 1);
 
     // Genera un padding arriba que corre el título hacia abajo. Junto con el
     // margin-top de abajo compensan una línea de altura de modo que el elemento
     // quede centrado respecto del contenedor de imagen que es cuadrado.
-    @include element-aspect-ratio(2, 1);
+    @include multi-line-ellipsis(calc(50% + $box-item-title-height));
 
     animation: item-box__title--mouseOver ($transition-timing-slow / 4) reverse ease-in;
     left: 0;

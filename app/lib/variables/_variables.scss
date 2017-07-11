@@ -476,7 +476,7 @@ $box-item-overlay-bg:            $widget-bg !default;
 $box-item-overlay-opacity:       .8 !default;
 $box-item-active-scale:          1.005 !default;
 $box-item-active-border:         $brand-primary !default;
-$box-item-title-height:          "calc(50% + #{$line-height-sm * $font-size-lg})" !default;
+$box-item-title-height:          calc(50% + #{$line-height-sm * $font-size-lg}) !default;
 
 // Carousel default settings
 //
