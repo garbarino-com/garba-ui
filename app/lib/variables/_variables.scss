@@ -451,6 +451,7 @@ $grid-cell-active:                 $brand-primary;
 $grid-cell-spacer:                 $grid-narrow-gutter-width !default;
 $grid-cell-size:                   12rem !default;
 $grid-cell-max-number:             6 !default;
+$grid-cell-image-size:             86% !default;
 
 // Navbar
 $navbar-bg:                             $widget-bg !default;
@@ -473,6 +474,7 @@ $box-item-bg:                    transparent !default;
 $box-item-padding:               $spacer-base !default;
 $box-item-overlay-bg:            $widget-bg !default;
 $box-item-overlay-opacity:       .8 !default;
+$box-item-active-scale:          1.005 !default;
 $box-item-active-border:         $brand-primary !default;
 $box-item-title-height:          "calc(50% + #{$line-height-sm * $font-size-lg})" !default;
 

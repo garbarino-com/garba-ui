@@ -49,9 +49,17 @@
 
   // Estilos especiales para Grid list
   .list-grid-item > & {
-    height: 86%;
-    width: 86%;
+    height: $grid-cell-image-size;
+    width: $grid-cell-image-size;
     z-index: $zindex-element;
+  }
+
+  //
+  @media only screen and (min-width: $screen-lg-min) {
+    .item-box:hover & {
+      animation: item-box__image--mouseOver ($transition-timing-slow / 4) ease-out;
+      transform: scale($modifier-scale-value);
+    }
   }
 }
 

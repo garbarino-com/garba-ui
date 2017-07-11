@@ -2,11 +2,12 @@
 @keyframes item-box--mouseOver {
   from {
     border-color: transparent;
+    transform: scale(1);
   }
 
   to {
     border-color: state-hover-modifier($grid-cell-active);
-    transform: scale(1.005);
+    transform: scale($box-item-active-scale);
   }
 }
 
@@ -18,5 +19,28 @@
 
   to {
     opacity: .6;
+  }
+}
+
+// Itembox OnMouseOver
+@keyframes item-box__title--mouseOver {
+  from {
+    opacity: 0;
+    transform: scale($box-item-active-scale);
+  }
+
+  to {
+    opacity: .6;
+    transform: scale(1);
+  }
+}
+
+@keyframes item-box__image--mouseOver {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale($modifier-scale-value);
   }
 }

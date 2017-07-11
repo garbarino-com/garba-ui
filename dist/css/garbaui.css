@@ -3545,6 +3545,7 @@ button.close {
 @keyframes item-box--mouseOver {
   from {
     border-color: transparent;
+    transform: scale(1);
   }
   to {
     border-color: #2ea9ff;
@@ -3558,6 +3559,26 @@ button.close {
   }
   to {
     opacity: .6;
+  }
+}
+
+@keyframes item-box__title--mouseOver {
+  from {
+    opacity: 0;
+    transform: scale(1.005);
+  }
+  to {
+    opacity: .6;
+    transform: scale(1);
+  }
+}
+
+@keyframes item-box__image--mouseOver {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
   }
 }
 
@@ -6129,6 +6150,13 @@ label.checkbox-box > img {
   z-index: 20;
 }
 
+@media only screen and (min-width: 73.14286rem) {
+  .item-box:hover .img-container {
+    animation: item-box__image--mouseOver 0.2s ease-out;
+    transform: scale(0.8);
+  }
+}
+
 .img-container__is-loading::before {
   background-color: #FFF;
   position: relative;
@@ -6168,6 +6196,7 @@ a.label {
   font-size: 0.8em;
   font-weight: 700;
   line-height: 1;
+  margin-top: -0.5em;
   padding: 0.25em 0.5em;
   text-align: center;
   text-transform: uppercase;
@@ -6179,9 +6208,11 @@ a.label:empty {
   display: none;
 }
 
-.label + .label, .label a.label,
-a.label + .label,
-a.label a.label {
+.label + .label,
+a.label + .label, .label +
+a.label,
+a.label +
+a.label {
   margin-left: 0.5rem;
 }
 
@@ -6500,6 +6531,11 @@ abbr[data-original-title] {
 .value-container > .value-item {
   display: block;
   vertical-align: middle;
+}
+
+.item-box .value-container {
+  position: relative;
+  z-index: 50;
 }
 
 .value-container--lg {
@@ -6878,7 +6914,7 @@ label.list-grid-item input:checked {
 }
 
 .item-box {
-  animation-direction: reverse;
+  animation: item-box--mouseOver 0.2s reverse ease-in;
   border: 1px solid transparent;
   display: block;
   padding: 1rem;
@@ -6888,6 +6924,7 @@ label.list-grid-item input:checked {
 .item-box::after {
   content: "";
   display: block;
+  animation: item-box__element--mouseOver 0.4s reverse ease-in;
   background-color: #FFF;
   bottom: 0;
   left: 0;
@@ -6909,21 +6946,15 @@ label.list-grid-item input:checked {
   outline: 0;
 }
 
-.item-box .value-container {
-  position: relative;
-  z-index: 50;
-}
-
 @media only screen and (min-width: 73.14286rem) {
   .item-box:hover {
+    animation: item-box--mouseOver 0.2s ease-in;
     border-color: #2ea9ff;
     transform: scale(1.005);
   }
   .item-box:hover::after {
+    animation: item-box__element--mouseOver 0.4s ease-in;
     opacity: 0.8;
-  }
-  .item-box:hover .img-container {
-    transform: scale(0.8);
   }
 }
 
@@ -6942,9 +6973,10 @@ label.list-grid-item input:checked {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     position: relative;
+    animation: item-box__title--mouseOver 0.2s reverse ease-in;
     left: 0;
     line-height: 1.25;
-    margin-top: -1.75rem;
+    margin-top: -1.60714rem;
     opacity: 0;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -6952,6 +6984,7 @@ label.list-grid-item input:checked {
     right: 0;
     text-align: center;
     top: 0;
+    transform: scale(1.005);
     width: 100%;
     z-index: 50;
   }
@@ -6961,7 +6994,9 @@ label.list-grid-item input:checked {
     padding-top: 50%;
   }
   .item-box:hover .item-box__title {
+    animation: item-box__title--mouseOver 0.2s ease-in;
     opacity: 1;
+    transform: scale(1);
   }
 }
 

@@ -12,6 +12,9 @@
 // Como buena práctica, recomendamos usar el tag `button` siempre que sea posible
 // para asegurar una visualización equivalente en todos los browsers.
 //
+// :hover - Cuando el cursor está posicionado sobre el elemento.
+// :focus - Cuando es presionado.
+//
 // Markup: buttons.hbs
 //
 // Styleguide Elements.Buttons
@@ -200,9 +203,9 @@ button:focus {
 //
 // :hover - Cuando el mouse se desliza sobre el botón.
 // :focus - Cuando es presionado.
-// .button__is-disabled - El botón está *deshabilitado*.
-// .button__is-loading - El botón está procesando una acción.
-// .button__has-icon - El botón tiene un ícono.
+// .button__is-disabled - El elemento está *deshabilitado*.
+// .button__is-loading - El elemento está procesando una acción.
+// .button__has-icon - El elemento tiene un ícono.
 //
 // Styleguide Elements.Buttons.5-StateModifiers
 

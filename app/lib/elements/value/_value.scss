@@ -29,6 +29,12 @@
     display: block;
     vertical-align: middle;
   }
+
+  // Le agrega un valor de z-index cuando se usa en `.item-box`
+  .item-box & {
+    position: relative;
+    z-index: $zindex-hover-element;
+  }
 }
 
 // Large value container
