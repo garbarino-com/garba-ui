@@ -6936,6 +6936,7 @@ label.list-grid-item input:checked {
 
 .item-box a {
   display: block;
+  white-space: normal;
 }
 
 .item-box a:hover {
@@ -6954,20 +6955,22 @@ label.list-grid-item input:checked {
   }
   .item-box:hover::after {
     animation: item-box__element--mouseOver 0.4s ease-in;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
 .item-box__title {
   display: -webkit-box;
   overflow: hidden;
-  max-height: calc(50% + 1.60714rem);
+  max-height: 3.21429rem;
   text-overflow: -o-ellipsis-lastline;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   font-size: 1.28571rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  line-height: 1.60714rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 @media only screen and (min-width: 73.14286rem) {
@@ -6975,13 +6978,12 @@ label.list-grid-item input:checked {
     position: relative;
     display: -webkit-box;
     overflow: hidden;
-    max-height: calc(50% + $box-item-title-height);
+    max-height: calc(50% + 1.60714rem);
     text-overflow: -o-ellipsis-lastline;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     animation: item-box__title--mouseOver 0.2s reverse ease-in;
     left: 0;
-    line-height: 1.25;
     margin-top: -1.60714rem;
     opacity: 0;
     padding-left: 1rem;
@@ -6991,7 +6993,6 @@ label.list-grid-item input:checked {
     text-align: center;
     top: 0;
     transform: scale(1.005);
-    width: 100%;
     z-index: 50;
   }
   .item-box__title::before {

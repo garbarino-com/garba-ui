@@ -20,7 +20,7 @@
   animation: item-box--mouseOver ($transition-timing-slow / 4) reverse ease-in;
   border: 1px solid $box-item-bg;
   display: block;
-  padding: $box-item-padding;
+  padding: $box-item-spacing;
   position: relative;
 
   &::after {
@@ -37,6 +37,10 @@
 
   a {
     display: block;
+
+    // Sobreescribe la propiedad `white-space` que se setea el carousel. Es
+    // necesaria para cuando se usa la caja dentro de un carousel.
+    white-space: normal;
 
     &:hover {
       text-decoration: none;
@@ -64,10 +68,12 @@
 }
 
 .item-box__title {
-  @include multi-line-ellipsis($box-item-title-height);
+  @include multi-line-ellipsis($box-item-title-height * 2);
   font-size: $font-size-lg;
-  padding-bottom: $box-item-padding;
-  padding-top: $box-item-padding;
+  line-height: $box-item-title-height;
+  margin-bottom: $box-item-spacing;
+  margin-top: $box-item-spacing / 2;
+  width: 100%;
 
   // Cambia la visualización en viewports ≥1024px
   @media only screen and (min-width: $screen-lg-min) {
@@ -76,21 +82,19 @@
     // Genera un padding arriba que corre el título hacia abajo. Junto con el
     // margin-top de abajo compensan una línea de altura de modo que el elemento
     // quede centrado respecto del contenedor de imagen que es cuadrado.
-    @include multi-line-ellipsis(calc(50% + $box-item-title-height));
+    @include multi-line-ellipsis(calc(50% + #{$box-item-title-height}));
 
     animation: item-box__title--mouseOver ($transition-timing-slow / 4) reverse ease-in;
     left: 0;
-    line-height: $line-height-sm;
     margin-top: ($line-height-sm * $font-size-lg) * -1;
     opacity: 0;
-    padding-left: $box-item-padding;
-    padding-right: $box-item-padding;
+    padding-left: $box-item-spacing;
+    padding-right: $box-item-spacing;
     position: absolute;
     right: 0;
     text-align: center;
     top: 0;
     transform: scale($box-item-active-scale);
-    width: 100%;
     z-index: $zindex-hover-element;
 
     .item-box:hover & {
