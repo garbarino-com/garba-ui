@@ -6359,7 +6359,7 @@ textarea {
 
 [hidden],
 [hidden="true"],
-.hidden {
+.element__is-hidden {
   display: none !important;
   visibility: hidden !important;
 }
