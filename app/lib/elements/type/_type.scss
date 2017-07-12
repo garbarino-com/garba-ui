@@ -2,29 +2,32 @@
 // Typography
 //
 
+// Comentamos esta hoja para evitar conflictos hasta que llegue el momento de
+// definir elementos de tipografía.
+
 // stylelint-disable selector-no-qualifying-type, selector-no-type
 
 // Remove top margins from headings
 //
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 // margin for easier control within type scales as it avoids margin collapsing.
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin-top: 0;
+// }
 
 // Reset margins on paragraphs
 //
 // Similarly, the top margin on `<p>`s get reset. However, we also reset the
 // bottom margin to use `rem` units instead of `em`.
-p {
-  margin-bottom: $spacer-base;
-  margin-top: 0;
-}
+// p {
+//   margin-bottom: $spacer-base;
+//   margin-top: 0;
+// }
 
 
 //
@@ -48,38 +51,38 @@ strong,
 // Lists
 //
 
-ol,
-ul,
-dl {
-  margin-bottom: $spacer-base;
-  margin-top: 0;
-}
+// ol,
+// ul,
+// dl {
+//   margin-bottom: $spacer-base;
+//   margin-top: 0;
+// }
 
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin-bottom: 0;
-}
+// ol ol,
+// ul ul,
+// ol ul,
+// ul ol {
+//   margin-bottom: 0;
+// }
 
-dd {
-  margin-bottom: .5rem;
-  margin-left: 0; // Undo browser default
-}
+// dd {
+//   margin-bottom: .5rem;
+//   margin-left: 0; // Undo browser default
+// }
 
-.list-unstyled {
-  @include list-unstyled;
-}
+// .list__unstyled {
+//   @include list-unstyled;
+// }
 
 // Inline turns list items into inline-block
-.list-inline {
-  @include list-unstyled;
-}
+// .list__inline {
+//   @include list-unstyled;
+// }
 
 
-blockquote {
-  margin: 0 0 $spacer-base;
-}
+// blockquote {
+//   margin: 0 0 $spacer-base;
+// }
 
 
 //
@@ -123,23 +126,23 @@ a:not([href]):not([tabindex]) {
 // Code
 //
 
-pre {
-  // Reset browser default of `1em` to use `rem`s
-  margin-bottom: $spacer-base;
-  // Remove browser default top margin
-  margin-top: 0;
-  // Normalize v4 removed this property, causing `<pre>` content to break out
-  // of wrapping code snippets
-  overflow: auto;
-}
+// pre {
+//   // Reset browser default of `1em` to use `rem`s
+//   margin-bottom: $spacer-base;
+//   // Remove browser default top margin
+//   margin-top: 0;
+//   // Normalize v4 removed this property, causing `<pre>` content to break out
+//   // of wrapping code snippets
+//   overflow: auto;
+// }
 
 
 // Abbreviations
-abbr[title],
-// Add data-* attribute to help out our tooltip plugin, per
-// https://github.com/twbs/bootstrap/issues/5257
-abbr[data-original-title] {
-  cursor: help;
-}
+// abbr[title],
+// // Add data-* attribute to help out our tooltip plugin, per
+// // https://github.com/twbs/bootstrap/issues/5257
+// abbr[data-original-title] {
+//   cursor: help;
+// }
 
 // stylelint-enable selector-no-qualifying-type, selector-no-type

@@ -158,7 +158,7 @@ textarea {
 // Always hide an element with the `hidden` HTML attribute (from PureCSS).
 [hidden],
 [hidden="true"],
-.hidden {
+.element__is-hidden {
   @include hide-element;
 }
 
