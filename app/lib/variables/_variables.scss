@@ -39,6 +39,10 @@ $brand-primary:          #0084E0 !default;
 $brand-secondary:        #6B6B6B !default;
 $brand-revenue:          #16A401 !default;
 
+$brand-disabled:          #9E9E9E !default;
+$brand-disabled-bg:       #E2E2E2 !default;
+$brand-disabled-cursor:   not-allowed !default;
+
 // States palette
 $brand-success:          #4DA02E !default;
 $brand-error:            #D35F53 !default;
@@ -53,9 +57,9 @@ $brand-altfav:           #F8AA29 !default;
 //## Gray and brand colors for use across Framework.
 $gray-base:              #000 !default;
 $gray-darker:            $brand-secondary !default;
-$gray-dark:              #9E9E9E !default;
+$gray-dark:              $brand-disabled !default;
 $gray-medium:            #C4C4C4 !default;
-$gray-light:             #E2E2E2 !default;
+$gray-light:             $brand-disabled-bg !default;
 $gray-lighter:           #F6F6F6 !default;
 
 
@@ -297,8 +301,8 @@ $btn-link-bg:                        transparent !default;
 $btn-facebook-color:                 $btn-base-color !default;
 $btn-facebook-bg:                    $brand-facebook !default;
 
-$btn-disabled-color:                 $gray-dark !default;
-$btn-disabled-bg:                    $gray-light !default;
+$btn-disabled-color:                 $brand-disabled !default;
+$btn-disabled-bg:                    $brand-disabled-bg !default;
 
 // Button spinner definitions
 $btn-spinner-color-active:           $btn-disabled-color !default;
@@ -473,10 +477,15 @@ $navbar-icon-mouseout-animation:        scale(1) translateY(0) !default;
 $box-item-bg:                    transparent !default;
 $box-item-spacing:               $spacer-base !default;
 $box-item-overlay-bg:            $widget-bg !default;
-$box-item-overlay-opacity:       .9 !default;
+$box-item-title-height:          $line-height-sm * $font-size-lg !default;
+
+$box-item-overlay-opacity:       .85 !default;
 $box-item-active-scale:          1.005 !default;
 $box-item-active-border:         $brand-primary !default;
-$box-item-title-height:          $line-height-sm * $font-size-lg !default;
+
+$box-item-disabled-color:        $brand-disabled !default;
+$box-item-disabled-title-color:  $gray-darker !default;
+$box-item-disabled-bg:           $brand-disabled-bg !default;
 
 // Carousel default settings
 //

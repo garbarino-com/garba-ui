@@ -6150,6 +6150,10 @@ label.checkbox-box > img {
   z-index: 20;
 }
 
+.item-box .img-container {
+  margin-bottom: 1rem;
+}
+
 @media only screen and (min-width: 73.14286rem) {
   .item-box:hover .img-container {
     animation: item-box__image--mouseOver 0.2s ease-out;
@@ -6750,7 +6754,7 @@ label.list-grid-item,
 [readonly]
 label.list-grid-item,
 label.list-grid-item.item__is-disabled {
-  cursor: default;
+  cursor: not-allowed;
   opacity: 0.5;
   pointer-events: none;
 }
@@ -6897,7 +6901,7 @@ label.list-grid-item input:checked {
   }
   .item-box:hover::after {
     animation: item-box__element--mouseOver 0.4s ease-in;
-    opacity: 0.9;
+    opacity: 0.85;
   }
 }
 
@@ -6911,8 +6915,9 @@ label.list-grid-item input:checked {
   font-size: 1.28571rem;
   line-height: 1.60714rem;
   margin-bottom: 1rem;
-  margin-top: 0.5rem;
+  position: relative;
   width: 100%;
+  z-index: 50;
 }
 
 @media only screen and (min-width: 73.14286rem) {
@@ -6926,7 +6931,7 @@ label.list-grid-item input:checked {
     -webkit-line-clamp: 2;
     animation: item-box__title--mouseOver 0.2s reverse ease-in;
     left: 0;
-    margin-top: -1.60714rem;
+    margin-top: -0.80357rem;
     opacity: 0;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -6947,6 +6952,41 @@ label.list-grid-item input:checked {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+[disabled] .item-box, [disabled] .item-box:hover,
+[disabled],
+[disabled]:hover,
+[readonly],
+[readonly]:hover,
+.item__is-disabled,
+.item__is-disabled:hover {
+  background-color: #E2E2E2;
+  border: 1px solid #c4c4c4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+[disabled] .item-box::after, [disabled] .item-box:hover::after,
+[disabled]::after,
+[disabled]:hover::after,
+[readonly]::after,
+[readonly]:hover::after,
+.item__is-disabled::after,
+.item__is-disabled:hover::after {
+  background-color: #E2E2E2;
+  opacity: 0.85;
+}
+
+[disabled] .item-box .item-box__title, [disabled] .item-box:hover .item-box__title,
+[disabled] .item-box__title,
+[disabled]:hover .item-box__title,
+[readonly] .item-box__title,
+[readonly]:hover .item-box__title,
+.item__is-disabled .item-box__title,
+.item__is-disabled:hover .item-box__title {
+  color: #6B6B6B;
+  opacity: 0.85;
 }
 
 .navbar {
@@ -7374,7 +7414,7 @@ label.list-grid-item input:checked {
   padding-bottom: 2rem;
 }
 
-.slick-list {
+.carousel-billboard {
   display: block;
   margin: 0;
   overflow: hidden;
@@ -7382,11 +7422,11 @@ label.list-grid-item input:checked {
   position: relative;
 }
 
-.slick-list:focus {
+.carousel-billboard:focus {
   outline: none;
 }
 
-.slick-list.dragging {
+.carousel-billboard.dragging {
   cursor: pointer;
   cursor: hand;
 }

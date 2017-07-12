@@ -8,7 +8,6 @@
 // [labels](/section-elements.html#kssref-components-labels) que están definidos
 // y documentados en su respectiva sección.
 //
-// :hover - Cuando el cursor está posicionado sobre el elemento.
 // .item__is-disabled - El elemento está *deshabilitado*. También se puede aplicar
 // mediante el atributo `[disabled]`.
 //
@@ -52,8 +51,10 @@
   }
 
   // stylelint-disable max-nesting-depth
-  @media only screen and (min-width: $screen-lg-min) {
-    &:hover {
+
+  // Hover state
+  &:hover {
+    @media only screen and (min-width: $screen-lg-min) {
       animation: item-box--mouseOver ($transition-timing-slow / 4) ease-in;
       border-color: state-hover-modifier($box-item-active-border);
       transform: scale($box-item-active-scale);
@@ -67,13 +68,15 @@
   // stylelint-enable max-nesting-depth
 }
 
+// Título de ítem
 .item-box__title {
   @include multi-line-ellipsis($box-item-title-height * 2);
   font-size: $font-size-lg;
   line-height: $box-item-title-height;
   margin-bottom: $box-item-spacing;
-  margin-top: $box-item-spacing / 2;
+  position: relative;
   width: 100%;
+  z-index: $zindex-hover-element;
 
   // Cambia la visualización en viewports ≥1024px
   @media only screen and (min-width: $screen-lg-min) {
@@ -86,7 +89,7 @@
 
     animation: item-box__title--mouseOver ($transition-timing-slow / 4) reverse ease-in;
     left: 0;
-    margin-top: ($line-height-sm * $font-size-lg) * -1;
+    margin-top: (($line-height-sm * $font-size-lg) / 2) * -1;
     opacity: 0;
     padding-left: $box-item-spacing;
     padding-right: $box-item-spacing;
@@ -101,6 +104,30 @@
       animation: item-box__title--mouseOver ($transition-timing-slow / 4) ease-in;
       opacity: 1;
       transform: scale(1);
+    }
+  }
+}
+
+// Disabled State
+[disabled] .item-box,
+[disabled],
+[readonly],
+.item__is-disabled {
+  &,
+  &:hover {
+    background-color: $box-item-disabled-bg;
+    border: 1px solid state-hover-modifier($box-item-disabled-color);
+    cursor: $brand-disabled-cursor;
+    pointer-events: none;
+
+    &::after {
+      background-color: $box-item-disabled-bg;
+      opacity: $box-item-overlay-opacity;
+    }
+
+    .item-box__title {
+      color: $box-item-disabled-title-color;
+      opacity: $box-item-overlay-opacity;
     }
   }
 }

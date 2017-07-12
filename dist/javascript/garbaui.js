@@ -49,7 +49,7 @@ $(function () {
 
   // Initialize billboard carousel plugins
   // Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
-  $('.carousel').slick({
+  $('.carousel-billboard').slick({
       arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
@@ -76,13 +76,12 @@ $(function () {
   // Shelf carousel plugins
   // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
   $('.carousel-shelf').slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    variableWidth: true,
-    dots: false,
     lazyLoad: 'ondemand',
+    speed: 300,
+    slidesToShow: 4.8,
+    dots: false,
+    infinite: false,
+    slidesToScroll: 1,
     responsive: [{
       breakpoint: 1025,
       settings: 'unslick'
