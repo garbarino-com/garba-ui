@@ -45,7 +45,7 @@
 //
 // Styleguide Functional.Carousel.1-SimpleCarousel
 
-.slick-list {
+.carousel-billboard {
   display: block;
   margin: 0;
   overflow: hidden;
@@ -185,9 +185,8 @@
 // Esta variación de carousel está pensada para ser usada como vidriera en sitios
 // o secciones internas del sitios.
 // * Muestra varios ítems por página.
-// * El ancho de dicho ítem es variables y debe ser definido para cada caso de
-// uso. *(Posiblemente en el futuro podremos tipificar los casos de uso y asignarles
-// una medida a cada uno.)*
+// * El ancho de dicho ítem es asignado aumáticamente por la hrrramienta para que
+// se muestren 4.8 ítems.
 // * No tiene autoplay.
 // * Tiene lazy-loading habilitado.
 // * En viewports más chicos (≤1024px) se desactiva el carousel y se utiliza el

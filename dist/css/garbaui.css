@@ -7414,7 +7414,7 @@ label.list-grid-item input:checked {
   padding-bottom: 2rem;
 }
 
-.slick-list {
+.carousel-billboard {
   display: block;
   margin: 0;
   overflow: hidden;
@@ -7422,11 +7422,11 @@ label.list-grid-item input:checked {
   position: relative;
 }
 
-.slick-list:focus {
+.carousel-billboard:focus {
   outline: none;
 }
 
-.slick-list.dragging {
+.carousel-billboard.dragging {
   cursor: pointer;
   cursor: hand;
 }
