@@ -245,7 +245,7 @@ fieldset[disabled],
 
 // Define shadow and cursor only for disabled state
 .button__is-disabled {
-  cursor: not-allowed;
+  cursor: $brand-disabled-cursor;
 }
 
 // Loading state spinner definitions

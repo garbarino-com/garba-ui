@@ -54,9 +54,13 @@
     z-index: $zindex-element;
   }
 
-  //
-  @media only screen and (min-width: $screen-lg-min) {
-    .item-box:hover & {
+  // Específicos para Ítem box
+  .item-box & {
+    margin-bottom: $box-item-spacing;
+  }
+
+  .item-box:hover & {
+    @media only screen and (min-width: $screen-lg-min) {
       animation: item-box__image--mouseOver ($transition-timing-slow / 4) ease-out;
       transform: scale($modifier-scale-value);
     }
