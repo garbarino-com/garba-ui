@@ -6401,20 +6401,6 @@ textarea {
   vertical-align: middle;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-}
-
-p {
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-
 small,
 .small {
   color: #666;
@@ -6425,39 +6411,6 @@ small,
 strong,
 .strong {
   font-weight: 700;
-}
-
-ol,
-ul,
-dl {
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin-bottom: 0;
-}
-
-dd {
-  margin-bottom: .5rem;
-  margin-left: 0;
-}
-
-.list-unstyled {
-  list-style: none;
-  padding-left: 0;
-}
-
-.list-inline {
-  list-style: none;
-  padding-left: 0;
-}
-
-blockquote {
-  margin: 0 0 1rem;
 }
 
 a {
@@ -6482,17 +6435,6 @@ a:not([href]):not([tabindex]):hover {
 
 a:not([href]):not([tabindex]):active, a:not([href]):not([tabindex]):focus {
   outline: 0;
-}
-
-pre {
-  margin-bottom: 1rem;
-  margin-top: 0;
-  overflow: auto;
-}
-
-abbr[title],
-abbr[data-original-title] {
-  cursor: help;
 }
 
 .value-container {
