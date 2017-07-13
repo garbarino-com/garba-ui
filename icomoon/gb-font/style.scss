@@ -2,16 +2,16 @@
 
 @font-face {
   font-family: 'gb-font';
-  src:  url('#{$icomoon-font-path}/gb-font.eot?pznovm');
-  src:  url('#{$icomoon-font-path}/gb-font.eot?pznovm#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/gb-font.ttf?pznovm') format('truetype'),
-    url('#{$icomoon-font-path}/gb-font.woff?pznovm') format('woff'),
-    url('#{$icomoon-font-path}/gb-font.svg?pznovm#gb-font') format('svg');
+  src:  url('#{$icomoon-font-path}/gb-font.eot?p4yq8');
+  src:  url('#{$icomoon-font-path}/gb-font.eot?p4yq8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/gb-font.ttf?p4yq8') format('truetype'),
+    url('#{$icomoon-font-path}/gb-font.woff?p4yq8') format('woff'),
+    url('#{$icomoon-font-path}/gb-font.svg?p4yq8#gb-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-.icon- {
+.gb-icon- {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'gb-font' !important;
   speak: none;
@@ -26,6 +26,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gb-icon-directions {
+  &:before {
+    content: $gb-icon-directions;
+  }
+}
+.gb-icon-swap_vertical {
+  &:before {
+    content: $gb-icon-swap_vertical;
+  }
+}
 .gb-icon-walk {
   &:before {
     content: $gb-icon-walk;

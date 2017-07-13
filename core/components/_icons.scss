@@ -24,7 +24,16 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-
+.gb-icon-directions {
+  &:before {
+    content: $gb-icon-directions;
+  }
+}
+.gb-icon-swap-vertical {
+  &:before {
+    content: $gb-icon-swap-vertical;
+  }
+}
 .gb-icon-walk {
   &:before {
     content: $gb-icon-walk;
