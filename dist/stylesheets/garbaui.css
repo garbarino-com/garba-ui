@@ -2081,6 +2081,12 @@ label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.gb-icon-refresh:before {
+  content: ""; }
+
+.gb-icon-location:before {
+  content: ""; }
+
 .gb-icon-directions:before {
   content: ""; }
 

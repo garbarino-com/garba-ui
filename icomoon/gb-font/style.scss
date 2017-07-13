@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'gb-font';
-  src:  url('#{$icomoon-font-path}/gb-font.eot?p4yq8');
-  src:  url('#{$icomoon-font-path}/gb-font.eot?p4yq8#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/gb-font.ttf?p4yq8') format('truetype'),
-    url('#{$icomoon-font-path}/gb-font.woff?p4yq8') format('woff'),
-    url('#{$icomoon-font-path}/gb-font.svg?p4yq8#gb-font') format('svg');
+  src:  url('#{$icomoon-font-path}/gb-font.eot?d48b80');
+  src:  url('#{$icomoon-font-path}/gb-font.eot?d48b80#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/gb-font.ttf?d48b80') format('truetype'),
+    url('#{$icomoon-font-path}/gb-font.woff?d48b80') format('woff'),
+    url('#{$icomoon-font-path}/gb-font.svg?d48b80#gb-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,14 +26,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gb-icon-refresh {
+  &:before {
+    content: $gb-icon-refresh;
+  }
+}
+.gb-icon-location {
+  &:before {
+    content: $gb-icon-location;
+  }
+}
 .gb-icon-directions {
   &:before {
     content: $gb-icon-directions;
   }
 }
-.gb-icon-swap_vertical {
+.gb-icon-swap-vertical {
   &:before {
-    content: $gb-icon-swap_vertical;
+    content: $gb-icon-swap-vertical;
   }
 }
 .gb-icon-walk {

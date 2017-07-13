@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'gb-font';
-  src:  url('fonts/gb-font.eot?p4yq8');
-  src:  url('fonts/gb-font.eot?p4yq8#iefix') format('embedded-opentype'),
-    url('fonts/gb-font.ttf?p4yq8') format('truetype'),
-    url('fonts/gb-font.woff?p4yq8') format('woff'),
-    url('fonts/gb-font.svg?p4yq8#gb-font') format('svg');
+  src:  url('fonts/gb-font.eot?d48b80');
+  src:  url('fonts/gb-font.eot?d48b80#iefix') format('embedded-opentype'),
+    url('fonts/gb-font.ttf?d48b80') format('truetype'),
+    url('fonts/gb-font.woff?d48b80') format('woff'),
+    url('fonts/gb-font.svg?d48b80#gb-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,10 +24,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gb-icon-refresh:before {
+  content: "\e953";
+}
+.gb-icon-location:before {
+  content: "\e954";
+}
 .gb-icon-directions:before {
   content: "\e951";
 }
-.gb-icon-swap_vertical:before {
+.gb-icon-swap-vertical:before {
   content: "\e952";
 }
 .gb-icon-walk:before {

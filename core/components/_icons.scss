@@ -24,6 +24,16 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.gb-icon-refresh {
+  &:before {
+    content: $gb-icon-refresh;
+  }
+}
+.gb-icon-location {
+  &:before {
+    content: $gb-icon-location;
+  }
+}
 .gb-icon-directions {
   &:before {
     content: $gb-icon-directions;
