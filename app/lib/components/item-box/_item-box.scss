@@ -71,7 +71,7 @@
 // Título de ítem
 .item-box__title {
   @include multi-line-ellipsis($box-item-title-height * 2);
-  color: $box-item-title;
+  color: $box-item-title !important;
   font-size: $font-size-lg;
   line-height: $box-item-title-height;
   margin-bottom: $box-item-spacing;
