@@ -129,7 +129,7 @@
     }
 
     .item-box__title {
-      color: $box-item-disabled-title-color;
+      color: $box-item-disabled-title-color !important;
       opacity: $box-item-overlay-opacity;
     }
   }
