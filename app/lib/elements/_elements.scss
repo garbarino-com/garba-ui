@@ -3,3 +3,70 @@
 // Los Elements son los bloques de construcción más básicos del framework.
 //
 // Styleguide Elements
+
+
+
+// Helper classes
+//
+// Son variaciones de elementos y estados que son compartidos y aplicables a
+// todos los elementos. No se deben usar estos estados para los elementos y
+// componentes que ya tienen definidos un estilos visual para estos estados.
+//
+// .element__is-active - El elemento está *active*.
+// .element__is-loading - El elemento está *cargando*.
+// .element__is-disabled - El elemento está *deshabilitado*.
+//
+// Markup: element.hbs
+//
+// Styleguide Elements.Helpers
+
+
+
+.element__is-active {
+  border: 1px solid $element-is-active;
+  border-radius: $border-radius-base;
+  box-shadow: 0 0 $input-border-focus-shadow-lenght 0 rgba($element-is-active,
+    $input-border-focus-opacity);
+  outline: 0;
+}
+
+
+
+.element__is-loading,
+.element__is-disabled {
+  @include clearfix;
+  position: relative;
+
+  &::before {
+    @include make-pseudo-element;
+    bottom: 0;
+    left: 0;
+    opacity: $modifier-scale-value;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.element__is-loading {
+  &::before {
+    background-color: $element-is-loading-bg;
+  }
+
+  &::after {
+    @include add-spinner($btn-spinner-base-size, $btn-spinner-border-width,
+      $btn-spinner-color-inactive, $btn-spinner-color-active);
+    left: 50%;
+    margin-left: ($btn-spinner-base-size / 2) * -1;
+    margin-top: ($btn-spinner-base-size / 2) * -1;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+  }
+}
+
+.element__is-disabled {
+  &::before {
+    background-color: $element-is-disabled-bg;
+  }
+}
