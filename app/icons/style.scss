@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'garba-icon-font';
-  src:  url('#{$icomoon-font-path}/garba-icon-font.eot?vjwa7u');
-  src:  url('#{$icomoon-font-path}/garba-icon-font.eot?vjwa7u#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/garba-icon-font.ttf?vjwa7u') format('truetype'),
-    url('#{$icomoon-font-path}/garba-icon-font.woff?vjwa7u') format('woff'),
-    url('#{$icomoon-font-path}/garba-icon-font.svg?vjwa7u#garba-icon-font') format('svg');
+  src:  url('#{$icomoon-font-path}/garba-icon-font.eot?nhtp75');
+  src:  url('#{$icomoon-font-path}/garba-icon-font.eot?nhtp75#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/garba-icon-font.ttf?nhtp75') format('truetype'),
+    url('#{$icomoon-font-path}/garba-icon-font.woff?nhtp75') format('woff'),
+    url('#{$icomoon-font-path}/garba-icon-font.svg?nhtp75#garba-icon-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-refresh {
+  &:before {
+    content: $icon-refresh;
+  }
+}
+.icon-location {
+  &:before {
+    content: $icon-location;
+  }
+}
+.icon-directions {
+  &:before {
+    content: $icon-directions;
+  }
+}
+.icon-swap-vertical {
+  &:before {
+    content: $icon-swap-vertical;
+  }
+}
+.icon-walk {
+  &:before {
+    content: $icon-walk;
+  }
+}
+.icon-transit {
+  &:before {
+    content: $icon-transit;
+  }
+}
+.icon-transportation {
+  &:before {
+    content: $icon-transportation;
+  }
+}
 .icon-arrow-left {
   &:before {
     content: $icon-arrow-left;
@@ -236,11 +271,6 @@
     content: $icon-list-view;
   }
 }
-.icon-location {
-  &:before {
-    content: $icon-location;
-  }
-}
 .icon-marker {
   &:before {
     content: $icon-marker;
@@ -299,11 +329,6 @@
 .icon-question-mark-circle {
   &:before {
     content: $icon-question-mark-circle;
-  }
-}
-.icon-refresh {
-  &:before {
-    content: $icon-refresh;
   }
 }
 .icon-search {

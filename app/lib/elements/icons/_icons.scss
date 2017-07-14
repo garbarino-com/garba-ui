@@ -26,6 +26,7 @@
 // .icon-cross-circle - Ícono
 // .icon-dashboard - Ícono
 // .icon-dialog - Ícono
+// .icon-directions - Ícono
 // .icon-double-thin-arrow-botom - Ícono
 // .icon-double-thin-arrow-left - Ícono
 // .icon-double-thin-arrow-right - Ícono
@@ -82,7 +83,9 @@
 // .icon-star - Ícono
 // .icon-star-half-left - Ícono
 // .icon-star-half-right - Ícono
+// .icon-swap-vertical - Ícono
 // .icon-tag - Ícono
+// .icon-transit - Ícono
 // .icon-trash - Ícono
 // .icon-trash2 - Ícono
 // .icon-twitter - Ícono
@@ -90,6 +93,7 @@
 // .icon-user - Ícono
 // .icon-users - Ícono
 // .icon-video - Ícono
+// .icon-walk - Ícono
 // .icon-whatsapp - Ícono
 // .icon-youtube - Ícono
 //
@@ -133,12 +137,44 @@
   }
 }
 
-.icon-close::before {
-  content: $icon-close;
+.icon-refresh::before {
+  content: $icon-refresh;
+}
+
+.icon-location::before {
+  content: $icon-location;
+}
+
+.icon-directions::before {
+  content: $icon-directions;
+}
+
+.icon-swap-vertical::before {
+  content: $icon-swap-vertical;
+}
+
+.icon-walk::before {
+  content: $icon-walk;
+}
+
+.icon-transit::before {
+  content: $icon-transit;
+}
+
+.icon-transportation::before {
+  content: $icon-transportation;
+}
+
+.icon-arrow-left::before {
+  content: $icon-arrow-left;
 }
 
 .icon-bag::before {
   content: $icon-bag;
+}
+
+.icon-bag2::before {
+  content: $icon-bag2;
 }
 
 .icon-bank::before {
@@ -157,6 +193,10 @@
   content: $icon-cart;
 }
 
+.icon-cash::before {
+  content: $icon-cash;
+}
+
 .icon-checkmark::before {
   content: $icon-checkmark;
 }
@@ -167,6 +207,10 @@
 
 .icon-clock::before {
   content: $icon-clock;
+}
+
+.icon-close::before {
+  content: $icon-close;
 }
 
 .icon-cross::before {
@@ -277,10 +321,6 @@
   content: $icon-info;
 }
 
-.icon-exclamation-mark-circle::before {
-  content: $icon-exclamation-mark-circle;
-}
-
 .icon-instagram::before {
   content: $icon-instagram;
 }
@@ -349,6 +389,10 @@
   content: $icon-shipping;
 }
 
+.icon-shipping-2::before {
+  content: $icon-shipping-2;
+}
+
 .icon-shop::before {
   content: $icon-shop;
 }
@@ -409,8 +453,16 @@
   content: $icon-trash;
 }
 
+.icon-trash2::before {
+  content: $icon-trash2;
+}
+
 .icon-twitter::before {
   content: $icon-twitter;
+}
+
+.icon-two-card::before {
+  content: $icon-two-card;
 }
 
 .icon-user::before {
@@ -433,36 +485,5 @@
   content: $icon-youtube;
 }
 
-.icon-two-card::before {
-  content: $icon-two-card;
-}
-
-.icon-shipping-2::before {
-  content: $icon-shipping-2;
-}
-
-.icon-cash::before {
-  content: $icon-cash;
-}
-
-.icon-bag2::before {
-  content: $icon-bag2;
-}
-
-.icon-trash2::before {
-  content: $icon-trash2;
-}
-
-.icon-arrow-left::before {
-  content: $icon-arrow-left;
-}
-
-.icon-refresh::before {
-  content: $icon-refresh;
-}
-
-.icon-location::before {
-  content: $icon-location;
-}
 
 
