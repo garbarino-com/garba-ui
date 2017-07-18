@@ -4602,22 +4602,6 @@ select[multiple].form-control--sm {
   top: 0.5rem;
 }
 
-.control-group--sm .form-control {
-  font-size: 0.85714rem;
-  height: 2rem;
-  padding: 0.5rem;
-}
-
-select.control-group--sm .form-control {
-  height: 2rem;
-  line-height: 1;
-}
-
-textarea.control-group--sm .form-control,
-select[multiple].control-group--sm .form-control {
-  height: auto;
-}
-
 input[type="radio"],
 input[type="checkbox"] {
   -webkit-appearance: none;
@@ -5050,6 +5034,22 @@ fieldset[disabled] .control-group__addon:focus, .control-group__addon.control__i
 .control-group__addon .control-group__addon--sm,
 .control-group--sm .control-group__addon {
   font-size: 0.85714rem;
+}
+
+.control-group--sm .form-control {
+  font-size: 0.85714rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+select.control-group--sm .form-control {
+  height: 2rem;
+  line-height: 1;
+}
+
+textarea.control-group--sm .form-control,
+select[multiple].control-group--sm .form-control {
+  height: auto;
 }
 
 .container {
