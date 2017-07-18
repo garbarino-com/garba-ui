@@ -252,12 +252,6 @@ select[multiple] {
 
 
 // Small input variant
-@include input-size(
-  ".form-control--sm,
-  .control-group--sm .form-control",
-  $font-size-sm,
-  $block-size-sm,
-  $spacer-sm
-);
+@include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);
 
 // stylelint-enable selector-no-qualifying-type, selector-no-type

@@ -38,8 +38,32 @@
   }
 
   // Validation feedback
-  .form-horizontal [class*="block__has-"] #{$parent} ~ .block-validation--feedback {
+  .form-horizontal #{$parent} ~ .block-validation--feedback {
     top: $padding;
+  }
+}
+
+
+
+// Control group size
+//
+// [converter] $parent hack
+
+@mixin control-group-size($parent, $font-size, $height, $padding) {
+  #{$parent} {
+    font-size: $font-size;
+    height: $height;
+    padding: $padding;
+  }
+
+  select#{$parent} {
+    height: $height;
+    line-height: 1;
+  }
+
+  textarea#{$parent},
+  select[multiple]#{$parent} {
+    height: auto;
   }
 }
 

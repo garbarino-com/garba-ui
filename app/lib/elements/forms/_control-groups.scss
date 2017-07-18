@@ -1,7 +1,9 @@
 // Control groups
 //
 // Se usa para ubicar extensiones a alguno de los dos lados de un `.form-control`.
-// Se puede usar de ambos lados del control pero sólo uno por grupo (por el momento).
+// * Se puede usar de ambos lados del control pero sólo uno por grupo (por el momento).
+// * Los `control-groups` no soportan el uso de íconos de feedback, el estado
+// de error sólo muestra el mensaje con detalle del error.
 //
 // .block__is-disabled - El bloque está deshabilitado *(es conveniente agregar el
 // atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad de css
@@ -114,3 +116,9 @@ $control-group-font-weight: $font-weight-base;
 .control-group--sm .control-group__addon {
   font-size: $font-size-sm;
 }
+
+
+
+// Small control-group variant
+@include control-group-size(".control-group--sm .form-control", $font-size-sm,
+  $block-size-sm, $spacer-sm);

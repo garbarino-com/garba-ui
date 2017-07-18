@@ -4578,34 +4578,44 @@ select[multiple].form-control {
   padding-top: 0.5rem;
 }
 
-.form-control--sm,
+.form-control--sm {
+  font-size: 0.85714rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.form-control--sm ~ .block-validation--feedback {
+  top: 2.5rem;
+}
+
+select.form-control--sm {
+  height: 2rem;
+  line-height: 1;
+}
+
+textarea.form-control--sm,
+select[multiple].form-control--sm {
+  height: auto;
+}
+
+.form-horizontal .form-control--sm ~ .block-validation--feedback {
+  top: 0.5rem;
+}
+
 .control-group--sm .form-control {
   font-size: 0.85714rem;
   height: 2rem;
   padding: 0.5rem;
 }
 
-.form-control--sm ~ .block-validation--feedback,
-.control-group--sm .form-control ~ .block-validation--feedback {
-  top: 2.5rem;
-}
-
-select.form-control--sm,
-.control-group--sm .form-control {
+select.control-group--sm .form-control {
   height: 2rem;
   line-height: 1;
 }
 
-textarea.form-control--sm,
-.control-group--sm .form-control,
-select[multiple].form-control--sm,
-.control-group--sm .form-control {
+textarea.control-group--sm .form-control,
+select[multiple].control-group--sm .form-control {
   height: auto;
-}
-
-.form-horizontal [class*="block__has-"] .form-control--sm,
-.control-group--sm .form-control ~ .block-validation--feedback {
-  top: 0.5rem;
 }
 
 input[type="radio"],
