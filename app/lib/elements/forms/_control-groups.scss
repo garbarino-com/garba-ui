@@ -1,0 +1,116 @@
+// Control groups
+//
+// Se usa para ubicar extensiones a alguno de los dos lados de un `.form-control`.
+// Se puede usar de ambos lados del control pero sólo uno por grupo (por el momento).
+//
+// .block__is-disabled - El bloque está deshabilitado *(es conveniente agregar el
+// atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad de css
+// `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+// .control-group--sm - Única variable de tamaño (por el momento). El alto del
+// `<input>` está atado al alto de la variable de botón `.button--sm`.
+//
+// Markup: control-groups.hbs
+//
+// Styleguide Elements.Forms.8-ControlGroups
+
+
+$zindex-control-group: 2;
+$control-group-color: $gray-medium;
+$control-group-padding: $input-padding;
+$control-group-font-weight: $font-weight-base;
+
+.control-group {
+  border-collapse: separate;
+  display: table;
+  position: relative; // Para cuando se usa con dropdowns.
+
+  // Anula el padding y el float para las clases de grilla
+  &[class*="col-"] {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-control {
+    float: left;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: $zindex-control-group;
+
+    // Aumenta el z-index cuando el input está en :focus
+    &:focus {
+      z-index: $zindex-control-group + 1;
+    }
+  }
+}
+
+
+
+.control-group__addon,
+.control-group .form-control {
+  display: table-cell;
+}
+
+
+
+// Text input groups
+.control-group__addon {
+  background-color: $input-bg;
+  border: 1px solid $input-border-color;
+  border-radius: $border-radius-base;
+  color: $control-group-color;
+  font-size: $font-size-base;
+  font-weight: $control-group-font-weight;
+  line-height: 1;
+  padding-left: $control-group-padding;
+  padding-right: $control-group-padding;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 1%;
+
+  // stylelint-disable selector-no-qualifying-type, selector-no-type
+
+  // Elimina los márgenes default para checkboxes y radios para que se
+  // centren verticalmente.
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-top: 0;
+  }
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] &,
+  &.control__is-disabled,
+  .block__is-disabled &,
+  .block__is-disabled[class*="block__has-"] & {
+    @include state-disabled;
+  }
+
+  // stylelint-enable selector-no-qualifying-type, selector-no-type
+}
+
+
+// Add-on al principio del grupo
+.control-group .form-control:first-child,
+.control-group__addon:first-child {
+  @include border-radius-right(0);
+  border-right: 0;
+}
+
+
+// Add-on al final del grupo
+.control-group .form-control:last-child,
+.control-group__addon:last-child {
+  @include border-radius-left(0);
+  border-left: 0;
+}
+
+// Small control group variant
+.control-group__addon .control-group__addon--sm,
+.control-group--sm .control-group__addon {
+  font-size: $font-size-sm;
+}

@@ -137,11 +137,10 @@ textarea {
 // > Noten que el `<select>` nativo de Safari y Chrome tiene unos bordes redondeados
 // que no se pueden modificar vía la propiedad `border-radius`.
 //
-// :focus - El campo está seleccionado.
 // .control__is-disabled - El campo está deshabilitado *(es necesario agregar el atributo
 // `disabled` al `<input>` o al `<fieldset>` contenedor)*.
-// .form-control--sm - Única variable de tamaño (por el momento). El alto de este
-// input está atado al alto de la variable de botón `.button--sm`.
+// .form-control--sm - Única variable de tamaño (por el momento). El alto del
+// `<input>` está atado al alto de la variable de botón `.button--sm`.
 //
 // Markup: form-controls.hbs
 //
@@ -190,15 +189,7 @@ textarea {
   &.control__is-disabled,
   .block__is-disabled &,
   .block__is-disabled[class*="block__has-"] & {
-    &,
-    &:hover,
-    &:focus {
-      background-color: $input-bg-disabled;
-      border-color: $input-border-color;
-      box-shadow: none;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
+    @include state-disabled;
   }
 
   &:-webkit-autofill {
@@ -261,6 +252,12 @@ select[multiple] {
 
 
 // Small input variant
-@include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);
+@include input-size(
+  ".form-control--sm,
+  .control-group--sm .form-control",
+  $font-size-sm,
+  $block-size-sm,
+  $spacer-sm
+);
 
 // stylelint-enable selector-no-qualifying-type, selector-no-type

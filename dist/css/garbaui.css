@@ -4261,7 +4261,7 @@ fieldset[disabled].button--facebook:focus,
 }
 
 .button--action__fav > i::before {
-  content: "";
+  content: "";
 }
 
 .button--action__fav:focus > i {
@@ -4300,7 +4300,7 @@ fieldset[disabled].button--facebook:focus,
 }
 
 .button--action__default > i::before {
-  content: "";
+  content: "";
 }
 
 .button--action__facebook {
@@ -4578,27 +4578,33 @@ select[multiple].form-control {
   padding-top: 0.5rem;
 }
 
-.form-control--sm {
+.form-control--sm,
+.control-group--sm .form-control {
   font-size: 0.85714rem;
   height: 2rem;
   padding: 0.5rem;
 }
 
-.form-control--sm ~ .block-validation--feedback {
+.form-control--sm ~ .block-validation--feedback,
+.control-group--sm .form-control ~ .block-validation--feedback {
   top: 2.5rem;
 }
 
-select.form-control--sm {
+select.form-control--sm,
+.control-group--sm .form-control {
   height: 2rem;
   line-height: 1;
 }
 
 textarea.form-control--sm,
-select[multiple].form-control--sm {
+.control-group--sm .form-control,
+select[multiple].form-control--sm,
+.control-group--sm .form-control {
   height: auto;
 }
 
-.form-horizontal [class*="block__has-"] .form-control--sm ~ .block-validation--feedback {
+.form-horizontal [class*="block__has-"] .form-control--sm,
+.control-group--sm .form-control ~ .block-validation--feedback {
   top: 0.5rem;
 }
 
@@ -4892,17 +4898,20 @@ label.checkbox-box > img {
 }
 
 .block__has-error > .form-control,
-.block__has-error > div > .form-control {
+.block__has-error > div > .form-control,
+.block__has-error .control-group__addon {
   border: 1px solid #D35F53;
 }
 
 .block__has-error > .form-control:hover,
-.block__has-error > div > .form-control:hover {
+.block__has-error > div > .form-control:hover,
+.block__has-error .control-group__addon:hover {
   border-color: #e39890;
 }
 
 .block__has-error > .form-control:focus,
-.block__has-error > div > .form-control:focus {
+.block__has-error > div > .form-control:focus,
+.block__has-error .control-group__addon:focus {
   border-color: #e39890;
   box-shadow: 0 0 4px 0 rgba(211, 95, 83, 0.6);
 }
@@ -4945,6 +4954,92 @@ label.checkbox-box > img {
 .block__has-error > .block-validation--feedback::before,
 .block__has-error > div > .block-validation--feedback::before {
   content: "";
+}
+
+.control-group {
+  border-collapse: separate;
+  display: table;
+  position: relative;
+}
+
+.control-group[class*="col-"] {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.control-group .form-control {
+  float: left;
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.control-group .form-control:focus {
+  z-index: 3;
+}
+
+.control-group__addon,
+.control-group .form-control {
+  display: table-cell;
+}
+
+.control-group__addon {
+  background-color: #FFF;
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
+  color: #C4C4C4;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.control-group__addon input[type="radio"],
+.control-group__addon input[type="checkbox"] {
+  margin-top: 0;
+}
+
+.control-group__addon[disabled], .control-group__addon[disabled]:hover, .control-group__addon[disabled]:focus, .control-group__addon[readonly], .control-group__addon[readonly]:hover, .control-group__addon[readonly]:focus,
+fieldset[disabled] .control-group__addon,
+fieldset[disabled] .control-group__addon:hover,
+fieldset[disabled] .control-group__addon:focus, .control-group__addon.control__is-disabled, .control-group__addon.control__is-disabled:hover, .control-group__addon.control__is-disabled:focus,
+.block__is-disabled .control-group__addon,
+.block__is-disabled .control-group__addon:hover,
+.block__is-disabled .control-group__addon:focus,
+.block__is-disabled[class*="block__has-"] .control-group__addon,
+.block__is-disabled[class*="block__has-"] .control-group__addon:hover,
+.block__is-disabled[class*="block__has-"] .control-group__addon:focus {
+  background-color: #F6F6F6;
+  border-color: #C4C4C4;
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.control-group .form-control:first-child,
+.control-group__addon:first-child {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+}
+
+.control-group .form-control:last-child,
+.control-group__addon:last-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-left: 0;
+}
+
+.control-group__addon .control-group__addon--sm,
+.control-group--sm .control-group__addon {
+  font-size: 0.85714rem;
 }
 
 .container {

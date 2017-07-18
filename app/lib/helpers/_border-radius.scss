@@ -1,0 +1,60 @@
+// @border-radius-top($radius)
+//
+// Asigna un valor común a la propiedad `border-radius` de arriba del elemento.
+//
+// $radius - Valor de la propiedad `border-radius`.
+//
+// Styleguide Helpers.BorderRadius.BorderRadiusTop
+
+@mixin border-radius-top($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+
+
+// @border-radius-right($radius)
+//
+// Asigna un valor común a la propiedad `border-radius` del lado derecho
+// del elemento.
+//
+// $radius - Valor de la propiedad `border-radius`.
+//
+// Styleguide Helpers.BorderRadius.BorderRadiusRight
+
+
+@mixin border-radius-right($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+
+
+// @border-radius-bottom($radius)
+//
+// Asigna un valor común a la propiedad `border-radius` de abajo del elemento.
+//
+// $radius - Valor de la propiedad `border-radius`.
+//
+// Styleguide Helpers.BorderRadius.BorderRadiusRight
+
+@mixin border-radius-bottom($radius) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+
+
+// @border-radius-left($radius)
+//
+// Asigna un valor común a la propiedad `border-radius` del lado izquierdo
+// del elemento.
+//
+// $radius - Valor de la propiedad `border-radius`.
+//
+// Styleguide Helpers.BorderRadius.BorderRadiusLeft
+
+@mixin border-radius-left($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}

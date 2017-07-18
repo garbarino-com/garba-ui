@@ -58,6 +58,21 @@
 
 
 
+// Disabled state
+@mixin state-disabled {
+  &,
+  &:hover,
+  &:focus {
+    background-color: $input-bg-disabled;
+    border-color: $input-border-color;
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+
+
 // Placeholder mixin
 @mixin placeholder($color: $input-color-placeholder) {
   // stylelint-disable selector-no-vendor-prefix
@@ -102,7 +117,8 @@
   $focus-color: state-focus-modifier($color);
 
   > .form-control,
-  > div > .form-control {
+  > div > .form-control,
+  .control-group__addon {
     border: 1px solid $color;
 
     &:hover {
@@ -144,7 +160,7 @@
     border-color: $color;
   }
 
-  // Feddback elements
+  // Feedback elements
   > .block-validation--feedback,
   > .block-validation--note,
   > div > .block-validation--feedback,
