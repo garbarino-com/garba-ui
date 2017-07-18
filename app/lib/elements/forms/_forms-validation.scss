@@ -5,9 +5,14 @@
     padding-right: ($input-padding * 2) + $block-has-feedback-size;
   }
 
-  // Feedback positioning
+  // Position del feedback si no hay `<label>`
   ~ .block-validation--feedback {
     right: $input-padding;
+    top: $input-padding;
+  }
+
+  // Position del feedback si el `.form-control` está precedido por un `<label>`
+  label ~ & ~ .block-validation--feedback {
     top: $line-height-computed + $form-label-spacing + $input-padding;
   }
 }
