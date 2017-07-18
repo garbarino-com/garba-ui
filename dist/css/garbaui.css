@@ -4846,6 +4846,10 @@ label.checkbox-box > img {
 
 .form-control ~ .block-validation--feedback {
   right: 1rem;
+  top: 1rem;
+}
+
+label ~ .form-control ~ .block-validation--feedback {
   top: 3rem;
 }
 
