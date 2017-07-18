@@ -31,30 +31,62 @@ $baseline-grid:                  14px;
 $baseline-grid-computed:         px-to-rem($baseline-grid);
 
 
-// Color Palette
+// Paleta principal
 //
-// Brand color palette
+// #D1030F - $brand-corporate
+// #0084E0 - $brand-primary
+// #6B6B6B - $brand-secondary
+// #16A401 - $brand-revenue
+//
+// Markup: ../elements/palette.hbs
+//
+// Styleguide Elements.1-Palette
+
 $brand-corporate:        #D1030F !default;
 $brand-primary:          #0084E0 !default;
 $brand-secondary:        #6B6B6B !default;
 $brand-revenue:          #16A401 !default;
-
-$brand-disabled:          #9E9E9E !default;
-$brand-disabled-bg:       #E2E2E2 !default;
-$brand-disabled-cursor:   not-allowed !default;
-
-// States palette
-$brand-success:          #4DA02E !default;
-$brand-error:            #D35F53 !default;
-$brand-warning:          #CE9433 !default;
-$brand-info:             #3584D9 !default;
 
 // Alt Fav
 // TODO(ecalvi): This is an inconsistency. We are defining this variable so this
 // color is used only once.
 $brand-altfav:           #F8AA29 !default;
 
-//## Gray and brand colors for use across Framework.
+// Paleta de estados
+//
+// #4DA02E - $brand-success
+// #D35F53 - $brand-error
+// #CE9433 - $brand-warning
+// #3584D9 - $brand-info
+// #9E9E9E - $brand-disabled
+//
+// Markup: ../elements/palette.hbs
+//
+// Styleguide Elements.1-Palette.1-StatesPalette
+
+$brand-disabled:          #9E9E9E !default;
+$brand-disabled-bg:       #E2E2E2 !default;
+$brand-disabled-cursor:   not-allowed !default;
+
+$brand-success:          #4DA02E !default;
+$brand-error:            #D35F53 !default;
+$brand-warning:          #CE9433 !default;
+$brand-info:             #3584D9 !default;
+
+
+// Paleta de grises
+//
+// #000 - $gray-base
+// #6B6B6B - $gray-darker
+// #9E9E9E - $gray-dark
+// #C4C4C4 - $gray-medium
+// #E2E2E2 - $gray-light
+// #F6F6F6 - $gray-lighter
+//
+// Markup: ../elements/palette.hbs
+//
+// Styleguide Elements.1-Palette.1-GrayPalette
+
 $gray-base:              #000 !default;
 $gray-darker:            $brand-secondary !default;
 $gray-dark:              $brand-disabled !default;
