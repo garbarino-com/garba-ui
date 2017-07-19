@@ -4540,9 +4540,39 @@ fieldset[disabled] .form-control:focus, .form-control.control__is-disabled, .for
   background-color: inherit !important;
 }
 
+[class*="block__has-"] .form-block__helper ~ .form-control {
+  padding-right: 3rem;
+}
+
 textarea.form-control,
 select[multiple].form-control {
   height: auto;
+}
+
+.form-control--sm {
+  font-size: 0.85714rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.form-control--sm ~ .form-block__feedback,
+.form-control--sm ~ .form-block__helper {
+  top: 2.5rem;
+}
+
+select.form-control--sm {
+  height: 2rem;
+  line-height: 1;
+}
+
+textarea.form-control--sm,
+select[multiple].form-control--sm {
+  height: auto;
+}
+
+.form-horizontal .form-control--sm ~ .form-block__feedback,
+.form-horizontal .form-control--sm ~ .form-block__helper {
+  top: 0.5rem;
 }
 
 .form-horizontal .form-block {
@@ -4576,30 +4606,6 @@ select[multiple].form-control {
   font-size: 0.85714rem;
   margin-bottom: 0.25rem;
   padding-top: 0.5rem;
-}
-
-.form-control--sm {
-  font-size: 0.85714rem;
-  height: 2rem;
-  padding: 0.5rem;
-}
-
-.form-control--sm ~ .block-validation--feedback {
-  top: 2.5rem;
-}
-
-select.form-control--sm {
-  height: 2rem;
-  line-height: 1;
-}
-
-textarea.form-control--sm,
-select[multiple].form-control--sm {
-  height: auto;
-}
-
-.form-horizontal .form-control--sm ~ .block-validation--feedback {
-  top: 0.5rem;
 }
 
 input[type="radio"],
@@ -4844,28 +4850,32 @@ label.checkbox-box > img {
   padding-right: 3rem;
 }
 
-.form-control ~ .block-validation--feedback {
+.form-control ~ .form-block__feedback {
   right: 1rem;
   top: 1rem;
 }
 
-label ~ .form-control ~ .block-validation--feedback {
+[class*="block__has-"] .form-block__helper ~ .form-control {
+  padding-right: 4rem;
+}
+
+label ~ .form-control ~ .form-block__feedback {
   top: 3rem;
 }
 
-.form-block > div .block-validation--feedback {
+.form-block > div .form-block__feedback {
   right: 2rem;
   top: 1rem;
 }
 
-.block-validation--feedback,
-.block-validation--note {
+.form-block__feedback,
+.form-block__note {
   display: none !important;
   visibility: hidden !important;
   animation: form-block--exit-animation 0.2s ease-in;
 }
 
-.block-validation--feedback {
+.form-block__feedback {
   display: block;
   font-family: "garba-icon-font" !important;
   font-size: 1rem;
@@ -4876,22 +4886,22 @@ label ~ .form-control ~ .block-validation--feedback {
   position: absolute;
 }
 
-.form-block > div .block-validation--feedback {
+.form-block > div .form-block__feedback {
   right: 2rem;
   top: 1rem;
 }
 
-.block-validation--note {
+.form-block__note {
   margin-bottom: 0;
   margin-top: 0.5rem;
 }
 
-.block-validation--note:before, .block-validation--note:after {
+.form-block__note:before, .form-block__note:after {
   content: "";
   display: table;
 }
 
-.block-validation--note:after {
+.form-block__note:after {
   clear: both;
 }
 
@@ -4939,18 +4949,18 @@ label ~ .form-control ~ .block-validation--feedback {
   border-color: #D35F53;
 }
 
-.block__has-error > .block-validation--feedback,
-.block__has-error > .block-validation--note,
-.block__has-error > div > .block-validation--feedback,
-.block__has-error > div > .block-validation--note {
+.block__has-error > .form-block__feedback,
+.block__has-error > .form-block__note,
+.block__has-error > div > .form-block__feedback,
+.block__has-error > div > .form-block__note {
   display: block !important;
   visibility: visible !important;
   animation: form-block--enter-animation 0.2s ease-in;
   color: #D35F53;
 }
 
-.block__has-error > .block-validation--feedback::before,
-.block__has-error > div > .block-validation--feedback::before {
+.block__has-error > .form-block__feedback::before,
+.block__has-error > div > .form-block__feedback::before {
   content: "";
 }
 
@@ -5054,6 +5064,27 @@ select.control-group--sm .form-control {
 textarea.control-group--sm .form-control,
 select[multiple].control-group--sm .form-control {
   height: auto;
+}
+
+.form-block__helper {
+  color: #3584D9;
+  line-height: 1;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.form-block__helper ~ .form-block__feedback {
+  right: 2.5rem;
+}
+
+.form-block__helper[disabled] ~ .form-block__helper,
+.form-block__helper[readonly] ~ .form-block__helper,
+fieldset[disabled] ~ .form-block__helper,
+.control__is-disabled ~ .form-block__helper,
+.block__is-disabled .form-block__helper,
+.block__is-disabled[class*="block__has-"] .form-block__helper {
+  color: #9E9E9E;
 }
 
 .container {

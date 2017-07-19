@@ -1,0 +1,108 @@
+// Form Control
+//
+// Usamos la clase `.form-control` para darle estilos a los elementos de input
+// textuales de los *forms*.
+//
+// *Esta clase puede usar en los siguientes elementos de form:*
+// * `select`
+// * `textarea`
+// * `input[type="text"]`
+// * `input[type="password"]`
+// * `input[type="datetime"]`
+// * `input[type="datetime-local]`
+// * `input[type="date"]`
+// * `input[type="month"]`
+// * `input[type="time"]`
+// * `input[type="week"]`
+// * `input[type="number"]`
+// * `input[type="email"]`
+// * `input[type="url"]`
+// * `input[type="search"]`
+// * `input[type="tel"]`
+// * `input[type="color"]`
+// > Noten que el `<select>` nativo de Safari y Chrome tiene unos bordes redondeados
+// que no se pueden modificar vía la propiedad `border-radius`.
+//
+// .control__is-disabled - El campo está deshabilitado *(es necesario agregar el atributo
+// `disabled` al `<input>` o al `<fieldset>` contenedor)*.
+// .form-control--sm - Única variable de tamaño (por el momento). El alto del
+// `<input>` está atado al alto de la variable de botón `.button--sm`.
+//
+// Markup: form-controls.hbs
+//
+// Styleguide Elements.Forms.1-FormControl
+
+
+
+// stylelint-disable selector-no-qualifying-type, selector-no-type
+
+.form-control {
+  background-color: $input-bg;
+
+  // Reset unusual Firefox-on-Android default style;
+  //see https://github.com/necolas/normalize.css/issues/214
+  background-image: none;
+
+  border: 1px solid $input-border-color;
+
+  // Note: This has no effect on <select>s in some browsers,
+  // due to the limited stylability of <select>s in CSS.
+  border-radius: $border-radius-base;
+
+  color: $input-color;
+  display: block;
+  font-size: $font-size-base;
+
+  // Make inputs at least the height of their button counterpart
+  // (base line-height + padding + border)
+  height: $input-height;
+
+  line-height: 1;
+  padding: $input-padding;
+  transition: border-color ease-in-out $transition-timing-base,
+    box-shadow ease-in-out $transition-timing-base;
+  width: 100%;
+
+  select#{&} {
+    line-height: 1;
+  }
+
+  // Placeholder
+  @include placeholder;
+
+  // Focus state
+  @include form-control-focus;
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] &,
+  &.control__is-disabled,
+  .block__is-disabled &,
+  .block__is-disabled[class*="block__has-"] & {
+    @include state-disabled;
+  }
+
+  &:-webkit-autofill {
+    background-color: inherit !important;
+  }
+
+  // Aumenta el padding-right si hay un *helper* en el mismo nivel
+  [class*="block__has-"] .form-block__helper ~ & {
+    padding-right: ($input-padding * 2) + $control-helper-size;
+  }
+}
+
+
+
+// Libera la altura para los `<textarea>`s
+textarea,
+select[multiple] {
+  &.form-control {
+    height: auto;
+  }
+}
+
+// stylelint-enable selector-no-qualifying-type, selector-no-type
+
+// Small control variant
+@include input-size(".form-control--sm", $font-size-sm, $block-size-sm, $spacer-sm);

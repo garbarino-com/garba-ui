@@ -6,15 +6,21 @@
   }
 
   // Position del feedback si no hay `<label>`
-  ~ .block-validation--feedback {
+  ~ .form-block__feedback {
     right: $input-padding;
     top: $input-padding;
+  }
+
+  // Aumenta el padding-right del control si el padre tiene un estado y
+  // hay un *helper* en el mismo nivel
+  [class*="block__has-"] .form-block__helper ~ & {
+    padding-right: ($input-padding * 3) + $control-helper-size;
   }
 
   // stylelint-disable selector-no-type
 
   // Position del feedback si el `.form-control` está precedido por un `<label>`
-  label ~ & ~ .block-validation--feedback {
+  label ~ & ~ .form-block__feedback {
     top: $line-height-computed + $form-label-spacing + $input-padding;
   }
 
@@ -25,7 +31,7 @@
 
 
 // Feedback positioning
-.block-validation--feedback {
+.form-block__feedback {
   .form-block > div & {
     right: ($grid-gutter-width / 2) + $input-padding;
     top: $input-padding;
@@ -35,8 +41,8 @@
 
 
 // Los elementos de feedback están ocultos por default
-.block-validation--feedback,
-.block-validation--note {
+.form-block__feedback,
+.form-block__note {
   @include hide-element;
   animation: form-block--exit-animation ($transition-timing-slow / 4) ease-in;
 }
@@ -44,7 +50,7 @@
 
 
 // Form feedback elements
-.block-validation--feedback {
+.form-block__feedback {
   @include icon-element($block-has-feedback-size);
   position: absolute;
 
@@ -55,7 +61,7 @@
   }
 }
 
-.block-validation--note {
+.form-block__note {
   @include clearfix;
   margin-bottom: 0;
   margin-top: $spacer-sm;

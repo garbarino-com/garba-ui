@@ -22,7 +22,8 @@
     padding: $padding;
 
     // Feedback positioning
-    ~ .block-validation--feedback {
+    ~ .form-block__feedback,
+    ~ .form-block__helper {
       top: $line-height-computed + $form-label-spacing + $padding;
     }
   }
@@ -38,7 +39,8 @@
   }
 
   // Validation feedback
-  .form-horizontal #{$parent} ~ .block-validation--feedback {
+  .form-horizontal #{$parent} ~ .form-block__feedback,
+  .form-horizontal #{$parent} ~ .form-block__helper {
     top: $padding;
   }
 }
@@ -185,17 +187,17 @@
   }
 
   // Feedback elements
-  > .block-validation--feedback,
-  > .block-validation--note,
-  > div > .block-validation--feedback,
-  > div > .block-validation--note {
+  > .form-block__feedback,
+  > .form-block__note,
+  > div > .form-block__feedback,
+  > div > .form-block__note {
     @include show-element;
     animation: form-block--enter-animation ($transition-timing-slow / 4) ease-in;
     color: $color;
   }
 
-  > .block-validation--feedback,
-  > div > .block-validation--feedback, {
+  > .form-block__feedback,
+  > div > .form-block__feedback, {
     &::before {
       content: $icon;
     }

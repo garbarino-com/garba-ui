@@ -386,6 +386,10 @@ $block-has-feedback-size:            $icon-size-base !default;
 $block-label-font-weight:            $font-weight-base !default;
 $block-label-font-weight-selected:   700 !default;
 
+$control-helper-color:              $brand-info !default;
+$control-helper-disabled:           $brand-disabled !default;
+$control-helper-size:               $icon-size-base !default;
+
 $input-bg:                           $widget-bg !default;
 $input-padding:                      $spacer-base !default;
 $input-bg-disabled:                  $gray-lighter !default;

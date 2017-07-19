@@ -1,0 +1,45 @@
+// Control Helpers
+//
+// Se usan para dar orientación al usuario respecto a la acción requerida por el
+// campo de form.
+// > ### Algunas consideraciones:
+// * No está disponible para ser usar junto en `.form-control--sm`.
+// * Tampoco se pueden usar junto con los control-groups`.
+//
+// .block__is-disabled - El bloque está deshabilitado *(es conveniente agregar el
+// atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad de css
+// `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+//
+// Markup: control-helpers.hbs
+//
+// Styleguide Elements.Forms.9-FormControlHelpers
+
+.form-block__helper {
+  color: $control-helper-color;
+  line-height: 1;
+  position: absolute;
+  right: $input-padding;
+  top: $input-padding;
+
+  // Position del feedback si no hay `<label>`
+  ~ .form-block__feedback {
+    right: $control-helper-size + ($input-padding / 2) + $block-has-feedback-size;
+  }
+
+  // stylelint-disable selector-no-type, selector-no-qualifying-type
+
+  // Disabled state
+  &[disabled] ~ &,
+  &[readonly] ~ &,
+  fieldset[disabled] ~ &,
+  .control__is-disabled ~ &,
+  .block__is-disabled &,
+  .block__is-disabled[class*="block__has-"] & {
+    color: $control-helper-disabled;
+  }
+
+  // stylelint-enable selector-no-type, selector-no-qualifying-type
+}
+
