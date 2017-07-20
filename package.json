@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/garbarino-com/garba-ui#readme",
   "precommit": {
-    "tasks" : [
+    "tasks": [
       "npm run sass",
       "npm run lint-css",
       "git add dist/"

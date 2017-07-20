@@ -23,6 +23,7 @@
 // > Noten que el `<select>` nativo de Safari y Chrome tiene unos bordes redondeados
 // que no se pueden modificar vía la propiedad `border-radius`.
 //
+// :focus - Cuando el elemento está `active`.
 // .control__is-disabled - El campo está deshabilitado *(es necesario agregar el atributo
 // `disabled` al `<input>` o al `<fieldset>` contenedor)*.
 // .form-control--sm - Única variable de tamaño (por el momento). El alto del

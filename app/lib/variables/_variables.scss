@@ -299,6 +299,7 @@ $zindex-element:            20 !default;
 $zindex-hover-element:      50 !default;
 $zindex-fixed-button:       1000 !default;
 $zindex-navbar:             1030 !default;
+$zindex-search-results:     1050 !default;
 $zindex-tooltip:            1070 !default;
 
 
@@ -415,6 +416,7 @@ $controler-bg-inactive:              $widget-bg !default;
 $controler-border-inactive:          $gray-medium !default;
 
 
+
 // Control groups
 $control-group-color:                $gray-medium !default;
 $control-group-padding:              $input-padding !default;
@@ -428,6 +430,7 @@ $tooltip-padding:                    $spacer-base $horspacer-large !default;
 $tooltip-opacity:                    $modifier-scale-value !default;
 $tooltip-arrow-size:                 $spacer-sm !default;
 $tooltip-distance:                   $spacer-base !default;
+
 
 
 // Value component
@@ -563,5 +566,20 @@ $carousel-prev-character: $icon-simple-bold-arrow-left !default;
 $carousel-next-character: $icon-simple-bold-arrow-right !default;
 $carousel-bottom-spacer: 2rem !default;
 
+
+// Searchbox
+$search-box-results-bg:                        $widget-bg !default;
+$search-box-results-border:                    $gray-medium !default;
+$search-box-results-padding:                   $input-padding !default;
+$search-box-results-min-height:                14rem !default;
+$search-box-results-max-height:                60rem !default;
+
+$search-box-results-loader-size:               2rem !default;
+
+$search-box-results-heading-bg:                $gray-lighter !default;
+$search-box-results-heading-border:            $gray-light !default;
+$search-box-results-item-bg:                   $search-box-results-bg !default;
+$search-box-results-item-match-font-weight:    700 !default;
+$search-box-results-item-active-bg:            $brand-primary !default;
 
 // stylelint-enable max-line-length, scss/dollar-variable-colon-space-after
