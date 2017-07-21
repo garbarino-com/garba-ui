@@ -4,6 +4,8 @@
 // eros ut viverra laoreet, arcu est bibendum neque, vel ultricies magna sem non
 // elit. Suspendisse potenti.
 //
+// .search-box__has-suggestions - Muestra una alternativa al término de búsqueda
+// ingresado por el usuario (de haber una disponible).
 // .search-box__is-loading - Recibe esta clase en el tiempo entre que se hace el
 // request de resultados y estos son recibidos.
 // .search-box__has-results - Recibe esta clase si el query de búsqueda devuelve
@@ -35,9 +37,10 @@
   top: 100%;
   z-index: $zindex-search-results;
 
-
-  &.search-box__has-results,
-  &.search-box__is-loading {
+  // Muestra la caja de búsqueda diferente de acuerdo a la clase que reciba el
+  // elemento padre.
+  .search-box__has-results > &,
+  .search-box__is-loading > & {
     @include show-element;
   }
 }
@@ -59,6 +62,16 @@
   .search-box__list--item {
     @include hide-element;
   }
+}
+
+// Si el usuario ingresa un término de búsqueda  que no tiene un match exacto se
+// le pueden sugerir alternativas. Agregando esta clase al contenedor padre se
+// muestra un bloque que contiene texto de sugerencia. Usamos para eso el elemento
+// `.form-block__note` que es el mismo que se usa en los forms para dar feedback
+// de error.
+
+.search-box__has-suggestions .form-block__note {
+  @include show-element;
 }
 
 // Result items
