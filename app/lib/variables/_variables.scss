@@ -572,13 +572,14 @@ $search-box-results-bg:                        $widget-bg !default;
 $search-box-results-border:                    $gray-medium !default;
 $search-box-results-padding:                   $input-padding !default;
 $search-box-results-min-height:                14rem !default;
-$search-box-results-max-height:                60rem !default;
+$search-box-results-max-height:                40rem !default;
 
 $search-box-results-loader-size:               2rem !default;
 
 $search-box-results-heading-bg:                $gray-lighter !default;
 $search-box-results-heading-border:            $gray-light !default;
 $search-box-results-item-bg:                   $search-box-results-bg !default;
+$search-box-results-item-color:                $gray-darker !default;
 $search-box-results-item-match-font-weight:    700 !default;
 $search-box-results-item-active-bg:            $brand-primary !default;
 

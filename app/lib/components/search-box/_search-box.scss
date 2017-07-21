@@ -74,17 +74,26 @@
   padding: $search-box-results-padding;
 }
 
-.search-box__list--item {
+.search-box__list--item,
+a.search-box__list--item {
   background-color: $search-box-results-item-bg;
+  color: $search-box-results-item-color;
   padding: $spacer-base;
+  padding-left: $spacer-base * 2;
   transition: background-color ease-in $btn-transition-timing,
     color ease-in $btn-transition-timing;
+
+  &:hover,
+  &:focus,
+  &.active {
+    outline: 0;
+    text-decoration: none;
+  }
 
   &:hover,
   &.item__is-selected {
     background-color: $search-box-results-item-active-bg;
     color: $text-inverse;
-    text-decoration: none;
   }
 
   // Style for text highlighted in search
