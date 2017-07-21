@@ -96,7 +96,19 @@ a.search-box__list--item {
     color: $text-inverse;
   }
 
-  // Style for text highlighted in search
+  &[disabled],
+  &[readonly],
+  &.search-box__list--item__is-disabled {
+    &,
+    &:hover {
+      background-color: $brand-disabled-bg;
+      color: $brand-disabled;
+      cursor: $brand-disabled-cursor;
+      pointer-events: none;
+    }
+  }
+
+  // Highlighted text
   strong {
     font-weight: $search-box-results-item-match-font-weight;
   }
