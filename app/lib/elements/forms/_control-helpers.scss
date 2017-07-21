@@ -14,12 +14,12 @@
 //
 // Markup: control-helpers.hbs
 //
-// Styleguide Elements.Forms.9-FormControlHelpers
+// Styleguide Elements.Forms.09-FormControlHelpers
 
 .form-block__helper {
   color: $control-helper-color;
   line-height: 1;
-  position: absolute;
+  pointer-events: all;
   right: $input-padding;
   top: $input-padding;
 
@@ -31,6 +31,8 @@
   // stylelint-disable selector-no-type, selector-no-qualifying-type
 
   // Disabled state
+  &[disabled] &,
+  &[readonly] &,
   &[disabled] ~ &,
   &[readonly] ~ &,
   fieldset[disabled] ~ &,
@@ -40,6 +42,30 @@
     color: $control-helper-disabled;
   }
 
+  // Aplica position absolute cuando esta clase se usa adentro de un `.form-block`
+  .form-block & {
+    position: absolute;
+  }
+
   // stylelint-enable selector-no-type, selector-no-qualifying-type
 }
 
+
+
+// Control Helpers para checkboxes y radiobuttons
+//
+// Se usan para dar orientación al usuario respecto a la acción requerida por el
+// `checkbox` o el `radiobutton`.
+//
+// A diferencia de cuando se usan dentro de un elemento con `.form-block` (y
+// para un `<input>`), el helper en este contexto aparece inline.
+//
+// .block__is-disabled - El bloque está deshabilitado *(es conveniente agregar el
+// atributo `disabled` al `<input>`o  al `<fieldset>` ya que la propiedad de css
+// `pointer-events:none`
+// [no está del todo soportada](http://caniuse.com/#feat=pointer-events))*.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+//
+// Markup: checkboxes-and-radiobuttons-control-helpers.hbs
+//
+// Styleguide Elements.Forms.10-FormControlHelpersOnRadiosAndCheckboxes

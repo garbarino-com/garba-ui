@@ -87,6 +87,8 @@
   padding: $search-box-results-padding;
 }
 
+// stylelint-disable selector-no-type, selector-no-qualifying-type
+
 .search-box__list--item,
 a.search-box__list--item {
   background-color: $search-box-results-item-bg;
@@ -126,3 +128,5 @@ a.search-box__list--item {
     font-weight: $search-box-results-item-match-font-weight;
   }
 }
+
+// stylelint-enable selector-no-type, selector-no-qualifying-type

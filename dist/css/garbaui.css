@@ -5069,7 +5069,7 @@ select[multiple].control-group--sm .form-control {
 .form-block__helper {
   color: #3584D9;
   line-height: 1;
-  position: absolute;
+  pointer-events: all;
   right: 1rem;
   top: 1rem;
 }
@@ -5078,6 +5078,8 @@ select[multiple].control-group--sm .form-control {
   right: 2.5rem;
 }
 
+.form-block__helper[disabled] .form-block__helper,
+.form-block__helper[readonly] .form-block__helper,
 .form-block__helper[disabled] ~ .form-block__helper,
 .form-block__helper[readonly] ~ .form-block__helper,
 fieldset[disabled] ~ .form-block__helper,
@@ -5085,6 +5087,10 @@ fieldset[disabled] ~ .form-block__helper,
 .block__is-disabled .form-block__helper,
 .block__is-disabled[class*="block__has-"] .form-block__helper {
   color: #9E9E9E;
+}
+
+.form-block .form-block__helper {
+  position: absolute;
 }
 
 .container {
@@ -7272,7 +7278,7 @@ label.list-grid-item input:checked {
   border: 1px solid #C4C4C4;
   border-top: 0;
   left: 0;
-  max-height: 60rem;
+  max-height: 35rem;
   min-height: 14rem;
   overflow: auto;
   position: absolute;
@@ -7281,7 +7287,8 @@ label.list-grid-item input:checked {
   z-index: 1050;
 }
 
-.search-box__list.search-box__has-results, .search-box__list.search-box__is-loading {
+.search-box__has-results > .search-box__list,
+.search-box__is-loading > .search-box__list {
   display: block !important;
   visibility: visible !important;
 }
@@ -7305,6 +7312,11 @@ label.list-grid-item input:checked {
   visibility: hidden !important;
 }
 
+.search-box__has-suggestions .form-block__note {
+  display: block !important;
+  visibility: visible !important;
+}
+
 .search-box__list--heading,
 .search-box__list--item {
   display: inline-block;
@@ -7322,19 +7334,45 @@ label.list-grid-item input:checked {
   padding: 1rem;
 }
 
-.search-box__list--item {
+.search-box__list--item,
+a.search-box__list--item {
   background-color: #FFF;
+  color: #6B6B6B;
   padding: 1rem;
+  padding-left: 2rem;
   transition: background-color ease-in 0.12s, color ease-in 0.12s;
 }
 
-.search-box__list--item:hover, .search-box__list--item.item__is-selected {
-  background-color: #0084E0;
-  color: #FFF;
+.search-box__list--item:hover, .search-box__list--item:focus, .search-box__list--item.active,
+a.search-box__list--item:hover,
+a.search-box__list--item:focus,
+a.search-box__list--item.active {
+  outline: 0;
   text-decoration: none;
 }
 
-.search-box__list--item strong {
+.search-box__list--item:hover, .search-box__list--item.item__is-selected,
+a.search-box__list--item:hover,
+a.search-box__list--item.item__is-selected {
+  background-color: #0084E0;
+  color: #FFF;
+}
+
+.search-box__list--item[disabled], .search-box__list--item[disabled]:hover, .search-box__list--item[readonly], .search-box__list--item[readonly]:hover, .search-box__list--item.search-box__list--item__is-disabled, .search-box__list--item.search-box__list--item__is-disabled:hover,
+a.search-box__list--item[disabled],
+a.search-box__list--item[disabled]:hover,
+a.search-box__list--item[readonly],
+a.search-box__list--item[readonly]:hover,
+a.search-box__list--item.search-box__list--item__is-disabled,
+a.search-box__list--item.search-box__list--item__is-disabled:hover {
+  background-color: #E2E2E2;
+  color: #9E9E9E;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.search-box__list--item strong,
+a.search-box__list--item strong {
   font-weight: 700;
 }
 
