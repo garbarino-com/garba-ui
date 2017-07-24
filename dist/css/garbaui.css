@@ -4964,6 +4964,10 @@ label ~ .form-control ~ .form-block__feedback {
   content: "";
 }
 
+.block__has-error .form-block__helper {
+  color: #D35F53;
+}
+
 .control-group {
   border-collapse: separate;
   display: table;

@@ -202,6 +202,11 @@
       content: $icon;
     }
   }
+
+  // Pinta los íconos del control-helper del color del estado.
+  .form-block__helper {
+    color: $color;
+  }
 }
 
 
