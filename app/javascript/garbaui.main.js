@@ -9,14 +9,19 @@ var tooltip = require('../../node_modules/bootstrap-sass/assets/javascripts/boot
 var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab');
 var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
 
+
 // Miscelaneous plugins
-var firstPurchase = require('./scripts/campaign-modals/first-purchase');
+var firstPurchase = require('./scripts/first-purchase');
 var cookie = require('./scripts/cookie');
 var offersHunter = require('./scripts/offers-hunter');
+
 
 // Carousel Plugin (http://kenwheeler.github.io/slick/)
 var slick = require('../../node_modules/slick-carousel/slick/slick');
 
+
+// Inicializar Range slider
+var rangeSlider = require('./scripts/range-slider');
 
 
 // Initialize bootstrap plugins

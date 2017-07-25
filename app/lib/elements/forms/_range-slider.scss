@@ -1,0 +1,202 @@
+// Input Range slider
+//
+// Permite filtras resultados seleccionando un rango de opciones.
+//
+// .block__is-disabled - Indica que el bloque está deshabilitado.
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+//
+// Markup: rangeslider.hbs
+//
+// Styleguide Elements.Forms.11-RangeSlider
+
+
+// Range slider
+$range-track-active-bg: $brand-primary !default;
+$range-track-inactive-bg: $widget-bg !default;
+$range-track-height: $spacer-sm !default;
+$range-knob-size: 1.5rem !default;
+$range-knob-color: $widget-bg !default;
+$range-knob-border: $brand-primary !default;
+$range-knob-border-size: .5rem !default;
+
+$range-slider-output-color: #aaa !default;
+$range-slider-output-border: 1px solid $range-slider-output-color !default;
+$range-slider-output-border-radius: 4px !default;
+$range-slider-output-background: #fff !default;
+$range-slider-output-height: 2.5em !default;
+$range-slider-output-height-medium: $range-slider-output-height !default;
+$range-slider-output-height-large: $range-slider-output-height-medium !default;
+$range-slider-output-bottom-spacing: 1em !default;
+$range-slider-output-bottom-spacing-medium: $range-slider-output-bottom-spacing !default;
+$range-slider-output-bottom-spacing-large: $range-slider-output-bottom-spacing-medium !default;
+
+
+.range-slider {
+  @include clearfix();
+  margin-bottom: $spacer-base;
+  position: relative;
+  text-align: center;
+
+  .track {
+    height: $range-track-height;
+    left: 0;
+    margin-top: ($range-track-height / 2) * -1;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 50;
+
+    &--full {
+      background: $range-track-inactive-bg;
+      border: 1px solid $gray-medium;
+      border-radius: $range-track-height / 2;
+      width: 100%;
+    }
+
+    &--included {
+      background: $range-track-active-bg;
+      border-radius: $range-track-height / 2;
+    }
+  }
+
+  .slider-thumb {
+    background: $range-knob-color;
+    border: $range-knob-border-size solid $range-knob-border;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    height: $range-knob-size;
+    left: 0;
+    margin-top: ($range-knob-size / 2) * -1;
+    position: absolute;
+    top: 50%;
+    width: $range-knob-size;
+    z-index: 101;
+  }
+
+  output {
+    display: none;
+  }
+
+  [type=range] {
+    -webkit-appearance: none;
+    background: none;
+    height: $range-knob-size;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    pointer-events: none;
+    position: relative;
+    width: 100%;
+    z-index: 75;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-moz-focus-outer {
+      border: 0;
+    }
+
+    &:first-of-type {
+      float: left;
+      margin-bottom: -1 * $range-knob-size;
+    }
+
+    &:last-of-type {
+      float: right;
+      margin-bottom: 0;
+    }
+
+    // Note that while we're repeating code here,
+    // that's necessary as you can't comma-separate these type of selectors.
+    // Browsers will drop the entire selector if it doesn't understand a part of it.
+    // https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+
+    // Track styling
+    &::-webkit-slider-runnable-track {
+      background: none;
+      border: 0;
+      height: $range-track-height;
+      z-index: -1;
+    }
+
+    &::-ms-fill-lower {
+      background: none;
+      border: 0;
+    }
+
+    &::-ms-fill-upper {
+      background: none;
+      border: 0;
+    }
+
+    &::-ms-track {
+      background: transparent;
+      border: 0;
+        border-color: transparent;
+      color: transparent;
+      height: $range-track-height;
+      z-index: -1;
+    }
+
+    &:focus::-ms-fill-lower {
+      background: none;
+      border: 0;
+    }
+
+    &:focus::-ms-fill-upper {
+      background: none;
+      border: 0;
+    }
+
+    &::-moz-range-track {
+      -moz-appearance: none;
+      background: none;
+      border: 0;
+      height: $range-track-height;
+      z-index: -1;
+    }
+
+    // Slider thumb styling
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: $range-knob-color;
+      border: $range-knob-border-size solid $range-knob-border;
+      border-radius: 50%;
+      cursor: pointer;
+      height: $range-knob-size;
+      outline: 0;
+      pointer-events: all;
+      position: relative;
+      width: $range-knob-size;
+      z-index: 100;
+    }
+
+    &::-ms-thumb {
+      background: $range-knob-color;
+      border: $range-knob-border-size solid $range-knob-border;
+      border-radius: 50%;
+      cursor: pointer;
+      height: $range-knob-size;
+      margin-top: 0;
+      pointer-events: all;
+      position: relative;
+      width: $range-knob-size;
+      z-index: 100;
+    }
+
+    &::-moz-range-thumb {
+      -moz-appearance: none;
+      background: $range-knob-color;
+      border: $range-knob-border-size solid $range-knob-border;
+      border-radius: 50%;
+      cursor: pointer;
+      height: $range-knob-size;
+      pointer-events: all;
+      position: relative;
+      width: $range-knob-size;
+      z-index: 100;
+    }
+  }
+}
