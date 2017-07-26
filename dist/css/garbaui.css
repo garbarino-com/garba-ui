@@ -7957,6 +7957,12 @@ a.search-box__list--item strong {
   padding-top: 0.5rem;
 }
 
+@media only screen and (min-width: 54.85714rem) {
+  .carousel-shelf {
+    overflow: hidden;
+  }
+}
+
 @media only screen and (min-width: 73.14286rem) {
   .carousel-shelf > .carousel-item {
     padding-bottom: 0;
