@@ -1,0 +1,69 @@
+<form>
+  <div class="form-block {{modifier_class}}">
+    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
+          para que funcionen bien los estilos --}}
+    <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
+        title="Fusce ac luctus sem.">
+      <span class="icon-question-mark-circle"></span>
+    </span>
+
+    {{!-- Input básico de texto. --}}
+    <input type="text" class="form-control" placeholder="Text">
+
+    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
+          de validación, de lo contrario permanece oculto. --}}
+
+    <span class="form-block__feedback"></span>
+
+    <p class="form-block__note">
+      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    </p>
+  </div>
+
+  <div class="form-block {{modifier_class}}">
+    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
+          para que funcionen bien los estilos --}}
+    <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
+        title="Fusce ac luctus sem.">
+      <span class="icon-question-mark-circle"></span>
+    </span>
+
+    {{!-- Select --}}
+    <select class="form-control">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+
+    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
+          de validación, de lo contrario permanece oculto. --}}
+
+    <span class="form-block__feedback"></span>
+
+    <p class="form-block__note">
+      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    </p>
+  </div>
+
+  <div class="form-block {{modifier_class}}">
+    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
+          para que funcionen bien los estilos --}}
+    <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
+        title="Fusce ac luctus sem.">
+      <span class="icon-question-mark-circle"></span>
+    </span>
+
+    {{!-- Textarea --}}
+    <textarea class="form-control" rows="3"></textarea>
+
+    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
+          de validación, de lo contrario permanece oculto. --}}
+
+    <span class="form-block__feedback"></span>
+
+    <p class="form-block__note">
+      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    </p>
+  </div>
+</form>

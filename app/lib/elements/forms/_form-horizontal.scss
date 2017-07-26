@@ -1,0 +1,42 @@
+// Form horizontal
+//
+// El form horizontal está construído sobre las clases de grilla y permite crear
+// forms con labels e input en la misma línea.
+// > En caso de querer usar la variante `.form-control--sm` se debe agregar la
+// clase `.control-label--sm` al `<label>` con clase `.control-label`.
+//
+// .block__has-error - Se incluyen estilos de validación para estado de `error`.
+// **Advertencia:** Este es un caso de uso del estado `error` diferente de los
+// otros ya que tanto el `input` como los elementos de feedback: ícono
+// (`.form-block__feedback`) y mensaje (`.form-block__note`) están a
+// un nivel más de profundidad en el árbol del DOM.
+//
+// Markup: form-horizontal.hbs
+//
+// Styleguide Elements.Forms.05-FormHorizontal
+
+.form-horizontal {
+  // Make form groups behave like rows
+  .form-block {
+    @include make-row;
+  }
+
+  // Reset spacing and right align labels, but scope to media queries so that
+  // labels on narrow viewports stack the same as a default form example.
+  .control-label {
+    display: block;
+    margin-bottom: $spacer-sm;
+
+    @media (min-width: $screen-md-min) {
+      line-height: 1;
+      margin-bottom: 0;
+      padding-top: $spacer-base;
+    }
+  }
+
+  .control-label--sm {
+    font-size: $font-size-sm;
+    margin-bottom: $spacer-xs;
+    padding-top: $spacer-sm;
+  }
+}

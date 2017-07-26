@@ -64,24 +64,3 @@
   font: 0/0 a;
   text-shadow: none;
 }
-
-// @element-aspect-ratio
-//
-// Ata el alto de un elemento a su ancho mediante su relación de proporción. Está
-// seteado por default en 1:1, dándole al elemento forma cuadrada (Ver `.img-container`
-// para referencia de uso). No usa unidades de medida, sólo relaciones ancho/alto.
-//
-// $width - Número para indicar la proporción de ancho.
-// $height - Número para indicar la proporción de alto.
-//
-// Styleguide Helpers.Utilities.ElementAspectRatio
-
-@mixin element-aspect-ratio($width: 1, $height: 1) {
-  position: relative;
-
-  &::before {
-    content: "";
-    display: block;
-    padding-top: ($height / $width) * 100%;
-  }
-}

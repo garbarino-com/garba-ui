@@ -22,7 +22,8 @@
     padding: $padding;
 
     // Feedback positioning
-    ~ .block-validation--feedback {
+    ~ .form-block__feedback,
+    ~ .form-block__helper {
       top: $line-height-computed + $form-label-spacing + $padding;
     }
   }
@@ -38,8 +39,33 @@
   }
 
   // Validation feedback
-  .form-horizontal [class*="block__has-"] #{$parent} ~ .block-validation--feedback {
+  .form-horizontal #{$parent} ~ .form-block__feedback,
+  .form-horizontal #{$parent} ~ .form-block__helper {
     top: $padding;
+  }
+}
+
+
+
+// Control group size
+//
+// [converter] $parent hack
+
+@mixin control-group-size($parent, $font-size, $height, $padding) {
+  #{$parent} {
+    font-size: $font-size;
+    height: $height;
+    padding: $padding;
+  }
+
+  select#{$parent} {
+    height: $height;
+    line-height: 1;
+  }
+
+  textarea#{$parent},
+  select[multiple]#{$parent} {
+    height: auto;
   }
 }
 
@@ -53,6 +79,21 @@
     box-shadow: 0 0 $input-border-focus-shadow-lenght 0 rgba($color,
       $input-border-focus-opacity);
     outline: 0;
+  }
+}
+
+
+
+// Disabled state
+@mixin state-disabled {
+  &,
+  &:hover,
+  &:focus {
+    background-color: $input-bg-disabled;
+    border-color: $input-border-color;
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 }
 
@@ -102,7 +143,8 @@
   $focus-color: state-focus-modifier($color);
 
   > .form-control,
-  > div > .form-control {
+  > div > .form-control,
+  .control-group__addon {
     border: 1px solid $color;
 
     &:hover {
@@ -144,21 +186,26 @@
     border-color: $color;
   }
 
-  // Feddback elements
-  > .block-validation--feedback,
-  > .block-validation--note,
-  > div > .block-validation--feedback,
-  > div > .block-validation--note {
+  // Feedback elements
+  > .form-block__feedback,
+  > .form-block__note,
+  > div > .form-block__feedback,
+  > div > .form-block__note {
     @include show-element;
     animation: form-block--enter-animation ($transition-timing-slow / 4) ease-in;
     color: $color;
   }
 
-  > .block-validation--feedback,
-  > div > .block-validation--feedback, {
+  > .form-block__feedback,
+  > div > .form-block__feedback, {
     &::before {
       content: $icon;
     }
+  }
+
+  // Pinta los íconos del control-helper del color del estado.
+  .form-block__helper {
+    color: $color;
   }
 }
 

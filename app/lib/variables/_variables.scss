@@ -31,30 +31,62 @@ $baseline-grid:                  14px;
 $baseline-grid-computed:         px-to-rem($baseline-grid);
 
 
-// Color Palette
+// Paleta principal
 //
-// Brand color palette
+// #D1030F - $brand-corporate
+// #0084E0 - $brand-primary
+// #6B6B6B - $brand-secondary
+// #16A401 - $brand-revenue
+//
+// Markup: ../elements/palette.hbs
+//
+// Styleguide Elements.1-Palette
+
 $brand-corporate:        #D1030F !default;
 $brand-primary:          #0084E0 !default;
 $brand-secondary:        #6B6B6B !default;
 $brand-revenue:          #16A401 !default;
-
-$brand-disabled:          #9E9E9E !default;
-$brand-disabled-bg:       #E2E2E2 !default;
-$brand-disabled-cursor:   not-allowed !default;
-
-// States palette
-$brand-success:          #4DA02E !default;
-$brand-error:            #D35F53 !default;
-$brand-warning:          #CE9433 !default;
-$brand-info:             #3584D9 !default;
 
 // Alt Fav
 // TODO(ecalvi): This is an inconsistency. We are defining this variable so this
 // color is used only once.
 $brand-altfav:           #F8AA29 !default;
 
-//## Gray and brand colors for use across Framework.
+// Paleta de estados
+//
+// #4DA02E - $brand-success
+// #D35F53 - $brand-error
+// #CE9433 - $brand-warning
+// #3584D9 - $brand-info
+// #9E9E9E - $brand-disabled
+//
+// Markup: ../elements/palette.hbs
+//
+// Styleguide Elements.1-Palette.1-StatesPalette
+
+$brand-disabled:          #9E9E9E !default;
+$brand-disabled-bg:       #E2E2E2 !default;
+$brand-disabled-cursor:   not-allowed !default;
+
+$brand-success:          #4DA02E !default;
+$brand-error:            #D35F53 !default;
+$brand-warning:          #CE9433 !default;
+$brand-info:             #3584D9 !default;
+
+
+// Paleta de grises
+//
+// #000 - $gray-base
+// #6B6B6B - $gray-darker
+// #9E9E9E - $gray-dark
+// #C4C4C4 - $gray-medium
+// #E2E2E2 - $gray-light
+// #F6F6F6 - $gray-lighter
+//
+// Markup: ../elements/palette.hbs
+//
+// Styleguide Elements.1-Palette.1-GrayPalette
+
 $gray-base:              #000 !default;
 $gray-darker:            $brand-secondary !default;
 $gray-dark:              $brand-disabled !default;
@@ -226,25 +258,25 @@ $font-weight-base: 400;
 
 // Primary action
 $brand-primary-action:   $brand-secondary !default;
-$icon-trash:             "\e94d" !default;
+$icon-trash:             $icon-trash !default;
 
 // Facebook
 $brand-facebook:         #4957B3 !default;
-$icon-facebook:          "\e914" !default;
+$icon-facebook:          $icon-facebook !default;
 
 // Fav
 $brand-fav:              $brand-corporate !default;
-$icon-fav:               "\e920" !default;
+$icon-fav:               $icon-heart !default;
 
 // Alt Fav
 // TODO(ecalvi): This is an inconsistency. We are defining this variable so this
 // color is used only once.
 $brand-default:          $brand-altfav !default;
-$icon-default:           "\e93e" !default;
+$icon-default:           $icon-star !default;
 
 // Twitter
 $brand-twitter:          #60B5F1 !default;
-$icon-twitter:           "\e943" !default;
+$icon-twitter:           $icon-twitter !default;
 
 // Define common padding and border radius sizes and more.
 $border-radius-base:          3px;
@@ -262,11 +294,26 @@ $spinner-color-inactive:      #D8D8D8 !default;
 // view of components dependent on the z-axis and are designed to all
 // work together.
 
+$zindex-control-group:      2 !default;
 $zindex-element:            20 !default;
 $zindex-hover-element:      50 !default;
 $zindex-fixed-button:       1000 !default;
 $zindex-navbar:             1030 !default;
+$zindex-search-results:     1050 !default;
 $zindex-tooltip:            1070 !default;
+
+
+// Elementos genéricos
+
+// Active state
+$element-is-active: $brand-primary;
+
+// Loading state
+$element-is-loading-bg: $widget-bg;
+$element-is-loading-width: 14rem;
+
+// Disabled state
+$element-is-disabled-bg: $brand-disabled-bg;
 
 // Buttons
 //
@@ -340,6 +387,10 @@ $block-has-feedback-size:            $icon-size-base !default;
 $block-label-font-weight:            $font-weight-base !default;
 $block-label-font-weight-selected:   700 !default;
 
+$control-helper-color:              $brand-info !default;
+$control-helper-disabled:           $brand-disabled !default;
+$control-helper-size:               $icon-size-base !default;
+
 $input-bg:                           $widget-bg !default;
 $input-padding:                      $spacer-base !default;
 $input-bg-disabled:                  $gray-lighter !default;
@@ -361,9 +412,15 @@ $controller-image-border:            $gray-medium !default;
 $controler-active:                   $brand-primary;
 $controller-boxed-spacer:            $controller-spacer + ($spacer-sm * 2) !default;
 $controller-boxed-position:          ($controller-boxed-spacer - $controller-size) + $spacer-sm !default;
-$controler-bg-inactive:              $widget-bg;
-$controler-border-inactive:          $gray-medium;
+$controler-bg-inactive:              $widget-bg !default;
+$controler-border-inactive:          $gray-medium !default;
 
+
+
+// Control groups
+$control-group-color:                $gray-medium !default;
+$control-group-padding:              $input-padding !default;
+$control-group-font-weight:          $font-weight-base !default;
 
 // Tooltip definitions
 $tooltip-bg:                         $gray-base !default;
@@ -373,6 +430,7 @@ $tooltip-padding:                    $spacer-base $horspacer-large !default;
 $tooltip-opacity:                    $modifier-scale-value !default;
 $tooltip-arrow-size:                 $spacer-sm !default;
 $tooltip-distance:                   $spacer-base !default;
+
 
 
 // Value component
@@ -508,5 +566,21 @@ $carousel-prev-character: $icon-simple-bold-arrow-left !default;
 $carousel-next-character: $icon-simple-bold-arrow-right !default;
 $carousel-bottom-spacer: 2rem !default;
 
+
+// Searchbox
+$search-box-results-bg:                        $widget-bg !default;
+$search-box-results-border:                    $gray-medium !default;
+$search-box-results-padding:                   $input-padding !default;
+$search-box-results-min-height:                14rem !default;
+$search-box-results-max-height:                35rem !default;
+
+$search-box-results-loader-size:               2rem !default;
+
+$search-box-results-heading-bg:                $gray-lighter !default;
+$search-box-results-heading-border:            $gray-light !default;
+$search-box-results-item-bg:                   $search-box-results-bg !default;
+$search-box-results-item-color:                $gray-darker !default;
+$search-box-results-item-match-font-weight:    700 !default;
+$search-box-results-item-active-bg:            $brand-primary !default;
 
 // stylelint-enable max-line-length, scss/dollar-variable-colon-space-after

@@ -26,7 +26,7 @@ var input = function () {
   var images= config.basePaths.src + 'images/*';
   var fonts = config.basePaths.src + 'icons/fonts/*';
   var assets_old = config.basePaths.src + 'lib/_v1.3.2/';
-  var fonts_old = assets_old + 'fonts/*';
+  var fonts_old = assets_old + 'icons/fonts/*';
 
   return {
     styles: styles,

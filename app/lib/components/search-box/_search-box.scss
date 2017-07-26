@@ -1,0 +1,132 @@
+// Sugerencia de resultados
+//
+// Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur,
+// eros ut viverra laoreet, arcu est bibendum neque, vel ultricies magna sem non
+// elit. Suspendisse potenti.
+//
+// .search-box__has-suggestions - Muestra una alternativa al término de búsqueda
+// ingresado por el usuario (de haber una disponible).
+// .search-box__is-loading - Recibe esta clase en el tiempo entre que se hace el
+// request de resultados y estos son recibidos.
+// .search-box__has-results - Recibe esta clase si el query de búsqueda devuelve
+// resultados.
+//
+// Markup: search-box.hbs
+//
+// Styleguide Components.SearchBox
+
+
+
+.search-box {
+  position: relative;
+}
+
+// Results placeholder
+.search-box__list {
+  @include border-radius-bottom($border-radius-base);
+  @include hide-element;
+  background: $search-box-results-bg;
+  border: 1px solid $search-box-results-border;
+  border-top: 0;
+  left: 0;
+  max-height: $search-box-results-max-height;
+  min-height: $search-box-results-min-height;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: $zindex-search-results;
+
+  // Muestra la caja de búsqueda diferente de acuerdo a la clase que reciba el
+  // elemento padre.
+  .search-box__has-results > &,
+  .search-box__is-loading > & {
+    @include show-element;
+  }
+}
+
+.search-box__is-loading {
+  &::after {
+    @include make-pseudo-element;
+    background-color: $gray-medium;
+    height: $search-box-results-loader-size;
+    left: 50%;
+    margin-left: ($search-box-results-loader-size / 2) * -1;
+    margin-top: ($search-box-results-loader-size / 2) * -1;
+    position: absolute;
+    top: 50%;
+    width: $search-box-results-loader-size;
+  }
+
+  .search-box__list--heading,
+  .search-box__list--item {
+    @include hide-element;
+  }
+}
+
+// Si el usuario ingresa un término de búsqueda  que no tiene un match exacto se
+// le pueden sugerir alternativas. Agregando esta clase al contenedor padre se
+// muestra un bloque que contiene texto de sugerencia. Usamos para eso el elemento
+// `.form-block__note` que es el mismo que se usa en los forms para dar feedback
+// de error.
+
+.search-box__has-suggestions .form-block__note {
+  @include show-element;
+}
+
+// Result items
+.search-box__list--heading,
+.search-box__list--item {
+  @include ellipsis;
+  display: block;
+}
+
+.search-box__list--heading {
+  background-color: $search-box-results-heading-bg;
+  border-top: 1px solid $search-box-results-heading-border;
+  padding: $search-box-results-padding;
+}
+
+// stylelint-disable selector-no-type, selector-no-qualifying-type
+
+.search-box__list--item,
+a.search-box__list--item {
+  background-color: $search-box-results-item-bg;
+  color: $search-box-results-item-color;
+  padding: $spacer-base;
+  padding-left: $spacer-base * 2;
+  transition: background-color ease-in $btn-transition-timing,
+    color ease-in $btn-transition-timing;
+
+  &:hover,
+  &:focus,
+  &.active {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &.item__is-selected {
+    background-color: $search-box-results-item-active-bg;
+    color: $text-inverse;
+  }
+
+  &[disabled],
+  &[readonly],
+  &.search-box__list--item__is-disabled {
+    &,
+    &:hover {
+      background-color: $brand-disabled-bg;
+      color: $brand-disabled;
+      cursor: $brand-disabled-cursor;
+      pointer-events: none;
+    }
+  }
+
+  // Highlighted text
+  strong {
+    font-weight: $search-box-results-item-match-font-weight;
+  }
+}
+
+// stylelint-enable selector-no-type, selector-no-qualifying-type

@@ -50,8 +50,8 @@ Una vez instalada la dependencia, *Garba UI* contiene toda la librería de estil
 
 # Responsables
 * **Nicolas Brizuela** - [flycode](https://github.com/flycode)
-* **Esteban Calvi** - [leopittelli](https://github.com/estebancalvi)
-* **Leonardo Pittelli** - [estebancalvi](https://github.com/leopittelli)
+* **Esteban Calvi** - [estebancalvi](https://github.com/estebancalvi)
+* **Leonardo Pittelli** - [leopittelli](https://github.com/leopittelli)
 
 ## Licencia ##
 Este proyecto está bajo la ISC License - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
