@@ -4341,68 +4341,6 @@ fieldset[disabled].button--facebook:focus,
   content: "";
 }
 
-.element__is-active {
-  border: 1px solid #0084E0;
-  border-radius: 3px;
-  box-shadow: 0 0 4px 0 rgba(0, 132, 224, 0.6);
-  outline: 0;
-}
-
-.element__is-loading,
-.element__is-disabled {
-  position: relative;
-}
-
-.element__is-loading:before, .element__is-loading:after,
-.element__is-disabled:before,
-.element__is-disabled:after {
-  content: "";
-  display: table;
-}
-
-.element__is-loading:after,
-.element__is-disabled:after {
-  clear: both;
-}
-
-.element__is-loading::before,
-.element__is-disabled::before {
-  content: "";
-  display: block;
-  bottom: 0;
-  left: 0;
-  opacity: 0.8;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.element__is-loading::before {
-  background-color: #FFF;
-}
-
-.element__is-loading::after {
-  animation: spinner-rotation 0.8s infinite linear;
-  border-bottom: 0.21429rem solid #9E9E9E;
-  border-left: 0.21429rem solid #D8D8D8;
-  border-right: 0.21429rem solid #9E9E9E;
-  border-top: 0.21429rem solid #9E9E9E;
-  border-radius: 50%;
-  height: 1.75rem;
-  vertical-align: middle;
-  width: 1.75rem;
-  left: 50%;
-  margin-left: -0.875rem;
-  margin-top: -0.875rem;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-}
-
-.element__is-disabled::before {
-  background-color: #E2E2E2;
-}
-
 fieldset {
   border: 0;
   margin: 0;
@@ -8186,4 +8124,66 @@ a.search-box__list--item strong {
   height: 0;
   position: absolute;
   width: 0;
+}
+
+.element__is-active {
+  border: 1px solid #0084E0;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 132, 224, 0.6);
+  outline: 0;
+}
+
+.element__is-loading,
+.element__is-disabled {
+  position: relative;
+}
+
+.element__is-loading:before, .element__is-loading:after,
+.element__is-disabled:before,
+.element__is-disabled:after {
+  content: "";
+  display: table;
+}
+
+.element__is-loading:after,
+.element__is-disabled:after {
+  clear: both;
+}
+
+.element__is-loading::before,
+.element__is-disabled::before {
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.element__is-loading::before {
+  background-color: #FFF;
+}
+
+.element__is-loading::after {
+  animation: spinner-rotation 0.8s infinite linear;
+  border-bottom: 0.21429rem solid #9E9E9E;
+  border-left: 0.21429rem solid #D8D8D8;
+  border-right: 0.21429rem solid #9E9E9E;
+  border-top: 0.21429rem solid #9E9E9E;
+  border-radius: 50%;
+  height: 1.75rem;
+  vertical-align: middle;
+  width: 1.75rem;
+  left: 50%;
+  margin-left: -0.875rem;
+  margin-top: -0.875rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+}
+
+.element__is-disabled::before {
+  background-color: #E2E2E2;
 }

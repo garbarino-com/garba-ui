@@ -32,7 +32,7 @@
   "homepage": "https://github.com/garbarino-com/garba-ui#readme",
   "precommit": {
     "tasks": [
-      "npm run build",
+      "gulp build",
       "git add dist/"
     ]
   },
