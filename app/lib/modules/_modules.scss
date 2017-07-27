@@ -1,0 +1,33 @@
+// Módulos
+//
+// Los módulos son articulaciones de componentes o elementos que constituyen
+// bloques de información para el usuario.
+//
+// Por ej: El componente caja de producto aislado no transmite información alguna
+// por sí mismo sino cuando se articula con otras cajas de producto y conforma
+// un módulo: resultado de búsqueda, una landing de categoría, un carousel que
+// muestra otros productos similares, etc.
+//
+// Dicho de otro modo: lo que define al módulo es que transmite información o que
+// tiene un propósito para el usuario.
+// * *Es un módulo*: el header, el footer, un form de selección de método de pago.
+// * *No son módulos*: Un form con sus `<input>`s y `<label>`s o una agrupación
+// de cajas de producto sin un elemento que denote su propósito (como un título
+// o un paragraph de texto).
+//
+// ### Módulo no es igual a caso de uso
+// Un resultado de búsqueda es un módulo porque en esa articulación están contenidos
+// todos los elementos y componentes que son necesarios para transmitirle algo al
+// usuario. Pero en este caso el módulo no es el *Resultado de búsqueda*, el
+// módulo. El módulo es una abstracción. En este caso el módulo es *Lista de ítems*.
+// El módulo lista de ítems puede contener una agrupación de ítems (productos),
+// un texto que indique cual es el criterio con el cual están agrupados dichos ítems
+// y posiblemente herramienta para ajustar los criterios de búsqueda y filtrar
+// resultados. Ese mismo módulo podría usarse después como landing de categoría
+// o cómo listado de ofertas para un evento especial.
+//
+//
+// Un módulo puede recibir un estado que se aplica sobre toda esa articulación.
+// Ej: Cuando el usuario filtra un Resultado de búsqueda (módulo *lista de productos*), el módulo puede recibir un estado `loading` entre el momento en que se hace ese request y el se vuelven a dibujar los nuevos resultados.
+//
+// Styleguide Modules

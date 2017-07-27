@@ -1,7 +1,13 @@
 // Components
 //
-// Los componentes son widgets reutilizables que muestran las distintas partes
-// de la UI. Están armados de modo de ser agnósticos de su contexto y comportarse
-// del mismo modo independientemente de donde sean utilizados.
+// El componente es el segundo nivel en orden ascendente de complejidad. Un
+// componente es una articulación de elementos que ya constituyen una unidad de
+// información para el usuario pero que carecen de significado sin un contexto
+// (ej: La caja de producto).
+//
+// Un componente puede además tener un estado individual como por ejemplo `error`,
+// `loading` o `no-disponible (ej. Si un query de búsqueda devuelve una serie de
+// resultados de los cuales uno no está tiene stock y no está disponible, el
+// estado es aplicado sólo en ese ítem).
 //
 // Styleguide Components
