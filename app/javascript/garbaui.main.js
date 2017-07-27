@@ -6,11 +6,11 @@ var $ = require('jquery');
 // Bootstrap plugins (http://getbootstrap.com/javascript/)
 var modal = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
 var tooltip = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip');
-var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab');
+var tab = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab');
 var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
 
 // Miscelaneous plugins
-var firstPurchase = require('./scripts/campaign-modals/first-purchase');
+var firstPurchase = require('./scripts/first-purchase');
 var cookie = require('./scripts/cookie');
 var offersHunter = require('./scripts/offers-hunter');
 
