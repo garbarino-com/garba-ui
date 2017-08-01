@@ -28,6 +28,8 @@
 //
 //
 // Un módulo puede recibir un estado que se aplica sobre toda esa articulación.
-// Ej: Cuando el usuario filtra un Resultado de búsqueda (módulo *lista de productos*), el módulo puede recibir un estado `loading` entre el momento en que se hace ese request y el se vuelven a dibujar los nuevos resultados.
+// Ej: Cuando el usuario filtra un Resultado de búsqueda (módulo *lista de productos*),
+// el módulo puede recibir un estado `loading` entre el momento en que se hace ese request
+// y el se vuelven a dibujar los nuevos resultados.
 //
 // Styleguide Modules

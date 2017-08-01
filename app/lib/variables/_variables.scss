@@ -286,6 +286,10 @@ $spinner-base-size:           1.75rem !default;
 $spinner-border-width:        px-to-rem(3px) !default;
 $spinner-color-active:        $gray-dark !default;
 $spinner-color-inactive:      #D8D8D8 !default;
+$spinner-md-size:           3.5rem !default;
+$spinner-lg-size:           7rem !default;
+$spinner-bg:                $widget-bg !default;
+$spinner-bg-inverse:        $gray-base !default;
 
 
 // Z-index master list

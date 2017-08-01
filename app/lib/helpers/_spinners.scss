@@ -50,3 +50,54 @@
   height: $size;
   width: $size;
 }
+
+
+@mixin add-loading-state-to-element($size, $overlayColor: $spinner-bg) {
+  @include clearfix;
+
+  // Agrega position:relative al elemento contenedor para poder posicionar los
+  // child elements.
+  position: relative;
+
+  // Inicializar variables para que estén disponibles para su posterior uso.
+  $spinner-variant: null;
+  $spinner-size: null;
+
+  // Definir las diferentes variables de tamaño para los spinners
+  @if $size == "large" {
+    $spinner-variant: "spinner--lg.svg";
+    $spinner-size: $spinner-lg-size;
+  } @else if $size == "medium" {
+    $spinner-variant: "spinner--md.svg";
+    $spinner-size: $spinner-md-size;
+  }
+
+  &::before,
+  &::after {
+    @include make-pseudo-element;
+    position: absolute;
+  }
+
+  // Elemento del Overlay
+  &::before {
+    background-color: $overlayColor;
+    bottom: 0;
+    left: 0;
+    opacity: $modifier-scale-value;
+    right: 0;
+    top: 0;
+  }
+
+  &::after {
+    background-image: url(#{$images-url}#{$spinner-variant});
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: $spinner-size;
+    left: 50%;
+    margin-left: ($spinner-size / 2) * -1;
+    margin-top: ($spinner-size / 2) * -1;
+    text-align: center;
+    top: 50%;
+    width: $spinner-size;
+  }
+}

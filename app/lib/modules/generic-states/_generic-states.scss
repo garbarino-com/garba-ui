@@ -24,7 +24,6 @@
 
 
 
-.element__is-loading,
 .element__is-disabled {
   @include clearfix;
   position: relative;
@@ -41,22 +40,8 @@
 }
 
 
-
 .element__is-loading {
-  &::before {
-    background-color: $element-is-loading-bg;
-  }
-
-  &::after {
-    @include add-spinner($btn-spinner-base-size, $btn-spinner-border-width,
-      $btn-spinner-color-inactive, $btn-spinner-color-active);
-    left: 50%;
-    margin-left: ($btn-spinner-base-size / 2) * -1;
-    margin-top: ($btn-spinner-base-size / 2) * -1;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-  }
+  @include  add-loading-state-to-element("large");
 }
 
 
