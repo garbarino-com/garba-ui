@@ -41,7 +41,7 @@
 
 
 .element__is-loading {
-  @include  add-loading-state-to-element("large");
+  @include add-loading-state-to-element("large");
 }
 
 

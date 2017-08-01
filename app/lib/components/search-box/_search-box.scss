@@ -46,17 +46,7 @@
 }
 
 .search-box__is-loading {
-  &::after {
-    @include make-pseudo-element;
-    background-color: $gray-medium;
-    height: $search-box-results-loader-size;
-    left: 50%;
-    margin-left: ($search-box-results-loader-size / 2) * -1;
-    margin-top: ($search-box-results-loader-size / 2) * -1;
-    position: absolute;
-    top: 50%;
-    width: $search-box-results-loader-size;
-  }
+  @include add-loading-state-to-element("medium", transparent);
 
   .search-box__list--heading,
   .search-box__list--item {
