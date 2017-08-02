@@ -12,14 +12,14 @@
     .st0{
       fill: none;
       stroke: #F2F2F2;
-      stroke-width: 2;
+      stroke-width: 4;
       stroke-miterlimit: 10;
     }
 
     .st1{
       fill: none;
       stroke: #D1030F;
-      stroke-width: 2;
+      stroke-width: 4;
       stroke-linecap: round;
       stroke-miterlimit: 10;
     }

@@ -41,7 +41,7 @@
 
 
 .module__is-loading {
-  @include add-loading-state-to-element("large");
+  @include generate-loading-state-for-element("large");
 }
 
 

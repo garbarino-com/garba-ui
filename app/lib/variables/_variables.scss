@@ -248,9 +248,11 @@ $small-color:         $text-muted !default;
 // Line Height
 $line-height-base:        1.5 !default;
 $line-height-sm:          1.25 !default;
+$line-height-xs:          1 !default;
 
 $line-height-computed:       $line-height-base * $baseline-grid-computed !default;
 $line-height-sm-computed:    $line-height-sm * $baseline-grid-computed !default;
+$line-height-xs-computed:    $line-height-xs * $baseline-grid-computed !default;
 
 
 $font-weight-base: 400;
@@ -282,10 +284,6 @@ $icon-twitter:           $icon-twitter !default;
 $border-radius-base:          3px;
 
 // Spinner default values
-$spinner-base-size:           1.75rem !default;
-$spinner-border-width:        px-to-rem(3px) !default;
-$spinner-color-active:        $gray-dark !default;
-$spinner-color-inactive:      #D8D8D8 !default;
 $spinner-md-size:           3.5rem !default;
 $spinner-lg-size:           7rem !default;
 $spinner-bg:                $widget-bg !default;
@@ -319,24 +317,31 @@ $element-is-loading-width: 14rem;
 // Disabled state
 $element-is-disabled-bg: $brand-disabled-bg;
 
-// Buttons
-//
-// For each button, define text color and background and border color.
+// Botones
 
-$btn-height-base:                    $block-size-base !default;
-$btn-height-lg-size:                 3.25rem !default;
-$btn-height-sm-size:                 $block-size-sm !default;
+// Texto de botones
 $btn-font-weight:                    700 !default;
 $btn-text-transform:                 uppercase !default;
 $btn-base-color:                     $text-inverse !default;
+
+// Espaciadores internos de botones
+// Solo corresponde a los espaciadores horizontales. Los verticales están dados
+// mediante el valor de la propiedad `line-height.
 $btn-base-padding-x:                 $horspacer-base !default;
 $btn-large-padding-x:                $horspacer-large !default;
 $btn-small-padding-x:                $horspacer-small !default;
+
+// Alturas de Botones
+$btn-height-base:                    $block-size-base !default; // 2rem
+$btn-height-lg-size:                 3.25rem !default;
+$btn-height-sm-size:                 $block-size-sm !default; // 1rem
+
+// Detalles decorativos de botones
 $btn-transition-timing:              $transition-timing-base !default;
 $btn-shadow-width:                   px-to-rem(2px) !default;
 $btn-box-shadow-value:               0 $btn-shadow-width 0 0 !default;
 
-// Button color definitions
+// Colores de Botones
 $btn-main-color:                     $btn-base-color !default;
 $btn-main-bg:                        $brand-revenue !default;
 
@@ -356,13 +361,9 @@ $btn-disabled-color:                 $brand-disabled !default;
 $btn-disabled-bg:                    $brand-disabled-bg !default;
 
 // Button spinner definitions
-$btn-spinner-color-active:           $btn-disabled-color !default;
-$btn-spinner-color-inactive:         #D8D8D8 !default;
-$btn-spinner-border-width:           $spinner-border-width !default;
-$btn-spinner-sm-border-width:        px-to-rem(2px) !default;
-$btn-spinner-base-size:              $spinner-base-size !default;
-$btn-spinner-lg-size:                2rem !default;
-$btn-spinner-sm-size:                1rem !default;
+$btn-spinner-base-size:              $btn-height-base / 2 !default;
+$btn-spinner-lg-size:                $btn-height-lg-size / 2 !default;
+$btn-spinner-sm-size:                $btn-height-sm-size / 2 !default;
 $btn-spinner-spacing:                $spacer-sm !default;
 
 // Button icon definitions

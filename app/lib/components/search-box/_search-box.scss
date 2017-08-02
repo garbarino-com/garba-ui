@@ -46,7 +46,7 @@
 }
 
 .search-box__is-loading {
-  @include add-loading-state-to-element("medium", transparent, $input-height);
+  @include generate-loading-state-for-element("medium", transparent, $input-height);
 
   .search-box__list--heading,
   .search-box__list--item {

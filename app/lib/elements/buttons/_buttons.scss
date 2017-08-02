@@ -173,6 +173,8 @@ button:focus {
   }
 }
 
+
+
 // Fixed Buttons
 //
 // Agregar estas clases para fijar el botón a los bordes de la pantalla (actualmente
@@ -195,6 +197,7 @@ button:focus {
   width: 100%;
   z-index: $zindex-fixed-button;
 }
+
 
 
 // State modifiers
@@ -251,23 +254,33 @@ fieldset[disabled],
 // Loading state spinner definitions
 .button__is-loading {
   cursor: default;
+  padding-left: $btn-base-padding-x + $btn-spinner-base-size + $btn-spinner-spacing;
 
   // Spinner pseudo-element
   &::before {
-    @include make-pseudo-element(inline-block);
-    @include add-spinner($btn-spinner-base-size, $btn-spinner-border-width,
-      $btn-spinner-color-inactive, $btn-spinner-color-active);
-    margin-right: $btn-spinner-spacing;
-    margin-top: px-to-rem(-3px);
+    @include append-spinner-to-element($btn-spinner-base-size);
+    left: $btn-base-padding-x;
+    margin-top: ($btn-spinner-base-size / 2) * -1;
+    position: absolute;
+    top: 50%;
   }
 
-  &.button--lg::before {
-    @include add-spinner-variant-to-button($btn-spinner-lg-size);
+  &.button--lg {
+    padding-left: $btn-large-padding-x + $btn-spinner-lg-size + $btn-spinner-spacing;
+
+    &::before {
+      @include append-spinner-to-element($btn-spinner-lg-size);
+      margin-top: ($btn-spinner-lg-size / 2) * -1;
+    }
   }
 
-  &.button--sm::before {
-    @include add-spinner-variant-to-button($btn-spinner-sm-size,
-      $btn-spinner-sm-border-width);
+  &.button--sm {
+    padding-left: $btn-small-padding-x + $btn-spinner-sm-size + $btn-spinner-spacing;
+
+    &::before {
+      @include append-spinner-to-element($btn-spinner-sm-size);
+      margin-top: ($btn-spinner-sm-size / 2) * -1;
+    }
   }
 }
 
