@@ -56,6 +56,10 @@
     outline: 0;
   }
 
+  &.button__is-active {
+    cursor: default;
+  }
+
   > i {
     left: 50%;
     margin-left: ($btn-action-font-size * .5) * -1;
