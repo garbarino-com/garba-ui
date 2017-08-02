@@ -4,9 +4,9 @@
 // todos. No se deben usar estos estados para los elementos y componentes que
 // ya tienen definidos un estilo visual para dichos estados.
 //
-// .element__is-active - El elemento está *active*.
-// .element__is-loading - El elemento está *cargando*.
-// .element__is-disabled - El elemento está *deshabilitado*.
+// .module__is-active - El elemento está *active*.
+// .module__is-loading - El elemento está *cargando*.
+// .module__is-disabled - El elemento está *deshabilitado*.
 //
 // Markup: generic-element.hbs
 //
@@ -14,7 +14,7 @@
 
 
 
-.element__is-active {
+.module__is-active {
   border: 1px solid $element-is-active;
   border-radius: $border-radius-base;
   box-shadow: 0 0 $input-border-focus-shadow-lenght 0 rgba($element-is-active,
@@ -24,7 +24,7 @@
 
 
 
-.element__is-disabled {
+.module__is-disabled {
   @include clearfix;
   position: relative;
 
@@ -40,13 +40,13 @@
 }
 
 
-.element__is-loading {
+.module__is-loading {
   @include add-loading-state-to-element("large");
 }
 
 
 
-.element__is-disabled {
+.module__is-disabled {
   &::before {
     background-color: $element-is-disabled-bg;
   }

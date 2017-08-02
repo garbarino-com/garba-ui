@@ -52,7 +52,11 @@
 }
 
 
-@mixin add-loading-state-to-element($size, $overlayColor: $spinner-bg) {
+@mixin add-loading-state-to-element(
+  $size,
+  $overlayColor: $spinner-bg,
+  $startPointVertical: 0
+) {
   @include clearfix;
 
   // Agrega position:relative al elemento contenedor para poder posicionar los
@@ -85,7 +89,7 @@
     left: 0;
     opacity: $modifier-scale-value;
     right: 0;
-    top: 0;
+    top: $startPointVertical;
   }
 
   &::after {
