@@ -51,8 +51,8 @@
 
   // Hover and focus styles
   &:focus,
-  &.focus {
-    background-color: $btn-action-bg;
+  &.button__is-active {
+    background-color: $btn-action-hover-bg;
     outline: 0;
   }
 
