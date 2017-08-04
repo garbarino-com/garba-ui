@@ -252,7 +252,7 @@
 // Note animations
 
 @keyframes form-block--enter-animation {
-  0 {
+  0% {
     @include hide-element;
     opacity: 0;
   }
@@ -269,7 +269,7 @@
 }
 
 @keyframes form-block--exit-animation {
-  0 {
+  0% {
     @include show-element;
     opacity: 1;
   }

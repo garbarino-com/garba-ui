@@ -64,22 +64,15 @@
 			}
 			&:active{
 				@include transition(none);
-				//@include transform(translateY(1px));
 			}
 			&.gb--active{
-				//@include transform(translateY(0));
 				border-right-color: $silver-light;
-				//border-left: 1px solid $silver-light;
 				background-color: $white;
 				color: $gray-darkest;
-				//height: 90px;
 				z-index: 1;
 				font-weight: bold;
 				&:after{
 					background-color: $blue;
-				}
-				&:active{
-					//@include transform(translateY(0px));
 				}
 			}
 			> a {
