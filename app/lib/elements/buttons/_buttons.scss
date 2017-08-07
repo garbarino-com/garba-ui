@@ -15,7 +15,7 @@
 // :hover - Cuando el cursor está posicionado sobre el elemento.
 // :focus - Cuando es presionado.
 //
-// Markup: buttons.hbs
+// Markup: kss-example-buttons.hbs
 //
 // Styleguide Elements.Buttons
 
@@ -86,7 +86,7 @@ button:focus {
 // .button--link - Conserva el layout del botón pero le da el look & feel de un
 // `<a>` común.
 //
-// Markup: button.hbs
+// Markup: kss-example-button.hbs
 //
 // Styleguide Elements.Buttons.1-Variants
 
@@ -117,7 +117,7 @@ button:focus {
 
 // Button With Icon
 //
-// Markup: button-has-icon.hbs
+// Markup: kss-example-button-has-icon.hbs
 //
 // .button--facebook - Está reservado a usos relacionados con la red social
 // *facebook* (compartir, loguearse, etc.).
@@ -136,7 +136,7 @@ button:focus {
 // * **Large** (`.button--lg`)
 // * **Small** (`.button--sm`)
 //
-// Markup: button.hbs
+// Markup: kss-example-button.hbs
 //
 // .button--lg - Variable de tamaño *más grande*.
 // .button--sm - Variable de tamaño *más chica*.
@@ -180,7 +180,7 @@ button:focus {
 // Agregar estas clases para fijar el botón a los bordes de la pantalla (actualmente
 // sólo disponible fijar abajo).
 //
-// Markup: button.hbs
+// Markup: kss-example-button.hbs
 //
 // .button__is-fixed-to-bottom - Cambia el valor de display del botón de `block`.
 // (Se puede ver abajo pegado contra el borde de la pantalla.)
@@ -202,7 +202,7 @@ button:focus {
 
 // State modifiers
 //
-// Markup: button.hbs
+// Markup: kss-example-button.hbs
 //
 // :hover - Cuando el mouse se desliza sobre el botón.
 // :focus - Cuando es presionado.

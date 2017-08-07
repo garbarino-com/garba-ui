@@ -16,7 +16,7 @@
 // cuando se utiliza con imagenes, en cuyo caso se debe utilizer el elemento
 // *Image Container*.
 //
-// Markup: grid-list.hbs
+// Markup: kss-example-grid-list.hbs
 //
 // Styleguide Components.GridList
 
@@ -86,7 +86,7 @@
 // .item__is-checked - Indica que el ítem fue seleccionado.
 // .item__is-disabled - Estado deshabilitado.
 //
-// Markup: grid-list-linked.hbs
+// Markup: kss-example-grid-list-linked.hbs
 //
 // Styleguide Components.GridList.1-LinkedGridList
 
@@ -161,7 +161,7 @@ label.list-grid-item {
 // este componente es que no contenga demasiada información. En el caso de ser
 // necesario mostrar demasiada información se recomienda recurrir a las *Cards*.
 //
-// Markup: grid-list-with-icons.hbs
+// Markup: kss-example-grid-list-with-icons.hbs
 //
 // Styleguide Components.GridList.2-IconGridList
 
@@ -180,7 +180,7 @@ label.list-grid-item {
 // Las Grid-lists pueden usarse dentro para checkboxes dentro de un form para
 // seleccionar entre un set de ítems que puede contener textos o imagenes.
 //
-// Markup: grid-list-with-checkboxes.hbs
+// Markup: kss-example-grid-list-with-checkboxes.hbs
 //
 // Styleguide Components.GridList.3-CheckboxGridLists
 .item__is-checked {
