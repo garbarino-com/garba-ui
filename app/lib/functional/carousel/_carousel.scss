@@ -196,6 +196,8 @@
 //
 // Styleguide Functional.Carousel.2-ShelfCarousel
 
+
+
 .carousel-shelf {
   @include clearfix;
   overflow: auto;
@@ -218,6 +220,8 @@
     }
   }
 }
+
+
 
 // Carousel controls
 .slick-prev,
@@ -276,6 +280,8 @@
   }
 }
 
+
+
 .slick-prev {
   animation: carousel-exit-left-arrow ($transition-timing-slow / 2) ease-in-out;
   left: 0;
@@ -290,6 +296,8 @@
   }
 }
 
+
+
 .slick-next {
   animation: carousel-exit-right-arrow ($transition-timing-slow / 2) ease-in-out;
   right: 0;
@@ -302,4 +310,13 @@
   .slick-slider:hover & {
     animation: carousel-enter-right-arrow ($transition-timing-slow / 2) ease-in-out;
   }
+}
+
+
+
+// Este botón
+.button--carousel {
+  @include element-aspect-ratio;
+  background-color: red;
+  margin: $box-item-spacing;
 }

@@ -1,33 +1,33 @@
-// Grid List
+// Cell list
 //
-// *Grid-list* es una adaptación del
+// Es una adaptación del
 // [componente material](https://material.io/guidelines/components/grid-lists.html).
 // Es una alternativa a la lista común. Un grupo de celdas de forma cuadrada
 // organizadas en forma horizontal.
 //
-// Las *Grid-lists* sirven se usan para tipos de datos similares. Ayudan a mejorar
+// Las *Cell-lists* sirven se usan para tipos de datos similares. Ayudan a mejorar
 // la comprensión visual de los datos que agrupan.
 //
-// > Los ítems que componen las *Grid-lists* tienen un ancho fijado que se asigna
+// > Los ítems que componen las *Cell-lists* tienen un ancho fijado que se asigna
 // automáticamente de acuerdo a la cantidad de siblings que hayan en la misma fila
 // (máximo 6).
 //
-// Los ítems que componen la lista se usan con la clase `.list-grid-item` salvo
+// Los ítems que componen la lista se usan con la clase `.cell-list-item` salvo
 // cuando se utiliza con imagenes, en cuyo caso se debe utilizer el elemento
 // *Image Container*.
 //
-// Markup: grid-list.hbs
+// Markup: cell-list.hbs
 //
-// Styleguide Components.GridList
+// Styleguide Components.CellList
 
-.list-grid {
+.cell-list {
   @include clearfix;
   margin-bottom: 0;
   margin-left: ($grid-cell-spacer / 2) * -1;
   margin-right: ($grid-cell-spacer / 2) * -1;
   width: 100%;
 
-  // Agrega espacio entre .list-grid adyacentes.
+  // Agrega espacio entre .cell-list adyacentes.
   & + & {
     margin-top: ($grid-cell-spacer / 4);
   }
@@ -35,7 +35,7 @@
   // Setea el margin-bottom para el último sibling
 
   // TODO(ecalvi): Este espaciado no parece estar funcionando cuando el elemento
-  // es uno solo. Si funciona cuando hay varias list-grids juntas.
+  // es uno solo. Si funciona cuando hay varias cell-lists juntas.
 
   &:last-of-type,
   &:only-of-type {
@@ -43,7 +43,7 @@
   }
 }
 
-.list-grid-item {
+.cell-list-item {
   @include align-items(center);
   @include display(flex);
   @include element-aspect-ratio;
@@ -71,13 +71,18 @@
     @include set-width-based-on-siblings-count($grid-cell-max-number);
     float: left;
   }
+
+  // Excepción del para uso del cell
+  .carousel-item & {
+
+  }
 }
 
 
 
-// Grid List con links
+// Cell list con links
 //
-// Agregale links a las *Grid-list* usando tags `<a>` o `<button>`en vez de
+// Agregale links a las *Cell-list* usando tags `<a>` o `<button>`en vez de
 // `<li>` o `<div>` (eso también implica que el elemento padre debería ser un
 // `<div>` en lugar de un `<ul>`.
 //
@@ -86,14 +91,14 @@
 // .item__is-checked - Indica que el ítem fue seleccionado.
 // .item__is-disabled - Estado deshabilitado.
 //
-// Markup: grid-list-linked.hbs
+// Markup: cell-list-linked.hbs
 //
-// Styleguide Components.GridList.1-LinkedGridList
+// Styleguide Components.CellList.1-LinkedCellList
 
 // stylelint-disable selector-no-qualifying-type, selector-no-type
-a.list-grid-item,
-button.list-grid-item,
-label.list-grid-item {
+a.cell-list-item,
+button.cell-list-item,
+label.cell-list-item {
   background: transparent;
   border: 0;
   color: $grid-cell-active;
@@ -135,7 +140,7 @@ label.list-grid-item {
       color: $btn-disabled-color;
     }
 
-    > .list-grid-item__body {
+    > .cell-list-item__body {
       color: $btn-disabled-color;
     }
   }
@@ -152,20 +157,20 @@ label.list-grid-item {
 
 
 
-// Grid List con íconos
+// Cell list con íconos
 //
-// Las *Grid-list* vienen con unos estilos para ícono preseteados como se ve en
+// Las *Cell-list* vienen con unos estilos para ícono preseteados como se ve en
 // este ejemplo. También traen preseteados estilos para posicionar botones.
-// > **Advertencia**: *Grid-list* no son un *Cards* que serán definido en otro lado.
+// > **Advertencia**: *Cell-list* no son un *Cards* que serán definido en otro lado.
 // Si bien se incluyen estilos para texto, íconos y botones internos, la idea de
 // este componente es que no contenga demasiada información. En el caso de ser
 // necesario mostrar demasiada información se recomienda recurrir a las *Cards*.
 //
-// Markup: grid-list-with-icons.hbs
+// Markup: cell-list-with-icons.hbs
 //
-// Styleguide Components.GridList.2-IconGridList
+// Styleguide Components.CellList.2-IconCellList
 
-.list-grid-item__body {
+.cell-list-item__body {
   @include flex(1);
   padding: $grid-cell-spacer * 2;
   text-align: center;
@@ -175,14 +180,14 @@ label.list-grid-item {
 
 
 
-// Grid List con checkboxes
+// Cell list con checkboxes
 //
-// Las Grid-lists pueden usarse dentro para checkboxes dentro de un form para
+// Las Cell-lists pueden usarse dentro para checkboxes dentro de un form para
 // seleccionar entre un set de ítems que puede contener textos o imagenes.
 //
-// Markup: grid-list-with-checkboxes.hbs
+// Markup: cell-list-with-checkboxes.hbs
 //
-// Styleguide Components.GridList.3-CheckboxGridLists
+// Styleguide Components.CellList.3-CheckboxCellList
 .item__is-checked {
   &::after {
     border-color: state-hover-modifier($grid-cell-active);

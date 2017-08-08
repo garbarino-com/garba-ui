@@ -48,7 +48,7 @@
   }
 
   // Estilos especiales para Grid list
-  .list-grid-item > & {
+  .cell-list-item > & {
     height: $grid-cell-image-size;
     width: $grid-cell-image-size;
     z-index: $zindex-element;

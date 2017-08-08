@@ -1,45 +1,46 @@
 <div class="carousel-shelf {{modifier_class}}" itemprop="offers">
   {{#each .}}
-  <div class="carousel-item">
-    <div class="item-box">
-      <a href="/url/de/producto/" title="Título de producto">
-        {{!-- Elemento contenedor de imagenes --}}
-        <div class="img-container">
-          <img itemprop="image" src="{{main_image.url}}"
-            alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-        </div>
+    <div class="carousel-item">
+      <div class="item-box">
+        <a href="/url/de/producto/" title="Título de producto">
+          {{!-- Elemento contenedor de imagenes --}}
+          <div class="img-container">
+            <img itemprop="image" src="{{main_image.url}}"
+              alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+          </div>
 
-        <h3 class="item-box__title">
-          {{description}}
-        </h3>
+          <h3 class="item-box__title">
+            {{description}}
+          </h3>
 
-        {{!-- Elemento de precio --}}
-        <div class="value-container" itemprop="offers" itemscope
-            itemtype="http://schema.org/Offer">
-          {{#if discount}}
+          {{!-- Elemento de precio --}}
+          <div class="value-container" itemprop="offers" itemscope
+              itemtype="http://schema.org/Offer">
             <span class="value-note">
-              <del>${{list_price}}</del>
-              <span class="label label--main" title="Interdum et malesuada fames">
-                {{discount}}% off
+              {{#if discount}}
+                <del>${{list_price}}</del>
+                <span class="label label--main" title="Interdum et malesuada fames">
+                  {{discount}}% off
+                </span>
+              {{/if}}
+            </span>
+            <meta itemprop="priceCurrency" content="ARS">
+            <span class="value-item">
+              $<span itemprop="price">
+                7.199
               </span>
             </span>
-          {{/if}}
-          <meta itemprop="priceCurrency" content="ARS">
-          <span class="value-item">
-            $<span itemprop="">
-              7.199
-            </span>
-          </span>
-          <link href="http://schema.org/InStock" itemprop="inStock">
-        </div>
-      </a>
+            <link href="http://schema.org/InStock" itemprop="inStock">
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
   {{/each}}
   {{!-- {{#if see_all}} --}}
     <div class="carousel-item">
-      +
-      {{see_all.value}}
+      <div class="button--carousel">
+        + {{see_all.value}}
+      </div>
     </div>
   {{!-- {{/if}} --}}
 </div>
