@@ -311,12 +311,3 @@
     animation: carousel-enter-right-arrow ($transition-timing-slow / 2) ease-in-out;
   }
 }
-
-
-
-// Este botón
-.button--carousel {
-  @include element-aspect-ratio;
-  background-color: red;
-  margin: $box-item-spacing;
-}

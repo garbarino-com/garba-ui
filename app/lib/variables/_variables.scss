@@ -550,21 +550,21 @@ $box-item-disabled-bg:           $brand-disabled-bg !default;
 //
 // ("\2022" outputs ascii character "•")
 
-$carousel-font-path: $icon-font-url !default;
-$carousel-font-family: $icon-font-name !default;
-$carousel-loader-path: "./" !default;
-$carousel-control-height: 6rem !default;
-$carousel-control-width: 4rem !default;
-$carousel-arrow-color: $brand-primary !default;
-$carousel-arrow-size: 2rem !default;
-$carousel-dot-character: "\2022" !default;
-$carousel-dot-bg: $widget-bg !default;
-$carousel-dot-color: $brand-secondary !default;
-$carousel-dot-size: .5rem !default;
-$carousel-dot-color-active: $carousel-arrow-color !default;
-$carousel-prev-character: $icon-simple-bold-arrow-left !default;
-$carousel-next-character: $icon-simple-bold-arrow-right !default;
-$carousel-bottom-spacer: 2rem !default;
+$carousel-font-path:            $icon-font-url !default;
+$carousel-font-family:          $icon-font-name !default;
+$carousel-loader-path:          "./" !default;
+$carousel-control-height:       6rem !default;
+$carousel-control-width:        4rem !default;
+$carousel-arrow-color:          $brand-primary !default;
+$carousel-arrow-size:           2rem !default;
+$carousel-dot-character:        "\2022" !default;
+$carousel-dot-bg:               $widget-bg !default;
+$carousel-dot-color:            $brand-secondary !default;
+$carousel-dot-size:             .5rem !default;
+$carousel-dot-color-active:     $carousel-arrow-color !default;
+$carousel-prev-character:       $icon-simple-bold-arrow-left !default;
+$carousel-next-character:       $icon-simple-bold-arrow-right !default;
+$carousel-bottom-spacer:        2rem !default;
 
 
 // Searchbox

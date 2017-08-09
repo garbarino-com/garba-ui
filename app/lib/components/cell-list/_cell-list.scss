@@ -41,6 +41,22 @@
   &:only-of-type {
     margin-bottom: $spacer-lg;
   }
+
+  // Estos estilos son para cuando se usa esta clase dentro de un contenedor con
+  // la clase `.cell-list`.
+  .cell-list-item {
+    padding-left: ($grid-cell-spacer / 2);
+    padding-right: ($grid-cell-spacer / 2);
+
+    // Agrega un espaciado para separar elementos cuando se lo usa dentro de un
+    // contenedor con la clase `.cell-list`.
+    &::after {
+      bottom: ($grid-cell-spacer / 2);
+      left: ($grid-cell-spacer / 2);
+      right: ($grid-cell-spacer / 2);
+      top: ($grid-cell-spacer / 2);
+    }
+  }
 }
 
 .cell-list-item {
@@ -49,21 +65,20 @@
   @include element-aspect-ratio;
   @include flex-direction(row);
   @include justify-content(center);
+  font-size: $font-size-lg;
   line-height: $line-height-sm;
-  padding-left: ($grid-cell-spacer / 2);
-  padding-right: ($grid-cell-spacer / 2);
 
   &::after {
     @include make-pseudo-element;
     background-color: $grid-cell-bg;
     border: $grid-cell-border-size solid $grid-cell-border-color;
+    bottom: 0;
     border-radius: $border-radius-base;
-    bottom: ($grid-cell-spacer / 2);
-    left: ($grid-cell-spacer / 2);
+    left: 0;
     position: absolute;
-    right: ($grid-cell-spacer / 2);
-    top: ($grid-cell-spacer / 2);
+    right: 0;
     transition: border-color ease-in-out $transition-timing-base;
+    top: 0;
   }
 
   // Setea el ancho a los elementos en viewports >768px
@@ -72,9 +87,13 @@
     float: left;
   }
 
-  // Excepción del para uso del cell
-  .carousel-item & {
-
+  // Este bloque normalmente va en el último ítem del carousel y detalla el número
+  // de productos que no están mostrados.
+  .carousel-item &::after {
+    bottom: $box-item-spacing;
+    left: $box-item-spacing;
+    right: $box-item-spacing;
+    top: $box-item-spacing;
   }
 }
 
