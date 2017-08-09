@@ -2,11 +2,10 @@
   {{#each .}}
     <div class="carousel-item">
       <div class="item-box">
-        <a href="/url/de/producto/" title="Título de producto">
+        <a href="/url/de/producto/" title="{{summary}}">
           {{!-- Elemento contenedor de imagenes --}}
           <div class="img-container">
-            <img itemprop="image" src="{{main_image.url}}"
-              alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+            <img itemprop="image" src="{{main_image.url}}" alt="{{summary}}" />
           </div>
 
           <h3 class="item-box__title">
@@ -19,7 +18,7 @@
             <span class="value-note">
               {{#if discount}}
                 <del>${{list_price}}</del>
-                <span class="label label--main" title="Interdum et malesuada fames">
+                <span class="label label--main">
                   {{discount}}% off
                 </span>
               {{/if}}
@@ -27,7 +26,7 @@
             <meta itemprop="priceCurrency" content="ARS">
             <span class="value-item">
               $<span itemprop="price">
-                7.199
+                {{price}}
               </span>
             </span>
             <link href="http://schema.org/InStock" itemprop="inStock">
