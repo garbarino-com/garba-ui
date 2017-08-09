@@ -1,39 +1,6 @@
 <div class="carousel-shelf {{modifier_class}}" itemprop="offers">
   {{#each .}}
-    <div class="carousel-item">
-      <div class="item-box">
-        <a href="/url/de/producto/" title="{{summary}}">
-          {{!-- Elemento contenedor de imagenes --}}
-          <div class="img-container">
-            <img itemprop="image" src="{{main_image.url}}" alt="{{summary}}" />
-          </div>
-
-          <h3 class="item-box__title">
-            {{description}}
-          </h3>
-
-          {{!-- Elemento de precio --}}
-          <div class="value-container" itemprop="offers" itemscope
-              itemtype="http://schema.org/Offer">
-            <span class="value-note">
-              {{#if discount}}
-                <del>${{list_price}}</del>
-                <span class="label label--main">
-                  {{discount}}% off
-                </span>
-              {{/if}}
-            </span>
-            <meta itemprop="priceCurrency" content="ARS">
-            <span class="value-item">
-              $<span itemprop="price">
-                {{price}}
-              </span>
-            </span>
-            <link href="http://schema.org/InStock" itemprop="inStock">
-          </div>
-        </a>
-      </div>
-    </div>
+    {{> itemBox}}
   {{/each}}
   {{!-- {{#if see_all}} --}}
     <div class="carousel-item">
