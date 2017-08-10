@@ -81,7 +81,7 @@ $(function () {
     slidesToShow: 4.8,
     dots: false,
     infinite: false,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     responsive: [{
       breakpoint: 1025,
       settings: 'unslick'

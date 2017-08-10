@@ -72,13 +72,13 @@
     @include make-pseudo-element;
     background-color: $grid-cell-bg;
     border: $grid-cell-border-size solid $grid-cell-border-color;
-    bottom: 0;
     border-radius: $border-radius-base;
+    bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
-    transition: border-color ease-in-out $transition-timing-base;
     top: 0;
+    transition: border-color ease-in-out $transition-timing-base;
   }
 
   // Setea el ancho a los elementos en viewports >768px

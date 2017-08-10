@@ -1,0 +1,31 @@
+// Animación
+//
+// Helpers para generar animaciones.
+//
+// Styleguide Helpers.Animation
+
+
+// @keyframes block-animation--opacity
+//
+// Transición de opacidad de 0 a 1
+//
+// Styleguide Helpers.Animation.Opacity
+
+
+// Basic Opacity transition
+@keyframes block-animation--opacity {
+  0% {
+    @include hide-element;
+    opacity: 0;
+  }
+
+  1% {
+    @include show-element;
+    opacity: 0;
+  }
+
+  100% {
+    @include show-element;
+    opacity: 1;
+  }
+}

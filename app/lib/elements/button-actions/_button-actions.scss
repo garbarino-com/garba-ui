@@ -76,19 +76,6 @@
 
 // Action animation
 
-// TODO(ecalvi): The next mixin is not working for some reason. Calling
-// animation without prefixes but we should check this out later.
-//
-// @include keyframes(action-active) {
-//   from {
-//     background-position: left;
-//   }
-//
-//   to {
-//     background-position: right;
-//   }
-// }
-
 // Animation without prefixes:
 @keyframes action-active {
   from {

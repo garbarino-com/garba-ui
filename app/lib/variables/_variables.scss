@@ -438,7 +438,7 @@ $tooltip-distance:                   $spacer-base !default;
 
 
 
-// Value component
+// Value element
 $value-font-size-base:               1.75rem !default; // 24.5px
 $value-font-size-base-mobile:        $font-size-lg !default; // 18px
 
@@ -447,15 +447,19 @@ $value-font-size-lg-mobile:          2rem !default; // 28px
 
 $value-font-size-sm:                 $font-size-base !default; // 14px
 
+$value-line-height-base:             1.25 !default;
+$value-line-height-lg:               1.5 !default;
+
 $value-note-font-size-base:          $font-size-base !default; // 14px
 $value-note-font-size-base-mobile:   $value-note-font-size-base !default; // 14px
 
+$value-note-font-size-sm:            $font-size-sm !default; // 12px
 $value-note-font-size-lg:            $font-size-lg !default; // 18px
 
-$value-note-font-size-sm:            $font-size-sm !default; // 12px
-
-$value-line-height-base:             1.25 !default;
-$value-line-height-lg:               1.5 !default;
+// Value note height
+$value-note-height-base:             $value-note-font-size-base * $value-line-height-base !default;
+$value-note-height-sm:               $value-note-font-size-sm * $value-line-height-base !default;
+$value-note-height-lg:               $value-note-font-size-lg * $value-line-height-base !default;
 
 $value-note-color:                   $text-muted !default;
 $value-note-font-weight:             400 !default;
@@ -533,6 +537,8 @@ $navbar-icon-mouseout-animation:        scale(1) translateY(0) !default;
 
 // Box item
 $box-item-bg:                    transparent !default;
+$box-item-width-mobile:          9rem !default;
+$box-item-width-tablet:          14rem !default;
 $box-item-spacing:               $spacer-base !default;
 $box-item-overlay-bg:            $widget-bg !default;
 $box-item-title:                 $link-color !default;

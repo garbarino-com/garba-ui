@@ -17,15 +17,6 @@
 // for backwards compatibility purposes. Don not become too attached to it.
 @import "_v1.3.2/garbaui";
 
-// Import bourbon functionalities to be used in the app
-@import "helpers/bourbon";
-
-// Import bootstrap functionalities to be used in the app
-@import "helpers/bootstrap";
-
-// Mixin generador de la extensión de grilla
-@import "helpers/grid-narrow";
-
 // Component helpers
 @import "helpers/helpers";
 
