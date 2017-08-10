@@ -1,6 +1,8 @@
 <div class="carousel-shelf {{modifier_class}}" itemprop="offers">
   {{#each .}}
-    {{> itemBox}}
+    <div class="carousel-item">
+      {{> itemBox}}
+    </div>
   {{/each}}
   {{!-- {{#if see_all}} --}}
     <div class="carousel-item">

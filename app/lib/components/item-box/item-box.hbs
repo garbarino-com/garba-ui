@@ -1,5 +1,6 @@
-<div class="item-box {{modifier_class}}">
-  <a href="/url/de/producto/" title="{{summary}}">
+<div class="item-box {{modifier_class}}
+    {{#unless enabled_for_sale}} item__is-disabled {{/unless}}">
+  <a href="/producto/{{xid}}" title="{{summary}}">
     {{!-- Elemento contenedor de imagenes --}}
     <div class="img-container">
       <img itemprop="image" src="{{main_image.url}}" alt="{{summary}}" />
@@ -26,7 +27,13 @@
           {{price}}
         </span>
       </span>
-      <link href="http://schema.org/InStock" itemprop="inStock">
+      <link
+        {{#if enabled_for_sale}}
+          href="http://schema.org/InStock" itemprop="inStock"
+        {{else}}
+          href="http://schema.org/OutOfStock" itemprop="OutOfStock"
+        {{/if}}
+      >
     </div>
   </a>
 </div>
