@@ -1,0 +1,36 @@
+{
+  "xid": "c863d85965",
+  "description": "RYSE: SON OF ROME LEGENDARY EDITION XBOX ONE Microsoft",
+  "summary": "Genero: Acción. Sub-Genero: Aventura. ESRB: M. PEGI: 18. Voces: Español. Textos: Español. ",
+  "brand": "microsoft",
+  "original_brand": "Microsoft",
+  "list_price": 1299,
+  "price": 799,
+  "discount": 38,
+  "enabled_for_sale": true,
+  "preferred_installment": {
+    "base_price": 799,
+    "installments": 12,
+    "interest": 2.41,
+    "surcharge": 231.07,
+    "final_price": 1030.07,
+    "installment_price": 85.83,
+    "eapr": 48.52,
+    "tfc": 63.86,
+    "description": "En 12 cuotas fijas de $85,83",
+    "gateway_installments": 12,
+    "visa_financing": true,
+    "repayment": 0
+  },
+  "model": "RYSE: SON OF ROME LEGENDARY EDITION",
+  "category_id": 4495,
+  "main_image": {
+    "max_width": 1000,
+    "url": "//d3lfzbr90tctqz.cloudfront.net/epi/resource/r/ryse-son-of-rome-legendary-edition-xbox-one-microsoft/7598a3f459a4f89db21059faf2036d459b8caf2c5c7dbe87b936d7c45853bc9d"
+  },
+  "virtual": false,
+  "categories": [
+    4495
+  ],
+  "category": "Juegos XBOX ONE"
+}
