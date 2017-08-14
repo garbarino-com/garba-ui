@@ -28,6 +28,20 @@
   &.slick-dotted {
     padding-bottom: $carousel-bottom-spacer;
   }
+
+  .slick-track,
+  .slick-list {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slick-list {
+    overflow: auto;
+
+    // Media query for desktop
+    @media only screen and (min-width: $screen-lg-min) {
+      overflow: hidden;
+    }
+  }
 }
 
 
@@ -59,13 +73,6 @@
   &.dragging {
     cursor: pointer;
     cursor: hand;
-  }
-}
-
-.slick-slider {
-  .slick-track,
-  .slick-list {
-    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -213,8 +220,6 @@
 
   // Media query for tablet
   @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    overflow: hidden;
-
     > .carousel-item {
       width: $box-item-width-tablet;
     }
@@ -222,6 +227,8 @@
 
   // Media query for desktop
   @media only screen and (min-width: $screen-lg-min) {
+    overflow: hidden;
+
     > .carousel-item {
       padding-bottom: 0;
       padding-top: 0;
