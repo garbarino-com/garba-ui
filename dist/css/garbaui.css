@@ -7740,6 +7740,21 @@ a.search-box__list--item strong {
   padding-bottom: 2rem;
 }
 
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-slider .slick-list {
+  overflow: auto;
+}
+
+@media only screen and (min-width: 73.14286rem) {
+  .slick-slider .slick-list {
+    overflow: hidden;
+  }
+}
+
 .carousel-billboard {
   display: block;
   margin: 0;
@@ -7755,11 +7770,6 @@ a.search-box__list--item strong {
 .carousel-billboard.dragging {
   cursor: pointer;
   cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  transform: translate3d(0, 0, 0);
 }
 
 .slick-track {
@@ -7889,15 +7899,15 @@ a.search-box__list--item strong {
 }
 
 @media only screen and (min-width: 54.85714rem) and (max-width: 72.14286rem) {
-  .carousel-shelf {
-    overflow: hidden;
-  }
   .carousel-shelf > .carousel-item {
     width: 14rem;
   }
 }
 
 @media only screen and (min-width: 73.14286rem) {
+  .carousel-shelf {
+    overflow: hidden;
+  }
   .carousel-shelf > .carousel-item {
     padding-bottom: 0;
     padding-top: 0;
