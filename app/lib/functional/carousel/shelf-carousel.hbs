@@ -4,13 +4,13 @@
       {{> itemBox}}
     </div>
   {{/each}}
-  {{!-- {{#if see_all}} --}}
+  {{#if full_list}}
     <div class="carousel-item">
-      <a href="#0" class="cell-list-item">
+      <a href="{{full_list.url}}" class="cell-list-item">
         <span class="cell-list-item__body">
-          + {{see_all.value}}
+          + {{full_list.value}}
         </span>
       </a>
     </div>
-  {{!-- {{/if}} --}}
+  {{/if}}
 </div>
