@@ -4354,6 +4354,8 @@ label {
   font-weight: 400;
   margin-bottom: 0.5rem;
   max-width: 100%;
+  min-height: 1rem;
+  min-width: 1%;
   position: relative;
 }
 

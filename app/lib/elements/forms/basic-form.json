@@ -1,0 +1,9 @@
+{
+  "label": "Email address",
+  "input_type": "email",
+  "input_id": "exampleInputEmail1",
+  "input_placeholder": "Inserte su email.",
+  "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.",
+  "action_type": "submit",
+  "action": "¡Suscribirme!"
+}

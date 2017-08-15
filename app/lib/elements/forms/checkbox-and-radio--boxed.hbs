@@ -1,35 +1,38 @@
 <div class="checkbox {{modifier_class}}">
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox1" value="option1">
-    Sed volutpat dignissim
+    <input type="checkbox" id="{{checkbox.checkbox1.id}}"
+      value="{{checkbox.checkbox1.value}}">
+    {{checkbox.checkbox1.label}}
   </label>
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox2" value="option2">
-    Nullam pellentesque
+    <input type="checkbox" id="{{checkbox.checkbox2.id}}"
+      value="{{checkbox.checkbox2.value}}">
+    {{checkbox.checkbox2.label}}
   </label>
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox3" value="option3">
-    Mauris pulvinar aliquet
+    <input type="checkbox" id="{{checkbox.checkbox3.id}}"
+      value="{{checkbox.checkbox3.value}}">
+    {{checkbox.checkbox3.label}}
   </label>
   <p class="form-block__note">
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{checkbox.note}}
   </p>
 </div>
 
 <div class="radio {{modifier_class}}">
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    Morbi pulvinar est arcu pulvinar est arcu
+    <input type="radio" name="{{radio.name}}" id="{{radio.radio1.id}}" value="{{radio.radio1.value}}">
+    {{radio.radio1.label}}
   </label>
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    Aenean vel aliquet
+    <input type="radio" name="{{radio.name}}" id="{{radio.radio2.id}}" value="{{radio.radio2.value}}">
+    {{radio.radio2.label}}
   </label>
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    Phasellus mi justo
+    <input type="radio" name="{{radio.name}}" id="{{radio.radio3.id}}" value="{{radio.radio3.value}}">
+    {{radio.radio3.label}}
   </label>
   <p class="form-block__note">
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{radio.note}}
   </p>
 </div>
