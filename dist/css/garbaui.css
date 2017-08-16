@@ -6353,7 +6353,7 @@ fieldset[disabled] ~ .form-block__helper,
 .img-container__is-loading::after {
   content: "";
   display: inline-block;
-  background-image: url(../images/spinner--md.svg);
+  background-image: url(../images/gb-spinner--md.svg);
   height: 3.5rem;
   left: 50%;
   margin-left: -1.75rem;
@@ -7235,7 +7235,7 @@ label.cell-list-item input:checked {
 }
 
 .search-box__is-loading::after {
-  background-image: url(../images/spinner--md.svg);
+  background-image: url(../images/gb-spinner--md.svg);
   background-position: center top;
   background-repeat: no-repeat;
   height: 3.5rem;
@@ -8196,7 +8196,7 @@ a.search-box__list--item strong {
 }
 
 .module__is-loading::after {
-  background-image: url(../images/spinner--lg.svg);
+  background-image: url(../images/gb-spinner--lg.svg);
   background-position: center top;
   background-repeat: no-repeat;
   height: 7rem;

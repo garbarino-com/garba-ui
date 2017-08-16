@@ -26,10 +26,10 @@
 
   // Definir las diferentes variables de tamaño para los spinners
   @if $size == "large" {
-    $spinner-variant: "spinner--lg.svg";
+    $spinner-variant: $spinner-element-lg;
     $spinner-size: $spinner-lg-size;
   } @else if $size == "medium" {
-    $spinner-variant: "spinner--md.svg";
+    $spinner-variant: $spinner-element-md;
     $spinner-size: $spinner-md-size;
   }
 

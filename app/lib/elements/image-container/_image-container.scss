@@ -84,7 +84,7 @@
   // aspect-ratio in parent class.
   &::after {
     @include make-pseudo-element(inline-block);
-    background-image: url(#{$images-url}spinner--md.svg);
+    background-image: url(#{$images-url}#{$spinner-element-md});
     height: $spinner-md-size;
     left: 50%;
     margin-left: ($spinner-md-size / 2) * -1;
