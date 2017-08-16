@@ -1,69 +1,57 @@
 <form>
   <div class="form-block {{modifier_class}}">
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-        title="Fusce ac luctus sem.">
+        title="{{block1.helper}}">
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    {{!-- Input básico de texto. --}}
-    <input type="text" class="form-control" placeholder="Text">
+    {{!-- Form control --}}
+    <input type="{{block1.type}}" class="form-control" placeholder="{{block1.placeholder}}">
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block1.note}}
     </p>
   </div>
 
   <div class="form-block {{modifier_class}}">
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-        title="Fusce ac luctus sem.">
+        title="{{block2.helper}}">
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    {{!-- Select --}}
+    {{!-- Form control --}}
     <select class="form-control">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="{{block2.select.option1}}">{{block2.select.option1}}</option>
+      <option value="{{block2.select.option2}}">{{block2.select.option2}}</option>
+      <option value="{{block2.select.option3}}">{{block2.select.option3}}</option>
+      <option value="{{block2.select.option4}}">{{block2.select.option4}}</option>
     </select>
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block2.note}}
     </p>
   </div>
 
   <div class="form-block {{modifier_class}}">
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-        title="Fusce ac luctus sem.">
+        title="{{block3.helper}}">
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    {{!-- Textarea --}}
+    {{!-- Form control --}}
     <textarea class="form-control" rows="3"></textarea>
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block3.note}}
     </p>
   </div>
 </form>

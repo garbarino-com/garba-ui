@@ -1,0 +1,22 @@
+{
+  "block1": {
+    "type": "text",
+    "placeholder": "Username",
+    "helper": "Fusce ac luctus sem.",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna."
+  },
+  "block2": {
+    "helper": "Fusce ac luctus sem.",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.",
+    "select": {
+      "option1": "Volvo",
+      "option2": "Saab",
+      "option3": "Mercedes",
+      "option4": "Audi"
+    }
+  },
+  "block3": {
+    "helper": "Fusce ac luctus sem.",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna."
+  }
+}
