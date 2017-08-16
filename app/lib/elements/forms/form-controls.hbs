@@ -1,16 +1,17 @@
 <form>
   <div class="form-block">
-    {{!-- Input básico de texto. --}}
-    <input type="text" class="form-control {{modifier_class}}" placeholder="Text">
+    {{!-- Text input. --}}
+    <input type="{{control1.type}}" class="form-control {{modifier_class}}"
+      placeholder="{{control1.placeholder}}">
   </div>
 
   <div class="form-block">
     {{!-- Select --}}
     <select class="form-control {{modifier_class}}">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="{{control2.select.option1}}">{{control2.select.option1}}</option>
+      <option value="{{control2.select.option2}}">{{control2.select.option2}}</option>
+      <option value="{{control2.select.option3}}">{{control2.select.option3}}</option>
+      <option value="{{control2.select.option4}}">{{control2.select.option4}}</option>
     </select>
   </div>
 

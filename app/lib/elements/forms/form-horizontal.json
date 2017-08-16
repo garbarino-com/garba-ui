@@ -1,0 +1,20 @@
+{
+  "block1": {
+    "id": "inputEmail3",
+    "label": "Email",
+    "placeholder": "Ingrese su email",
+    "type": "email",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna."
+  },
+  "block2": {
+    "id": "inputPassword4",
+    "label": "Password",
+    "placeholder": "Ingrese su password",
+    "type": "password",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna."
+  },
+  "block3": {
+    "type": "submit",
+    "action": "Sign in"
+  }
+}
