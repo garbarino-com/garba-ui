@@ -21,68 +21,21 @@ var slick = require('../../node_modules/slick-carousel/slick/slick');
 
 // Initialize bootstrap plugins
 // Styleguide section-functional.html#kssref-functional-tooltips
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip({
-    container: 'body',
-    trigger: 'hover'
-  });
-});
+var initializeTooltip = require('./scripts/components/tooltip');
 
 
 
 // Le pone la clase `.item__is-checked` al label padre cuando el usuario hace
 // click en un ítem
-$(function () {
-  $('.list-grid :checkbox').on('change', function() {
-    $(this).closest('label').toggleClass('item__is-checked', this.checked)
-  });
-});
+// Styleguide section-functional.html#kssref-components-celllist-3-checkboxcelllist
+var listGrid = require('./scripts/components/carousel-billboard');
 
 
 
-// Inicializar Carouseles
-$(function () {
-  // TODO(ecalvi): Maybe we should consider in the future moving these settings
-  // to their own module.
+// Carousel Plugin (http://kenwheeler.github.io/slick/)
 
-  // Initialize billboard carousel plugins
-  // Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
-  $('.carousel-billboard').slick({
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      cssEase: 'linear',
-      infinite: true,
-      mobileFirst: true,
-      pauseOnHover: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed: 500,
-      responsive: [{
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          dots: true,
-          fade: true,
-          pauseOnFocus: true
-        }
-      }]
-  });
-});
+// Styleguide section-functional.html#kssref-components-celllist-3-checkboxcelllist
+var carouselBillboard = require('./scripts/components/carousel-billboard');
 
-$(function () {
-  // Shelf carousel plugins
-  // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
-  $('.carousel-shelf').slick({
-    lazyLoad: 'ondemand',
-    speed: 300,
-    slidesToShow: 4.8,
-    dots: false,
-    infinite: false,
-    slidesToScroll: 4,
-    responsive: [{
-      breakpoint: 1025,
-      settings: 'unslick'
-    }]
-  });
-});
+// Styleguide section-functional.html#kssref-components-celllist-3-checkboxcelllist
+var carouselShelf = require('./scripts/components/carousel-shelf');

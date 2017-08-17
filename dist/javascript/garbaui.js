@@ -23,25 +23,22 @@ var slick = require('../../node_modules/slick-carousel/slick/slick');
 
 // Initialize bootstrap plugins
 // Styleguide section-functional.html#kssref-functional-tooltips
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip({
-    container: 'body',
-    trigger: 'hover'
-  });
-});
+var initializaTooltip = require('./scripts/components/tooltip');
 
 
 
 // Le pone la clase `.item__is-checked` al label padre cuando el usuario hace
 // click en un ítem
-$(function () {
-  $('.list-grid :checkbox').on('change', function() {
-    $(this).closest('label').toggleClass('item__is-checked', this.checked)
-  });
-});
+var listGrid = require('./scripts/components/carousel-billboard');
 
 
 
+// Carousel Plugin (http://kenwheeler.github.io/slick/)
+var carouselBillboard = require('./scripts/components/carousel-billboard');
+var carouselShelf = require('./scripts/components/carousel-shelf');
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal":8,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab":9,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip":10,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition":11,"../../node_modules/slick-carousel/slick/slick":12,"./scripts/components/carousel-billboard":2,"./scripts/components/carousel-shelf":3,"./scripts/components/tooltip":4,"./scripts/cookie":5,"./scripts/first-purchase":6,"./scripts/offers-hunter":7}],2:[function(require,module,exports){
 // Inicializar Carouseles
 $(function () {
   // TODO(ecalvi): Maybe we should consider in the future moving these settings
@@ -72,6 +69,7 @@ $(function () {
   });
 });
 
+},{}],3:[function(require,module,exports){
 $(function () {
   // Shelf carousel plugins
   // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
@@ -89,8 +87,16 @@ $(function () {
   });
 });
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal":5,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab":6,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip":7,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition":8,"../../node_modules/slick-carousel/slick/slick":9,"./scripts/cookie":2,"./scripts/first-purchase":3,"./scripts/offers-hunter":4}],2:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
+// Initialize Bootstrap tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip({
+    container: 'body',
+    trigger: 'hover'
+  });
+});
+
+},{}],5:[function(require,module,exports){
 /*!
  * JavaScript Cookie v2.1.3
  * https://github.com/js-cookie/js-cookie
@@ -247,7 +253,7 @@ $(function () {
 
   return init(function () {});
 }));
-},{}],3:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 $(document).ready(function() {
     var url = window.location.href;
     firstPurchase = url.search("subscripcion=primera-compra");
@@ -301,7 +307,7 @@ $("#Enviar").click(function () {
     }
 });
 
-},{}],4:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 $(document).ready(function () {
   var gb = gb || {};
   gb.offersHunter = gb.offersHunter || {};
@@ -515,7 +521,7 @@ function detectDevice(userAgent) {
   return ret;
 };
 
-},{}],5:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: modal.js v3.3.7
  * http://getbootstrap.com/javascript/#modals
@@ -856,7 +862,7 @@ function detectDevice(userAgent) {
 
 }(jQuery);
 
-},{}],6:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: tab.js v3.3.7
  * http://getbootstrap.com/javascript/#tabs
@@ -1013,7 +1019,7 @@ function detectDevice(userAgent) {
 
 }(jQuery);
 
-},{}],7:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: tooltip.js v3.3.7
  * http://getbootstrap.com/javascript/#tooltip
@@ -1535,7 +1541,7 @@ function detectDevice(userAgent) {
 
 }(jQuery);
 
-},{}],8:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: transition.js v3.3.7
  * http://getbootstrap.com/javascript/#transitions
@@ -1596,7 +1602,7 @@ function detectDevice(userAgent) {
 
 }(jQuery);
 
-},{}],9:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 (function (global){
 /*
      _ _      _       _
