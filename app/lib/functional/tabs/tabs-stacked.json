@@ -1,0 +1,34 @@
+{
+  "tab1": {
+    "title": "Home",
+    "icon": "icon-home",
+    "id": "tab1",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, elementum ac egestas ac, feugiat id turpis. Mauris iaculis, massa non malesuada dignissim, turpis felis consectetur magna, a tincidunt turpis nisi at massa. Duis scelerisque maximus felis in fermentum. Nunc eu nisl ac tortor mattis dapibus sit amet sed libero.",
+    "state": "active",
+    "visible": "in"
+  },
+  "tab2": {
+    "title": "Profile",
+    "icon": "icon-user",
+    "id": "tab2",
+    "content": "Phasellus molestie, enim sit amet sagittis vestibulum, ligula orci gravida ipsum, id efficitur ex tortor sed ante. Morbi metus velit, consequat eget facilisis id, congue in leo. Aenean vestibulum tristique nulla a aliquet.",
+    "state": "",
+    "visible": ""
+  },
+  "tab3": {
+    "title": "Settings",
+    "icon": "icon-preferences",
+    "id": "tab3",
+    "content": "Fusce eu dolor lacus. Phasellus at accumsan sapien, non pulvinar orci. Aliquam commodo finibus porta. Vestibulum convallis ac turpis a pulvinar. Integer quis velit nec enim pretium interdum. Quisque fringilla luctus dui sit amet malesuada.",
+    "state": "",
+    "visible": ""
+  },
+  "tab4": {
+    "title": "Messages",
+    "icon": "icon-email",
+    "id": "tab4",
+    "content": "Proin pulvinar gravida odio. Proin sed velit augue. Mauris sollicitudin eros sit amet orci pulvinar varius. Integer quis ante quis libero tristique dictum sit amet eget libero. Nulla mi turpis, tempor quis egestas et, tristique sed metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    "state": "",
+    "visible": ""
+  }
+}

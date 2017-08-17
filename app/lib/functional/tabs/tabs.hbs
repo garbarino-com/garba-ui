@@ -1,0 +1,22 @@
+<div>
+  {{!-- Nav tabs --}}
+  <ul class="navbar navbar__justified navbar__with-icons" role="tablist">
+    {{#each .}}
+      <li role="presentation" class="{{state}}">
+        <a href="#{{id}}" aria-controls="{{id}}" role="tab" data-toggle="tab">
+          <span class="{{icon}}" aria-hidden="true"></span>
+          {{title}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+
+  {{!-- Tab panes --}}
+  <div class="tab-content">
+    {{#each .}}
+      <div role="tabpanel" class="tab-pane fade {{state}} {{visible}}" id="{{id}}">
+        <p>{{content}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
