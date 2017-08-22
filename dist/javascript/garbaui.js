@@ -76,7 +76,9 @@ $(function () {
 
 },{}],3:[function(require,module,exports){
 // Initializa objeto vacío.
-var shelfCarousel = {};
+// Esto se inicializa en window para que esté disponible desde afuera.
+
+window.shelfCarousel = {};
 
 shelfCarousel.settings = {
   lazyLoad: 'ondemand',
