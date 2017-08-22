@@ -23,18 +23,23 @@ var slick = require('../../node_modules/slick-carousel/slick/slick');
 
 // Initialize bootstrap plugins
 // Styleguide section-functional.html#kssref-functional-tooltips
-var initializaTooltip = require('./scripts/components/tooltip');
+var initializeTooltip = require('./scripts/components/tooltip');
 
 
 
 // Le pone la clase `.item__is-checked` al label padre cuando el usuario hace
 // click en un ítem
+// Styleguide section-functional.html#kssref-components-celllist-3-checkboxcelllist
 var listGrid = require('./scripts/components/carousel-billboard');
 
 
 
 // Carousel Plugin (http://kenwheeler.github.io/slick/)
+
+// Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
 var carouselBillboard = require('./scripts/components/carousel-billboard');
+
+// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
 var carouselShelf = require('./scripts/components/carousel-shelf');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
@@ -70,22 +75,38 @@ $(function () {
 });
 
 },{}],3:[function(require,module,exports){
-$(function () {
-  // Shelf carousel plugins
+// Initializa objeto vacío.
+var shelfCarousel = {};
+
+shelfCarousel.settings = {
+  lazyLoad: 'ondemand',
+  speed: 300,
+  slidesToShow: 4.8,
+  dots: false,
+  infinite: false,
+  slidesToScroll: 4,
+  responsive: [{
+    breakpoint: 1025,
+    settings: 'unslick'
+  }]
+};
+
+
+// Init del carousel
+shelfCarousel.init = function(element) {
   // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
-  $('.carousel-shelf').slick({
-    lazyLoad: 'ondemand',
-    speed: 300,
-    slidesToShow: 4.8,
-    dots: false,
-    infinite: false,
-    slidesToScroll: 4,
-    responsive: [{
-      breakpoint: 1025,
-      settings: 'unslick'
-    }]
-  });
-});
+  $(element).slick(shelfCarousel.settings);
+}
+
+
+// reInit del carousel
+shelfCarousel.reInit = function(element) {
+  $(element).slick('unslick');
+  $(element).slick(shelfCarousel.settings);
+}
+
+
+shelfCarousel.init('.carousel-shelf');
 
 },{}],4:[function(require,module,exports){
 // Initialize Bootstrap tooltip
