@@ -17,16 +17,9 @@ shelfCarousel.settings = {
 };
 
 
-// Init del carousel
+// Init shelf carousel
 shelfCarousel.init = function(element) {
   // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
-  $(element).slick(shelfCarousel.settings);
-}
-
-
-// reInit del carousel
-shelfCarousel.reInit = function(element) {
-  $(element).slick('unslick');
   $(element).slick(shelfCarousel.settings);
 }
 
