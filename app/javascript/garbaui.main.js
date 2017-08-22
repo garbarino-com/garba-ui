@@ -34,8 +34,8 @@ var listGrid = require('./scripts/components/carousel-billboard');
 
 // Carousel Plugin (http://kenwheeler.github.io/slick/)
 
-// Styleguide section-functional.html#kssref-components-celllist-3-checkboxcelllist
+// Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
 var carouselBillboard = require('./scripts/components/carousel-billboard');
 
-// Styleguide section-functional.html#kssref-components-celllist-3-checkboxcelllist
+// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
 var carouselShelf = require('./scripts/components/carousel-shelf');
