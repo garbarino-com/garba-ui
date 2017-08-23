@@ -1,9 +1,7 @@
-// Initializa objeto vacío.
-// Esto se inicializa en window para que esté disponible desde afuera.
+// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
 
-window.shelfCarousel = {};
-
-shelfCarousel.settings = {
+// Shelf carousel settings
+gb_ui.carousel.carouselShelf.settings = {
   lazyLoad: 'ondemand',
   speed: 300,
   slidesToShow: 4.8,
@@ -14,14 +12,13 @@ shelfCarousel.settings = {
     breakpoint: 1025,
     settings: 'unslick'
   }]
-};
+}
 
-
-// Init shelf carousel
-shelfCarousel.init = function(element) {
-  // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
-  $(element).slick(shelfCarousel.settings);
+// Shelf carousel init
+gb_ui.carousel.carouselShelf.init = function(element) {
+  $(element).slick(gb_ui.carousel.carouselShelf.settings);
 }
 
 
-shelfCarousel.init('.carousel-shelf');
+// Shelf carousel on class
+gb_ui.carousel.carouselShelf.init('.carousel-shelf');

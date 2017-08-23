@@ -43,7 +43,8 @@
     ]
   },
   "browserify-shim": {
-    "jquery": "global:$"
+    "jquery": "global:$",
+    "gb_ui": "window:gb_ui"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
