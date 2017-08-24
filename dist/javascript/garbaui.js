@@ -30,14 +30,23 @@ var listGrid             = require('./scripts/components/carousel-billboard');
 
 
 
-// Namespaced Functions
+// Objeto Global
 //
-// Algunas funciones como los carouseles están disponibles desde el objeto `gb_ui`.
+// Algunas funciones como por ejemplo los
+// [carouseles](/section-functional.html#kssref-functional-carousel) están
+// disponibles globalmente a través del objeto `gb_ui`.
+//
+// **Usage**
+// ```
+// gb_ui: {
+//  carousel: {
+//    carouselBillboard: {...},
+//    carouselShelf: {...}
+//  }
+// };
 // ```
 //
-// ```
-//
-// Styleguide Functional.NamespacedFunctions
+// Styleguide Functional.1-GlobalObject
 
 window.gb_ui = {
   carousel: {
@@ -89,13 +98,13 @@ $(function () {
     $(element).slick(gb_ui.carousel.carouselBillboard.settings);
   }
 
-
   // Billboard carousel on class
   gb_ui.carousel.carouselBillboard.init('.carousel-billboard');
 });
 
 },{}],3:[function(require,module,exports){
 // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+
 $(function () {
   // Shelf carousel settings
   gb_ui.carousel.carouselShelf.settings = {
@@ -115,7 +124,6 @@ $(function () {
   gb_ui.carousel.carouselShelf.init = function(element) {
     $(element).slick(gb_ui.carousel.carouselShelf.settings);
   }
-
 
   // Shelf carousel on class
   gb_ui.carousel.carouselShelf.init('.carousel-shelf');

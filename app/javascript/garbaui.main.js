@@ -28,17 +28,23 @@ var listGrid             = require('./scripts/components/carousel-billboard');
 
 
 
-// Namespaced Functions
+// Objeto Global
 //
-// Algunas funciones como los carouseles están disponibles globalmente a través
-// del objeto `gb_ui`.
+// Algunas funciones como por ejemplo los
+// [carouseles](/section-functional.html#kssref-functional-carousel) están
+// disponibles globalmente a través del objeto `gb_ui`.
 //
-// **Usage (test a través de la consola)**
+// **Usage**
 // ```
-// gb_ui
+// gb_ui: {
+//  carousel: {
+//    carouselBillboard: {...},
+//    carouselShelf: {...}
+//  }
+// };
 // ```
 //
-// Styleguide Functional.NamespacedFunctions
+// Styleguide Functional.1-GlobalObject
 
 window.gb_ui = {
   carousel: {
