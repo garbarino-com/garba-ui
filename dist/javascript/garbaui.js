@@ -58,16 +58,16 @@ window.gb_ui = {
 
 // Carousel Plugin (http://kenwheeler.github.io/slick/)
 
-// Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
+// Link: section-functional.html#kssref-functional-carousel-1-simplecarousel
 carouselBillboard  = require('./scripts/components/carousel-billboard');
 
-// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+// Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 carouselShelf      = require('./scripts/components/carousel-shelf');
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal":8,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab":9,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip":10,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition":11,"../../node_modules/slick-carousel/slick/slick":12,"./scripts/components/carousel-billboard":2,"./scripts/components/carousel-shelf":3,"./scripts/components/tooltip":4,"./scripts/cookie":5,"./scripts/first-purchase":6,"./scripts/offers-hunter":7}],2:[function(require,module,exports){
-// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+// Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 
 $(function () {
   // Billboard carousel settings
@@ -103,7 +103,7 @@ $(function () {
 });
 
 },{}],3:[function(require,module,exports){
-// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+// Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 
 $(function () {
   // Shelf carousel settings

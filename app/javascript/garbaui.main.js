@@ -56,9 +56,9 @@ window.gb_ui = {
 
 // Carousel Plugin (http://kenwheeler.github.io/slick/)
 
-// Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
+// Link: section-functional.html#kssref-functional-carousel-1-simplecarousel
 carouselBillboard  = require('./scripts/components/carousel-billboard');
 
-// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+// Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 carouselShelf      = require('./scripts/components/carousel-shelf');
 

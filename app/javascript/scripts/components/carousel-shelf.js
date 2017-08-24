@@ -1,4 +1,4 @@
-// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+// Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 
 $(function () {
   // Shelf carousel settings
