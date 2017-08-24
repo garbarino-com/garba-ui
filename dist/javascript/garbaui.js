@@ -58,14 +58,11 @@ carouselShelf      = require('./scripts/components/carousel-shelf');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal":8,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab":9,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip":10,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition":11,"../../node_modules/slick-carousel/slick/slick":12,"./scripts/components/carousel-billboard":2,"./scripts/components/carousel-shelf":3,"./scripts/components/tooltip":4,"./scripts/cookie":5,"./scripts/first-purchase":6,"./scripts/offers-hunter":7}],2:[function(require,module,exports){
-// Inicializar Carouseles
-$(function () {
-  // TODO(ecalvi): Maybe we should consider in the future moving these settings
-  // to their own module.
+// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
 
-  // Initialize billboard carousel plugins
-  // Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
-  $('.carousel-billboard').slick({
+$(function () {
+  // Billboard carousel settings
+  gb_ui.carousel.carouselBillboard.settings = {
       arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
@@ -85,34 +82,44 @@ $(function () {
           pauseOnFocus: true
         }
       }]
-  });
+  }
+
+  // Billboard carousel init
+  gb_ui.carousel.carouselBillboard.init = function(element) {
+    $(element).slick(gb_ui.carousel.carouselBillboard.settings);
+  }
+
+
+  // Billboard carousel on class
+  gb_ui.carousel.carouselBillboard.init('.carousel-billboard');
 });
 
 },{}],3:[function(require,module,exports){
 // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+$(function () {
+  // Shelf carousel settings
+  gb_ui.carousel.carouselShelf.settings = {
+    lazyLoad: 'ondemand',
+    speed: 300,
+    slidesToShow: 4.8,
+    dots: false,
+    infinite: false,
+    slidesToScroll: 4,
+    responsive: [{
+      breakpoint: 1025,
+      settings: 'unslick'
+    }]
+  }
 
-// Shelf carousel settings
-gb_ui.carousel.carouselShelf.settings = {
-  lazyLoad: 'ondemand',
-  speed: 300,
-  slidesToShow: 4.8,
-  dots: false,
-  infinite: false,
-  slidesToScroll: 4,
-  responsive: [{
-    breakpoint: 1025,
-    settings: 'unslick'
-  }]
-}
-
-// Shelf carousel init
-gb_ui.carousel.carouselShelf.init = function(element) {
-  $(element).slick(gb_ui.carousel.carouselShelf.settings);
-}
+  // Shelf carousel init
+  gb_ui.carousel.carouselShelf.init = function(element) {
+    $(element).slick(gb_ui.carousel.carouselShelf.settings);
+  }
 
 
-// Shelf carousel on class
-gb_ui.carousel.carouselShelf.init('.carousel-shelf');
+  // Shelf carousel on class
+  gb_ui.carousel.carouselShelf.init('.carousel-shelf');
+});
 
 },{}],4:[function(require,module,exports){
 // Initialize Bootstrap tooltip

@@ -30,9 +30,12 @@ var listGrid             = require('./scripts/components/carousel-billboard');
 
 // Namespaced Functions
 //
-// Algunas funciones como los carouseles están disponibles desde el objeto `gb_ui`.
-// ```
+// Algunas funciones como los carouseles están disponibles globalmente a través
+// del objeto `gb_ui`.
 //
+// **Usage (test a través de la consola)**
+// ```
+// gb_ui
 // ```
 //
 // Styleguide Functional.NamespacedFunctions

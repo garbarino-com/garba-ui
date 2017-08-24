@@ -1,11 +1,8 @@
-// Inicializar Carouseles
-$(function () {
-  // TODO(ecalvi): Maybe we should consider in the future moving these settings
-  // to their own module.
+// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
 
-  // Initialize billboard carousel plugins
-  // Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
-  $('.carousel-billboard').slick({
+$(function () {
+  // Billboard carousel settings
+  gb_ui.carousel.carouselBillboard.settings = {
       arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
@@ -25,5 +22,13 @@ $(function () {
           pauseOnFocus: true
         }
       }]
-  });
+  }
+
+  // Billboard carousel init
+  gb_ui.carousel.carouselBillboard.init = function(element) {
+    $(element).slick(gb_ui.carousel.carouselBillboard.settings);
+  }
+
+  // Billboard carousel on class
+  gb_ui.carousel.carouselBillboard.init('.carousel-billboard');
 });
