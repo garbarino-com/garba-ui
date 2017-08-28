@@ -1,29 +1,32 @@
 <form>
   <div class="checkbox {{modifier_class}}">
     <label>
-      <input type="checkbox" id="" value="">
-      Praesent sit amet egestas massa, pretium maximus nulla.
+      <input type="checkbox" id="{{checkbox.checkbox1.id}}"
+        value="{{checkbox.checkbox1.value}}">
+      {{checkbox.checkbox1.label}}
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Fusce ac luctus sem.">
+          title="{{checkbox.checkbox2.helper}}">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="checkbox" id="" value="">
-      Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
+      <input type="checkbox" id="{{checkbox.checkbox2.id}}"
+        value="{{checkbox.checkbox2.value}}">
+      {{checkbox.checkbox2.label}}
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Fusce ac luctus sem.">
+          title="{{checkbox.checkbox2.helper}}">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="checkbox" id="" value="">
-      Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
+      <input type="checkbox" id="{{checkbox.checkbox3.id}}"
+        value="{{checkbox.checkbox3.value}}">
+      {{checkbox.checkbox3.label}}
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Fusce ac luctus sem.">
+          title="{{checkbox.checkbox3.helper}}">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
@@ -31,29 +34,32 @@
 
   <div class="radio {{modifier_class}}">
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      Vestibulum sagittis placerat est et pellentesque.
+      <input type="radio" name="{{radio.name}}" id="{{radio.radio1.id}}"
+        value="{{radio.radio1.value}}" {{radio.radio1.state}}>
+      {{radio.radio1.label}}
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="{{radio.radio1.helper}}">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Morbi iaculis vel leo id tempor.
+      <input type="radio" name="{{radio.name}}" id="{{radio.radio2.id}}"
+        value="{{radio.radio2.value}}" {{radio.radio2.state}}>
+      {{radio.radio2.label}}
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="{{radio.radio2.helper}}">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-      Duis quis magna semper, egestas mi euismod, dapibus ex.
+      <input type="radio" name="{{radio.name}}" id="{{radio.radio3.id}}"
+        value="{{radio.radio3.value}}" {{radio.radio3.state}}>
+      {{radio.radio3.label}}
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="{{radio.radio3.helper}}">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>

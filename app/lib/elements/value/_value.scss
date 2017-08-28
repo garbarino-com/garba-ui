@@ -6,10 +6,10 @@
 // Este bloque se debe utilizar sólo con el objetivo de comunicar precios
 // o importes totales (no necesariamente aplica a los precios por unidad).
 //
-// Markup: value.hbs
-//
 // .value-container--lg - Reservado para *Ficha de producto* y el bloque *Súper Oferta*.
 // .value-container--sm - Se utiliza para comunicar importes totales (p.ej: en el checkout).
+//
+// Markup: value.hbs
 //
 // Styleguide Elements.Value
 
@@ -18,6 +18,7 @@
   @include value-variant(
     $value-note-font-size-base,
     $value-note-font-size-base-mobile,
+    $value-note-height-base,
     $value-font-size-base,
     $value-font-size-base-mobile
   );
@@ -28,6 +29,7 @@
   > .value-item {
     display: block;
     vertical-align: middle;
+    white-space: nowrap;
   }
 
   // Le agrega un valor de z-index cuando se usa en `.item-box`
@@ -42,6 +44,7 @@
   @include value-variant(
     $value-note-font-size-lg,
     $value-note-font-size-lg,
+    $value-note-height-lg,
     $value-font-size-lg,
     $value-font-size-lg-mobile
   );
@@ -59,6 +62,7 @@
   @include value-variant(
     $value-note-font-size-sm,
     $value-note-font-size-sm,
+    $value-note-height-sm,
     $value-font-size-sm,
     $value-font-size-sm
   );

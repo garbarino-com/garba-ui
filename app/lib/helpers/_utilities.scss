@@ -22,7 +22,7 @@
 // Styleguide Helpers.Utilities.ShowElement
 
 @mixin show-element($display: block) {
-  display: block !important;
+  display: $display !important;
   visibility: visible !important;
 }
 

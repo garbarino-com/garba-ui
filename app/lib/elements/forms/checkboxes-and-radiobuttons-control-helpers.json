@@ -1,0 +1,46 @@
+{
+  "checkbox": {
+    "checkbox1": {
+      "id": "",
+      "value": "",
+      "label": "Praesent sit amet egestas massa, pretium maximus nulla.",
+      "helper": "Fusce ac luctus sem."
+    },
+    "checkbox2": {
+      "id": "",
+      "value": "",
+      "label": "Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.",
+      "helper": "Fusce ac luctus sem."
+    },
+    "checkbox3": {
+      "id": "",
+      "value": "",
+      "label": "Donec dapibus nunc erat, non imperdiet risus tincidunt ac.",
+      "helper": "Fusce ac luctus sem."
+    }
+  },
+  "radio": {
+    "name": "optionsRadios",
+    "radio1": {
+      "id": "optionsRadios1",
+      "value": "option1",
+      "state": "checked",
+      "label": "Vestibulum sagittis placerat est et pellentesque.",
+      "helper": "Fusce ac luctus sem."
+    },
+    "radio2": {
+      "id": "optionsRadios2",
+      "value": "option2",
+      "state": "",
+      "label": "Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.",
+      "helper": "Fusce ac luctus sem."
+    },
+    "radio3": {
+      "id": "optionsRadios3",
+      "value": "option3",
+      "state": "",
+      "label": "Donec dapibus nunc erat, non imperdiet risus tincidunt ac.",
+      "helper": "Fusce ac luctus sem."
+    }
+  }
+}

@@ -10,8 +10,6 @@
 // por lo que se sugiere acompañar su utilización con un *tooltip* cumpla esa función
 // (Nota: deberíamos estudiar como asistir al usuario en dispositivos touch).
 //
-// Markup: button-actions.hbs
-//
 // .button--action__primary - Ejecuta la acción primaria en un grupo de acciones
 // (por el momento, está reservado a la acción de *Quitar del carrito*).
 // .button--action__fav - Marcar item como favorito.
@@ -20,6 +18,8 @@
 // .button__is-active - Todos los modificadores tienen disponible su propia variable
 // de la clase `button__is-active` para cuando sea necesario marcar que una acción
 // ya se ha ejecutado (ej. /"El producto se ha marcado como favorito"/).
+//
+// Markup: button-actions.hbs
 //
 // Styleguide Elements.Buttons.6-Action
 
@@ -51,9 +51,13 @@
 
   // Hover and focus styles
   &:focus,
-  &.focus {
-    background-color: $btn-action-bg;
+  &.button__is-active {
+    background-color: $btn-action-hover-bg;
     outline: 0;
+  }
+
+  &.button__is-active {
+    cursor: default;
   }
 
   > i {
@@ -71,19 +75,6 @@
 }
 
 // Action animation
-
-// TODO(ecalvi): The next mixin is not working for some reason. Calling
-// animation without prefixes but we should check this out later.
-//
-// @include keyframes(action-active) {
-//   from {
-//     background-position: left;
-//   }
-//
-//   to {
-//     background-position: right;
-//   }
-// }
 
 // Animation without prefixes:
 @keyframes action-active {

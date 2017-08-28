@@ -14,10 +14,10 @@
 // más allá de sus dimensiones máximas. Con lo cual cada uso debe llamar una imagen
 // con dimensiones adecuadas.
 //
-// Markup: image-container.hbs
-//
 // .img-container__is-loading - Añadir/quitar esta clase a la clase padre para
 // mostrar/ocultar el estado `loading`.
+//
+// Markup: image-container.hbs
 //
 // Styleguide Elements.ImageContainer
 
@@ -48,7 +48,7 @@
   }
 
   // Estilos especiales para Grid list
-  .list-grid-item > & {
+  .cell-list-item > & {
     height: $grid-cell-image-size;
     width: $grid-cell-image-size;
     z-index: $zindex-element;
@@ -74,7 +74,7 @@
   // Add background color and z-index to overlay so it will cover the image
   // until state class is removed.
   &::before {
-    background-color: $imgcontainer-loading-bg;
+    background-color: $spinner-bg;
     position: relative;
     z-index: $zindex-element;
   }
@@ -84,14 +84,14 @@
   // aspect-ratio in parent class.
   &::after {
     @include make-pseudo-element(inline-block);
-    @include add-spinner($imgcontainer-spinner-base-size,
-      $imgcontainer-spinner-border-width, $imgcontainer-spinner-color-inactive,
-      $imgcontainer-spinner-color-active);
+    background-image: url(#{$images-url}#{$spinner-element-md});
+    height: $spinner-md-size;
     left: 50%;
-    margin-left: ($imgcontainer-spinner-base-size / 2) * -1;
-    margin-top: ($imgcontainer-spinner-base-size / 2) * -1;
+    margin-left: ($spinner-md-size / 2) * -1;
+    margin-top: ($spinner-md-size / 2) * -1;
     position: absolute;
     top: 50%;
+    width: $spinner-md-size;
     z-index: $zindex-hover-element;
   }
 }

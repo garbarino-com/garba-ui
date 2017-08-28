@@ -1,15 +1,23 @@
-<div class="value-container {{modifier_class}}" itemprop="offers"
-    itemscope itemtype="http://schema.org/Offer">
+<div class="value-container {{modifier_class}}" itemprop="offers" itemscope
+    itemtype="http://schema.org/Offer">
   <span class="value-note">
-    Precio en 1 pago.
+    {{#if discount}}
+      <del>${{list_price}}</del>
+      <span class="label label--main">
+        {{discount}}% off
+      </span>
+    {{/if}}
   </span>
-
-  <meta itemprop="priceCurrency" content={this.props.currency}>
+  <meta itemprop="priceCurrency" content="ARS">
   <span class="value-item">
-    $<span itemprop={this.props.itempropItem}>
-      119.99
+    $<span itemprop="price">
+      {{price}}
     </span>
   </span>
-
-  <link href="http://schema.org/InStock" itemprop="inStock">
+  <link
+    {{#if enabled_for_sale}}
+      href="http://schema.org/InStock" itemprop="inStock"
+    {{else}}
+      href="http://schema.org/OutOfStock" itemprop="OutOfStock"
+    {{/if}}>
 </div>

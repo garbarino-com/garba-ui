@@ -6,8 +6,10 @@ A list of requested changes to be included in future versions.
 
 ### Carousels
 * Define bottom spacer form mobile.
+* Estado disabled para los botones.
 
 ### Product box
 * Product box animation.
 * Cockades.
 * Spaces in tablet and mobile.
+* Fijar altura del elemento value-note.

@@ -248,9 +248,11 @@ $small-color:         $text-muted !default;
 // Line Height
 $line-height-base:        1.5 !default;
 $line-height-sm:          1.25 !default;
+$line-height-xs:          1 !default;
 
 $line-height-computed:       $line-height-base * $baseline-grid-computed !default;
 $line-height-sm-computed:    $line-height-sm * $baseline-grid-computed !default;
+$line-height-xs-computed:    $line-height-xs * $baseline-grid-computed !default;
 
 
 $font-weight-base: 400;
@@ -282,10 +284,14 @@ $icon-twitter:           $icon-twitter !default;
 $border-radius-base:          3px;
 
 // Spinner default values
-$spinner-base-size:           1.75rem !default;
-$spinner-border-width:        px-to-rem(3px) !default;
-$spinner-color-active:        $gray-dark !default;
-$spinner-color-inactive:      #D8D8D8 !default;
+$spinner-md-size:           3.5rem !default;
+$spinner-lg-size:           7rem !default;
+$spinner-bg:                $widget-bg !default;
+$spinner-bg-inverse:        $gray-base !default;
+
+// Spinner animated svg files
+$spinner-element-md:        "gb-spinner--md.svg" !default;
+$spinner-element-lg:        "gb-spinner--lg.svg" !default;
 
 
 // Z-index master list
@@ -315,24 +321,31 @@ $element-is-loading-width: 14rem;
 // Disabled state
 $element-is-disabled-bg: $brand-disabled-bg;
 
-// Buttons
-//
-// For each button, define text color and background and border color.
+// Botones
 
-$btn-height-base:                    $block-size-base !default;
-$btn-height-lg-size:                 3.25rem !default;
-$btn-height-sm-size:                 $block-size-sm !default;
+// Texto de botones
 $btn-font-weight:                    700 !default;
 $btn-text-transform:                 uppercase !default;
 $btn-base-color:                     $text-inverse !default;
+
+// Espaciadores internos de botones
+// Solo corresponde a los espaciadores horizontales. Los verticales están dados
+// mediante el valor de la propiedad `line-height.
 $btn-base-padding-x:                 $horspacer-base !default;
 $btn-large-padding-x:                $horspacer-large !default;
 $btn-small-padding-x:                $horspacer-small !default;
+
+// Alturas de Botones
+$btn-height-base:                    $block-size-base !default; // 2rem
+$btn-height-lg-size:                 3.25rem !default;
+$btn-height-sm-size:                 $block-size-sm !default; // 1rem
+
+// Detalles decorativos de botones
 $btn-transition-timing:              $transition-timing-base !default;
 $btn-shadow-width:                   px-to-rem(2px) !default;
 $btn-box-shadow-value:               0 $btn-shadow-width 0 0 !default;
 
-// Button color definitions
+// Colores de Botones
 $btn-main-color:                     $btn-base-color !default;
 $btn-main-bg:                        $brand-revenue !default;
 
@@ -352,13 +365,9 @@ $btn-disabled-color:                 $brand-disabled !default;
 $btn-disabled-bg:                    $brand-disabled-bg !default;
 
 // Button spinner definitions
-$btn-spinner-color-active:           $btn-disabled-color !default;
-$btn-spinner-color-inactive:         #D8D8D8 !default;
-$btn-spinner-border-width:           $spinner-border-width !default;
-$btn-spinner-sm-border-width:        px-to-rem(2px) !default;
-$btn-spinner-base-size:              $spinner-base-size !default;
-$btn-spinner-lg-size:                2rem !default;
-$btn-spinner-sm-size:                1rem !default;
+$btn-spinner-base-size:              $btn-height-base / 2 !default;
+$btn-spinner-lg-size:                $btn-height-lg-size / 2 !default;
+$btn-spinner-sm-size:                $btn-height-sm-size / 2 !default;
 $btn-spinner-spacing:                $spacer-sm !default;
 
 // Button icon definitions
@@ -386,6 +395,7 @@ $block-is-required:                  $brand-corporate !default;
 $block-has-feedback-size:            $icon-size-base !default;
 $block-label-font-weight:            $font-weight-base !default;
 $block-label-font-weight-selected:   700 !default;
+$block-label-height:                 $line-height-xs-computed !default;
 
 $control-helper-color:              $brand-info !default;
 $control-helper-disabled:           $brand-disabled !default;
@@ -433,7 +443,7 @@ $tooltip-distance:                   $spacer-base !default;
 
 
 
-// Value component
+// Value element
 $value-font-size-base:               1.75rem !default; // 24.5px
 $value-font-size-base-mobile:        $font-size-lg !default; // 18px
 
@@ -442,15 +452,19 @@ $value-font-size-lg-mobile:          2rem !default; // 28px
 
 $value-font-size-sm:                 $font-size-base !default; // 14px
 
+$value-line-height-base:             1.25 !default;
+$value-line-height-lg:               1.5 !default;
+
 $value-note-font-size-base:          $font-size-base !default; // 14px
 $value-note-font-size-base-mobile:   $value-note-font-size-base !default; // 14px
 
+$value-note-font-size-sm:            $font-size-sm !default; // 12px
 $value-note-font-size-lg:            $font-size-lg !default; // 18px
 
-$value-note-font-size-sm:            $font-size-sm !default; // 12px
-
-$value-line-height-base:             1.25 !default;
-$value-line-height-lg:               1.5 !default;
+// Value note height
+$value-note-height-base:             $value-note-font-size-base * $value-line-height-base !default;
+$value-note-height-sm:               $value-note-font-size-sm * $value-line-height-base !default;
+$value-note-height-lg:               $value-note-font-size-lg * $value-line-height-base !default;
 
 $value-note-color:                   $text-muted !default;
 $value-note-font-weight:             400 !default;
@@ -461,11 +475,6 @@ $value-spacer-sm:                    $spacer-xs !default;
 
 // Image container
 $imgcontainer-bg:                        transparent !default;
-$imgcontainer-loading-bg:                $widget-bg !default;
-$imgcontainer-spinner-base-size:         $spinner-base-size !default;
-$imgcontainer-spinner-border-width:      $spinner-border-width !default;
-$imgcontainer-spinner-color-inactive:    $spinner-color-inactive !default;
-$imgcontainer-spinner-color-active:      $spinner-color-active !default;
 
 
 // Tags
@@ -533,6 +542,8 @@ $navbar-icon-mouseout-animation:        scale(1) translateY(0) !default;
 
 // Box item
 $box-item-bg:                    transparent !default;
+$box-item-width-mobile:          9rem !default;
+$box-item-width-tablet:          14rem !default;
 $box-item-spacing:               $spacer-base !default;
 $box-item-overlay-bg:            $widget-bg !default;
 $box-item-title:                 $link-color !default;
@@ -550,21 +561,21 @@ $box-item-disabled-bg:           $brand-disabled-bg !default;
 //
 // ("\2022" outputs ascii character "•")
 
-$carousel-font-path: $icon-font-url !default;
-$carousel-font-family: $icon-font-name !default;
-$carousel-loader-path: "./" !default;
-$carousel-control-height: 6rem !default;
-$carousel-control-width: 4rem !default;
-$carousel-arrow-color: $brand-primary !default;
-$carousel-arrow-size: 2rem !default;
-$carousel-dot-character: "\2022" !default;
-$carousel-dot-bg: $widget-bg !default;
-$carousel-dot-color: $brand-secondary !default;
-$carousel-dot-size: .5rem !default;
-$carousel-dot-color-active: $carousel-arrow-color !default;
-$carousel-prev-character: $icon-simple-bold-arrow-left !default;
-$carousel-next-character: $icon-simple-bold-arrow-right !default;
-$carousel-bottom-spacer: 2rem !default;
+$carousel-font-path:            $icon-font-url !default;
+$carousel-font-family:          $icon-font-name !default;
+$carousel-loader-path:          "./" !default;
+$carousel-control-height:       6rem !default;
+$carousel-control-width:        4rem !default;
+$carousel-arrow-color:          $brand-primary !default;
+$carousel-arrow-size:           2rem !default;
+$carousel-dot-character:        "\2022" !default;
+$carousel-dot-bg:               $widget-bg !default;
+$carousel-dot-color:            $brand-secondary !default;
+$carousel-dot-size:             .5rem !default;
+$carousel-dot-color-active:     $carousel-arrow-color !default;
+$carousel-prev-character:       $icon-simple-bold-arrow-left !default;
+$carousel-next-character:       $icon-simple-bold-arrow-right !default;
+$carousel-bottom-spacer:        2rem !default;
 
 
 // Searchbox

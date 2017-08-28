@@ -36,6 +36,8 @@ label {
   // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   max-width: 100%;
 
+  min-height: $block-label-height;
+  min-width: 1%;
   position: relative;
 
   // Indica que el campo de input es requerido.

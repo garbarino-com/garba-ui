@@ -1,0 +1,30 @@
+{
+  "input1": {
+    "addon": "@",
+    "type": "text",
+    "id": "exampleAddon1",
+    "placeholder": "Username",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna."
+  },
+  "input2": {
+    "addon": "icon-calendar",
+    "type": "text",
+    "id": "exampleAddon2",
+    "placeholder": "Username",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna."
+  },
+  "input3": {
+    "addon": "@example.com",
+    "type": "text",
+    "id": "exampleAddon3",
+    "placeholder": "Recipient's username",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna."
+  },
+  "input4": {
+    "addon": "https://example.com/users/",
+    "type": "text",
+    "id": "exampleAddon4",
+    "placeholder": "Username",
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna."
+  }
+}

@@ -36,6 +36,24 @@
     top: 0;
   }
 
+  // stylelint-disable max-nesting-depth
+
+  // Hover state
+  @media only screen and (min-width: $screen-lg-min) {
+    &:hover {
+      animation: item-box--mouseOver ($transition-timing-slow / 4) ease-in;
+      border-color: state-hover-modifier($box-item-active-border);
+      transform: scale($box-item-active-scale);
+
+      &::after {
+        animation: item-box__element--mouseOver ($transition-timing-slow / 2) ease-in;
+        opacity: $box-item-overlay-opacity;
+      }
+    }
+  }
+
+  // stylelint-enable max-nesting-depth
+
   a {
     display: block;
 
@@ -52,22 +70,6 @@
     }
   }
 
-  // stylelint-disable max-nesting-depth
-
-  // Hover state
-  &:hover {
-    @media only screen and (min-width: $screen-lg-min) {
-      animation: item-box--mouseOver ($transition-timing-slow / 4) ease-in;
-      border-color: state-hover-modifier($box-item-active-border);
-      transform: scale($box-item-active-scale);
-
-      &::after {
-        animation: item-box__element--mouseOver ($transition-timing-slow / 2) ease-in;
-        opacity: $box-item-overlay-opacity;
-      }
-    }
-  }
-  // stylelint-enable max-nesting-depth
 }
 
 // Título de ítem

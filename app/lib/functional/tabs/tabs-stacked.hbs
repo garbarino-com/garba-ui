@@ -2,47 +2,24 @@
   <div class="col-sm-3">
     {{!-- Nav tabs --}}
     <ul class="navbar navbar__stacked" role="tablist">
-      <li role="presentation" class="active">
-        <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">
-          <span class="icon-home" aria-hidden="true"></span>
-          Home
-        </a>
-      </li>
-      <li role="presentation">
-        <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">
-          <span class="icon-user" aria-hidden="true"></span>
-          Profile
-        </a>
-      </li>
-      <li role="presentation">
-        <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">
-          <span class="icon-preferences" aria-hidden="true"></span>
-          Settings
-        </a>
-      </li>
-      <li role="presentation">
-        <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">
-          <span class="icon-email" aria-hidden="true"></span>
-          Messages
-        </a>
-      </li>
+      {{#each .}}
+        <li role="presentation" class="{{state}}">
+          <a href="#{{id}}" aria-controls="{{id}}" role="tab" data-toggle="tab">
+            <span class="{{icon}}" aria-hidden="true"></span>
+            {{title}}
+          </a>
+        </li>
+      {{/each}}
     </ul>
   </div>
   <div class="col-sm-9">
     {{!-- Tab panes --}}
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade active in" id="tab1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, elementum ac egestas ac, feugiat id turpis. Mauris iaculis, massa non malesuada dignissim, turpis felis consectetur magna, a tincidunt turpis nisi at massa. Duis scelerisque maximus felis in fermentum. Nunc eu nisl ac tortor mattis dapibus sit amet sed libero.</p>
-      </div>
-      <div role="tabpanel" class="tab-pane fade" id="tab2">
-        <p>Phasellus molestie, enim sit amet sagittis vestibulum, ligula orci gravida ipsum, id efficitur ex tortor sed ante. Morbi metus velit, consequat eget facilisis id, congue in leo. Aenean vestibulum tristique nulla a aliquet.</p>
-      </div>
-      <div role="tabpanel" class="tab-pane fade" id="tab3">
-        <p>Fusce eu dolor lacus. Phasellus at accumsan sapien, non pulvinar orci. Aliquam commodo finibus porta. Vestibulum convallis ac turpis a pulvinar. Integer quis velit nec enim pretium interdum. Quisque fringilla luctus dui sit amet malesuada.</p>
-      </div>
-      <div role="tabpanel" class="tab-pane fade" id="tab4">
-        <p>Proin pulvinar gravida odio. Proin sed velit augue. Mauris sollicitudin eros sit amet orci pulvinar varius. Integer quis ante quis libero tristique dictum sit amet eget libero. Nulla mi turpis, tempor quis egestas et, tristique sed metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      </div>
+      {{#each .}}
+        <div role="tabpanel" class="tab-pane fade {{state}} {{visible}}" id="{{id}}">
+          <p>{{content}}</p>
+        </div>
+      {{/each}}
     </div>
   </div>
 </div>

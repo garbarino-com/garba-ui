@@ -45,16 +45,12 @@ button:focus {
   margin-bottom: 0;
   position: relative;
   text-align: center;
+  text-decoration: none;
   text-transform: $btn-text-transform;
   touch-action: manipulation;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-
-  // Hover and focus styles
-  &:hover {
-    text-decoration: none;
-  }
 
   &:focus,
   &.focus {
@@ -117,10 +113,10 @@ button:focus {
 
 // Button With Icon
 //
-// Markup: button-has-icon.hbs
-//
 // .button--facebook - Está reservado a usos relacionados con la red social
 // *facebook* (compartir, loguearse, etc.).
+//
+// Markup: button-has-icon.hbs
 //
 // Styleguide Elements.Buttons.2-IconButtons
 
@@ -136,11 +132,11 @@ button:focus {
 // * **Large** (`.button--lg`)
 // * **Small** (`.button--sm`)
 //
-// Markup: button.hbs
-//
 // .button--lg - Variable de tamaño *más grande*.
 // .button--sm - Variable de tamaño *más chica*.
 // .button--block - Cambia el valor de display del botón de `block.
+//
+// Markup: button.hbs
 //
 // Styleguide Elements.Buttons.3-SizeModifiers
 
@@ -173,15 +169,17 @@ button:focus {
   }
 }
 
+
+
 // Fixed Buttons
 //
 // Agregar estas clases para fijar el botón a los bordes de la pantalla (actualmente
 // sólo disponible fijar abajo).
 //
-// Markup: button.hbs
-//
 // .button__is-fixed-to-bottom - Cambia el valor de display del botón de `block`.
 // (Se puede ver abajo pegado contra el borde de la pantalla.)
+//
+// Markup: button.hbs
 //
 // Styleguide Elements.Buttons.4-FixedButtons
 
@@ -192,20 +190,20 @@ button:focus {
   left: 0;
   position: fixed;
   right: 0;
-  width: 100%;
   z-index: $zindex-fixed-button;
 }
 
 
+
 // State modifiers
-//
-// Markup: button.hbs
 //
 // :hover - Cuando el mouse se desliza sobre el botón.
 // :focus - Cuando es presionado.
 // .button__is-disabled - El elemento está *deshabilitado*.
 // .button__is-loading - El elemento está procesando una acción.
 // .button__has-icon - El elemento tiene un ícono.
+//
+// Markup: button.hbs
 //
 // Styleguide Elements.Buttons.5-StateModifiers
 
@@ -251,23 +249,33 @@ fieldset[disabled],
 // Loading state spinner definitions
 .button__is-loading {
   cursor: default;
+  padding-left: $btn-base-padding-x + $btn-spinner-base-size + $btn-spinner-spacing;
 
   // Spinner pseudo-element
   &::before {
-    @include make-pseudo-element(inline-block);
-    @include add-spinner($btn-spinner-base-size, $btn-spinner-border-width,
-      $btn-spinner-color-inactive, $btn-spinner-color-active);
-    margin-right: $btn-spinner-spacing;
-    margin-top: px-to-rem(-3px);
+    @include append-spinner-to-element($btn-spinner-base-size);
+    left: $btn-base-padding-x;
+    margin-top: ($btn-spinner-base-size / 2) * -1;
+    position: absolute;
+    top: 50%;
   }
 
-  &.button--lg::before {
-    @include add-spinner-variant-to-button($btn-spinner-lg-size);
+  &.button--lg {
+    padding-left: $btn-large-padding-x + $btn-spinner-lg-size + $btn-spinner-spacing;
+
+    &::before {
+      @include append-spinner-to-element($btn-spinner-lg-size);
+      margin-top: ($btn-spinner-lg-size / 2) * -1;
+    }
   }
 
-  &.button--sm::before {
-    @include add-spinner-variant-to-button($btn-spinner-sm-size,
-      $btn-spinner-sm-border-width);
+  &.button--sm {
+    padding-left: $btn-small-padding-x + $btn-spinner-sm-size + $btn-spinner-spacing;
+
+    &::before {
+      @include append-spinner-to-element($btn-spinner-sm-size);
+      margin-top: ($btn-spinner-sm-size / 2) * -1;
+    }
   }
 }
 

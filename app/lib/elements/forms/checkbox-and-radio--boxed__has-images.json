@@ -1,0 +1,28 @@
+{
+  "name": "inlineRadioOptions",
+  "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.",
+  "radio1": {
+    "summary": "Morbi pulvinar est arcu pulvinar est arcu",
+    "id": "inlineRadio1",
+    "value": "option1",
+    "img": "http://tarjetasdecredito.org.mx/wp-content/uploads/2015/04/logotipo-visa-300x190.png"
+  },
+  "radio2": {
+    "summary": "Aenean vel aliquet.",
+    "id": "inlineRadio2",
+    "value": "option2",
+    "img": "http://amdocspartnerscatalog.com/wp-content/uploads/2017/04/Mastercard.png"
+  },
+  "radio3": {
+    "summary": "Phasellus mi justo.",
+    "id": "inlineRadio3",
+    "value": "option3",
+    "img": "http://static.hotukdeals.com/images/threads/high-res/1925826_1.jpg"
+  },
+  "radio4": {
+    "summary": "Pulvinar est arcu.",
+    "id": "inlineRadio4",
+    "value": "option4",
+    "img": "https://infonegocios.info/uploads/LogoInstitucional-naranja.jpg"
+  }
+}

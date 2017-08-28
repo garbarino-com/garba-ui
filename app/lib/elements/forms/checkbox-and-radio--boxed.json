@@ -1,0 +1,39 @@
+{
+  "checkbox": {
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.",
+    "checkbox1": {
+      "id": "inlineCheckbox1",
+      "value": "option1",
+      "label": "Sed volutpat dignissim"
+    },
+    "checkbox2": {
+      "id": "inlineCheckbox2",
+      "value": "option2",
+      "label": "Nullam pellentesque"
+    },
+    "checkbox3": {
+      "id": "inlineCheckbox3",
+      "value": "option3",
+      "label": "Mauris pulvinar aliquet"
+    }
+  },
+  "radio": {
+    "note": "Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.",
+    "name": "inlineRadioOptions",
+    "radio1": {
+      "id": "inlineCheckbox1",
+      "value": "option1",
+      "label": "Sed volutpat dignissim"
+    },
+    "radio2": {
+      "id": "inlineCheckbox2",
+      "value": "option2",
+      "label": "Nullam pellentesque"
+    },
+    "radio3": {
+      "id": "inlineCheckbox3",
+      "value": "option3",
+      "label": "Mauris pulvinar aliquet"
+    }
+  }
+}

@@ -1,43 +1,39 @@
-{{!-- Estos estilos inline están puestos para mostrar mejor el componente.
-      No forman parte de los estilos de componente cuyo ancho queda sin definir
-      intencionalmente para que adopte el ancho de su contenedor (carousel,
-      grillas, etc.). --}}
-
-<style>
-  .item-box {
-    width: 18rem;
-  }
-</style>
-
-<div class="item-box {{modifier_class}}">
-  <a href="/url/de/producto/" title="Título de producto">
+<div class="item-box {{modifier_class}}
+    {{#unless enabled_for_sale}} item__is-disabled {{/unless}}">
+  <a href="/producto/{{xid}}" title="{{summary}}">
     {{!-- Elemento contenedor de imagenes --}}
     <div class="img-container">
-      {{!-- Esta imágen está puesta solamente como demostración. --}}
-      <img itemprop="image" src="http://lorempixel.com/800/600/sports/"
-        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+      <img itemprop="image" src="{{main_image.url}}" alt="{{summary}}" />
     </div>
 
     <h3 class="item-box__title">
-      Morbi hendrerit faucibus diam, nec hendrerit purus mattis vitae
+      {{description}}
     </h3>
 
     {{!-- Elemento de precio --}}
     <div class="value-container" itemprop="offers" itemscope
         itemtype="http://schema.org/Offer">
       <span class="value-note">
-        <del>$7.999</del>
-        <span class="label label--main" title="Interdum et malesuada fames">
-          23% off
-        </span>
+        {{#if discount}}
+          <del>${{list_price}}</del>
+          <span class="label label--main">
+            {{discount}}% off
+          </span>
+        {{/if}}
       </span>
       <meta itemprop="priceCurrency" content="ARS">
       <span class="value-item">
-        $<span itemprop={this.props.itempropItem}>
-          7.199
+        $<span itemprop="price">
+          {{price}}
         </span>
       </span>
-      <link href="http://schema.org/InStock" itemprop="inStock">
+      <link
+        {{#if enabled_for_sale}}
+          href="http://schema.org/InStock" itemprop="inStock"
+        {{else}}
+          href="http://schema.org/OutOfStock" itemprop="OutOfStock"
+        {{/if}}
+      >
     </div>
   </a>
 </div>

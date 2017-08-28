@@ -28,6 +28,20 @@
   &.slick-dotted {
     padding-bottom: $carousel-bottom-spacer;
   }
+
+  .slick-track,
+  .slick-list {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slick-list {
+    overflow: auto;
+
+    // Media query for desktop
+    @media only screen and (min-width: $screen-lg-min) {
+      overflow: hidden;
+    }
+  }
 }
 
 
@@ -59,13 +73,6 @@
   &.dragging {
     cursor: pointer;
     cursor: hand;
-  }
-}
-
-.slick-slider {
-  .slick-track,
-  .slick-list {
-    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -196,6 +203,8 @@
 //
 // Styleguide Functional.Carousel.2-ShelfCarousel
 
+
+
 .carousel-shelf {
   @include clearfix;
   overflow: auto;
@@ -205,17 +214,32 @@
     display: inline-block;
     padding-bottom: $spacer-base;
     padding-top: $spacer-sm;
+    vertical-align: top;
+    width: $box-item-width-mobile;
   }
 
+  // Media query for tablet
+  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    > .carousel-item {
+      width: $box-item-width-tablet;
+    }
+  }
+
+  // Media query for desktop
   @media only screen and (min-width: $screen-lg-min) {
+    overflow: hidden;
+
     > .carousel-item {
       padding-bottom: 0;
       padding-top: 0;
+      width: 100%;
     }
   }
 }
 
-// Carousel controls
+
+
+// Controles del Carousel
 .slick-prev,
 .slick-next {
   background: transparent;
@@ -270,7 +294,15 @@
   .slick-dotted & {
     margin-top: (($carousel-control-height / 2) + ($carousel-bottom-spacer / 2)) * -1;
   }
+
+  // Estilo para los cursores cuando el carousel llega al final
+  &.slick-disabled {
+    animation: block-animation--opacity ($transition-timing-slow / 4) ease-in alternate;
+    @include hide-element;
+  }
 }
+
+
 
 .slick-prev {
   animation: carousel-exit-left-arrow ($transition-timing-slow / 2) ease-in-out;
@@ -285,6 +317,8 @@
     animation: carousel-enter-left-arrow ($transition-timing-slow / 2) ease-in-out;
   }
 }
+
+
 
 .slick-next {
   animation: carousel-exit-right-arrow ($transition-timing-slow / 2) ease-in-out;

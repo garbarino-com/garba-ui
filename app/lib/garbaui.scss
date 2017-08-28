@@ -17,15 +17,6 @@
 // for backwards compatibility purposes. Don not become too attached to it.
 @import "_v1.3.2/garbaui";
 
-// Import bourbon functionalities to be used in the app
-@import "helpers/bourbon";
-
-// Import bootstrap functionalities to be used in the app
-@import "helpers/bootstrap";
-
-// Mixin generador de la extensión de grilla
-@import "helpers/grid-narrow";
-
 // Component helpers
 @import "helpers/helpers";
 
@@ -52,7 +43,7 @@
 
 // UI Components
 @import "components/collapse/collapse";
-@import "components/grid-list/grid-list";
+@import "components/cell-list/cell-list";
 @import "components/item-box/item-box";
 @import "components/search-box/search-box";
 @import "components/navbar/navbar";
@@ -61,3 +52,6 @@
 @import "functional/carousel/carousel";
 @import "functional/tabs/tabs";
 @import "functional/tooltips/tooltips";
+
+// Modules
+@import "modules/generic-states/generic-states";

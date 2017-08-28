@@ -41,9 +41,20 @@
 // Styleguide Helpers.OldMixins
 @import "../_v1.3.2/garbaui-core";
 
+
+// Import bourbon functionalities to be used in the app
+@import "bourbon";
+
+// Import bootstrap functionalities to be used in the app
+@import "bootstrap";
+
+// Mixin generador de la extensión de grilla
+@import "grid-narrow";
+
+
 // General usage
-@import "animations";
 @import "utilities";
+@import "animation";
 @import "border-radius";
 @import "element-aspect-ratio";
 @import "icon-element";

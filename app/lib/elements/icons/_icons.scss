@@ -8,8 +8,6 @@
 // [tiene otros usos](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i).
 // Es preferible usar `span`.
 //
-// Markup: icons.hbs
-//
 // .icon-arrow-left - Ícono
 // .icon-bag - Ícono
 // .icon-bag2 - Ícono
@@ -97,6 +95,8 @@
 // .icon-whatsapp - Ícono
 // .icon-youtube - Ícono
 //
+// Markup: icons.hbs
+//
 // Styleguide Elements.Icons
 
 @import "../../variables/variables";
@@ -130,7 +130,7 @@
 
 
   // Estilos especiales para Grid list
-  .list-grid-item__body & {
+  .cell-list-item__body & {
     display: block;
     font-size: $icon-size-xl;
     margin-bottom: $spacer-lg;

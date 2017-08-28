@@ -1,52 +1,82 @@
-// Spinner variants
+// @generate-loading-state-for-element($size, $overlayColor, $startPointVertical)
+//
+// Usa `pseudo-elementos` para generar un overlay y un spinner centrado dentro
+// del elemento contenedor.
+//
+// $size - Tamaño del spinner. Acepta dos valores: `"medium"` o `"large"`
+// $overlayColor - Color de fondo del overlay. Default: Blanco
+// $startPointVertical - El punto de orígen vertical del overlay. Default: 0
+//
+// Styleguide Helpers.States.GenerateLoaderElement
 
-// Define base animation for spinner
-@keyframes spinner-rotation {
-  from {
-    transform: rotate(0deg);
+@mixin generate-loading-state-for-element(
+  $size,
+  $overlayColor: $spinner-bg,
+  $startPointVertical: 0
+) {
+  @include clearfix;
+
+  // Agrega position:relative al elemento contenedor para poder posicionar los
+  // child elements.
+  position: relative;
+
+  // Inicializar variables para que estén disponibles para su posterior uso.
+  $spinner-variant: null;
+  $spinner-size: null;
+
+  // Definir las diferentes variables de tamaño para los spinners
+  @if $size == "large" {
+    $spinner-variant: $spinner-element-lg;
+    $spinner-size: $spinner-lg-size;
+  } @else if $size == "medium" {
+    $spinner-variant: $spinner-element-md;
+    $spinner-size: $spinner-md-size;
   }
 
-  to {
-    transform: rotate(359deg);
+  &::before,
+  &::after {
+    @include make-pseudo-element;
+    position: absolute;
+  }
+
+  // Elemento del Overlay
+  &::before {
+    background-color: $overlayColor;
+    bottom: 0;
+    left: 0;
+    opacity: $modifier-scale-value;
+    right: 0;
+    top: $startPointVertical;
+  }
+
+  &::after {
+    background-image: url(#{$images-url}#{$spinner-variant});
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: $spinner-size;
+    left: 50%;
+    margin-left: ($spinner-size / 2) * -1;
+    margin-top: ($spinner-size / 2) * -1;
+    text-align: center;
+    top: 50%;
+    width: $spinner-size;
   }
 }
 
-// @add-spinner($params)
+
+
+// @append-spinner-to-element($size)
 //
-// Genera un spinner animado y lo hace girar. Se usa para indicar el estado `loading`
-// al usuario.
-// > Este helper no genera el elemento (se debe usar adentro de uno) ni le fija posición.
+// Agrega un spinner mediano en un elemento.
 //
 // $size - Tamaño del spinner.
-// $spinner-width - Ancho del spinner.
-// $spinner-color-inactive - Color de los tres cuartos de círculo que son del
-// color inactivo.
-// $spinner-color-active - Color del cuarto de círculo que es del color activo.
 //
-// Styleguide Helpers.States.AddSpinner
+// Styleguide Helpers.States.AppendSpinnerToElement
 
-// Spinner generator mixin
-@mixin add-spinner($size, $spinner-width, $spinner-color-inactive,
-    $spinner-color-active) {
-  animation: spinner-rotation $transition-timing-slow infinite linear;
-
-  // stylelint-disable order/properties-alphabetical-order
-  border-bottom: $spinner-width solid $spinner-color-active;
-  border-left: $spinner-width solid $spinner-color-inactive;
-  border-right: $spinner-width solid $spinner-color-active;
-  border-top: $spinner-width solid $spinner-color-active;
-
-  border-radius: 50%;
-  // stylelint-enable order/properties-alphabetical-order
-  height: $size;
-  vertical-align: middle;
-  width: $size;
-}
-
-// Add spinner to button variant
-@mixin add-spinner-variant-to-button($size,
-    $border-width: $btn-spinner-border-width) {
-  border-width: $border-width;
+@mixin append-spinner-to-element($size) {
+  @include make-pseudo-element;
+  background-image: url(#{$images-url}spinner--md.svg);
+  display: block;
   height: $size;
   width: $size;
 }

@@ -1,0 +1,43 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+  <style type="text/css">
+    @keyframes spinner__rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .st0{
+      fill: none;
+      stroke: #F2F2F2;
+      stroke-width: 4;
+      stroke-miterlimit: 10;
+    }
+
+    .st1{
+      fill: none;
+      stroke: #D1030F;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-miterlimit: 10;
+    }
+
+   .elements-animated {
+      animation: spinner__rotate 0.8s cubic-bezier(0.48, 0.24, 0.6, 0.12) infinite;
+      transform-origin: center;
+    }
+  </style>
+
+  <g class="elements-animated">
+    <g>
+      <g>
+        <circle class="st0" cx="19.5" cy="19.5" r="17.634"/>
+      </g>
+      <g>
+        <path class="st1" d="M7.897,6.221C4.201,9.453,1.866,14.204,1.866,19.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+// Estados genéricos de módulo
+//
+// Son variaciones de estado para módulos que son compartidos y aplicables a
+// todos. No se deben usar estos estados para los elementos y componentes que
+// ya tienen definidos un estilo visual para dichos estados.
+//
+// .module__is-active - El elemento está *active*.
+// .module__is-loading - El elemento está *cargando*.
+// .module__is-disabled - El elemento está *deshabilitado*.
+//
+// Markup: generic-states.hbs
+//
+// Styleguide Modules.GenericStates
+
+
+
+.module__is-active {
+  border: 1px solid $element-is-active;
+  border-radius: $border-radius-base;
+  box-shadow: 0 0 $input-border-focus-shadow-lenght 0 rgba($element-is-active,
+    $input-border-focus-opacity);
+  outline: 0;
+}
+
+
+
+.module__is-disabled {
+  @include clearfix;
+  position: relative;
+
+  &::before {
+    @include make-pseudo-element;
+    bottom: 0;
+    left: 0;
+    opacity: $modifier-scale-value;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+
+.module__is-loading {
+  @include generate-loading-state-for-element("large");
+}
+
+
+
+.module__is-disabled {
+  &::before {
+    background-color: $element-is-disabled-bg;
+  }
+}

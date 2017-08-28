@@ -1,0 +1,14 @@
+{
+  "control1": {
+    "type": "text",
+    "placeholder": "Text"
+  },
+  "control2": {
+    "select": {
+      "option1": "Volvo",
+      "option2": "Saab",
+      "option3": "Mercedes",
+      "option4": "Audi"
+    }
+  }
+}

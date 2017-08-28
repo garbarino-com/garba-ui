@@ -1,12 +1,13 @@
 // Color modifier
 @mixin value-variant(
-    $noteFontSize, $noteFontSizeMobile,
+    $noteFontSize, $noteFontSizeMobile, $noteHeight,
     $itemFontSize, $itemFontSizeMobile) {
 
   text-align: inherit;
 
   > .value-note {
     font-size: $noteFontSizeMobile;
+    min-height: $noteHeight;
   }
 
   > .value-item {

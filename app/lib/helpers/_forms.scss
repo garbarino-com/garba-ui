@@ -192,7 +192,7 @@
   > div > .form-block__feedback,
   > div > .form-block__note {
     @include show-element;
-    animation: form-block--enter-animation ($transition-timing-slow / 4) ease-in;
+    animation: block-animation--opacity ($transition-timing-slow / 4) ease-in alternate;
     color: $color;
   }
 
@@ -250,39 +250,5 @@
 
 
 // Note animations
-
-@keyframes form-block--enter-animation {
-  0 {
-    @include hide-element;
-    opacity: 0;
-  }
-
-  1% {
-    @include show-element;
-    opacity: 0;
-  }
-
-  100% {
-    @include show-element;
-    opacity: 1;
-  }
-}
-
-@keyframes form-block--exit-animation {
-  0 {
-    @include show-element;
-    opacity: 1;
-  }
-
-  99% {
-    @include show-element;
-    opacity: 0;
-  }
-
-  100% {
-    @include hide-element;
-    opacity: 0;
-  }
-}
 
 // stylelint-enable selector-no-qualifying-type, selector-no-type
