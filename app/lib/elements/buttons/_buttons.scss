@@ -45,16 +45,12 @@ button:focus {
   margin-bottom: 0;
   position: relative;
   text-align: center;
+  text-decoration: none;
   text-transform: $btn-text-transform;
   touch-action: manipulation;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-
-  // Hover and focus styles
-  &:hover {
-    text-decoration: none;
-  }
 
   &:focus,
   &.focus {
@@ -194,7 +190,6 @@ button:focus {
   left: 0;
   position: fixed;
   right: 0;
-  width: 100%;
   z-index: $zindex-fixed-button;
 }
 
