@@ -38,7 +38,7 @@
 
   // stylelint-disable max-nesting-depth
 
-  // Hover state
+  // Hover state (sólo para desktop)
   @media only screen and (min-width: $screen-lg-min) {
     &:hover {
       animation: item-box--mouseOver ($transition-timing-slow / 4) ease-in;
@@ -75,7 +75,7 @@
 // Título de ítem
 .item-box__title {
   @include multi-line-ellipsis($box-item-title-height * 2);
-  color: $box-item-title !important;
+  color: $box-item-title;
   font-size: $font-size-lg;
   line-height: $box-item-title-height;
   margin-bottom: $box-item-spacing;
@@ -131,8 +131,89 @@
     }
 
     .item-box__title {
-      color: $box-item-disabled-title-color !important;
+      color: $box-item-disabled-title-color;
       opacity: $box-item-overlay-opacity;
     }
+  }
+}
+
+
+
+// Empty/Loading State para Shelf Carousel
+
+.item-box:empty,
+.item__is-loading,
+.carousel__is-loading .item-box {
+  cursor: default;
+  pointer-events: none;
+
+  .img-container,
+  .item-box__title,
+  .value-container {
+    background-color: $skeleton-bg;
+    color: transparent;
+
+    > img {
+      @include hide-element;
+    }
+
+    // stylelint-disable selector-max-compound-selectors
+
+    .label {
+      background-color: transparent;
+    }
+
+    span,
+    .item-box__title {
+      color: transparent;
+    }
+
+    // stylelint-enable selector-max-compound-selectors
+
+
+    .item-box__title {
+      // stylelint-disable max-nesting-depth
+
+      // Media query para desktop
+      @media only screen and (min-width: $screen-lg-min) {
+        background-color: transparent;
+      }
+
+      // stylelint-enable max-nesting-depth
+    }
+  }
+
+  &,
+  &:hover {
+    animation: unset;
+    border: 0;
+    transform: scale(1);
+
+    .img-container {
+      animation: unset;
+      transform: initial;
+    }
+  }
+
+  &::after {
+    animation: skeleton-screen--animation $transition-timing-slow ease-out infinite;
+    background-color: transparent;
+
+    // stylelint-disable function-parentheses-space-inside
+
+    // Estilo para el highlight
+    background-image: linear-gradient(
+      92deg,
+      rgba($skeleton-highlight, 0) 0%,
+      rgba($skeleton-highlight, 1) 50%,
+      rgba($skeleton-highlight, 0) 100%);
+
+    // stylelint-enable function-parentheses-space-inside
+
+    background-position: -20% 0;
+    background-repeat: repeat-y;
+    background-size: 40% 100%;
+    opacity: 1;
+    z-index: $zindex-skeleton-highlight;
   }
 }

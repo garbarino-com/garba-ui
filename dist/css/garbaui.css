@@ -3573,6 +3573,12 @@ button.close {
   }
 }
 
+@keyframes skeleton-screen--animation {
+  to {
+    background-position: 140% 0;
+  }
+}
+
 @keyframes item-box--mouseOver {
   from {
     border-color: transparent;
@@ -3726,15 +3732,12 @@ button:focus {
   margin-bottom: 0;
   position: relative;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   touch-action: manipulation;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-}
-
-.button:hover {
-  text-decoration: none;
 }
 
 .button:focus, .button.focus {
@@ -3930,7 +3933,6 @@ button:focus {
   left: 0;
   position: fixed;
   right: 0;
-  width: 100%;
   z-index: 1000;
 }
 
@@ -6342,14 +6344,12 @@ fieldset[disabled] ~ .form-block__helper,
   }
 }
 
-.item__is-loading .img-container::before,
 .img-container__is-loading::before {
   background-color: #FFF;
   position: relative;
   z-index: 20;
 }
 
-.item__is-loading .img-container::after,
 .img-container__is-loading::after {
   content: "";
   display: inline-block;
@@ -7103,7 +7103,7 @@ label.cell-list-item input:checked {
   text-overflow: -o-ellipsis-lastline;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  color: #0084E0 !important;
+  color: #0084E0;
   font-size: 1.28571rem;
   line-height: 1.60714rem;
   margin-bottom: 1rem;
@@ -7177,8 +7177,120 @@ label.cell-list-item input:checked {
 [readonly]:hover .item-box__title,
 .item__is-disabled .item-box__title,
 .item__is-disabled:hover .item-box__title {
-  color: #6B6B6B !important;
+  color: #6B6B6B;
   opacity: 0.85;
+}
+
+.item-box:empty,
+.item__is-loading,
+.carousel__is-loading .item-box {
+  cursor: default;
+  pointer-events: none;
+}
+
+.item-box:empty .img-container,
+.item-box:empty .item-box__title,
+.item-box:empty .value-container,
+.item__is-loading .img-container,
+.item__is-loading .item-box__title,
+.item__is-loading .value-container,
+.carousel__is-loading .item-box .img-container,
+.carousel__is-loading .item-box .item-box__title,
+.carousel__is-loading .item-box .value-container {
+  background-color: #E2E2E2;
+  color: transparent;
+}
+
+.item-box:empty .img-container > img,
+.item-box:empty .item-box__title > img,
+.item-box:empty .value-container > img,
+.item__is-loading .img-container > img,
+.item__is-loading .item-box__title > img,
+.item__is-loading .value-container > img,
+.carousel__is-loading .item-box .img-container > img,
+.carousel__is-loading .item-box .item-box__title > img,
+.carousel__is-loading .item-box .value-container > img {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.item-box:empty .img-container .label,
+.item-box:empty .item-box__title .label,
+.item-box:empty .value-container .label,
+.item__is-loading .img-container .label,
+.item__is-loading .item-box__title .label,
+.item__is-loading .value-container .label,
+.carousel__is-loading .item-box .img-container .label,
+.carousel__is-loading .item-box .item-box__title .label,
+.carousel__is-loading .item-box .value-container .label {
+  background-color: transparent;
+}
+
+.item-box:empty .img-container span,
+.item-box:empty .img-container .item-box__title,
+.item-box:empty .item-box__title span,
+.item-box:empty .item-box__title .item-box__title,
+.item-box:empty .value-container span,
+.item-box:empty .value-container .item-box__title,
+.item__is-loading .img-container span,
+.item__is-loading .img-container .item-box__title,
+.item__is-loading .item-box__title span,
+.item__is-loading .item-box__title .item-box__title,
+.item__is-loading .value-container span,
+.item__is-loading .value-container .item-box__title,
+.carousel__is-loading .item-box .img-container span,
+.carousel__is-loading .item-box .img-container .item-box__title,
+.carousel__is-loading .item-box .item-box__title span,
+.carousel__is-loading .item-box .item-box__title .item-box__title,
+.carousel__is-loading .item-box .value-container span,
+.carousel__is-loading .item-box .value-container .item-box__title {
+  color: transparent;
+}
+
+@media only screen and (min-width: 73.14286rem) {
+  .item-box:empty .img-container .item-box__title,
+  .item-box:empty .item-box__title .item-box__title,
+  .item-box:empty .value-container .item-box__title,
+  .item__is-loading .img-container .item-box__title,
+  .item__is-loading .item-box__title .item-box__title,
+  .item__is-loading .value-container .item-box__title,
+  .carousel__is-loading .item-box .img-container .item-box__title,
+  .carousel__is-loading .item-box .item-box__title .item-box__title,
+  .carousel__is-loading .item-box .value-container .item-box__title {
+    background-color: transparent;
+  }
+}
+
+.item-box:empty, .item-box:empty:hover,
+.item__is-loading,
+.item__is-loading:hover,
+.carousel__is-loading .item-box,
+.carousel__is-loading .item-box:hover {
+  animation: unset;
+  border: 0;
+  transform: scale(1);
+}
+
+.item-box:empty .img-container, .item-box:empty:hover .img-container,
+.item__is-loading .img-container,
+.item__is-loading:hover .img-container,
+.carousel__is-loading .item-box .img-container,
+.carousel__is-loading .item-box:hover .img-container {
+  animation: unset;
+  transform: initial;
+}
+
+.item-box:empty::after,
+.item__is-loading::after,
+.carousel__is-loading .item-box::after {
+  animation: skeleton-screen--animation 0.8s ease-out infinite;
+  background-color: transparent;
+  background-image: linear-gradient(92deg, rgba(246, 246, 246, 0) 0%, #f6f6f6 50%, rgba(246, 246, 246, 0) 100%);
+  background-position: -20% 0;
+  background-repeat: repeat-y;
+  background-size: 40% 100%;
+  opacity: 1;
+  z-index: 100;
 }
 
 .search-box {
@@ -8004,6 +8116,17 @@ a.search-box__list--item strong {
 
 .slick-slider:hover .slick-next {
   animation: carousel-enter-right-arrow 0.4s ease-in-out;
+}
+
+.carousel-shelf:empty .slick-prev, .carousel-shelf:empty .slick-prev:hover,
+.carousel-shelf:empty .slick-next,
+.carousel-shelf:empty .slick-next:hover,
+.carousel__is-loading .slick-prev,
+.carousel__is-loading .slick-prev:hover,
+.carousel__is-loading .slick-next,
+.carousel__is-loading .slick-next:hover {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .tab-content > .tab-pane {

@@ -69,7 +69,6 @@
 
 // State modifiers
 
-.item__is-loading .img-container,
 .img-container__is-loading {
   // Add background color and z-index to overlay so it will cover the image
   // until state class is removed.

@@ -199,6 +199,8 @@
 // * En viewports más chicos (≤1024px) se desactiva el carousel y se utiliza el
 // scrollbar nativo del browser.
 //
+// .carousel__is-loading - El elemento está procesando una acción.
+//
 // Markup: shelf-carousel.hbs
 //
 // Styleguide Functional.Carousel.2-ShelfCarousel
@@ -331,5 +333,23 @@
 
   .slick-slider:hover & {
     animation: carousel-enter-right-arrow ($transition-timing-slow / 2) ease-in-out;
+  }
+}
+
+
+
+// Empty/Loading State para Shelf Carousel
+
+.carousel-shelf:empty,
+.carousel__is-loading {
+
+  // Desactiva los controles del carousel mientras está el estado `loading`.
+  .slick-prev,
+  .slick-next {
+    &,
+    &:hover {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }

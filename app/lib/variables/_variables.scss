@@ -300,26 +300,36 @@ $spinner-element-lg:        "gb-spinner--lg.svg" !default;
 // view of components dependent on the z-axis and are designed to all
 // work together.
 
-$zindex-control-group:      2 !default;
-$zindex-element:            20 !default;
-$zindex-hover-element:      50 !default;
-$zindex-fixed-button:       1000 !default;
-$zindex-navbar:             1030 !default;
-$zindex-search-results:     1050 !default;
-$zindex-tooltip:            1070 !default;
+$zindex-control-group:        2 !default;
+$zindex-element:              20 !default;
+$zindex-hover-element:        50 !default;
+$zindex-skeleton-highlight:   100 !default;
+$zindex-fixed-button:         1000 !default;
+$zindex-navbar:               1030 !default;
+$zindex-search-results:       1050 !default;
+$zindex-tooltip:              1070 !default;
 
 
 // Elementos genéricos
 
 // Active state
-$element-is-active: $brand-primary;
+$element-is-active: $brand-primary !default;
 
 // Loading state
-$element-is-loading-bg: $widget-bg;
-$element-is-loading-width: 14rem;
+$element-is-loading-bg: $widget-bg !default;
+$element-is-loading-width: 14rem !default;
 
 // Disabled state
-$element-is-disabled-bg: $brand-disabled-bg;
+$element-is-disabled-bg: $brand-disabled-bg !default;
+
+
+
+// Skeleton screens
+
+$skeleton-highlight:     $gray-lighter !default;
+$skeleton-bg:            $brand-disabled-bg !default;
+
+
 
 // Botones
 
@@ -474,7 +484,7 @@ $value-spacer-sm:                    $spacer-xs !default;
 
 
 // Image container
-$imgcontainer-bg:                        transparent !default;
+$imgcontainer-bg:                    transparent !default;
 
 
 // Tags
