@@ -148,7 +148,6 @@
   pointer-events: none;
 
   .img-container,
-  .item-box__title,
   .value-container {
     background-color: $skeleton-bg;
     color: transparent;
@@ -170,8 +169,9 @@
 
     // stylelint-enable selector-max-compound-selectors
 
-
     .item-box__title {
+      background-color: $skeleton-bg;
+
       // stylelint-disable max-nesting-depth
 
       // Media query para desktop
@@ -186,6 +186,7 @@
   &,
   &:hover {
     animation: unset;
+    background-color: transparent;
     border: 0;
     transform: scale(1);
 

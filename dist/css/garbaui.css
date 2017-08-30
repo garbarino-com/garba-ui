@@ -3933,6 +3933,7 @@ button:focus {
   left: 0;
   position: fixed;
   right: 0;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -7189,73 +7190,64 @@ label.cell-list-item input:checked {
 }
 
 .item-box:empty .img-container,
-.item-box:empty .item-box__title,
 .item-box:empty .value-container,
 .item__is-loading .img-container,
-.item__is-loading .item-box__title,
 .item__is-loading .value-container,
 .carousel__is-loading .item-box .img-container,
-.carousel__is-loading .item-box .item-box__title,
 .carousel__is-loading .item-box .value-container {
   background-color: #E2E2E2;
   color: transparent;
 }
 
 .item-box:empty .img-container > img,
-.item-box:empty .item-box__title > img,
 .item-box:empty .value-container > img,
 .item__is-loading .img-container > img,
-.item__is-loading .item-box__title > img,
 .item__is-loading .value-container > img,
 .carousel__is-loading .item-box .img-container > img,
-.carousel__is-loading .item-box .item-box__title > img,
 .carousel__is-loading .item-box .value-container > img {
   display: none !important;
   visibility: hidden !important;
 }
 
 .item-box:empty .img-container .label,
-.item-box:empty .item-box__title .label,
 .item-box:empty .value-container .label,
 .item__is-loading .img-container .label,
-.item__is-loading .item-box__title .label,
 .item__is-loading .value-container .label,
 .carousel__is-loading .item-box .img-container .label,
-.carousel__is-loading .item-box .item-box__title .label,
 .carousel__is-loading .item-box .value-container .label {
   background-color: transparent;
 }
 
 .item-box:empty .img-container span,
 .item-box:empty .img-container .item-box__title,
-.item-box:empty .item-box__title span,
-.item-box:empty .item-box__title .item-box__title,
 .item-box:empty .value-container span,
 .item-box:empty .value-container .item-box__title,
 .item__is-loading .img-container span,
 .item__is-loading .img-container .item-box__title,
-.item__is-loading .item-box__title span,
-.item__is-loading .item-box__title .item-box__title,
 .item__is-loading .value-container span,
 .item__is-loading .value-container .item-box__title,
 .carousel__is-loading .item-box .img-container span,
 .carousel__is-loading .item-box .img-container .item-box__title,
-.carousel__is-loading .item-box .item-box__title span,
-.carousel__is-loading .item-box .item-box__title .item-box__title,
 .carousel__is-loading .item-box .value-container span,
 .carousel__is-loading .item-box .value-container .item-box__title {
   color: transparent;
 }
 
+.item-box:empty .img-container .item-box__title,
+.item-box:empty .value-container .item-box__title,
+.item__is-loading .img-container .item-box__title,
+.item__is-loading .value-container .item-box__title,
+.carousel__is-loading .item-box .img-container .item-box__title,
+.carousel__is-loading .item-box .value-container .item-box__title {
+  background-color: #E2E2E2;
+}
+
 @media only screen and (min-width: 73.14286rem) {
   .item-box:empty .img-container .item-box__title,
-  .item-box:empty .item-box__title .item-box__title,
   .item-box:empty .value-container .item-box__title,
   .item__is-loading .img-container .item-box__title,
-  .item__is-loading .item-box__title .item-box__title,
   .item__is-loading .value-container .item-box__title,
   .carousel__is-loading .item-box .img-container .item-box__title,
-  .carousel__is-loading .item-box .item-box__title .item-box__title,
   .carousel__is-loading .item-box .value-container .item-box__title {
     background-color: transparent;
   }
@@ -7267,6 +7259,7 @@ label.cell-list-item input:checked {
 .carousel__is-loading .item-box,
 .carousel__is-loading .item-box:hover {
   animation: unset;
+  background-color: transparent;
   border: 0;
   transform: scale(1);
 }
@@ -8118,6 +8111,12 @@ a.search-box__list--item strong {
   animation: carousel-enter-right-arrow 0.4s ease-in-out;
 }
 
+.carousel__note {
+  display: none !important;
+  visibility: hidden !important;
+  margin-bottom: 1.5rem;
+}
+
 .carousel-shelf:empty .slick-prev, .carousel-shelf:empty .slick-prev:hover,
 .carousel-shelf:empty .slick-next,
 .carousel-shelf:empty .slick-next:hover,
@@ -8127,6 +8126,16 @@ a.search-box__list--item strong {
 .carousel__is-loading .slick-next:hover {
   opacity: 0;
   pointer-events: none;
+}
+
+.carousel__has-no-items {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.carousel__has-no-items ~ .carousel__note {
+  display: block !important;
+  visibility: visible !important;
 }
 
 .tab-content > .tab-pane {

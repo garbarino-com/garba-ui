@@ -200,6 +200,7 @@
 // scrollbar nativo del browser.
 //
 // .carousel__is-loading - El elemento está procesando una acción.
+// .carousel__has-no-items - El elemento está vacío.
 //
 // Markup: shelf-carousel.hbs
 //
@@ -337,8 +338,15 @@
 }
 
 
+// La nota de feedback está escondida por default
+.carousel__note {
+  @include hide-element;
+  margin-bottom: $spacer-lg;
+}
 
-// Empty/Loading State para Shelf Carousel
+
+
+// Loading State para Shelf Carousel
 
 .carousel-shelf:empty,
 .carousel__is-loading {
@@ -351,5 +359,17 @@
       opacity: 0;
       pointer-events: none;
     }
+  }
+}
+
+
+// Empty State para Shelf Carousel
+.carousel__has-no-items {
+  @include hide-element;
+
+  // La nota que contiene el feedback se muestra cuando el módulo carousel recibe
+  // la clase `.carousel__has-no-items`
+  ~ .carousel__note {
+    @include show-element;
   }
 }
