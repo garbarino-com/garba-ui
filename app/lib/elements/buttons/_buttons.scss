@@ -1,3 +1,8 @@
+// Importa las dependencias del elemento
+@import "../../variables/variables";
+@import "../../helpers/buttons";
+
+
 // Buttons
 //
 // Las classes de botones se pueden usar en elementos `<a>`, `<button>`, o `<input>`.
@@ -20,17 +25,23 @@
 // Styleguide Elements.Buttons
 
 
+
 // Work around a Firefox/IE bug where the transparent `button` background
 // results in a loss of the default `button` focus styles.
 //
 // Credit: https://github.com/suitcss/base/
 
+
+
 // stylelint-disable selector-no-qualifying-type, selector-no-type
+
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+
 // stylelint-enable selector-no-qualifying-type, selector-no-type
+
 
 
 // Base class
@@ -73,6 +84,8 @@ button:focus {
   }
 }
 
+
+
 // Button Variants
 //
 // .button--primary - Se usa dentro de un conjunto de acciones una vez para la
@@ -85,6 +98,8 @@ button:focus {
 // Markup: button.hbs
 //
 // Styleguide Elements.Buttons.1-Variants
+
+
 
 // Make this default
 .button,
@@ -111,6 +126,7 @@ button:focus {
 }
 
 
+
 // Button With Icon
 //
 // .button--facebook - Está reservado a usos relacionados con la red social
@@ -123,6 +139,7 @@ button:focus {
 .button--facebook {
   @include button-variant($btn-facebook-color, $btn-facebook-bg);
 }
+
 
 
 // Size modifiers
@@ -148,6 +165,8 @@ button:focus {
   @include button-size($btn-small-padding-x, $btn-height-sm-size, $font-size-sm);
 
 }
+
+
 
 // Convert to block
 .button--block {
@@ -208,17 +227,23 @@ button:focus {
 //
 // Styleguide Elements.Buttons.5-StateModifiers
 
+
+
 // Agregamos estos selectores a la definición para que el estado de deshabilitado
 // funcione bien en los forms.
 
 // stylelint-disable selector-no-qualifying-type, selector-no-type
+
 [disabled],
 [readonly],
 fieldset[disabled],
+
 // stylelint-enable selector-no-qualifying-type, selector-no-type
 
 .control__is-disabled .button,
 .block__is-disabled .button,
+
+
 
 // Estados Disabled y Loading
 .button__is-disabled,
