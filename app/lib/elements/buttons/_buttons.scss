@@ -203,13 +203,8 @@ button:focus {
 // Styleguide Elements.Buttons.4-FixedButtons
 
 .button__is-fixed-to-bottom {
+  @include fix-item-to-border("bottom");
   border-radius: 0;
-  bottom: 0;
-  display: block;
-  left: 0;
-  position: fixed;
-  right: 0;
-  width: 100%;
   z-index: $zindex-fixed-button;
 }
 
