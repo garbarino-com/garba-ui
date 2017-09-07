@@ -4557,9 +4557,16 @@ input[type="checkbox"]:checked {
 
 input[type="radio"]::after,
 input[type="checkbox"]::after {
-  font-family: "garba-icon-font" !important;
+  content: "";
+  display: block;
+  background-color: transparent;
+  color: transparent;
+  height: 0.71429rem;
   line-height: 1;
+  margin-left: -0.35714rem;
+  margin-top: -0.35714rem;
   transition: background-color ease-in-out 0.12s, border-color ease-in-out 0.12s, color ease-in-out 0.12s;
+  width: 0.71429rem;
 }
 
 input[type="radio"] {
@@ -4567,15 +4574,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]::after {
-  content: "";
-  display: block;
-  background-color: transparent;
   border-radius: 50%;
-  display: block;
-  height: 0.71429rem;
-  margin-left: -0.35714rem;
-  margin-top: -0.35714rem;
-  width: 0.71429rem;
 }
 
 input[type="radio"]:checked::after {
@@ -4587,11 +4586,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]::after {
-  color: transparent;
-  content: "";
-  font-size: 0.71429rem;
-  margin-left: -0.35714rem;
-  margin-top: -0.35714rem;
+  background: url(../images/icon--checked.svg);
+  color: inherit;
 }
 
 input[type="checkbox"]:checked::after {
