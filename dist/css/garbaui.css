@@ -3710,7 +3710,10 @@ button.close {
 }
 
 .slick-loading .slick-list {
-  background: #FFF url("./ajax-loader.gif") center center no-repeat;
+  background-color: #FFF;
+  background-image: url("./../images/spinner--md.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 button:focus {
