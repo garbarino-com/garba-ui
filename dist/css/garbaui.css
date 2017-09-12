@@ -2653,8 +2653,8 @@ label {
 
 @font-face {
   font-family: 'gb-font';
-  src: url("fonts/gb-font.eot?d48b80");
-  src: url("fonts/gb-font.eot?d48b80#iefix") format("embedded-opentype"), url("fonts/gb-font.ttf?d48b80") format("truetype"), url("fonts/gb-font.woff?d48b80") format("woff"), url("fonts/gb-font.svg?d48b80#gb-font") format("svg");
+  src: url("../fonts//gb-font.eot?d48b80");
+  src: url("../fonts//gb-font.eot?d48b80#iefix") format("embedded-opentype"), url("../fonts//gb-font.ttf?d48b80") format("truetype"), url("../fonts//gb-font.woff?d48b80") format("woff"), url("../fonts//gb-font.svg?d48b80#gb-font") format("svg");
   font-weight: normal;
   font-style: normal;
 }
