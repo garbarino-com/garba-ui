@@ -3931,11 +3931,11 @@ button:focus {
 
 .button__is-fixed-to-bottom {
   display: block;
-  position: fixed;
-  bottom: 0;
   left: 0;
+  position: fixed;
   right: 0;
   width: 100%;
+  bottom: 0;
   border-radius: 0;
   z-index: 1000;
 }
@@ -7105,6 +7105,7 @@ label.cell-list-item input:checked {
   -webkit-line-clamp: 2;
   color: #0084E0;
   font-size: 1.28571rem;
+  font-weight: 400;
   line-height: 1.60714rem;
   margin-bottom: 1rem;
   position: relative;

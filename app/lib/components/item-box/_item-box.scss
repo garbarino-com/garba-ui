@@ -77,6 +77,7 @@
   @include multi-line-ellipsis($box-item-title-height * 2);
   color: $box-item-title;
   font-size: $font-size-lg;
+  font-weight: $font-weight-base;
   line-height: $box-item-title-height;
   margin-bottom: $box-item-spacing;
   position: relative;
