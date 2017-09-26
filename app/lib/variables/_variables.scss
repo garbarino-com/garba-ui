@@ -280,6 +280,8 @@ $icon-default:           $icon-star !default;
 $brand-twitter:          #60B5F1 !default;
 $icon-twitter:           $icon-twitter !default;
 
+
+
 // Define common padding and border radius sizes and more.
 $border-radius-base:          3px;
 
@@ -434,6 +436,9 @@ $controller-boxed-spacer:            $controller-spacer + ($spacer-sm * 2) !defa
 $controller-boxed-position:          ($controller-boxed-spacer - $controller-size) + $spacer-sm !default;
 $controler-bg-inactive:              $widget-bg !default;
 $controler-border-inactive:          $gray-medium !default;
+
+// Checkbox icon
+$icon-checked:                       "<svg xmlns='http://www.w3.org/2000/svg' width='#{$controller-symbol-size}' height='#{$controller-symbol-size}' viewBox='0 0 10 8'><path fill='#{$controler-active}' d='M10,1.49677419 C10,1.6688172 9.93978495,1.81505376 9.81935484,1.93548387 L5.1483871,6.60645161 L4.27096774,7.48387097 C4.15053763,7.60430108 4.00430108,7.66451613 3.83225806,7.66451613 C3.66021505,7.66451613 3.51397849,7.60430108 3.39354839,7.48387097 L2.51612903,6.60645161 L0.180645161,4.27096774 C0.0602150538,4.15053763 0,4.00430108 0,3.83225806 C0,3.66021505 0.0602150538,3.51397849 0.180645161,3.39354839 L1.05806452,2.51612903 C1.17849462,2.39569892 1.32473118,2.33548387 1.49677419,2.33548387 C1.6688172,2.33548387 1.81505376,2.39569892 1.93548387,2.51612903 L3.83225806,4.41935484 L8.06451613,0.180645161 C8.18494624,0.0602150538 8.3311828,0 8.50322581,0 C8.67526882,0 8.82150538,0.0602150538 8.94193548,0.180645161 L9.81935484,1.05806452 C9.93978495,1.17849462 10,1.32473118 10,1.49677419 Z'/></svg>" !default;
 
 
 
