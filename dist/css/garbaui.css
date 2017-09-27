@@ -3573,6 +3573,18 @@ button.close {
   }
 }
 
+@keyframes skeleton--animation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
 @keyframes skeleton-screen--animation {
   to {
     background-position: 140% 0;
@@ -4589,7 +4601,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]::after {
-  background: transparent url("data:image/svg+xml;utf8,<svg\a       xmlns='http://www.w3.org/2000/svg' width='0.71429rem'\a       height='0.71429rem' viewBox='0 0 10 8'><path\a       fill='#0084E0' d='M10,1.49677419 C10,1.6688172 9.93978495,1.81505376\a       9.81935484,1.93548387 L5.1483871,6.60645161 L4.27096774,7.48387097\a       C4.15053763,7.60430108 4.00430108,7.66451613 3.83225806,7.66451613\a       C3.66021505,7.66451613 3.51397849,7.60430108 3.39354839,7.48387097\a       L2.51612903,6.60645161 L0.180645161,4.27096774 C0.0602150538,4.15053763\a       0,4.00430108 0,3.83225806 C0,3.66021505 0.0602150538,3.51397849\a       0.180645161,3.39354839 L1.05806452,2.51612903 C1.17849462,2.39569892\a       1.32473118,2.33548387 1.49677419,2.33548387 C1.6688172,2.33548387\a       1.81505376,2.39569892 1.93548387,2.51612903 L3.83225806,4.41935484\a       L8.06451613,0.180645161 C8.18494624,0.0602150538 8.3311828,0 8.50322581,0\a       C8.67526882,0 8.82150538,0.0602150538 8.94193548,0.180645161\a       L9.81935484,1.05806452 C9.93978495,1.17849462 10,1.32473118\a       10,1.49677419 Z'/></svg>") 0 0 no-repeat;
+  background: transparent url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#0084E0' height='100%' viewBox='0 0 24 24' width='100%'><path d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z'/></svg>") 0 0 no-repeat;
   opacity: 0;
 }
 
@@ -7233,22 +7245,17 @@ label.cell-list-item input:checked {
   color: transparent;
 }
 
-.item-box:empty .img-container .item-box__title,
-.item-box:empty .value-container .item-box__title,
-.item__is-loading .img-container .item-box__title,
-.item__is-loading .value-container .item-box__title,
-.carousel__is-loading .item-box .img-container .item-box__title,
-.carousel__is-loading .item-box .value-container .item-box__title {
+.item-box:empty .item-box__title,
+.item__is-loading .item-box__title,
+.carousel__is-loading .item-box .item-box__title {
   background-color: #E2E2E2;
+  color: transparent;
 }
 
 @media only screen and (min-width: 73.14286rem) {
-  .item-box:empty .img-container .item-box__title,
-  .item-box:empty .value-container .item-box__title,
-  .item__is-loading .img-container .item-box__title,
-  .item__is-loading .value-container .item-box__title,
-  .carousel__is-loading .item-box .img-container .item-box__title,
-  .carousel__is-loading .item-box .value-container .item-box__title {
+  .item-box:empty .item-box__title,
+  .item__is-loading .item-box__title,
+  .carousel__is-loading .item-box .item-box__title {
     background-color: transparent;
   }
 }
@@ -7258,7 +7265,7 @@ label.cell-list-item input:checked {
 .item__is-loading:hover,
 .carousel__is-loading .item-box,
 .carousel__is-loading .item-box:hover {
-  animation: unset;
+  animation: skeleton--animation 1s infinite ease-in;
   background-color: transparent;
   border: 0;
   transform: scale(1);
@@ -7271,19 +7278,6 @@ label.cell-list-item input:checked {
 .carousel__is-loading .item-box:hover .img-container {
   animation: unset;
   transform: initial;
-}
-
-.item-box:empty::after,
-.item__is-loading::after,
-.carousel__is-loading .item-box::after {
-  animation: skeleton-screen--animation 0.8s ease-out infinite;
-  background-color: transparent;
-  background-image: linear-gradient(92deg, rgba(246, 246, 246, 0) 0%, #f6f6f6 50%, rgba(246, 246, 246, 0) 100%);
-  background-position: -20% 0;
-  background-repeat: repeat-y;
-  background-size: 40% 100%;
-  opacity: 1;
-  z-index: 100;
 }
 
 .search-box {
@@ -8114,7 +8108,10 @@ a.search-box__list--item strong {
 .carousel__note {
   display: none !important;
   visibility: hidden !important;
+  color: #D35F53;
+  font-weight: 700;
   margin-bottom: 1.5rem;
+  padding: 1rem;
 }
 
 .carousel-shelf:empty .slick-prev, .carousel-shelf:empty .slick-prev:hover,

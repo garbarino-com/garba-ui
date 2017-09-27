@@ -29,3 +29,23 @@
     opacity: 1;
   }
 }
+
+
+// Skeleton loading animation
+@keyframes skeleton--animation {
+  0% {
+    opacity: $modifier-opacity-value;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: $modifier-opacity-value;
+  }
+}
+
+@mixin skeleton-animation {
+  animation: skeleton--animation 1s infinite ease-in;
+}

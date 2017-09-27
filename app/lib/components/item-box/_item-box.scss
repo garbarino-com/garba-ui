@@ -169,24 +169,27 @@
     }
 
     // stylelint-enable selector-max-compound-selectors
-
-    .item-box__title {
-      background-color: $skeleton-bg;
-
-      // stylelint-disable max-nesting-depth
-
-      // Media query para desktop
-      @media only screen and (min-width: $screen-lg-min) {
-        background-color: transparent;
-      }
-
-      // stylelint-enable max-nesting-depth
-    }
   }
+
+
+  .item-box__title {
+    background-color: $skeleton-bg;
+    color: transparent;
+
+    // stylelint-disable max-nesting-depth
+
+    // Media query para desktop
+    @media only screen and (min-width: $screen-lg-min) {
+      background-color: transparent;
+    }
+
+    // stylelint-enable max-nesting-depth
+  }
+
 
   &,
   &:hover {
-    animation: unset;
+    @include skeleton-animation;
     background-color: transparent;
     border: 0;
     transform: scale(1);
@@ -195,27 +198,5 @@
       animation: unset;
       transform: initial;
     }
-  }
-
-  &::after {
-    animation: skeleton-screen--animation $transition-timing-slow ease-out infinite;
-    background-color: transparent;
-
-    // stylelint-disable function-parentheses-space-inside
-
-    // Estilo para el highlight
-    background-image: linear-gradient(
-      92deg,
-      rgba($skeleton-highlight, 0) 0%,
-      rgba($skeleton-highlight, 1) 50%,
-      rgba($skeleton-highlight, 0) 100%);
-
-    // stylelint-enable function-parentheses-space-inside
-
-    background-position: -20% 0;
-    background-repeat: repeat-y;
-    background-size: 40% 100%;
-    opacity: 1;
-    z-index: $zindex-skeleton-highlight;
   }
 }

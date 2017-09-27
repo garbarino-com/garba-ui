@@ -341,7 +341,10 @@
 // La nota de feedback está escondida por default
 .carousel__note {
   @include hide-element;
+  color: $brand-error;
+  font-weight: 700;
   margin-bottom: $spacer-lg;
+  padding: $spacer-base;
 }
 
 
