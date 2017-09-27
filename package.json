@@ -13,6 +13,7 @@
     "sass": "gulp sass",
     "lint-css": "gulp lint-styles",
     "browserify": "browserify ./app/javascript/garbaui.main.js -o ./dist/javascript/garbaui.js && uglifyjs ./dist/javascript/garbaui.js -o ./dist/javascript/garbaui.min.js",
+    "release-patch": "npm-release patch",
     "release-minor": "npm-release minor",
     "release-major": "npm-release major"
   },
