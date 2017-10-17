@@ -213,9 +213,11 @@
   overflow: auto;
   white-space: nowrap;
 
-  > .carousel-item {
+  .carousel-item {
     display: inline-block;
     padding-bottom: $spacer-base;
+    padding-left: 1px;
+    padding-right: 1px;
     padding-top: $spacer-sm;
     vertical-align: top;
     width: $box-item-width-mobile;
@@ -223,7 +225,7 @@
 
   // Media query for tablet
   @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    > .carousel-item {
+    .carousel-item {
       width: $box-item-width-tablet;
     }
   }
@@ -232,9 +234,11 @@
   @media only screen and (min-width: $screen-lg-min) {
     overflow: hidden;
 
-    > .carousel-item {
-      padding-bottom: 0;
-      padding-top: 0;
+    .carousel-item {
+      padding-bottom: 2px;
+      padding-left: 1px;
+      padding-right: 1px;
+      padding-top: 1px;
       width: 100%;
     }
   }

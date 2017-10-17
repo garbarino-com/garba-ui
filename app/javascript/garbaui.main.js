@@ -61,4 +61,5 @@ carouselBillboard  = require('./scripts/components/carousel-billboard');
 
 // Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 carouselShelf      = require('./scripts/components/carousel-shelf');
+carouselShelf      = require('./scripts/components/carousel-shelf-featured');
 

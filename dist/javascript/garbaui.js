@@ -63,10 +63,11 @@ carouselBillboard  = require('./scripts/components/carousel-billboard');
 
 // Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 carouselShelf      = require('./scripts/components/carousel-shelf');
+carouselShelf      = require('./scripts/components/carousel-shelf-featured');
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal":8,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab":9,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip":10,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition":11,"../../node_modules/slick-carousel/slick/slick":12,"./scripts/components/carousel-billboard":2,"./scripts/components/carousel-shelf":3,"./scripts/components/tooltip":4,"./scripts/cookie":5,"./scripts/first-purchase":6,"./scripts/offers-hunter":7}],2:[function(require,module,exports){
+},{"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal":9,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab":10,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip":11,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition":12,"../../node_modules/slick-carousel/slick/slick":13,"./scripts/components/carousel-billboard":2,"./scripts/components/carousel-shelf":4,"./scripts/components/carousel-shelf-featured":3,"./scripts/components/tooltip":5,"./scripts/cookie":6,"./scripts/first-purchase":7,"./scripts/offers-hunter":8}],2:[function(require,module,exports){
 // Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 
 $(function () {
@@ -110,6 +111,33 @@ $(function () {
   gb_ui.carousel.carouselShelf.settings = {
     lazyLoad: 'ondemand',
     speed: 300,
+    slidesToShow: 4.2,
+    dots: false,
+    infinite: false,
+    slidesToScroll: 4,
+    responsive: [{
+      breakpoint: 1025,
+      settings: 'unslick'
+    }]
+  }
+
+  // Shelf carousel init
+  gb_ui.carousel.carouselShelf.init = function(element) {
+    $(element).slick(gb_ui.carousel.carouselShelf.settings);
+  }
+
+  // Shelf carousel on class
+  gb_ui.carousel.carouselShelf.init('.carousel-shelf--featured');
+});
+
+},{}],4:[function(require,module,exports){
+// Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
+
+$(function () {
+  // Shelf carousel settings
+  gb_ui.carousel.carouselShelf.settings = {
+    lazyLoad: 'ondemand',
+    speed: 300,
     slidesToShow: 4.8,
     dots: false,
     infinite: false,
@@ -129,7 +157,7 @@ $(function () {
   gb_ui.carousel.carouselShelf.init('.carousel-shelf');
 });
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 // Initialize Bootstrap tooltip
 $(function () {
   $('[data-toggle="tooltip"]').tooltip({
@@ -138,7 +166,7 @@ $(function () {
   });
 });
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /*!
  * JavaScript Cookie v2.1.3
  * https://github.com/js-cookie/js-cookie
@@ -295,7 +323,7 @@ $(function () {
 
   return init(function () {});
 }));
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 $(document).ready(function() {
     var url = window.location.href;
     firstPurchase = url.search("subscripcion=primera-compra");
@@ -349,7 +377,7 @@ $("#Enviar").click(function () {
     }
 });
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 $(document).ready(function () {
   var gb = gb || {};
   gb.offersHunter = gb.offersHunter || {};
@@ -563,7 +591,7 @@ function detectDevice(userAgent) {
   return ret;
 };
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: modal.js v3.3.7
  * http://getbootstrap.com/javascript/#modals
@@ -904,7 +932,7 @@ function detectDevice(userAgent) {
 
 }(jQuery);
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: tab.js v3.3.7
  * http://getbootstrap.com/javascript/#tabs
@@ -1061,7 +1089,7 @@ function detectDevice(userAgent) {
 
 }(jQuery);
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: tooltip.js v3.3.7
  * http://getbootstrap.com/javascript/#tooltip
@@ -1583,7 +1611,7 @@ function detectDevice(userAgent) {
 
 }(jQuery);
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: transition.js v3.3.7
  * http://getbootstrap.com/javascript/#transitions
@@ -1644,7 +1672,7 @@ function detectDevice(userAgent) {
 
 }(jQuery);
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (global){
 /*
      _ _      _       _

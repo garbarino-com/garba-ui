@@ -20,33 +20,33 @@
 
   @if $arrowdirection == "top" {
     border-bottom-color: $color;
-    border-width: 0 ($width/2) $height;
+    border-width: 0 $width / 2 $height;
     left: 50%;
-    margin-left: -($width/2);
-    top: -$height;
+    margin-left: ($width / 2) * -1;
+    top: $height * -1;
   }
 
   @if $arrowdirection == "right" {
     border-left-color: $color;
-    border-width: ($width/2) $height;
-    margin-top: -$height;
-    right: -$width;
-    top: 50%;
+    border-width: $height / 2 $width;
+    left: 100%;
+    margin-right: $width * -1;
+    top: 0;
   }
 
   @if $arrowdirection == "bottom" {
     border-top-color: $color;
-    border-width: $height ($width/2) 0;
-    bottom: -$height;
+    border-width: $height $width / 2 0;
+    bottom: $height * -1;
     left: 50%;
-    margin-left: -($width/2);
+    margin-left: ($width / 2) * -1;
   }
 
   @if $arrowdirection == "left" {
     border-right-color: $color;
-    border-width: ($width/2) $height;
-    left: -$width;
-    margin-top: -$height;
-    top: 50%;
+    border-width: $height / 2 $width;
+    margin-left: $width * -1;
+    right: 100%;
+    top: 0;
   }
 }
