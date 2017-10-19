@@ -7125,14 +7125,13 @@ a.search-box__list--item strong {
   user-select: none;
   box-sizing: border-box;
   display: block;
-  margin-bottom: 1.5rem;
   overflow: hidden;
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
 
 .slick-slider.slick-dotted {
-  padding-bottom: 2rem;
+  padding-bottom: 0;
 }
 
 .slick-slider .slick-track,
@@ -7148,23 +7147,6 @@ a.search-box__list--item strong {
   .slick-slider .slick-list {
     overflow: hidden;
   }
-}
-
-.carousel-billboard {
-  display: block;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-}
-
-.carousel-billboard:focus {
-  outline: none;
-}
-
-.carousel-billboard.dragging {
-  cursor: pointer;
-  cursor: hand;
 }
 
 .slick-track {
@@ -7217,7 +7199,7 @@ a.search-box__list--item strong {
 }
 
 .slick-dots {
-  bottom: 0;
+  bottom: 1rem;
   display: block;
   font-size: 0;
   left: 0;
@@ -7252,7 +7234,7 @@ a.search-box__list--item strong {
   font-size: 0;
   line-height: 1;
   outline: none;
-  padding: 0.25rem;
+  padding: 0.325rem;
   position: relative;
 }
 
@@ -7268,50 +7250,10 @@ a.search-box__list--item strong {
   content: "•";
   display: block;
   font-size: 0;
-  height: 0.5rem;
+  height: 0.65rem;
   transform: scale(0.8);
   transition: background-color ease-in-out 0.12s, border-color ease-in-out 0.12s, transform ease-in-out 0.12s;
-  width: 0.5rem;
-}
-
-.carousel-shelf {
-  overflow: auto;
-  white-space: nowrap;
-}
-
-.carousel-shelf::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.carousel-shelf .carousel-item {
-  display: inline-block;
-  padding-bottom: 1rem;
-  padding-left: 1px;
-  padding-right: 1px;
-  padding-top: 0.5rem;
-  vertical-align: top;
-  width: 9rem;
-}
-
-@media only screen and (min-width: 54.85714rem) and (max-width: 72.14286rem) {
-  .carousel-shelf .carousel-item {
-    width: 14rem;
-  }
-}
-
-@media only screen and (min-width: 73.14286rem) {
-  .carousel-shelf {
-    overflow: hidden;
-  }
-  .carousel-shelf .carousel-item {
-    padding-bottom: 2px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-top: 1px;
-    width: 100%;
-  }
+  width: 0.65rem;
 }
 
 .slick-prev,
@@ -7365,7 +7307,7 @@ a.search-box__list--item strong {
 
 .slick-dotted .slick-prev, .slick-dotted
 .slick-next {
-  margin-top: -4rem;
+  margin-top: -3rem;
 }
 
 .slick-prev.slick-disabled,
@@ -7401,6 +7343,64 @@ a.search-box__list--item strong {
 
 .slick-slider:hover .slick-next {
   animation: carousel-enter-right-arrow 0.4s ease-in-out;
+}
+
+.carousel-billboard {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.carousel-billboard:focus {
+  outline: none;
+}
+
+.carousel-billboard.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.carousel-shelf {
+  margin-bottom: 1.5rem;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.carousel-shelf::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.carousel-shelf .carousel-item {
+  display: inline-block;
+  padding-bottom: 1rem;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 0.5rem;
+  vertical-align: top;
+  width: 9rem;
+}
+
+@media only screen and (min-width: 54.85714rem) and (max-width: 72.14286rem) {
+  .carousel-shelf .carousel-item {
+    width: 14rem;
+  }
+}
+
+@media only screen and (min-width: 73.14286rem) {
+  .carousel-shelf {
+    overflow: hidden;
+  }
+  .carousel-shelf .carousel-item {
+    padding-bottom: 2px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    width: 100%;
+  }
 }
 
 .carousel__note {

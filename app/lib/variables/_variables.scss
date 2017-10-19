@@ -587,11 +587,12 @@ $carousel-arrow-size:           2rem !default;
 $carousel-dot-character:        "\2022" !default;
 $carousel-dot-bg:               $widget-bg !default;
 $carousel-dot-color:            $brand-secondary !default;
-$carousel-dot-size:             .5rem !default;
+$carousel-dot-size:             .65rem !default;
 $carousel-dot-color-active:     $carousel-arrow-color !default;
 $carousel-prev-character:       $icon-simple-bold-arrow-left !default;
 $carousel-next-character:       $icon-simple-bold-arrow-right !default;
-$carousel-bottom-spacer:        2rem !default;
+$carousel-bottom-spacer:        0 !default;
+$carousel-control-dots-spacer:  $spacer-base !default;
 
 
 // Searchbox

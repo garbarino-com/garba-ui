@@ -39,8 +39,10 @@ var listGrid             = require('./scripts/components/carousel-billboard');
 // gb_ui: {
 //  carousel: {
 //    carouselBillboard: {...},
-//    carouselShelf: {...}
-//  }
+//    carouselShelf: {...},
+//    ...
+//  },
+//  ...
 // };
 // ```
 //
@@ -49,7 +51,8 @@ var listGrid             = require('./scripts/components/carousel-billboard');
 window.gb_ui = {
   carousel: {
     carouselBillboard: {},
-    carouselShelf: {}
+    carouselShelf: {},
+    carouselShelfFeatured: {}
   }
 };
 

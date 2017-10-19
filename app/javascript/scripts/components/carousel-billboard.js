@@ -18,7 +18,6 @@ $(function () {
         settings: {
           arrows: true,
           dots: true,
-          fade: true,
           pauseOnFocus: true
         }
       }]
