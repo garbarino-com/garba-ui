@@ -1,0 +1,32 @@
+// Modificadores de color
+//
+// Helpers que generan las variaciones de los tonos de la aplicación.
+//
+// Styleguide Helpers.ColorModifiers
+
+// @color-modifier-lighten($color)
+//
+// Esta función genera la variación más clara de los tonos base.
+//
+// $color - El color sobre el cual se ejecuta la operación.
+//
+// Styleguide Helpers.ColorModifiers.LightenColor
+
+// Hover state function
+@function color-modifier-lighten($color) {
+  @return call($color-lighten-operation, $color, $color-lighten-value);
+}
+
+
+// @color-modifier-darken($color)
+//
+// Esta función genera la variación más oscura de los tonos base.
+//
+// $color - El color sobre el cual se ejecuta la operación.
+//
+// Styleguide Helpers.ColorModifiers.DarkenColor
+
+// Focus state function
+@function color-modifier-darken($color) {
+  @return call($color-darken-operation, $color, $color-darken-value);
+}

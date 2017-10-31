@@ -6,6 +6,8 @@
 //
 
 // Import this function here so it can be used within variables sheet
+@import "helpers/bourbon";
+@import "helpers/color-modifiers";
 @import "helpers/px-to-rem";
 
 // Base framework variables
@@ -44,6 +46,7 @@
 // UI Components
 @import "components/collapse/collapse";
 @import "components/cell-list/cell-list";
+@import "components/feedback/feedback";
 @import "components/item-box/item-box";
 @import "components/search-box/search-box";
 @import "components/navbar/navbar";

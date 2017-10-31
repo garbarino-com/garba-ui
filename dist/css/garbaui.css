@@ -2826,6 +2826,210 @@ button.close {
   }
 }
 
+@keyframes action-active {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+@keyframes item-box--mouseOver {
+  from {
+    border-color: transparent;
+    transform: scale(1);
+  }
+  to {
+    border-color: #2ea9ff;
+    transform: scale(1.005);
+  }
+}
+
+@keyframes item-box__element--mouseOver {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .6;
+  }
+}
+
+@keyframes item-box__title--mouseOver {
+  from {
+    opacity: 0;
+    transform: scale(1.005);
+  }
+  to {
+    opacity: .6;
+    transform: scale(1);
+  }
+}
+
+@keyframes item-box__image--mouseOver {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes navbar--mouseOver-animation {
+  from {
+    transform: translateY(33.33333%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbar--mouseOut-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(33.33333%);
+  }
+}
+
+@keyframes navbar-vertical--mouseOver-animation {
+  from {
+    transform: translateX(-33.33333%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navbar-vertical--mouseOut-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.33333%);
+  }
+}
+
+@keyframes navbar-icon--mouseOver-animation {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.125) translateY(-0.25rem);
+  }
+}
+
+@keyframes navbar-icon--mouseOut-animation {
+  from {
+    transform: scale(1.125) translateY(-0.25rem);
+  }
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes carousel-enter-left-arrow {
+  from {
+    transform: translate(-100%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes carousel-exit-left-arrow {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes carousel-enter-right-arrow {
+  from {
+    transform: translate(100%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes carousel-exit-right-arrow {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100%, 0);
+  }
+}
+
+.slick-loading .slick-list {
+  background-color: #FFF;
+  background-image: url("./../images/spinner--md.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+@keyframes block-animation--opacity {
+  0% {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0;
+  }
+  1% {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0;
+  }
+  100% {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1;
+  }
+}
+
+@keyframes skeleton--animation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes skeleton-screen--animation {
+  to {
+    background-position: 140% 0;
+  }
+}
+
+@keyframes action-active {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
 @keyframes item-box--mouseOver {
   from {
     border-color: transparent;
@@ -3431,12 +3635,12 @@ fieldset[disabled].button--facebook:focus,
 }
 
 .button--action:hover {
-  background-color: #E2E2E2;
+  background-color: rgba(0, 0, 0, 0.15);
   text-decoration: none;
 }
 
 .button--action:focus, .button--action.button__is-active {
-  background-color: #E2E2E2;
+  background-color: rgba(0, 0, 0, 0.15);
   outline: 0;
 }
 
@@ -3444,7 +3648,8 @@ fieldset[disabled].button--facebook:focus,
   cursor: default;
 }
 
-.button--action > i {
+.button--action > i,
+.button--action > span {
   left: 50%;
   margin-left: -0.75rem;
   margin-top: -0.75rem;
@@ -3452,7 +3657,8 @@ fieldset[disabled].button--facebook:focus,
   top: 50%;
 }
 
-.button--action > i::before {
+.button--action > i::before,
+.button--action > span::before {
   display: block;
   font-family: "garba-icon-font" !important;
   font-size: 1.5rem;
@@ -3463,21 +3669,21 @@ fieldset[disabled].button--facebook:focus,
   width: 1.5rem;
 }
 
-@keyframes action-active {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
+.button--action--sm {
+  font-size: 1rem;
+  height: 2rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
 }
 
 .button--action__primary {
   color: #000;
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
 }
 
 .button--action__primary, .button--action__primary:visited {
@@ -3490,13 +3696,6 @@ fieldset[disabled].button--facebook:focus,
 
 .button--action__primary > i::before {
   content: "";
-}
-
-.button--action__fav {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
 }
 
 .button--action__fav, .button--action__fav:visited {
@@ -3531,13 +3730,6 @@ fieldset[disabled].button--facebook:focus,
   content: initial;
 }
 
-.button--action__default {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
-}
-
 .button--action__default, .button--action__default:visited {
   color: #F8AA29;
 }
@@ -3550,13 +3742,6 @@ fieldset[disabled].button--facebook:focus,
   content: "";
 }
 
-.button--action__facebook {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
-}
-
 .button--action__facebook, .button--action__facebook:visited {
   color: #4957B3;
 }
@@ -3567,13 +3752,6 @@ fieldset[disabled].button--facebook:focus,
 
 .button--action__facebook > i::before {
   content: "";
-}
-
-.button--action__twitter {
-  -webkit-transition: background-color 0.12s ease-in;
-  -ms-transition: background-color 0.12s ease-in;
-  -moz-transition: background-color 0.12s ease-in;
-  transition: background-color 0.12s ease-in;
 }
 
 .button--action__twitter, .button--action__twitter:visited {
@@ -4148,45 +4326,45 @@ label ~ .form-control ~ .form-block__feedback {
 .block__has-error > .form-control,
 .block__has-error > div > .form-control,
 .block__has-error .control-group__addon {
-  border: 1px solid #D35F53;
+  border: 1px solid #E42729;
 }
 
 .block__has-error > .form-control:hover,
 .block__has-error > div > .form-control:hover,
 .block__has-error .control-group__addon:hover {
-  border-color: #e39890;
+  border-color: #ed6b6c;
 }
 
 .block__has-error > .form-control:focus,
 .block__has-error > div > .form-control:focus,
 .block__has-error .control-group__addon:focus {
-  border-color: #e39890;
-  box-shadow: 0 0 4px 0 rgba(211, 95, 83, 0.6);
+  border-color: #ed6b6c;
+  box-shadow: 0 0 4px 0 rgba(228, 39, 41, 0.6);
 }
 
 .block__has-error input[type="radio"],
 .block__has-error input[type="checkbox"] {
-  border-color: #D35F53;
+  border-color: #E42729;
 }
 
 .block__has-error input[type="radio"]:checked,
 .block__has-error input[type="checkbox"]:checked {
-  border-color: #D35F53;
+  border-color: #E42729;
 }
 
 .block__has-error input[type="radio"]:checked::after {
-  background-color: #D35F53;
+  background-color: #E42729;
 }
 
 .block__has-error input[type="checkbox"]:checked::after {
-  color: #D35F53;
+  color: #E42729;
 }
 
 .block__has-error.checkbox label:hover > input[type="checkbox"],
 .block__has-error.radio label:hover > input[type="radio"],
 .block__has-error .radio-box:hover,
 .block__has-error .checkbox-box:hover {
-  border-color: #D35F53;
+  border-color: #E42729;
 }
 
 .block__has-error > .form-block__feedback,
@@ -4196,7 +4374,7 @@ label ~ .form-control ~ .form-block__feedback {
   display: block !important;
   visibility: visible !important;
   animation: block-animation--opacity 0.2s ease-in alternate;
-  color: #D35F53;
+  color: #E42729;
 }
 
 .block__has-error > .form-block__feedback::before,
@@ -4205,7 +4383,7 @@ label ~ .form-control ~ .form-block__feedback {
 }
 
 .block__has-error .form-block__helper {
-  color: #D35F53;
+  color: #E42729;
 }
 
 .control-group {
@@ -4311,7 +4489,7 @@ select[multiple].control-group--sm .form-control {
 }
 
 .form-block__helper {
-  color: #3584D9;
+  color: #4A90E2;
   line-height: 1;
   pointer-events: all;
   right: 1rem;
@@ -6356,6 +6534,291 @@ label.cell-list-item input:checked {
   color: #2ea9ff;
 }
 
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+@keyframes block-animation--opacity {
+  0% {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0;
+  }
+  1% {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 0;
+  }
+  100% {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1;
+  }
+}
+
+@keyframes skeleton--animation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes skeleton-screen--animation {
+  to {
+    background-position: 140% 0;
+  }
+}
+
+@keyframes action-active {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+@keyframes item-box--mouseOver {
+  from {
+    border-color: transparent;
+    transform: scale(1);
+  }
+  to {
+    border-color: #2ea9ff;
+    transform: scale(1.005);
+  }
+}
+
+@keyframes item-box__element--mouseOver {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .6;
+  }
+}
+
+@keyframes item-box__title--mouseOver {
+  from {
+    opacity: 0;
+    transform: scale(1.005);
+  }
+  to {
+    opacity: .6;
+    transform: scale(1);
+  }
+}
+
+@keyframes item-box__image--mouseOver {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes navbar--mouseOver-animation {
+  from {
+    transform: translateY(33.33333%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbar--mouseOut-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(33.33333%);
+  }
+}
+
+@keyframes navbar-vertical--mouseOver-animation {
+  from {
+    transform: translateX(-33.33333%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navbar-vertical--mouseOut-animation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.33333%);
+  }
+}
+
+@keyframes navbar-icon--mouseOver-animation {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.125) translateY(-0.25rem);
+  }
+}
+
+@keyframes navbar-icon--mouseOut-animation {
+  from {
+    transform: scale(1.125) translateY(-0.25rem);
+  }
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes carousel-enter-left-arrow {
+  from {
+    transform: translate(-100%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes carousel-exit-left-arrow {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes carousel-enter-right-arrow {
+  from {
+    transform: translate(100%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes carousel-exit-right-arrow {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100%, 0);
+  }
+}
+
+.slick-loading .slick-list {
+  background-color: #FFF;
+  background-image: url("./../images/spinner--md.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.feedback {
+  border-radius: 3px;
+  color: #000;
+  margin-bottom: 1.5rem;
+  min-height: 4rem;
+  padding-bottom: 1.25rem;
+  padding-left: 4rem;
+  padding-right: 1rem;
+  padding-top: 1.25rem;
+  position: relative;
+}
+
+.feedback > .button--action, .feedback::before {
+  position: absolute;
+  top: 1rem;
+}
+
+.feedback::before {
+  display: block;
+  font-family: "garba-icon-font" !important;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  speak: none;
+  content: "";
+  display: block;
+  height: 2rem;
+  left: 1rem;
+  width: 2rem;
+}
+
+.feedback > .button--action {
+  height: 2rem;
+  right: 1rem;
+  width: 2rem;
+}
+
+.feedback > .button--action > [class^="gb-icon-"],
+.feedback > .button--action > [class^="icon-"] {
+  display: block;
+  font-family: "garba-icon-font" !important;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  speak: none;
+}
+
+.feedback > .button--action > [class^="gb-icon-"]::before,
+.feedback > .button--action > [class^="icon-"]::before {
+  color: #000;
+}
+
+.feedback__error {
+  border-color: transparent;
+  background-color: #f4a9a9;
+}
+
+.feedback__error::before {
+  content: "";
+}
+
+.feedback__info {
+  border-color: transparent;
+  background-color: #b7d3f3;
+}
+
+.feedback__info::before {
+  content: "";
+}
+
+.feedback__success {
+  border-color: transparent;
+  background-color: #a2db99;
+}
+
+.feedback__success::before {
+  content: "";
+}
+
+.feedback__warning {
+  border-color: transparent;
+  background-color: #fff099;
+}
+
+.feedback__warning::before {
+  content: "";
+}
+
 .item-box {
   animation: item-box--mouseOver 0.2s reverse ease-in;
   border: 1px solid transparent;
@@ -7406,7 +7869,7 @@ a.search-box__list--item strong {
 .carousel__note {
   display: none !important;
   visibility: hidden !important;
-  color: #D35F53;
+  color: #E42729;
   font-weight: 700;
   margin-bottom: 1.5rem;
   padding: 1rem;

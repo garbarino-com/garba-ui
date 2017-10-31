@@ -16,6 +16,8 @@ $prefix-for-spec:            true !default;
 // Define use of flexbox (boolean)
 $flexbox-is-enabled:         true !default;
 
+
+
 // BaselineGrid
 //
 // El *baseline-grid* es el bloque de construcción básico del
@@ -29,6 +31,23 @@ $flexbox-is-enabled:         true !default;
 
 $baseline-grid:                  14px;
 $baseline-grid-computed:         px-to-rem($baseline-grid);
+
+
+
+// State modifiers
+$modifier-operation:            lighten !default;
+$modifier-hover-value:          15% !default;
+$modifier-focus-value:          15% !default;
+$modifier-opacity-value:        .5 !default;
+$modifier-scale-value:          .8 !default;
+
+// Color modifiers
+$color-lighten-operation:       tint !default;
+$color-lighten-value:           60% !default;
+
+$color-darken-operation:        shade !default;
+$color-darken-value:            30% !default;
+
 
 
 // Paleta principal
@@ -54,10 +73,10 @@ $brand-altfav:           #F8AA29 !default;
 
 // Paleta de estados
 //
-// #4DA02E - $brand-success
-// #D35F53 - $brand-error
-// #CE9433 - $brand-warning
-// #3584D9 - $brand-info
+// #16A400 - $brand-success
+// #E42729 - $brand-error
+// #FFDA00 - $brand-warning
+// #4A90E2 - $brand-info
 // #9E9E9E - $brand-disabled
 //
 // Markup: ../elements/palette.hbs
@@ -68,10 +87,26 @@ $brand-disabled:          #9E9E9E !default;
 $brand-disabled-bg:       #E2E2E2 !default;
 $brand-disabled-cursor:   not-allowed !default;
 
-$brand-success:          #4DA02E !default;
-$brand-error:            #D35F53 !default;
-$brand-warning:          #CE9433 !default;
-$brand-info:             #3584D9 !default;
+
+
+// Colores de estados
+
+$brand-error:            #E42729 !default;
+$brand-error-light:      color-modifier-lighten($brand-error) !default;
+$brand-error-dark:       color-modifier-darken($brand-error) !default;
+
+$brand-info:             #4A90E2 !default;
+$brand-info-light:       color-modifier-lighten($brand-info) !default;
+$brand-info-dark:        color-modifier-darken($brand-info) !default;
+
+$brand-success:          #16A400 !default;
+$brand-success-light:    color-modifier-lighten($brand-success) !default;
+$brand-success-dark:     color-modifier-darken($brand-success) !default;
+
+$brand-warning:          #FFDA00 !default;
+$brand-warning-light:    color-modifier-lighten($brand-warning) !default;
+$brand-warning-dark:     color-modifier-darken($brand-warning) !default;
+
 
 
 // Paleta de grises
@@ -95,12 +130,6 @@ $gray-light:             $brand-disabled-bg !default;
 $gray-lighter:           #F6F6F6 !default;
 
 
-// State modifiers
-$modifier-operation:            lighten !default;
-$modifier-hover-value:          15% !default;
-$modifier-focus-value:          15% !default;
-$modifier-opacity-value:        .5 !default;
-$modifier-scale-value:          .8 !default;
 
 // Default transition animation
 $transition-timing-base:       .12s !default;
@@ -389,12 +418,16 @@ $btn-icon-padding-x:                 5rem !default;
 // Button action definitions
 $btn-action-bg:                      transparent !default;
 $btn-action-color:                   $gray-dark !default;
-$btn-action-hover-bg:                $gray-light !default;
+$btn-action-hover-bg:                rgba(0, 0, 0, .15) !default;
 
 $btn-action-primary:                 $gray-base !default;
 $btn-action-padding:                 .75rem !default;
 $btn-action-font-size:               1.5rem !default;
 $btn-action-size:                    $btn-action-font-size + ($btn-action-padding * 2) !default;
+
+$btn-action-sm-padding:              $spacer-sm !default;
+$btn-action-sm-font-size:            $font-size-base !default;
+$btn-action-sm-size:                 ($spacer-sm * 2) + $btn-action-sm-font-size !default;
 
 
 // Form definitions

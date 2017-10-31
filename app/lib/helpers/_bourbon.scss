@@ -47,3 +47,27 @@
 // Styleguide Helpers.Bourbon.Ellipsis
 
 @import "./node_modules/bourbon/app/assets/stylesheets/addons/ellipsis";
+
+
+
+// @tint($color)
+//
+// Agrega blanco a un color.
+//
+// $color - El color sobre el cual se ejecuta la función.
+//
+// Styleguide Helpers.Bourbon.Tint
+
+@import "./node_modules/bourbon/app/assets/stylesheets/functions/tint";
+
+
+
+// @sahde($color)
+//
+// Agrega negro a un color.
+//
+// $color - El color sobre el cual se ejecuta la función.
+//
+// Styleguide Helpers.Bourbon.Shade
+
+@import "./node_modules/bourbon/app/assets/stylesheets/functions/shade";
