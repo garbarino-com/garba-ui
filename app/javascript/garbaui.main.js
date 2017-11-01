@@ -4,6 +4,7 @@
 var $                    = require('jquery');
 
 // Bootstrap plugins (http://getbootstrap.com/javascript/)
+var alert                = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert');
 var modal                = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
 var tooltip              = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip');
 var tab                  = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab');
@@ -65,4 +66,3 @@ carouselBillboard  = require('./scripts/components/carousel-billboard');
 // Link: section-functional.html#kssref-functional-carousel-2-shelfcarousel
 carouselShelf      = require('./scripts/components/carousel-shelf');
 carouselShelf      = require('./scripts/components/carousel-shelf-featured');
-

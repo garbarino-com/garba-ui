@@ -588,6 +588,15 @@ $navbar-icon-mouseover-animation:       scale(1.125) translateY(($spacer-sm / 2)
 $navbar-icon-mouseout-animation:        scale(1) translateY(0) !default;
 
 
+// Alerts
+$alert-spacer:                          $spacer-base !default;
+$alert-icon-size:                       $alert-spacer * 2 !default;
+$alert-spacer-vertical:                 $alert-spacer + $spacer-xs !default;
+$alert-spacer-horizontal:               ($alert-spacer * 2) + $alert-icon-size !default;
+$alert-color:                           $gray-base !default;
+$alert-icon-color:                      $alert-color !default;
+
+
 
 // Box item
 $box-item-bg:                    transparent !default;

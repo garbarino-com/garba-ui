@@ -1,0 +1,86 @@
+// Importa las dependencias
+@import "../../helpers/helpers";
+
+
+// Alert
+//
+// Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur,
+// eros ut viverra laoreet, arcu est bibendum neque, vel ultricies magna sem non
+// elit. Suspendisse potenti.
+//
+// .alert__error - Mensaje de error.
+// .alert__info - Mensaje informativo.
+// .alert__success - Mensaje de éxito.
+// .alert__warning - Mensaje de advertencia.
+//
+// Markup: alert.hbs
+//
+// Styleguide Components.Feedback
+
+
+
+.alert {
+  border-radius: $border-radius-base;
+  color: $alert-color;
+  margin-bottom: $spacer-lg;
+  min-height: $alert-spacer-horizontal;
+  padding-bottom: $alert-spacer-vertical;
+  padding-left: $alert-spacer-horizontal;
+  padding-right: $alert-spacer;
+  padding-right: $alert-spacer-horizontal;
+  padding-top: $alert-spacer-vertical;
+  position: relative;
+
+  > .button--action,
+  &::before {
+    position: absolute;
+    top: $alert-spacer;
+  }
+
+  &::before {
+    @include icon-element($alert-icon-size);
+    @include make-pseudo-element;
+    height: $alert-icon-size;
+    left: $alert-spacer;
+    width: $alert-icon-size;
+  }
+
+  > .button--action {
+    height: $alert-icon-size;
+    right: $alert-spacer;
+    width: $alert-icon-size;
+
+    > [class^="gb-icon-"],
+    > [class^="icon-"] {
+      @include icon-element($spacer-lg);
+
+      // stylelint-disable max-nesting-depth
+
+      &::before {
+        color: $alert-icon-color;
+      }
+
+      // stylelint-enable max-nesting-depth
+    }
+  }
+}
+
+
+
+// State variants
+
+.alert__error {
+  @include alert-variant("error");
+}
+
+.alert__info {
+  @include alert-variant("info");
+}
+
+.alert__success {
+  @include alert-variant("success");
+}
+
+.alert__warning {
+  @include alert-variant("warning");
+}
