@@ -75,6 +75,26 @@
       width: $btn-action-font-size;
     }
   }
+
+  // Uso en alerts
+  .alert__is-dismissible > & {
+    height: $alert-icon-size;
+    right: $alert-spacer;
+    width: $alert-icon-size;
+
+    > [class^="gb-icon-"],
+    > [class^="icon-"] {
+      @include icon-element($spacer-lg);
+
+      // stylelint-disable max-nesting-depth
+
+      &::before {
+        color: $alert-icon-color;
+      }
+
+      // stylelint-enable max-nesting-depth
+    }
+  }
 }
 
 

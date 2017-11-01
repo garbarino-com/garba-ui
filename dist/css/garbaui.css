@@ -3669,6 +3669,28 @@ fieldset[disabled].button--facebook:focus,
   width: 1.5rem;
 }
 
+.alert__is-dismissible > .button--action {
+  height: 2rem;
+  right: 1rem;
+  width: 2rem;
+}
+
+.alert__is-dismissible > .button--action > [class^="gb-icon-"],
+.alert__is-dismissible > .button--action > [class^="icon-"] {
+  display: block;
+  font-family: "garba-icon-font" !important;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  speak: none;
+}
+
+.alert__is-dismissible > .button--action > [class^="gb-icon-"]::before,
+.alert__is-dismissible > .button--action > [class^="icon-"]::before {
+  color: #000;
+}
+
 .button--action--sm {
   font-size: 1rem;
   height: 2rem;
@@ -6416,7 +6438,6 @@ a:hover {
   padding-bottom: 1.25rem;
   padding-left: 4rem;
   padding-right: 1rem;
-  padding-right: 4rem;
   padding-top: 1.25rem;
   position: relative;
 }
@@ -6441,26 +6462,12 @@ a:hover {
   width: 2rem;
 }
 
-.alert > .button--action {
-  height: 2rem;
-  right: 1rem;
-  width: 2rem;
+.alert > p {
+  margin-bottom: 1rem;
 }
 
-.alert > .button--action > [class^="gb-icon-"],
-.alert > .button--action > [class^="icon-"] {
-  display: block;
-  font-family: "garba-icon-font" !important;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  speak: none;
-}
-
-.alert > .button--action > [class^="gb-icon-"]::before,
-.alert > .button--action > [class^="icon-"]::before {
-  color: #000;
+.alert__is-dismissible {
+  padding-right: 4rem;
 }
 
 .alert__error {
