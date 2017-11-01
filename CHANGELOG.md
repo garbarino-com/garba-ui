@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 * Fixes css arrow generator mixin.
 * Adds featured carousel.
 * Removes grid from old project.
+* New alert component.
 
 ## All changes for v3.1.2 - 2017-09-28
 This new version makes a distincion between the library and the Styleguide to display it.
