@@ -1,0 +1,18 @@
+// Positionin mixins
+// TODO(ecalvi): Document this.
+
+@mixin fix-item-to-border($location) {
+  display: block;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+
+  @if $location == "top" {
+    top: 0;
+  }
+
+  @if $location == "bottom" {
+    bottom: 0;
+  }
+}

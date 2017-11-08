@@ -56,12 +56,19 @@
 @import "utilities";
 @import "animation";
 @import "border-radius";
+@import "color-modifiers";
 @import "element-aspect-ratio";
 @import "icon-element";
 @import "set-width-based-on-siblings-count";
 @import "make-css-arrow";
 @import "multi-line-ellipsis";
+@import "position-items";
 @import "state-modifiers";
+
+// State related
+@import "spinners";
+@import "skeleton-screens";
+
 
 // Element related
 @import "buttons";
@@ -70,10 +77,10 @@
 @import "item-box";
 
 // Component related
+@import "alert";
 @import "labels";
 @import "lists";
 @import "navbar";
-@import "spinners";
 @import "value";
 
 // Functional related

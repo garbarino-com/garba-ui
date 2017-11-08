@@ -19,7 +19,6 @@
   @include prefixer(user-select, none, webkit ms spec);
   box-sizing: border-box;
   display: block;
-  margin-bottom: $spacer-lg;
   overflow: hidden;
   position: relative;
 
@@ -41,38 +40,6 @@
     @media only screen and (min-width: $screen-lg-min) {
       overflow: hidden;
     }
-  }
-}
-
-
-
-// Billboard Carousel
-//
-// Esta variación de carousel está pensada para ser usada como vidriera en sitios
-// o secciones internas del sitios.
-// * Sólo muestra 1 ítem por página.
-// * Dicho ítem toma todo el ancho del carousel.
-// * Tiene autoplay.
-// * No tiene lazy-loading habilitado.
-//
-// Markup: billboard-carousel.hbs
-//
-// Styleguide Functional.Carousel.1-SimpleCarousel
-
-.carousel-billboard {
-  display: block;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-
-  &:focus {
-    outline: none;
-  }
-
-  &.dragging {
-    cursor: pointer;
-    cursor: hand;
   }
 }
 
@@ -123,7 +90,7 @@
 
 // Bullets
 .slick-dots {
-  bottom: 0;
+  bottom: $carousel-control-dots-spacer;
   display: block;
   font-size: 0;
   left: 0;
@@ -181,58 +148,6 @@
         border-color ease-in-out $transition-timing-base,
         transform ease-in-out $transition-timing-base;
       width: $carousel-dot-size;
-    }
-  }
-}
-
-
-
-// Shelf Carousel
-//
-// Esta variación de carousel está pensada para ser usada como vidriera en sitios
-// o secciones internas del sitios.
-// * Muestra varios ítems por página.
-// * El ancho de dicho ítem es asignado aumáticamente por la hrrramienta para que
-// se muestren 4.8 ítems.
-// * No tiene autoplay.
-// * Tiene lazy-loading habilitado.
-// * En viewports más chicos (≤1024px) se desactiva el carousel y se utiliza el
-// scrollbar nativo del browser.
-//
-// Markup: shelf-carousel.hbs
-//
-// Styleguide Functional.Carousel.2-ShelfCarousel
-
-
-
-.carousel-shelf {
-  @include clearfix;
-  overflow: auto;
-  white-space: nowrap;
-
-  > .carousel-item {
-    display: inline-block;
-    padding-bottom: $spacer-base;
-    padding-top: $spacer-sm;
-    vertical-align: top;
-    width: $box-item-width-mobile;
-  }
-
-  // Media query for tablet
-  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    > .carousel-item {
-      width: $box-item-width-tablet;
-    }
-  }
-
-  // Media query for desktop
-  @media only screen and (min-width: $screen-lg-min) {
-    overflow: hidden;
-
-    > .carousel-item {
-      padding-bottom: 0;
-      padding-top: 0;
-      width: 100%;
     }
   }
 }
@@ -302,8 +217,6 @@
   }
 }
 
-
-
 .slick-prev {
   animation: carousel-exit-left-arrow ($transition-timing-slow / 2) ease-in-out;
   left: 0;
@@ -318,8 +231,6 @@
   }
 }
 
-
-
 .slick-next {
   animation: carousel-exit-right-arrow ($transition-timing-slow / 2) ease-in-out;
   right: 0;
@@ -331,5 +242,138 @@
 
   .slick-slider:hover & {
     animation: carousel-enter-right-arrow ($transition-timing-slow / 2) ease-in-out;
+  }
+}
+
+
+
+// Billboard Carousel
+//
+// Esta variación de carousel está pensada para ser usada como vidriera en sitios
+// o secciones internas del sitios.
+// * Sólo muestra 1 ítem por página.
+// * Dicho ítem toma todo el ancho del carousel.
+// * Tiene autoplay.
+// * No tiene lazy-loading habilitado.
+//
+// Markup: billboard-carousel.hbs
+//
+// Styleguide Functional.Carousel.1-SimpleCarousel
+
+.carousel-billboard {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+
+
+
+// Shelf Carousel
+//
+// Esta variación de carousel está pensada para ser usada como vidriera en sitios
+// o secciones internas del sitios.
+// * Muestra varios ítems por página.
+// * El ancho de dicho ítem es asignado aumáticamente por la hrrramienta para que
+// se muestren 4.8 ítems.
+// * No tiene autoplay.
+// * Tiene lazy-loading habilitado.
+// * En viewports más chicos (≤1024px) se desactiva el carousel y se utiliza el
+// scrollbar nativo del browser.
+//
+// .carousel__is-loading - El elemento está procesando una acción.
+// .carousel__has-no-items - Si no hay resultados para la búsqueda.
+//
+// Markup: shelf-carousel.hbs
+//
+// Styleguide Functional.Carousel.2-ShelfCarousel
+
+
+
+.carousel-shelf {
+  @include clearfix;
+  margin-bottom: $spacer-lg;
+  overflow: auto;
+  white-space: nowrap;
+
+  .carousel-item {
+    display: inline-block;
+    padding-bottom: $spacer-base;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: $spacer-sm;
+    vertical-align: top;
+    width: $box-item-width-mobile;
+  }
+
+  // Media query for tablet
+  @media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .carousel-item {
+      width: $box-item-width-tablet;
+    }
+  }
+
+  // Media query for desktop
+  @media only screen and (min-width: $screen-lg-min) {
+    overflow: hidden;
+
+    .carousel-item {
+      padding-bottom: 2px;
+      padding-left: 1px;
+      padding-right: 1px;
+      padding-top: 1px;
+      width: 100%;
+    }
+  }
+}
+
+
+
+// La nota de feedback está escondida por default
+.carousel__note {
+  @include hide-element;
+  color: $brand-error;
+  font-weight: 700;
+  margin-bottom: $spacer-lg;
+  padding: $spacer-base;
+}
+
+
+
+// Loading State para Shelf Carousel
+
+.carousel-shelf:empty,
+.carousel__is-loading {
+
+  // Desactiva los controles del carousel mientras está el estado `loading`.
+  .slick-prev,
+  .slick-next {
+    &,
+    &:hover {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+
+// Empty State para Shelf Carousel
+.carousel__has-no-items {
+  @include hide-element;
+
+  // La nota que contiene el feedback se muestra cuando el módulo carousel recibe
+  // la clase `.carousel__has-no-items`
+  ~ .carousel__note {
+    @include show-element;
   }
 }

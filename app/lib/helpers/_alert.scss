@@ -1,0 +1,35 @@
+// Feedback Helpers
+
+// State modifier
+@mixin alert-variant($state) {
+  border-color: transparent;
+
+  @if $state == "error" {
+    background-color: $brand-error-light;
+
+    &::before {
+      content: $icon-cross-circle;
+    }
+
+  } @else if $state == "info" {
+    background-color: $brand-info-light;
+
+    &::before {
+      content: $icon-exclamation-mark-circle;
+    }
+
+  } @else if $state == "success" {
+    background-color: $brand-success-light;
+
+    &::before {
+      content: $icon-checkmark-filled-circle;
+    }
+
+  } @else if $state == "warning" {
+    background-color: $brand-warning-light;
+
+    &::before {
+      content: $icon-exclamation-mark-triangle;
+    }
+  }
+}

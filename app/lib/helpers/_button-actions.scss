@@ -1,13 +1,23 @@
 // Action button modifier
 // You should use the .active class if you want to mark the action as done.
 
+
+
+// Action animation
+@keyframes action-active {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: right;
+  }
+}
+
+
+
 // Color modifier
 @mixin button-action-variant($color, $icon) {
-  @include prefixer(
-    transition, (
-      background-color $btn-transition-timing ease-in
-    ), webkit ms moz spec);
-
   &,
   &:visited {
     color: $color;
@@ -25,6 +35,8 @@
     content: $icon;
   }
 }
+
+
 
 // Size modifier
 @mixin button-action-size($padding, $size, $font-size) {

@@ -1,0 +1,88 @@
+// Importa las dependencias
+@import "../../helpers/helpers";
+
+
+// Alert
+//
+// Proveen al usuario de notificaciones contextuales respecto a estado o acciones
+// ejecutadas en la plataforma.
+//
+// #### Notas:
+// * No confundir con el componente *Toaster* que sirve para aquellas notificaciones
+// que carecen de un contexto.
+// * El *alert* no posee estado default y no puede existir sin un estado definido.
+//
+// .alert__error - Mensaje de error.
+// .alert__info - Mensaje informativo.
+// .alert__success - Mensaje de éxito.
+// .alert__warning - Mensaje de advertencia.
+//
+// Markup: alert.hbs
+//
+// Styleguide Components.Alert
+
+
+
+.alert {
+  border-radius: $border-radius-base;
+  color: $alert-color;
+  margin-bottom: $spacer-lg;
+  min-height: $alert-spacer-horizontal;
+  padding-bottom: $alert-spacer-vertical;
+  padding-left: $alert-spacer-horizontal;
+  padding-right: $alert-spacer;
+  padding-top: $alert-spacer-vertical;
+  position: relative;
+
+  > .button--action,
+  &::before {
+    position: absolute;
+    top: $alert-spacer;
+  }
+
+  &::before {
+    @include icon-element($alert-icon-size);
+    @include make-pseudo-element;
+    height: $alert-icon-size;
+    left: $alert-spacer;
+    width: $alert-icon-size;
+  }
+
+  > p {
+    margin-bottom: $alert-spacer;
+  }
+}
+
+
+// Alert dismissables
+//
+// La variable *dismissable* del alerts le permite al usuario desestimar la
+// notificación una vez leída.
+//
+// Markup: alert-dismissable.hbs
+//
+// Styleguide Components.Alert.Dismissables
+
+.alert__is-dismissible {
+  padding-right: $alert-spacer-horizontal;
+}
+
+
+
+// State variants
+
+.alert__error {
+  @include alert-variant("error");
+}
+
+.alert__info {
+  @include alert-variant("info");
+}
+
+.alert__success {
+  @include alert-variant("success");
+}
+
+.alert__warning {
+  @include alert-variant("warning");
+}

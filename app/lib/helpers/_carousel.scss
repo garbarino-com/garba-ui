@@ -63,6 +63,9 @@
 // Slider
 .slick-list {
   .slick-loading & {
-    background: #FFF slick-image-url("ajax-loader.gif") center center no-repeat;
+    background-color: $spinner-bg;
+    background-image: slick-image-url("#{$images-url}spinner--md.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
 }

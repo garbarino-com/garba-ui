@@ -18,6 +18,8 @@
 // .button__is-active - Todos los modificadores tienen disponible su propia variable
 // de la clase `button__is-active` para cuando sea necesario marcar que una acción
 // ya se ha ejecutado (ej. /"El producto se ha marcado como favorito"/).
+// .button--action--sm - Única variable de tamaño. Es combinable con todas las otras
+// variantes.
 //
 // Markup: button-actions.hbs
 //
@@ -60,7 +62,8 @@
     cursor: default;
   }
 
-  > i {
+  > i,
+  > span {
     left: 50%;
     margin-left: ($btn-action-font-size * .5) * -1;
     margin-top: ($btn-action-font-size * .5) * -1;
@@ -72,20 +75,36 @@
       width: $btn-action-font-size;
     }
   }
+
+  // Uso en alerts
+  .alert__is-dismissible > & {
+    height: $alert-icon-size;
+    right: $alert-spacer;
+    width: $alert-icon-size;
+
+    > [class^="gb-icon-"],
+    > [class^="icon-"] {
+      @include icon-element($spacer-lg);
+
+      // stylelint-disable max-nesting-depth
+
+      &::before {
+        color: $alert-icon-color;
+      }
+
+      // stylelint-enable max-nesting-depth
+    }
+  }
 }
 
-// Action animation
 
-// Animation without prefixes:
-@keyframes action-active {
-  from {
-    background-position: left;
-  }
-
-  to {
-    background-position: right;
-  }
+// Size variant
+.button--action--sm {
+  @include button-action-size($btn-action-sm-padding, $btn-action-sm-size,
+    $btn-action-sm-font-size);
+  @include text-hide;
 }
+
 
 
 // Primary action

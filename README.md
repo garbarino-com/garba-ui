@@ -16,7 +16,7 @@ Al momento todavía no hay una versión de esta librería de la cual hayamos hec
 
 Sin embargo, como la idea es que la puedan instalar e ir mirándola, se la pueden instalar yendo a su directorio de proyectos y tipeando en la consola:
 ```
-$ npm install https://github.com/garbarino-com/garba-ui.git#develop
+$ npm install garba-ui --save
 ```
 
 Una vez instalada la dependencia, *Garba UI* contiene toda la librería de estilos y scripts:

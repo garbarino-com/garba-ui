@@ -1,74 +1,81 @@
 // stylelint-disable selector-no-qualifying-type, selector-no-type
 
-input[type="radio"],
-input[type="checkbox"] {
-  @include prefixer(appearance, none, webkit ms spec);
-  background-color: $controler-bg-inactive;
-  border: 1px solid $controler-border-inactive;
-  display: inline-block;
-  height: $controller-size;
-  transition: border-color ease-in-out $transition-timing-base;
-  width: $controller-size;
+// Se agrega la herencia de estas clases para reducir el alcance de los estilos
+// y que no afecten a otros inputs sin querer.
 
-  &:focus {
-    outline: none;
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline,
+.radio-box,
+.checkbox-box {
+  input[type="radio"],
+  input[type="checkbox"] {
+    @include prefixer(appearance, none, webkit ms spec);
+    background-color: $controler-bg-inactive;
+    border: 1px solid $controler-border-inactive;
+    display: inline-block;
+    height: $controller-size;
+    transition: border-color ease-in-out $transition-timing-base;
+    width: $controller-size;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:checked {
+      border-color: $controler-active;
+    }
+
+    // Elemento que se dibuja cuando se está `:checked`
+    &::after {
+      @include make-pseudo-element;
+      background-color: transparent;
+      color: transparent;
+      height: $controller-symbol-size;
+      line-height: 1;
+      margin-left: ($controller-symbol-size / 2) * -1;
+      margin-top: ($controller-symbol-size / 2) * -1;
+      transition: background-color ease-in-out $transition-timing-base,
+      border-color ease-in-out $transition-timing-base,
+        color ease-in-out $transition-timing-base;
+      width: $controller-symbol-size;
+    }
   }
 
-  &:checked {
-    border-color: $controler-active;
-  }
-
-  // Elemento que se dibuja cuando se está `:checked`
-  &::after {
-    font-family: $icon-font-name !important;
-    line-height: 1;
-    transition: background-color ease-in-out $transition-timing-base,
-    border-color ease-in-out $transition-timing-base,
-      color ease-in-out $transition-timing-base;
-  }
-}
 
 
-
-// Estilos específicos para radiobuttons
-input[type="radio"] {
-  border-radius: 50%;
-
-  &::after {
-    @include make-pseudo-element;
-    background-color: transparent;
+  // Estilos específicos para radiobuttons
+  input[type="radio"] {
     border-radius: 50%;
-    display: block;
-    height: $controller-symbol-size;
-    margin-left: ($controller-symbol-size / 2) * -1;
-    margin-top: ($controller-symbol-size / 2) * -1;
 
-    width: $controller-symbol-size;
+    &::after {
+      border-radius: 50%;
+    }
+
+    &:checked::after {
+      background-color: $controler-active;
+    }
   }
 
-  &:checked::after {
-    background-color: $controler-active;
-  }
-}
 
 
+  // Estilos específicos para checkbox
+  input[type="checkbox"] {
+    border-radius: $border-radius-base;
 
-// Estilos específicos para checkbox
-input[type="checkbox"] {
-  border-radius: $border-radius-base;
+    &::after {
+      background: transparent url("data:image/svg+xml;utf8,#{$icon-checked}")
+        0 0 no-repeat;
+      opacity: 0;
+    }
 
-  &::after {
-    color: transparent;
-    content: $icon-checkmark;
-    font-size: $controller-symbol-size;
-    margin-left: ($controller-symbol-size / 2) * -1;
-    margin-top: ($controller-symbol-size / 2) * -1;
-  }
-
-  &:checked::after {
-    color: $controler-active;
+    &:checked::after {
+      opacity: 1;
+    }
   }
 }
+
 
 
 
