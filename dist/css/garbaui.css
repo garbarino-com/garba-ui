@@ -3203,10 +3203,10 @@ button:focus {
 }
 
 .list-grid-item .button {
-  bottom: 1rem;
-  left: 1rem;
+  bottom: 2rem;
+  left: 2rem;
   position: absolute;
-  right: 1rem;
+  right: 2rem;
   z-index: 20;
 }
 
@@ -3345,14 +3345,14 @@ button:focus {
 }
 
 .button--lg {
-  font-size: 1.28571rem;
+  font-size: 1.25rem;
   height: 3.25rem;
   line-height: 3.25rem;
   padding: 0 1.75rem;
 }
 
 .button--sm {
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   height: 2rem;
   line-height: 2rem;
   padding: 0 1.25rem;
@@ -3372,7 +3372,7 @@ button:focus {
 
 @media only screen and (min-width: 73.14286rem) {
   .button--block.button--sm {
-    font-size: 0.85714rem;
+    font-size: 0.75rem;
     height: 2rem;
     line-height: 2rem;
     padding: 0 1.25rem;
@@ -3930,7 +3930,7 @@ select[multiple].form-control {
 }
 
 .form-control--sm {
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   height: 2rem;
   padding: 0.5rem;
 }
@@ -3980,7 +3980,7 @@ select[multiple].form-control--sm {
 }
 
 .form-horizontal .control-label--sm {
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   margin-bottom: 0.25rem;
   padding-top: 0.5rem;
 }
@@ -4491,11 +4491,11 @@ fieldset[disabled] .control-group__addon:focus, .control-group__addon.control__i
 
 .control-group__addon .control-group__addon--sm,
 .control-group--sm .control-group__addon {
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
 }
 
 .control-group--sm .form-control {
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   height: 2rem;
   padding: 0.5rem;
 }
@@ -4552,19 +4552,19 @@ fieldset[disabled] ~ .form-block__helper,
 
 @media (min-width: 0rem) {
   .container {
-    width: 54.85714rem;
+    width: 0rem;
   }
 }
 
 @media (min-width: 54.85714rem) {
   .container {
-    width: 73.14286rem;
+    width: 54.85714rem;
   }
 }
 
 @media (min-width: 73.14286rem) {
   .container {
-    width: 97.57143rem;
+    width: 73.14286rem;
   }
 }
 
@@ -5286,8 +5286,8 @@ fieldset[disabled] ~ .form-block__helper,
 
 .form-horizontal .form-block-narrow,
 .row-narrow {
-  margin-left: -0.25rem;
-  margin-right: -0.25rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 .form-horizontal .form-block-narrow::after,
@@ -5305,8 +5305,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-1,
 .row-narrow .col-md-1,
 .row-narrow .col-lg-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-2,
@@ -5317,8 +5317,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-2,
 .row-narrow .col-md-2,
 .row-narrow .col-lg-2 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-3,
@@ -5329,8 +5329,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-3,
 .row-narrow .col-md-3,
 .row-narrow .col-lg-3 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-4,
@@ -5341,8 +5341,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-4,
 .row-narrow .col-md-4,
 .row-narrow .col-lg-4 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-5,
@@ -5353,8 +5353,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-5,
 .row-narrow .col-md-5,
 .row-narrow .col-lg-5 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-6,
@@ -5365,8 +5365,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-6,
 .row-narrow .col-md-6,
 .row-narrow .col-lg-6 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-7,
@@ -5377,8 +5377,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-7,
 .row-narrow .col-md-7,
 .row-narrow .col-lg-7 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-8,
@@ -5389,8 +5389,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-8,
 .row-narrow .col-md-8,
 .row-narrow .col-lg-8 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-9,
@@ -5401,8 +5401,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-9,
 .row-narrow .col-md-9,
 .row-narrow .col-lg-9 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-10,
@@ -5413,8 +5413,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-10,
 .row-narrow .col-md-10,
 .row-narrow .col-lg-10 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-11,
@@ -5425,8 +5425,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-11,
 .row-narrow .col-md-11,
 .row-narrow .col-lg-11 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .form-horizontal .form-block-narrow .col-xs-12,
@@ -5437,8 +5437,8 @@ fieldset[disabled] ~ .form-block__helper,
 .row-narrow .col-sm-12,
 .row-narrow .col-md-12,
 .row-narrow .col-lg-12 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 @font-face {
@@ -6074,7 +6074,7 @@ textarea {
   word-wrap: normal;
   background-color: transparent;
   border: 1px solid #9E9E9E;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   font-weight: 700;
   height: 2rem;
   line-height: 2rem;
@@ -6141,7 +6141,7 @@ a:hover {
 }
 
 .value-container > .value-item {
-  font-size: 1.28571rem;
+  font-size: 1.25rem;
   line-height: 1;
 }
 
@@ -6173,8 +6173,8 @@ a:hover {
 }
 
 .value-container--lg > .value-note {
-  font-size: 1.28571rem;
-  min-height: 1.60714rem;
+  font-size: 1.25rem;
+  min-height: 1.5625rem;
 }
 
 .value-container--lg > .value-item {
@@ -6184,7 +6184,7 @@ a:hover {
 
 @media only screen and (min-width: 54.85714rem) {
   .value-container--lg > .value-note {
-    font-size: 1.28571rem;
+    font-size: 1.25rem;
   }
   .value-container--lg > .value-item {
     font-size: 2.5rem;
@@ -6198,8 +6198,8 @@ a:hover {
 }
 
 .value-container--sm > .value-note {
-  font-size: 0.85714rem;
-  min-height: 1.07143rem;
+  font-size: 0.75rem;
+  min-height: 0.9375rem;
 }
 
 .value-container--sm > .value-item {
@@ -6209,7 +6209,7 @@ a:hover {
 
 @media only screen and (min-width: 54.85714rem) {
   .value-container--sm > .value-note {
-    font-size: 0.85714rem;
+    font-size: 0.75rem;
   }
   .value-container--sm > .value-item {
     font-size: 1rem;
@@ -6535,8 +6535,8 @@ a:hover {
 
 .cell-list {
   margin-bottom: 0;
-  margin-left: -0.25rem;
-  margin-right: -0.25rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
   width: 100%;
 }
 
@@ -6547,7 +6547,7 @@ a:hover {
 }
 
 .cell-list + .cell-list {
-  margin-top: 0.125rem;
+  margin-top: 0.25rem;
 }
 
 .cell-list:last-of-type, .cell-list:only-of-type {
@@ -6555,15 +6555,15 @@ a:hover {
 }
 
 .cell-list .cell-list-item {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .cell-list .cell-list-item::after {
-  bottom: 0.25rem;
-  left: 0.25rem;
-  right: 0.25rem;
-  top: 0.25rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  top: 0.5rem;
 }
 
 .cell-list-item {
@@ -6603,7 +6603,7 @@ a:hover {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  font-size: 1.28571rem;
+  font-size: 1.25rem;
   line-height: 1.25;
 }
 
@@ -6784,8 +6784,8 @@ label.cell-list-item input {
   height: 1.5rem;
   opacity: 0;
   position: absolute;
-  right: 0.25rem;
-  top: 0.25rem;
+  right: 0.5rem;
+  top: 0.5rem;
   width: 1.5rem;
   z-index: 21;
 }
@@ -6816,7 +6816,7 @@ label.cell-list-item input:checked {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   vertical-align: middle;
   z-index: 20;
@@ -6876,14 +6876,14 @@ label.cell-list-item input:checked {
 .item-box__title {
   display: -webkit-box;
   overflow: hidden;
-  max-height: 3.21429rem;
+  max-height: 3.125rem;
   text-overflow: -o-ellipsis-lastline;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   color: #0084E0;
-  font-size: 1.28571rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.60714rem;
+  line-height: 1.5625rem;
   margin-bottom: 1rem;
   position: relative;
   width: 100%;
@@ -6895,13 +6895,13 @@ label.cell-list-item input:checked {
     position: relative;
     display: -webkit-box;
     overflow: hidden;
-    max-height: calc(50% + 1.60714rem);
+    max-height: calc(50% + 1.5625rem);
     text-overflow: -o-ellipsis-lastline;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     animation: item-box__title--mouseOver 0.2s reverse ease-in;
     left: 0;
-    margin-top: -0.80357rem;
+    margin-top: -0.78125rem;
     opacity: 0;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -8026,7 +8026,7 @@ a.search-box__list--item strong {
   color: #FFF;
   display: block;
   font-family: "Open Sans", -apple-system, sans-serif;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   padding: 1rem 1.75rem;
   text-align: center;

@@ -2,7 +2,7 @@
 A list of requested changes to be included in future versions.
 
 ### Latest 
-* v3.1.2-Alpha
+* v3.1.4
 
 ### Carousels
 * Define bottom spacer form mobile.
