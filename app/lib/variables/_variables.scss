@@ -62,9 +62,20 @@ $color-darken-value:            30% !default;
 // Styleguide Elements.1-Palette
 
 $brand-corporate:        #D1030F !default;
+$brand-corporate-light:  color-modifier-lighten($brand-corporate) !default;
+$brand-corporate-dark:   color-modifier-darken($brand-corporate) !default;
+
 $brand-primary:          #0084E0 !default;
+$brand-primary-light:    color-modifier-lighten($brand-primary) !default;
+$brand-primary-dark:     color-modifier-darken($brand-primary) !default;
+
 $brand-secondary:        #6B6B6B !default;
+$brand-secondary-light:  color-modifier-lighten($brand-secondary) !default;
+$brand-secondary-dark:   color-modifier-darken($brand-secondary) !default;
+
 $brand-revenue:          #16A401 !default;
+$brand-revenue-light:    color-modifier-lighten($brand-revenue) !default;
+$brand-revenue-dark:     color-modifier-darken($brand-revenue) !default;
 
 // Alt Fav
 // TODO(ecalvi): This is an inconsistency. We are defining this variable so this
@@ -213,7 +224,7 @@ $grid-gutter-width:           $baseline-grid-computed * 2 !default; // 28px
 
 // Espacio entre columnas para la extensión de grilla (en la grilla se divide en
 // dos para izquierda y derecha).
-$grid-narrow-gutter-width:    $baseline-grid-computed / 2 !default;  // 14px
+$grid-narrow-gutter-width:    $baseline-grid-computed !default;  // 14px
 
 
 
@@ -250,13 +261,13 @@ $screen-lg-max:              ($screen-xl-min - 1) !default;
 // Definen el ancho máximo del `container` para los distintos tamaños.
 
 // Small screen / tablet
-$container-sm:                 $screen-md !default;
+$container-sm:                 $screen-sm !default;
 
 // Medium screen / desktop
-$container-md:                 $screen-lg !default;
+$container-md:                 $screen-md !default;
 
 // Large screen / wide desktop
-$container-lg:                 $screen-xl !default;
+$container-lg:                 $screen-lg !default;
 
 
 
@@ -267,8 +278,8 @@ $container-lg:                 $screen-xl !default;
 $font-family-base: "Open Sans", -apple-system, sans-serif !default;
 
 $font-size-base:      1rem !default;    // 14px
-$font-size-lg:        px-to-rem(18px) !default; // 18px
-$font-size-sm:        px-to-rem(12px) !default; // 12px
+$font-size-lg:        1.25rem !default; // 17.5px
+$font-size-sm:        .75rem !default;  // 11.5px
 
 // Small text
 $small-font-size:     75% !default;
