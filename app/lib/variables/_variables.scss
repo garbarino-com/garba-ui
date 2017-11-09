@@ -234,7 +234,7 @@ $grid-narrow-gutter-width:    $baseline-grid-computed !default;  // 14px
 // adapting to different screen sizes, for use in media queries.
 
 // Extra small screen / phone
-$screen-sm:                  px-to-rem(0);
+$screen-sm:                  0;
 $screen-sm-min:              $screen-sm !default;
 
 // Small screen / tablet
@@ -261,7 +261,7 @@ $screen-lg-max:              ($screen-xl-min - 1) !default;
 // Definen el ancho máximo del `container` para los distintos tamaños.
 
 // Small screen / tablet
-$container-sm:                 $screen-sm !default;
+$container-sm:                 initial !default;
 
 // Medium screen / desktop
 $container-md:                 $screen-md !default;
