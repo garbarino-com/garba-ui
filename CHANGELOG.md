@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## All changes for v3.1.6
+* Media Object bemification of classes.
+
 ## All changes for v3.1.5
 * Button improvements.
 * Fixes css arrow generator mixin.
