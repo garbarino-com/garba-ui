@@ -14,16 +14,16 @@
 }
 
 .media,
-.media-body {
+.media--body {
   overflow: hidden;
   zoom: 1;
 }
 
-.media-body {
+.media--body {
   width: 10000px;
 }
 
-.media-object {
+.media--object {
   display: block;
 
   // Fix collapse in webkit from max-width: 100% and display: table-cell.
@@ -32,17 +32,17 @@
   }
 }
 
-.media-right {
+.media--right {
   padding-left: $spacer-base;
 }
 
-.media-left {
+.media--left {
   padding-right: $spacer-base;
 }
 
-.media-left,
-.media-right,
-.media-body {
+.media--left,
+.media--right,
+.media--body {
   display: table-cell;
   vertical-align: middle;
 }
