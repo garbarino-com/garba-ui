@@ -63,7 +63,8 @@
   }
 
   > i,
-  > span {
+  > span,
+  > svg {
     left: 50%;
     margin-left: ($btn-action-font-size * .5) * -1;
     margin-top: ($btn-action-font-size * .5) * -1;

@@ -3649,7 +3649,8 @@ fieldset[disabled].button--facebook:focus,
 }
 
 .button--action > i,
-.button--action > span {
+.button--action > span,
+.button--action > svg {
   left: 50%;
   margin-left: -0.75rem;
   margin-top: -0.75rem;
@@ -3658,7 +3659,8 @@ fieldset[disabled].button--facebook:focus,
 }
 
 .button--action > i::before,
-.button--action > span::before {
+.button--action > span::before,
+.button--action > svg::before {
   display: block;
   font-family: "garba-icon-font" !important;
   font-size: 1.5rem;
@@ -5970,34 +5972,34 @@ a.label {
 }
 
 .media,
-.media-body {
+.media--body {
   overflow: hidden;
   zoom: 1;
 }
 
-.media-body {
+.media--body {
   width: 10000px;
 }
 
-.media-object {
+.media--object {
   display: block;
 }
 
-.media-object.img-thumbnail {
+.media--object.img-thumbnail {
   max-width: none;
 }
 
-.media-right {
+.media--right {
   padding-left: 1rem;
 }
 
-.media-left {
+.media--left {
   padding-right: 1rem;
 }
 
-.media-left,
-.media-right,
-.media-body {
+.media--left,
+.media--right,
+.media--body {
   display: table-cell;
   vertical-align: middle;
 }
