@@ -234,19 +234,19 @@ $grid-narrow-gutter-width:    $baseline-grid-computed !default;  // 14px
 // adapting to different screen sizes, for use in media queries.
 
 // Extra small screen / phone
-$screen-sm:                  0;
+$screen-sm:                  px-to-rem(480px) !default;
 $screen-sm-min:              $screen-sm !default;
 
 // Small screen / tablet
-$screen-md:                  px-to-rem(768px);
+$screen-md:                  px-to-rem(768px) !default;
 $screen-md-min:              $screen-md !default;
 
 // Medium screen / desktop
-$screen-lg:                  px-to-rem(1024px);
+$screen-lg:                  px-to-rem(1024px) !default;
 $screen-lg-min:              $screen-lg !default;
 
 // Large screen / wide desktop
-$screen-xl:                  px-to-rem(1366px);
+$screen-xl:                  px-to-rem(1366px) !default;
 $screen-xl-min:              $screen-xl !default;
 
 // So media queries don't overlap when required, provide a maximum

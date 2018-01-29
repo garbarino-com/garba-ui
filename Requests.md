@@ -1,9 +1,6 @@
 # Change requests
 A list of requested changes to be included in future versions.
 
-### Latest 
-* v3.1.4
-
 ### Carousels
 * Define bottom spacer form mobile.
 * Estado disabled para los botones.

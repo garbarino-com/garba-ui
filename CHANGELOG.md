@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## All changes for v3.1.8
+* Allow override of grid breakpoints.
+
+## All changes for v3.1.7
+* Updates framework requests.
+* Renames media-object classes.
+* Updates compiled files.
+
 ## All changes for v3.1.6
 * Media Object bemification of classes.
 
