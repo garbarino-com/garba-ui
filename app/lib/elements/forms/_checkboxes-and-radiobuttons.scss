@@ -219,15 +219,15 @@
 
 label.radio-box,
 label.checkbox-box {
-  @include flex-direction(column);
-  @include justify-content(center);
   background-color: $grid-cell-bg;
   border: $grid-cell-border-size solid $grid-cell-border-color;
   border-radius: $border-radius-base;
   cursor: pointer;
   display: inline-flex;
+  flex-direction: column;
   // La altura sale de sumar padding vertical + los dos line-height * $baseline-grid-computed
   height: ($spacer-sm * 2) + (($line-height-sm * $baseline-grid-computed) * 2 );
+  justify-content: center;
   line-height: $line-height-sm;
   max-width: $controller-max-width;
   padding: $spacer-sm;

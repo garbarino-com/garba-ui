@@ -60,12 +60,12 @@
 }
 
 .cell-list-item {
-  @include align-items(center);
-  @include display(flex);
   @include element-aspect-ratio;
-  @include flex-direction(row);
-  @include justify-content(center);
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   font-size: $font-size-lg;
+  justify-content: center;
   line-height: $line-height-sm;
 
   &::after {
@@ -190,7 +190,7 @@ label.cell-list-item {
 // Styleguide Components.CellList.2-IconCellList
 
 .cell-list-item__body {
-  @include flex(1);
+  flex: 1;
   padding: $grid-cell-spacer * 2;
   text-align: center;
   vertical-align: middle;
