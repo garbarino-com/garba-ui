@@ -8,9 +8,16 @@
 //
 // Styleguide Helpers.Utilities.HideElement
 
+// stylelint-disable rule-empty-line-before, selector-no-type
+
 @mixin hide-element {
-  display: none !important;
-  visibility: hidden !important;
+  @if $allow-use-of-important {
+    display: none !important;
+    visibility: hidden !important;
+  } @else {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 // @show-element
@@ -22,8 +29,13 @@
 // Styleguide Helpers.Utilities.ShowElement
 
 @mixin show-element($display: block) {
-  display: $display !important;
-  visibility: visible !important;
+  @if $allow-use-of-important {
+    display: $display !important;
+    visibility: visible !important;
+  } @else {
+    display: $display;
+    visibility: visible;
+  }
 }
 
 // @hide-element-simple
@@ -33,8 +45,14 @@
 // Styleguide Helpers.Utilities.HideElementSimple
 
 @mixin hide-element-simple {
-  visibility: hidden !important;
+  @if $allow-use-of-important {
+    visibility: hidden !important;
+  } @else {
+    visibility: hidden;
+  }
 }
+
+// stylelint-enable rule-empty-line-before, selector-no-type
 
 // @make-pseudo-element($display)
 //

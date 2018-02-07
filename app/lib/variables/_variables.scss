@@ -5,6 +5,16 @@
 // Variables
 // --------------------------------------------------
 
+// Permitir uso de `!important`
+//
+// Setea si se permite el uso de `!important`'s en la hoja de estilos.
+//
+// $allow-use-of-important - true;
+//
+// Styleguide Elements.AllowUseOfImportant
+$allow-use-of-important:     true !default;
+
+
 
 /// Global variables to enable or disable vendor prefixes
 $prefix-for-webkit:          true !default;
@@ -12,9 +22,6 @@ $prefix-for-mozilla:         true !default;
 $prefix-for-microsoft:       true !default;
 $prefix-for-opera:           true !default;
 $prefix-for-spec:            true !default;
-
-// Define use of flexbox (boolean)
-$flexbox-is-enabled:         true !default;
 
 
 

@@ -3586,8 +3586,8 @@ fieldset[disabled].button--facebook:focus,
 
 .button__has-icon::before,
 .button__has-icon > [class^="gb-icon-"]::before {
-  display: block;
   font-family: "garba-icon-font" !important;
+  display: block;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -3661,8 +3661,8 @@ fieldset[disabled].button--facebook:focus,
 .button--action > i::before,
 .button--action > span::before,
 .button--action > svg::before {
-  display: block;
   font-family: "garba-icon-font" !important;
+  display: block;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -3679,8 +3679,8 @@ fieldset[disabled].button--facebook:focus,
 
 .alert__is-dismissible > .button--action > [class^="gb-icon-"],
 .alert__is-dismissible > .button--action > [class^="icon-"] {
-  display: block;
   font-family: "garba-icon-font" !important;
+  display: block;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -4304,8 +4304,8 @@ label ~ .form-control ~ .form-block__feedback {
 }
 
 .form-block__feedback {
-  display: block;
   font-family: "garba-icon-font" !important;
+  display: block;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -6433,8 +6433,8 @@ a:hover {
 }
 
 .alert::before {
-  display: block;
   font-family: "garba-icon-font" !important;
+  display: block;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;

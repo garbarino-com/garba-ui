@@ -83,8 +83,10 @@
     @include state-disabled;
   }
 
-  &:-webkit-autofill {
-    background-color: inherit !important;
+  @if $allow-use-of-important {
+    &:-webkit-autofill {
+      background-color: inherit !important;
+    }
   }
 
   // Aumenta el padding-right si hay un *helper* en el mismo nivel

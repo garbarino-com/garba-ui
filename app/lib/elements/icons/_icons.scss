@@ -113,8 +113,17 @@
 }
 
 [class^="icon-"] {
-  // Use !important to prevent issues with browser extensions that change fonts.
-  font-family: #{$icon-font-name} !important;
+  // stylelint-disable rule-empty-line-before
+
+  @if $allow-use-of-important {
+    // Use `!important` to prevent issues with browser extensions that change fonts.
+    font-family: #{$icon-font-name} !important;
+  } @else {
+    font-family: #{$icon-font-name};
+  }
+
+  // stylelint-enable rule-empty-line-before
+
   font-style: normal;
   font-variant: normal;
   font-weight: 400;

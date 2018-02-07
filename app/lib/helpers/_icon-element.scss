@@ -17,8 +17,18 @@
 // Styleguide Helpers.Icons.IconElement
 
 @mixin icon-element($size, $display: block) {
+  // stylelint-disable rule-empty-line-before, selector-no-type
+
+  @if $allow-use-of-important {
+    // Use !important to prevent issues with browser extensions that change fonts.
+    font-family: $icon-font-name !important;
+  } @else {
+    font-family: $icon-font-name;
+  }
+
+  // stylelint-enable rule-empty-line-before, selector-no-type
+
   display: $display;
-  font-family: $icon-font-name !important;
   font-size: $size;
   font-style: normal;
   font-weight: 400;

@@ -102,8 +102,11 @@ body {
 // might still respond to pointer events.
 //
 // Credit: https://github.com/suitcss/base
-[tabindex="-1"]:focus {
-  outline: none !important;
+
+@if $allow-use-of-important {
+  [tabindex="-1"]:focus {
+    outline: none !important;
+  }
 }
 
 
