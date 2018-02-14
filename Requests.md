@@ -20,3 +20,10 @@ A list of requested changes to be included in future versions.
 ## Forms
 * Support for multiple image sizes (Image ratio).
 * Margin bottom for multi-line.
+
+## Requested new components
+* Pager
+* Breadcrumb
+* Product box Carousel
+* Collapse
+* Range slider
