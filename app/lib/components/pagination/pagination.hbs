@@ -1,0 +1,19 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a href="#0">
+        Previous
+      </a>
+    </li>
+    {{#each .}}
+      <div class="page-item">
+        {{page_number}}
+      </div>
+    {{/each}}
+    <li class="page-item">
+      <a href="#0">
+        Next
+      </a>
+    </li>
+  </ul>
+</nav>
