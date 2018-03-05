@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## All changes for v3.1.12
+* Removed [Normi](https://github.com/garbarino-com/normi/) files from bundle to avoid conflicts bewteen projects.
+
 ## All changes for v3.1.9
 * Adds `$allow-use-of-important` to variables sheet.
 

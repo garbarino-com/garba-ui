@@ -5,15 +5,19 @@ var $                    = require('jquery');
 
 // Bootstrap plugins (http://getbootstrap.com/javascript/)
 var alert                = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert');
-var modal                = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
+
+// TODO(ecalvi): Bootstrap Modal is commented to avoid conflicts with normi(https://github.com/garbarino-com/normi/)
+// var modal                = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
+
 var tooltip              = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip');
 var tab                  = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab');
 var transition           = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
 
 // Miscelaneous plugins
-var firstPurchase        = require('./scripts/first-purchase');
-var cookie               = require('./scripts/cookie');
-var offersHunter         = require('./scripts/offers-hunter');
+// TODO(ecalvi): These plugins are commented to avoid conflicts with normi(https://github.com/garbarino-com/normi/)
+// var firstPurchase        = require('./scripts/first-purchase');
+// var cookie               = require('./scripts/cookie');
+// var offersHunter         = require('./scripts/offers-hunter');
 
 // Carousel Plugin (http://kenwheeler.github.io/slick/)
 var slick                = require('../../node_modules/slick-carousel/slick/slick');

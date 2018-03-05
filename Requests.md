@@ -17,9 +17,12 @@ A list of requested changes to be included in future versions.
 ### Action buttons
 * Make element svg compliant.
 
-## Forms
+### Forms
 * Support for multiple image sizes (Image ratio).
 * Margin bottom for multi-line.
+
+### Dependencies
+* Fix problem in ForEachAsync version.
 
 ## Requested new components
 * Pager
