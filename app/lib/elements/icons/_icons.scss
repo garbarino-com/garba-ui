@@ -104,6 +104,7 @@
 @font-face {
   font-family: #{$icon-font-name};
   font-style: normal;
+
   font-weight: 400;
   src: url("#{$icon-font-url}#{$icon-font-name}.eot?gz21za");
   src: url("#{$icon-font-url}#{$icon-font-name}.eot?gz21za#iefix") format("embedded-opentype"),

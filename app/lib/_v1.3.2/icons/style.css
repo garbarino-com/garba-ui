@@ -5,6 +5,7 @@
     url('fonts/gb-font.ttf?d48b80') format('truetype'),
     url('fonts/gb-font.woff?d48b80') format('woff'),
     url('fonts/gb-font.svg?d48b80#gb-font') format('svg');
+    font-display: swap;
   font-weight: normal;
   font-style: normal;
 }

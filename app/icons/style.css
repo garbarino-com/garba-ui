@@ -6,6 +6,7 @@
     url('fonts/garba-icon-font.woff?nhtp75') format('woff'),
     url('fonts/garba-icon-font.svg?nhtp75#garba-icon-font') format('svg');
   font-weight: normal;
+  font-display: swap;
   font-style: normal;
 }
 

@@ -7,6 +7,7 @@
     url('#{$icomoon-font-path}/garba-icon-font.ttf?nhtp75') format('truetype'),
     url('#{$icomoon-font-path}/garba-icon-font.woff?nhtp75') format('woff'),
     url('#{$icomoon-font-path}/garba-icon-font.svg?nhtp75#garba-icon-font') format('svg');
+    font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
